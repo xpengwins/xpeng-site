@@ -48,7 +48,17 @@ function loginView(err, keep) {
   app.innerHTML = `<div id="login"><div class="card"><h2>Masuk Admin XPeng</h2><p class="muted">Data tersimpan di GitHub Anda. Token hanya disimpan di HP ini.</p>${err ? `<p class="pill bad">${E(err)}</p>` : ''}
 <label>Username GitHub<input id="o" autocapitalize="none" placeholder="contoh: wins" value="${E(keep.owner || '')}"></label><label>Nama repository<input id="r" autocapitalize="none" placeholder="xpeng-site" value="${E(keep.repo || '')}"></label><label>Branch<input id="b" value="${E(keep.branch || 'main')}"></label>
 <label>GitHub Token (fine-grained, izin Contents + Actions: Read and write)<input id="t" type="password" autocapitalize="none" autocomplete="off" value="${E(keep.token || '')}"></label><label>PIN pengaman (opsional, 4+ angka, token dienkripsi)<input id="p" type="password" inputmode="numeric"></label>
-<button id="go" style="width:100%">Masuk</button></div></div>`;
+<button id="go" style="width:100%">Masuk</button><button id="dg" class="s" style="width:100%;margin-top:10px">Tes koneksi</button><pre id="dgo" class="muted" style="white-space:pre-wrap;margin-top:10px;font-size:.78rem"></pre></div></div>`;
+  $('#dg').onclick = async () => {
+    const clean = x => x.replace(/[^\x21-\x7E]/g, ''), tok = clean($('#t').value), o = clean($('#o').value), r = clean($('#r').value), out = $('#dgo'); out.textContent = 'Menguji…\n';
+    const T = async (name, url, headers) => { try { const x = await fetch(url, { headers }); out.textContent += '✅ ' + name + ' → HTTP ' + x.status + '\n'; return x.status; } catch (e) { out.textContent += '❌ ' + name + ' → ' + e.name + ': ' + e.message + '\n'; return 0; } };
+    out.textContent += 'Online: ' + navigator.onLine + ' | token ' + tok.length + ' karakter, awal "' + tok.slice(0, 11) + '"\n';
+    await T('1. tanpa header', 'https://api.github.com/zen', {});
+    await T('2. header Accept saja', 'https://api.github.com/zen', { Accept: 'application/vnd.github+json' });
+    const a = await T('3. Authorization palsu (harus 401 jika preflight lolos)', 'https://api.github.com/user', { Authorization: 'Bearer test' });
+    if (tok) { await T('4. token Anda → /user (Bearer)', 'https://api.github.com/user', { Authorization: 'Bearer ' + tok }); await T('5. token Anda → /user (token)', 'https://api.github.com/user', { Authorization: 'token ' + tok }); if (o && r) await T('6. token Anda → repo', 'https://api.github.com/repos/' + o + '/' + r, { Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json' }); }
+    out.textContent += a === 401 ? '\nKESIMPULAN: koneksi dan CORS normal. Masalah ada di token/nama repo, lihat baris 4-6.' : a === 0 ? '\nKESIMPULAN: permintaan dengan header Authorization diblokir di HP/jaringan ini (baris 3 gagal). Coba browser lain, jaringan lain, atau matikan VPN/pemblokir.' : '\nKode ' + a + ' tidak biasa, kirim hasil ini ke Claude.';
+  };
   $('#go').onclick = async () => {
     const clean = x => x.replace(/[^\x21-\x7E]/g, '');
     const cfg = { owner: clean($('#o').value), repo: clean($('#r').value), branch: clean($('#b').value) || 'main', token: clean($('#t').value) }, pin = $('#p').value;
