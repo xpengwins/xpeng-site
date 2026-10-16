@@ -20,7 +20,7 @@ async function unseal(str, pin) { const o = JSON.parse(str), f = x => Uint8Array
 
 /* ---------- GitHub API ---------- */
 async function gh(path, opt = {}) {
-  const c = S.cfg, r = await fetch('https://api.github.com/repos/' + c.owner + '/' + c.repo + '/' + path, { ...opt, headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', ...(opt.headers || {}) } });
+  const c = S.cfg, r = await fetch('https://api.github.com/repos/' + c.owner + '/' + c.repo + '/' + path, { ...opt, headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', ...(opt.body ? { 'Content-Type': 'application/json' } : {}), ...(opt.headers || {}) } });
   if (!r.ok) { let m = ''; try { m = (await r.json()).message; } catch (e) {} const err = new Error('GitHub ' + r.status + ': ' + m); err.status = r.status; throw err; }
   return r.status === 204 ? null : r.json();
 }
@@ -43,15 +43,27 @@ async function boot() {
   if (raw.charAt(0) === '{' && raw.indexOf('"c"') > 0) return pinView(raw);
   S.cfg = JSON.parse(raw); start();
 }
-function loginView(err) {
+function loginView(err, keep) {
+  keep = keep || {};
   app.innerHTML = `<div id="login"><div class="card"><h2>Masuk Admin XPeng</h2><p class="muted">Data tersimpan di GitHub Anda. Token hanya disimpan di HP ini.</p>${err ? `<p class="pill bad">${E(err)}</p>` : ''}
-<label>Username GitHub<input id="o" autocapitalize="none" placeholder="contoh: wins"></label><label>Nama repository<input id="r" autocapitalize="none" placeholder="xpeng-site"></label><label>Branch<input id="b" value="main"></label>
-<label>GitHub Token (fine-grained, izin Contents + Actions: Read and write)<input id="t" type="password" autocapitalize="none"></label><label>PIN pengaman (opsional, 4+ angka, token dienkripsi)<input id="p" type="password" inputmode="numeric"></label>
+<label>Username GitHub<input id="o" autocapitalize="none" placeholder="contoh: wins" value="${E(keep.owner || '')}"></label><label>Nama repository<input id="r" autocapitalize="none" placeholder="xpeng-site" value="${E(keep.repo || '')}"></label><label>Branch<input id="b" value="${E(keep.branch || 'main')}"></label>
+<label>GitHub Token (fine-grained, izin Contents + Actions: Read and write)<input id="t" type="password" autocapitalize="none" autocomplete="off" value="${E(keep.token || '')}"></label><label>PIN pengaman (opsional, 4+ angka, token dienkripsi)<input id="p" type="password" inputmode="numeric"></label>
 <button id="go" style="width:100%">Masuk</button></div></div>`;
   $('#go').onclick = async () => {
-    const cfg = { owner: $('#o').value.trim(), repo: $('#r').value.trim(), branch: $('#b').value.trim() || 'main', token: $('#t').value.trim() }, pin = $('#p').value;
-    if (!cfg.owner || !cfg.repo || !cfg.token) return loginView('Lengkapi semua kolom.');
-    S.cfg = cfg; try { await gh('') } catch (e) { return loginView('Gagal masuk: ' + e.message); }
+    const clean = x => x.replace(/[^\x21-\x7E]/g, '');
+    const cfg = { owner: clean($('#o').value), repo: clean($('#r').value), branch: clean($('#b').value) || 'main', token: clean($('#t').value) }, pin = $('#p').value;
+    if (!cfg.owner || !cfg.repo || !cfg.token) return loginView('Lengkapi semua kolom.', cfg);
+    S.cfg = cfg;
+    if (!navigator.onLine) return loginView('HP sedang offline.', cfg);
+    try { await gh(''); }
+    catch (e) {
+      if (e.status === 401) return loginView('Token salah atau kedaluwarsa (401).', cfg);
+      if (e.status === 404) return loginView('Repo tidak ditemukan (404). Cek username/nama repo, dan token harus punya akses ke repo ini.', cfg);
+      if (e.status) return loginView('Gagal masuk: ' + e.message, cfg);
+      let net = 'tidak bisa dihubungi';
+      try { const r = await fetch('https://api.github.com/zen'); net = r.ok ? 'bisa dihubungi tanpa token (berarti ada yang memblokir header token: matikan ad-block/VPN/Data Saver)' : 'membalas ' + r.status; } catch (e2) { net = 'diblokir/tidak terjangkau. Matikan VPN, DNS pribadi, ad-block, atau coba pindah Wi-Fi/data seluler'; }
+      return loginView('Gagal terhubung: api.github.com ' + net + '.', cfg);
+    }
     localStorage.setItem('xp_cfg', pin.length >= 4 ? await seal(cfg, pin) : JSON.stringify(cfg)); start();
   };
 }
@@ -62,7 +74,7 @@ function pinView(raw) {
 }
 async function start() {
   app.innerHTML = '<main><p class="muted">Memuat data dari GitHub…</p></main>';
-  try { await loadData(); } catch (e) { return loginView('Gagal memuat: ' + e.message); }
+  try { await loadData(); } catch (e) { return loginView('Gagal memuat: ' + e.message, S.cfg); }
   shell(); go('home');
 }
 
