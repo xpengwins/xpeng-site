@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://username.github.io/xpeng-site/sitemap.xml
+Sitemap: https://xpengwins.github.io/xpeng-site/sitemap.xml

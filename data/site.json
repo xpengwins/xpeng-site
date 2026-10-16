@@ -1,7 +1,7 @@
 {
   "name": "XPeng Premium Indonesia",
   "dealer": "Dealer XPeng (isi nama dealer di Admin > Pengaturan)",
-  "baseUrl": "https://USERNAME.github.io/xpeng-site",
+  "baseUrl": "https://xpengwins.github.io/xpeng-site",
   "whatsapp": "6281234567890",
   "phone": "+62 812-3456-7890",
   "address": "Jakarta, Indonesia (isi alamat showroom di Admin)",
@@ -13,10 +13,30 @@
   "tiktok": "",
   "youtube": "",
   "backlinkSites": [
-    {"name": "geelywins.co", "url": "https://geelywins.co", "status": "aktif"},
-    {"name": "LapakMu.store", "url": "https://lapakmu.store", "status": "aktif"},
-    {"name": "Domain baru 1", "url": "", "status": "belum dibuat"},
-    {"name": "Domain baru 2", "url": "", "status": "belum dibuat"}
+    {
+      "name": "geelywins.co",
+      "url": "https://geelywins.co",
+      "status": "aktif"
+    },
+    {
+      "name": "LapakMu.store",
+      "url": "https://lapakmu.store",
+      "status": "aktif"
+    },
+    {
+      "name": "Domain baru 1",
+      "url": "",
+      "status": "belum dibuat"
+    },
+    {
+      "name": "Domain baru 2",
+      "url": "",
+      "status": "belum dibuat"
+    }
   ],
-  "github": {"owner": "", "repo": "", "branch": "main"}
+  "github": {
+    "owner": "xpengwins",
+    "repo": "xpeng-site",
+    "branch": "main"
+  }
 }

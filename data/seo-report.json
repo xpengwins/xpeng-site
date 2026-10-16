@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-16T08:07:06.565Z",
+ "generated": "2026-10-16T08:16:55.104Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
-  "techScore": 71,
+  "techScore": 86,
   "pages": 8,
-  "total": 93
+  "total": 97
  },
  "tech": [
   {
@@ -22,7 +22,7 @@
   },
   {
    "label": "Domain utama sudah diganti (bukan USERNAME)",
-   "pass": false,
+   "pass": true,
    "tip": "Ubah baseUrl di Admin > Pengaturan"
   },
   {

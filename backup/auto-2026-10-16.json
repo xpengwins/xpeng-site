@@ -1,11 +1,11 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-16T08:07:06.711Z",
+ "date": "2026-10-16T08:16:55.255Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
    "dealer": "Dealer XPeng (isi nama dealer di Admin > Pengaturan)",
-   "baseUrl": "https://USERNAME.github.io/xpeng-site",
+   "baseUrl": "https://xpengwins.github.io/xpeng-site",
    "whatsapp": "6281234567890",
    "phone": "+62 812-3456-7890",
    "address": "Jakarta, Indonesia (isi alamat showroom di Admin)",
@@ -39,8 +39,8 @@
     }
    ],
    "github": {
-    "owner": "",
-    "repo": "",
+    "owner": "xpengwins",
+    "repo": "xpeng-site",
     "branch": "main"
    }
   },
