@@ -1,0 +1,83 @@
+[
+ {
+  "slug": "xpeng-x9",
+  "name": "XPeng X9",
+  "type": "MPV Listrik Premium 7 Kursi",
+  "tagline": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
+  "hero": "assets/img/x9-white-depan.webp",
+  "gallery": ["assets/img/x9-white-depan.webp","assets/img/x9-white-belakang.webp","assets/img/x9-white-dashboard.webp","assets/img/x9-white-kursi-2.webp","assets/img/x9-white-kursi-3.webp","assets/img/x9-white-kursi-belakang.webp","assets/img/x9-black-depan.webp","assets/img/x9-grey-depan.webp","assets/img/x9-silver-depan.webp"],
+  "colors": [
+    {"name":"Putih","hex":"#f4f4f2","image":"assets/img/x9-white-depan.webp"},
+    {"name":"Hitam","hex":"#0e0f12","image":"assets/img/x9-black-depan.webp"},
+    {"name":"Abu Biru Matte","hex":"#8b98a6","image":"assets/img/x9-grey-depan.webp"},
+    {"name":"Silver","hex":"#c9cacc","image":"assets/img/x9-silver-depan.webp"}
+  ],
+  "variants": [
+    {"name":"New XPeng X9 Pro","price":1219000000},
+    {"name":"New XPeng X9 Pro+","price":1259000000}
+  ],
+  "highlights": [
+    "7 kursi dengan captain seat baris kedua",
+    "Pintu geser elektrik yang mudah untuk keluarga",
+    "Platform 800V dengan pengisian daya cepat",
+    "Layar hiburan besar dan kabin senyap",
+    "Garansi baterai dan kendaraan 8 tahun (syarat berlaku)"
+  ],
+  "specs": [
+    {"k":"Tipe","v":"MPV listrik 7 kursi"},
+    {"k":"Penggerak","v":"Motor listrik, roda depan (FWD)"},
+    {"k":"Arsitektur","v":"800V"},
+    {"k":"Garansi","v":"Baterai dan kendaraan 8 tahun"},
+    {"k":"Catatan","v":"Spesifikasi detail New X9 Pro/Pro+ mengikuti brosur resmi. Hubungi kami untuk data terbaru."}
+  ],
+  "faq": [
+    {"q":"Berapa harga XPeng X9 di Indonesia?","a":"Per Juli 2026, New XPeng X9 Pro Rp1.219.000.000 dan New XPeng X9 Pro+ Rp1.259.000.000. Harga bisa berubah, hubungi kami untuk konfirmasi."},
+    {"q":"Berapa kursi XPeng X9?","a":"XPeng X9 adalah MPV 7 kursi dengan captain seat di baris kedua."},
+    {"q":"Apakah bisa test drive XPeng X9?","a":"Bisa. Kirim pesan WhatsApp untuk jadwal test drive di showroom."}
+  ],
+  "metaTitle": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
+  "metaDescription": "Harga XPeng X9 mulai Rp1,219 miliar. Lihat varian Pro dan Pro+, warna, fitur kabin, dan jadwal test drive MPV listrik 7 kursi."
+ },
+ {
+  "slug": "xpeng-g6",
+  "name": "XPeng G6",
+  "type": "SUV Coupe Listrik Premium",
+  "tagline": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+  "hero": "assets/img/g6-black-depan.webp",
+  "gallery": ["assets/img/g6-black-depan.webp","assets/img/g6-black-belakang.webp","assets/img/g6-black-samping.webp","assets/img/g6-black-front.webp","assets/img/g6-silver-jalan.webp","assets/img/g6-white-detail.webp","assets/img/g6-grey-showroom.webp","assets/img/g6-grey-front.webp","assets/img/g6-grey-detail.webp"],
+  "colors": [
+    {"name":"Hitam","hex":"#0e0f12","image":"assets/img/g6-black-depan.webp"},
+    {"name":"Putih","hex":"#f4f4f2","image":"assets/img/g6-white-detail.webp"},
+    {"name":"Silver","hex":"#c9cacc","image":"assets/img/g6-silver-jalan.webp"},
+    {"name":"Abu-abu","hex":"#8d9094","image":"assets/img/g6-grey-showroom.webp"}
+  ],
+  "variants": [
+    {"name":"XPeng G6 Pro","price":679000000},
+    {"name":"XPeng G6 AWD","price":769000000}
+  ],
+  "highlights": [
+    "Baterai LFP 80,8 kWh dengan platform 800V 5C",
+    "Jarak tempuh hingga 525 km (WLTP) untuk G6 Pro",
+    "Varian AWD dua motor sekitar 487 HP",
+    "Garansi baterai dan kendaraan 8 tahun/160.000 km",
+    "Gratis servis 5 tahun/100.000 km"
+  ],
+  "specs": [
+    {"k":"Tipe","v":"SUV coupe listrik"},
+    {"k":"Baterai","v":"LFP 80,8 kWh"},
+    {"k":"Arsitektur","v":"SEPA 2.0, 800V, 5C"},
+    {"k":"Jarak tempuh Pro","v":"hingga 525 km (WLTP)"},
+    {"k":"Jarak tempuh AWD","v":"hingga 510 km (WLTP)"},
+    {"k":"Penggerak","v":"Pro: RWD, AWD: dua motor"},
+    {"k":"Garansi","v":"Baterai dan kendaraan 8 tahun/160.000 km"},
+    {"k":"Gratis servis","v":"5 tahun/100.000 km"}
+  ],
+  "faq": [
+    {"q":"Berapa harga XPeng G6 di Indonesia?","a":"Per Juli 2026, XPeng G6 Pro Rp679.000.000 dan XPeng G6 AWD Rp769.000.000. Hubungi kami untuk konfirmasi harga terbaru."},
+    {"q":"Berapa jarak tempuh XPeng G6 Pro?","a":"Hingga sekitar 525 km berdasarkan standar WLTP dengan baterai LFP 80,8 kWh."},
+    {"q":"Apa beda G6 Pro dan G6 AWD?","a":"G6 Pro memakai satu motor penggerak roda belakang. G6 AWD punya motor tambahan di depan sehingga tenaganya jauh lebih besar, dengan jarak tempuh sedikit lebih pendek."}
+  ],
+  "metaTitle": "XPeng G6 Harga & Spesifikasi 2026 | SUV Listrik Premium",
+  "metaDescription": "Harga XPeng G6 mulai Rp679 juta. Bandingkan G6 Pro dan G6 AWD, jarak tempuh, baterai 80,8 kWh, garansi 8 tahun, dan test drive."
+ }
+]

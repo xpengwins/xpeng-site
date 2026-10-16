@@ -1,0 +1,262 @@
+/* Admin XPeng - berjalan 100% di browser HP. Data disimpan ke GitHub lewat API. */
+(function () {
+'use strict';
+const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
+const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
+const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks'];
+const today = () => new Date().toISOString().slice(0, 10);
+const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
+function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
+const b64 = s => { const b = new TextEncoder().encode(s); let r = ''; b.forEach(x => r += String.fromCharCode(x)); return btoa(r); };
+const unb64 = s => { const r = atob(s.replace(/\n/g, '')); const b = new Uint8Array(r.length); for (let i = 0; i < r.length; i++) b[i] = r.charCodeAt(i); return new TextDecoder().decode(b); };
+const bufb64 = buf => { let r = '', b = new Uint8Array(buf); for (let i = 0; i < b.length; i += 0x8000) r += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000)); return btoa(r); };
+
+/* ---------- penyimpanan token (opsional PIN, dienkripsi AES-GCM) ---------- */
+const enc = new TextEncoder();
+async function key(pin, salt) { const k = await crypto.subtle.importKey('raw', enc.encode(pin), 'PBKDF2', false, ['deriveKey']); return crypto.subtle.deriveKey({ name: 'PBKDF2', salt, iterations: 120000, hash: 'SHA-256' }, k, { name: 'AES-GCM', length: 256 }, false, ['encrypt', 'decrypt']); }
+async function seal(obj, pin) { const salt = crypto.getRandomValues(new Uint8Array(16)), iv = crypto.getRandomValues(new Uint8Array(12)); const c = await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, await key(pin, salt), enc.encode(JSON.stringify(obj))); return JSON.stringify({ s: bufb64(salt), i: bufb64(iv), c: bufb64(c) }); }
+async function unseal(str, pin) { const o = JSON.parse(str), f = x => Uint8Array.from(atob(x), c => c.charCodeAt(0)); const p = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: f(o.i) }, await key(pin, f(o.s)), f(o.c)); return JSON.parse(new TextDecoder().decode(p)); }
+
+/* ---------- GitHub API ---------- */
+async function gh(path, opt = {}) {
+  const c = S.cfg, r = await fetch('https://api.github.com/repos/' + c.owner + '/' + c.repo + '/' + path, { ...opt, headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', 'Content-Type': 'application/json', ...(opt.headers || {}) } });
+  if (!r.ok) { let m = ''; try { m = (await r.json()).message; } catch (e) {} const err = new Error('GitHub ' + r.status + ': ' + m); err.status = r.status; throw err; }
+  return r.status === 204 ? null : r.json();
+}
+const enc2 = p => p.split('/').map(encodeURIComponent).join('/');
+async function getFile(p) { const j = await gh('contents/' + enc2(p) + '?ref=' + S.cfg.branch); S.sha[p] = j.sha; return j; }
+async function putFile(p, content64, msg, retry) {
+  let sha = S.sha[p]; if (!sha) { try { sha = (await getFile(p)).sha; } catch (e) { if (e.status !== 404) throw e; } }
+  try { const j = await gh('contents/' + enc2(p), { method: 'PUT', body: JSON.stringify({ message: msg || 'Update ' + p + ' via admin', content: content64, branch: S.cfg.branch, sha }) }); S.sha[p] = j.content.sha; return j; }
+  catch (e) { if ((e.status === 409 || e.status === 422) && !retry) { delete S.sha[p]; return putFile(p, content64, msg, true); } throw e; }
+}
+async function delFile(p) { const j = await getFile(p); return gh('contents/' + enc2(p), { method: 'DELETE', body: JSON.stringify({ message: 'Hapus ' + p, sha: j.sha, branch: S.cfg.branch }) }); }
+async function listDir(p) { try { return await gh('contents/' + enc2(p) + '?ref=' + S.cfg.branch); } catch (e) { if (e.status === 404) return []; throw e; } }
+async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = n === 'site' ? {} : []; } } }
+async function save(n, msg) { const btn = document.activeElement; try { await putFile('data/' + n + '.json', b64(JSON.stringify(S.d[n], null, 1)), msg || 'Update ' + n + ' via admin'); toast('Tersimpan. Website update otomatis ±1-2 menit.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); throw e; } }
+
+/* ---------- login ---------- */
+async function boot() {
+  const raw = localStorage.getItem('xp_cfg');
+  if (!raw) return loginView();
+  if (raw.charAt(0) === '{' && raw.indexOf('"c"') > 0) return pinView(raw);
+  S.cfg = JSON.parse(raw); start();
+}
+function loginView(err) {
+  app.innerHTML = `<div id="login"><div class="card"><h2>Masuk Admin XPeng</h2><p class="muted">Data tersimpan di GitHub Anda. Token hanya disimpan di HP ini.</p>${err ? `<p class="pill bad">${E(err)}</p>` : ''}
+<label>Username GitHub<input id="o" autocapitalize="none" placeholder="contoh: wins"></label><label>Nama repository<input id="r" autocapitalize="none" placeholder="xpeng-site"></label><label>Branch<input id="b" value="main"></label>
+<label>GitHub Token (fine-grained, izin Contents + Actions: Read and write)<input id="t" type="password" autocapitalize="none"></label><label>PIN pengaman (opsional, 4+ angka, token dienkripsi)<input id="p" type="password" inputmode="numeric"></label>
+<button id="go" style="width:100%">Masuk</button></div></div>`;
+  $('#go').onclick = async () => {
+    const cfg = { owner: $('#o').value.trim(), repo: $('#r').value.trim(), branch: $('#b').value.trim() || 'main', token: $('#t').value.trim() }, pin = $('#p').value;
+    if (!cfg.owner || !cfg.repo || !cfg.token) return loginView('Lengkapi semua kolom.');
+    S.cfg = cfg; try { await gh('') } catch (e) { return loginView('Gagal masuk: ' + e.message); }
+    localStorage.setItem('xp_cfg', pin.length >= 4 ? await seal(cfg, pin) : JSON.stringify(cfg)); start();
+  };
+}
+function pinView(raw) {
+  app.innerHTML = `<div id="login"><div class="card"><h2>Masukkan PIN</h2><input id="p" type="password" inputmode="numeric" autofocus><div class="row" style="margin-top:12px"><button id="ok">Buka</button><button class="s" id="rs">Reset login</button></div></div></div>`;
+  $('#ok').onclick = async () => { try { S.cfg = await unseal(raw, $('#p').value); start(); } catch (e) { toast('PIN salah', true); } };
+  $('#rs').onclick = () => { localStorage.removeItem('xp_cfg'); loginView(); };
+}
+async function start() {
+  app.innerHTML = '<main><p class="muted">Memuat data dari GitHub…</p></main>';
+  try { await loadData(); } catch (e) { return loginView('Gagal memuat: ' + e.message); }
+  shell(); go('home');
+}
+
+/* ---------- kerangka ---------- */
+const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
+const MORE = [['prices', '💰', 'Pricelist'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+function shell() {
+  app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
+<div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
+<nav class="bot">${TABS.map(t => `<button data-t="${t[0]}"><span>${t[1]}</span>${t[2]}</button>`).join('')}</nav>`;
+  app.querySelectorAll('[data-t]').forEach(b => b.onclick = () => { const t = b.dataset.t; if (t === 'more') return $('#menu').classList.toggle('open'); go(t); });
+}
+function go(t) {
+  if (t === 'logout') { localStorage.removeItem('xp_cfg'); S.cfg = null; return loginView(); }
+  S.tab = t; $('#menu').classList.remove('open'); app.querySelectorAll('nav.bot button').forEach(b => b.classList.toggle('on', b.dataset.t === t || (t !== 'home' && !TABS.some(x => x[0] === t) && b.dataset.t === 'more')));
+  window.scrollTo(0, 0); const v = $('#v'); (VIEWS[t] || VIEWS.home)(v);
+}
+const sc = (n) => `<span class="score ${n >= 90 ? 'A' : n >= 80 ? 'B' : n >= 65 ? 'C' : 'D'}">${n}</span>`;
+const checks = cs => cs.map(c => `<div class="chk"><i>${c.pass ? '✅' : '❌'}</i><div>${E(c.label)}${c.tip ? `<div class="t">${E(c.tip)}</div>` : ''}</div></div>`).join('');
+async function build() { try { await gh('actions/workflows/build.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.cfg.branch }) }); toast('Build dijalankan. Tunggu ±1-2 menit lalu buka menu SEO.'); } catch (e) { toast('Gagal: ' + e.message + ' (pastikan token punya izin Actions)', true); } }
+async function loadReport() { try { const j = await getFile('data/seo-report.json'); S.report = JSON.parse(unb64(j.content)); } catch (e) { S.report = null; } return S.report; }
+
+/* ---------- VIEWS ---------- */
+const VIEWS = {};
+VIEWS.home = async v => {
+  const a = S.d.articles, pub = a.filter(x => x.status === 'published').length;
+  v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub} draft</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
+<div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
+<div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
+<div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;
+  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build;
+  const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
+};
+
+/* --- Artikel --- */
+VIEWS.articles = v => {
+  const A = S.d.articles;
+  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button></div><div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${A.map((a, i) => { const r = SEO.scoreArticle(a, A); return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${a.status === 'published' ? 'ok' : 'warn'}">${a.status}</span></div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button></td></tr>`; }).join('') || '<tr><td colspan=3>Belum ada artikel</td></tr>'}</tbody></table></div>`;
+  $('#new').onclick = () => editArticle(v, { title: '', slug: '', keyword: '', description: '', image: '', imageAlt: '', date: today(), status: 'draft', category: 'Tips EV', body: '**Jawaban singkat:** \n\n## \n\n## \n\n## Pertanyaan yang sering diajukan\n\n### \n\n### \n\n### \n' }, -1);
+  v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editArticle(v, JSON.parse(JSON.stringify(A[b.dataset.e])), +b.dataset.e));
+  $('#ideas').onclick = () => {
+    const T = { hard: ['Panduan lengkap {k}: yang harus Anda tahu', '{k}: perbandingan dan rekomendasi {y}'], medium: ['{k}: harga, spesifikasi, dan pilihan varian', 'Kelebihan dan kekurangan {k} menurut pengguna'], low: ['Cara mudah {k} untuk pemula', '{k}: pertanyaan yang sering diajukan'] };
+    const used = new Set(A.map(a => (a.keyword || '').toLowerCase()));
+    const rows = S.d.keywords.filter(k => !used.has(k.kw.toLowerCase())).slice(0, 12).map(k => (T[k.tier] || T.low).map(t => t.replace('{k}', k.kw).replace('{y}', new Date().getFullYear())).map(t => `<tr><td>${E(t)}</td><td><span class="pill">${k.tier}</span></td><td>${E(k.kw)}</td></tr>`).join('')).join('');
+    $('#ideaBox').innerHTML = `<div class="card tw"><h3>Ide judul (keyword yang belum punya artikel)</h3><table><thead><tr><th>Judul</th><th>Tier</th><th>Keyword</th></tr></thead><tbody>${rows || '<tr><td colspan=3>Semua keyword sudah punya artikel.</td></tr>'}</tbody></table><p class="muted">Sebelum menulis: riset 3-5 hasil teratas Google untuk keyword itu, catat pertanyaan yang belum terjawab, lalu tulis dengan kata-kata sendiri. Jangan menyalin.</p></div>`;
+  };
+};
+function editArticle(v, a, idx) {
+  const all = () => S.d.articles.filter((_, i) => i !== idx).concat([a]);
+  const imgs = (S.media || []).map(m => `<option value="assets/img/${E(m)}">${E(m)}</option>`).join('');
+  v.innerHTML = `<h2>${idx < 0 ? 'Artikel baru' : 'Edit artikel'}</h2>
+<div class="card"><label>Judul (30-60 karakter)<input id="f_title" value="${E(a.title)}"></label><div class="muted" id="c_title"></div>
+<div class="grid"><label>Keyword utama<input id="f_keyword" value="${E(a.keyword)}"></label><label>Slug URL<input id="f_slug" value="${E(a.slug)}"></label></div>
+<label>Meta description (120-160 karakter)<textarea id="f_description" style="min-height:70px;font-family:inherit">${E(a.description)}</textarea></label><div class="muted" id="c_desc"></div>
+<div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>draft</option><option value="published"${a.status === 'published' ? ' selected' : ''}>published</option></select></label></div>
+<div class="grid"><label>Gambar utama (path)<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><datalist id="imgl">${imgs}</datalist>
+<label>Isi artikel (Markdown). Awali dengan <b>**Jawaban singkat:**</b>, pakai ## untuk subjudul, ### untuk FAQ</label>
+<div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" data-ins="![alt gambar](assets/img/nama.webp)">Gambar</button><button class="s sm" id="tbl">Tabel</button></div>
+<textarea id="f_body" style="min-height:340px">${E(a.body)}</textarea>
+<div class="card" style="background:#0d0f13"><h3>Saran internal link</h3><div id="sug" class="row"></div></div>
+<div class="row"><button id="sv">Simpan</button><button class="s" id="pv">Pratinjau</button><button class="s" id="bk">Kembali</button>${idx >= 0 ? '<button class="d" id="dl">Hapus</button>' : ''}</div></div>
+<div class="card"><h3>Skor SEO / AEO / GEO</h3><div class="row"><div id="scr"></div><div style="flex:3" class="muted" id="sum"></div></div><div id="chk"></div></div><div id="pvbox"></div>`;
+  const F = id => $('#f_' + id), ta = F('body');
+  const read = () => { ['title', 'keyword', 'slug', 'description', 'category', 'date', 'status', 'image', 'imageAlt', 'body'].forEach(k => a[k] = F(k).value); a.slug = (a.slug || MD.slug(a.title)).toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-'); };
+  const upd = () => { read(); const r = SEO.scoreArticle(a, all()); $('#scr').innerHTML = sc(r.score) + ` <b>${r.grade}</b>`; $('#sum').innerHTML = `${r.words} kata • kepadatan keyword ${r.density}% • internal link ${r.internal} • FAQ ${r.faq} • kemiripan ${r.overlap}%`; $('#chk').innerHTML = checks(r.checks);
+    $('#c_title').textContent = a.title.length + ' karakter'; $('#c_desc').textContent = a.description.length + ' karakter';
+    const t = [['/', 'Beranda'], ['/pricelist/', 'Pricelist'], ['/kontak/', 'Test Drive'], ...S.d.models.map(m => ['/model/' + m.slug + '/', m.name]), ...S.d.articles.filter(x => x.slug !== a.slug && x.status === 'published').map(x => ['/artikel/' + x.slug + '/', x.title])];
+    $('#sug').innerHTML = t.filter(x => !a.body.includes('](' + x[0] + ')')).map(x => `<button class="s sm" data-lk="${E(x[0])}" data-tx="${E(x[1])}">+ ${E(x[1].slice(0, 28))}</button>`).join(''); v.querySelectorAll('[data-lk]').forEach(b => b.onclick = () => ins(`[${b.dataset.tx}](${b.dataset.lk})`)); };
+  function ins(t) { const s = ta.selectionStart, e = ta.selectionEnd; ta.value = ta.value.slice(0, s) + t + ta.value.slice(e); ta.focus(); ta.selectionStart = ta.selectionEnd = s + t.length; upd(); }
+  v.querySelectorAll('[data-ins]').forEach(b => b.onclick = () => ins(b.dataset.ins)); $('#tbl').onclick = () => ins('\n| Kolom 1 | Kolom 2 |\n|---|---|\n| isi | isi |\n');
+  v.querySelectorAll('input,textarea,select').forEach(x => x.oninput = upd); upd();
+  $('#pv').onclick = () => { read(); $('#pvbox').innerHTML = `<div class="card"><h3>Pratinjau</h3><div class="prev"><h1 style="font-size:1.5rem">${E(a.title)}</h1>${MD.render(a.body)}</div></div>`; };
+  $('#bk').onclick = () => go('articles');
+  $('#sv').onclick = async () => { read(); if (!a.title) return toast('Judul wajib diisi', true); const r = SEO.scoreArticle(a, all()); if (a.status === 'published' && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
+  if ($('#dl')) $('#dl').onclick = async () => { if (!confirm('Hapus artikel ini?')) return; S.d.articles.splice(idx, 1); await save('articles', 'Hapus artikel'); go('articles'); };
+  if (!S.media) listDir('assets/img').then(l => { S.media = l.filter(x => x.type === 'file').map(x => x.name); const dl = $('#imgl'); if (dl) dl.innerHTML = S.media.map(m => `<option value="assets/img/${E(m)}">`).join(''); });
+}
+
+/* --- Model --- */
+const lines = s => s.split('\n').map(x => x.trim()).filter(Boolean);
+VIEWS.models = v => {
+  v.innerHTML = `<h2>Model mobil</h2><button id="nm">+ Model baru</button><div style="margin-top:14px">${S.d.models.map((m, i) => `<div class="card"><b>${E(m.name)}</b><div class="muted">${E(m.type)} • ${m.variants.length} varian</div><div class="row" style="margin-top:8px"><button class="s sm" data-e="${i}">Edit</button><button class="d sm" data-d="${i}">Hapus</button></div></div>`).join('')}</div>`;
+  v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editModel(v, +b.dataset.e));
+  v.querySelectorAll('[data-d]').forEach(b => b.onclick = async () => { if (confirm('Hapus model ini?')) { S.d.models.splice(+b.dataset.d, 1); await save('models', 'Hapus model'); go('models'); } });
+  $('#nm').onclick = () => { S.d.models.push({ slug: 'model-baru', name: 'Model Baru', type: '', tagline: '', hero: 'assets/img/placeholder.svg', gallery: [], colors: [{ name: 'Putih', hex: '#f4f4f2', image: 'assets/img/placeholder.svg' }], variants: [{ name: 'Varian 1', price: 0 }], highlights: [], specs: [], faq: [], metaTitle: '', metaDescription: '' }); editModel(v, S.d.models.length - 1); };
+};
+function editModel(v, i) {
+  const m = S.d.models[i];
+  v.innerHTML = `<h2>Edit ${E(m.name)}</h2><div class="card"><div class="grid"><label>Nama<input id="m_name" value="${E(m.name)}"></label><label>Slug URL<input id="m_slug" value="${E(m.slug)}"></label></div><label>Jenis<input id="m_type" value="${E(m.type)}"></label><label>Tagline<input id="m_tagline" value="${E(m.tagline)}"></label><label>Gambar hero<input id="m_hero" value="${E(m.hero)}"></label>
+<label>Meta title (30-60)<input id="m_metaTitle" value="${E(m.metaTitle)}"></label><label>Meta description (120-160)<textarea id="m_metaDescription" style="min-height:70px;font-family:inherit">${E(m.metaDescription)}</textarea></label>
+<label>Varian dan harga (format: Nama|harga angka, satu per baris)<textarea id="m_variants">${E(m.variants.map(x => x.name + '|' + x.price).join('\n'))}</textarea></label>
+<label>Warna (Nama|#hex|path gambar)<textarea id="m_colors">${E(m.colors.map(x => [x.name, x.hex, x.image].join('|')).join('\n'))}</textarea></label>
+<label>Galeri (satu path per baris)<textarea id="m_gallery">${E(m.gallery.join('\n'))}</textarea></label>
+<label>Keunggulan (satu per baris)<textarea id="m_highlights" style="font-family:inherit">${E(m.highlights.join('\n'))}</textarea></label>
+<label>Spesifikasi (Nama: nilai)<textarea id="m_specs" style="font-family:inherit">${E(m.specs.map(x => x.k + ': ' + x.v).join('\n'))}</textarea></label>
+<label>FAQ (Pertanyaan?|Jawaban)<textarea id="m_faq" style="font-family:inherit">${E(m.faq.map(x => x.q + '|' + x.a).join('\n'))}</textarea></label>
+<div class="row"><button id="sv">Simpan</button><button class="s" id="bk">Kembali</button></div></div>`;
+  $('#bk').onclick = () => go('models');
+  $('#sv').onclick = async () => { const g = id => $('#m_' + id).value; Object.assign(m, { name: g('name'), slug: g('slug').toLowerCase().replace(/[^a-z0-9-]/g, '-'), type: g('type'), tagline: g('tagline'), hero: g('hero'), metaTitle: g('metaTitle'), metaDescription: g('metaDescription'),
+    variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: lines(g('colors')).map(l => { const p = l.split('|'); return { name: p[0], hex: p[1] || '#999999', image: p[2] || m.hero }; }),
+    gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
+}
+
+/* --- Pricelist --- */
+VIEWS.prices = v => {
+  v.innerHTML = `<h2>Pricelist</h2><div class="card"><label>Periode update (tampil di website)<input id="pu" value="${E(S.d.site.pricelistUpdate || '')}"></label>${S.d.models.map((m, mi) => `<h3>${E(m.name)}</h3>${m.variants.map((x, vi) => `<label>${E(x.name)}<input data-m="${mi}" data-v="${vi}" inputmode="numeric" value="${x.price}"></label>`).join('')}`).join('')}<button id="sv">Simpan pricelist</button><p class="muted">Isi angka tanpa titik, contoh 679000000.</p></div>`;
+  $('#sv').onclick = async () => { v.querySelectorAll('[data-m]').forEach(i => S.d.models[i.dataset.m].variants[i.dataset.v].price = parseInt(i.value.replace(/\D/g, '')) || 0); S.d.site.pricelistUpdate = $('#pu').value; await save('models', 'Update pricelist'); await save('site', 'Periode pricelist'); };
+};
+
+/* --- Keyword & ranking --- */
+VIEWS.keywords = v => {
+  const K = S.d.keywords; const trend = k => { const h = k.history || []; if (h.length < 2) return ''; const d = h[h.length - 2].pos - h[h.length - 1].pos; return d > 0 ? ' ▲' + d : d < 0 ? ' ▼' + -d : ' ='; };
+  v.innerHTML = `<h2>Keyword & ranking</h2><div class="card"><p class="muted">Ranking asli Google hanya bisa dilihat dari <b>Google Search Console</b> (gratis). Salin posisi rata-rata ke kolom Posisi di bawah, lalu tren tercatat otomatis.</p><a class="btn s" style="background:#262b34;color:#fff" target="_blank" rel="noopener" href="https://search.google.com/search-console">Buka Search Console</a></div>
+<div class="card tw"><table><thead><tr><th>Keyword</th><th>Tier</th><th>Halaman</th><th>Posisi</th><th></th></tr></thead><tbody>${K.map((k, i) => `<tr><td><input data-i="${i}" data-f="kw" value="${E(k.kw)}"></td><td><select data-i="${i}" data-f="tier">${['hard', 'medium', 'low'].map(t => `<option${k.tier === t ? ' selected' : ''}>${t}</option>`).join('')}</select></td><td><input data-i="${i}" data-f="page" value="${E(k.page)}"></td><td><input style="width:70px" inputmode="decimal" data-i="${i}" data-f="position" value="${k.position == null ? '' : k.position}"><div class="muted">${trend(k)}</div></td><td><button class="d sm" data-x="${i}">✕</button></td></tr>`).join('')}</tbody></table></div>
+<div class="row"><button class="s" id="add">+ Keyword</button><button id="sv">Simpan</button></div>
+<div class="card"><h3>Panduan prioritas</h3><p class="muted"><b>Hard</b>: volume besar, saingan berat (target jangka panjang, butuh banyak artikel pendukung + backlink). <b>Medium</b>: halaman model dan harga. <b>Low</b>: pertanyaan spesifik, cepat naik, kerjakan duluan untuk membangun otoritas.</p></div>`;
+  $('#add').onclick = () => { K.push({ kw: 'keyword baru', tier: 'low', page: '/', position: null }); VIEWS.keywords(v); };
+  v.querySelectorAll('[data-x]').forEach(b => b.onclick = () => { K.splice(+b.dataset.x, 1); VIEWS.keywords(v); });
+  $('#sv').onclick = async () => { v.querySelectorAll('[data-f]').forEach(i => { const k = K[i.dataset.i], f = i.dataset.f; if (f === 'position') { const p = i.value === '' ? null : parseFloat(i.value); if (p !== k.position && p != null) (k.history = k.history || []).push({ date: today(), pos: p }); k.position = p; } else k[f] = i.value; }); await save('keywords', 'Update keyword'); };
+};
+
+/* --- Laporan SEO --- */
+VIEWS.seo = async v => {
+  v.innerHTML = '<h2>Laporan SEO</h2><p class="muted">Memuat…</p>'; const r = await loadReport(); let hist = []; try { hist = JSON.parse(unb64((await getFile('data/seo-history.json')).content)); } catch (e) {}
+  if (!r || !r.generated) { v.innerHTML = '<h2>Laporan SEO</h2><div class="card"><p>Belum ada laporan.</p><button id="b">Jalankan build</button></div>'; $('#b').onclick = build; return; }
+  const live = S.d.articles.map(a => ({ a, r: SEO.scoreArticle(a, S.d.articles) })).sort((x, y) => y.r.score - x.r.score);
+  v.innerHTML = `<h2>Laporan SEO</h2><div class="card"><div class="row"><div>${sc(r.site.total)}<div class="muted">Skor total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div><p class="muted">Dibuat ${new Date(r.generated).toLocaleString('id-ID')}</p><button id="b">Jalankan build & perbarui</button></div>
+<div class="card"><h3>Peringkat artikel (skor SEO)</h3><div class="tw"><table><thead><tr><th>#</th><th>Artikel</th><th>Skor</th></tr></thead><tbody>${live.map((x, i) => `<tr><td>${i + 1}</td><td>${E(x.a.title)}<div class="muted">${x.r.words} kata • ${E(x.a.status)}</div><details><summary class="muted">Perbaikan</summary>${checks(x.r.checks.filter(c => !c.pass))}</details></td><td>${sc(x.r.score)}</td></tr>`).join('')}</tbody></table></div></div>
+<div class="card"><h3>Cek teknis</h3>${checks(r.tech)}${r.broken.length ? `<p class="pill bad">Link rusak: ${r.broken.map(b => E(b.to)).join(', ')}</p>` : ''}</div>
+<div class="card"><h3>Skor tiap halaman</h3><div class="tw"><table><tbody>${r.pages.sort((a, b) => a.score - b.score).map(p => `<tr><td>${E(p.url)}${p.score < 100 ? `<details><summary class="muted">Perbaikan</summary>${checks(p.checks.filter(c => !c.pass))}</details>` : ''}</td><td>${sc(p.score)}</td></tr>`).join('')}</tbody></table></div></div>
+<div class="card"><h3>Keyword: on-page & ranking</h3><div class="tw"><table><thead><tr><th>Keyword</th><th>Judul</th><th>H1</th><th>Muncul</th><th>Posisi</th></tr></thead><tbody>${r.keywords.map(k => `<tr><td>${E(k.kw)}<div class="muted">${k.tier}</div></td><td>${k.onpage.inTitle ? '✅' : '❌'}</td><td>${k.onpage.inH1 ? '✅' : '❌'}</td><td>${k.onpage.count}x</td><td>${k.position == null ? '-' : k.position}</td></tr>`).join('')}</tbody></table></div></div>
+<div class="card"><h3>Riwayat skor</h3>${hist.length ? hist.slice(-14).map(h => `<div class="row" style="margin-bottom:6px"><span class="muted" style="flex:0 0 84px">${h.date}</span><div class="bar" style="flex:4"><i style="width:${h.total}%"></i></div><b style="flex:0 0 30px">${h.total}</b></div>`).join('') : '<p class="muted">Belum ada riwayat.</p>'}</div>`;
+  $('#b').onclick = build;
+};
+
+/* --- Backlink aman --- */
+VIEWS.backlinks = v => {
+  const B = S.d.backlinks, sites = (S.d.site.backlinkSites || []);
+  const tot = B.length, exact = B.filter(b => b.type === 'exact').length, pe = tot ? Math.round(exact / tot * 100) : 0;
+  const base = (S.d.site.baseUrl || '').replace(/\/$/, '');
+  v.innerHTML = `<h2>Backlink aman</h2>
+<div class="card"><h3>Situs milik Anda</h3>${sites.map(s => `<div class="chk"><i>🌐</i><div>${E(s.name)} <span class="pill ${s.url ? 'ok' : 'warn'}">${E(s.status)}</span><div class="t">${E(s.url || 'domain belum diisi (Pengaturan)')}</div></div></div>`).join('')}</div>
+<div class="card"><h3>Aturan aman (hindari penalti Google)</h3><div class="chk"><i>1</i><div>Konten di situs Anda yang menaut ke XPeng harus <b>unik dan relevan</b> (otomotif/EV), bukan salinan.</div></div><div class="chk"><i>2</i><div>Variasikan anchor: 50% nama brand/URL polos, 30% frasa umum, maksimal 20% keyword persis.</div></div><div class="chk"><i>3</i><div>Maksimal 1 link per artikel per situs. Naikkan bertahap: 2-4 link baru per minggu.</div></div><div class="chk"><i>4</i><div>Jangan beli link, jangan tukar link massal, jangan jaringan situs kosong (PBN).</div></div><div class="chk"><i>5</i><div>Tambahkan sumber alami: Google Business Profile, profil sosial, direktori otomotif, YouTube, siaran pers, liputan media.</div></div></div>
+<div class="card"><h3>Perencana backlink</h3><div class="grid"><label>Dari situs<select id="bs">${sites.map(s => `<option>${E(s.name)}</option>`).join('')}</select></label><label>Ke halaman<select id="bt"><option value="/">Beranda</option><option value="/pricelist/">Pricelist</option>${S.d.models.map(m => `<option value="/model/${E(m.slug)}/">${E(m.name)}</option>`).join('')}${S.d.articles.filter(a => a.status === 'published').map(a => `<option value="/artikel/${E(a.slug)}/">${E(a.title.slice(0, 40))}</option>`).join('')}</select></label><label>Jenis anchor<select id="ba"><option value="brand">Brand (XPeng Indonesia)</option><option value="url">URL polos</option><option value="generic">Umum (baca selengkapnya)</option><option value="partial">Sebagian keyword</option><option value="exact">Keyword persis</option></select></label></div>
+<label>Teks anchor<input id="bx" placeholder="mis. pricelist XPeng terbaru"></label><div class="row"><button id="bg">Buat kode link</button><button class="s" id="bp">Catat rencana</button></div><textarea id="bc" readonly style="min-height:60px"></textarea></div>
+<div class="card"><h3>Distribusi anchor (${tot} rencana)</h3><div class="bar"><i style="width:${pe}%;background:${pe > 20 ? '#ff6b6b' : '#2ee6b6'}"></i></div><p class="muted">Keyword persis: ${pe}% ${pe > 20 ? '— terlalu tinggi, ganti sebagian ke brand/umum.' : '— aman.'}</p>
+<div class="tw"><table><tbody>${B.map((b, i) => `<tr><td>${E(b.site)} → ${E(b.target)}<div class="muted">${E(b.type)} • "${E(b.anchor)}" • ${E(b.date)}</div></td><td><select data-s="${i}">${['rencana', 'terbit', 'dicek'].map(s => `<option${b.status === s ? ' selected' : ''}>${s}</option>`).join('')}</select></td><td><button class="d sm" data-x="${i}">✕</button></td></tr>`).join('')}</tbody></table></div><button class="s" id="sv">Simpan status</button></div>`;
+  const mk = () => { const t = $('#bt').value, ty = $('#ba').value; const url = base + t; const tx = $('#bx').value || (ty === 'url' ? url : 'XPeng Indonesia'); const code = `<a href="${url}" rel="noopener">${tx}</a>`; $('#bc').value = code; return { url, tx, ty }; };
+  $('#bg').onclick = mk;
+  $('#bp').onclick = async () => { const r = mk(); B.push({ site: $('#bs').value, target: $('#bt').value, anchor: r.tx, type: r.ty, date: today(), status: 'rencana' }); await save('backlinks', 'Rencana backlink'); VIEWS.backlinks(v); };
+  v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { B.splice(+b.dataset.x, 1); await save('backlinks'); VIEWS.backlinks(v); });
+  $('#sv').onclick = async () => { v.querySelectorAll('[data-s]').forEach(s => B[s.dataset.s].status = s.value); await save('backlinks', 'Status backlink'); };
+};
+
+/* --- Media & Zip --- */
+async function toWebp(file, max = 1600, q = .78) {
+  const bmp = await createImageBitmap(file), sc = Math.min(1, max / bmp.width), c = document.createElement('canvas'); c.width = Math.round(bmp.width * sc); c.height = Math.round(bmp.height * sc); c.getContext('2d').drawImage(bmp, 0, 0, c.width, c.height);
+  const blob = await new Promise(r => c.toBlob(r, 'image/webp', q)); return blob;
+}
+const slugName = n => n.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'foto';
+VIEWS.media = async v => {
+  v.innerHTML = `<h2>Media & upload ke GitHub</h2>
+<div class="card"><h3>Upload foto (otomatis dikecilkan ke WebP)</h3><input type="file" id="fi" accept="image/*" multiple><label style="margin-top:10px">Lebar maksimal (px)<select id="mx"><option>1200</option><option selected>1600</option><option>1920</option></select></label><button id="up">Upload foto</button><div id="st" class="muted"></div></div>
+<div class="card"><h3>Upload file ZIP</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
+<div class="card"><h3>Upload file apa saja ke repo</h3><label>Folder tujuan<input id="pd" value="assets/files"></label><input type="file" id="pf" multiple><button id="pu" style="margin-top:10px">Upload</button></div>
+<div class="card"><h3>Galeri (<span id="cnt">0</span>)</h3><div class="thumbs" id="th"></div></div>`;
+  const up = $('#up'); up.onclick = async () => { const fs = [...$('#fi').files]; if (!fs.length) return toast('Pilih foto dulu', true); up.disabled = true; let n = 0;
+    for (const f of fs) { try { $('#st').textContent = `Proses ${++n}/${fs.length}: ${f.name}`; const blob = await toWebp(f, +$('#mx').value), name = slugName(f.name) + '.webp'; await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name); $('#st').textContent = `✓ ${name} (${Math.round(blob.size / 1024)}KB dari ${Math.round(f.size / 1024)}KB)`; } catch (e) { toast(f.name + ': ' + e.message, true); } }
+    up.disabled = false; S.media = null; VIEWS.media(v); toast('Upload selesai'); };
+  $('#zu').onclick = async () => { const f = $('#zf').files[0]; if (!f) return toast('Pilih file ZIP', true); if (f.size > 70 * 1024 * 1024) return toast('ZIP maksimal ±70MB. Pecah jadi beberapa ZIP.', true);
+    try { $('#zs').textContent = 'Mengunggah…'; const dest = $('#zd').value.replace(/^\/|\/$/g, ''); await putFile('upload/' + dest.replace(/\//g, '__') + '--' + f.name.replace(/[^\w.-]/g, '_'), bufb64(await f.arrayBuffer()), 'Upload ZIP ' + f.name); $('#zs').textContent = '✓ ZIP terkirim. GitHub Actions akan mengekstrak ke ' + dest + ' dalam ±1-2 menit lalu menghapus ZIP-nya.'; } catch (e) { toast(e.message, true); } };
+  $('#pu').onclick = async () => { const d = $('#pd').value.replace(/^\/|\/$/g, ''); for (const f of [...$('#pf').files]) { try { await putFile(d + '/' + f.name.replace(/[^\w.-]/g, '_'), bufb64(await f.arrayBuffer()), 'Upload ' + f.name); toast('✓ ' + f.name); } catch (e) { toast(e.message, true); } } };
+  const l = await listDir('assets/img'); const imgs = l.filter(x => x.type === 'file' && /\.(webp|jpe?g|png|svg)$/i.test(x.name)); S.media = imgs.map(x => x.name); $('#cnt').textContent = imgs.length;
+  $('#th').innerHTML = imgs.map(x => `<figure><img loading="lazy" src="${E(x.download_url)}" alt=""><figcaption>${E(x.name)} • ${Math.round(x.size / 1024)}KB<br><button class="d sm" data-x="${E(x.path)}">hapus</button></figcaption></figure>`).join('');
+  v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { if (confirm('Hapus ' + b.dataset.x + '?')) { try { await delFile(b.dataset.x); VIEWS.media(v); } catch (e) { toast(e.message, true); } } });
+};
+
+/* --- Backup --- */
+VIEWS.backup = async v => {
+  v.innerHTML = `<h2>Backup data</h2><div class="card"><p class="muted">Backup otomatis berjalan tiap malam di GitHub (folder backup/). Anda juga bisa membuat dan memulihkan secara manual di sini.</p><div class="row"><button id="dl">Unduh backup (JSON)</button><button class="s" id="gh">Simpan salinan ke GitHub</button></div></div>
+<div class="card"><h3>Pulihkan dari file backup</h3><input type="file" id="rf" accept=".json"><button class="d" id="rs" style="margin-top:10px">Pulihkan</button><p class="muted">Menimpa semua data (model, artikel, keyword, pengaturan).</p></div><div class="card"><h3>Salinan di GitHub</h3><div id="bl" class="muted">Memuat…</div></div>`;
+  const bundle = () => JSON.stringify({ app: 'xpeng-site', date: new Date().toISOString(), data: S.d }, null, 1);
+  $('#dl').onclick = () => { const a = document.createElement('a'); a.href = URL.createObjectURL(new Blob([bundle()], { type: 'application/json' })); a.download = 'backup-xpeng-' + today() + '.json'; a.click(); };
+  $('#gh').onclick = async () => { try { await putFile('backup/manual-' + today() + '.json', b64(bundle()), 'Backup manual ' + today()); toast('Backup tersimpan di GitHub'); VIEWS.backup(v); } catch (e) { toast(e.message, true); } };
+  $('#rs').onclick = async () => { const f = $('#rf').files[0]; if (!f) return toast('Pilih file', true); if (!confirm('Timpa semua data dengan file ini?')) return; try { const j = JSON.parse(await f.text()); if (j.app !== 'xpeng-site') throw new Error('Bukan file backup XPeng'); for (const n of NAMES) if (j.data[n] !== undefined) { S.d[n] = j.data[n]; await save(n, 'Pulihkan backup'); } toast('Data dipulihkan'); } catch (e) { toast(e.message, true); } };
+  const l = await listDir('backup'); $('#bl').innerHTML = l.filter(x => x.type === 'file').reverse().slice(0, 15).map(x => `<div class="chk"><i>💾</i><div>${E(x.name)}<div class="t">${Math.round(x.size / 1024)}KB</div></div></div>`).join('') || 'Belum ada.';
+};
+
+/* --- Pengaturan --- */
+VIEWS.settings = v => {
+  const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube']];
+  v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
+  $('#sv').onclick = async () => { v.querySelectorAll('[data-k]').forEach(i => s[i.dataset.k] = i.value.trim()); s.whatsapp = s.whatsapp.replace(/\D/g, ''); s.backlinkSites = lines($('#bls').value).map(l => { const p = l.split('|'); return { name: p[0], url: p[1] || '', status: p[2] || 'aktif' }; }); s.github = { owner: S.cfg.owner, repo: S.cfg.repo, branch: S.cfg.branch }; await save('site', 'Pengaturan'); };
+};
+
+boot();
+})();

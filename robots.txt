@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+Disallow: /xpeng-site/admin/
+
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://username.github.io/xpeng-site/sitemap.xml

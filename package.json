@@ -1,0 +1,1 @@
+{ "name": "xpeng-site", "version": "1.0.0", "private": true, "scripts": { "build": "node build/optimize.js && node build/build.js", "backup": "node build/backup.js" }, "dependencies": { "sharp": "^0.33.5" } }

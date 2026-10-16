@@ -1,0 +1,1104 @@
+{
+ "generated": "2026-10-16T06:46:12.316Z",
+ "site": {
+  "pageScore": 100,
+  "articleScore": 100,
+  "techScore": 71,
+  "pages": 8,
+  "total": 93
+ },
+ "tech": [
+  {
+   "label": "Sitemap.xml tersedia",
+   "pass": true
+  },
+  {
+   "label": "robots.txt tersedia",
+   "pass": true
+  },
+  {
+   "label": "llms.txt untuk mesin AI (GEO)",
+   "pass": true
+  },
+  {
+   "label": "Domain utama sudah diganti (bukan USERNAME)",
+   "pass": false,
+   "tip": "Ubah baseUrl di Admin > Pengaturan"
+  },
+  {
+   "label": "Tidak ada link internal rusak",
+   "pass": true,
+   "tip": "0 link rusak"
+  },
+  {
+   "label": "Semua gambar di bawah 250KB",
+   "pass": true,
+   "tip": ""
+  },
+  {
+   "label": "Nomor WhatsApp sudah diisi benar",
+   "pass": false,
+   "tip": "Isi nomor WA asli di Admin"
+  }
+ ],
+ "broken": [],
+ "pages": [
+  {
+   "url": "/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/model/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/pricelist/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/kontak/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/model/xpeng-x9/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/model/xpeng-g6/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/harga-xpeng-x9-dan-g6-juli-2026/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  }
+ ],
+ "articles": [
+  {
+   "slug": "harga-xpeng-x9-dan-g6-juli-2026",
+   "title": "Harga XPeng X9 dan G6 Juli 2026: Pilih yang Mana?",
+   "status": "published",
+   "keyword": "harga xpeng",
+   "score": 100,
+   "grade": "A",
+   "words": 809,
+   "density": 0.99,
+   "internal": 5,
+   "external": 1,
+   "faq": 5,
+   "overlap": 0,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
+   "title": "Cara Menghitung Biaya Charging Mobil Listrik di Rumah",
+   "status": "draft",
+   "keyword": "biaya charging mobil listrik",
+   "score": 66,
+   "grade": "C",
+   "words": 216,
+   "density": 0,
+   "internal": 1,
+   "external": 0,
+   "faq": 3,
+   "overlap": 1,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": false,
+     "points": 0,
+     "max": 10,
+     "tip": "Sekarang 216 kata. Target 800+ kata."
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": false,
+     "points": 0,
+     "max": 6,
+     "tip": "Sebut keyword di paragraf pembuka."
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": false,
+     "points": 0,
+     "max": 6,
+     "tip": "Kepadatan 0.00%. Wajar di 0,5-2,5%."
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": false,
+     "points": 0,
+     "max": 3,
+     "tip": "Pakai keyword/variasinya di satu H2."
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": false,
+     "points": 3.5,
+     "max": 7,
+     "tip": "Tambah link ke model, pricelist, atau artikel lain. Sekarang 1."
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": false,
+     "points": 0,
+     "max": 3,
+     "tip": "Tambah 1 link ke sumber resmi."
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": false,
+     "points": 0,
+     "max": 4,
+     "tip": "Isi gambar utama dan teks alt."
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  }
+ ],
+ "keywords": [
+  {
+   "kw": "mobil listrik premium",
+   "tier": "hard",
+   "page": "/",
+   "position": null,
+   "note": "Halaman utama",
+   "onpage": {
+    "inTitle": false,
+    "inH1": true,
+    "count": 2
+   }
+  },
+  {
+   "kw": "harga xpeng",
+   "tier": "hard",
+   "page": "/pricelist/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 2
+   }
+  },
+  {
+   "kw": "xpeng indonesia",
+   "tier": "hard",
+   "page": "/",
+   "position": null,
+   "onpage": {
+    "inTitle": true,
+    "inH1": false,
+    "count": 2
+   }
+  },
+  {
+   "kw": "harga xpeng x9",
+   "tier": "medium",
+   "page": "/model/xpeng-x9/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 6
+   }
+  },
+  {
+   "kw": "harga xpeng g6",
+   "tier": "medium",
+   "page": "/model/xpeng-g6/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 6
+   }
+  },
+  {
+   "kw": "mpv listrik 7 seater",
+   "tier": "medium",
+   "page": "/model/xpeng-x9/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "suv listrik coupe",
+   "tier": "medium",
+   "page": "/model/xpeng-g6/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g6 awd",
+   "tier": "medium",
+   "page": "/model/xpeng-g6/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 4
+   }
+  },
+  {
+   "kw": "test drive xpeng",
+   "tier": "low",
+   "page": "/kontak/",
+   "position": null,
+   "onpage": {
+    "inTitle": true,
+    "inH1": true,
+    "count": 5
+   }
+  },
+  {
+   "kw": "cicilan xpeng x9",
+   "tier": "low",
+   "page": "/pricelist/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "jarak tempuh xpeng g6",
+   "tier": "low",
+   "page": "/model/xpeng-g6/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 2
+   }
+  },
+  {
+   "kw": "garansi baterai xpeng",
+   "tier": "low",
+   "page": "/",
+   "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  }
+ ]
+}
