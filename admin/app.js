@@ -20,7 +20,7 @@ async function unseal(str, pin) { const o = JSON.parse(str), f = x => Uint8Array
 
 /* ---------- GitHub API ---------- */
 async function gh(path, opt = {}) {
-  const c = S.cfg, r = await fetch('https://api.github.com/repos/' + c.owner + '/' + c.repo + '/' + path, { ...opt, headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', ...(opt.body ? { 'Content-Type': 'application/json' } : {}), ...(opt.headers || {}) } });
+  const c = S.cfg, r = await fetch('https://api.github.com/repos/' + c.owner + '/' + c.repo + (path ? '/' + path : ''), { ...opt, headers: { Authorization: 'Bearer ' + c.token, Accept: 'application/vnd.github+json', ...(opt.body ? { 'Content-Type': 'application/json' } : {}), ...(opt.headers || {}) } });
   if (!r.ok) { let m = ''; try { m = (await r.json()).message; } catch (e) {} const err = new Error('GitHub ' + r.status + ': ' + m); err.status = r.status; throw err; }
   return r.status === 204 ? null : r.json();
 }
@@ -57,7 +57,7 @@ function loginView(err, keep) {
     await T('2. header Accept saja', 'https://api.github.com/zen', { Accept: 'application/vnd.github+json' });
     const a = await T('3. Authorization palsu (harus 401 jika preflight lolos)', 'https://api.github.com/user', { Authorization: 'Bearer test' });
     if (tok) { await T('4. token Anda → /user (Bearer)', 'https://api.github.com/user', { Authorization: 'Bearer ' + tok }); await T('5. token Anda → /user (token)', 'https://api.github.com/user', { Authorization: 'token ' + tok }); if (o && r) await T('6. token Anda → repo', 'https://api.github.com/repos/' + o + '/' + r, { Authorization: 'Bearer ' + tok, Accept: 'application/vnd.github+json' }); }
-    out.textContent += a === 401 ? '\nKESIMPULAN: koneksi dan CORS normal. Masalah ada di token/nama repo, lihat baris 4-6.' : a === 0 ? '\nKESIMPULAN: permintaan dengan header Authorization diblokir di HP/jaringan ini (baris 3 gagal). Coba browser lain, jaringan lain, atau matikan VPN/pemblokir.' : '\nKode ' + a + ' tidak biasa, kirim hasil ini ke Claude.';
+    out.textContent += a === 401 ? '\nKESIMPULAN: koneksi dan CORS normal.' : a === 0 ? '\nKESIMPULAN: permintaan dengan header Authorization diblokir di HP/jaringan ini (baris 3 gagal). Coba browser lain, jaringan lain, atau matikan VPN/pemblokir.' : '\nKode ' + a + ' tidak biasa, kirim hasil ini ke Claude.';
   };
   $('#go').onclick = async () => {
     const clean = x => x.replace(/[^\x21-\x7E]/g, '');
