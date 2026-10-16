@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-16T08:30:51.089Z",
+ "generated": "2026-10-16T08:34:31.219Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
-  "techScore": 86,
+  "techScore": 100,
   "pages": 8,
-  "total": 97
+  "total": 100
  },
  "tech": [
   {
@@ -37,7 +37,7 @@
   },
   {
    "label": "Nomor WhatsApp sudah diisi benar",
-   "pass": false,
+   "pass": true,
    "tip": "Isi nomor WA asli di Admin"
   }
  ],
