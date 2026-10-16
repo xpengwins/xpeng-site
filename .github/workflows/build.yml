@@ -1,0 +1,51 @@
+name: Build, ekstrak ZIP, optimasi gambar, backup
+on:
+  push:
+    branches: [main]
+    paths: ['*.zip', 'data/**', 'upload/**', 'assets/img/**', 'assets/files/**', 'shared/**', 'build/**']
+  schedule:
+    - cron: '0 20 * * *'   # 03:00 WIB, backup harian
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build
+  cancel-in-progress: false
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-actions[bot]'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 20, cache: npm }
+      - name: Ekstrak ZIP project di root (upload pertama)
+        run: |
+          shopt -s nullglob
+          for z in *.zip; do
+            echo "Ekstrak project $z"
+            unzip -o -q "$z" -x '__MACOSX/*' '.github/*' '.git/*' || true
+            rm -f "$z"
+          done
+      - name: Ekstrak file ZIP di folder upload/
+        run: |
+          shopt -s nullglob
+          for z in upload/*.zip; do
+            base=$(basename "$z" .zip); dest="assets/img"
+            if [[ "$base" == *"--"* ]]; then dest="${base%%--*}"; dest="${dest//__//}"; fi
+            case "$dest" in assets*|files*) ;; *) dest="assets/img";; esac
+            case "$dest" in *..*) dest="assets/img";; esac
+            mkdir -p "$dest"; echo "Ekstrak $z -> $dest"
+            unzip -o -q "$z" -x '__MACOSX/*' '*/.DS_Store' '.git/*' '.github/*' -d "$dest" || true
+            rm -f "$z"
+          done
+      - run: npm install --no-audit --no-fund
+      - name: Optimasi gambar dan build situs
+        run: npm run build
+      - name: Backup data
+        run: npm run backup
+      - name: Commit hasil
+        run: |
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || (git commit -m "Build otomatis" && git push)
