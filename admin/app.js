@@ -119,6 +119,25 @@ VIEWS.home = async v => {
   const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
 };
 
+
+/* ---------- upload foto di tempat (tanpa salin alamat) ---------- */
+S.local = {};
+async function uploadImg(f, max) {
+  if (!S.media) { try { S.media = (await listDir('assets/img')).filter(x => x.type === 'file').map(x => x.name); } catch (e) { S.media = []; } }
+  const blob = await toWebp(f, max || 1600); let name = slugName(f.name) + '.webp';
+  if (S.media.includes(name)) name = slugName(f.name) + '-' + Date.now().toString(36).slice(-4) + '.webp';
+  await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name);
+  S.media.push(name); S.local['assets/img/' + name] = URL.createObjectURL(blob); return 'assets/img/' + name;
+}
+function pickUp(multi, done) {
+  const i = document.createElement('input'); i.type = 'file'; i.accept = 'image/*'; i.multiple = !!multi; i.style.display = 'none'; document.body.appendChild(i);
+  i.onchange = async () => { const fs = [...i.files], out = []; let n = 0; i.remove();
+    for (const f of fs) { toast('Mengunggah ' + (++n) + '/' + fs.length + ': ' + f.name); try { out.push(await uploadImg(f)); } catch (e) { toast(f.name + ': ' + e.message, true); } }
+    if (out.length) { done(out); toast('✓ ' + out.length + ' foto terunggah. Tekan Simpan agar tampil di website.'); } };
+  i.click();
+}
+const thumb = p => p ? `<img class="pv" alt="" src="${E(S.local[p] || '../' + p)}" onerror="this.style.display='none'">` : '';
+
 /* --- Artikel --- */
 VIEWS.articles = v => {
   const A = S.d.articles;
@@ -140,9 +159,9 @@ function editArticle(v, a, idx) {
 <div class="grid"><label>Keyword utama<input id="f_keyword" value="${E(a.keyword)}"></label><label>Slug URL<input id="f_slug" value="${E(a.slug)}"></label></div>
 <label>Meta description (120-160 karakter)<textarea id="f_description" style="min-height:70px;font-family:inherit">${E(a.description)}</textarea></label><div class="muted" id="c_desc"></div>
 <div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>draft</option><option value="published"${a.status === 'published' ? ' selected' : ''}>published</option></select></label></div>
-<div class="grid"><label>Gambar utama (path)<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><datalist id="imgl">${imgs}</datalist>
+<div class="grid"><label>Gambar utama<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><div class="row"><button class="s sm" id="upmain">📷 Upload gambar utama</button></div><div id="pvmain">${thumb(a.image)}</div><datalist id="imgl">${imgs}</datalist>
 <label>Isi artikel (Markdown). Awali dengan <b>**Jawaban singkat:**</b>, pakai ## untuk subjudul, ### untuk FAQ</label>
-<div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" data-ins="![alt gambar](assets/img/nama.webp)">Gambar</button><button class="s sm" id="tbl">Tabel</button></div>
+<div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" id="upbody">📷 Foto</button><button class="s sm" id="tbl">Tabel</button></div>
 <textarea id="f_body" style="min-height:340px">${E(a.body)}</textarea>
 <div class="card" style="background:#0d0f13"><h3>Saran internal link</h3><div id="sug" class="row"></div></div>
 <div class="row"><button id="sv">Simpan</button><button class="s" id="pv">Pratinjau</button><button class="s" id="bk">Kembali</button>${idx >= 0 ? '<button class="d" id="dl">Hapus</button>' : ''}</div></div>
@@ -156,6 +175,9 @@ function editArticle(v, a, idx) {
   function ins(t) { const s = ta.selectionStart, e = ta.selectionEnd; ta.value = ta.value.slice(0, s) + t + ta.value.slice(e); ta.focus(); ta.selectionStart = ta.selectionEnd = s + t.length; upd(); }
   v.querySelectorAll('[data-ins]').forEach(b => b.onclick = () => ins(b.dataset.ins)); $('#tbl').onclick = () => ins('\n| Kolom 1 | Kolom 2 |\n|---|---|\n| isi | isi |\n');
   v.querySelectorAll('input,textarea,select').forEach(x => x.oninput = upd); upd();
+  $('#upmain').onclick = () => pickUp(false, ps => { F('image').value = ps[0]; if (!F('imageAlt').value) F('imageAlt').value = F('keyword').value || F('title').value; $('#pvmain').innerHTML = thumb(ps[0]); upd(); });
+  $('#upbody').onclick = () => { const alt = prompt('Teks alt (deskripsi singkat foto, untuk SEO):', F('keyword').value || ''); if (alt === null) return; pickUp(true, ps => ins(ps.map(p => '\n![' + alt + '](' + p + ')\n').join(''))); };
+  F('image').addEventListener('input', () => { $('#pvmain').innerHTML = thumb(F('image').value); });
   $('#pv').onclick = () => { read(); $('#pvbox').innerHTML = `<div class="card"><h3>Pratinjau</h3><div class="prev"><h1 style="font-size:1.5rem">${E(a.title)}</h1>${MD.render(a.body)}</div></div>`; };
   $('#bk').onclick = () => go('articles');
   $('#sv').onclick = async () => { read(); if (!a.title) return toast('Judul wajib diisi', true); const r = SEO.scoreArticle(a, all()); if (a.status === 'published' && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
@@ -173,18 +195,30 @@ VIEWS.models = v => {
 };
 function editModel(v, i) {
   const m = S.d.models[i];
-  v.innerHTML = `<h2>Edit ${E(m.name)}</h2><div class="card"><div class="grid"><label>Nama<input id="m_name" value="${E(m.name)}"></label><label>Slug URL<input id="m_slug" value="${E(m.slug)}"></label></div><label>Jenis<input id="m_type" value="${E(m.type)}"></label><label>Tagline<input id="m_tagline" value="${E(m.tagline)}"></label><label>Gambar hero<input id="m_hero" value="${E(m.hero)}"></label>
+  v.innerHTML = `<h2>Edit ${E(m.name)}</h2><div class="card"><div class="grid"><label>Nama<input id="m_name" value="${E(m.name)}"></label><label>Slug URL<input id="m_slug" value="${E(m.slug)}"></label></div><label>Jenis<input id="m_type" value="${E(m.type)}"></label><label>Tagline<input id="m_tagline" value="${E(m.tagline)}"></label><label>Gambar hero<input id="m_hero" value="${E(m.hero)}"></label><div class="row"><button class="s sm" id="up_hero">📷 Upload foto hero</button></div><div id="pv_hero">${thumb(m.hero)}</div>
 <label>Meta title (30-60)<input id="m_metaTitle" value="${E(m.metaTitle)}"></label><label>Meta description (120-160)<textarea id="m_metaDescription" style="min-height:70px;font-family:inherit">${E(m.metaDescription)}</textarea></label>
 <label>Varian dan harga (format: Nama|harga angka, satu per baris)<textarea id="m_variants">${E(m.variants.map(x => x.name + '|' + x.price).join('\n'))}</textarea></label>
-<label>Warna (Nama|#hex|path gambar)<textarea id="m_colors">${E(m.colors.map(x => [x.name, x.hex, x.image].join('|')).join('\n'))}</textarea></label>
-<label>Galeri (satu path per baris)<textarea id="m_gallery">${E(m.gallery.join('\n'))}</textarea></label>
+<h3>Warna mobil</h3><div id="cols"></div><button class="s sm" id="addcol">+ Tambah warna</button>
+<h3 style="margin-top:16px">Galeri foto</h3><div class="row"><button class="s sm" id="up_gal">📷 Upload foto galeri (bisa banyak)</button></div><div class="pvs" id="pv_gal"></div>
+<label>Daftar path galeri (otomatis terisi, boleh diedit/urutkan)<textarea id="m_gallery">${E(m.gallery.join('\n'))}</textarea></label>
 <label>Keunggulan (satu per baris)<textarea id="m_highlights" style="font-family:inherit">${E(m.highlights.join('\n'))}</textarea></label>
 <label>Spesifikasi (Nama: nilai)<textarea id="m_specs" style="font-family:inherit">${E(m.specs.map(x => x.k + ': ' + x.v).join('\n'))}</textarea></label>
 <label>FAQ (Pertanyaan?|Jawaban)<textarea id="m_faq" style="font-family:inherit">${E(m.faq.map(x => x.q + '|' + x.a).join('\n'))}</textarea></label>
 <div class="row"><button id="sv">Simpan</button><button class="s" id="bk">Kembali</button></div></div>`;
+  const cols = m.colors.map(c => ({ ...c }));
+  const drawCols = () => { $('#cols').innerHTML = cols.map((c, k) => `<div class="crow"><div class="grid"><label>Nama warna<input data-c="${k}" data-f="name" value="${E(c.name)}"></label><label>Warna<input type="color" data-c="${k}" data-f="hex" value="${E(/^#[0-9a-f]{6}$/i.test(c.hex) ? c.hex : '#999999')}"></label></div><label>Foto untuk warna ini<input data-c="${k}" data-f="image" value="${E(c.image)}"></label><div class="row"><button class="s sm" data-cu="${k}">📷 Upload foto warna</button><button class="d sm" data-cx="${k}">Hapus</button></div>${thumb(c.image)}</div>`).join('');
+    $('#cols').querySelectorAll('[data-c]').forEach(i => i.oninput = () => { cols[i.dataset.c][i.dataset.f] = i.value; });
+    $('#cols').querySelectorAll('[data-cu]').forEach(b => b.onclick = () => pickUp(false, ps => { cols[b.dataset.cu].image = ps[0]; drawCols(); }));
+    $('#cols').querySelectorAll('[data-cx]').forEach(b => b.onclick = () => { cols.splice(+b.dataset.cx, 1); drawCols(); }); };
+  drawCols(); $('#addcol').onclick = () => { cols.push({ name: 'Warna baru', hex: '#999999', image: m.hero }); drawCols(); };
+  const drawGal = () => { $('#pv_gal').innerHTML = lines($('#m_gallery').value).map(p => `<img alt="" src="${E(S.local[p] || '../' + p)}" onerror="this.style.display='none'">`).join(''); };
+  $('#m_gallery').oninput = drawGal; drawGal();
+  $('#up_gal').onclick = () => pickUp(true, ps => { const t = $('#m_gallery'); t.value = (t.value.trim() ? t.value.trim() + '\n' : '') + ps.join('\n'); drawGal(); });
+  $('#up_hero').onclick = () => pickUp(false, ps => { $('#m_hero').value = ps[0]; $('#pv_hero').innerHTML = thumb(ps[0]); });
+  $('#m_hero').oninput = () => { $('#pv_hero').innerHTML = thumb($('#m_hero').value); };
   $('#bk').onclick = () => go('models');
   $('#sv').onclick = async () => { const g = id => $('#m_' + id).value; Object.assign(m, { name: g('name'), slug: g('slug').toLowerCase().replace(/[^a-z0-9-]/g, '-'), type: g('type'), tagline: g('tagline'), hero: g('hero'), metaTitle: g('metaTitle'), metaDescription: g('metaDescription'),
-    variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: lines(g('colors')).map(l => { const p = l.split('|'); return { name: p[0], hex: p[1] || '#999999', image: p[2] || m.hero }; }),
+    variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: cols.filter(c => c.name.trim()).map(c => ({ name: c.name.trim(), hex: c.hex || '#999999', image: c.image || g('hero') })),
     gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
 }
 

@@ -30,4 +30,20 @@ var tx='Halo, saya '+d.get('nama')+'. Saya mau test drive '+d.get('model')+'. Re
 /* reveal */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});$$('.section h2,.mcard,.acard,.stats>div,.panel,.stage').forEach(function(el){el.classList.add('rv');io.observe(el)})}
 if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register(base+'/sw.js').catch(function(){})}
+/* lightbox: klik foto galeri untuk zoom */
+(function(){var imgs=$$('.track.g img,[data-zoom]');if(!imgs.length)return;
+var ov=document.createElement('div');ov.className='lb';ov.hidden=true;ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','Pratinjau foto');
+ov.innerHTML='<button class="lbx" aria-label="Tutup">&times;</button><button class="lbp" aria-label="Foto sebelumnya">&lsaquo;</button><button class="lbn" aria-label="Foto berikutnya">&rsaquo;</button><div class="lbs"><img alt=""></div><div class="lbc"></div>';
+document.body.appendChild(ov);
+var im=$('img',ov),cap=$('.lbc',ov),sc=$('.lbs',ov),k=0,last=null;
+function show(n){k=(n+imgs.length)%imgs.length;ov.classList.remove('zoom');im.src=imgs[k].currentSrc||imgs[k].src;im.alt=imgs[k].alt;cap.textContent=imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom'}
+function open(n){last=document.activeElement;show(n);ov.hidden=false;document.documentElement.style.overflow='hidden';$('.lbx',ov).focus()}
+function close(){ov.hidden=true;document.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
+function tz(){var z=ov.classList.toggle('zoom');cap.textContent=z?'Geser untuk melihat detail \u2022 ketuk lagi untuk kecilkan':imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom';if(z){sc.scrollLeft=(sc.scrollWidth-sc.clientWidth)/2;sc.scrollTop=(sc.scrollHeight-sc.clientHeight)/2}}
+imgs.forEach(function(g,n){g.setAttribute('tabindex','0');g.setAttribute('role','button');g.style.cursor='zoom-in';g.addEventListener('click',function(){open(n)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(n)}})});
+$('.lbx',ov).onclick=close;$('.lbp',ov).onclick=function(){show(k-1)};$('.lbn',ov).onclick=function(){show(k+1)};
+im.onclick=tz;sc.addEventListener('click',function(e){if(e.target===sc&&!ov.classList.contains('zoom'))close()});
+document.addEventListener('keydown',function(e){if(ov.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(k-1);else if(e.key==='ArrowRight')show(k+1)});
+var sx=null;sc.addEventListener('touchstart',function(e){sx=ov.classList.contains('zoom')?null:e.touches[0].clientX},{passive:true});
+sc.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(k+(d<0?1:-1));sx=null})})();
 })();
