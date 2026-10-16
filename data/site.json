@@ -1,42 +1,42 @@
 {
-  "name": "XPeng Premium Indonesia",
-  "dealer": "Dealer XPeng (isi nama dealer di Admin > Pengaturan)",
-  "baseUrl": "https://xpengwins.github.io/xpeng-site",
-  "whatsapp": "6281234567890",
-  "phone": "+62 812-3456-7890",
-  "address": "Jakarta, Indonesia (isi alamat showroom di Admin)",
-  "email": "",
-  "tagline": "Mobil Listrik Premium. Cerdas, Senyap, Berkelas.",
-  "description": "Harga, spesifikasi, dan test drive XPeng X9 dan G6 di Indonesia. Pricelist terbaru Juli 2026 dan konsultasi langsung via WhatsApp.",
-  "pricelistUpdate": "Juli 2026",
-  "instagram": "",
-  "tiktok": "",
-  "youtube": "",
-  "backlinkSites": [
-    {
-      "name": "geelywins.co",
-      "url": "https://geelywins.co",
-      "status": "aktif"
-    },
-    {
-      "name": "LapakMu.store",
-      "url": "https://lapakmu.store",
-      "status": "aktif"
-    },
-    {
-      "name": "Domain baru 1",
-      "url": "",
-      "status": "belum dibuat"
-    },
-    {
-      "name": "Domain baru 2",
-      "url": "",
-      "status": "belum dibuat"
-    }
-  ],
-  "github": {
-    "owner": "xpengwins",
-    "repo": "xpeng-site",
-    "branch": "main"
+ "name": "XPeng Premium Indonesia",
+ "dealer": "Dealer XPeng (isi nama dealer di Admin > Pengaturan)",
+ "baseUrl": "https://xpengwins.github.io/xpeng-site",
+ "whatsapp": "6285710208822",
+ "phone": "+62 857-1020-8822",
+ "address": "Jakarta, Indonesia (isi alamat showroom di Admin)",
+ "email": "",
+ "tagline": "Mobil Listrik Premium. Cerdas, Senyap, Berkelas.",
+ "description": "Harga, spesifikasi, dan test drive XPeng X9 dan G6 di Indonesia. Pricelist terbaru Juli 2026 dan konsultasi langsung via WhatsApp.",
+ "pricelistUpdate": "Juli 2026",
+ "instagram": "",
+ "tiktok": "",
+ "youtube": "",
+ "backlinkSites": [
+  {
+   "name": "geelywins.co",
+   "url": "https://geelywins.co",
+   "status": "aktif"
+  },
+  {
+   "name": "LapakMu.store",
+   "url": "https://lapakmu.store",
+   "status": "aktif"
+  },
+  {
+   "name": "Domain baru 1",
+   "url": "",
+   "status": "belum dibuat"
+  },
+  {
+   "name": "Domain baru 2",
+   "url": "",
+   "status": "belum dibuat"
   }
+ ],
+ "github": {
+  "owner": "xpengwins",
+  "repo": "xpeng-site",
+  "branch": "main"
+ }
 }
