@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-17T09:04:55.372Z",
+ "date": "2026-10-17T11:21:46.740Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -911,7 +911,16 @@
     "position": null
    }
   ],
-  "backlinks": [],
+  "backlinks": [
+   {
+    "site": "geelywins.com",
+    "target": "/",
+    "anchor": "Mobil EV Premium Klik di sini",
+    "type": "brand",
+    "date": "2026-10-17",
+    "status": "rencana"
+   }
+  ],
   "leasing": [
    {
     "name": "Maybank",
