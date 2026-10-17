@@ -144,8 +144,3 @@ Data diambil dari **Pengaturan**: nomor WhatsApp, telepon, email, alamat, serta 
 
 ### Memperbarui build.yml (sekali saja)
 Ganti isi `.github/workflows/build.yml` di GitHub dengan file build.yml terbaru (build tiap jam), karena file workflow tidak bisa diperbarui lewat ZIP.
-
-### Upload ZIP ke repo dan proses GitHub Actions (v6)
-Menu **Lainnya > Media & Zip**, kartu **Upload ZIP ke repo**: pilih ZIP, admin menampilkan isinya dan memberi peringatan bila ZIP berisi folder data/ atau file sistem. ZIP dikirim ke bagian depan (root) repo, lalu GitHub Actions mengekstraknya ke dalam repo dengan susunan folder yang sama seperti di ZIP (contoh: assets/img/foto.webp). Folder pembungkus tunggal (misalnya "xpeng-site/") dibuang otomatis. File bernama sama ditimpa. Folder .github tidak pernah diubah.
-Kartu **Proses GitHub Actions** (juga ada di Beranda) menampilkan 5 proses terakhir (berhasil, gagal, berjalan) dan tombol **Jalankan workflow sekarang**. Bila gagal, buka Detail dan kirim tangkapan layar langkah yang bertanda merah.
-Penting: pembuangan folder pembungkus butuh build.yml terbaru (tempel ulang sekali di GitHub).

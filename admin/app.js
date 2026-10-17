@@ -113,10 +113,9 @@ VIEWS.home = async v => {
   const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
   v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub - sch - rdy} draft • ${rdy} siap • ${sch} terjadwal</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
 <div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
-<div class="card"><h3>Proses GitHub Actions</h3><div id="runbox"></div></div>
 <div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
 <div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;
-  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build; runsWidget($('#runbox'));
+  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build;
   const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
 };
 
@@ -139,47 +138,6 @@ function pickUp(multi, done, max) {
   i.click();
 }
 const thumb = p => p ? `<img class="pv" alt="" src="${E(S.local[p] || '../' + p)}" onerror="this.style.display='none'">` : '';
-
-/* ---------- ZIP ke root repo + status GitHub Actions ---------- */
-async function zipNames(file) {
-  const tail = await file.slice(Math.max(0, file.size - 70000)).arrayBuffer(), dv = new DataView(tail); let e = -1;
-  for (let i = tail.byteLength - 22; i >= 0; i--) if (dv.getUint32(i, true) === 0x06054b50) { e = i; break; }
-  if (e < 0) throw new Error('Bukan file ZIP yang valid');
-  const size = dv.getUint32(e + 12, true), off = dv.getUint32(e + 16, true);
-  if (off === 0xFFFFFFFF) return null;
-  const cd = await file.slice(off, off + size).arrayBuffer(), cv = new DataView(cd), u8 = new Uint8Array(cd), names = []; let p = 0;
-  while (p + 46 <= cd.byteLength && cv.getUint32(p, true) === 0x02014b50) { const nl = cv.getUint16(p + 28, true), el = cv.getUint16(p + 30, true), cl = cv.getUint16(p + 32, true); names.push(new TextDecoder().decode(u8.subarray(p + 46, p + 46 + nl))); p += 46 + nl + el + cl; }
-  return names;
-}
-const KNOWN_DIRS = ['assets', 'data', 'admin', 'build', 'shared', 'docs', 'backup', 'upload', 'model', 'artikel', 'kontak', 'pricelist', 'tentang'];
-function zipReport(names) {
-  const files = names.filter(n => !n.endsWith('/') && !/^__MACOSX\//.test(n) && !/\.DS_Store$/.test(n) && !/(^|\/)\.git(hub)?\//.test(n));
-  const tops = {}; files.forEach(n => { const t = n.includes('/') ? n.split('/')[0] : '(root)'; tops[t] = (tops[t] || 0) + 1; });
-  const keys = Object.keys(tops), warn = [];
-  if (files.some(n => n.startsWith('/') || n.includes('..'))) warn.push('❌ ZIP berisi path tidak aman. Dibatalkan.');
-  if (keys.length === 1 && keys[0] !== '(root)' && !KNOWN_DIRS.includes(keys[0])) warn.push('ℹ️ ZIP dibungkus folder "' + keys[0] + '/". Folder pembungkus akan dibuang otomatis (butuh build.yml terbaru).');
-  if (files.some(n => /^data\//.test(n))) warn.push('⚠️ ZIP berisi folder data/ (artikel, model, harga, dll). Isinya akan MENIMPA data yang ada.');
-  if (files.some(n => /^(admin|build|shared)\//.test(n))) warn.push('⚠️ ZIP berisi file sistem (admin/build/shared). Pastikan ini patch resmi.');
-  return { count: files.length, tops, warn, bad: warn.some(w => w.startsWith('❌')) };
-}
-const RUN_ICON = r => r.status !== 'completed' ? '⏳' : ({ success: '✅', failure: '❌', cancelled: '⏹️', skipped: '⏭️' }[r.conclusion] || '❔');
-const RUN_EVT = { push: 'otomatis (ada perubahan)', schedule: 'terjadwal (tiap jam)', workflow_dispatch: 'dijalankan manual' };
-function runsWidget(box) {
-  box.innerHTML = `<div class="row"><button id="runb">▶ Jalankan workflow sekarang</button><button class="s" id="runr">↻ Segarkan</button></div><div id="runl" class="muted" style="margin-top:10px">Memuat…</div>`;
-  let timer = null;
-  const load = async () => {
-    clearTimeout(timer); const L = $('#runl'); if (!L || !document.body.contains(box)) return;
-    try {
-      const j = await gh('actions/runs?per_page=12'), all = j.workflow_runs || [], mine = all.filter(r => (r.path || '').endsWith('build.yml')), rs = (mine.length ? mine : all).slice(0, 5);
-      L.innerHTML = rs.map(r => { const sec = r.status === 'completed' ? Math.max(0, Math.round((Date.parse(r.updated_at) - Date.parse(r.run_started_at || r.created_at)) / 1000)) : null; return `<div class="chk"><i>${RUN_ICON(r)}</i><div>${r.status === 'completed' ? (r.conclusion === 'success' ? 'Berhasil' : r.conclusion === 'failure' ? 'GAGAL' : r.conclusion) : (r.status === 'queued' ? 'Antre…' : 'Sedang berjalan…')} • ${RUN_EVT[r.event] || r.event}<div class="t">${fmtDT(r.created_at)}${sec != null ? ' • ' + sec + ' detik' : ''} • <a href="${E(r.html_url)}" target="_blank" rel="noopener" style="color:var(--ac)">Detail</a></div></div></div>`; }).join('') || 'Belum ada proses.';
-      if (rs[0] && rs[0].status === 'completed' && rs[0].conclusion === 'failure') L.innerHTML += '<p class="muted">Proses terakhir gagal. Buka Detail, ketuk langkah bertanda merah, lalu kirim tangkapan layarnya.</p>';
-      if (rs.some(r => r.status !== 'completed')) timer = setTimeout(load, 8000);
-    } catch (e) { L.textContent = 'Gagal memuat status: ' + e.message + ' (token perlu izin Actions: Read and write)'; }
-  };
-  $('#runr').onclick = load;
-  $('#runb').onclick = async () => { try { await gh('actions/workflows/build.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.cfg.branch }) }); toast('Workflow dijalankan. Status diperbarui otomatis.'); setTimeout(load, 2500); } catch (e) { toast('Gagal: ' + e.message + ' (token perlu izin Actions: Read and write)', true); } };
-  load(); return load;
-}
 
 /* --- Artikel --- */
 const ST = { draft: ['Draft', 'warn'], ready: ['Siap publish', 'rdy'], scheduled: ['Terjadwal', 'sch'], published: ['Terbit', 'ok'] };
@@ -382,20 +340,10 @@ async function toWebp(file, max = 1600, q = .78) {
 const slugName = n => n.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'foto';
 VIEWS.media = async v => {
   v.innerHTML = `<h2>Media & upload ke GitHub</h2>
-<div class="card"><h3>📦 Upload ZIP ke repo (diekstrak otomatis)</h3><p class="muted">ZIP dikirim ke bagian depan (root) repo, lalu GitHub Actions mengekstraknya ke dalam repo dengan susunan folder yang sama seperti di dalam ZIP, misalnya <b>assets/img/foto.webp</b>. File bernama sama akan ditimpa. Gambar JPG/PNG otomatis dikecilkan ke WebP.</p><input type="file" id="rzf" accept=".zip"><div id="rzp" class="muted" style="margin:8px 0"></div><button id="rzu">Upload ZIP dan ekstrak</button><div id="rzs" class="muted"></div></div>
-<div class="card"><h3>⚙️ Proses GitHub Actions (build.yml)</h3><div id="runbox2"></div></div>
 <div class="card"><h3>Upload foto (otomatis dikecilkan ke WebP)</h3><input type="file" id="fi" accept="image/*" multiple><label style="margin-top:10px">Lebar maksimal (px)<select id="mx"><option>1200</option><option selected>1600</option><option>1920</option></select></label><button id="up">Upload foto</button><div id="st" class="muted"></div></div>
-<div class="card"><h3>ZIP ke folder tertentu (lanjutan)</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
+<div class="card"><h3>Upload file ZIP</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
 <div class="card"><h3>Upload file apa saja ke repo</h3><label>Folder tujuan<input id="pd" value="assets/files"></label><input type="file" id="pf" multiple><button id="pu" style="margin-top:10px">Upload</button></div>
 <div class="card"><h3>Galeri (<span id="cnt">0</span>)</h3><div class="thumbs" id="th"></div></div>`;
-  const runs = runsWidget($('#runbox2')); let zrep = null;
-  $('#rzf').onchange = async () => { const f = $('#rzf').files[0], P = $('#rzp'); zrep = null; P.innerHTML = ''; if (!f) return; try { const names = await zipNames(f); if (!names) { P.textContent = 'ZIP besar: daftar isi tidak bisa ditampilkan, tetap bisa diupload.'; return; } zrep = zipReport(names); P.innerHTML = `<b>${zrep.count} file</b> • folder: ${E(Object.entries(zrep.tops).map(([k, n]) => k + ' (' + n + ')').join(', '))}${zrep.warn.map(w => `<div>${E(w)}</div>`).join('')}`; } catch (e) { P.textContent = e.message; } };
-  $('#rzu').onclick = async () => { const f = $('#rzf').files[0]; if (!f) return toast('Pilih file ZIP dulu', true); if (f.size > 70 * 1024 * 1024) return toast('ZIP maksimal ±70MB. Pecah jadi beberapa ZIP.', true);
-    if (zrep && zrep.bad) return toast('ZIP tidak aman, dibatalkan', true);
-    if (zrep && zrep.warn.some(w => w.startsWith('⚠️')) && !confirm(zrep.warn.filter(w => w.startsWith('⚠️')).join('\n\n') + '\n\nLanjut upload?')) return;
-    const stamp = new Date().toISOString().replace(/\D/g, '').slice(0, 14), name = slugName(f.name) + '-' + stamp + '.zip', btn = $('#rzu'); btn.disabled = true;
-    try { $('#rzs').textContent = 'Mengunggah ' + Math.round(f.size / 1024) + ' KB…'; await putFile(name, bufb64(await f.arrayBuffer()), 'Upload ZIP ' + f.name); $('#rzs').textContent = '✓ ZIP terkirim ke root repo. GitHub sedang mengekstrak (±1-2 menit). Pantau di kartu Proses GitHub Actions di atas.'; toast('ZIP terkirim'); setTimeout(runs, 3000); }
-    catch (e) { toast(e.message, true); $('#rzs').textContent = 'Gagal: ' + e.message; } btn.disabled = false; };
   const up = $('#up'); up.onclick = async () => { const fs = [...$('#fi').files]; if (!fs.length) return toast('Pilih foto dulu', true); up.disabled = true; let n = 0;
     for (const f of fs) { try { $('#st').textContent = `Proses ${++n}/${fs.length}: ${f.name}`; const blob = await toWebp(f, +$('#mx').value), name = slugName(f.name) + '.webp'; await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name); $('#st').textContent = `✓ ${name} (${Math.round(blob.size / 1024)}KB dari ${Math.round(f.size / 1024)}KB)`; } catch (e) { toast(f.name + ': ' + e.message, true); } }
     up.disabled = false; S.media = null; VIEWS.media(v); toast('Upload selesai'); };

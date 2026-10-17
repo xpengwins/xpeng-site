@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-17T04:07:30.692Z",
+ "date": "2026-10-17T04:09:26.015Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -349,6 +349,27 @@
     "position": null
    }
   ],
-  "backlinks": []
+  "backlinks": [],
+  "leasing": [
+   {
+    "name": "Maybank",
+    "logo": "assets/img/214388.webp"
+   },
+   {
+    "name": "CIMB Niaga",
+    "logo": "assets/img/214391.webp"
+   }
+  ],
+  "about": {
+   "intro": [
+    "Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320"
+   ],
+   "photos": [],
+   "services": [],
+   "history": [],
+   "hours": [],
+   "mapsQuery": "XPeng Alam Sutera",
+   "mapsEmbed": "https://maps.app.goo.gl/hgXDFpUMZHszxhuK7?g_st=ac"
+  }
  }
 }

@@ -28,7 +28,7 @@ sel.onchange=calc;['dp','tn','bg'].forEach(function(id){$('#'+id).oninput=calc})
 $$('form.lead').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);if(!String(d.get('nama')||'').trim()){f.nama.focus();return}
 var tx='Halo, saya '+d.get('nama')+'. Saya mau test drive '+d.get('model')+'. Rencana pembelian: '+d.get('rencana')+'. (dari website)';window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(tx),'_blank','noopener')})});
 /* reveal */
-if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});$$('.section h2,.mcard,.acard,.stats>div,.panel,.stage').forEach(function(el){el.classList.add('rv');io.observe(el)})}
+if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});$$('.section h2,.mcard,.acard,.stats>div,.panel,.stage,.ccard,.tl li,.mapbox,.soc li').forEach(function(el){el.classList.add('rv');io.observe(el)})}
 if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register(base+'/sw.js').catch(function(){})}
 /* lightbox: klik foto galeri untuk zoom */
 (function(){var imgs=$$('.track.g img,[data-zoom]');if(!imgs.length)return;
