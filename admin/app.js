@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks'];
+const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -33,7 +33,7 @@ async function putFile(p, content64, msg, retry) {
 }
 async function delFile(p) { const j = await getFile(p); return gh('contents/' + enc2(p), { method: 'DELETE', body: JSON.stringify({ message: 'Hapus ' + p, sha: j.sha, branch: S.cfg.branch }) }); }
 async function listDir(p) { try { return await gh('contents/' + enc2(p) + '?ref=' + S.cfg.branch); } catch (e) { if (e.status === 404) return []; throw e; } }
-async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = n === 'site' ? {} : []; } } }
+async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = (n === 'site' || n === 'about') ? {} : []; } } }
 async function save(n, msg) { const btn = document.activeElement; try { await putFile('data/' + n + '.json', b64(JSON.stringify(S.d[n], null, 1)), msg || 'Update ' + n + ' via admin'); toast('Tersimpan. Website update otomatis ±1-2 menit.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); throw e; } }
 
 /* ---------- login ---------- */
@@ -90,7 +90,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -110,12 +110,13 @@ async function loadReport() { try { const j = await getFile('data/seo-report.jso
 /* ---------- VIEWS ---------- */
 const VIEWS = {};
 VIEWS.home = async v => {
-  const a = S.d.articles, pub = a.filter(x => x.status === 'published').length;
-  v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub} draft</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
+  const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
+  v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub - sch - rdy} draft • ${rdy} siap • ${sch} terjadwal</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
 <div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
+<div class="card"><h3>Proses GitHub Actions</h3><div id="runbox"></div></div>
 <div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
 <div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;
-  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build;
+  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build; runsWidget($('#runbox'));
   const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
 };
 
@@ -124,24 +125,76 @@ VIEWS.home = async v => {
 S.local = {};
 async function uploadImg(f, max) {
   if (!S.media) { try { S.media = (await listDir('assets/img')).filter(x => x.type === 'file').map(x => x.name); } catch (e) { S.media = []; } }
-  const blob = await toWebp(f, max || 1600); let name = slugName(f.name) + '.webp';
-  if (S.media.includes(name)) name = slugName(f.name) + '-' + Date.now().toString(36).slice(-4) + '.webp';
+  const svg = f.type === 'image/svg+xml' || /\.svg$/i.test(f.name), ext = svg ? '.svg' : '.webp';
+  const blob = svg ? f : await toWebp(f, max || 1600); let name = slugName(f.name) + ext;
+  if (S.media.includes(name)) name = slugName(f.name) + '-' + Date.now().toString(36).slice(-4) + ext;
   await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name);
   S.media.push(name); S.local['assets/img/' + name] = URL.createObjectURL(blob); return 'assets/img/' + name;
 }
-function pickUp(multi, done) {
+function pickUp(multi, done, max) {
   const i = document.createElement('input'); i.type = 'file'; i.accept = 'image/*'; i.multiple = !!multi; i.style.display = 'none'; document.body.appendChild(i);
   i.onchange = async () => { const fs = [...i.files], out = []; let n = 0; i.remove();
-    for (const f of fs) { toast('Mengunggah ' + (++n) + '/' + fs.length + ': ' + f.name); try { out.push(await uploadImg(f)); } catch (e) { toast(f.name + ': ' + e.message, true); } }
+    for (const f of fs) { toast('Mengunggah ' + (++n) + '/' + fs.length + ': ' + f.name); try { out.push(await uploadImg(f, max)); } catch (e) { toast(f.name + ': ' + e.message, true); } }
     if (out.length) { done(out); toast('✓ ' + out.length + ' foto terunggah. Tekan Simpan agar tampil di website.'); } };
   i.click();
 }
 const thumb = p => p ? `<img class="pv" alt="" src="${E(S.local[p] || '../' + p)}" onerror="this.style.display='none'">` : '';
 
+/* ---------- ZIP ke root repo + status GitHub Actions ---------- */
+async function zipNames(file) {
+  const tail = await file.slice(Math.max(0, file.size - 70000)).arrayBuffer(), dv = new DataView(tail); let e = -1;
+  for (let i = tail.byteLength - 22; i >= 0; i--) if (dv.getUint32(i, true) === 0x06054b50) { e = i; break; }
+  if (e < 0) throw new Error('Bukan file ZIP yang valid');
+  const size = dv.getUint32(e + 12, true), off = dv.getUint32(e + 16, true);
+  if (off === 0xFFFFFFFF) return null;
+  const cd = await file.slice(off, off + size).arrayBuffer(), cv = new DataView(cd), u8 = new Uint8Array(cd), names = []; let p = 0;
+  while (p + 46 <= cd.byteLength && cv.getUint32(p, true) === 0x02014b50) { const nl = cv.getUint16(p + 28, true), el = cv.getUint16(p + 30, true), cl = cv.getUint16(p + 32, true); names.push(new TextDecoder().decode(u8.subarray(p + 46, p + 46 + nl))); p += 46 + nl + el + cl; }
+  return names;
+}
+const KNOWN_DIRS = ['assets', 'data', 'admin', 'build', 'shared', 'docs', 'backup', 'upload', 'model', 'artikel', 'kontak', 'pricelist', 'tentang'];
+function zipReport(names) {
+  const files = names.filter(n => !n.endsWith('/') && !/^__MACOSX\//.test(n) && !/\.DS_Store$/.test(n) && !/(^|\/)\.git(hub)?\//.test(n));
+  const tops = {}; files.forEach(n => { const t = n.includes('/') ? n.split('/')[0] : '(root)'; tops[t] = (tops[t] || 0) + 1; });
+  const keys = Object.keys(tops), warn = [];
+  if (files.some(n => n.startsWith('/') || n.includes('..'))) warn.push('❌ ZIP berisi path tidak aman. Dibatalkan.');
+  if (keys.length === 1 && keys[0] !== '(root)' && !KNOWN_DIRS.includes(keys[0])) warn.push('ℹ️ ZIP dibungkus folder "' + keys[0] + '/". Folder pembungkus akan dibuang otomatis (butuh build.yml terbaru).');
+  if (files.some(n => /^data\//.test(n))) warn.push('⚠️ ZIP berisi folder data/ (artikel, model, harga, dll). Isinya akan MENIMPA data yang ada.');
+  if (files.some(n => /^(admin|build|shared)\//.test(n))) warn.push('⚠️ ZIP berisi file sistem (admin/build/shared). Pastikan ini patch resmi.');
+  return { count: files.length, tops, warn, bad: warn.some(w => w.startsWith('❌')) };
+}
+const RUN_ICON = r => r.status !== 'completed' ? '⏳' : ({ success: '✅', failure: '❌', cancelled: '⏹️', skipped: '⏭️' }[r.conclusion] || '❔');
+const RUN_EVT = { push: 'otomatis (ada perubahan)', schedule: 'terjadwal (tiap jam)', workflow_dispatch: 'dijalankan manual' };
+function runsWidget(box) {
+  box.innerHTML = `<div class="row"><button id="runb">▶ Jalankan workflow sekarang</button><button class="s" id="runr">↻ Segarkan</button></div><div id="runl" class="muted" style="margin-top:10px">Memuat…</div>`;
+  let timer = null;
+  const load = async () => {
+    clearTimeout(timer); const L = $('#runl'); if (!L || !document.body.contains(box)) return;
+    try {
+      const j = await gh('actions/runs?per_page=12'), all = j.workflow_runs || [], mine = all.filter(r => (r.path || '').endsWith('build.yml')), rs = (mine.length ? mine : all).slice(0, 5);
+      L.innerHTML = rs.map(r => { const sec = r.status === 'completed' ? Math.max(0, Math.round((Date.parse(r.updated_at) - Date.parse(r.run_started_at || r.created_at)) / 1000)) : null; return `<div class="chk"><i>${RUN_ICON(r)}</i><div>${r.status === 'completed' ? (r.conclusion === 'success' ? 'Berhasil' : r.conclusion === 'failure' ? 'GAGAL' : r.conclusion) : (r.status === 'queued' ? 'Antre…' : 'Sedang berjalan…')} • ${RUN_EVT[r.event] || r.event}<div class="t">${fmtDT(r.created_at)}${sec != null ? ' • ' + sec + ' detik' : ''} • <a href="${E(r.html_url)}" target="_blank" rel="noopener" style="color:var(--ac)">Detail</a></div></div></div>`; }).join('') || 'Belum ada proses.';
+      if (rs[0] && rs[0].status === 'completed' && rs[0].conclusion === 'failure') L.innerHTML += '<p class="muted">Proses terakhir gagal. Buka Detail, ketuk langkah bertanda merah, lalu kirim tangkapan layarnya.</p>';
+      if (rs.some(r => r.status !== 'completed')) timer = setTimeout(load, 8000);
+    } catch (e) { L.textContent = 'Gagal memuat status: ' + e.message + ' (token perlu izin Actions: Read and write)'; }
+  };
+  $('#runr').onclick = load;
+  $('#runb').onclick = async () => { try { await gh('actions/workflows/build.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.cfg.branch }) }); toast('Workflow dijalankan. Status diperbarui otomatis.'); setTimeout(load, 2500); } catch (e) { toast('Gagal: ' + e.message + ' (token perlu izin Actions: Read and write)', true); } };
+  load(); return load;
+}
+
 /* --- Artikel --- */
+const ST = { draft: ['Draft', 'warn'], ready: ['Siap publish', 'rdy'], scheduled: ['Terjadwal', 'sch'], published: ['Terbit', 'ok'] };
+const fmtDT = iso => { try { return new Date(iso).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' WIB'; } catch (e) { return iso || ''; } };
+let AF = 'all';
 VIEWS.articles = v => {
-  const A = S.d.articles;
-  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button></div><div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${A.map((a, i) => { const r = SEO.scoreArticle(a, A); return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${a.status === 'published' ? 'ok' : 'warn'}">${a.status}</span></div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button></td></tr>`; }).join('') || '<tr><td colspan=3>Belum ada artikel</td></tr>'}</tbody></table></div>`;
+  const A = S.d.articles, cnt = k => k === 'all' ? A.length : A.filter(a => a.status === k).length;
+  const sched = A.filter(a => a.status === 'scheduled' && a.publishAt).sort((x, y) => Date.parse(x.publishAt) - Date.parse(y.publishAt));
+  const rows = A.map((a, i) => ({ a, i })).filter(x => AF === 'all' || x.a.status === AF);
+  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button></div>
+<div class="fl" id="flt">${[['all', 'Semua'], ['draft', 'Draft'], ['ready', 'Siap publish'], ['scheduled', 'Terjadwal'], ['published', 'Terbit']].map(f => `<button class="s sm${AF === f[0] ? ' on' : ''}" data-f="${f[0]}">${f[1]} (${cnt(f[0])})</button>`).join('')}</div>
+${sched.length ? `<div class="card"><h3>🕒 Jadwal publish</h3>${sched.map(a => `<div class="chk"><i>•</i><div>${E(a.title)}<div class="t">${fmtDT(a.publishAt)}</div></div></div>`).join('')}<p class="muted" style="margin-top:8px">Terbit otomatis pada build pertama setelah waktunya tiba.</p></div>` : ''}
+<div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${rows.map(({ a, i }) => { const r = SEO.scoreArticle(a, A), st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span>${a.status === 'scheduled' && a.publishAt ? ' • ' + fmtDT(a.publishAt) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel di kategori ini</td></tr>'}</tbody></table></div>`;
+  v.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { AF = b.dataset.f; VIEWS.articles(v); });
+  v.querySelectorAll('[data-p]').forEach(b => b.onclick = async () => { const a = A[+b.dataset.p], r = SEO.scoreArticle(a, A); if (r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (!confirm('Terbitkan "' + a.title + '" sekarang?')) return; a.status = 'published'; a.date = today(); delete a.publishAt; await save('articles', 'Terbitkan: ' + a.title); VIEWS.articles(v); });
   $('#new').onclick = () => editArticle(v, { title: '', slug: '', keyword: '', description: '', image: '', imageAlt: '', date: today(), status: 'draft', category: 'Tips EV', body: '**Jawaban singkat:** \n\n## \n\n## \n\n## Pertanyaan yang sering diajukan\n\n### \n\n### \n\n### \n' }, -1);
   v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editArticle(v, JSON.parse(JSON.stringify(A[b.dataset.e])), +b.dataset.e));
   $('#ideas').onclick = () => {
@@ -158,7 +211,8 @@ function editArticle(v, a, idx) {
 <div class="card"><label>Judul (30-60 karakter)<input id="f_title" value="${E(a.title)}"></label><div class="muted" id="c_title"></div>
 <div class="grid"><label>Keyword utama<input id="f_keyword" value="${E(a.keyword)}"></label><label>Slug URL<input id="f_slug" value="${E(a.slug)}"></label></div>
 <label>Meta description (120-160 karakter)<textarea id="f_description" style="min-height:70px;font-family:inherit">${E(a.description)}</textarea></label><div class="muted" id="c_desc"></div>
-<div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>draft</option><option value="published"${a.status === 'published' ? ' selected' : ''}>published</option></select></label></div>
+<div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>Draft (belum selesai)</option><option value="ready"${a.status === 'ready' ? ' selected' : ''}>Siap publish (menunggu)</option><option value="scheduled"${a.status === 'scheduled' ? ' selected' : ''}>Terjadwal (terbit otomatis)</option><option value="published"${a.status === 'published' ? ' selected' : ''}>Terbit sekarang</option></select></label></div>
+<div id="schedBox" style="display:none"><label>Tanggal dan jam terbit (WIB)<input id="f_publishAt" type="datetime-local" value="${E(a.publishAt ? a.publishAt.slice(0, 16) : '')}"></label><div class="muted" style="margin:-6px 0 12px">Artikel terbit otomatis oleh build berikutnya setelah waktu ini. Jam terbit tepat butuh build.yml terbaru (build tiap jam); tanpa itu terbit paling lambat 03:00 WIB.</div></div>
 <div class="grid"><label>Gambar utama<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><div class="row"><button class="s sm" id="upmain">📷 Upload gambar utama</button></div><div id="pvmain">${thumb(a.image)}</div><datalist id="imgl">${imgs}</datalist>
 <label>Isi artikel (Markdown). Awali dengan <b>**Jawaban singkat:**</b>, pakai ## untuk subjudul, ### untuk FAQ</label>
 <div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" id="upbody">📷 Foto</button><button class="s sm" id="tbl">Tabel</button></div>
@@ -167,20 +221,22 @@ function editArticle(v, a, idx) {
 <div class="row"><button id="sv">Simpan</button><button class="s" id="pv">Pratinjau</button><button class="s" id="bk">Kembali</button>${idx >= 0 ? '<button class="d" id="dl">Hapus</button>' : ''}</div></div>
 <div class="card"><h3>Skor SEO / AEO / GEO</h3><div class="row"><div id="scr"></div><div style="flex:3" class="muted" id="sum"></div></div><div id="chk"></div></div><div id="pvbox"></div>`;
   const F = id => $('#f_' + id), ta = F('body');
-  const read = () => { ['title', 'keyword', 'slug', 'description', 'category', 'date', 'status', 'image', 'imageAlt', 'body'].forEach(k => a[k] = F(k).value); a.slug = (a.slug || MD.slug(a.title)).toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-'); };
-  const upd = () => { read(); const r = SEO.scoreArticle(a, all()); $('#scr').innerHTML = sc(r.score) + ` <b>${r.grade}</b>`; $('#sum').innerHTML = `${r.words} kata • kepadatan keyword ${r.density}% • internal link ${r.internal} • FAQ ${r.faq} • kemiripan ${r.overlap}%`; $('#chk').innerHTML = checks(r.checks);
+  const read = () => { ['title', 'keyword', 'slug', 'description', 'category', 'date', 'status', 'image', 'imageAlt', 'body'].forEach(k => a[k] = F(k).value); { const pv = F('publishAt').value; if (a.status === 'scheduled' && pv) a.publishAt = pv + ':00+07:00'; else delete a.publishAt; } a.slug = (a.slug || MD.slug(a.title)).toLowerCase().replace(/[^a-z0-9-]/g, '-').replace(/-+/g, '-'); };
+  const upd = () => { read(); $('#schedBox').style.display = a.status === 'scheduled' ? '' : 'none'; const r = SEO.scoreArticle(a, all()); $('#scr').innerHTML = sc(r.score) + ` <b>${r.grade}</b>`; $('#sum').innerHTML = `${r.words} kata • kepadatan keyword ${r.density}% • internal link ${r.internal} • FAQ ${r.faq} • kemiripan ${r.overlap}%`; $('#chk').innerHTML = checks(r.checks);
     $('#c_title').textContent = a.title.length + ' karakter'; $('#c_desc').textContent = a.description.length + ' karakter';
     const t = [['/', 'Beranda'], ['/pricelist/', 'Pricelist'], ['/kontak/', 'Test Drive'], ...S.d.models.map(m => ['/model/' + m.slug + '/', m.name]), ...S.d.articles.filter(x => x.slug !== a.slug && x.status === 'published').map(x => ['/artikel/' + x.slug + '/', x.title])];
     $('#sug').innerHTML = t.filter(x => !a.body.includes('](' + x[0] + ')')).map(x => `<button class="s sm" data-lk="${E(x[0])}" data-tx="${E(x[1])}">+ ${E(x[1].slice(0, 28))}</button>`).join(''); v.querySelectorAll('[data-lk]').forEach(b => b.onclick = () => ins(`[${b.dataset.tx}](${b.dataset.lk})`)); };
   function ins(t) { const s = ta.selectionStart, e = ta.selectionEnd; ta.value = ta.value.slice(0, s) + t + ta.value.slice(e); ta.focus(); ta.selectionStart = ta.selectionEnd = s + t.length; upd(); }
   v.querySelectorAll('[data-ins]').forEach(b => b.onclick = () => ins(b.dataset.ins)); $('#tbl').onclick = () => ins('\n| Kolom 1 | Kolom 2 |\n|---|---|\n| isi | isi |\n');
   v.querySelectorAll('input,textarea,select').forEach(x => x.oninput = upd); upd();
+  F('status').addEventListener('change', () => { if (F('status').value === 'scheduled' && !F('publishAt').value) { F('publishAt').value = new Date(Date.now() + 864e5 + 252e5).toISOString().slice(0, 10) + 'T08:00'; upd(); } });
   $('#upmain').onclick = () => pickUp(false, ps => { F('image').value = ps[0]; if (!F('imageAlt').value) F('imageAlt').value = F('keyword').value || F('title').value; $('#pvmain').innerHTML = thumb(ps[0]); upd(); });
   $('#upbody').onclick = () => { const alt = prompt('Teks alt (deskripsi singkat foto, untuk SEO):', F('keyword').value || ''); if (alt === null) return; pickUp(true, ps => ins(ps.map(p => '\n![' + alt + '](' + p + ')\n').join(''))); };
   F('image').addEventListener('input', () => { $('#pvmain').innerHTML = thumb(F('image').value); });
   $('#pv').onclick = () => { read(); $('#pvbox').innerHTML = `<div class="card"><h3>Pratinjau</h3><div class="prev"><h1 style="font-size:1.5rem">${E(a.title)}</h1>${MD.render(a.body)}</div></div>`; };
   $('#bk').onclick = () => go('articles');
-  $('#sv').onclick = async () => { read(); if (!a.title) return toast('Judul wajib diisi', true); const r = SEO.scoreArticle(a, all()); if (a.status === 'published' && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
+  $('#sv').onclick = async () => { read(); if (!a.title) return toast('Judul wajib diisi', true); const r = SEO.scoreArticle(a, all()); if (a.status === 'scheduled') { if (!a.publishAt) return toast('Isi tanggal dan jam terbit', true); if (Date.parse(a.publishAt) <= Date.now() && !confirm('Waktu terbit sudah lewat. Artikel langsung terbit pada build berikutnya. Lanjut?')) return; }
+    if (['ready', 'scheduled', 'published'].includes(a.status) && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap lanjut?')) return; if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
   if ($('#dl')) $('#dl').onclick = async () => { if (!confirm('Hapus artikel ini?')) return; S.d.articles.splice(idx, 1); await save('articles', 'Hapus artikel'); go('articles'); };
   if (!S.media) listDir('assets/img').then(l => { S.media = l.filter(x => x.type === 'file').map(x => x.name); const dl = $('#imgl'); if (dl) dl.innerHTML = S.media.map(m => `<option value="assets/img/${E(m)}">`).join(''); });
 }
@@ -221,6 +277,51 @@ function editModel(v, i) {
     variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: cols.filter(c => c.name.trim()).map(c => ({ name: c.name.trim(), hex: c.hex || '#999999', image: c.image || g('hero') })),
     gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
 }
+
+/* --- Leasing (marquee logo) --- */
+VIEWS.leasing = v => {
+  const L = S.d.leasing;
+  const draw = () => {
+    v.innerHTML = `<h2>Partner leasing</h2><div class="card"><p class="muted">Logo tampil sebagai marquee berjalan di halaman Model, Pricelist, dan Beranda (bagian varian dan cicilan). Upload logo (PNG, JPG, WebP, atau SVG). Tanpa logo, nama tampil sebagai teks. Hanya isi leasing yang benar-benar bekerja sama dengan dealer.</p><div class="row"><button id="addl">+ Tambah leasing</button><button id="sv">Simpan</button></div></div>
+${L.map((l, i) => `<div class="card"><label>Nama leasing<input data-i="${i}" data-f="name" value="${E(l.name || '')}"></label><label>Logo (path, terisi otomatis saat upload)<input data-i="${i}" data-f="logo" value="${E(l.logo || '')}"></label>${l.logo ? `<div style="background:#f2f4f7;border-radius:10px;padding:10px;display:inline-block;margin-bottom:10px"><img alt="" style="height:44px;width:auto;max-width:160px" src="${E(S.local[l.logo] || '../' + l.logo)}" onerror="this.style.display='none'"></div>` : ''}<div class="row"><button class="s sm" data-u="${i}">📷 Upload logo</button><button class="s sm" data-up="${i}">↑</button><button class="s sm" data-dn="${i}">↓</button><button class="d sm" data-x="${i}">Hapus</button></div></div>`).join('') || '<div class="card muted">Belum ada leasing. Tekan "+ Tambah leasing".</div>'}`;
+    const sync = () => v.querySelectorAll('[data-f]').forEach(i => L[i.dataset.i][i.dataset.f] = i.value);
+    $('#addl').onclick = () => { sync(); L.push({ name: 'Nama leasing', logo: '' }); draw(); };
+    $('#sv').onclick = async () => { sync(); S.d.leasing = L.filter(x => (x.name || '').trim()); await save('leasing', 'Update partner leasing'); };
+    v.querySelectorAll('[data-u]').forEach(b => b.onclick = () => { sync(); pickUp(false, ps => { L[+b.dataset.u].logo = ps[0]; draw(); }, 600); });
+    v.querySelectorAll('[data-x]').forEach(b => b.onclick = () => { sync(); if (confirm('Hapus leasing ini?')) { L.splice(+b.dataset.x, 1); draw(); } });
+    v.querySelectorAll('[data-up]').forEach(b => b.onclick = () => { sync(); const i = +b.dataset.up; if (i > 0) { [L[i - 1], L[i]] = [L[i], L[i - 1]]; draw(); } });
+    v.querySelectorAll('[data-dn]').forEach(b => b.onclick = () => { sync(); const i = +b.dataset.dn; if (i < L.length - 1) { [L[i + 1], L[i]] = [L[i], L[i + 1]]; draw(); } });
+  };
+  draw();
+};
+
+/* --- Tentang & lokasi --- */
+VIEWS.about = v => {
+  const A = S.d.about = Object.assign({ intro: [], photos: [], services: [], history: [], hours: [], mapsQuery: '', mapsEmbed: '' }, S.d.about);
+  const draw = () => {
+    v.innerHTML = `<h2>Tentang & lokasi</h2><div class="card"><p class="muted">Isi halaman <b>Tentang</b> dan blok lokasi di halaman <b>Kontak</b>. Nomor WhatsApp, telepon, email, alamat, dan sosmed diubah di menu <b>Pengaturan</b>.</p></div>
+<div class="card"><h3>Profil dealer</h3><label>Teks profil (pisahkan paragraf dengan baris kosong)<textarea id="a_intro" style="min-height:170px;font-family:inherit">${E(A.intro.join('\n\n'))}</textarea></label><label>Layanan (satu per baris)<textarea id="a_services" style="font-family:inherit">${E(A.services.join('\n'))}</textarea></label><label>Jam operasional (satu per baris, contoh: Senin - Sabtu: 09.00 - 18.00)<textarea id="a_hours" style="font-family:inherit">${E(A.hours.join('\n'))}</textarea></label></div>
+<div class="card"><h3>Foto dealer</h3><p class="muted">Foto pertama menjadi latar halaman Tentang. Tulis teks alt singkat untuk SEO.</p><div class="row"><button class="s sm" id="a_up">📷 Upload foto dealer (bisa banyak)</button></div>
+${A.photos.map((ph, i) => `<div class="card" style="margin-top:10px"><img alt="" class="pv" style="height:90px" src="${E(S.local[ph.src] || '../' + ph.src)}" onerror="this.style.display='none'"><label>Teks alt<input data-pi="${i}" value="${E(ph.alt || '')}"></label><div class="row"><button class="s sm" data-pu="${i}">↑</button><button class="s sm" data-pd="${i}">↓</button><button class="d sm" data-px="${i}">Hapus</button></div></div>`).join('')}</div>
+<div class="card"><h3>Sejarah perusahaan</h3>${A.history.map((h, i) => `<div class="card"><div class="grid"><label>Tahun<input data-hi="${i}" data-hf="year" value="${E(h.year || '')}"></label><label>Judul<input data-hi="${i}" data-hf="title" value="${E(h.title || '')}"></label></div><label>Cerita<textarea data-hi="${i}" data-hf="text" style="font-family:inherit">${E(h.text || '')}</textarea></label><div class="row"><button class="s sm" data-hu="${i}">↑</button><button class="s sm" data-hd="${i}">↓</button><button class="d sm" data-hx="${i}">Hapus</button></div></div>`).join('')}<button class="s sm" id="a_hadd">+ Tambah tonggak sejarah</button></div>
+<div class="card"><h3>Google Maps</h3><label>Lokasi untuk peta (kosongkan = pakai alamat di Pengaturan)<input id="a_mq" value="${E(A.mapsQuery || '')}" placeholder="Nama dealer, kota"></label><label>Embed Google Maps (opsional, tempel kode iframe atau link embed dari Google Maps > Bagikan > Sematkan peta)<textarea id="a_me" style="min-height:80px">${E(A.mapsEmbed || '')}</textarea></label></div>
+<button id="a_sv" style="width:100%">Simpan Tentang & lokasi</button>`;
+    const lines2 = t => t.split('\n').map(x => x.trim()).filter(Boolean);
+    const sync = () => { A.intro = $('#a_intro').value.split(/\n\s*\n/).map(x => x.replace(/\n/g, ' ').trim()).filter(Boolean); A.services = lines2($('#a_services').value); A.hours = lines2($('#a_hours').value); A.mapsQuery = $('#a_mq').value.trim(); A.mapsEmbed = $('#a_me').value.trim();
+      v.querySelectorAll('[data-pi]').forEach(i => A.photos[i.dataset.pi].alt = i.value); v.querySelectorAll('[data-hi]').forEach(i => A.history[i.dataset.hi][i.dataset.hf] = i.value); };
+    const mv = (arr, i, d) => { const j = i + d; if (j >= 0 && j < arr.length) { [arr[i], arr[j]] = [arr[j], arr[i]]; } };
+    $('#a_up').onclick = () => { sync(); pickUp(true, ps => { ps.forEach(p => A.photos.push({ src: p, alt: 'Showroom ' + (S.d.site.dealer || 'dealer XPeng') })); draw(); }); };
+    v.querySelectorAll('[data-px]').forEach(b => b.onclick = () => { sync(); A.photos.splice(+b.dataset.px, 1); draw(); });
+    v.querySelectorAll('[data-pu]').forEach(b => b.onclick = () => { sync(); mv(A.photos, +b.dataset.pu, -1); draw(); });
+    v.querySelectorAll('[data-pd]').forEach(b => b.onclick = () => { sync(); mv(A.photos, +b.dataset.pd, 1); draw(); });
+    $('#a_hadd').onclick = () => { sync(); A.history.push({ year: '', title: '', text: '' }); draw(); };
+    v.querySelectorAll('[data-hx]').forEach(b => b.onclick = () => { sync(); A.history.splice(+b.dataset.hx, 1); draw(); });
+    v.querySelectorAll('[data-hu]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hu, -1); draw(); });
+    v.querySelectorAll('[data-hd]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hd, 1); draw(); });
+    $('#a_sv').onclick = async () => { sync(); A.history = A.history.filter(h => (h.year || h.title || h.text)); await save('about', 'Update halaman Tentang'); };
+  };
+  draw();
+};
 
 /* --- Pricelist --- */
 VIEWS.prices = v => {
@@ -281,10 +382,20 @@ async function toWebp(file, max = 1600, q = .78) {
 const slugName = n => n.replace(/\.[^.]+$/, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '') || 'foto';
 VIEWS.media = async v => {
   v.innerHTML = `<h2>Media & upload ke GitHub</h2>
+<div class="card"><h3>📦 Upload ZIP ke repo (diekstrak otomatis)</h3><p class="muted">ZIP dikirim ke bagian depan (root) repo, lalu GitHub Actions mengekstraknya ke dalam repo dengan susunan folder yang sama seperti di dalam ZIP, misalnya <b>assets/img/foto.webp</b>. File bernama sama akan ditimpa. Gambar JPG/PNG otomatis dikecilkan ke WebP.</p><input type="file" id="rzf" accept=".zip"><div id="rzp" class="muted" style="margin:8px 0"></div><button id="rzu">Upload ZIP dan ekstrak</button><div id="rzs" class="muted"></div></div>
+<div class="card"><h3>⚙️ Proses GitHub Actions (build.yml)</h3><div id="runbox2"></div></div>
 <div class="card"><h3>Upload foto (otomatis dikecilkan ke WebP)</h3><input type="file" id="fi" accept="image/*" multiple><label style="margin-top:10px">Lebar maksimal (px)<select id="mx"><option>1200</option><option selected>1600</option><option>1920</option></select></label><button id="up">Upload foto</button><div id="st" class="muted"></div></div>
-<div class="card"><h3>Upload file ZIP</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
+<div class="card"><h3>ZIP ke folder tertentu (lanjutan)</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
 <div class="card"><h3>Upload file apa saja ke repo</h3><label>Folder tujuan<input id="pd" value="assets/files"></label><input type="file" id="pf" multiple><button id="pu" style="margin-top:10px">Upload</button></div>
 <div class="card"><h3>Galeri (<span id="cnt">0</span>)</h3><div class="thumbs" id="th"></div></div>`;
+  const runs = runsWidget($('#runbox2')); let zrep = null;
+  $('#rzf').onchange = async () => { const f = $('#rzf').files[0], P = $('#rzp'); zrep = null; P.innerHTML = ''; if (!f) return; try { const names = await zipNames(f); if (!names) { P.textContent = 'ZIP besar: daftar isi tidak bisa ditampilkan, tetap bisa diupload.'; return; } zrep = zipReport(names); P.innerHTML = `<b>${zrep.count} file</b> • folder: ${E(Object.entries(zrep.tops).map(([k, n]) => k + ' (' + n + ')').join(', '))}${zrep.warn.map(w => `<div>${E(w)}</div>`).join('')}`; } catch (e) { P.textContent = e.message; } };
+  $('#rzu').onclick = async () => { const f = $('#rzf').files[0]; if (!f) return toast('Pilih file ZIP dulu', true); if (f.size > 70 * 1024 * 1024) return toast('ZIP maksimal ±70MB. Pecah jadi beberapa ZIP.', true);
+    if (zrep && zrep.bad) return toast('ZIP tidak aman, dibatalkan', true);
+    if (zrep && zrep.warn.some(w => w.startsWith('⚠️')) && !confirm(zrep.warn.filter(w => w.startsWith('⚠️')).join('\n\n') + '\n\nLanjut upload?')) return;
+    const stamp = new Date().toISOString().replace(/\D/g, '').slice(0, 14), name = slugName(f.name) + '-' + stamp + '.zip', btn = $('#rzu'); btn.disabled = true;
+    try { $('#rzs').textContent = 'Mengunggah ' + Math.round(f.size / 1024) + ' KB…'; await putFile(name, bufb64(await f.arrayBuffer()), 'Upload ZIP ' + f.name); $('#rzs').textContent = '✓ ZIP terkirim ke root repo. GitHub sedang mengekstrak (±1-2 menit). Pantau di kartu Proses GitHub Actions di atas.'; toast('ZIP terkirim'); setTimeout(runs, 3000); }
+    catch (e) { toast(e.message, true); $('#rzs').textContent = 'Gagal: ' + e.message; } btn.disabled = false; };
   const up = $('#up'); up.onclick = async () => { const fs = [...$('#fi').files]; if (!fs.length) return toast('Pilih foto dulu', true); up.disabled = true; let n = 0;
     for (const f of fs) { try { $('#st').textContent = `Proses ${++n}/${fs.length}: ${f.name}`; const blob = await toWebp(f, +$('#mx').value), name = slugName(f.name) + '.webp'; await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name); $('#st').textContent = `✓ ${name} (${Math.round(blob.size / 1024)}KB dari ${Math.round(f.size / 1024)}KB)`; } catch (e) { toast(f.name + ': ' + e.message, true); } }
     up.disabled = false; S.media = null; VIEWS.media(v); toast('Upload selesai'); };
@@ -309,7 +420,7 @@ VIEWS.backup = async v => {
 
 /* --- Pengaturan --- */
 VIEWS.settings = v => {
-  const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube']];
+  const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube'], ['facebook', 'URL Facebook']];
   v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
   $('#sv').onclick = async () => { v.querySelectorAll('[data-k]').forEach(i => s[i.dataset.k] = i.value.trim()); s.whatsapp = s.whatsapp.replace(/\D/g, ''); s.backlinkSites = lines($('#bls').value).map(l => { const p = l.split('|'); return { name: p[0], url: p[1] || '', status: p[2] || 'aktif' }; }); s.github = { owner: S.cfg.owner, repo: S.cfg.repo, branch: S.cfg.branch }; await save('site', 'Pengaturan'); };
 };

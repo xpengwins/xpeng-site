@@ -117,3 +117,35 @@ ZIP project pertama: unggah `xpeng-site.zip` ke root repo lewat web GitHub. Robo
 - Spesifikasi di data awal berasal dari berita dan harus dicocokkan dengan brosur resmi sebelum tayang. Khususnya New X9 Pro/Pro+.
 - Harga mengikuti pricelist Juli 2026 dari Anda.
 - Nama XPeng dan logonya milik pemegang mereknya. Pastikan dealer mengikuti pedoman identitas merek resmi.
+
+---
+
+## Tambahan: jadwal publish, leasing, Tentang, Kontak
+
+### Status artikel dan jadwal publish
+Menu **Artikel** punya 4 status:
+- **Draft**: masih ditulis, tidak tampil di website.
+- **Siap publish**: sudah selesai, menunggu. Tombol **Terbitkan** di daftar artikel menerbitkannya seketika.
+- **Terjadwal**: isi tanggal dan jam (WIB). Artikel terbit otomatis pada build pertama setelah waktunya tiba.
+- **Terbit**: tampil di website.
+
+Gunakan filter di atas daftar (Semua, Draft, Siap, Terjadwal, Terbit). Kartu **Jadwal publish** menampilkan urutan artikel yang akan terbit.
+Catatan: build berjalan tiap jam (cron di build.yml), jadi jam terbit akurat dalam kisaran 1 jam. Bila build.yml belum diperbarui, artikel terjadwal terbit paling lambat 03:00 WIB berikutnya.
+Artikel dengan skor SEO di bawah 80 akan diberi peringatan sebelum disimpan sebagai siap, terjadwal, atau terbit.
+
+### Partner leasing (marquee)
+Menu **Lainnya > Leasing**: tambah nama leasing, upload logo (PNG, JPG, WebP, SVG), atur urutan dengan tombol panah, lalu Simpan. Logo tampil berjalan otomatis di halaman Model, Pricelist, dan Beranda. Bila daftar kosong, bagian ini tidak tampil. Isi hanya leasing yang benar-benar bekerja sama dengan dealer.
+
+### Halaman Tentang
+Menu **Lainnya > Tentang & lokasi**: teks profil, layanan, jam operasional, foto dealer (upload langsung), sejarah perusahaan (tahun, judul, cerita), dan Google Maps. Peta otomatis memakai alamat di Pengaturan. Untuk titik yang lebih tepat, buka Google Maps > Bagikan > Sematkan peta > salin kode iframe, lalu tempel di kolom Embed.
+
+### Halaman Kontak
+Data diambil dari **Pengaturan**: nomor WhatsApp, telepon, email, alamat, serta URL Instagram, TikTok, YouTube, dan Facebook. Ikon sosmed hanya tampil bila URL-nya diisi.
+
+### Memperbarui build.yml (sekali saja)
+Ganti isi `.github/workflows/build.yml` di GitHub dengan file build.yml terbaru (build tiap jam), karena file workflow tidak bisa diperbarui lewat ZIP.
+
+### Upload ZIP ke repo dan proses GitHub Actions (v6)
+Menu **Lainnya > Media & Zip**, kartu **Upload ZIP ke repo**: pilih ZIP, admin menampilkan isinya dan memberi peringatan bila ZIP berisi folder data/ atau file sistem. ZIP dikirim ke bagian depan (root) repo, lalu GitHub Actions mengekstraknya ke dalam repo dengan susunan folder yang sama seperti di ZIP (contoh: assets/img/foto.webp). Folder pembungkus tunggal (misalnya "xpeng-site/") dibuang otomatis. File bernama sama ditimpa. Folder .github tidak pernah diubah.
+Kartu **Proses GitHub Actions** (juga ada di Beranda) menampilkan 5 proses terakhir (berhasil, gagal, berjalan) dan tombol **Jalankan workflow sekarang**. Bila gagal, buka Detail dan kirim tangkapan layar langkah yang bertanda merah.
+Penting: pembuangan folder pembungkus butuh build.yml terbaru (tempel ulang sekali di GitHub).
