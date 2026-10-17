@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths: ['*.zip', 'data/**', 'upload/**', 'assets/img/**', 'assets/files/**', 'shared/**', 'build/**']
   schedule:
-    - cron: '0 20 * * *'   # 03:00 WIB, backup harian
+    - cron: '7 * * * *'   # tiap jam: menerbitkan artikel terjadwal + backup harian
   workflow_dispatch:
 permissions:
   contents: write
@@ -19,13 +19,22 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with: { node-version: 22 }
-      - name: Ekstrak ZIP project di root (upload pertama)
+      - name: Ekstrak semua ZIP di root repo
         run: |
           shopt -s nullglob
           for z in *.zip; do
-            echo "Ekstrak project $z"
-            unzip -o -q "$z" -x '__MACOSX/*' '.github/*' '.git/*' || true
-            rm -f "$z"
+            echo "Ekstrak $z ke root repo"
+            tmp=$(mktemp -d)
+            unzip -o -q "$z" -x '__MACOSX/*' '*/.DS_Store' '.git/*' '.github/*' '*/.github/*' -d "$tmp" || true
+            src="$tmp"
+            nf=$(find "$tmp" -mindepth 1 -maxdepth 1 -type f | wc -l)
+            nd=$(find "$tmp" -mindepth 1 -maxdepth 1 -type d | wc -l)
+            if [ "$nf" = "0" ] && [ "$nd" = "1" ]; then
+              d=$(find "$tmp" -mindepth 1 -maxdepth 1 -type d); b=$(basename "$d")
+              case "$b" in assets|data|admin|build|shared|docs|backup|upload|model|artikel|kontak|pricelist|tentang) ;; *) src="$d"; echo "Buang folder pembungkus: $b";; esac
+            fi
+            cp -a "$src"/. .
+            rm -rf "$tmp" "$z"
           done
       - name: Ekstrak file ZIP di folder upload/
         run: |
