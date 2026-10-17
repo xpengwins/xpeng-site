@@ -113,10 +113,12 @@ VIEWS.home = async v => {
   const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
   v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub - sch - rdy} draft • ${rdy} siap • ${sch} terjadwal</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
 <div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
+<div class="card"><h3>Kabar ke Bing (IndexNow)</h3><div id="inx" class="muted">Memuat…</div></div>
 <div class="card"><h3>Proses GitHub Actions</h3><div id="runbox"></div></div>
 <div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
 <div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;
   v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build; runsWidget($('#runbox'));
+  indexnowBox($('#inx'));
   const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
 };
 
@@ -354,6 +356,16 @@ VIEWS.seo = async v => {
 <div class="card"><h3>Riwayat skor</h3>${hist.length ? hist.slice(-14).map(h => `<div class="row" style="margin-bottom:6px"><span class="muted" style="flex:0 0 84px">${h.date}</span><div class="bar" style="flex:4"><i style="width:${h.total}%"></i></div><b style="flex:0 0 30px">${h.total}</b></div>`).join('') : '<p class="muted">Belum ada riwayat.</p>'}</div>`;
   $('#b').onclick = build;
 };
+
+
+/* ---------- status IndexNow (Bing) ---------- */
+async function indexnowBox(el) {
+  let m = null; try { m = JSON.parse(unb64((await getFile('data/indexnow-sent.json')).content)); } catch (e) {}
+  if (!m) { el.innerHTML = 'Belum aktif. Upload indexnow-setup.zip dan tempel build.yml baru.'; return; }
+  const rows = Object.entries(m).sort((x, y) => y[1].localeCompare(x[1])), n = rows.length;
+  el.innerHTML = n ? `<div class="row"><div><div class="score A">${n}</div><div class="muted">URL terkirim</div></div><div><b>${new Date(rows[0][1]).toLocaleString('id-ID')}</b><div class="muted">Terakhir dikirim</div></div></div><details style="margin-top:10px"><summary class="muted">5 URL terakhir</summary>${rows.slice(0, 5).map(r => `<div class="muted" style="word-break:break-all">${E(r[0])}</div>`).join('')}</details><div class="row" style="margin-top:12px"><button class="s" id="inr">Kirim ulang semua</button></div><p class="muted" style="margin-top:8px">Terkirim otomatis setelah tiap build. Bila 0, cek langkah IndexNow di tab Actions.</p>` : '<p>Belum ada URL terkirim. Akan terkirim otomatis setelah build berikutnya, jika domain sudah xpengwins.com.</p>';
+  const b = el.querySelector('#inr'); if (b) b.onclick = async () => { if (!confirm('Kirim ulang semua URL sitemap ke Bing pada build berikutnya?')) return; try { await putFile('data/indexnow-sent.json', b64('{}'), 'IndexNow: reset daftar kirim'); toast('Daftar direset, menjalankan build…'); build(); } catch (e) { toast(e.message, true); } };
+}
 
 /* --- Backlink aman --- */
 VIEWS.backlinks = v => {
