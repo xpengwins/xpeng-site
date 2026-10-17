@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-17T04:09:26.015Z",
+ "date": "2026-10-17T04:27:46.714Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -364,12 +364,35 @@
    "intro": [
     "Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320"
    ],
-   "photos": [],
+   "photos": [
+    {
+     "src": "assets/img/215630.webp",
+     "alt": "Showroom Dealer XPeng"
+    },
+    {
+     "src": "assets/img/215638.webp",
+     "alt": "Showroom Dealer XPeng"
+    },
+    {
+     "src": "assets/img/215636.webp",
+     "alt": "Showroom Dealer XPeng"
+    },
+    {
+     "src": "assets/img/215632.webp",
+     "alt": "Showroom Dealer XPeng"
+    },
+    {
+     "src": "assets/img/215634.webp",
+     "alt": "Showroom Dealer XPeng"
+    }
+   ],
    "services": [],
    "history": [],
-   "hours": [],
+   "hours": [
+    "Senin - Minggu: 08.30 - 19.00"
+   ],
    "mapsQuery": "XPeng Alam Sutera",
-   "mapsEmbed": "https://maps.app.goo.gl/hgXDFpUMZHszxhuK7?g_st=ac"
+   "mapsEmbed": "QM85+VF Pakualam, South Tangerang City, Banten"
   }
  }
 }
