@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-17T08:21:51.727Z",
+ "date": "2026-10-17T09:04:55.372Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -920,6 +920,14 @@
    {
     "name": "CIMB Niaga",
     "logo": "assets/img/214391.webp"
+   },
+   {
+    "name": "Clipan Finance",
+    "logo": "assets/img/214393.webp"
+   },
+   {
+    "name": "BJI Finance",
+    "logo": "assets/img/214392.webp"
    }
   ],
   "about": {
