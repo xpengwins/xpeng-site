@@ -1,14 +1,245 @@
 [
- {"kw":"mobil listrik premium","tier":"hard","page":"/","position":null,"note":"Halaman utama"},
- {"kw":"harga xpeng","tier":"hard","page":"/pricelist/","position":null},
- {"kw":"xpeng indonesia","tier":"hard","page":"/","position":null},
- {"kw":"harga xpeng x9","tier":"medium","page":"/model/xpeng-x9/","position":null},
- {"kw":"harga xpeng g6","tier":"medium","page":"/model/xpeng-g6/","position":null},
- {"kw":"mpv listrik 7 seater","tier":"medium","page":"/model/xpeng-x9/","position":null},
- {"kw":"suv listrik coupe","tier":"medium","page":"/model/xpeng-g6/","position":null},
- {"kw":"xpeng g6 awd","tier":"medium","page":"/model/xpeng-g6/","position":null},
- {"kw":"test drive xpeng","tier":"low","page":"/kontak/","position":null},
- {"kw":"cicilan xpeng x9","tier":"low","page":"/pricelist/","position":null},
- {"kw":"jarak tempuh xpeng g6","tier":"low","page":"/model/xpeng-g6/","position":null},
- {"kw":"garansi baterai xpeng","tier":"low","page":"/","position":null}
+ {
+  "kw": "mobil listrik premium",
+  "tier": "hard",
+  "page": "/artikel/mobil-listrik-premium-terbaik-indonesia/",
+  "position": null,
+  "note": "Halaman utama; artikel: /artikel/mobil-listrik-premium-terbaik-indonesia/"
+ },
+ {
+  "kw": "harga xpeng",
+  "tier": "hard",
+  "page": "/pricelist/",
+  "position": null
+ },
+ {
+  "kw": "xpeng indonesia",
+  "tier": "hard",
+  "page": "/",
+  "position": null,
+  "note": "artikel: /artikel/xpeng-indonesia-profil-dan-model/"
+ },
+ {
+  "kw": "harga xpeng x9",
+  "tier": "medium",
+  "page": "/model/xpeng-x9/",
+  "position": null
+ },
+ {
+  "kw": "harga xpeng g6",
+  "tier": "medium",
+  "page": "/model/xpeng-g6/",
+  "position": null
+ },
+ {
+  "kw": "mpv listrik 7 seater",
+  "tier": "medium",
+  "page": "/model/xpeng-x9/",
+  "position": null
+ },
+ {
+  "kw": "suv listrik coupe",
+  "tier": "medium",
+  "page": "/model/xpeng-g6/",
+  "position": null
+ },
+ {
+  "kw": "xpeng g6 awd",
+  "tier": "medium",
+  "page": "/model/xpeng-g6/",
+  "position": null
+ },
+ {
+  "kw": "test drive xpeng",
+  "tier": "low",
+  "page": "/kontak/",
+  "position": null
+ },
+ {
+  "kw": "cicilan xpeng x9",
+  "tier": "low",
+  "page": "/pricelist/",
+  "position": null
+ },
+ {
+  "kw": "jarak tempuh xpeng g6",
+  "tier": "low",
+  "page": "/model/xpeng-g6/",
+  "position": null
+ },
+ {
+  "kw": "garansi baterai xpeng",
+  "tier": "low",
+  "page": "/artikel/garansi-baterai-xpeng/",
+  "position": null,
+  "note": "artikel: /artikel/garansi-baterai-xpeng/"
+ },
+ {
+  "kw": "kenapa harus xpeng",
+  "tier": "medium",
+  "page": "/artikel/kenapa-harus-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "xpeng x9 vs denza d9",
+  "tier": "medium",
+  "page": "/artikel/xpeng-x9-vs-denza-d9/",
+  "position": null
+ },
+ {
+  "kw": "harga mobil listrik",
+  "tier": "hard",
+  "page": "/artikel/harga-mobil-listrik-terbaru-2026/",
+  "position": null
+ },
+ {
+  "kw": "keunggulan xpeng",
+  "tier": "medium",
+  "page": "/artikel/keunggulan-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "xpeng g6 vs hyundai ioniq 5",
+  "tier": "medium",
+  "page": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
+  "position": null
+ },
+ {
+  "kw": "xpeng g6 vs byd sealion 7",
+  "tier": "medium",
+  "page": "/artikel/xpeng-g6-vs-byd-sealion-7/",
+  "position": null
+ },
+ {
+  "kw": "xpeng x9 vs toyota alphard",
+  "tier": "medium",
+  "page": "/artikel/xpeng-x9-vs-toyota-alphard/",
+  "position": null
+ },
+ {
+  "kw": "teknologi xpeng",
+  "tier": "medium",
+  "page": "/artikel/teknologi-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "mpv listrik terbaik",
+  "tier": "hard",
+  "page": "/artikel/mpv-listrik-terbaik-indonesia/",
+  "position": null
+ },
+ {
+  "kw": "suv listrik terbaik",
+  "tier": "hard",
+  "page": "/artikel/suv-listrik-terbaik-indonesia/",
+  "position": null
+ },
+ {
+  "kw": "pajak mobil listrik",
+  "tier": "low",
+  "page": "/artikel/pajak-mobil-listrik-2026/",
+  "position": null
+ },
+ {
+  "kw": "mobil listrik 7 seater",
+  "tier": "hard",
+  "page": "/artikel/mobil-listrik-7-seater-indonesia/",
+  "position": null
+ },
+ {
+  "kw": "pengisian cepat 800v",
+  "tier": "medium",
+  "page": "/artikel/pengisian-cepat-800v-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "xpilot",
+  "tier": "medium",
+  "page": "/artikel/xpilot-4-0-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "xpeng g6 pro vs awd",
+  "tier": "medium",
+  "page": "/artikel/xpeng-g6-pro-vs-awd/",
+  "position": null
+ },
+ {
+  "kw": "interior xpeng x9",
+  "tier": "medium",
+  "page": "/artikel/interior-xpeng-x9/",
+  "position": null
+ },
+ {
+  "kw": "parkir otomatis xpeng g6",
+  "tier": "medium",
+  "page": "/artikel/parkir-otomatis-xpeng-g6/",
+  "position": null
+ },
+ {
+  "kw": "xpeng dirakit di indonesia",
+  "tier": "medium",
+  "page": "/artikel/xpeng-dirakit-di-indonesia/",
+  "position": null
+ },
+ {
+  "kw": "baterai lfp vs ncm",
+  "tier": "medium",
+  "page": "/artikel/baterai-lfp-vs-ncm/",
+  "position": null
+ },
+ {
+  "kw": "spesifikasi mobil listrik",
+  "tier": "medium",
+  "page": "/artikel/spesifikasi-mobil-listrik-wajib-dicek/",
+  "position": null
+ },
+ {
+  "kw": "simulasi cicilan xpeng",
+  "tier": "low",
+  "page": "/artikel/simulasi-cicilan-xpeng/",
+  "position": null
+ },
+ {
+  "kw": "test drive mobil listrik",
+  "tier": "low",
+  "page": "/artikel/test-drive-mobil-listrik/",
+  "position": null
+ },
+ {
+  "kw": "biaya charging mobil listrik",
+  "tier": "low",
+  "page": "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+  "position": null
+ },
+ {
+  "kw": "biaya charging spklu",
+  "tier": "low",
+  "page": "/artikel/biaya-charging-spklu/",
+  "position": null
+ },
+ {
+  "kw": "mobil listrik untuk mudik",
+  "tier": "low",
+  "page": "/artikel/mobil-listrik-untuk-mudik/",
+  "position": null
+ },
+ {
+  "kw": "mobil listrik keluarga",
+  "tier": "medium",
+  "page": "/artikel/mobil-listrik-keluarga/",
+  "position": null
+ },
+ {
+  "kw": "perawatan mobil listrik",
+  "tier": "low",
+  "page": "/artikel/perawatan-mobil-listrik/",
+  "position": null
+ },
+ {
+  "kw": "mobil listrik banjir",
+  "tier": "low",
+  "page": "/artikel/mobil-listrik-saat-banjir/",
+  "position": null
+ }
 ]

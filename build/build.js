@@ -201,6 +201,9 @@ function articleIndex() {
 function articlePage(a) {
   const p = '/artikel/' + a.slug + '/';
   let html = MD.render(a.body); html = autoLink(html, p); html = fixLinks(html);
+  /* tautan ke artikel yang belum terbit diubah jadi teks biasa, supaya tidak ada link 404 saat artikel terbit bertahap */
+  const live = new Set(articles.map(x => x.slug));
+  html = html.replace(/<a href="[^"]*\/artikel\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, sl, t) => live.has(sl) ? m : t);
   const toc = [...a.body.matchAll(/^##\s+(.*)$/gm)].map(m => `<li><a href="#${MD.slug(m[1])}">${E(m[1])}</a></li>`).join('');
   const rel = articles.filter(x => x.slug !== a.slug).slice(0, 2);
   const body = `<article class="art"><header class="wrap narrow"><nav class="crumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/artikel/')}">Artikel</a></nav><span class="eyebrow">${E(a.category || 'Artikel')}</span><h1>${E(a.title)}</h1><p class="muted">Diperbarui <time datetime="${a.date}">${a.date}</time> • Ditulis oleh tim ${E(site.dealer)}</p></header>
