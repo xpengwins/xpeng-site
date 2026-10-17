@@ -65,3 +65,12 @@ jobs:
           git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
           git add data/indexnow-sent.json
           git diff --cached --quiet || (git commit -m "IndexNow: catat URL terkirim" && git pull --rebase -q && git push)
+      - name: Tarik data Google Search Console
+        continue-on-error: true
+        env:
+          GSC_KEY: ${{ secrets.GSC_KEY }}
+        run: |
+          node build/gsc.js
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/gsc.json
+          git diff --cached --quiet || (git commit -m "Data Search Console" && git pull --rebase -q && git push)
