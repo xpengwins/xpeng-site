@@ -90,7 +90,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -366,6 +366,26 @@ async function indexnowBox(el) {
   el.innerHTML = n ? `<div class="row"><div><div class="score A">${n}</div><div class="muted">URL terkirim</div></div><div><b>${new Date(rows[0][1]).toLocaleString('id-ID')}</b><div class="muted">Terakhir dikirim</div></div></div><details style="margin-top:10px"><summary class="muted">5 URL terakhir</summary>${rows.slice(0, 5).map(r => `<div class="muted" style="word-break:break-all">${E(r[0])}</div>`).join('')}</details><div class="row" style="margin-top:12px"><button class="s" id="inr">Kirim ulang semua</button></div><p class="muted" style="margin-top:8px">Terkirim otomatis setelah tiap build. Bila 0, cek langkah IndexNow di tab Actions.</p>` : '<p>Belum ada URL terkirim. Akan terkirim otomatis setelah build berikutnya, jika domain sudah xpengwins.com.</p>';
   const b = el.querySelector('#inr'); if (b) b.onclick = async () => { if (!confirm('Kirim ulang semua URL sitemap ke Bing pada build berikutnya?')) return; try { await putFile('data/indexnow-sent.json', b64('{}'), 'IndexNow: reset daftar kirim'); toast('Daftar direset, menjalankan build…'); build(); } catch (e) { toast(e.message, true); } };
 }
+
+
+/* --- Ranking Google (Search Console otomatis) --- */
+VIEWS.ranking = async v => {
+  v.innerHTML = '<h2>Ranking Google</h2><p class="muted">Memuat…</p>'; let g = null;
+  try { g = JSON.parse(unb64((await getFile('data/gsc.json')).content)); } catch (e) {}
+  if (!g) { v.innerHTML = '<h2>Ranking Google</h2><div class="card"><p>Belum ada data. Data ditarik otomatis sekali sehari setelah kunci Search Console (GSC_KEY) dipasang dan situs mulai muncul di Google.</p><button id="b">Jalankan build sekarang</button></div>'; $('#b').onclick = build; return; }
+  const by = {}; g.rows.forEach(r => { (by[r.q] = by[r.q] || []).push(r); });
+  const L = Object.entries(by).map(([q, a]) => { const impr = a.reduce((s, x) => s + x.impr, 0), clicks = a.reduce((s, x) => s + x.clicks, 0), pos = a.reduce((s, x) => s + x.pos * x.impr, 0) / (impr || 1), top = a.slice().sort((x, y) => y.impr - x.impr)[0]; return { q, impr, clicks, pos: +pos.toFixed(1), p: top.p, pages: a.length }; }).sort((x, y) => y.impr - x.impr);
+  const d = (n, p, lowGood) => { const x = +(n - p).toFixed(1); if (!x) return ''; const good = lowGood ? x < 0 : x > 0; return ` (${x > 0 ? '+' : ''}${x}, ${good ? 'membaik' : 'menurun'})`; };
+  const t = g.totals, pt = g.prevTotals, badge = p => `<span class="pill ${p <= 10 ? 'ok' : p <= 20 ? 'warn' : 'bad'}" style="font-size:1rem;padding:6px 12px">${p}</span>`;
+  const near = L.filter(x => x.pos > 10 && x.pos <= 20), low = L.filter(x => x.impr >= 20 && x.clicks / x.impr < 0.02), dup = L.filter(x => x.pages > 1);
+  const blk = (title, a, none) => `<h3>${title}</h3>${a.length ? a.slice(0, 10).map(x => `<div class="chk"><div style="flex:1"><b>${E(x.q)}</b><div class="muted">${E(x.p)} | tayang ${x.impr}, klik ${x.clicks}</div></div>${badge(x.pos)}</div>`).join('') : `<p class="muted">${none}</p>`}`;
+  const list = a => a.map(x => `<div class="chk" data-q="${E(x.q.toLowerCase())}"><div style="flex:1"><b>${E(x.q)}</b><div class="muted">${E(x.p)} | tayang ${x.impr}, klik ${x.clicks}</div></div>${badge(x.pos)}</div>`).join('');
+  v.innerHTML = `<h2>Ranking Google</h2><div class="card"><p class="muted">Periode ${g.period[0]} s/d ${g.period[1]}, dibanding 28 hari sebelumnya. Data Google tertunda ±3 hari. Diperbarui ${new Date(g.generated).toLocaleString('id-ID')}.</p>
+<div class="chk"><b>Klik dari Google: ${t.clicks}${d(t.clicks, pt.clicks)}</b></div><div class="chk"><b>Tayang di hasil pencarian: ${t.impr}${d(t.impr, pt.impr)}</b></div><div class="chk"><div><b>Posisi rata-rata: ${t.pos}${d(t.pos, pt.pos, true)}</b><div class="muted">Makin kecil makin bagus (1 = paling atas).</div></div></div>
+${blk('Hampir halaman 1: perkuat halaman ini', near, 'Belum ada. Biasanya muncul setelah situs lebih lama dikenal Google.')}${blk('Sering muncul tapi jarang diklik: perbaiki judul dan deskripsi', low, 'Belum ada.')}${blk('Dua halaman bersaing untuk kata yang sama', dup, 'Tidak ada. Bagus.')}
+<h3>Semua kata kunci dan peringkatnya (${L.length})</h3><p class="muted">Posisi 1-10 hijau (halaman 1 Google), 11-20 kuning (halaman 2), di atas 20 merah.</p><input id="gq" placeholder="Cari kata kunci..." style="margin:8px 0"><div id="gl">${list(L)}</div></div>`;
+  $('#gq').oninput = e => { const q = e.target.value.toLowerCase(); v.querySelectorAll('#gl [data-q]').forEach(r => r.style.display = r.dataset.q.includes(q) ? '' : 'none'); };
+};
 
 /* --- Backlink aman --- */
 VIEWS.backlinks = v => {
