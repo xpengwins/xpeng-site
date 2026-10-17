@@ -19,6 +19,8 @@ let BASE = ''; try { BASE = new URL(site.baseUrl).pathname.replace(/\/$/, ''); }
 const ORIGIN = (() => { try { return new URL(site.baseUrl).origin; } catch (e) { return ''; } })();
 const u = p => /^(https?:|#|mailto:|tel:|data:)/.test(p) ? p : BASE + (p.startsWith('/') ? p : '/' + p);
 const abs = p => ORIGIN + u(p);
+/* versi aset: berubah otomatis saat CSS/JS berubah, supaya browser tidak memakai cache lama */
+const ASSET_V = (() => { try { const h = require('crypto').createHash('md5'); ['assets/css/style.css', 'assets/js/app.js'].forEach(f => h.update(fs.readFileSync(path.join(ROOT, f)))); return h.digest('hex').slice(0, 8); } catch (e) { return '1'; } })();
 const wa = (t) => 'https://wa.me/' + site.whatsapp + '?text=' + encodeURIComponent(t);
 const minPrice = Math.min(...models.flatMap(m => m.variants.map(v => v.price)));
 /* ---------- ikon, peta, leasing ---------- */
@@ -60,7 +62,7 @@ function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'websit
 <meta name="theme-color" content="#0a0b0d"><link rel="icon" href="${u('assets/img/favicon.svg')}" type="image/svg+xml"><link rel="manifest" href="${u('manifest.webmanifest')}">
 <meta property="og:type" content="${type}"><meta property="og:title" content="${E(title)}"><meta property="og:description" content="${E(desc)}"><meta property="og:image" content="${img}"><meta property="og:url" content="${abs(p)}"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="${E(site.name)}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="${u('assets/css/style.css')}">
+<link rel="stylesheet" href="${u('assets/css/style.css')}?v=${ASSET_V}">
 ${jsonld(orgLd())}${ld.filter(Boolean).map(jsonld).join('')}
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
@@ -74,7 +76,7 @@ ${jsonld(orgLd())}${ld.filter(Boolean).map(jsonld).join('')}
 <div><h2>Hubungi</h2><p>${E(site.dealer)}<br>${E(site.address)}<br><a href="${telHref}">${E(site.phone)}</a></p>${socialRow()}</div></div>
 <div class="wrap legal">© ${new Date().getFullYear()} ${E(site.dealer)}. Harga dan spesifikasi dapat berubah tanpa pemberitahuan. XPeng adalah merek dagang pemiliknya.</div></footer>
 <a class="wafab" href="${wa('Halo, saya mau tanya XPeng')}" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 2.3A10.7 10.7 0 1 1 9.5 24l-.4-.3-3.6 1.1 1.2-3.5-.3-.4A10.7 10.7 0 0 1 16 5.3zm-4 5.4c-.3 0-.7.1-1 .5-.4.4-1.3 1.2-1.3 3s1.3 3.5 1.5 3.7c.2.3 2.6 4.1 6.400 5.600 3.200 1.200 3.800.9 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.600-1.200c-.3-.1-.6-.2-.9.200-.3.400-1 1.200-1.200 1.400-.2.200-.4.300-.8.100a8.900 8.900 0 0 1-4.400-3.800c-.3-.6.300-.6 1-1.900.1-.2.100-.4 0-.6l-1.200-2.900c-.3-.7-.6-.6-.9-.6z"/></svg></a>
-<script src="${u('assets/js/app.js')}" defer></script></body></html>`;
+<script src="${u('assets/js/app.js')}?v=${ASSET_V}" defer></script></body></html>`;
 }
 
 /* ---------- komponen ---------- */
