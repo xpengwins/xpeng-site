@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-19T08:13:48.736Z",
+ "date": "2026-10-19T08:28:30.240Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -914,7 +914,7 @@
     "anchor": "Mobil EV Premium Klik di sini",
     "type": "brand",
     "date": "2026-10-17",
-    "status": "rencana"
+    "status": "dicek"
    },
    {
     "site": "geelywins.com",
@@ -936,6 +936,14 @@
     "site": "geelywins.com",
     "target": "/",
     "anchor": "Pricelist Xpeng",
+    "type": "brand",
+    "date": "2026-10-19",
+    "status": "rencana"
+   },
+   {
+    "site": "geelywins.com",
+    "target": "/",
+    "anchor": "XPeng Indonesia",
     "type": "brand",
     "date": "2026-10-19",
     "status": "rencana"
