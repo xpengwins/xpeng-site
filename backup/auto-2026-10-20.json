@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-20T08:39:02.261Z",
+ "date": "2026-10-20T18:39:20.440Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -913,22 +913,6 @@
     "type": "brand",
     "date": "2026-10-17",
     "status": "dicek"
-   },
-   {
-    "site": "geelywins.com",
-    "target": "/",
-    "anchor": "Pricelist Xpeng",
-    "type": "brand",
-    "date": "2026-10-19",
-    "status": "rencana"
-   },
-   {
-    "site": "geelywins.com",
-    "target": "/",
-    "anchor": "Pricelist Xpeng",
-    "type": "brand",
-    "date": "2026-10-19",
-    "status": "rencana"
    },
    {
     "site": "geelywins.com",
