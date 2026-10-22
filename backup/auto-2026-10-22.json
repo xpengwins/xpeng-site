@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-22T18:28:54.860Z",
+ "date": "2026-10-22T18:30:20.415Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -971,7 +971,12 @@
      "alt": "Showroom Dealer XPeng"
     }
    ],
-   "services": [],
+   "services": [
+    "Penjualan",
+    "Bengkel",
+    "SparePart",
+    "Body Repair"
+   ],
    "history": [],
    "hours": [
     "Senin - Minggu: 08.30 - 19.00"
