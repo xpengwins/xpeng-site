@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-21T08:40:53.229Z",
+ "generated": "2026-10-22T02:35:49.571Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 17,
+  "pages": 18,
   "total": 100
  },
  "tech": [
@@ -528,6 +528,75 @@
   },
   {
    "url": "/model/xpeng-g6/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/teknologi-xpeng/",
    "score": 100,
    "checks": [
     {
@@ -2877,7 +2946,7 @@
   {
    "slug": "teknologi-xpeng",
    "title": "Teknologi XPeng: 800V, XPILOT, dan Platform SEPA 2.0",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "teknologi xpeng",
    "score": 100,
    "grade": "A",
@@ -7326,9 +7395,9 @@
    "page": "/artikel/teknologi-xpeng/",
    "position": null,
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 13
    }
   },
   {
