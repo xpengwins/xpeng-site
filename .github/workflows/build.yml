@@ -6,6 +6,11 @@ on:
   schedule:
     - cron: '7 * * * *'   # tiap jam: menerbitkan artikel terjadwal + backup harian
   workflow_dispatch:
+    inputs:
+      report:
+        description: 'Kirim laporan lengkap ke Telegram dan Google Sheets (yes/no)'
+        required: false
+        default: 'no'
 permissions:
   contents: write
 concurrency:
@@ -74,3 +79,16 @@ jobs:
           git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
           git add data/gsc.json
           git diff --cached --quiet || (git commit -m "Data Search Console" && git pull --rebase -q && git push)
+      - name: Laporan artikel ke Telegram dan Google Sheets
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          GSC_KEY: ${{ secrets.GSC_KEY }}
+          REPORT_ALL: ${{ github.event.inputs.report }}
+        run: |
+          node build/notify.js
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          git add data/notified.json
+          git diff --cached --quiet || (git commit -m "Laporan artikel terkirim" && git pull --rebase -q && git push)
