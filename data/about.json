@@ -24,7 +24,12 @@
    "alt": "Showroom Dealer XPeng"
   }
  ],
- "services": [],
+ "services": [
+  "Penjualan",
+  "Bengkel",
+  "SparePart",
+  "Body Repair"
+ ],
  "history": [],
  "hours": [
   "Senin - Minggu: 08.30 - 19.00"
