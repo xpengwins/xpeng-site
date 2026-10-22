@@ -90,7 +90,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -100,7 +100,7 @@ function shell() {
 function go(t) {
   if (t === 'logout') { localStorage.removeItem('xp_cfg'); S.cfg = null; return loginView(); }
   S.tab = t; $('#menu').classList.remove('open'); app.querySelectorAll('nav.bot button').forEach(b => b.classList.toggle('on', b.dataset.t === t || (t !== 'home' && !TABS.some(x => x[0] === t) && b.dataset.t === 'more')));
-  window.scrollTo(0, 0); const v = $('#v'); (VIEWS[t] || VIEWS.home)(v);
+  window.scrollTo(0, 0); const v = $('#v'); watch(); (VIEWS[t] || VIEWS.home)(v);
 }
 const sc = (n) => `<span class="score ${n >= 90 ? 'A' : n >= 80 ? 'B' : n >= 65 ? 'C' : 'D'}">${n}</span>`;
 const checks = cs => cs.map(c => `<div class="chk"><i>${c.pass ? '✅' : '❌'}</i><div>${E(c.label)}${c.tip ? `<div class="t">${E(c.tip)}</div>` : ''}</div></div>`).join('');
@@ -108,6 +108,48 @@ async function build() { try { await gh('actions/workflows/build.yml/dispatches'
 async function loadReport() { try { const j = await getFile('data/seo-report.json'); S.report = JSON.parse(unb64(j.content)); } catch (e) { S.report = null; } return S.report; }
 
 /* ---------- VIEWS ---------- */
+
+/* ---------- collapse otomatis + pagination otomatis ---------- */
+S.cl = S.cl || {}; S.pg = S.pg || {};
+const PER = 10;
+function autoCollapse(v) {
+  if (!v) return;
+  v.querySelectorAll('.card').forEach(c => {
+    if (c.tagName === 'DETAILS' || c.parentElement.closest('.card,details.cl')) return;
+    const h = c.firstElementChild; if (!h || h.tagName !== 'H3') return;
+    const len = c.textContent.length, hasTbl = !!c.querySelector('table'); if (len < 260 && !hasTbl && !c.querySelector('input,select,textarea,button')) return;
+    const key = (S.tab || '') + '|' + h.textContent.trim().slice(0, 40);
+    const d = document.createElement('details'); d.className = c.className + ' cl'; d.dataset.k = key; if (c.getAttribute('style')) d.setAttribute('style', c.getAttribute('style'));
+    const sm = document.createElement('summary'), b = document.createElement('b'); b.textContent = h.textContent; sm.appendChild(b);
+    const body = document.createElement('div'); body.className = 'clb'; h.remove(); while (c.firstChild) body.appendChild(c.firstChild);
+    d.appendChild(sm); d.appendChild(body); d.open = S.cl[key] !== undefined ? S.cl[key] : (len < 1400 || !!body.querySelector('input,select,textarea'));
+    d.addEventListener('toggle', () => { S.cl[key] = d.open; });
+    c.replaceWith(d);
+  });
+  const ds = v.querySelectorAll('details.cl');
+  if (ds.length >= 3 && !v.querySelector('.cltool')) { const t = document.createElement('div'); t.className = 'cltool'; t.innerHTML = '<button class="s sm" data-o="1">Buka semua</button><button class="s sm" data-o="0">Tutup semua</button>'; t.querySelectorAll('button').forEach(b => b.onclick = () => v.querySelectorAll('details.cl').forEach(d => { d.open = b.dataset.o === '1'; })); const h2 = v.querySelector('h2'); if (h2) h2.after(t); else v.prepend(t); }
+}
+function paginate(v) {
+  if (!v) return; let n = 0;
+  const targets = [...v.querySelectorAll('table')].filter(t => !t.closest('.prev')).map(t => ({ el: t, rows: () => [...(t.tBodies[0] ? t.tBodies[0].rows : [])], host: t.closest('.tw') || t }))
+    .concat([...v.querySelectorAll('[data-pgl]')].map(el => ({ el, rows: () => [...el.children], host: el, per: +el.dataset.pgl || PER })));
+  targets.forEach(t => {
+    const key = (S.tab || '') + '#' + (n++), per = t.per || PER, rows = t.rows().filter(r => !r.dataset.hide), pages = Math.max(1, Math.ceil(rows.length / per));
+    let bar = t.host.nextElementSibling && t.host.nextElementSibling.classList.contains('pgr') && t.host.nextElementSibling.dataset.k === key ? t.host.nextElementSibling : null;
+    t.rows().forEach(r => { if (r.dataset.hide) r.style.display = 'none'; });
+    if (rows.length <= per) { if (bar) bar.remove(); rows.forEach(r => { r.style.display = ''; }); return; }
+    let p = Math.min(Math.max(S.pg[key] || 1, 1), pages); S.pg[key] = p;
+    rows.forEach((r, i) => { r.style.display = i >= (p - 1) * per && i < p * per ? '' : 'none'; });
+    if (!bar) { bar = document.createElement('div'); bar.className = 'pgr'; bar.dataset.k = key; bar.innerHTML = '<button class="s sm" data-d="-1">‹ Sebelumnya</button><span></span><button class="s sm" data-d="1">Berikutnya ›</button>'; bar.querySelectorAll('button').forEach(b => b.onclick = () => { S.pg[key] = (S.pg[key] || 1) + +b.dataset.d; paginate($('#v')); }); t.host.after(bar); }
+    bar.querySelector('span').textContent = 'Hal ' + p + ' / ' + pages + ' • ' + rows.length + ' data';
+    bar.querySelector('[data-d="-1"]').disabled = p <= 1; bar.querySelector('[data-d="1"]').disabled = p >= pages;
+  });
+}
+function enhance() { const v = $('#v'); if (!v) return; if (S.obs) S.obs.disconnect(); try { autoCollapse(v); paginate(v); } catch (e) { console.error(e); } if (S.obs) S.obs.observe(v, { childList: true, subtree: true }); }
+function watch() { if (S.obs) S.obs.disconnect(); S.obs = new MutationObserver(() => { clearTimeout(S.ot); S.ot = setTimeout(enhance, 40); }); S.obs.observe($('#v'), { childList: true, subtree: true }); setTimeout(enhance, 60); }
+function copyText(t) { try { if (navigator.clipboard && window.isSecureContext) return navigator.clipboard.writeText(t).then(() => toast('Link disalin'), () => fb()); } catch (e) {} return fb(); function fb() { const x = document.createElement('textarea'); x.value = t; x.style.position = 'fixed'; x.style.opacity = '0'; document.body.appendChild(x); x.select(); try { document.execCommand('copy'); toast('Link disalin'); } catch (e) { toast('Gagal menyalin. Salin manual: ' + t, true); } x.remove(); } }
+const liveUrl = a => ((S.d.site.baseUrl || '').replace(/\/$/, '')) + '/artikel/' + a.slug + '/';
+
 const VIEWS = {};
 VIEWS.home = async v => {
   const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
@@ -191,12 +233,14 @@ VIEWS.articles = v => {
   const A = S.d.articles, cnt = k => k === 'all' ? A.length : A.filter(a => a.status === k).length;
   const sched = A.filter(a => a.status === 'scheduled' && a.publishAt).sort((x, y) => Date.parse(x.publishAt) - Date.parse(y.publishAt));
   const rows = A.map((a, i) => ({ a, i })).filter(x => AF === 'all' || x.a.status === AF);
-  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button></div>
+  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button><button class="s" data-go="laporan">Export Laporan</button></div>
 <div class="fl" id="flt">${[['all', 'Semua'], ['draft', 'Draft'], ['ready', 'Siap publish'], ['scheduled', 'Terjadwal'], ['published', 'Terbit']].map(f => `<button class="s sm${AF === f[0] ? ' on' : ''}" data-f="${f[0]}">${f[1]} (${cnt(f[0])})</button>`).join('')}</div>
 ${sched.length ? `<div class="card"><h3>🕒 Jadwal publish</h3>${sched.map(a => `<div class="chk"><i>•</i><div>${E(a.title)}<div class="t">${fmtDT(a.publishAt)}</div></div></div>`).join('')}<p class="muted" style="margin-top:8px">Terbit otomatis pada build pertama setelah waktunya tiba.</p></div>` : ''}
-<div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${rows.map(({ a, i }) => { const r = SEO.scoreArticle(a, A), st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span>${a.status === 'scheduled' && a.publishAt ? ' • ' + fmtDT(a.publishAt) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel di kategori ini</td></tr>'}</tbody></table></div>`;
+<div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${rows.map(({ a, i }) => { const r = SEO.scoreArticle(a, A), st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span>${a.status === 'scheduled' && a.publishAt ? ' • ' + fmtDT(a.publishAt) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'published' ? ` <button class="sm s" data-cp="${i}">Salin link</button>` : ''}${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel di kategori ini</td></tr>'}</tbody></table></div>`;
+  v.querySelectorAll('[data-cp]').forEach(b => b.onclick = () => copyText(liveUrl(A[+b.dataset.cp])));
   v.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { AF = b.dataset.f; VIEWS.articles(v); });
   v.querySelectorAll('[data-p]').forEach(b => b.onclick = async () => { const a = A[+b.dataset.p], r = SEO.scoreArticle(a, A); if (r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (!confirm('Terbitkan "' + a.title + '" sekarang?')) return; a.status = 'published'; a.date = today(); delete a.publishAt; await save('articles', 'Terbitkan: ' + a.title); VIEWS.articles(v); });
+  v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
   $('#new').onclick = () => editArticle(v, { title: '', slug: '', keyword: '', description: '', image: '', imageAlt: '', date: today(), status: 'draft', category: 'Tips EV', body: '**Jawaban singkat:** \n\n## \n\n## \n\n## Pertanyaan yang sering diajukan\n\n### \n\n### \n\n### \n' }, -1);
   v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editArticle(v, JSON.parse(JSON.stringify(A[b.dataset.e])), +b.dataset.e));
   $('#ideas').onclick = () => {
@@ -210,7 +254,7 @@ function editArticle(v, a, idx) {
   const all = () => S.d.articles.filter((_, i) => i !== idx).concat([a]);
   const imgs = (S.media || []).map(m => `<option value="assets/img/${E(m)}">${E(m)}</option>`).join('');
   v.innerHTML = `<h2>${idx < 0 ? 'Artikel baru' : 'Edit artikel'}</h2>
-<div class="card"><label>Judul (30-60 karakter)<input id="f_title" value="${E(a.title)}"></label><div class="muted" id="c_title"></div>
+<div class="card"><h3>Data dan isi artikel</h3><label>Judul (30-60 karakter)<input id="f_title" value="${E(a.title)}"></label><div class="muted" id="c_title"></div>
 <div class="grid"><label>Keyword utama<input id="f_keyword" value="${E(a.keyword)}"></label><label>Slug URL<input id="f_slug" value="${E(a.slug)}"></label></div>
 <label>Meta description (120-160 karakter)<textarea id="f_description" style="min-height:70px;font-family:inherit">${E(a.description)}</textarea></label><div class="muted" id="c_desc"></div>
 <div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>Draft (belum selesai)</option><option value="ready"${a.status === 'ready' ? ' selected' : ''}>Siap publish (menunggu)</option><option value="scheduled"${a.status === 'scheduled' ? ' selected' : ''}>Terjadwal (terbit otomatis)</option><option value="published"${a.status === 'published' ? ' selected' : ''}>Terbit sekarang</option></select></label></div>
@@ -343,6 +387,29 @@ VIEWS.keywords = v => {
   $('#sv').onclick = async () => { v.querySelectorAll('[data-f]').forEach(i => { const k = K[i.dataset.i], f = i.dataset.f; if (f === 'position') { const p = i.value === '' ? null : parseFloat(i.value); if (p !== k.position && p != null) (k.history = k.history || []).push({ date: today(), pos: p }); k.position = p; } else k[f] = i.value; }); await save('keywords', 'Update keyword'); };
 };
 
+
+/* --- Export Laporan: sudah / belum publish --- */
+let LF = 'all';
+VIEWS.laporan = async v => {
+  const A = S.d.articles, base = (S.d.site.baseUrl || '').replace(/\/$/, '');
+  const grp = { published: [], scheduled: [], ready: [], draft: [] }; A.forEach(a => (grp[a.status] || grp.draft).push(a));
+  const unp = A.filter(a => a.status !== 'published'), pub = grp.published;
+  const rows = (LF === 'pub' ? pub : LF === 'unp' ? unp : A).map(a => ({ a, r: SEO.scoreArticle(a, A) }));
+  let nt = null; try { nt = JSON.parse(unb64((await getFile('data/notified.json')).content)); } catch (e) {}
+  const st = a => (ST[a.status] || [a.status])[0], when = a => a.status === 'scheduled' && a.publishAt ? fmtDT(a.publishAt) : (a.status === 'published' ? a.date : '-');
+  v.innerHTML = `<h2>Export Laporan</h2><div class="grid"><div class="card"><div class="muted">Sudah publish</div><div class="score A">${pub.length}</div></div><div class="card"><div class="muted">Belum publish</div><div class="score C">${unp.length}</div><div class="muted">${grp.scheduled.length} terjadwal • ${grp.ready.length} siap • ${grp.draft.length} draft</div></div></div>
+<div class="fl">${[['all', 'Semua (' + A.length + ')'], ['pub', 'Sudah publish (' + pub.length + ')'], ['unp', 'Belum publish (' + unp.length + ')']].map(f => `<button class="s sm${LF === f[0] ? ' on' : ''}" data-lf="${f[0]}">${f[1]}</button>`).join('')}</div>
+<div class="row"><button id="csv">⬇ Export CSV</button><button class="s" id="cpall">Salin ringkasan teks</button></div>
+<div class="card"><h3>Telegram dan Google Sheets (otomatis)</h3><p class="muted">Tiap artikel terbit, laporan dikirim ke Telegram dan dicatat di Google Sheets oleh GitHub Actions. ${nt && nt.lastSent ? 'Terakhir terkirim: <b>' + fmtDT(nt.lastSent) + '</b>.' : 'Belum ada kiriman tercatat.'} ${nt && nt.sheetUrl ? `<a href="${E(nt.sheetUrl)}" target="_blank" rel="noopener" style="color:var(--ac)">Buka Google Sheets</a>` : ''}</p><div class="row"><button class="s" id="sendrep">Kirim laporan lengkap sekarang</button></div><p class="muted" style="margin-top:8px">Butuh pengaturan sekali saja (lihat PANDUAN_TELEGRAM_SHEETS.md). Tombol ini menjalankan build, lalu laporan lengkap masuk ke Telegram dan Sheets dalam ±2 menit.</p></div>
+<div class="card tw"><table><thead><tr><th>Artikel</th><th>Status</th><th>Skor</th><th></th></tr></thead><tbody>${rows.map(({ a, r }, i) => `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • ${E(when(a))}</div></td><td><span class="pill ${(ST[a.status] || ['', 'warn'])[1]}">${st(a)}</span></td><td>${sc(r.score)}</td><td><button class="sm s" data-cl="${E(a.slug)}">Salin link</button></td></tr>`).join('') || '<tr><td colspan=4>Tidak ada data</td></tr>'}</tbody></table></div>`;
+  v.querySelectorAll('[data-lf]').forEach(b => b.onclick = () => { LF = b.dataset.lf; S.pg[S.tab + '#0'] = 1; VIEWS.laporan(v); });
+  v.querySelectorAll('[data-cl]').forEach(b => b.onclick = () => copyText(base + '/artikel/' + b.dataset.cl + '/'));
+  const csvq = x => '"' + String(x == null ? '' : x).replace(/"/g, '""') + '"';
+  $('#csv').onclick = () => { const head = ['Judul', 'Keyword', 'Status', 'Tanggal/Jadwal', 'Skor SEO', 'Link']; const lines = [head.map(csvq).join(',')].concat(rows.map(({ a, r }) => [a.title, a.keyword, st(a), when(a), r.score, base + '/artikel/' + a.slug + '/'].map(csvq).join(','))); const blob = new Blob(['﻿' + lines.join('\n')], { type: 'text/csv;charset=utf-8' }); const l = document.createElement('a'); l.href = URL.createObjectURL(blob); l.download = 'laporan-artikel-' + today() + (LF === 'pub' ? '-publish' : LF === 'unp' ? '-belum-publish' : '') + '.csv'; document.body.appendChild(l); l.click(); l.remove(); toast('CSV diunduh'); };
+  $('#cpall').onclick = () => { const f = (t, a) => a.length ? t + ' (' + a.length + ')\n' + a.map((x, i) => (i + 1) + '. ' + x.title + (x.status === 'scheduled' && x.publishAt ? ' [' + fmtDT(x.publishAt) + ']' : '') + (x.status === 'published' ? '\n   ' + base + '/artikel/' + x.slug + '/' : '')).join('\n') + '\n\n' : ''; copyText('LAPORAN ARTIKEL XPENG ' + today() + '\n\n' + f('SUDAH PUBLISH', pub) + f('TERJADWAL', grp.scheduled) + f('SIAP PUBLISH', grp.ready) + f('DRAFT', grp.draft)); };
+  $('#sendrep').onclick = async () => { try { await gh('actions/workflows/build.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.cfg.branch, inputs: { report: 'yes' } }) }); toast('Laporan dijalankan. Cek Telegram dalam ±2 menit.'); } catch (e) { toast('Gagal: ' + e.message + ' (pastikan build.yml terbaru sudah ditempel)', true); } };
+};
+
 /* --- Laporan SEO --- */
 VIEWS.seo = async v => {
   v.innerHTML = '<h2>Laporan SEO</h2><p class="muted">Memuat…</p>'; const r = await loadReport(); let hist = []; try { hist = JSON.parse(unb64((await getFile('data/seo-history.json')).content)); } catch (e) {}
@@ -383,8 +450,8 @@ VIEWS.ranking = async v => {
   v.innerHTML = `<h2>Ranking Google</h2><div class="card"><p class="muted">Periode ${g.period[0]} s/d ${g.period[1]}, dibanding 28 hari sebelumnya. Data Google tertunda ±3 hari. Diperbarui ${new Date(g.generated).toLocaleString('id-ID')}.</p>
 <div class="chk"><b>Klik dari Google: ${t.clicks}${d(t.clicks, pt.clicks)}</b></div><div class="chk"><b>Tayang di hasil pencarian: ${t.impr}${d(t.impr, pt.impr)}</b></div><div class="chk"><div><b>Posisi rata-rata: ${t.pos}${d(t.pos, pt.pos, true)}</b><div class="muted">Makin kecil makin bagus (1 = paling atas).</div></div></div>
 ${blk('Hampir halaman 1: perkuat halaman ini', near, 'Belum ada. Biasanya muncul setelah situs lebih lama dikenal Google.')}${blk('Sering muncul tapi jarang diklik: perbaiki judul dan deskripsi', low, 'Belum ada.')}${blk('Dua halaman bersaing untuk kata yang sama', dup, 'Tidak ada. Bagus.')}
-<h3>Semua kata kunci dan peringkatnya (${L.length})</h3><p class="muted">Posisi 1-10 hijau (halaman 1 Google), 11-20 kuning (halaman 2), di atas 20 merah.</p><input id="gq" placeholder="Cari kata kunci..." style="margin:8px 0"><div id="gl">${list(L)}</div></div>`;
-  $('#gq').oninput = e => { const q = e.target.value.toLowerCase(); v.querySelectorAll('#gl [data-q]').forEach(r => r.style.display = r.dataset.q.includes(q) ? '' : 'none'); };
+<h3>Semua kata kunci dan peringkatnya (${L.length})</h3><p class="muted">Posisi 1-10 hijau (halaman 1 Google), 11-20 kuning (halaman 2), di atas 20 merah.</p><input id="gq" placeholder="Cari kata kunci..." style="margin:8px 0"><div id="gl" data-pgl="15">${list(L)}</div></div>`;
+  $('#gq').oninput = e => { const q = e.target.value.toLowerCase(); v.querySelectorAll('#gl [data-q]').forEach(r => { if (r.dataset.q.includes(q)) delete r.dataset.hide; else r.dataset.hide = '1'; }); S.pg[S.tab + '#' + [...v.querySelectorAll('table,[data-pgl]')].indexOf($('#gl'))] = 1; enhance(); };
 };
 
 /* --- Backlink aman --- */
@@ -419,7 +486,7 @@ VIEWS.media = async v => {
 <div class="card"><h3>Upload foto (otomatis dikecilkan ke WebP)</h3><input type="file" id="fi" accept="image/*" multiple><label style="margin-top:10px">Lebar maksimal (px)<select id="mx"><option>1200</option><option selected>1600</option><option>1920</option></select></label><button id="up">Upload foto</button><div id="st" class="muted"></div></div>
 <div class="card"><h3>ZIP ke folder tertentu (lanjutan)</h3><p class="muted">ZIP akan diekstrak otomatis oleh GitHub (menu Actions), gambar otomatis dikecilkan. Pilihan lokasi di dalam ZIP: <b>assets/img/</b> bila ZIP berisi foto.</p><label>Lokasi tujuan ekstrak<input id="zd" value="assets/img"></label><input type="file" id="zf" accept=".zip"><div class="row" style="margin-top:10px"><button id="zu">Upload ZIP (ekstrak oleh GitHub)</button></div><div id="zs" class="muted"></div></div>
 <div class="card"><h3>Upload file apa saja ke repo</h3><label>Folder tujuan<input id="pd" value="assets/files"></label><input type="file" id="pf" multiple><button id="pu" style="margin-top:10px">Upload</button></div>
-<div class="card"><h3>Galeri (<span id="cnt">0</span>)</h3><div class="thumbs" id="th"></div></div>`;
+<div class="card"><h3>Galeri (<span id="cnt">0</span>)</h3><div class="thumbs" id="th" data-pgl="12"></div></div>`;
   const runs = runsWidget($('#runbox2')); let zrep = null;
   $('#rzf').onchange = async () => { const f = $('#rzf').files[0], P = $('#rzp'); zrep = null; P.innerHTML = ''; if (!f) return; try { const names = await zipNames(f); if (!names) { P.textContent = 'ZIP besar: daftar isi tidak bisa ditampilkan, tetap bisa diupload.'; return; } zrep = zipReport(names); P.innerHTML = `<b>${zrep.count} file</b> • folder: ${E(Object.entries(zrep.tops).map(([k, n]) => k + ' (' + n + ')').join(', '))}${zrep.warn.map(w => `<div>${E(w)}</div>`).join('')}`; } catch (e) { P.textContent = e.message; } };
   $('#rzu').onclick = async () => { const f = $('#rzf').files[0]; if (!f) return toast('Pilih file ZIP dulu', true); if (f.size > 70 * 1024 * 1024) return toast('ZIP maksimal ±70MB. Pecah jadi beberapa ZIP.', true);
