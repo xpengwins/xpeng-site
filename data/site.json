@@ -9,9 +9,9 @@
  "tagline": "Mobil Listrik Premium. Cerdas, Senyap, Berkelas.",
  "description": "Harga, spesifikasi, dan test drive XPeng X9 dan G6 di Indonesia. Pricelist terbaru Juli 2026 dan konsultasi langsung via WhatsApp.",
  "pricelistUpdate": "Juli 2026",
- "instagram": "",
- "tiktok": "",
- "youtube": "",
+ "instagram": "XPengwins",
+ "tiktok": "xpengwins",
+ "youtube": "xpengwins",
  "backlinkSites": [
   {
    "name": "geelywins.com",
@@ -39,5 +39,5 @@
   "repo": "xpeng-site",
   "branch": "main"
  },
- "facebook": ""
+ "facebook": "xpengwins"
 }
