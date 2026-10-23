@@ -90,7 +90,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -522,6 +522,57 @@ VIEWS.settings = v => {
   const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube'], ['facebook', 'URL Facebook']];
   v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
   $('#sv').onclick = async () => { v.querySelectorAll('[data-k]').forEach(i => s[i.dataset.k] = i.value.trim()); s.whatsapp = s.whatsapp.replace(/\D/g, ''); s.backlinkSites = lines($('#bls').value).map(l => { const p = l.split('|'); return { name: p[0], url: p[1] || '', status: p[2] || 'aktif' }; }); s.github = { owner: S.cfg.owner, repo: S.cfg.repo, branch: S.cfg.branch }; await save('site', 'Pengaturan'); };
+};
+
+/* --- Sosmed: posting otomatis dan manual ke Facebook, Instagram, Threads, Telegram --- */
+const SOC = { facebook: ['Facebook', '📘'], instagram: ['Instagram', '📸'], threads: ['Threads', '🧵'], telegram: ['Telegram', '✈️'] };
+async function rj(n, d) { try { const j = await getFile('data/' + n + '.json'); return JSON.parse(unb64(j.content)); } catch (e) { return d; } }
+VIEWS.social = async v => {
+  v.innerHTML = '<h2>Sosmed</h2><p class="muted">Memuat…</p>';
+  const [c0, posted, log, status, queue] = await Promise.all([rj('social', {}), rj('social-posted', {}), rj('social-log', []), rj('social-status', {}), rj('social-queue', [])]);
+  const cfg = { auto: false, maxAgeDays: 3, maxPerRun: 2, hashtags: '#XPeng #MobilListrik #XPengIndonesia', ...c0 }; cfg.platforms = { facebook: true, instagram: true, threads: true, ...(c0.platforms || {}) };
+  const ready = status.ready || null, ttl = s => { const a = (S.d.articles || []).find(x => x.slug === s); return a ? a.title : s; };
+  const pub = (S.d.articles || []).filter(a => a.status === 'published').sort((x, y) => (x.date < y.date ? 1 : -1));
+  const guide = 'https://github.com/' + S.cfg.owner + '/' + S.cfg.repo + '/blob/' + S.cfg.branch + '/docs/panduan-posting-sosmed.md';
+  const cb = (id, label, on, extra) => `<label style="display:flex;gap:8px;align-items:center;margin:0 0 6px;color:var(--tx)"><input type="checkbox" ${id} ${on ? 'checked' : ''} style="width:20px;min-height:20px;flex:none">${label}${extra || ''}</label>`;
+  const row = a => { const r = posted[a.slug] || {}; return `<div class="chk" style="align-items:center"><div style="flex:1"><b style="font-weight:500">${E(a.title)}</b><div class="t">${Object.keys(SOC).map(p => r[p] ? `<span class="pill ok" title="${E(fmtDT(r[p].at))}">${SOC[p][1]} ✓</span>` : `<span class="pill">${SOC[p][1]} –</span>`).join(' ')}</div></div><button class="sm" data-post="${E(a.slug)}">📣 Posting</button></div>`; };
+  let lim = 10;
+  const draw = () => {
+    v.innerHTML = `<h2>Sosmed</h2>
+<div class="card"><h3>Status koneksi</h3>${ready ? Object.keys(SOC).map(p => `<div class="chk"><i>${SOC[p][1]}</i><div>${SOC[p][0]} <span class="pill ${ready[p] ? 'ok' : 'warn'}">${ready[p] ? 'Terhubung' : 'Belum diisi'}</span>${ready[p] ? '' : '<div class="t">Token belum dipasang di GitHub Secrets.</div>'}</div></div>`).join('') : '<p class="muted">Belum dicek. Jalankan workflow sekali (tombol di bawah) lalu buka halaman ini lagi.</p>'}
+<p class="muted" style="margin-top:10px">Telegram: pengumuman artikel baru sudah otomatis lewat laporan. Tombol di bawah hanya untuk kirim ulang.</p><a class="btn s sm" href="${E(guide)}" target="_blank" rel="noopener" style="margin-top:6px">📖 Panduan memasang token</a></div>
+<div class="card"><h3>Posting otomatis</h3><label>Saat artikel baru terbit<select id="sc-auto"><option value="0"${cfg.auto ? '' : ' selected'}>Mati (hanya manual)</option><option value="1"${cfg.auto ? ' selected' : ''}>Aktif (posting otomatis)</option></select></label>
+${['facebook', 'instagram', 'threads'].map(p => cb('data-ap="' + p + '"', SOC[p][1] + ' ' + SOC[p][0], cfg.platforms[p])).join('')}
+<div class="grid" style="margin-top:10px"><label>Hanya artikel terbit dalam (hari)<input id="sc-age" type="number" min="1" max="14" value="${cfg.maxAgeDays}"></label><label>Maks. artikel per jam<input id="sc-max" type="number" min="1" max="5" value="${cfg.maxPerRun}"></label></div>
+<label>Hashtag<input id="sc-tags" value="${E(cfg.hashtags)}"></label><button id="sc-save">Simpan pengaturan</button><p class="muted" style="margin-top:8px">Platform yang tokennya belum diisi dilewati otomatis. Artikel lama tidak ikut diposting (hanya yang terbit dalam batas hari di atas).</p></div>
+<div class="card"><h3>Posting manual</h3><p class="muted">Pilih platform, lalu ketuk Posting pada artikel. Hasil muncul di Riwayat ±3–8 menit.</p>
+<div style="margin:8px 0 12px">${Object.keys(SOC).map(p => cb('data-p="' + p + '"', SOC[p][1] + ' ' + SOC[p][0], p !== 'telegram')).join('')}</div>
+${queue.length ? `<p class="pill warn">Antrean: ${queue.length} artikel menunggu workflow</p>` : ''}
+${pub.slice(0, lim).map(row).join('') || '<p class="muted">Belum ada artikel terbit.</p>'}${pub.length > lim ? '<button class="s" id="more" style="width:100%;margin-top:10px">Tampilkan lebih banyak</button>' : ''}</div>
+<div class="card"><h3>Proses workflow</h3><div id="runbox"></div></div>
+<div class="card"><h3>Riwayat posting</h3>${log.length ? log.slice(0, 15).map(l => `<div class="chk"><i>${l.ok ? '✅' : '❌'}</i><div>${E((SOC[l.platform] || [l.platform])[0])} • ${E(ttl(l.slug))}<div class="t">${E(fmtDT(l.at))}${l.msg ? ' • ' + E(l.msg) : ''}</div></div></div>`).join('') : '<p class="muted">Belum ada riwayat.</p>'}</div>`;
+    runsWidget($('#runbox'));
+    $('#sc-save').onclick = async () => {
+      const c = { auto: $('#sc-auto').value === '1', platforms: {}, maxAgeDays: Math.max(1, Math.min(14, +$('#sc-age').value || 3)), maxPerRun: Math.max(1, Math.min(5, +$('#sc-max').value || 2)), hashtags: $('#sc-tags').value.trim() };
+      v.querySelectorAll('[data-ap]').forEach(i => c.platforms[i.dataset.ap] = i.checked);
+      try { await putFile('data/social.json', b64(JSON.stringify(c, null, 1)), 'Pengaturan sosmed via admin'); Object.assign(cfg, c); toast('Pengaturan tersimpan.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); }
+    };
+    if ($('#more')) $('#more').onclick = () => { lim += 10; draw(); };
+    v.querySelectorAll('[data-post]').forEach(b => b.onclick = async () => {
+      const slug = b.dataset.post, plats = [...v.querySelectorAll('[data-p]:checked')].map(i => i.dataset.p);
+      if (!plats.length) return toast('Pilih minimal satu platform.', true);
+      const done = plats.filter(p => posted[slug] && posted[slug][p]);
+      if (done.length && !confirm('Sudah pernah diposting ke ' + done.map(p => SOC[p][0]).join(', ') + '. Posting ulang?')) return;
+      b.disabled = true;
+      try {
+        const q = await rj('social-queue', []); q.push({ slug, platforms: plats, force: done.length > 0, at: new Date().toISOString() });
+        await putFile('data/social-queue.json', b64(JSON.stringify(q, null, 1)), 'Antrean posting sosmed: ' + slug);
+        toast('Masuk antrean. Workflow berjalan otomatis, cek Riwayat ±3–8 menit.'); queue.push({ slug }); draw(); return;
+      } catch (e) { toast('Gagal: ' + e.message + ' (token perlu izin Contents: Read and write)', true); }
+      b.disabled = false;
+    });
+  };
+  draw();
 };
 
 boot();
