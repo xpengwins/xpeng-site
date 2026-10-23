@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-23T08:38:59.769Z",
+ "date": "2026-10-23T18:19:02.030Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -26,16 +26,6 @@
      "name": "LapakMu.store",
      "url": "https://lapakmu.store",
      "status": "aktif"
-    },
-    {
-     "name": "Domain baru 1",
-     "url": "",
-     "status": "belum dibuat"
-    },
-    {
-     "name": "Domain baru 2",
-     "url": "",
-     "status": "belum dibuat"
     }
    ],
    "github": {
