@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-23T18:19:02.030Z",
+ "date": "2026-10-23T18:23:27.841Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -13,9 +13,9 @@
    "tagline": "Mobil Listrik Premium. Cerdas, Senyap, Berkelas.",
    "description": "Harga, spesifikasi, dan test drive XPeng X9 dan G6 di Indonesia. Pricelist terbaru Juli 2026 dan konsultasi langsung via WhatsApp.",
    "pricelistUpdate": "Juli 2026",
-   "instagram": "XPengwins",
-   "tiktok": "xpengwins",
-   "youtube": "xpengwins",
+   "instagram": "https://www.instagram.com/xpengwins?mdxt=MXZkc2VucmZ5bHRraA==",
+   "tiktok": "https://www.tiktok.com/@xpengwins?_r=1&_t=ZS-9AnlCGfD0IG",
+   "youtube": "https://youtube.com/@xpengwins?si=-3rBrDM9aKOfuWLZ",
    "backlinkSites": [
     {
      "name": "geelywins.com",
@@ -33,7 +33,7 @@
     "repo": "xpeng-site",
     "branch": "main"
    },
-   "facebook": "xpengwins"
+   "facebook": "https://www.facebook.com/share/1EDphzUCPP/"
   },
   "models": [
    {
