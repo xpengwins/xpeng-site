@@ -1,1 +1,23 @@
-[]
+[
+ {
+  "at": "2026-10-23T06:24:15.841Z",
+  "slug": "mpv-listrik-terbaik-indonesia",
+  "platform": "threads",
+  "ok": false,
+  "msg": "secret Threads belum diisi di GitHub"
+ },
+ {
+  "at": "2026-10-23T06:24:15.841Z",
+  "slug": "mpv-listrik-terbaik-indonesia",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "secret Instagram belum diisi di GitHub"
+ },
+ {
+  "at": "2026-10-23T06:24:15.840Z",
+  "slug": "mpv-listrik-terbaik-indonesia",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "secret Facebook belum diisi di GitHub"
+ }
+]
