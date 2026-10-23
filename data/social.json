@@ -1,6 +1,10 @@
 {
  "auto": false,
- "platforms": { "facebook": true, "instagram": true, "threads": true },
+ "platforms": {
+  "facebook": true,
+  "instagram": true,
+  "threads": true
+ },
  "maxAgeDays": 3,
  "maxPerRun": 2,
  "hashtags": "#XPeng #MobilListrik #XPengIndonesia"
