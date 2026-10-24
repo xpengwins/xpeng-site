@@ -1,16 +1,18 @@
 {
- "at": "2026-10-24T16:46:01.736Z",
+ "at": "2026-10-24T17:37:41.489Z",
  "ready": {
   "facebook": true,
   "instagram": true,
-  "threads": false,
+  "threads": true,
   "telegram": true
  },
  "info": {
   "facebook": "XPeng Wins Indonesia",
   "instagram": "@xpengwins",
+  "threads": "@xpengwins",
   "telegram": "@xpengwins_bot"
  },
  "err": {},
- "warnDay": ""
+ "warnDay": "",
+ "threadsLeft": 61
 }
