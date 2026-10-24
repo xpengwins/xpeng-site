@@ -1,9 +1,14 @@
 {
- "at": "2026-10-23T05:42:19.435Z",
+ "at": "2026-10-24T07:45:55.391Z",
  "ready": {
   "facebook": false,
   "instagram": false,
   "threads": false,
   "telegram": true
- }
+ },
+ "info": {
+  "telegram": "@xpengwins_bot"
+ },
+ "err": {},
+ "warnDay": ""
 }
