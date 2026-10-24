@@ -11,6 +11,10 @@ on:
         description: 'Kirim laporan lengkap ke Telegram dan Google Sheets (yes/no)'
         required: false
         default: 'no'
+      cek_sosmed:
+        description: 'Tes koneksi Facebook, Instagram, Threads, Telegram (yes/no)'
+        required: false
+        default: 'no'
 permissions:
   contents: write
 concurrency:
@@ -102,6 +106,7 @@ jobs:
           THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          SOCIAL_CHECK: ${{ github.event.inputs.cek_sosmed }}
         run: |
           git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
           git pull --rebase -q

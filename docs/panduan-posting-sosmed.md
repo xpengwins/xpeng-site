@@ -59,7 +59,9 @@ Nama menu di Meta sering berubah. Jika namanya sedikit berbeda, cari yang paling
 
 > **Token Threads kedaluwarsa tiap 60 hari.** Perpanjang sebelum itu (setelah umur token lebih dari 24 jam) dengan membuka:
 > `https://graph.threads.net/refresh_access_token?grant_type=th_refresh_token&access_token=THREADS_TOKEN`
-> lalu ganti isi secret `THREADS_TOKEN` dengan token baru. Pasang pengingat kalender tiap 50 hari.
+> lalu ganti isi secret `THREADS_TOKEN` dengan token baru.
+>
+> Supaya tidak lupa: isi **tanggal token dibuat/diperpanjang** di Admin, Sosmed. Admin menampilkan sisa harinya, dan Telegram mengirim peringatan (sekali sehari) saat sisa 10 hari atau kurang.
 
 ## Langkah 4. Simpan ke GitHub Secrets
 
@@ -77,9 +79,10 @@ Repo `xpeng-site`, **Settings, Secrets and variables, Actions, New repository se
 
 ## Langkah 5. Coba
 
-1. Admin, **Lainnya, Sosmed**, ketuk **Posting** pada satu artikel (pilih satu platform dulu).
-2. Tunggu 3 sampai 8 menit. Hasilnya muncul di **Riwayat posting**. Status koneksi di bagian atas halaman juga akan berubah menjadi **Terhubung**.
-3. Jika berhasil, aktifkan **Posting otomatis** dan simpan.
+1. Admin, **Lainnya, Sosmed**, ketuk **Tes koneksi sekarang**. Tunggu ±3 menit, buka ulang halaman. Tiap platform harus tampil **Terhubung** beserta nama akunnya. Jika **Token bermasalah**, pesan di bawahnya menjelaskan sebabnya (misalnya token kedaluwarsa atau `THREADS_USER_ID` salah).
+2. Ketuk **Posting** pada satu artikel (pilih satu platform dulu).
+3. Tunggu 3 sampai 8 menit. Hasilnya muncul di **Riwayat posting**. Status koneksi di bagian atas halaman juga akan berubah menjadi **Terhubung**.
+4. Jika berhasil, aktifkan **Posting otomatis** dan simpan.
 
 ## Cara kerja singkat
 

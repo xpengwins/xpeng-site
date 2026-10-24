@@ -532,6 +532,7 @@ VIEWS.social = async v => {
   const [c0, posted, log, status, queue] = await Promise.all([rj('social', {}), rj('social-posted', {}), rj('social-log', []), rj('social-status', {}), rj('social-queue', [])]);
   const cfg = { auto: false, maxAgeDays: 3, maxPerRun: 2, hashtags: '#XPeng #MobilListrik #XPengIndonesia', ...c0 }; cfg.platforms = { facebook: true, instagram: true, threads: true, ...(c0.platforms || {}) };
   const ready = status.ready || null, ttl = s => { const a = (S.d.articles || []).find(x => x.slug === s); return a ? a.title : s; };
+  const thLeft = Math.ceil((Date.parse(cfg.threadsTokenDate) + 60 * 864e5 - Date.now()) / 864e5);
   const pub = (S.d.articles || []).filter(a => a.status === 'published').sort((x, y) => (x.date < y.date ? 1 : -1));
   const guide = 'https://github.com/' + S.cfg.owner + '/' + S.cfg.repo + '/blob/' + S.cfg.branch + '/docs/panduan-posting-sosmed.md';
   const cb = (id, label, on, extra) => `<label style="display:flex;gap:8px;align-items:center;margin:0 0 6px;color:var(--tx)"><input type="checkbox" ${id} ${on ? 'checked' : ''} style="width:20px;min-height:20px;flex:none">${label}${extra || ''}</label>`;
@@ -539,12 +540,14 @@ VIEWS.social = async v => {
   let lim = 10;
   const draw = () => {
     v.innerHTML = `<h2>Sosmed</h2>
-<div class="card"><h3>Status koneksi</h3>${ready ? Object.keys(SOC).map(p => `<div class="chk"><i>${SOC[p][1]}</i><div>${SOC[p][0]} <span class="pill ${ready[p] ? 'ok' : 'warn'}">${ready[p] ? 'Terhubung' : 'Belum diisi'}</span>${ready[p] ? '' : '<div class="t">Token belum dipasang di GitHub Secrets.</div>'}</div></div>`).join('') : '<p class="muted">Belum dicek. Jalankan workflow sekali (tombol di bawah) lalu buka halaman ini lagi.</p>'}
+<div class="card"><h3>Status koneksi</h3>${ready ? Object.keys(SOC).map(p => { const inf = (status.info || {})[p], er = (status.err || {})[p]; return `<div class="chk"><i>${SOC[p][1]}</i><div>${SOC[p][0]} <span class="pill ${er ? 'bad' : inf ? 'ok' : ready[p] ? 'warn' : ''}">${er ? 'Token bermasalah' : inf ? 'Terhubung' : ready[p] ? 'Diisi, belum dites' : 'Belum diisi'}</span><div class="t">${E(er || (inf ? 'Akun: ' + inf : ready[p] ? 'Tekan Tes koneksi.' : 'Token belum dipasang di GitHub Secrets.'))}</div></div></div>`; }).join('') : '<p class="muted">Belum dicek. Tekan Tes koneksi di bawah.</p>'}
+${status.at ? `<p class="muted">Dicek terakhir: ${E(fmtDT(status.at))}</p>` : ''}<button class="s sm" id="sc-test">🔍 Tes koneksi sekarang</button>
 <p class="muted" style="margin-top:10px">Telegram: pengumuman artikel baru sudah otomatis lewat laporan. Tombol di bawah hanya untuk kirim ulang.</p><a class="btn s sm" href="${E(guide)}" target="_blank" rel="noopener" style="margin-top:6px">📖 Panduan memasang token</a></div>
 <div class="card"><h3>Posting otomatis</h3><label>Saat artikel baru terbit<select id="sc-auto"><option value="0"${cfg.auto ? '' : ' selected'}>Mati (hanya manual)</option><option value="1"${cfg.auto ? ' selected' : ''}>Aktif (posting otomatis)</option></select></label>
 ${['facebook', 'instagram', 'threads'].map(p => cb('data-ap="' + p + '"', SOC[p][1] + ' ' + SOC[p][0], cfg.platforms[p])).join('')}
 <div class="grid" style="margin-top:10px"><label>Hanya artikel terbit dalam (hari)<input id="sc-age" type="number" min="1" max="14" value="${cfg.maxAgeDays}"></label><label>Maks. artikel per jam<input id="sc-max" type="number" min="1" max="5" value="${cfg.maxPerRun}"></label></div>
-<label>Hashtag<input id="sc-tags" value="${E(cfg.hashtags)}"></label><button id="sc-save">Simpan pengaturan</button><p class="muted" style="margin-top:8px">Platform yang tokennya belum diisi dilewati otomatis. Artikel lama tidak ikut diposting (hanya yang terbit dalam batas hari di atas).</p></div>
+<label>Hashtag<input id="sc-tags" value="${E(cfg.hashtags)}"></label>
+<label>Tanggal token Threads dibuat/diperpanjang (token berlaku 60 hari)<input id="sc-thd" type="date" value="${E(cfg.threadsTokenDate || '')}"></label>${cfg.threadsTokenDate && isFinite(thLeft) ? `<p class="pill ${thLeft <= 10 ? 'bad' : 'ok'}" style="margin:-6px 0 12px">Token Threads: ${thLeft > 0 ? 'sisa ' + thLeft + ' hari' : 'SUDAH KEDALUWARSA'}</p>` : ''}<button id="sc-save">Simpan pengaturan</button><p class="muted" style="margin-top:8px">Platform yang tokennya belum diisi dilewati otomatis. Artikel lama tidak ikut diposting (hanya yang terbit dalam batas hari di atas).</p></div>
 <div class="card"><h3>Posting manual</h3><p class="muted">Pilih platform, lalu ketuk Posting pada artikel. Hasil muncul di Riwayat ±3–8 menit.</p>
 <div style="margin:8px 0 12px">${Object.keys(SOC).map(p => cb('data-p="' + p + '"', SOC[p][1] + ' ' + SOC[p][0], p !== 'telegram')).join('')}</div>
 ${queue.length ? `<p class="pill warn">Antrean: ${queue.length} artikel menunggu workflow</p>` : ''}
@@ -552,8 +555,9 @@ ${pub.slice(0, lim).map(row).join('') || '<p class="muted">Belum ada artikel ter
 <div class="card"><h3>Proses workflow</h3><div id="runbox"></div></div>
 <div class="card"><h3>Riwayat posting</h3>${log.length ? log.slice(0, 15).map(l => `<div class="chk"><i>${l.ok ? '✅' : '❌'}</i><div>${E((SOC[l.platform] || [l.platform])[0])} • ${E(ttl(l.slug))}<div class="t">${E(fmtDT(l.at))}${l.msg ? ' • ' + E(l.msg) : ''}</div></div></div>`).join('') : '<p class="muted">Belum ada riwayat.</p>'}</div>`;
     runsWidget($('#runbox'));
+    $('#sc-test').onclick = async () => { try { await gh('actions/workflows/build.yml/dispatches', { method: 'POST', body: JSON.stringify({ ref: S.cfg.branch, inputs: { cek_sosmed: 'yes' } }) }); toast('Tes dijalankan. Buka ulang halaman ini ±3 menit lagi.'); } catch (e) { toast('Gagal: ' + e.message + ' (token perlu izin Actions: Read and write)', true); } };
     $('#sc-save').onclick = async () => {
-      const c = { auto: $('#sc-auto').value === '1', platforms: {}, maxAgeDays: Math.max(1, Math.min(14, +$('#sc-age').value || 3)), maxPerRun: Math.max(1, Math.min(5, +$('#sc-max').value || 2)), hashtags: $('#sc-tags').value.trim() };
+      const c = { auto: $('#sc-auto').value === '1', platforms: {}, maxAgeDays: Math.max(1, Math.min(14, +$('#sc-age').value || 3)), maxPerRun: Math.max(1, Math.min(5, +$('#sc-max').value || 2)), hashtags: $('#sc-tags').value.trim(), threadsTokenDate: $('#sc-thd').value || '' };
       v.querySelectorAll('[data-ap]').forEach(i => c.platforms[i.dataset.ap] = i.checked);
       try { await putFile('data/social.json', b64(JSON.stringify(c, null, 1)), 'Pengaturan sosmed via admin'); Object.assign(cfg, c); toast('Pengaturan tersimpan.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); }
     };

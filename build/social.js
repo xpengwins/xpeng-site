@@ -11,6 +11,7 @@ const FB = { id: E.FB_PAGE_ID, tok: E.FB_PAGE_TOKEN };
 const IG = { id: E.IG_USER_ID, tok: E.IG_TOKEN || E.FB_PAGE_TOKEN };
 const TH = { id: E.THREADS_USER_ID, tok: E.THREADS_TOKEN };
 const TG = { tok: E.TELEGRAM_BOT_TOKEN, chat: E.TELEGRAM_CHAT_ID };
+const CHECK = /^(yes|1|true)$/i.test(E.SOCIAL_CHECK || '');
 const READY = { facebook: !!(FB.id && FB.tok), instagram: !!(IG.id && IG.tok), threads: !!(TH.id && TH.tok), telegram: !!(TG.tok && TG.chat) };
 const ALL = ['facebook', 'instagram', 'threads', 'telegram'], AUTO = ['facebook', 'instagram', 'threads'];
 const NAME = { facebook: 'Facebook', instagram: 'Instagram', threads: 'Threads', telegram: 'Telegram' };
@@ -105,6 +106,45 @@ const SEND = {
   telegram: async (a, c) => { const r = await api(TGAPI + '/bot' + TG.tok + '/sendMessage', { chat_id: TG.chat, text: c.t.tg.slice(0, 4000), parse_mode: 'HTML', disable_web_page_preview: 'false' }); return String(r.result && r.result.message_id || ''); }
 };
 
+/* ---------- tes koneksi sungguhan (nama akun terbaca = token benar) ---------- */
+async function checkAll(st, cfg) {
+  const info = {}, err = {};
+  const T = async (p, fn) => { if (!READY[p]) return; try { info[p] = await fn(); } catch (e) { err[p] = scrub(e.message).slice(0, 160); } };
+  if (!DRY) {
+    await T('facebook', async () => (await api(GRAPH + '/' + FB.id, { fields: 'name', access_token: FB.tok }, 'GET')).name || 'Page');
+    await T('instagram', async () => '@' + ((await api(GRAPH + '/' + IG.id, { fields: 'username', access_token: IG.tok }, 'GET')).username || 'akun'));
+    await T('threads', async () => { const m = await api(THR + '/me', { fields: 'id,username', access_token: TH.tok }, 'GET'); if (m.id && String(m.id) !== String(TH.id)) throw new Error('THREADS_USER_ID tidak cocok dengan pemilik token'); return '@' + (m.username || 'akun'); });
+    await T('telegram', async () => '@' + ((await api(TGAPI + '/bot' + TG.tok + '/getMe', {}, 'GET')).result || {}).username);
+  }
+  const out = { at: new Date().toISOString(), ready: READY, info, err, warnDay: st.warnDay || '' };
+  // peringatan token Threads (umur 60 hari), maksimal sekali sehari lewat Telegram
+  if (cfg.threadsTokenDate && READY.threads) {
+    const left = Math.ceil((Date.parse(cfg.threadsTokenDate) + 60 * 864e5 - Date.now()) / 864e5), day = new Date().toISOString().slice(0, 10);
+    if (isFinite(left)) {
+      out.threadsLeft = left;
+      if (left <= 10 && READY.telegram && out.warnDay !== day && !DRY) {
+        try {
+          await SEND.telegram(null, { t: { tg: '⚠️ <b>Token Threads XPeng ' + (left > 0 ? 'kedaluwarsa dalam ' + left + ' hari' : left === 0 ? 'kedaluwarsa hari ini' : 'sudah kedaluwarsa') + '</b>\n\nPerpanjang token (Langkah 3 di docs/panduan-posting-sosmed.md), ganti secret THREADS_TOKEN di GitHub, lalu isi tanggal baru di Admin, Sosmed.' } });
+          out.warnDay = day;
+        } catch (e) { console.log('Sosmed: peringatan Telegram gagal: ' + scrub(e.message)); }
+      }
+    }
+  }
+  wr('social-status.json', out);
+  Object.keys(READY).forEach(p => { if (info[p]) console.log('Sosmed: koneksi ' + NAME[p] + ' OK (' + info[p] + ')'); else if (err[p]) console.log('Sosmed: koneksi ' + NAME[p] + ' GAGAL: ' + err[p]); });
+}
+/* hapus gambar JPG yang sudah tidak dipakai (artikel tidak ada, atau sudah lewat batas umur + 7 hari) */
+function cleanImages(arts, cfg, keep) {
+  if (DRY) return;
+  try {
+    for (const f of fs.readdirSync(path.join(ROOT, 'social'))) {
+      const slug = f.replace(/\.jpg$/, ''); if (keep.has(slug)) continue;
+      const a = arts.find(x => x.slug === slug);
+      if (!a || !(Date.parse(a.date) >= Date.now() - ((cfg.maxAgeDays || 3) + 7) * 864e5)) fs.unlinkSync(path.join(ROOT, 'social', f));
+    }
+  } catch (e) { /* folder belum ada */ }
+}
+
 (async () => {
   try {
     const cfg = { auto: false, maxAgeDays: 3, maxPerRun: 2, hashtags: '#XPeng #MobilListrik #XPengIndonesia', ...rd('social.json', {}) };
@@ -116,7 +156,8 @@ const SEND = {
 
     // status koneksi untuk ditampilkan di admin (ditulis hanya jika berubah)
     const st = rd('social-status.json', {});
-    if (JSON.stringify(st.ready || {}) !== JSON.stringify(READY)) { wr('social-status.json', { at: new Date().toISOString(), ready: READY }); }
+    const stale = !st.at || Date.now() - Date.parse(st.at) > 12 * 36e5;
+    if (CHECK || stale || JSON.stringify(st.ready || {}) !== JSON.stringify(READY)) await checkAll(st, cfg);
 
     const note = (slug, plat, ok, msg) => { log.unshift({ at: new Date().toISOString(), slug, platform: plat, ok, msg: scrub(msg).slice(0, 220) }); log = log.slice(0, 60); console.log('Sosmed: ' + (ok ? '✅' : '❌') + ' ' + NAME[plat] + ' — ' + slug + (ok ? '' : ': ' + scrub(msg).slice(0, 160))); };
 
@@ -143,10 +184,10 @@ const SEND = {
         jobs.push({ a, plats: new Set(plats), force: false, manual: false }); n++;
       }
     }
-    if (!jobs.length) { if (queue.length) { wr('social-queue.json', []); wr('social-log.json', log); } return console.log('Sosmed: tidak ada yang perlu diposting.'); }
+    if (!jobs.length) { if (queue.length) { wr('social-queue.json', []); wr('social-log.json', log); } cleanImages(arts, cfg, new Set()); return console.log('Sosmed: tidak ada yang perlu diposting.'); }
 
     // ---- siapkan gambar (satu kali commit) ----
-    const need = jobs.filter(j => [...j.plats].some(p => p !== 'telegram'));
+    const need = jobs.filter(j => [...j.plats].some(p => p !== 'telegram' && READY[p]));
     const imgs = {}; let fresh = false;
     for (const j of need) { try { const r = await makeJpg(j.a, origin); imgs[j.a.slug] = r.url; fresh = fresh || r.fresh; } catch (e) { imgs[j.a.slug] = null; note(j.a.slug, 'facebook', false, 'gagal buat gambar: ' + e.message); } }
     if (fresh) gitPush('Gambar sosmed');
@@ -177,8 +218,7 @@ const SEND = {
     }
     if (!DRY) {
       wr('social-posted.json', posted); wr('social-log.json', log); wr('social-queue.json', []);
-      // hapus gambar JPG lama (sudah tidak dibutuhkan setelah diposting > 7 hari)
-      try { for (const f of fs.readdirSync(path.join(ROOT, 'social'))) { const s = f.replace(/\.jpg$/, ''), r = posted[s]; if (!r) continue; const ts = Object.values(r).filter(x => x && x.at).map(x => Date.parse(x.at)); if (ts.length && Date.now() - Math.max(...ts) > 7 * 864e5) fs.unlinkSync(path.join(ROOT, 'social', f)); } } catch (e) { /* folder belum ada */ }
+      cleanImages(arts, cfg, new Set(jobs.map(j => j.a.slug)));
     }
   } catch (e) { console.log('Sosmed: dilewati karena error: ' + scrub(e.message)); }
 })();
