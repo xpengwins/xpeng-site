@@ -1,1 +1,11 @@
-[]
+[
+ {
+  "slug": "pajak-mobil-listrik-2026",
+  "platforms": [
+   "threads",
+   "telegram"
+  ],
+  "force": false,
+  "at": "2026-10-24T17:39:39.121Z"
+ }
+]
