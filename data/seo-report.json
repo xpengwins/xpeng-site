@@ -1,10 +1,10 @@
 {
- "generated": "2026-10-25T02:49:11.534Z",
+ "generated": "2026-10-25T08:34:40.372Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 24,
+  "pages": 25,
   "total": 100
  },
  "tech": [
@@ -597,6 +597,75 @@
   },
   {
    "url": "/artikel/pengisian-cepat-800v-xpeng/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/xpilot-4-0-xpeng/",
    "score": 100,
    "checks": [
     {
@@ -4648,7 +4717,7 @@
   {
    "slug": "xpilot-4-0-xpeng",
    "title": "XPILOT 4.0 XPeng: Fitur, Cara Pakai, dan Batasannya",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "xpilot",
    "score": 100,
    "grade": "A",
@@ -7875,9 +7944,9 @@
    "page": "/artikel/xpilot-4-0-xpeng/",
    "position": null,
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 39
    }
   },
   {
