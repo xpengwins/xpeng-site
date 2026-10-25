@@ -22,6 +22,7 @@ concurrency:
 jobs:
   pantau:
     runs-on: ubuntu-latest
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -61,6 +62,8 @@ jobs:
       - name: Simpan hasil
         run: |
           git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
-          git pull --rebase -q
           git add data/speed-log.json data/sosmed-stats.json data/riset-tren.json data/agent-brief.json data/agent-brief-sent.json 2>/dev/null || true
-          git diff --cached --quiet || (git commit -m "Agent pantau: data terbaru" && git pull --rebase -q && git push)
+          if git diff --cached --quiet; then echo "Tidak ada data baru"; exit 0; fi
+          git commit -q -m "Agent pantau: data terbaru"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          echo "Gagal menyimpan setelah 3 percobaan"; exit 1

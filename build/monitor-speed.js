@@ -33,13 +33,15 @@ async function check(url) {
   }
   return r;
 }
+let psiStop = false;   /* kuota habis: lewati sisa halaman supaya workflow tidak menunggu lama */
 async function psi(url) {
+  if (psiStop) return { err: 'PSI kena batas kuota, dilewati (isi secret PSI_KEY agar stabil)' };
   const q = (E.PSI_BASE || 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed') + '?strategy=mobile&category=performance&url=' + encodeURIComponent(url) + (PSI_KEY ? '&key=' + encodeURIComponent(PSI_KEY) : '');
   for (let i = 0; i < 3; i++) {
     try {
       const r = await fetch(q, { signal: AbortSignal.timeout(90000) });
       const j = await r.json();
-      if (r.status === 429 || (j.error && /quota|rate/i.test(j.error.message || ''))) { await sleep(20000 * (i + 1)); continue; }
+      if (r.status === 429 || (j.error && /quota|rate/i.test(j.error.message || ''))) { if (!PSI_KEY || i >= 1) { psiStop = true; break; } await sleep(20000); continue; }
       if (!r.ok) throw new Error('PSI ' + r.status + ' ' + ((j.error && j.error.message) || '').slice(0, 80));
       const lh = j.lighthouseResult || {}, a = lh.audits || {}, n = k => a[k] && typeof a[k].numericValue === 'number' ? a[k].numericValue : null;
       const field = j.loadingExperience && j.loadingExperience.overall_category ? j.loadingExperience.overall_category : null;
