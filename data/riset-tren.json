@@ -1,0 +1,402 @@
+{
+ "generated": "2026-10-25T09:28:47.136Z",
+ "week": "2026-10-25",
+ "sumber": {
+  "berita": 0,
+  "tren": 1,
+  "pencarian": 429
+ },
+ "komposisi": {
+  "target": "70:30",
+  "inti": 14,
+  "luas": 6
+ },
+ "catatan": "Ini kumpulan IDE (saran). Riset ulang dan tulis orisinal sebelum terbit. Jangan salin judul/isi berita.",
+ "ide": [
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "xpeng x9 apakah mobil listrik",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"xpeng x9 apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "xpeng x9 berapa km",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"xpeng x9 berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "xpeng x9 bisa parkir sendiri",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"xpeng x9 bisa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik apakah bayar pajak",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik berapa watt",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik kenapa ga bisa parkir paralel",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik kenapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik pajaknya berapa",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik pajak\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "spklu bisa untuk motor listrik",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"spklu bisa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "asuransi mobil apakah bisa dicairkan",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"asuransi mobil apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "cara asuransi mobil",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"asuransi mobil cara\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "kredit mobil apakah riba",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"kredit mobil apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "kredit mobil berapa tahun",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"kredit mobil berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "mobil hybrid apakah kena ganjil genap",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil hybrid apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "mobil hybrid berapa harganya",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil hybrid berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita."
+   ],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik apakah pakai oli",
+   "skor": 44,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "mobil listrik cara ngecas",
+   "skor": 44,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"mobil listrik cara\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "spklu apakah 24 jam",
+   "skor": 44,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"spklu apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "spklu berapa kwh",
+   "skor": 44,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"spklu berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "spklu bisa bayar pakai apa saja",
+   "skor": 44,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"spklu bisa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "inti",
+   "topik": "xpeng g6 berapa harga",
+   "skor": 42,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"xpeng g6 berapa\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-10-25"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita."
+   ],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan."
+  }
+ ],
+ "alertTopik": []
+}

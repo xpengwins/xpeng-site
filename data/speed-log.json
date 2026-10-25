@@ -1,0 +1,66 @@
+{
+ "history": [
+  {
+   "date": "2026-10-25",
+   "at": "2026-10-25T09:24:02.460Z",
+   "urls": 25,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 44,
+   "pages": {
+    "/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    },
+    "/model/xpeng-x9/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    },
+    "/model/xpeng-g6/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    },
+    "/pricelist/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    },
+    "/kontak/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    },
+    "/artikel/pengisian-cepat-800v-xpeng/": {
+     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    }
+   },
+   "issues": []
+  }
+ ],
+ "generated": "2026-10-25T09:24:02.460Z",
+ "latest": {
+  "date": "2026-10-25",
+  "at": "2026-10-25T09:24:02.460Z",
+  "urls": 25,
+  "errors": 0,
+  "slow": 0,
+  "avgMs": 44,
+  "pages": {
+   "/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   },
+   "/model/xpeng-x9/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   },
+   "/model/xpeng-g6/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   },
+   "/pricelist/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   },
+   "/kontak/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   },
+   "/artikel/pengisian-cepat-800v-xpeng/": {
+    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+   }
+  },
+  "issues": [],
+  "issueText": []
+ },
+ "alertKeys": [],
+ "alertSig": ""
+}

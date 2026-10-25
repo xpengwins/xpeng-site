@@ -1,0 +1,161 @@
+{
+ "generated": "2026-10-25T09:28:47.184Z",
+ "traffic": {
+  "periode": [
+   "2026-09-25",
+   "2026-10-22"
+  ],
+  "klik": 1,
+  "tayang": 33,
+  "posisi": 20.4,
+  "perubahanKlik": null,
+  "perubahanTayang": null,
+  "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
+ },
+ "A_perbaiki_judul": [
+  {
+   "halaman": "/model/xpeng-x9/",
+   "tayang": 3,
+   "posisi": 8.3,
+   "kataKunci": "xpeng captain seat",
+   "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
+  }
+ ],
+ "B_dorong_ke_halaman_1": [
+  {
+   "kataKunci": "xpeng captain seat",
+   "halaman": "/model/xpeng-x9/",
+   "tayang": 3,
+   "posisi": 8.3,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  }
+ ],
+ "C_ide_artikel_dari_data": [
+  {
+   "kataKunci": "xpeng captain seat",
+   "tayang": 3,
+   "posisi": 8.3,
+   "halamanSaatIni": "/model/xpeng-x9/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "x9 xpeng leasing",
+   "tayang": 1,
+   "posisi": 8,
+   "halamanSaatIni": "/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng g9 indonesia",
+   "tayang": 1,
+   "posisi": 10,
+   "halamanSaatIni": "/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng gx vs denza n9",
+   "tayang": 1,
+   "posisi": 70,
+   "halamanSaatIni": "/artikel/xpeng-x9-vs-denza-d9/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng x9 pro plus harga",
+   "tayang": 1,
+   "posisi": 89,
+   "halamanSaatIni": "/pricelist/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  }
+ ],
+ "D_kualitas": {
+  "skorSitus": 100,
+  "artikelDibawah100": [],
+  "terbit": 17,
+  "terjadwal": 15,
+  "terbitBerikutnya": "2026-10-26T09:00:00+07:00",
+  "terjadwalHabis": "2026-11-02T09:00:00+07:00",
+  "linkRusak": 0
+ },
+ "kesehatan": {
+  "kecepatan": {
+   "error": 0,
+   "lambat": 0,
+   "masalah": []
+  },
+  "sosmed": [
+   "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+   "⚠️ Facebook: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+   "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+   "⚠️ Instagram: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+   "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+   "⚠️ Threads: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+  ]
+ },
+ "E_riset_tren": [
+  {
+   "topik": "xpeng x9 apakah mobil listrik",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "xpeng x9 berapa km",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "xpeng x9 bisa parkir sendiri",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "mobil listrik apakah bayar pajak",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "mobil listrik berapa watt",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "mobil listrik kenapa ga bisa parkir paralel",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "mobil listrik pajaknya berapa",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  },
+  {
+   "topik": "spklu bisa untuk motor listrik",
+   "jenis": "pencarian",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
+   "risiko": []
+  }
+ ]
+}

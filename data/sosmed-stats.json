@@ -1,0 +1,93 @@
+{
+ "generated": "2026-10-25T09:24:02.508Z",
+ "platforms": {
+  "facebook": {
+   "posted48h": 6,
+   "posted24h": 6,
+   "bursts": 2,
+   "error": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+  },
+  "instagram": {
+   "posted48h": 6,
+   "posted24h": 6,
+   "bursts": 2,
+   "account": {
+    "name": "@xpengwins",
+    "followers": 0,
+    "media": 11
+   },
+   "posts": 11,
+   "avgEngRecent": 0,
+   "avgEngBefore": 0,
+   "avgReachRecent": null,
+   "last": "2026-10-25T08:37:11+0000",
+   "top": [
+    {
+     "url": "https://www.instagram.com/p/De6S1xoFzMa/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/De5wcV6Fz1c/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/De5wWk3l2Uf/",
+     "eng": 0
+    }
+   ],
+   "extra": {
+    "quota": {
+     "used": 6,
+     "total": 100
+    }
+   }
+  },
+  "threads": {
+   "posted48h": 6,
+   "posted24h": 6,
+   "bursts": 2,
+   "account": {
+    "name": "@xpengwins",
+    "followers": 0
+   },
+   "posts": 7,
+   "avgEngRecent": 0,
+   "avgEngBefore": 0,
+   "avgReachRecent": 45,
+   "last": "2026-10-25T08:37:31+0000",
+   "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De6S3J-luk5",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De5wdmwDJJk",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De5wYjJDIUd",
+     "eng": 0
+    }
+   ],
+   "extra": {}
+  }
+ },
+ "issues": [
+  "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+  "⚠️ Facebook: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+  "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+  "⚠️ Instagram: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+  "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
+  "⚠️ Threads: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
+  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+ ],
+ "alertKeys": [
+  "burst:facebook",
+  "perday:facebook",
+  "burst:instagram",
+  "perday:instagram",
+  "burst:threads",
+  "perday:threads",
+  "api:facebook:gagal"
+ ]
+}
