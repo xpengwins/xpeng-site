@@ -102,7 +102,7 @@ function autoLink(html, selfPath) {
     return '<' + tag + '>' + parts.join('') + '</' + tag + '>';
   });
 }
-const fixLinks = h => h.replace(/(href|src)="(\/(?!\/)[^"]*)"/g, (m, a, v) => (BASE && (v === BASE || v.startsWith(BASE + '/'))) ? m : a + '="' + BASE + v + '"').replace(/src="assets\//g, 'src="' + BASE + '/assets/');
+const fixLinks = h => h.replace(/(href|src)="(\/(?!\/)[^"]*)"/g, (m, a, v) => (BASE && (v === BASE || v.startsWith(BASE + '/'))) ? m : a + '="' + BASE + v + '"').replace(/src="assets\//g, 'src="' + BASE + '/assets/').replace(/poster="assets\//g, 'poster="' + BASE + '/assets/');
 
 /* ---------- halaman ---------- */
 function home() {
@@ -204,6 +204,7 @@ function articlePage(a) {
   /* tautan ke artikel yang belum terbit diubah jadi teks biasa, supaya tidak ada link 404 saat artikel terbit bertahap */
   const live = new Set(articles.map(x => x.slug));
   html = html.replace(/<a href="[^"]*\/artikel\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, sl, t) => live.has(sl) ? m : t);
+  [...a.body.matchAll(/\{\{\s*video\s*:\s*([^\s}|]+)/gi)].forEach(m => { if (!fs.existsSync(path.join(ROOT, m[1]))) console.log('PERINGATAN: video belum ada di repo (mungkin masih dikompres): ' + m[1] + ' <- ' + a.slug); });
   const toc = [...a.body.matchAll(/^##\s+(.*)$/gm)].map(m => `<li><a href="#${MD.slug(m[1])}">${E(m[1])}</a></li>`).join('');
   const rel = articles.filter(x => x.slug !== a.slug).slice(0, 2);
   const body = `<article class="art"><header class="wrap narrow"><nav class="crumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/artikel/')}">Artikel</a></nav><span class="eyebrow">${E(a.category || 'Artikel')}</span><h1>${E(a.title)}</h1><p class="muted">Diperbarui <time datetime="${a.date}">${a.date}</time> • Ditulis oleh tim ${E(site.dealer)}</p></header>
@@ -211,7 +212,7 @@ ${a.image ? `<div class="wrap narrow">${picture(a.image, a.imageAlt, 'artimg', 8
 <div class="wrap narrow prose">${toc ? `<nav class="toc" aria-label="Daftar isi"><b>Daftar isi</b><ol>${toc}</ol></nav>` : ''}${html}
 <div class="cta-box"><h2>Tertarik dengan XPeng?</h2><p>Konsultasi gratis harga, cicilan, dan jadwal test drive.</p><a class="btn" href="${wa('Halo, saya baca artikel: ' + a.title)}" rel="noopener">Chat WhatsApp</a></div></div>
 ${rel.length ? `<div class="wrap"><h2>Baca juga</h2><div class="agrid">${rel.map(artCard).join('')}</div></div>` : ''}</article>`;
-  const ld = [crumbs([['Beranda', '/'], ['Artikel', '/artikel/'], [a.title, p]]), { '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.description, image: a.image ? [abs(a.image)] : undefined, datePublished: a.date, dateModified: a.date, author: { '@type': 'Organization', name: site.dealer }, publisher: { '@type': 'Organization', name: site.dealer, logo: { '@type': 'ImageObject', url: abs('assets/img/logo.svg') } }, mainEntityOfPage: abs(p) }, faqLd(MD.faq(a.body))];
+  const ld = [crumbs([['Beranda', '/'], ['Artikel', '/artikel/'], [a.title, p]]), { '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.description, image: a.image ? [abs(a.image)] : undefined, datePublished: a.date, dateModified: (a.updated || a.date).slice(0, 10), author: { '@type': 'Organization', name: site.dealer }, publisher: { '@type': 'Organization', name: site.dealer, logo: { '@type': 'ImageObject', url: abs('assets/img/logo.svg') } }, mainEntityOfPage: abs(p) }, faqLd(MD.faq(a.body))];
   return layout({ title: a.title, desc: a.description, path: p, body, image: a.image, type: 'article', ld });
 }
 

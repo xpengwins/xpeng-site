@@ -8,6 +8,31 @@ const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing',
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
+
+/* ---------- modal + konfirmasi sebelum aksi tombol ---------- */
+function modal(html, mount) {
+  const o = document.createElement('div'); o.className = 'mdl'; o.innerHTML = '<div class="mdlbox">' + html + '</div>'; document.body.appendChild(o);
+  const close = () => o.remove(); o.addEventListener('click', e => { if (e.target === o) close(); });
+  if (mount) mount(o.firstChild, close); return close;
+}
+function ask(msg, yes, danger) {
+  modal('<h3>Konfirmasi</h3><p style="margin:8px 0 16px">' + E(msg) + '</p><div class="row"><button class="s" data-c="0">Batal</button><button data-c="1"' + (danger ? ' class="d"' : '') + '>Ya, lanjutkan</button></div>', (b, close) => {
+    b.querySelector('[data-c="0"]').onclick = close; b.querySelector('[data-c="1"]').onclick = () => { close(); yes(); };
+  });
+}
+/* Tombol aksi di halaman admin selalu minta konfirmasi. Dikecualikan: menu/navigasi, filter, halaman berikutnya, buka-tutup, tombol format teks, Kembali, Pratinjau, dan tombol di dalam jendela pilih (modal). */
+const NOCONF = '.fl button,.pgr button,.cltool button,[data-go],[data-e],[data-cp],[data-ins],[data-lk],[data-idea],[data-noc],#tbl,#bk,#pv,#more,#new,#ideas,#upmain,#upbody,#vidb,#gu';
+let cfOK = 0; const nativeConfirm = window.confirm.bind(window);
+/* konfirmasi lama di dalam aksi yang baru saja disetujui tidak ditanyakan dua kali; peringatan penting (skor SEO, waktu lewat, tanda ⚠) tetap tampil */
+window.confirm = m => (Date.now() - cfOK < 4000 && !/skor seo|waktu terbit sudah lewat|⚠/i.test(String(m))) ? true : nativeConfirm(m);
+document.addEventListener('click', e => {
+  const b = e.target.closest && e.target.closest('button'); if (!b || b.disabled || !b.closest('#v')) return;
+  if (b.__ok) { b.__ok = false; cfOK = Date.now(); return; }
+  if (b.matches(NOCONF)) return;
+  e.preventDefault(); e.stopImmediatePropagation();
+  const label = (b.textContent || '').replace(/\s+/g, ' ').trim() || 'aksi ini', bad = b.classList.contains('d');
+  ask('Jalankan "' + label + '"?' + (bad ? ' Tindakan ini tidak bisa dibatalkan.' : ''), () => { b.__ok = true; b.click(); }, bad);
+}, true);
 const b64 = s => { const b = new TextEncoder().encode(s); let r = ''; b.forEach(x => r += String.fromCharCode(x)); return btoa(r); };
 const unb64 = s => { const r = atob(s.replace(/\n/g, '')); const b = new Uint8Array(r.length); for (let i = 0; i < r.length; i++) b[i] = r.charCodeAt(i); return new TextDecoder().decode(b); };
 const bufb64 = buf => { let r = '', b = new Uint8Array(buf); for (let i = 0; i < b.length; i += 0x8000) r += String.fromCharCode.apply(null, b.subarray(i, i + 0x8000)); return btoa(r); };
@@ -90,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -173,7 +198,7 @@ async function uploadImg(f, max) {
   const blob = svg ? f : await toWebp(f, max || 1600); let name = slugName(f.name) + ext;
   if (S.media.includes(name)) name = slugName(f.name) + '-' + Date.now().toString(36).slice(-4) + ext;
   await putFile('assets/img/' + name, bufb64(await blob.arrayBuffer()), 'Upload foto ' + name);
-  S.media.push(name); S.local['assets/img/' + name] = URL.createObjectURL(blob); return 'assets/img/' + name;
+  S.tree = null; S.media.push(name); S.local['assets/img/' + name] = URL.createObjectURL(blob); return 'assets/img/' + name;
 }
 function pickUp(multi, done, max) {
   const i = document.createElement('input'); i.type = 'file'; i.accept = 'image/*'; i.multiple = !!multi; i.style.display = 'none'; document.body.appendChild(i);
@@ -229,25 +254,43 @@ function runsWidget(box) {
 const ST = { draft: ['Draft', 'warn'], ready: ['Siap publish', 'rdy'], scheduled: ['Terjadwal', 'sch'], published: ['Terbit', 'ok'] };
 const fmtDT = iso => { try { return new Date(iso).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', day: 'numeric', month: 'short', year: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' WIB'; } catch (e) { return iso || ''; } };
 let AF = 'all';
+let AQ = '';
+const dmy = d => { try { return new Date(String(d).length <= 10 ? d + 'T00:00:00+07:00' : d).toLocaleDateString('id-ID', { timeZone: 'Asia/Jakarta', day: 'numeric', month: 'short', year: 'numeric' }); } catch (e) { return d || '-'; } };
+const tUpd = a => { const t = Date.parse(a.updated || (a.date ? a.date + 'T00:00:00+07:00' : '')); return isNaN(t) ? 0 : t; };
+const blankArt = o => Object.assign({ title: '', slug: '', keyword: '', description: '', image: '', imageAlt: '', date: today(), status: 'draft', category: 'Tips EV', body: '**Jawaban singkat:** \n\n## \n\n## \n\n## Pertanyaan yang sering diajukan\n\n### \n\n### \n\n### \n' }, o || {});
 VIEWS.articles = v => {
   const A = S.d.articles, cnt = k => k === 'all' ? A.length : A.filter(a => a.status === k).length;
   const sched = A.filter(a => a.status === 'scheduled' && a.publishAt).sort((x, y) => Date.parse(x.publishAt) - Date.parse(y.publishAt));
-  const rows = A.map((a, i) => ({ a, i })).filter(x => AF === 'all' || x.a.status === AF);
+  const scores = A.map(a => SEO.scoreArticle(a, A));
+  const when = a => a.status === 'published' ? '📅 Terbit ' + dmy(a.date) : a.status === 'scheduled' && a.publishAt ? '🕒 Terbit otomatis ' + fmtDT(a.publishAt) : '📝 Belum terbit';
+  const rowsHTML = () => {
+    const q = AQ.trim().toLowerCase();
+    const rows = A.map((a, i) => ({ a, i })).filter(x => (AF === 'all' || x.a.status === AF) && (!q || [x.a.title, x.a.keyword, x.a.slug, x.a.category].join(' ').toLowerCase().indexOf(q) >= 0)).sort((x, y) => tUpd(y.a) - tUpd(x.a) || y.i - x.i);
+    if ($('#acnt')) $('#acnt').textContent = rows.length + ' artikel' + (q ? ' cocok dengan pencarian' : '') + ' • diurutkan dari update terbaru';
+    return rows.map(({ a, i }) => { const r = scores[i], st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span></div><div class="muted">${when(a)}${a.updated ? ' • ✏️ Update ' + dmy(a.updated) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'published' ? ` <button class="sm s" data-cp="${i}">Salin link</button>` : ''}${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel yang cocok</td></tr>';
+  };
   v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button><button class="s" data-go="laporan">Export Laporan</button></div>
 <div class="fl" id="flt">${[['all', 'Semua'], ['draft', 'Draft'], ['ready', 'Siap publish'], ['scheduled', 'Terjadwal'], ['published', 'Terbit']].map(f => `<button class="s sm${AF === f[0] ? ' on' : ''}" data-f="${f[0]}">${f[1]} (${cnt(f[0])})</button>`).join('')}</div>
+<input id="aq" type="search" placeholder="🔍 Cari judul, keyword, atau slug…" value="${E(AQ)}" autocomplete="off"><div class="muted" id="acnt" style="margin:6px 2px 10px"></div>
 ${sched.length ? `<div class="card"><h3>🕒 Jadwal publish</h3>${sched.map(a => `<div class="chk"><i>•</i><div>${E(a.title)}<div class="t">${fmtDT(a.publishAt)}</div></div></div>`).join('')}<p class="muted" style="margin-top:8px">Terbit otomatis pada build pertama setelah waktunya tiba.</p></div>` : ''}
-<div id="ideaBox"></div><div class="card tw" style="margin-top:14px"><table><thead><tr><th>Judul</th><th>Skor</th><th></th></tr></thead><tbody>${rows.map(({ a, i }) => { const r = SEO.scoreArticle(a, A), st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span>${a.status === 'scheduled' && a.publishAt ? ' • ' + fmtDT(a.publishAt) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'published' ? ` <button class="sm s" data-cp="${i}">Salin link</button>` : ''}${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel di kategori ini</td></tr>'}</tbody></table></div>`;
-  v.querySelectorAll('[data-cp]').forEach(b => b.onclick = () => copyText(liveUrl(A[+b.dataset.cp])));
-  v.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { AF = b.dataset.f; VIEWS.articles(v); });
-  v.querySelectorAll('[data-p]').forEach(b => b.onclick = async () => { const a = A[+b.dataset.p], r = SEO.scoreArticle(a, A); if (r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (!confirm('Terbitkan "' + a.title + '" sekarang?')) return; a.status = 'published'; a.date = today(); delete a.publishAt; await save('articles', 'Terbitkan: ' + a.title); VIEWS.articles(v); });
+<div id="ideaBox"></div><div class="card tw" style="margin-top:6px"><table><thead><tr><th>Judul dan tanggal</th><th>Skor</th><th></th></tr></thead><tbody id="atb">${rowsHTML()}</tbody></table></div>`;
+  const bindRows = () => {
+    v.querySelectorAll('#atb [data-cp]').forEach(b => b.onclick = () => copyText(liveUrl(A[+b.dataset.cp])));
+    v.querySelectorAll('#atb [data-p]').forEach(b => b.onclick = async () => { const a = A[+b.dataset.p], r = SEO.scoreArticle(a, A); if (r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap terbitkan?')) return; if (!confirm('Terbitkan "' + a.title + '" sekarang?')) return; a.status = 'published'; a.date = today(); a.updated = new Date().toISOString(); delete a.publishAt; await save('articles', 'Terbitkan: ' + a.title); VIEWS.articles(v); });
+    v.querySelectorAll('#atb [data-e]').forEach(b => b.onclick = () => editArticle(v, JSON.parse(JSON.stringify(A[b.dataset.e])), +b.dataset.e));
+  };
+  bindRows();
+  $('#aq').oninput = () => { AQ = $('#aq').value; S.pg['articles#0'] = 1; S.pg['articles#1'] = 1; $('#atb').innerHTML = rowsHTML(); bindRows(); };
+  v.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { AF = b.dataset.f; S.pg['articles#0'] = 1; VIEWS.articles(v); });
   v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
-  $('#new').onclick = () => editArticle(v, { title: '', slug: '', keyword: '', description: '', image: '', imageAlt: '', date: today(), status: 'draft', category: 'Tips EV', body: '**Jawaban singkat:** \n\n## \n\n## \n\n## Pertanyaan yang sering diajukan\n\n### \n\n### \n\n### \n' }, -1);
-  v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editArticle(v, JSON.parse(JSON.stringify(A[b.dataset.e])), +b.dataset.e));
+  $('#new').onclick = () => editArticle(v, blankArt(), -1);
   $('#ideas').onclick = () => {
     const T = { hard: ['Panduan lengkap {k}: yang harus Anda tahu', '{k}: perbandingan dan rekomendasi {y}'], medium: ['{k}: harga, spesifikasi, dan pilihan varian', 'Kelebihan dan kekurangan {k} menurut pengguna'], low: ['Cara mudah {k} untuk pemula', '{k}: pertanyaan yang sering diajukan'] };
-    const used = new Set(A.map(a => (a.keyword || '').toLowerCase()));
-    const rows = S.d.keywords.filter(k => !used.has(k.kw.toLowerCase())).slice(0, 12).map(k => (T[k.tier] || T.low).map(t => t.replace('{k}', k.kw).replace('{y}', new Date().getFullYear())).map(t => `<tr><td>${E(t)}</td><td><span class="pill">${k.tier}</span></td><td>${E(k.kw)}</td></tr>`).join('')).join('');
-    $('#ideaBox').innerHTML = `<div class="card tw"><h3>Ide judul (keyword yang belum punya artikel)</h3><table><thead><tr><th>Judul</th><th>Tier</th><th>Keyword</th></tr></thead><tbody>${rows || '<tr><td colspan=3>Semua keyword sudah punya artikel.</td></tr>'}</tbody></table><p class="muted">Sebelum menulis: riset 3-5 hasil teratas Google untuk keyword itu, catat pertanyaan yang belum terjawab, lalu tulis dengan kata-kata sendiri. Jangan menyalin.</p></div>`;
+    const used = new Set(A.map(a => (a.keyword || '').toLowerCase())), IDEAS = [];
+    const rows = S.d.keywords.filter(k => !used.has(k.kw.toLowerCase())).slice(0, 12).map(k => (T[k.tier] || T.low).map(t => t.replace('{k}', k.kw).replace('{y}', new Date().getFullYear())).map(t => { IDEAS.push({ title: t, kw: k.kw }); const n = IDEAS.length - 1; return `<tr><td><button class="s sm" data-idea="${n}" style="text-align:left;white-space:normal;height:auto">✍️ ${E(t)}</button></td><td><span class="pill">${k.tier}</span></td><td><button class="s sm" data-idea="${n}" style="white-space:normal;height:auto">${E(k.kw)}</button></td></tr>`; }).join('')).join('');
+    S.cl['articles|' + 'Ide judul (keyword yang belum punya artikel)'.slice(0, 40)] = true;
+    $('#ideaBox').innerHTML = `<div class="card tw"><h3>Ide judul (keyword yang belum punya artikel)</h3><p class="muted">Ketuk judul atau keyword untuk langsung membuat artikel baru dengan judul dan keyword itu.</p><table><thead><tr><th>Judul</th><th>Tier</th><th>Keyword</th></tr></thead><tbody>${rows || '<tr><td colspan=3>Semua keyword sudah punya artikel.</td></tr>'}</tbody></table><p class="muted">Sebelum menulis: riset 3-5 hasil teratas Google untuk keyword itu, catat pertanyaan yang belum terjawab, lalu tulis dengan kata-kata sendiri. Jangan menyalin.</p></div>`;
+    $('#ideaBox').querySelectorAll('[data-idea]').forEach(b => b.onclick = () => { const it = IDEAS[+b.dataset.idea]; editArticle(v, blankArt({ title: it.title, keyword: it.kw, slug: MD.slug(it.title) }), -1); });
   };
 };
 function editArticle(v, a, idx) {
@@ -259,9 +302,9 @@ function editArticle(v, a, idx) {
 <label>Meta description (120-160 karakter)<textarea id="f_description" style="min-height:70px;font-family:inherit">${E(a.description)}</textarea></label><div class="muted" id="c_desc"></div>
 <div class="grid"><label>Kategori<input id="f_category" value="${E(a.category || '')}"></label><label>Tanggal<input id="f_date" type="date" value="${E(a.date)}"></label><label>Status<select id="f_status"><option value="draft"${a.status === 'draft' ? ' selected' : ''}>Draft (belum selesai)</option><option value="ready"${a.status === 'ready' ? ' selected' : ''}>Siap publish (menunggu)</option><option value="scheduled"${a.status === 'scheduled' ? ' selected' : ''}>Terjadwal (terbit otomatis)</option><option value="published"${a.status === 'published' ? ' selected' : ''}>Terbit sekarang</option></select></label></div>
 <div id="schedBox" style="display:none"><label>Tanggal dan jam terbit (WIB)<input id="f_publishAt" type="datetime-local" value="${E(a.publishAt ? a.publishAt.slice(0, 16) : '')}"></label><div class="muted" style="margin:-6px 0 12px">Artikel terbit otomatis oleh build berikutnya setelah waktu ini. Jam terbit tepat butuh build.yml terbaru (build tiap jam); tanpa itu terbit paling lambat 03:00 WIB.</div></div>
-<div class="grid"><label>Gambar utama<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><div class="row"><button class="s sm" id="upmain">📷 Upload gambar utama</button></div><div id="pvmain">${thumb(a.image)}</div><datalist id="imgl">${imgs}</datalist>
+<div class="grid"><label>Gambar utama<input id="f_image" value="${E(a.image)}" list="imgl"></label><label>Teks alt gambar<input id="f_imageAlt" value="${E(a.imageAlt)}"></label></div><div class="row"><button class="s sm" id="upmain">📷 Pilih / unggah gambar utama</button></div><div id="pvmain">${thumb(a.image)}</div><datalist id="imgl">${imgs}</datalist>
 <label>Isi artikel (Markdown). Awali dengan <b>**Jawaban singkat:**</b>, pakai ## untuk subjudul, ### untuk FAQ</label>
-<div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" id="upbody">📷 Foto</button><button class="s sm" id="tbl">Tabel</button></div>
+<div class="row" style="margin-bottom:8px"><button class="s sm" data-ins="## ">H2</button><button class="s sm" data-ins="### ">H3</button><button class="s sm" data-ins="**tebal**">Tebal</button><button class="s sm" data-ins="- ">Daftar</button><button class="s sm" data-ins="[teks](/model/xpeng-x9/)">Link</button><button class="s sm" id="upbody">📷 Foto</button><button class="s sm" id="vidb">🎬 Video</button><button class="s sm" id="tbl">Tabel</button></div>
 <textarea id="f_body" style="min-height:340px">${E(a.body)}</textarea>
 <div class="card" style="background:#0d0f13"><h3>Saran internal link</h3><div id="sug" class="row"></div></div>
 <div class="row"><button id="sv">Simpan</button><button class="s" id="pv">Pratinjau</button><button class="s" id="bk">Kembali</button>${idx >= 0 ? '<button class="d" id="dl">Hapus</button>' : ''}</div></div>
@@ -276,13 +319,21 @@ function editArticle(v, a, idx) {
   v.querySelectorAll('[data-ins]').forEach(b => b.onclick = () => ins(b.dataset.ins)); $('#tbl').onclick = () => ins('\n| Kolom 1 | Kolom 2 |\n|---|---|\n| isi | isi |\n');
   v.querySelectorAll('input,textarea,select').forEach(x => x.oninput = upd); upd();
   F('status').addEventListener('change', () => { if (F('status').value === 'scheduled' && !F('publishAt').value) { F('publishAt').value = new Date(Date.now() + 864e5 + 252e5).toISOString().slice(0, 10) + 'T08:00'; upd(); } });
-  $('#upmain').onclick = () => pickUp(false, ps => { F('image').value = ps[0]; if (!F('imageAlt').value) F('imageAlt').value = F('keyword').value || F('title').value; $('#pvmain').innerHTML = thumb(ps[0]); upd(); });
-  $('#upbody').onclick = () => { const alt = prompt('Teks alt (deskripsi singkat foto, untuk SEO):', F('keyword').value || ''); if (alt === null) return; pickUp(true, ps => ins(ps.map(p => '\n![' + alt + '](' + p + ')\n').join(''))); };
+  $('#upmain').onclick = () => pickMedia({ kind: 'image', multi: false, title: 'Pilih gambar utama' }, ps => { if (!ps.length) return; F('image').value = ps[0]; if (!F('imageAlt').value) F('imageAlt').value = F('keyword').value || F('title').value; $('#pvmain').innerHTML = thumb(ps[0]); upd(); });
+  $('#upbody').onclick = () => pickMedia({ kind: 'image', multi: true, title: 'Sisipkan foto ke artikel' }, ps => { if (!ps.length) return; const alt = prompt('Teks alt (deskripsi singkat foto, untuk SEO):', F('keyword').value || ''); if (alt === null) return; ins(ps.map(p => '\n![' + alt + '](' + p + ')\n').join('')); });
+  const ytId = s => { s = (s || '').trim(); let m = s.match(/^[A-Za-z0-9_-]{11}$/); if (m) return m[0]; m = s.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^#]*&)?v=|embed\/|shorts\/|live\/|v\/))([A-Za-z0-9_-]{11})/); return m ? m[1] : ''; };
+  $('#vidb').onclick = () => modal('<h3>🎬 Sisipkan video</h3><p class="muted">Video selalu diputar otomatis, tanpa suara, berulang, dan tidak bisa diklik pengunjung.</p><label style="margin-top:10px">Bentuk tampilan<select data-r><option value="16x9">Lebar 16:9 (YouTube, video landscape)</option><option value="9x16">Tegak 9:16 (video HP, Reels)</option><option value="1x1">Kotak 1:1</option><option value="4x5">Potret 4:5</option></select></label><h3>1. Link YouTube</h3><input data-y placeholder="https://www.youtube.com/watch?v=..."><button data-yb style="width:100%;margin-top:8px">Sisipkan video YouTube</button><h3>2. Unggah video dari HP</h3><p class="muted">Maksimal 40MB. Dikompres otomatis (maks 720p, tanpa suara, maks 90 detik). Siap tayang ±2-4 menit setelah diunggah.</p><input data-f type="file" accept="video/*"><button data-fb style="width:100%;margin-top:8px">Unggah dan sisipkan</button><h3>3. Pilih dari galeri</h3><button class="s" data-gb style="width:100%">Buka galeri video</button><div class="row" style="margin-top:14px"><button class="s" data-x>Tutup</button></div>', (b, close) => {
+    const R = () => b.querySelector('[data-r]').value, put = (tag, r) => ins('\n\n{{' + tag + (r && r !== '16x9' ? '|' + r : '') + '}}\n\n');
+    b.querySelector('[data-x]').onclick = close;
+    b.querySelector('[data-yb]').onclick = () => { const id = ytId(b.querySelector('[data-y]').value); if (!id) return toast('Link YouTube tidak dikenali. Tempel link lengkap dari YouTube.', true); put('youtube:' + id, R()); close(); toast('✓ Video YouTube disisipkan. Tekan Simpan.'); };
+    b.querySelector('[data-fb]').onclick = async e => { const f = b.querySelector('[data-f]').files[0]; if (!f) return toast('Pilih file video dulu', true); const btn = e.currentTarget, r = R(); btn.disabled = true; toast('Mengunggah ' + f.name + '…'); try { const p = await uploadVideo(f); put('video:' + p, r); close(); toast('✓ Video terunggah. Dikompres otomatis, siap tayang ±2-4 menit. Tekan Simpan.'); } catch (err) { toast(err.message, true); btn.disabled = false; } };
+    b.querySelector('[data-gb]').onclick = () => { const r = R(); close(); pickMedia({ kind: 'video', multi: false, title: 'Pilih video dari galeri' }, ps => { if (ps.length) { put('video:' + ps[0], r); toast('✓ Video disisipkan. Tekan Simpan.'); } }); };
+  });
   F('image').addEventListener('input', () => { $('#pvmain').innerHTML = thumb(F('image').value); });
-  $('#pv').onclick = () => { read(); $('#pvbox').innerHTML = `<div class="card"><h3>Pratinjau</h3><div class="prev"><h1 style="font-size:1.5rem">${E(a.title)}</h1>${MD.render(a.body)}</div></div>`; };
+  $('#pv').onclick = () => { read(); $('#pvbox').innerHTML = `<div class="card"><h3>Pratinjau</h3><div class="prev"><h1 style="font-size:1.5rem">${E(a.title)}</h1>${MD.render(a.body).replace(/(src|poster)="assets\//g, '$1="../assets/')}</div></div>`; };
   $('#bk').onclick = () => go('articles');
   $('#sv').onclick = async () => { read(); if (!a.title) return toast('Judul wajib diisi', true); const r = SEO.scoreArticle(a, all()); if (a.status === 'scheduled') { if (!a.publishAt) return toast('Isi tanggal dan jam terbit', true); if (Date.parse(a.publishAt) <= Date.now() && !confirm('Waktu terbit sudah lewat. Artikel langsung terbit pada build berikutnya. Lanjut?')) return; }
-    if (['ready', 'scheduled', 'published'].includes(a.status) && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap lanjut?')) return; if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
+    if (['ready', 'scheduled', 'published'].includes(a.status) && r.score < 80 && !confirm('Skor SEO ' + r.score + ' (di bawah 80). Tetap lanjut?')) return; a.updated = new Date().toISOString(); if (idx < 0) { S.d.articles.push(a); idx = S.d.articles.length - 1; } else S.d.articles[idx] = a; await save('articles', 'Artikel: ' + a.title); };
   if ($('#dl')) $('#dl').onclick = async () => { if (!confirm('Hapus artikel ini?')) return; S.d.articles.splice(idx, 1); await save('articles', 'Hapus artikel'); go('articles'); };
   if (!S.media) listDir('assets/img').then(l => { S.media = l.filter(x => x.type === 'file').map(x => x.name); const dl = $('#imgl'); if (dl) dl.innerHTML = S.media.map(m => `<option value="assets/img/${E(m)}">`).join(''); });
 }
@@ -504,6 +555,99 @@ VIEWS.media = async v => {
   const l = await listDir('assets/img'); const imgs = l.filter(x => x.type === 'file' && /\.(webp|jpe?g|png|svg)$/i.test(x.name)); S.media = imgs.map(x => x.name); $('#cnt').textContent = imgs.length;
   $('#th').innerHTML = imgs.map(x => `<figure><img loading="lazy" src="${E(x.download_url)}" alt=""><figcaption>${E(x.name)} • ${Math.round(x.size / 1024)}KB<br><button class="d sm" data-x="${E(x.path)}">hapus</button></figcaption></figure>`).join('');
   v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { if (confirm('Hapus ' + b.dataset.x + '?')) { try { await delFile(b.dataset.x); VIEWS.media(v); } catch (e) { toast(e.message, true); } } });
+};
+
+/* ---------- Galeri: semua file tersimpan + pemilih gambar/video ---------- */
+const IMGX = /\.(webp|jpe?g|png|gif|svg|avif)$/i, VIDUP = /\.(mp4|mov|m4v|webm|mkv|avi|3gp)$/i;
+const rawUrl = p => 'https://raw.githubusercontent.com/' + S.cfg.owner + '/' + S.cfg.repo + '/' + S.cfg.branch + '/' + enc2(p);
+const fmtSize = n => n >= 1048576 ? (n / 1048576).toFixed(1) + ' MB' : Math.max(1, Math.round(n / 1024)) + ' KB';
+async function loadTree(force) {
+  if (S.tree && !force) return S.tree;
+  const j = await gh('git/trees/' + encodeURIComponent(S.cfg.branch) + '?recursive=1');
+  S.tree = (j.tree || []).filter(x => x.type === 'blob').map(x => {
+    const p = x.path; let kind = '';
+    if (/^assets\/img\//.test(p) && IMGX.test(p)) kind = 'image';
+    else if (/^assets\/video\//.test(p) && /\.(mp4|webm)$/i.test(p)) kind = 'video';
+    else if (/^upload\/video\//.test(p) && VIDUP.test(p)) kind = 'video';
+    else if (/^assets\/files\//.test(p)) kind = 'file';
+    return { path: p, name: p.split('/').pop(), size: x.size || 0, kind, pending: p.indexOf('upload/') === 0 };
+  }).filter(x => x.kind);
+  S.media = S.tree.filter(x => x.kind === 'image').map(x => x.name);
+  return S.tree;
+}
+/* video: unggah ke upload/video, GitHub mengompres (720p, tanpa suara) lalu hasilnya ada di assets/video/NAMA.mp4 */
+async function uploadVideo(f) {
+  if (!VIDUP.test(f.name) && !/^video\//.test(f.type)) throw new Error(f.name + ': bukan file video');
+  if (f.size > 40 * 1024 * 1024) throw new Error(f.name + ': lebih dari 40MB. Potong jadi klip pendek (30-60 detik) atau pakai link YouTube.');
+  const tree = await loadTree(); let name = slugName(f.name); const base = name;
+  if (tree.some(x => x.kind === 'video' && x.name.replace(/\.[^.]+$/, '') === name)) name = base + '-' + Date.now().toString(36).slice(-4);
+  const ext = ((f.name.match(/\.[a-z0-9]+$/i) || ['.mp4'])[0]).toLowerCase();
+  await putFile('upload/video/' + name + ext, bufb64(await f.arrayBuffer()), 'Upload video ' + name);
+  S.tree = null; return 'assets/video/' + name + '.mp4';
+}
+async function uploadAny(f) {
+  if (/^image\//.test(f.type) || IMGX.test(f.name)) return uploadImg(f, 1600);
+  if (/^video\//.test(f.type) || VIDUP.test(f.name)) return uploadVideo(f);
+  if (f.size > 25 * 1024 * 1024) throw new Error(f.name + ': maksimal 25MB');
+  const name = f.name.replace(/[^\w.-]/g, '_'); await putFile('assets/files/' + name, bufb64(await f.arrayBuffer()), 'Upload ' + name); S.tree = null; return 'assets/files/' + name;
+}
+function figHTML(x, o) {
+  o = o || {}; const ico = x.kind === 'video' ? (x.pending ? '⏳' : '🎬') : x.kind === 'file' ? '📄' : '🖼️';
+  const src = x.kind === 'image' ? (S.local[x.path] || rawUrl(x.path)) : (x.kind === 'video' && !x.pending ? rawUrl(x.path.replace(/\.[^.]+$/, '.jpg')) : '');
+  return '<figure data-p="' + E(x.path) + '"' + (o.sel && o.sel.has(x.path) ? ' class="on"' : '') + '><div class="mth"><span>' + ico + '</span>' + (src ? '<img loading="lazy" alt="" src="' + E(src) + '" onerror="this.style.display=\'none\'">' : '') + '</div><figcaption>' + E(x.name) + '<br>' + fmtSize(x.size) + (x.pending ? ' • menunggu kompresi' : '') + (o.extra ? o.extra(x) : '') + '</figcaption></figure>';
+}
+/* jendela pilih dari galeri: kind 'image' atau 'video'; done(array path) */
+function pickMedia(opt, done) {
+  const kind = opt.kind || 'image', label = kind === 'video' ? 'video' : 'gambar'; let all = [], q = '', lim = 24; const sel = new Set();
+  modal('<h3>' + E(opt.title || 'Pilih dari galeri') + '</h3><div class="row" style="margin-bottom:10px"><input data-q placeholder="Cari nama file…"><button class="s sm" data-up style="flex:0 0 auto">⬆️ Unggah baru</button></div><input data-f type="file" accept="' + kind + '/*"' + (opt.multi ? ' multiple' : '') + ' style="display:none"><div class="thumbs gal" data-g>Memuat…</div><div data-m></div><div class="row" style="margin-top:12px"><button class="s" data-x>Tutup</button><button data-ok disabled>Pilih</button></div>', (b, close) => {
+    const g = b.querySelector('[data-g]'), ok = b.querySelector('[data-ok]'), fi = b.querySelector('[data-f]');
+    const draw = () => {
+      const list = all.filter(x => x.kind === kind && !x.pending && (!q || x.name.toLowerCase().indexOf(q) >= 0));
+      g.innerHTML = list.slice(0, lim).map(x => figHTML(x, { sel })).join('') || '<p class="muted">Belum ada ' + label + '. Ketuk "Unggah baru".</p>';
+      b.querySelector('[data-m]').innerHTML = list.length > lim ? '<button class="s" data-more style="width:100%;margin-top:10px">Tampilkan lebih banyak (' + (list.length - lim) + ')</button>' : '';
+      const mb = b.querySelector('[data-more]'); if (mb) mb.onclick = () => { lim += 24; draw(); };
+      g.querySelectorAll('figure').forEach(f => f.onclick = () => { const p = f.dataset.p; if (!opt.multi && !sel.has(p)) sel.clear(); if (sel.has(p)) sel.delete(p); else sel.add(p); draw(); });
+      ok.disabled = !sel.size; ok.textContent = sel.size ? 'Pilih (' + sel.size + ')' : 'Pilih';
+    };
+    b.querySelector('[data-q]').oninput = e => { q = e.target.value.trim().toLowerCase(); lim = 24; draw(); };
+    b.querySelector('[data-x]').onclick = close; ok.onclick = () => { const out = [...sel]; close(); done(out); };
+    b.querySelector('[data-up]').onclick = () => fi.click();
+    fi.onchange = async () => {
+      const fs = [...fi.files]; fi.value = ''; let n = 0;
+      for (const f of fs) { toast('Mengunggah ' + (++n) + '/' + fs.length + ': ' + f.name); try { const p = kind === 'video' ? await uploadVideo(f) : await uploadImg(f, 1600); if (kind === 'video') { close(); toast('✓ Video terunggah. Dikompres otomatis, siap tayang ±2-4 menit.'); return done([p]); } sel.add(p); if (!opt.multi && sel.size > 1) { sel.clear(); sel.add(p); } } catch (e) { toast(e.message, true); } }
+      try { all = await loadTree(true); } catch (e) { /* abaikan */ } if (S.tree && kind === 'image') sel.forEach(p => { if (!all.some(x => x.path === p)) all.push({ path: p, name: p.split('/').pop(), size: 0, kind: 'image' }); }); draw();
+    };
+    loadTree().then(t => { all = t; draw(); }).catch(e => { g.innerHTML = '<p class="muted">Gagal memuat galeri: ' + E(e.message) + '</p>'; });
+  });
+}
+let GK = 'all', GQ = '';
+VIEWS.gallery = async v => {
+  v.innerHTML = '<h2>Galeri</h2><div class="card"><p class="muted">Semua gambar, video, dan file yang tersimpan di website. Foto otomatis dikecilkan ke WebP. Video (maks 40MB) dikompres otomatis oleh GitHub dan siap tayang ±2-4 menit setelah diunggah.</p><div class="row"><button id="gu">⬆️ Unggah file</button></div><input id="gf" type="file" multiple style="display:none"><div id="gs" class="muted" style="margin-top:8px"></div></div><div class="fl" id="gk"></div><input id="gq" type="search" placeholder="🔍 Cari nama file…" value="' + E(GQ) + '"><div class="thumbs gal" id="gg" data-pgl="24" style="margin-top:12px">Memuat…</div>';
+  let all = []; try { all = await loadTree(true); } catch (e) { $('#gg').innerHTML = '<p class="muted">Gagal memuat galeri: ' + E(e.message) + '</p>'; return; }
+  const USED = JSON.stringify(S.d), CH = [['all', 'Semua'], ['image', 'Gambar'], ['video', 'Video'], ['file', 'File']];
+  const extra = x => '<div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap"><button class="s sm" data-noc data-copy="' + E(x.path) + '">Salin</button><button class="d sm" data-del="' + E(x.path) + '">Hapus</button></div>' + (USED.indexOf(x.path) >= 0 ? '<span class="pill ok" style="margin-top:4px">dipakai</span>' : '');
+  const draw = () => {
+    const q = GQ.trim().toLowerCase(), list = all.filter(x => (GK === 'all' || x.kind === GK) && (!q || x.name.toLowerCase().indexOf(q) >= 0)).sort((a, b) => (b.pending - a.pending) || a.path.localeCompare(b.path));
+    $('#gk').innerHTML = CH.map(c => '<button class="s sm' + (GK === c[0] ? ' on' : '') + '" data-k="' + c[0] + '">' + c[1] + ' (' + all.filter(x => c[0] === 'all' || x.kind === c[0]).length + ')</button>').join('');
+    $('#gg').innerHTML = list.map(x => figHTML(x, { extra })).join('') || '<p class="muted">Tidak ada file.</p>';
+    v.querySelectorAll('[data-k]').forEach(bt => bt.onclick = () => { GK = bt.dataset.k; S.pg['gallery#0'] = 1; draw(); });
+    v.querySelectorAll('[data-copy]').forEach(bt => bt.onclick = e => { e.stopPropagation(); copyText(bt.dataset.copy); });
+    v.querySelectorAll('[data-del]').forEach(bt => bt.onclick = async e => {
+      e.stopPropagation(); const p = bt.dataset.del;
+      if (USED.indexOf(p) >= 0 && !confirm('⚠️ File ini masih dipakai di artikel atau halaman:\n' + p + '\n\nJika dihapus, gambar atau video di sana akan rusak. Tetap hapus?')) return;
+      bt.disabled = true;
+      try { await delFile(p); const x = all.find(a => a.path === p); if (x && x.kind === 'video' && !x.pending) { try { await delFile(p.replace(/\.[^.]+$/, '.jpg')); } catch (e2) { /* tanpa poster */ } } S.tree = null; toast('Terhapus.'); VIEWS.gallery(v); }
+      catch (err) { toast('Gagal hapus: ' + err.message, true); bt.disabled = false; }
+    });
+  };
+  $('#gq').oninput = e => { GQ = e.target.value; S.pg['gallery#0'] = 1; draw(); };
+  $('#gu').onclick = () => $('#gf').click();
+  $('#gf').onchange = async () => {
+    const fs = [...$('#gf').files]; $('#gf').value = ''; let n = 0, ok = 0;
+    for (const f of fs) { $('#gs').textContent = 'Mengunggah ' + (++n) + '/' + fs.length + ': ' + f.name; try { await uploadAny(f); ok++; } catch (e) { toast(e.message, true); } }
+    $('#gs').textContent = ok ? '✓ ' + ok + ' file terunggah.' + (fs.some(f => VIDUP.test(f.name)) ? ' Video sedang dikompres otomatis (±2-4 menit).' : '') : ''; if (ok) VIEWS.gallery(v);
+  };
+  draw();
 };
 
 /* --- Backup --- */

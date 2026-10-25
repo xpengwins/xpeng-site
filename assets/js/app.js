@@ -46,4 +46,6 @@ im.onclick=tz;sc.addEventListener('click',function(e){if(e.target===sc&&!ov.clas
 document.addEventListener('keydown',function(e){if(ov.hidden)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')show(k-1);else if(e.key==='ArrowRight')show(k+1)});
 var sx=null;sc.addEventListener('touchstart',function(e){sx=ov.classList.contains('zoom')?null:e.touches[0].clientX},{passive:true});
 sc.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(k+(d<0?1:-1));sx=null})})();
+/* video artikel: putar hanya saat terlihat di layar */
+$$('.vid video').forEach(function(v){v.muted=true;if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.25});io.observe(v)}});
 })();
