@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-25T02:24:21.838Z",
+ "date": "2026-10-25T02:35:38.536Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -34,7 +34,7 @@
     "branch": "main"
    },
    "facebook": "https://www.facebook.com/share/1EDphzUCPP/",
-   "ga4": ""
+   "ga4": "G-DKWBG156T4"
   },
   "models": [
    {
