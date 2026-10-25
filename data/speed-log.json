@@ -2,65 +2,141 @@
  "history": [
   {
    "date": "2026-10-25",
-   "at": "2026-10-25T09:24:02.460Z",
+   "at": "2026-10-25T10:18:25.782Z",
    "urls": 25,
    "errors": 0,
    "slow": 0,
-   "avgMs": 44,
+   "avgMs": 97,
    "pages": {
     "/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 85,
+     "lcp": 3726,
+     "cls": 0,
+     "tbt": 161,
+     "field": null
     },
     "/model/xpeng-x9/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 92,
+     "lcp": 3331,
+     "cls": 0,
+     "tbt": 18,
+     "field": null
     },
     "/model/xpeng-g6/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 96,
+     "lcp": 2710,
+     "cls": 0,
+     "tbt": 11,
+     "field": null
     },
     "/pricelist/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 87,
+     "lcp": 3727,
+     "cls": 0,
+     "tbt": 180,
+     "field": null
     },
     "/kontak/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 93,
+     "lcp": 2610,
+     "cls": 0,
+     "tbt": 209,
+     "field": null
     },
     "/artikel/pengisian-cepat-800v-xpeng/": {
-     "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+     "score": 94,
+     "lcp": 2686,
+     "cls": 0.085,
+     "tbt": 77,
+     "field": null
     }
    },
-   "issues": []
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "perf:/model/xpeng-g6/",
+    "perf:/pricelist/",
+    "perf:/kontak/",
+    "perf:/artikel/pengisian-cepat-800v-xpeng/"
+   ]
   }
  ],
- "generated": "2026-10-25T09:24:02.460Z",
+ "generated": "2026-10-25T10:18:25.782Z",
  "latest": {
   "date": "2026-10-25",
-  "at": "2026-10-25T09:24:02.460Z",
+  "at": "2026-10-25T10:18:25.782Z",
   "urls": 25,
   "errors": 0,
   "slow": 0,
-  "avgMs": 44,
+  "avgMs": 97,
   "pages": {
    "/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 85,
+    "lcp": 3726,
+    "cls": 0,
+    "tbt": 161,
+    "field": null
    },
    "/model/xpeng-x9/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 92,
+    "lcp": 3331,
+    "cls": 0,
+    "tbt": 18,
+    "field": null
    },
    "/model/xpeng-g6/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 96,
+    "lcp": 2710,
+    "cls": 0,
+    "tbt": 11,
+    "field": null
    },
    "/pricelist/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 87,
+    "lcp": 3727,
+    "cls": 0,
+    "tbt": 180,
+    "field": null
    },
    "/kontak/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 93,
+    "lcp": 2610,
+    "cls": 0,
+    "tbt": 209,
+    "field": null
    },
    "/artikel/pengisian-cepat-800v-xpeng/": {
-    "err": "PSI kena batas kuota, coba lagi nanti (isi secret PSI_KEY agar stabil)"
+    "score": 94,
+    "lcp": 2686,
+    "cls": 0.085,
+    "tbt": 77,
+    "field": null
    }
   },
-  "issues": [],
-  "issueText": []
+  "issues": [
+   "perf:/",
+   "perf:/model/xpeng-x9/",
+   "perf:/model/xpeng-g6/",
+   "perf:/pricelist/",
+   "perf:/kontak/",
+   "perf:/artikel/pengisian-cepat-800v-xpeng/"
+  ],
+  "issueText": [
+   "🟠 /: LCP 3.7 dtk",
+   "🟠 /model/xpeng-x9/: LCP 3.3 dtk",
+   "🟠 /model/xpeng-g6/: LCP 2.7 dtk",
+   "🟠 /pricelist/: LCP 3.7 dtk",
+   "🟠 /kontak/: LCP 2.6 dtk, TBT 209 ms",
+   "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
+  ]
  },
- "alertKeys": [],
- "alertSig": ""
+ "alertKeys": [
+  "perf:/",
+  "perf:/model/xpeng-x9/",
+  "perf:/model/xpeng-g6/",
+  "perf:/pricelist/",
+  "perf:/kontak/",
+  "perf:/artikel/pengisian-cepat-800v-xpeng/"
+ ],
+ "alertSig": "perf:/|perf:/artikel/pengisian-cepat-800v-xpeng/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/|perf:/pricelist/"
 }

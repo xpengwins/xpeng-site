@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T09:28:47.184Z",
+ "generated": "2026-10-25T10:19:07.126Z",
  "traffic": {
   "periode": [
    "2026-09-25",
@@ -80,7 +80,14 @@
   "kecepatan": {
    "error": 0,
    "lambat": 0,
-   "masalah": []
+   "masalah": [
+    "🟠 /: LCP 3.7 dtk",
+    "🟠 /model/xpeng-x9/: LCP 3.3 dtk",
+    "🟠 /model/xpeng-g6/: LCP 2.7 dtk",
+    "🟠 /pricelist/: LCP 3.7 dtk",
+    "🟠 /kontak/: LCP 2.6 dtk, TBT 209 ms",
+    "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
+   ]
   },
   "sosmed": [
    "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
@@ -94,68 +101,86 @@
  },
  "E_riset_tren": [
   {
-   "topik": "xpeng x9 apakah mobil listrik",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "7 Fakta Ngeri BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "xpeng x9 berapa km",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "Mobil Hybrid Bakal Bebas Ganjil Genap, Kemenperin Godok Aturannya - Kabarindo.com",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "29 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "xpeng x9 bisa parkir sendiri",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "Mobil Listrik Bekas China Diburu Eropa, Harga Turun Hingga 40 Persen",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "mobil listrik apakah bayar pajak",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "Video: Pengusaha: Insentif Mobil Hybrid Dongkrak Penjualan Otomotif RI",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "77 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "mobil listrik berapa watt",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "OJK Kaji Tarif Premi Khusus Asuransi Kendaraan Listrik",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 2 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "mobil listrik kenapa ga bisa parkir paralel",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "Bikin Laporan Polisi Fiktif Demi Klaim Asuransi, Tiga Pria di Batam Terancam Hukuman Berat",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "mobil listrik pajaknya berapa",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "BBM Subsidi Diduga Dipakai Industri, Bahlil Soroti Truk Tambang dan Perkebunan",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "13 media membahas dalam 14 hari, terbaru 2 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   },
   {
-   "topik": "spklu bisa untuk motor listrik",
-   "jenis": "pencarian",
-   "skor": 46,
-   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
-   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Hubungkan ke model XPeng yang relevan.",
-   "risiko": []
+   "topik": "Chery Perluas Bisnis Indonesia Berkat Penjualan Jaecoo J5",
+   "jenis": "berita",
+   "skor": 73,
+   "alasan": "14 media membahas dalam 14 hari, terbaru 6 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
   }
  ]
 }
