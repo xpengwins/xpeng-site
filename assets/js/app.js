@@ -48,4 +48,10 @@ var sx=null;sc.addEventListener('touchstart',function(e){sx=ov.classList.contain
 sc.addEventListener('touchend',function(e){if(sx===null)return;var d=e.changedTouches[0].clientX-sx;if(Math.abs(d)>50)show(k+(d<0?1:-1));sx=null})})();
 /* video artikel: putar hanya saat terlihat di layar */
 $$('.vid video').forEach(function(v){v.muted=true;if('IntersectionObserver'in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var p=v.play();if(p&&p.catch)p.catch(function(){})}else v.pause()})},{threshold:.25});io.observe(v)}});
+/* pelacakan leads (GA4): klik WhatsApp, telepon, email, brosur, form test drive */
+(function(){function ev(n,o){try{if(window.gtag)gtag('event',n,o||{})}catch(e){}}
+var pg=location.pathname;
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',pos=(a.closest('[data-cta]')||{dataset:{}}).dataset.cta||(a.classList.contains('wafab')?'melayang':'halaman');
+if(h.indexOf('wa.me/')>-1)ev('klik_whatsapp',{halaman:pg,posisi:pos});else if(h.indexOf('tel:')===0)ev('klik_telepon',{halaman:pg});else if(h.indexOf('mailto:')===0)ev('klik_email',{halaman:pg});else if(/\.pdf(\?|$)/i.test(h))ev('unduh_brosur',{halaman:pg,file:h});else if(h.indexOf('#testdrive')>-1)ev('klik_booking_test_drive',{halaman:pg,posisi:pos})},true);
+document.addEventListener('submit',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('lead'))ev('kirim_form_test_drive',{halaman:pg})},true)})();
 })();

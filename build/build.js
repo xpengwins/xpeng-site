@@ -64,6 +64,7 @@ function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'websit
 <meta name="twitter:card" content="summary_large_image">
 <link rel="stylesheet" href="${u('assets/css/style.css')}?v=${ASSET_V}">
 ${jsonld(orgLd())}${ld.filter(Boolean).map(jsonld).join('')}
+${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${site.ga4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${site.ga4}');</script>` : ''}
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>
@@ -205,12 +206,15 @@ function articlePage(a) {
   const live = new Set(articles.map(x => x.slug));
   html = html.replace(/<a href="[^"]*\/artikel\/([a-z0-9-]+)\/">([\s\S]*?)<\/a>/g, (m, sl, t) => live.has(sl) ? m : t);
   [...a.body.matchAll(/\{\{\s*video\s*:\s*([^\s}|]+)/gi)].forEach(m => { if (!fs.existsSync(path.join(ROOT, m[1]))) console.log('PERINGATAN: video belum ada di repo (mungkin masih dikompres): ' + m[1] + ' <- ' + a.slug); });
+  const ctaLine = (t, b) => `<aside class="cta-inline" data-cta="${b}"><p><b>${t}</b></p><a class="btn sm" href="${wa('Halo, saya baca artikel: ' + a.title)}" rel="noopener">Chat WhatsApp</a> <a class="btn sm ghost" href="${u('/kontak/#testdrive')}">Booking test drive</a></aside>`;
+  const ctaTop = ctaLine('Mau tahu harga dan promo XPeng terbaru?', 'atas');
+  let htmlMid = html; { const hs = [...html.matchAll(/<h2[ >]/g)]; if (hs.length >= 4) { const i = hs[Math.floor(hs.length / 2)].index; htmlMid = html.slice(0, i) + ctaLine('Tertarik? Konsultasi gratis, tanpa kewajiban beli.', 'tengah') + html.slice(i); } }
   const toc = [...a.body.matchAll(/^##\s+(.*)$/gm)].map(m => `<li><a href="#${MD.slug(m[1])}">${E(m[1])}</a></li>`).join('');
   const rel = articles.filter(x => x.slug !== a.slug).slice(0, 2);
-  const body = `<article class="art"><header class="wrap narrow"><nav class="crumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/artikel/')}">Artikel</a></nav><span class="eyebrow">${E(a.category || 'Artikel')}</span><h1>${E(a.title)}</h1><p class="muted">Diperbarui <time datetime="${a.date}">${a.date}</time> • Ditulis oleh tim ${E(site.dealer)}</p></header>
+  const body = `<article class="art"><header class="wrap narrow"><nav class="crumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/artikel/')}">Artikel</a></nav><span class="eyebrow">${E(a.category || 'Artikel')}</span><h1>${E(a.title)}</h1><p class="muted">Diperbarui <time datetime="${(a.updated || a.date).slice(0, 10)}">${(a.updated || a.date).slice(0, 10)}</time> • Ditulis oleh tim ${E(site.dealer)}</p></header>
 ${a.image ? `<div class="wrap narrow">${picture(a.image, a.imageAlt, 'artimg', 800, 500, false)}</div>` : ''}
-<div class="wrap narrow prose">${toc ? `<nav class="toc" aria-label="Daftar isi"><b>Daftar isi</b><ol>${toc}</ol></nav>` : ''}${html}
-<div class="cta-box"><h2>Tertarik dengan XPeng?</h2><p>Konsultasi gratis harga, cicilan, dan jadwal test drive.</p><a class="btn" href="${wa('Halo, saya baca artikel: ' + a.title)}" rel="noopener">Chat WhatsApp</a></div></div>
+<div class="wrap narrow prose">${toc ? `<nav class="toc" aria-label="Daftar isi"><b>Daftar isi</b><ol>${toc}</ol></nav>` : ''}${ctaTop}${htmlMid}
+<div class="cta-box" data-cta="bawah"><h2>Tertarik dengan XPeng?</h2><p>Konsultasi gratis harga, cicilan, dan jadwal test drive.</p><a class="btn" href="${wa('Halo, saya baca artikel: ' + a.title)}" rel="noopener">Chat WhatsApp</a></div></div>
 ${rel.length ? `<div class="wrap"><h2>Baca juga</h2><div class="agrid">${rel.map(artCard).join('')}</div></div>` : ''}</article>`;
   const ld = [crumbs([['Beranda', '/'], ['Artikel', '/artikel/'], [a.title, p]]), { '@context': 'https://schema.org', '@type': 'Article', headline: a.title, description: a.description, image: a.image ? [abs(a.image)] : undefined, datePublished: a.date, dateModified: (a.updated || a.date).slice(0, 10), author: { '@type': 'Organization', name: site.dealer }, publisher: { '@type': 'Organization', name: site.dealer, logo: { '@type': 'ImageObject', url: abs('assets/img/logo.svg') } }, mainEntityOfPage: abs(p) }, faqLd(MD.faq(a.body))];
   return layout({ title: a.title, desc: a.description, path: p, body, image: a.image, type: 'article', ld });
