@@ -2,52 +2,52 @@
  "history": [
   {
    "date": "2026-10-25",
-   "at": "2026-10-25T10:18:25.782Z",
+   "at": "2026-10-25T14:57:30.364Z",
    "urls": 25,
    "errors": 0,
    "slow": 0,
-   "avgMs": 97,
+   "avgMs": 130,
    "pages": {
     "/": {
      "score": 85,
-     "lcp": 3726,
+     "lcp": 3765,
      "cls": 0,
-     "tbt": 161,
+     "tbt": 183,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 92,
-     "lcp": 3331,
-     "cls": 0,
-     "tbt": 18,
-     "field": null
-    },
-    "/model/xpeng-g6/": {
-     "score": 96,
-     "lcp": 2710,
-     "cls": 0,
-     "tbt": 11,
-     "field": null
-    },
-    "/pricelist/": {
-     "score": 87,
-     "lcp": 3727,
+     "score": 85,
+     "lcp": 3994,
      "cls": 0,
      "tbt": 180,
      "field": null
     },
-    "/kontak/": {
-     "score": 93,
-     "lcp": 2610,
+    "/model/xpeng-g6/": {
+     "score": 88,
+     "lcp": 3845,
      "cls": 0,
-     "tbt": 209,
+     "tbt": 59,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 90,
+     "lcp": 3696,
+     "cls": 0,
+     "tbt": 47,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 66,
+     "lcp": 6400,
+     "cls": 0,
+     "tbt": 276,
      "field": null
     },
     "/artikel/pengisian-cepat-800v-xpeng/": {
-     "score": 94,
-     "lcp": 2686,
+     "score": 93,
+     "lcp": 2737,
      "cls": 0.085,
-     "tbt": 77,
+     "tbt": 148,
      "field": null
     }
    },
@@ -61,55 +61,55 @@
    ]
   }
  ],
- "generated": "2026-10-25T10:18:25.782Z",
+ "generated": "2026-10-25T14:57:30.364Z",
  "latest": {
   "date": "2026-10-25",
-  "at": "2026-10-25T10:18:25.782Z",
+  "at": "2026-10-25T14:57:30.364Z",
   "urls": 25,
   "errors": 0,
   "slow": 0,
-  "avgMs": 97,
+  "avgMs": 130,
   "pages": {
    "/": {
     "score": 85,
-    "lcp": 3726,
+    "lcp": 3765,
     "cls": 0,
-    "tbt": 161,
+    "tbt": 183,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 92,
-    "lcp": 3331,
-    "cls": 0,
-    "tbt": 18,
-    "field": null
-   },
-   "/model/xpeng-g6/": {
-    "score": 96,
-    "lcp": 2710,
-    "cls": 0,
-    "tbt": 11,
-    "field": null
-   },
-   "/pricelist/": {
-    "score": 87,
-    "lcp": 3727,
+    "score": 85,
+    "lcp": 3994,
     "cls": 0,
     "tbt": 180,
     "field": null
    },
-   "/kontak/": {
-    "score": 93,
-    "lcp": 2610,
+   "/model/xpeng-g6/": {
+    "score": 88,
+    "lcp": 3845,
     "cls": 0,
-    "tbt": 209,
+    "tbt": 59,
+    "field": null
+   },
+   "/pricelist/": {
+    "score": 90,
+    "lcp": 3696,
+    "cls": 0,
+    "tbt": 47,
+    "field": null
+   },
+   "/kontak/": {
+    "score": 66,
+    "lcp": 6400,
+    "cls": 0,
+    "tbt": 276,
     "field": null
    },
    "/artikel/pengisian-cepat-800v-xpeng/": {
-    "score": 94,
-    "lcp": 2686,
+    "score": 93,
+    "lcp": 2737,
     "cls": 0.085,
-    "tbt": 77,
+    "tbt": 148,
     "field": null
    }
   },
@@ -122,11 +122,11 @@
    "perf:/artikel/pengisian-cepat-800v-xpeng/"
   ],
   "issueText": [
-   "🟠 /: LCP 3.7 dtk",
-   "🟠 /model/xpeng-x9/: LCP 3.3 dtk",
-   "🟠 /model/xpeng-g6/: LCP 2.7 dtk",
+   "🟠 /: LCP 3.8 dtk",
+   "🟠 /model/xpeng-x9/: LCP 4.0 dtk",
+   "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
    "🟠 /pricelist/: LCP 3.7 dtk",
-   "🟠 /kontak/: LCP 2.6 dtk, TBT 209 ms",
+   "🔴 /kontak/: skor 66, LCP 6.4 dtk, TBT 276 ms",
    "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
   ]
  },

@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-25T10:19:07.126Z",
+ "generated": "2026-10-25T14:57:38.616Z",
  "traffic": {
   "periode": [
    "2026-09-25",
@@ -81,11 +81,11 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: LCP 3.7 dtk",
-    "🟠 /model/xpeng-x9/: LCP 3.3 dtk",
-    "🟠 /model/xpeng-g6/: LCP 2.7 dtk",
+    "🟠 /: LCP 3.8 dtk",
+    "🟠 /model/xpeng-x9/: LCP 4.0 dtk",
+    "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
     "🟠 /pricelist/: LCP 3.7 dtk",
-    "🟠 /kontak/: LCP 2.6 dtk, TBT 209 ms",
+    "🔴 /kontak/: skor 66, LCP 6.4 dtk, TBT 276 ms",
     "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
    ]
   },
