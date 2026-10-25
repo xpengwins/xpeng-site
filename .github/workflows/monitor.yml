@@ -1,0 +1,66 @@
+name: Agent pantau (kecepatan, sosmed, ringkasan mingguan)
+# FILE BARU. Tidak mengubah build.yml. Jalan 2x sehari (09:30 dan 21:30 WIB) atau manual.
+# Riset saran topik hanya memperbarui diri tiap Senin WIB (diatur di build/riset-tren.js).
+on:
+  schedule:
+    - cron: '30 2,14 * * *'
+  workflow_dispatch:
+    inputs:
+      kirim_ringkasan:
+        description: 'Kirim ringkasan mingguan ke Telegram sekarang (yes/no)'
+        required: false
+        default: 'no'
+      riset_sekarang:
+        description: 'Perbarui Saran Topik di admin sekarang, tanpa menunggu hari Senin (yes/no)'
+        required: false
+        default: 'no'
+permissions:
+  contents: write
+concurrency:
+  group: build            # sama dengan build.yml: antre, tidak bentrok saat menulis data
+  cancel-in-progress: false
+jobs:
+  pantau:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Agent 3, pantau kecepatan dan error situs
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          PSI_KEY: ${{ secrets.PSI_KEY }}
+        run: node build/monitor-speed.js
+      - name: Agent 2, pantau postingan sosmed dan sinyal kebijakan
+        continue-on-error: true
+        env:
+          FB_PAGE_ID: ${{ secrets.FB_PAGE_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          IG_USER_ID: ${{ secrets.IG_USER_ID }}
+          THREADS_USER_ID: ${{ secrets.THREADS_USER_ID }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node build/monitor-sosmed.js
+      - name: Agent 6, riset topik tren di niche (berita, Google Trends, pertanyaan nyata)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          RISET_FORCE: ${{ github.event.inputs.riset_sekarang == 'yes' && '1' || '0' }}
+        run: node build/riset-tren.js
+      - name: Agent 1 dan 2, ringkasan peluang konten dan traffic
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          BRIEF_FORCE: ${{ github.event.inputs.kirim_ringkasan == 'yes' && '1' || '0' }}
+        run: node build/agent-brief.js
+      - name: Simpan hasil
+        run: |
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          git pull --rebase -q
+          git add data/speed-log.json data/sosmed-stats.json data/riset-tren.json data/agent-brief.json data/agent-brief-sent.json 2>/dev/null || true
+          git diff --cached --quiet || (git commit -m "Agent pantau: data terbaru" && git pull --rebase -q && git push)
