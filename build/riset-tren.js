@@ -49,15 +49,17 @@ const decode = s => String(s || '').replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1')
 const tag = (x, n) => { const m = x.match(new RegExp('<' + n + '(?:\\s[^>]*)?>([\\s\\S]*?)</' + n + '>', 'i')); return m ? decode(m[1]) : ''; };
 
 async function getText(url, kind) {
-  if (FIX) { const f = { news: 'news.xml', trends: 'trends.xml', suggest: 'suggest.json' }[kind]; return fs.readFileSync(path.join(FIX, f), 'utf8'); }
+  if (FIX) { const f = { news: 'news.xml', trends: 'trends.xml', suggest: 'suggest.json', bing: 'bing.xml' }[kind]; return fs.readFileSync(path.join(FIX, f), 'utf8'); }
+  let why = '';
   for (let i = 0; i < 2; i++) {
     try {
-      const r = await fetch(url, { signal: AbortSignal.timeout(25000), headers: { 'User-Agent': 'Mozilla/5.0 (compatible; xpeng-riset/1.0)', 'Accept-Language': 'id-ID,id;q=0.9' } });
+      const r = await fetch(url, { signal: AbortSignal.timeout(25000), headers: { 'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0 Safari/537.36', 'Accept': 'application/rss+xml, application/xml, text/xml, application/json, */*', 'Accept-Language': 'id-ID,id;q=0.9' } });
       if (r.ok) return await r.text();
+      why = 'HTTP ' + r.status;
       if (r.status === 429) await sleep(5000 * (i + 1));
-    } catch (e) { await sleep(2000); }
+    } catch (e) { why = String(e && e.message || e).slice(0, 60); await sleep(2000); }
   }
-  throw new Error('gagal ambil ' + kind);
+  throw new Error('gagal ambil ' + kind + ' (' + why + ')');
 }
 async function tgSend(text) {
   const r = await fetch((E.TG_BASE || 'https://api.telegram.org') + '/bot' + TG.tok + '/sendMessage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: TG.chat, text: text.slice(0, 4000), parse_mode: 'HTML', disable_web_page_preview: true }) });
@@ -67,18 +69,35 @@ async function tgSend(text) {
 /* ---- 1) berita ---- */
 async function newsItems() {
   const out = [], seen = new Set(), now = Date.now();
+  let gFail = 0;
+  const add = (title, src, link, at, q) => {
+    const g = grp(title);
+    if (!title || !isFinite(at) || now - at > CFG.maxAgeDays * 864e5 || !g) return;
+    const k = title.toLowerCase().slice(0, 70); if (seen.has(k)) return; seen.add(k);
+    out.push({ title, src: src || 'media', link, at, q, g });
+  };
   for (const q of [...CFG.coreNews, ...CFG.broadNews]) {
-    try {
-      const xml = await getText('https://news.google.com/rss/search?q=' + encodeURIComponent(q + ' when:14d') + '&hl=id&gl=ID&ceid=ID:id', 'news');
-      for (const it of xml.split(/<item>/i).slice(1)) {
-        let title = tag(it, 'title'), src = tag(it, 'source'), link = tag(it, 'link'), at = Date.parse(tag(it, 'pubDate'));
-        if (src && title.endsWith(' - ' + src)) title = title.slice(0, -(src.length + 3));
-        const g = grp(title);
-        if (!title || !isFinite(at) || now - at > CFG.maxAgeDays * 864e5 || !g) continue;
-        const k = title.toLowerCase().slice(0, 70); if (seen.has(k)) continue; seen.add(k);
-        out.push({ title, src: src || 'media', link, at, q, g });
-      }
-    } catch (e) { console.log('Riset: berita "' + q + '" gagal'); }
+    let ok = false;
+    if (gFail < 3) {
+      try {
+        const xml = await getText('https://news.google.com/rss/search?q=' + encodeURIComponent(q + ' when:14d') + '&hl=id&gl=ID&ceid=ID:id', 'news');
+        for (const it of xml.split(/<item>/i).slice(1)) {
+          let title = tag(it, 'title'); const src = tag(it, 'source');
+          if (src && title.endsWith(' - ' + src)) title = title.slice(0, -(src.length + 3));
+          add(title, src, tag(it, 'link'), Date.parse(tag(it, 'pubDate')), q);
+        }
+        ok = true;
+      } catch (e) { gFail++; console.log('Riset: Google News "' + q + '" gagal: ' + String(e.message).replace(/^gagal ambil news /, '')); }
+    }
+    if (!ok) { /* cadangan: Bing News RSS */
+      try {
+        const xml = await getText('https://www.bing.com/news/search?q=' + encodeURIComponent(q) + '&format=rss&setlang=id&cc=ID', 'bing');
+        for (const it of xml.split(/<item>/i).slice(1)) {
+          let link = tag(it, 'link'); const m = link.match(/[?&]url=([^&]+)/); if (m) { try { link = decodeURIComponent(m[1]); } catch (e) {} }
+          add(tag(it, 'title'), tag(it, 'News:Source'), link, Date.parse(tag(it, 'pubDate')), q);
+        }
+      } catch (e) { console.log('Riset: Bing News "' + q + '" gagal: ' + String(e.message).replace(/^gagal ambil bing /, '')); }
+    }
     if (!FIX) await sleep(700);
   }
   return out;

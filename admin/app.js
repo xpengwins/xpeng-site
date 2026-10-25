@@ -21,7 +21,7 @@ function ask(msg, yes, danger) {
   });
 }
 /* Tombol aksi di halaman admin selalu minta konfirmasi. Dikecualikan: menu/navigasi, filter, halaman berikutnya, buka-tutup, tombol format teks, Kembali, Pratinjau, dan tombol di dalam jendela pilih (modal). */
-const NOCONF = '.fl button,.pgr button,.cltool button,[data-go],[data-e],[data-cp],[data-ins],[data-lk],[data-idea],[data-noc],#tbl,#bk,#pv,#more,#new,#ideas,#upmain,#upbody,#vidb,#gu';
+const NOCONF = '.fl button,.pgr button,.cltool button,[data-go],[data-e],[data-cp],[data-ins],[data-lk],[data-idea],[data-noc],#tbl,#bk,#pv,#more,#new,#ideas,#bulksch,#upmain,#upbody,#vidb,#gu';
 let cfOK = 0; const nativeConfirm = window.confirm.bind(window);
 /* konfirmasi lama di dalam aksi yang baru saja disetujui tidak ditanyakan dua kali; peringatan penting (skor SEO, waktu lewat, tanda ⚠) tetap tampil */
 window.confirm = m => (Date.now() - cfOK < 4000 && !/skor seo|waktu terbit sudah lewat|⚠/i.test(String(m))) ? true : nativeConfirm(m);
@@ -269,7 +269,7 @@ VIEWS.articles = v => {
     if ($('#acnt')) $('#acnt').textContent = rows.length + ' artikel' + (q ? ' cocok dengan pencarian' : '') + ' • diurutkan dari update terbaru';
     return rows.map(({ a, i }) => { const r = scores[i], st = ST[a.status] || [a.status, 'warn']; return `<tr><td>${E(a.title)}<div class="muted">${E(a.keyword || '-')} • <span class="pill ${st[1]}">${st[0]}</span></div><div class="muted">${when(a)}${a.updated ? ' • ✏️ Update ' + dmy(a.updated) : ''}</div></td><td>${sc(r.score)}</td><td><button class="sm s" data-e="${i}">Edit</button>${a.status === 'published' ? ` <button class="sm s" data-cp="${i}">Salin link</button>` : ''}${a.status === 'ready' ? ` <button class="sm" data-p="${i}">Terbitkan</button>` : ''}</td></tr>`; }).join('') || '<tr><td colspan=3>Tidak ada artikel yang cocok</td></tr>';
   };
-  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button><button class="s" data-go="laporan">Export Laporan</button></div>
+  v.innerHTML = `<h2>Artikel</h2><div class="row"><button id="new">+ Artikel baru</button><button class="s" id="ideas">Ide artikel dari keyword</button><button class="s" id="bulksch">🗓️ Jadwalkan banyak</button><button class="s" data-go="laporan">Export Laporan</button></div>
 <div class="fl" id="flt">${[['all', 'Semua'], ['draft', 'Draft'], ['ready', 'Siap publish'], ['scheduled', 'Terjadwal'], ['published', 'Terbit']].map(f => `<button class="s sm${AF === f[0] ? ' on' : ''}" data-f="${f[0]}">${f[1]} (${cnt(f[0])})</button>`).join('')}</div>
 <input id="aq" type="search" placeholder="🔍 Cari judul, keyword, atau slug…" value="${E(AQ)}" autocomplete="off"><div class="muted" id="acnt" style="margin:6px 2px 10px"></div>
 ${sched.length ? `<div class="card"><h3>🕒 Jadwal publish</h3>${sched.map(a => `<div class="chk"><i>•</i><div>${E(a.title)}<div class="t">${fmtDT(a.publishAt)}</div></div></div>`).join('')}<p class="muted" style="margin-top:8px">Terbit otomatis pada build pertama setelah waktunya tiba.</p></div>` : ''}
@@ -284,6 +284,43 @@ ${sched.length ? `<div class="card"><h3>🕒 Jadwal publish</h3>${sched.map(a =>
   v.querySelectorAll('[data-f]').forEach(b => b.onclick = () => { AF = b.dataset.f; S.pg['articles#0'] = 1; VIEWS.articles(v); });
   v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go));
   $('#new').onclick = () => editArticle(v, blankArt(), -1);
+  /* Jadwalkan banyak artikel sekaligus: centang artikel, atur tanggal, terapkan */
+  $('#bulksch').onclick = () => {
+    const cand = A.map((a, i) => ({ a, i })).filter(x => x.a.status !== 'published').sort((x, y) => ({ draft: 0, ready: 1, scheduled: 2 }[x.a.status] - { draft: 0, ready: 1, scheduled: 2 }[y.a.status]) || (Date.parse(x.a.publishAt || '') || 0) - (Date.parse(y.a.publishAt || '') || 0));
+    if (!cand.length) return toast('Tidak ada artikel yang bisa dijadwalkan', true);
+    const tmr = new Date(Date.now() + 864e5 + 252e5).toISOString().slice(0, 10);
+    const list = cand.map(({ a, i }) => { const st = ST[a.status] || [a.status, 'warn']; return `<div class="chk" style="align-items:center;flex-wrap:wrap"><input type="checkbox" data-c="${i}" style="width:22px;height:22px;flex:none"><div style="flex:1;min-width:160px">${E(a.title)}<div class="t"><span class="pill ${st[1]}">${st[0]}</span> skor ${scores[i].score}${a.status === 'scheduled' && a.publishAt ? ' • ' + fmtDT(a.publishAt) : ''}</div></div><input type="datetime-local" data-d="${i}" value="${E(a.publishAt ? a.publishAt.slice(0, 16) : '')}" disabled style="flex:none;width:210px"></div>`; }).join('');
+    modal(`<h3>🗓️ Jadwalkan banyak artikel</h3><p class="muted">1. Centang artikel. 2. Isi tanggal mulai lalu ketuk Isi otomatis (atau atur tanggal tiap artikel sendiri). 3. Ketuk Terapkan jadwal. Artikel terbit otomatis, bukan langsung.</p>
+<div class="row" style="margin:10px 0"><button class="s sm" data-all>Pilih semua</button><button class="s sm" data-none>Kosongkan</button><span class="muted" data-n style="align-self:center">0 dipilih</span></div>
+<div class="grid"><label>Tanggal mulai<input type="date" data-s value="${tmr}"></label><label>Jam (WIB)<input type="time" data-t value="08:00"></label><label>Jarak antar artikel (hari)<input type="number" data-g min="1" max="30" value="1"></label></div>
+<button class="s" data-fill style="width:100%;margin:8px 0">Isi tanggal otomatis untuk yang dicentang</button>
+<div style="max-height:46vh;overflow:auto">${list}</div>
+<div class="row" style="margin-top:12px"><button class="s" data-x>Batal</button><button data-ok>Terapkan jadwal</button></div>`, (b, close) => {
+      const cb = () => [...b.querySelectorAll('[data-c]')], dt = i => b.querySelector('[data-d="' + i + '"]');
+      const sync = () => { cb().forEach(c => { dt(c.dataset.c).disabled = !c.checked; }); b.querySelector('[data-n]').textContent = cb().filter(c => c.checked).length + ' dipilih'; };
+      cb().forEach(c => c.onchange = sync);
+      b.querySelector('[data-all]').onclick = () => { cb().forEach(c => c.checked = true); sync(); };
+      b.querySelector('[data-none]').onclick = () => { cb().forEach(c => c.checked = false); sync(); };
+      b.querySelector('[data-x]').onclick = close;
+      b.querySelector('[data-fill]').onclick = () => {
+        const sel = cb().filter(c => c.checked), s0 = b.querySelector('[data-s]').value, t0 = b.querySelector('[data-t]').value || '08:00', g = Math.max(1, +b.querySelector('[data-g]').value || 1);
+        if (!sel.length) return toast('Centang artikel dulu', true); if (!s0) return toast('Isi tanggal mulai', true);
+        sel.forEach((c, n) => { const d = new Date(s0 + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + n * g); dt(c.dataset.c).value = d.toISOString().slice(0, 10) + 'T' + t0; });
+        toast('Tanggal terisi. Cek lalu ketuk Terapkan jadwal.');
+      };
+      b.querySelector('[data-ok]').onclick = async () => {
+        const sel = cb().filter(c => c.checked); if (!sel.length) return toast('Centang artikel dulu', true);
+        if (sel.some(c => !dt(c.dataset.c).value)) return toast('Ada artikel yang belum punya tanggal. Ketuk Isi tanggal otomatis.', true);
+        const low = sel.filter(c => scores[+c.dataset.c].score < 80).length;
+        if (low && !confirm(low + ' artikel skornya di bawah 80. Tetap jadwalkan?')) return;
+        const past = sel.filter(c => Date.parse(dt(c.dataset.c).value + ':00+07:00') <= Date.now()).length;
+        if (past && !confirm(past + ' artikel waktunya sudah lewat, akan langsung terbit pada build berikutnya. Lanjut?')) return;
+        const now = new Date().toISOString();
+        sel.forEach(c => { const a = A[+c.dataset.c]; a.status = 'scheduled'; a.publishAt = dt(c.dataset.c).value + ':00+07:00'; a.updated = now; });
+        close(); await save('articles', 'Jadwalkan ' + sel.length + ' artikel'); VIEWS.articles(v);
+      };
+    });
+  };
   $('#ideas').onclick = () => {
     const T = { hard: ['Panduan lengkap {k}: yang harus Anda tahu', '{k}: perbandingan dan rekomendasi {y}'], medium: ['{k}: harga, spesifikasi, dan pilihan varian', 'Kelebihan dan kekurangan {k} menurut pengguna'], low: ['Cara mudah {k} untuk pemula', '{k}: pertanyaan yang sering diajukan'] };
     const used = new Set(A.map(a => (a.keyword || '').toLowerCase())), IDEAS = [];

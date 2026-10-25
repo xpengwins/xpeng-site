@@ -20,6 +20,8 @@ ul{margin:8px 0 0 18px}li{margin:4px 0;font-size:.88rem}
 .rk{color:var(--warn)}
 a{color:var(--ac)}a.src{display:inline-block;min-height:32px;padding:4px 0}
 .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ck{display:flex;gap:10px;align-items:flex-start}.ck input{width:24px;height:24px;flex:none;margin-top:2px;accent-color:#2ee6b6}.ck>div{flex:1;min-width:0}
+.sel{position:sticky;bottom:0;z-index:15;background:#0a0b0df5;border-top:1px solid var(--line);padding:10px 16px calc(10px + env(safe-area-inset-bottom));display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin:0 -16px}.sel span{flex:1;min-width:120px}
 .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:#12352c;border:1px solid var(--ac);padding:10px 18px;border-radius:99px;z-index:99;max-width:92%}
 @media(prefers-reduced-motion:no-preference){button{transition:background .15s}}
 </style></head><body>
@@ -29,12 +31,14 @@ a{color:var(--ac)}a.src{display:inline-block;min-height:32px;padding:4px 0}
 <p class="muted" id="meta">Memuat…</p>
 <div id="comp"></div>
 <div class="fl" id="fl"></div>
+<div class="row" style="margin:0 0 4px"><button id="pall">Pilih semua yang tampil</button><button id="pnone">Kosongkan</button></div>
 <div id="list"></div>
+<div class="sel"><span id="cnt">0 dipilih</span><button class="go" id="bulk">Salin perintah terpilih</button></div>
 <p class="muted" style="margin-top:24px">Halaman ini hanya saran. Tidak ada artikel yang ditulis atau diterbitkan otomatis. Berita hanya pemicu ide: artikel harus ditulis ulang orisinal dari data resmi, dan harga hanya dari pricelist resmi.</p>
 </main>
 <script>
 (function () {
-  var F = 'semua', DATA = null, $ = function (s) { return document.querySelector(s); };
+  var F = 'semua', DATA = null, PICK = {}, $ = function (s) { return document.querySelector(s); };
   var FILTERS = [['semua', 'Semua'], ['inti', 'Niche inti'], ['luas', 'Niche luas'], ['berita', 'Berita'], ['tren', 'Tren'], ['pencarian', 'Pertanyaan'], ['baru', 'Baru minggu ini']];
   function el(t, c, x) { var e = document.createElement(t); if (c) e.className = c; if (x != null) e.textContent = x; return e; }
   function toast(m) { var t = el('div', 'toast', m); document.body.appendChild(t); setTimeout(function () { t.remove(); }, 2200); }
@@ -45,6 +49,12 @@ a{color:var(--ac)}a.src{display:inline-block;min-height:32px;padding:4px 0}
   function cmd(x) {
     return 'Tulis artikel orisinal 800+ kata tentang: ' + x.topik + '.\nSudut: ' + (x.saranSudut || '') + '\nSyarat: skor SEO 100, ada Jawaban singkat + FAQ, link internal dan sumber, harga hanya dari pricelist resmi, tulis ulang dengan kata sendiri (jangan salin berita).' + (x.miripArtikel ? '\nCatatan: mirip artikel /artikel/' + x.miripArtikel + '/ , sebaiknya perbarui artikel itu.' : '');
   }
+  function bulkCmd(arr) {
+    return 'Tolong buatkan ' + arr.length + ' artikel orisinal untuk website xpengwins.com, lalu langsung simpan ke admin (data/articles.json di repo xpengwins/xpeng-site) dengan status "draft". Jangan terbitkan dan jangan beri tanggal terbit.\n\nSyarat tiap artikel: 800+ kata, ditulis ulang dengan kata sendiri (jangan salin berita), riset sumber resmi dulu, ada "Jawaban singkat" di awal dan FAQ, link internal dan sumber, skor SEO 100, harga hanya dari pricelist resmi. Isi semua kolom: title, slug, keyword, description, image, imageAlt, date, status="draft", category, body. Tambahkan saja ke artikel yang ada, jangan ubah artikel lama. Setelah selesai, laporkan judul dan skor SEO tiap artikel.\n\nDaftar topik:\n' +
+      arr.map(function (x, i) { return (i + 1) + '. ' + x.topik + '\n   Sudut: ' + (x.saranSudut || '-') + (x.miripArtikel ? '\n   Catatan: mirip /artikel/' + x.miripArtikel + '/ , sebaiknya perbarui artikel itu, bukan buat baru.' : '') + (x.risiko && x.risiko.length ? '\n   Hati-hati: ' + x.risiko.join('; ') : ''); }).join('\n');
+  }
+  function key(x) { return x.topik; }
+  function count() { var n = Object.keys(PICK).length; $('#cnt').textContent = n + ' dipilih'; $('#bulk').disabled = !n; $('#bulk').style.opacity = n ? 1 : .5; }
   function safeUrl(u) { return /^https?:\/\//i.test(u || '') ? u : ''; }
   function render() {
     var L = $('#list'); L.textContent = '';
@@ -53,7 +63,9 @@ a{color:var(--ac)}a.src{display:inline-block;min-height:32px;padding:4px 0}
     });
     if (!items.length) { L.appendChild(el('p', 'muted', 'Tidak ada saran untuk filter ini.')); return; }
     items.forEach(function (x) {
-      var c = el('div', 'card');
+      var c = el('div', 'card'), w = el('div', 'ck'), cb = el('input'), body = el('div'); cb.type = 'checkbox'; cb.checked = !!PICK[key(x)]; cb.setAttribute('aria-label', 'Pilih ' + x.topik);
+      cb.onchange = function () { if (cb.checked) PICK[key(x)] = x; else delete PICK[key(x)]; count(); };
+      w.appendChild(cb); w.appendChild(body); c.appendChild(w); var host = c; c = body;
       c.appendChild(el('h2', '', x.topik));
       var p = el('div');
       p.appendChild(el('span', 'pill ' + (x.kelompok === 'inti' ? 'in' : 'lu'), x.kelompok === 'inti' ? 'Niche inti' : 'Niche luas'));
@@ -71,13 +83,17 @@ a{color:var(--ac)}a.src{display:inline-block;min-height:32px;padding:4px 0}
         srcs.forEach(function (s) { var a = el('a', 'src', (s.media || 'sumber') + ' · ' + (s.tanggal || '') + ' · ' + (s.judul || '').slice(0, 70)); a.href = safeUrl(s.link); a.target = '_blank'; a.rel = 'noopener nofollow'; c.appendChild(a); c.appendChild(el('br')); });
       }
       var r = el('div', 'row'), b = el('button', 'go', 'Salin perintah ke Claude'); b.onclick = function () { copy(cmd(x)); }; r.appendChild(b); c.appendChild(r);
-      L.appendChild(c);
+      L.appendChild(host);
     });
   }
   function filters() {
     var f = $('#fl'); f.textContent = '';
     FILTERS.forEach(function (x) { var b = el('button', F === x[0] ? 'on' : '', x[1]); b.onclick = function () { F = x[0]; filters(); render(); }; f.appendChild(b); });
   }
+  $('#pall').onclick = function () { document.querySelectorAll('#list .ck input').forEach(function (i) { if (!i.checked) { i.checked = true; i.onchange(); } }); };
+  $('#pnone').onclick = function () { PICK = {}; document.querySelectorAll('#list .ck input').forEach(function (i) { i.checked = false; }); count(); };
+  $('#bulk').onclick = function () { var a = Object.keys(PICK).map(function (k) { return PICK[k]; }); if (!a.length) return toast('Centang topik dulu'); copy(bulkCmd(a)); };
+  count();
   fetch('../data/riset-tren.json?t=' + Date.now()).then(function (r) { if (!r.ok) throw 0; return r.json(); }).then(function (d) {
     DATA = d;
     var dt = d.generated ? new Date(d.generated).toLocaleString('id-ID', { timeZone: 'Asia/Jakarta', day: 'numeric', month: 'long', year: 'numeric', hour: '2-digit', minute: '2-digit' }) + ' WIB' : '-';
