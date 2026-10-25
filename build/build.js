@@ -54,15 +54,18 @@ const orgLd = () => ({ '@context': 'https://schema.org', '@type': 'AutoDealer', 
 const crumbs = list => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c[0], item: abs(c[1]) })) });
 const faqLd = f => f && f.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
 
+/* gambar utama halaman (yang diberi fetchpriority=high) dicatat agar bisa di-preload di <head> */
+let LCP_SRC = '';
 function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'website', noindex }) {
   const img = abs(image || 'assets/img/g6-black-depan.webp');
+  const preload = LCP_SRC ? `<link rel="preload" as="image" href="${E(LCP_SRC)}" fetchpriority="high">\n` : ''; LCP_SRC = '';
   return `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${E(title)}</title><meta name="description" content="${E(desc)}">
 <link rel="canonical" href="${abs(p)}"><meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'}">
 <meta name="theme-color" content="#0a0b0d"><link rel="icon" href="${u('assets/img/favicon.svg')}" type="image/svg+xml"><link rel="manifest" href="${u('manifest.webmanifest')}">
 <meta property="og:type" content="${type}"><meta property="og:title" content="${E(title)}"><meta property="og:description" content="${E(desc)}"><meta property="og:image" content="${img}"><meta property="og:url" content="${abs(p)}"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="${E(site.name)}">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="stylesheet" href="${u('assets/css/style.css')}?v=${ASSET_V}">
+${preload}<link rel="stylesheet" href="${u('assets/css/style.css')}?v=${ASSET_V}">
 ${jsonld(orgLd())}${ld.filter(Boolean).map(jsonld).join('')}
 ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${site.ga4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${site.ga4}');</script>` : ''}
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
@@ -81,7 +84,7 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script async src="ht
 }
 
 /* ---------- komponen ---------- */
-const picture = (src, alt, cls = '', w = 1200, h = 800, lazy = true) => `<img class="${cls}" src="${u(src)}" alt="${E(alt)}" width="${w}" height="${h}" ${lazy ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
+const picture = (src, alt, cls = '', w = 1200, h = 800, lazy = true) => (!lazy && !LCP_SRC && (LCP_SRC = u(src)), '') + `<img class="${cls}" src="${u(src)}" alt="${E(alt)}" width="${w}" height="${h}" ${lazy ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
 const modelCard = m => `<article class="mcard"><a href="${u('/model/' + m.slug + '/')}">${picture(m.hero, m.name + ' - ' + m.type, 'mimg', 960, 640)}<div class="mbody"><span class="eyebrow">${E(m.type)}</span><h3>${E(m.name)}</h3><p>${E(m.tagline)}</p><strong class="mprice">Mulai ${rp(Math.min(...m.variants.map(v => v.price)))}</strong><span class="more">Lihat model →</span></div></a></article>`;
 const artCard = a => `<article class="acard"><a href="${u('/artikel/' + a.slug + '/')}">${a.image ? picture(a.image, a.imageAlt || a.title, '', 600, 400) : '<div class="noimg"></div>'}<div><span class="eyebrow">${E(a.category || 'Artikel')}</span><h3>${E(a.title)}</h3><p>${E(a.description)}</p></div></a></article>`;
 const faqBlock = f => f && f.length ? `<section class="faq"><h2>Pertanyaan yang sering diajukan</h2>${f.map(x => `<details><summary>${E(x.q)}</summary><p>${E(x.a)}</p></details>`).join('')}</section>` : '';
