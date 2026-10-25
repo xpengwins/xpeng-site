@@ -132,7 +132,7 @@ ${articles.length ? `<section class="section"><div class="wrap"><span class="eye
   return layout({ title: `XPeng Indonesia | Harga X9 & G6 ${site.pricelistUpdate}`.slice(0, 62), desc: site.description, path: '/', body, image: m0.hero, ld: [faqLd(HOME_FAQ), { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: abs('/') }] });
 }
 const HOME_FAQ = [
-  { q: 'Berapa harga XPeng di Indonesia?', a: `Per ${site.pricelistUpdate}: ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join(', ')}.` },
+  { q: 'Berapa harga XPeng di Indonesia?', a: `Saat ini: ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join(', ')}.` },
   { q: 'Model XPeng apa saja yang tersedia?', a: 'Saat ini tersedia XPeng X9 (MPV listrik 7 kursi) dan XPeng G6 (SUV coupe listrik).' },
   { q: 'Bagaimana cara test drive XPeng?', a: 'Isi formulir test drive atau hubungi kami lewat WhatsApp, lalu konsultan akan mengatur jadwal.' }
 ];
@@ -156,9 +156,9 @@ function modelIndex() {
 
 function pricelist() {
   const rows = models.flatMap(m => m.variants.map(v => ({ m, v })));
-  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Pricelist</nav><h1>Pricelist XPeng ${E(site.pricelistUpdate)}</h1><p>Harga resmi dealer, update ${E(site.pricelistUpdate)}. Hubungi kami untuk konfirmasi dan promo terbaru.</p></div></section>
+  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Pricelist</nav><h1>Pricelist XPeng ${E(site.pricelistUpdate)}</h1><p>Harga resmi dealer, selalu diperbarui. Hubungi kami untuk konfirmasi dan promo terbaru.</p></div></section>
 <section class="section"><div class="wrap two"><div><div class="tbl"><table class="ptbl full"><thead><tr><th>Varian</th><th>Harga</th><th></th></tr></thead><tbody>${rows.map(r => `<tr><th><a href="${u('/model/' + r.m.slug + '/')}">${E(r.v.name)}</a></th><td>${rp(r.v.price)}</td><td><a class="btn sm" href="${wa('Halo, saya mau penawaran ' + r.v.name)}" rel="noopener">Tanya</a></td></tr>`).join('')}</tbody></table></div>
-<p class="muted">Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda.</p>${picture('assets/img/pricelist-juli-2026.webp', 'Pricelist XPeng X9 dan G6 update Juli 2026', 'plimg', 540, 656)}</div>${leadForm}</div></section>
+<p class="muted">Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda.</p>${picture('assets/img/pricelist-juli-2026.webp', 'Pricelist XPeng X9 dan G6 terbaru', 'plimg', 540, 656)}</div>${leadForm}</div></section>
 ${leasingSection()}
 <section class="section"><div class="wrap narrow">${faqBlock(HOME_FAQ)}</div></section>`;
   return layout({ title: `Pricelist XPeng ${site.pricelistUpdate} | X9 dan G6`, desc: `Pricelist XPeng ${site.pricelistUpdate}: ${rows.map(r => r.v.name.replace('XPeng ', '').replace('New ', '') + ' ' + rp(r.v.price)).join(', ')}.`.slice(0, 160), path: '/pricelist/', body, image: 'assets/img/pricelist-juli-2026.webp', ld: [crumbs([['Beranda', '/'], ['Pricelist', '/pricelist/']]), faqLd(HOME_FAQ)] });
