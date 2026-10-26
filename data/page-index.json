@@ -1,0 +1,1705 @@
+{
+ "/": {
+  "label": "XPeng Indonesia | Harga X9 & G6 Terbaru",
+  "sections": [
+   {
+    "key": "hero",
+    "title": "XPeng X9",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "MPV Listrik Premium 7 Kursi",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "h1"
+     },
+     {
+      "t": "Mobil Listrik Premium. Cerdas, Senyap, Berkelas.",
+      "tag": "em"
+     },
+     {
+      "t": "Lihat XPeng X9",
+      "tag": "a"
+     },
+     {
+      "t": "Test Drive",
+      "tag": "a"
+     },
+     {
+      "t": "SUV Coupe Listrik Premium",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "h2"
+     },
+     {
+      "t": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+      "tag": "em"
+     },
+     {
+      "t": "Lihat XPeng G6",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9"
+     },
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "XPeng G6"
+     }
+    ]
+   },
+   {
+    "key": "bagian-2",
+    "title": "800V · Platform pengisian cepat · 8 th",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "800V",
+      "tag": "b"
+     },
+     {
+      "t": "Platform pengisian cepat",
+      "tag": "span"
+     },
+     {
+      "t": "8 th",
+      "tag": "b"
+     },
+     {
+      "t": "Garansi baterai dan kendaraan",
+      "tag": "span"
+     },
+     {
+      "t": "7 & 5",
+      "tag": "b"
+     },
+     {
+      "t": "Pilihan kursi: X9 dan G6",
+      "tag": "span"
+     },
+     {
+      "t": "Harga mulai dari",
+      "tag": "span"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "pilih-xpeng-sesuai-gaya-hidup-anda",
+    "title": "Pilih XPeng sesuai gaya hidup Anda",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Model",
+      "tag": "span"
+     },
+     {
+      "t": "Pilih XPeng sesuai gaya hidup Anda",
+      "tag": "h2"
+     },
+     {
+      "t": "MPV Listrik Premium 7 Kursi",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "h3"
+     },
+     {
+      "t": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
+      "tag": "p"
+     },
+     {
+      "t": "Lihat model →",
+      "tag": "span"
+     },
+     {
+      "t": "SUV Coupe Listrik Premium",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "h3"
+     },
+     {
+      "t": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9 - MPV Listrik Premium 7 Kursi"
+     },
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "XPeng G6 - SUV Coupe Listrik Premium"
+     }
+    ]
+   },
+   {
+    "key": "cfg",
+    "title": "Atur mobil dan hitung cicilan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Interaktif",
+      "tag": "span"
+     },
+     {
+      "t": "Atur mobil dan hitung cicilan",
+      "tag": "h2"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "button"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "button"
+     },
+     {
+      "t": "Varian",
+      "tag": "label"
+     },
+     {
+      "t": "Uang muka:",
+      "tag": "label"
+     },
+     {
+      "t": "Tenor:",
+      "tag": "label"
+     },
+     {
+      "t": "Bunga per tahun:",
+      "tag": "label"
+     },
+     {
+      "t": "Estimasi cicilan per bulan",
+      "tag": "span"
+     },
+     {
+      "t": "Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.",
+      "tag": "small"
+     },
+     {
+      "t": "Minta penawaran via WhatsApp",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "cicilan-mudah-lewat-partner-leasing",
+    "title": "Cicilan mudah lewat partner leasing",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pembiayaan",
+      "tag": "span"
+     },
+     {
+      "t": "Cicilan mudah lewat partner leasing",
+      "tag": "h2"
+     },
+     {
+      "t": "Pilih skema cicilan yang sesuai. Konsultan kami membantu simulasi dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     }
+    ]
+   },
+   {
+    "key": "lihat-langsung-detailnya",
+    "title": "Lihat langsung detailnya",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Galeri",
+      "tag": "span"
+     },
+     {
+      "t": "Lihat langsung detailnya",
+      "tag": "h2"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "Galeri XPeng foto 1"
+     },
+     {
+      "src": "/assets/img/x9-white-belakang.webp",
+      "alt": "Galeri XPeng foto 2"
+     },
+     {
+      "src": "/assets/img/x9-white-dashboard.webp",
+      "alt": "Galeri XPeng foto 3"
+     },
+     {
+      "src": "/assets/img/x9-white-kursi-2.webp",
+      "alt": "Galeri XPeng foto 4"
+     },
+     {
+      "src": "/assets/img/x9-white-kursi-3.webp",
+      "alt": "Galeri XPeng foto 5"
+     },
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "Galeri XPeng foto 6"
+     },
+     {
+      "src": "/assets/img/g6-black-belakang.webp",
+      "alt": "Galeri XPeng foto 7"
+     },
+     {
+      "src": "/assets/img/g6-black-samping.webp",
+      "alt": "Galeri XPeng foto 8"
+     },
+     {
+      "src": "/assets/img/g6-black-front.webp",
+      "alt": "Galeri XPeng foto 9"
+     },
+     {
+      "src": "/assets/img/g6-silver-jalan.webp",
+      "alt": "Galeri XPeng foto 10"
+     }
+    ]
+   },
+   {
+    "key": "harga-xpeng-terbaru",
+    "title": "Harga XPeng terbaru",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pricelist Terbaru",
+      "tag": "span"
+     },
+     {
+      "t": "Harga XPeng terbaru",
+      "tag": "h2"
+     },
+     {
+      "t": "Lihat pricelist lengkap",
+      "tag": "a"
+     },
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "panduan-memilih-mobil-listrik",
+    "title": "Panduan memilih mobil listrik",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Artikel",
+      "tag": "span"
+     },
+     {
+      "t": "Panduan memilih mobil listrik",
+      "tag": "h2"
+     },
+     {
+      "t": "Panduan Beli",
+      "tag": "span"
+     },
+     {
+      "t": "Garansi Baterai XPeng 8 Tahun: Apa yang Dicakup?",
+      "tag": "h3"
+     },
+     {
+      "t": "Garansi baterai XPeng 8 tahun, servis gratis 5 tahun, dan cara membaca syaratnya. Panduan sederhana sebelum Anda membeli X9 atau G6 di Indonesia.",
+      "tag": "p"
+     },
+     {
+      "t": "Teknologi",
+      "tag": "span"
+     },
+     {
+      "t": "Pengisian Cepat 800V XPeng: Cara Kerja dan Syaratnya",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa itu pengisian cepat 800V pada XPeng? Pahami arti 10-80% sekitar 12 menit, istilah 5C, dan syarat charger agar waktu charging benar-benar singkat.",
+      "tag": "p"
+     },
+     {
+      "t": "XPILOT 4.0 XPeng: Fitur, Cara Pakai, dan Batasannya",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa itu XPILOT 4.0 pada XPeng G6 dan X9? Pelajari fitur Navigation Guided Pilot, parkir otomatis, sensor, serta batasan dan tips pemakaiannya di Indonesia.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/222775.webp",
+      "alt": "Detail XPeng G6 abu-abu, mobil listrik dengan garansi baterai 8 tahun"
+     },
+     {
+      "src": "/assets/img/g6-black-belakang.webp",
+      "alt": "XPeng G6 hitam tampak belakang, mobil listrik dengan pengisian cepat 800V"
+     },
+     {
+      "src": "/assets/img/g6-black-front.webp",
+      "alt": "XPeng G6 hitam dengan sistem bantuan berkendara XPILOT 4.0"
+     }
+    ]
+   },
+   {
+    "key": "pertanyaan-yang-sering-diajukan",
+    "title": "Pertanyaan yang sering diajukan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pertanyaan yang sering diajukan",
+      "tag": "h2"
+     },
+     {
+      "t": "Berapa harga XPeng di Indonesia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Model XPeng apa saja yang tersedia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Saat ini tersedia XPeng X9 (MPV listrik 7 kursi) dan XPeng G6 (SUV coupe listrik).",
+      "tag": "p"
+     },
+     {
+      "t": "Bagaimana cara test drive XPeng?",
+      "tag": "summary"
+     },
+     {
+      "t": "Isi formulir test drive atau hubungi kami lewat WhatsApp, lalu konsultan akan mengatur jadwal.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/model/": {
+  "label": "Model XPeng: X9 dan G6 Mobil Listrik Premium",
+  "sections": [
+   {
+    "key": "model-xpeng-di-indonesia",
+    "title": "Model XPeng di Indonesia",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "› Model",
+      "tag": "nav"
+     },
+     {
+      "t": "Model XPeng di Indonesia",
+      "tag": "h1"
+     },
+     {
+      "t": "Pilih antara MPV listrik 7 kursi XPeng X9 dan SUV coupe XPeng G6.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "mpv-listrik-premium-7-kursi",
+    "title": "MPV Listrik Premium 7 Kursi",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "MPV Listrik Premium 7 Kursi",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "h3"
+     },
+     {
+      "t": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
+      "tag": "p"
+     },
+     {
+      "t": "Lihat model →",
+      "tag": "span"
+     },
+     {
+      "t": "SUV Coupe Listrik Premium",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "h3"
+     },
+     {
+      "t": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9 - MPV Listrik Premium 7 Kursi"
+     },
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "XPeng G6 - SUV Coupe Listrik Premium"
+     }
+    ]
+   }
+  ]
+ },
+ "/pricelist/": {
+  "label": "Pricelist XPeng Terbaru | X9 dan G6",
+  "sections": [
+   {
+    "key": "pricelist-xpeng-terbaru",
+    "title": "Pricelist XPeng Terbaru",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "› Pricelist",
+      "tag": "nav"
+     },
+     {
+      "t": "Pricelist XPeng Terbaru",
+      "tag": "h1"
+     },
+     {
+      "t": "Harga resmi dealer, selalu diperbarui. Hubungi kami untuk konfirmasi dan promo terbaru.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "bagian-2",
+    "title": "Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda. ",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda.",
+      "tag": "p"
+     },
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/pricelist-juli-2026.webp",
+      "alt": "Pricelist XPeng X9 dan G6 terbaru"
+     }
+    ]
+   },
+   {
+    "key": "cicilan-mudah-lewat-partner-leasing",
+    "title": "Cicilan mudah lewat partner leasing",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pembiayaan",
+      "tag": "span"
+     },
+     {
+      "t": "Cicilan mudah lewat partner leasing",
+      "tag": "h2"
+     },
+     {
+      "t": "Pilih skema cicilan yang sesuai. Konsultan kami membantu simulasi dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     }
+    ]
+   },
+   {
+    "key": "pertanyaan-yang-sering-diajukan",
+    "title": "Pertanyaan yang sering diajukan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pertanyaan yang sering diajukan",
+      "tag": "h2"
+     },
+     {
+      "t": "Berapa harga XPeng di Indonesia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Model XPeng apa saja yang tersedia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Saat ini tersedia XPeng X9 (MPV listrik 7 kursi) dan XPeng G6 (SUV coupe listrik).",
+      "tag": "p"
+     },
+     {
+      "t": "Bagaimana cara test drive XPeng?",
+      "tag": "summary"
+     },
+     {
+      "t": "Isi formulir test drive atau hubungi kami lewat WhatsApp, lalu konsultan akan mengatur jadwal.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/kontak/": {
+  "label": "Kontak dan Test Drive XPeng X9 G6 | Hubungi Kami",
+  "sections": [
+   {
+    "key": "kontak-dan-test-drive-xpeng",
+    "title": "Kontak dan Test Drive XPeng",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "› Kontak",
+      "tag": "nav"
+     },
+     {
+      "t": "Hubungi kami",
+      "tag": "span"
+     },
+     {
+      "t": "Kontak dan Test Drive XPeng",
+      "tag": "h1"
+     },
+     {
+      "t": "Ngobrol santai soal XPeng impian Anda. Konsultan kami siap membantu lewat WhatsApp.",
+      "tag": "em"
+     },
+     {
+      "t": "Tanya harga XPeng X9",
+      "tag": "a"
+     },
+     {
+      "t": "Tanya harga XPeng G6",
+      "tag": "a"
+     },
+     {
+      "t": "Simulasi cicilan",
+      "tag": "a"
+     },
+     {
+      "t": "Booking test drive",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "ikuti-kami",
+    "title": "Ikuti kami",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "WhatsApp",
+      "tag": "b"
+     },
+     {
+      "t": "+62 857-1020-8822",
+      "tag": "span"
+     },
+     {
+      "t": "Cara tercepat: tanya harga, promo, dan jadwal test drive.",
+      "tag": "small"
+     },
+     {
+      "t": "Chat sekarang",
+      "tag": "span"
+     },
+     {
+      "t": "Telepon",
+      "tag": "b"
+     },
+     {
+      "t": "Ketuk untuk menelepon langsung.",
+      "tag": "small"
+     },
+     {
+      "t": "Email",
+      "tag": "b"
+     },
+     {
+      "t": "Sales@xpengwins.com",
+      "tag": "span"
+     },
+     {
+      "t": "Untuk penawaran resmi dan kerja sama.",
+      "tag": "small"
+     },
+     {
+      "t": "Kirim email",
+      "tag": "span"
+     },
+     {
+      "t": "Showroom",
+      "tag": "b"
+     },
+     {
+      "t": "Tangerang Selatan, Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320",
+      "tag": "span"
+     },
+     {
+      "t": "Ketuk untuk membuka rute di Google Maps.",
+      "tag": "small"
+     },
+     {
+      "t": "Buka peta",
+      "tag": "span"
+     },
+     {
+      "t": "Ikuti kami",
+      "tag": "h2"
+     },
+     {
+      "t": "Promo, konten model baru, dan kabar terbaru XPeng.",
+      "tag": "p"
+     },
+     {
+      "t": "Instagram",
+      "tag": "span"
+     },
+     {
+      "t": "TikTok",
+      "tag": "span"
+     },
+     {
+      "t": "YouTube",
+      "tag": "span"
+     },
+     {
+      "t": "Facebook",
+      "tag": "span"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "testdrive",
+    "title": "Test drive dalam 3 langkah",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     },
+     {
+      "t": "Mudah dan cepat",
+      "tag": "span"
+     },
+     {
+      "t": "Test drive dalam 3 langkah",
+      "tag": "h2"
+     },
+     {
+      "t": "Isi formulir",
+      "tag": "b"
+     },
+     {
+      "t": "Nama, model, dan rencana pembelian Anda.",
+      "tag": "span"
+     },
+     {
+      "t": "Chat WhatsApp",
+      "tag": "b"
+     },
+     {
+      "t": "Formulir otomatis terkirim ke konsultan kami.",
+      "tag": "span"
+     },
+     {
+      "t": "Jadwal disepakati",
+      "tag": "b"
+     },
+     {
+      "t": "Datang ke showroom dan coba langsung mobilnya.",
+      "tag": "span"
+     },
+     {
+      "t": "Jam operasional",
+      "tag": "h3"
+     },
+     {
+      "t": "Senin - Minggu: 08.30 - 19.00",
+      "tag": "li"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "kunjungi-showroom-kami",
+    "title": "Kunjungi showroom kami",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Lokasi",
+      "tag": "span"
+     },
+     {
+      "t": "Kunjungi showroom kami",
+      "tag": "h2"
+     },
+     {
+      "t": "Dealer XPeng",
+      "tag": "p"
+     },
+     {
+      "t": "Tangerang Selatan, Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320",
+      "tag": "p"
+     },
+     {
+      "t": "Buka di Google Maps",
+      "tag": "a"
+     },
+     {
+      "t": "Tentang kami",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/tentang/": {
+  "label": "Tentang Kami | Lokasi dan Profil Dealer XPeng",
+  "sections": [
+   {
+    "key": "tentang-dealer-xpeng",
+    "title": "Tentang Dealer XPeng",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "› Tentang",
+      "tag": "nav"
+     },
+     {
+      "t": "Tentang kami",
+      "tag": "span"
+     },
+     {
+      "t": "Tentang Dealer XPeng",
+      "tag": "h1"
+     },
+     {
+      "t": "Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320",
+      "tag": "em"
+     },
+     {
+      "t": "Hubungi kami",
+      "tag": "a"
+     },
+     {
+      "t": "Lihat lokasi",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/215630.webp",
+      "alt": "Showroom Dealer XPeng"
+     }
+    ]
+   },
+   {
+    "key": "mengenal-kami-lebih-dekat",
+    "title": "Mengenal kami lebih dekat",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Profil",
+      "tag": "span"
+     },
+     {
+      "t": "Mengenal kami lebih dekat",
+      "tag": "h2"
+     },
+     {
+      "t": "Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320",
+      "tag": "p"
+     },
+     {
+      "t": "Layanan kami",
+      "tag": "h3"
+     },
+     {
+      "t": "Penjualan",
+      "tag": "li"
+     },
+     {
+      "t": "Bengkel",
+      "tag": "li"
+     },
+     {
+      "t": "SparePart",
+      "tag": "li"
+     },
+     {
+      "t": "Body Repair",
+      "tag": "li"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "foto-dealer-kami",
+    "title": "Foto dealer kami",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Showroom",
+      "tag": "span"
+     },
+     {
+      "t": "Foto dealer kami",
+      "tag": "h2"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/215630.webp",
+      "alt": "Showroom Dealer XPeng"
+     },
+     {
+      "src": "/assets/img/215638.webp",
+      "alt": "Showroom Dealer XPeng"
+     },
+     {
+      "src": "/assets/img/215636.webp",
+      "alt": "Showroom Dealer XPeng"
+     },
+     {
+      "src": "/assets/img/215632.webp",
+      "alt": "Showroom Dealer XPeng"
+     },
+     {
+      "src": "/assets/img/215634.webp",
+      "alt": "Showroom Dealer XPeng"
+     }
+    ]
+   },
+   {
+    "key": "lokasi",
+    "title": "Alamat showroom",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Lokasi",
+      "tag": "span"
+     },
+     {
+      "t": "Alamat showroom",
+      "tag": "h2"
+     },
+     {
+      "t": "Dealer XPeng",
+      "tag": "p"
+     },
+     {
+      "t": "Tangerang Selatan, Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Serpong Utara, South Tangerang City, Banten 15320",
+      "tag": "p"
+     },
+     {
+      "t": "Jam operasional",
+      "tag": "h3"
+     },
+     {
+      "t": "Senin - Minggu: 08.30 - 19.00",
+      "tag": "li"
+     },
+     {
+      "t": "Buka di Google Maps",
+      "tag": "a"
+     },
+     {
+      "t": "Tanya lewat WhatsApp",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/model/xpeng-x9/": {
+  "label": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
+  "sections": [
+   {
+    "key": "xpeng-x9",
+    "title": "XPeng X9",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "Model",
+      "tag": "a"
+     },
+     {
+      "t": "› XPeng X9",
+      "tag": "nav"
+     },
+     {
+      "t": "MPV Listrik Premium 7 Kursi",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "h1"
+     },
+     {
+      "t": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
+      "tag": "p"
+     },
+     {
+      "t": "Tanya harga",
+      "tag": "a"
+     },
+     {
+      "t": "Test Drive",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9 MPV Listrik Premium 7 Kursi"
+     }
+    ]
+   },
+   {
+    "key": "keunggulan-xpeng-x9",
+    "title": "Keunggulan XPeng X9",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Keunggulan XPeng X9",
+      "tag": "h2"
+     },
+     {
+      "t": "7 kursi dengan captain seat baris kedua",
+      "tag": "li"
+     },
+     {
+      "t": "Pintu geser elektrik yang mudah untuk keluarga",
+      "tag": "li"
+     },
+     {
+      "t": "Platform 800V dengan pengisian daya cepat",
+      "tag": "li"
+     },
+     {
+      "t": "Layar hiburan besar dan kabin senyap",
+      "tag": "li"
+     },
+     {
+      "t": "Garansi baterai dan kendaraan 8 tahun (syarat berlaku)",
+      "tag": "li"
+     },
+     {
+      "t": "Harga XPeng X9 Terbaru",
+      "tag": "h2"
+     },
+     {
+      "t": "Spesifikasi ringkas",
+      "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "cicilan-mudah-lewat-partner-leasing",
+    "title": "Cicilan mudah lewat partner leasing",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pembiayaan",
+      "tag": "span"
+     },
+     {
+      "t": "Cicilan mudah lewat partner leasing",
+      "tag": "h2"
+     },
+     {
+      "t": "Pilih skema cicilan yang sesuai. Konsultan kami membantu simulasi dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     }
+    ]
+   },
+   {
+    "key": "galeri-xpeng-x9",
+    "title": "Galeri XPeng X9",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Galeri XPeng X9",
+      "tag": "h2"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9 foto 1"
+     },
+     {
+      "src": "/assets/img/x9-white-belakang.webp",
+      "alt": "XPeng X9 foto 2"
+     },
+     {
+      "src": "/assets/img/x9-white-dashboard.webp",
+      "alt": "XPeng X9 foto 3"
+     },
+     {
+      "src": "/assets/img/x9-white-kursi-2.webp",
+      "alt": "XPeng X9 foto 4"
+     },
+     {
+      "src": "/assets/img/x9-white-kursi-3.webp",
+      "alt": "XPeng X9 foto 5"
+     },
+     {
+      "src": "/assets/img/x9-white-kursi-belakang.webp",
+      "alt": "XPeng X9 foto 6"
+     },
+     {
+      "src": "/assets/img/x9-black-depan.webp",
+      "alt": "XPeng X9 foto 7"
+     },
+     {
+      "src": "/assets/img/x9-grey-depan.webp",
+      "alt": "XPeng X9 foto 8"
+     },
+     {
+      "src": "/assets/img/x9-silver-depan.webp",
+      "alt": "XPeng X9 foto 9"
+     }
+    ]
+   },
+   {
+    "key": "pertanyaan-yang-sering-diajukan",
+    "title": "Pertanyaan yang sering diajukan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pertanyaan yang sering diajukan",
+      "tag": "h2"
+     },
+     {
+      "t": "Berapa harga XPeng X9 di Indonesia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Berapa kursi XPeng X9?",
+      "tag": "summary"
+     },
+     {
+      "t": "XPeng X9 adalah MPV 7 kursi dengan captain seat di baris kedua.",
+      "tag": "p"
+     },
+     {
+      "t": "Apakah bisa test drive XPeng X9?",
+      "tag": "summary"
+     },
+     {
+      "t": "Bisa. Kirim pesan WhatsApp untuk jadwal test drive di showroom.",
+      "tag": "p"
+     },
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/model/xpeng-g6/": {
+  "label": "XPeng G6 Harga & Spesifikasi 2026 | SUV Listrik Premium",
+  "sections": [
+   {
+    "key": "xpeng-g6",
+    "title": "XPeng G6",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "Model",
+      "tag": "a"
+     },
+     {
+      "t": "› XPeng G6",
+      "tag": "nav"
+     },
+     {
+      "t": "SUV Coupe Listrik Premium",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "h1"
+     },
+     {
+      "t": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+      "tag": "p"
+     },
+     {
+      "t": "Tanya harga",
+      "tag": "a"
+     },
+     {
+      "t": "Test Drive",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "XPeng G6 SUV Coupe Listrik Premium"
+     }
+    ]
+   },
+   {
+    "key": "keunggulan-xpeng-g6",
+    "title": "Keunggulan XPeng G6",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Keunggulan XPeng G6",
+      "tag": "h2"
+     },
+     {
+      "t": "Baterai LFP 80,8 kWh dengan platform 800V 5C",
+      "tag": "li"
+     },
+     {
+      "t": "Jarak tempuh hingga 525 km (WLTP) untuk G6 Pro",
+      "tag": "li"
+     },
+     {
+      "t": "Varian AWD dua motor sekitar 487 HP",
+      "tag": "li"
+     },
+     {
+      "t": "Garansi baterai dan kendaraan 8 tahun/160.000 km",
+      "tag": "li"
+     },
+     {
+      "t": "Gratis servis 5 tahun/100.000 km",
+      "tag": "li"
+     },
+     {
+      "t": "Harga XPeng G6 Terbaru",
+      "tag": "h2"
+     },
+     {
+      "t": "Spesifikasi ringkas",
+      "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "cicilan-mudah-lewat-partner-leasing",
+    "title": "Cicilan mudah lewat partner leasing",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pembiayaan",
+      "tag": "span"
+     },
+     {
+      "t": "Cicilan mudah lewat partner leasing",
+      "tag": "h2"
+     },
+     {
+      "t": "Pilih skema cicilan yang sesuai. Konsultan kami membantu simulasi dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     }
+    ]
+   },
+   {
+    "key": "galeri-xpeng-g6",
+    "title": "Galeri XPeng G6",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Galeri XPeng G6",
+      "tag": "h2"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g6-black-depan.webp",
+      "alt": "XPeng G6 foto 1"
+     },
+     {
+      "src": "/assets/img/g6-black-belakang.webp",
+      "alt": "XPeng G6 foto 2"
+     },
+     {
+      "src": "/assets/img/g6-black-samping.webp",
+      "alt": "XPeng G6 foto 3"
+     },
+     {
+      "src": "/assets/img/g6-black-front.webp",
+      "alt": "XPeng G6 foto 4"
+     },
+     {
+      "src": "/assets/img/g6-silver-jalan.webp",
+      "alt": "XPeng G6 foto 5"
+     },
+     {
+      "src": "/assets/img/g6-white-detail.webp",
+      "alt": "XPeng G6 foto 6"
+     },
+     {
+      "src": "/assets/img/g6-grey-showroom.webp",
+      "alt": "XPeng G6 foto 7"
+     },
+     {
+      "src": "/assets/img/g6-grey-front.webp",
+      "alt": "XPeng G6 foto 8"
+     },
+     {
+      "src": "/assets/img/g6-grey-detail.webp",
+      "alt": "XPeng G6 foto 9"
+     }
+    ]
+   },
+   {
+    "key": "pertanyaan-yang-sering-diajukan",
+    "title": "Pertanyaan yang sering diajukan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pertanyaan yang sering diajukan",
+      "tag": "h2"
+     },
+     {
+      "t": "Berapa harga XPeng G6 di Indonesia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Berapa jarak tempuh XPeng G6 Pro?",
+      "tag": "summary"
+     },
+     {
+      "t": "Hingga sekitar 525 km berdasarkan standar WLTP dengan baterai LFP 80,8 kWh.",
+      "tag": "p"
+     },
+     {
+      "t": "Apa beda G6 Pro dan G6 AWD?",
+      "tag": "summary"
+     },
+     {
+      "t": "G6 Pro memakai satu motor penggerak roda belakang. G6 AWD punya motor tambahan di depan sehingga tenaganya jauh lebih besar, dengan jarak tempuh sedikit lebih pendek.",
+      "tag": "p"
+     },
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ }
+}
