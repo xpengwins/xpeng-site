@@ -59,84 +59,140 @@
     "perf:/kontak/",
     "perf:/artikel/pengisian-cepat-800v-xpeng/"
    ]
+  },
+  {
+   "date": "2026-10-26",
+   "at": "2026-10-26T03:06:58.430Z",
+   "urls": 26,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 75,
+   "pages": {
+    "/": {
+     "score": 84,
+     "lcp": 3603,
+     "cls": 0,
+     "tbt": 7,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 100,
+     "lcp": 1055,
+     "cls": 0,
+     "tbt": 17,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 86,
+     "lcp": 3810,
+     "cls": 0,
+     "tbt": 39,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 85,
+     "lcp": 3766,
+     "cls": 0,
+     "tbt": 35,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 70,
+     "lcp": 6138,
+     "cls": 0,
+     "tbt": 32,
+     "field": null
+    },
+    "/artikel/garansi-baterai-xpeng/": {
+     "score": 88,
+     "lcp": 3880,
+     "cls": 0.016,
+     "tbt": 91,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-g6/",
+    "perf:/pricelist/",
+    "perf:/kontak/",
+    "perf:/artikel/garansi-baterai-xpeng/"
+   ]
   }
  ],
- "generated": "2026-10-25T14:57:30.364Z",
+ "generated": "2026-10-26T03:06:58.430Z",
  "latest": {
-  "date": "2026-10-25",
-  "at": "2026-10-25T14:57:30.364Z",
-  "urls": 25,
+  "date": "2026-10-26",
+  "at": "2026-10-26T03:06:58.430Z",
+  "urls": 26,
   "errors": 0,
   "slow": 0,
-  "avgMs": 130,
+  "avgMs": 75,
   "pages": {
    "/": {
-    "score": 85,
-    "lcp": 3765,
+    "score": 84,
+    "lcp": 3603,
     "cls": 0,
-    "tbt": 183,
+    "tbt": 7,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 85,
-    "lcp": 3994,
+    "score": 100,
+    "lcp": 1055,
     "cls": 0,
-    "tbt": 180,
+    "tbt": 17,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 88,
-    "lcp": 3845,
+    "score": 86,
+    "lcp": 3810,
     "cls": 0,
-    "tbt": 59,
+    "tbt": 39,
     "field": null
    },
    "/pricelist/": {
-    "score": 90,
-    "lcp": 3696,
+    "score": 85,
+    "lcp": 3766,
     "cls": 0,
-    "tbt": 47,
+    "tbt": 35,
     "field": null
    },
    "/kontak/": {
-    "score": 66,
-    "lcp": 6400,
+    "score": 70,
+    "lcp": 6138,
     "cls": 0,
-    "tbt": 276,
+    "tbt": 32,
     "field": null
    },
-   "/artikel/pengisian-cepat-800v-xpeng/": {
-    "score": 93,
-    "lcp": 2737,
-    "cls": 0.085,
-    "tbt": 148,
+   "/artikel/garansi-baterai-xpeng/": {
+    "score": 88,
+    "lcp": 3880,
+    "cls": 0.016,
+    "tbt": 91,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/model/xpeng-x9/",
    "perf:/model/xpeng-g6/",
    "perf:/pricelist/",
    "perf:/kontak/",
-   "perf:/artikel/pengisian-cepat-800v-xpeng/"
+   "perf:/artikel/garansi-baterai-xpeng/"
   ],
   "issueText": [
-   "🟠 /: LCP 3.8 dtk",
-   "🟠 /model/xpeng-x9/: LCP 4.0 dtk",
+   "🟠 /: LCP 3.6 dtk",
    "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
-   "🟠 /pricelist/: LCP 3.7 dtk",
-   "🔴 /kontak/: skor 66, LCP 6.4 dtk, TBT 276 ms",
-   "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
+   "🟠 /pricelist/: LCP 3.8 dtk",
+   "🔴 /kontak/: skor 70, LCP 6.1 dtk",
+   "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.9 dtk"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/model/xpeng-x9/",
   "perf:/model/xpeng-g6/",
   "perf:/pricelist/",
   "perf:/kontak/",
-  "perf:/artikel/pengisian-cepat-800v-xpeng/"
+  "perf:/artikel/garansi-baterai-xpeng/"
  ],
- "alertSig": "perf:/|perf:/artikel/pengisian-cepat-800v-xpeng/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/|perf:/pricelist/"
+ "alertSig": "perf:/|perf:/artikel/garansi-baterai-xpeng/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/pricelist/"
 }

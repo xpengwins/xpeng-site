@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-25T14:57:38.616Z",
+ "generated": "2026-10-26T03:07:42.446Z",
  "traffic": {
   "periode": [
-   "2026-09-25",
-   "2026-10-22"
+   "2026-09-26",
+   "2026-10-23"
   ],
   "klik": 1,
-  "tayang": 33,
-  "posisi": 20.4,
+  "tayang": 40,
+  "posisi": 19.6,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -70,9 +70,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 17,
-  "terjadwal": 15,
-  "terbitBerikutnya": "2026-10-26T09:00:00+07:00",
+  "terbit": 18,
+  "terjadwal": 14,
+  "terbitBerikutnya": "2026-10-26T15:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -81,12 +81,11 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: LCP 3.8 dtk",
-    "🟠 /model/xpeng-x9/: LCP 4.0 dtk",
+    "🟠 /: LCP 3.6 dtk",
     "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
-    "🟠 /pricelist/: LCP 3.7 dtk",
-    "🔴 /kontak/: skor 66, LCP 6.4 dtk, TBT 276 ms",
-    "🟠 /artikel/pengisian-cepat-800v-xpeng/: LCP 2.7 dtk"
+    "🟠 /pricelist/: LCP 3.8 dtk",
+    "🔴 /kontak/: skor 70, LCP 6.1 dtk",
+    "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.9 dtk"
    ]
   },
   "sosmed": [
@@ -101,17 +100,27 @@
  },
  "E_riset_tren": [
   {
-   "topik": "7 Fakta Ngeri BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M",
+   "topik": "20 Mobil Listrik September 2026, BYD Atto 1 Memimpin dengan 4.840 Unit",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "alasan": "15 media membahas dalam 14 hari, terbaru 2 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Mobil Hybrid Bakal Bebas Ganjil Genap, Kemenperin Godok Aturannya - Kabarindo.com",
+   "topik": "7 Fakta Ngeri BYD Tabrak 4 Mobil dan Lindas Ojol di Blok M",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "7 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Periklindo Dorong Pemerintah Beri Insentif Mobil Hybrid",
    "jenis": "berita",
    "skor": 80,
    "alasan": "29 media membahas dalam 14 hari, terbaru hari ini",
@@ -121,7 +130,18 @@
    ]
   },
   {
-   "topik": "Mobil Listrik Bekas China Diburu Eropa, Harga Turun Hingga 40 Persen",
+   "topik": "10 Rekomendasi Mobil untuk Anak Muda Terbaik 2026",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Klaim perbandingan wajib bersumber dan tulis standar pengujian (NEDC/WLTP).",
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "OJK Dorong Asuransi Umum Tingkatkan Premi Kendaraan Bermotor",
    "jenis": "berita",
    "skor": 80,
    "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
@@ -132,53 +152,34 @@
    ]
   },
   {
-   "topik": "Video: Pengusaha: Insentif Mobil Hybrid Dongkrak Penjualan Otomotif RI",
+   "topik": "Perbankan Menilai DP 0 Persen Belum Pulihkan Kredit Kendaraan",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "77 media membahas dalam 14 hari, terbaru hari ini",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "OJK Kaji Tarif Premi Khusus Asuransi Kendaraan Listrik",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "6 media membahas dalam 14 hari, terbaru 2 hari lalu",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
    "risiko": [
     "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Bikin Laporan Polisi Fiktif Demi Klaim Asuransi, Tiga Pria di Batam Terancam Hukuman Berat",
+   "topik": "Modifikasi Tangki Mobil dan Langsir 448 Liter Solar Subsidi, Sopir di Aceh Selatan Diciduk Polisi",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "6 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "alasan": "8 media membahas dalam 14 hari, terbaru 2 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "BBM Subsidi Diduga Dipakai Industri, Bahlil Soroti Truk Tambang dan Perkebunan",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "13 media membahas dalam 14 hari, terbaru 2 hari lalu",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Chery Perluas Bisnis Indonesia Berkat Penjualan Jaecoo J5",
+   "topik": "Denza Digugat Lagi, Apa Tanggapan BYD Indonesia?",
    "jenis": "berita",
    "skor": 73,
-   "alasan": "14 media membahas dalam 14 hari, terbaru 6 hari lalu",
+   "alasan": "71 media membahas dalam 14 hari, terbaru 2 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
+    "Topik sensitif: tulis netral, jangan menyudutkan merek, rujuk sumber resmi.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   }
