@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T03:07:42.446Z",
+ "generated": "2026-10-26T15:51:36.530Z",
  "traffic": {
   "periode": [
    "2026-09-26",
@@ -70,9 +70,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 18,
-  "terjadwal": 14,
-  "terbitBerikutnya": "2026-10-26T15:00:00+07:00",
+  "terbit": 19,
+  "terjadwal": 13,
+  "terbitBerikutnya": "2026-10-27T09:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -81,20 +81,19 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: LCP 3.6 dtk",
-    "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
+    "🔴 /: skor 58, LCP 9.1 dtk",
+    "📉 / turun 85 → 58 sejak pengecekan sebelumnya (melambat)",
+    "🟠 /model/xpeng-x9/: LCP 2.9 dtk",
+    "🟠 /model/xpeng-g6/: LCP 3.0 dtk",
     "🟠 /pricelist/: LCP 3.8 dtk",
-    "🔴 /kontak/: skor 70, LCP 6.1 dtk",
-    "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.9 dtk"
+    "🔴 /kontak/: skor 69, LCP 6.2 dtk",
+    "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.0 dtk"
    ]
   },
   "sosmed": [
    "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "⚠️ Facebook: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
    "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "⚠️ Instagram: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
    "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "⚠️ Threads: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
    "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
   ]
  },

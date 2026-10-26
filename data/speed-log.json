@@ -62,57 +62,59 @@
   },
   {
    "date": "2026-10-26",
-   "at": "2026-10-26T03:06:58.430Z",
-   "urls": 26,
+   "at": "2026-10-26T15:51:29.463Z",
+   "urls": 27,
    "errors": 0,
    "slow": 0,
-   "avgMs": 75,
+   "avgMs": 171,
    "pages": {
     "/": {
-     "score": 84,
-     "lcp": 3603,
+     "score": 58,
+     "lcp": 9131,
      "cls": 0,
-     "tbt": 7,
+     "tbt": 170,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 100,
-     "lcp": 1055,
+     "score": 94,
+     "lcp": 2912,
      "cls": 0,
-     "tbt": 17,
+     "tbt": 107,
      "field": null
     },
     "/model/xpeng-g6/": {
-     "score": 86,
-     "lcp": 3810,
+     "score": 95,
+     "lcp": 3007,
      "cls": 0,
-     "tbt": 39,
+     "tbt": 20,
      "field": null
     },
     "/pricelist/": {
-     "score": 85,
-     "lcp": 3766,
+     "score": 88,
+     "lcp": 3778,
      "cls": 0,
-     "tbt": 35,
+     "tbt": 99,
      "field": null
     },
     "/kontak/": {
-     "score": 70,
-     "lcp": 6138,
+     "score": 69,
+     "lcp": 6192,
      "cls": 0,
      "tbt": 32,
      "field": null
     },
     "/artikel/garansi-baterai-xpeng/": {
-     "score": 88,
-     "lcp": 3880,
+     "score": 92,
+     "lcp": 3041,
      "cls": 0.016,
-     "tbt": 91,
+     "tbt": 158,
      "field": null
     }
    },
    "issues": [
     "perf:/",
+    "drop:/",
+    "perf:/model/xpeng-x9/",
     "perf:/model/xpeng-g6/",
     "perf:/pricelist/",
     "perf:/kontak/",
@@ -120,79 +122,85 @@
    ]
   }
  ],
- "generated": "2026-10-26T03:06:58.430Z",
+ "generated": "2026-10-26T15:51:29.463Z",
  "latest": {
   "date": "2026-10-26",
-  "at": "2026-10-26T03:06:58.430Z",
-  "urls": 26,
+  "at": "2026-10-26T15:51:29.463Z",
+  "urls": 27,
   "errors": 0,
   "slow": 0,
-  "avgMs": 75,
+  "avgMs": 171,
   "pages": {
    "/": {
-    "score": 84,
-    "lcp": 3603,
+    "score": 58,
+    "lcp": 9131,
     "cls": 0,
-    "tbt": 7,
+    "tbt": 170,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 100,
-    "lcp": 1055,
+    "score": 94,
+    "lcp": 2912,
     "cls": 0,
-    "tbt": 17,
+    "tbt": 107,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 86,
-    "lcp": 3810,
+    "score": 95,
+    "lcp": 3007,
     "cls": 0,
-    "tbt": 39,
+    "tbt": 20,
     "field": null
    },
    "/pricelist/": {
-    "score": 85,
-    "lcp": 3766,
+    "score": 88,
+    "lcp": 3778,
     "cls": 0,
-    "tbt": 35,
+    "tbt": 99,
     "field": null
    },
    "/kontak/": {
-    "score": 70,
-    "lcp": 6138,
+    "score": 69,
+    "lcp": 6192,
     "cls": 0,
     "tbt": 32,
     "field": null
    },
    "/artikel/garansi-baterai-xpeng/": {
-    "score": 88,
-    "lcp": 3880,
+    "score": 92,
+    "lcp": 3041,
     "cls": 0.016,
-    "tbt": 91,
+    "tbt": 158,
     "field": null
    }
   },
   "issues": [
    "perf:/",
+   "drop:/",
+   "perf:/model/xpeng-x9/",
    "perf:/model/xpeng-g6/",
    "perf:/pricelist/",
    "perf:/kontak/",
    "perf:/artikel/garansi-baterai-xpeng/"
   ],
   "issueText": [
-   "🟠 /: LCP 3.6 dtk",
-   "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
+   "🔴 /: skor 58, LCP 9.1 dtk",
+   "📉 / turun 85 → 58 sejak pengecekan sebelumnya (melambat)",
+   "🟠 /model/xpeng-x9/: LCP 2.9 dtk",
+   "🟠 /model/xpeng-g6/: LCP 3.0 dtk",
    "🟠 /pricelist/: LCP 3.8 dtk",
-   "🔴 /kontak/: skor 70, LCP 6.1 dtk",
-   "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.9 dtk"
+   "🔴 /kontak/: skor 69, LCP 6.2 dtk",
+   "🟠 /artikel/garansi-baterai-xpeng/: LCP 3.0 dtk"
   ]
  },
  "alertKeys": [
   "perf:/",
+  "drop:/",
+  "perf:/model/xpeng-x9/",
   "perf:/model/xpeng-g6/",
   "perf:/pricelist/",
   "perf:/kontak/",
   "perf:/artikel/garansi-baterai-xpeng/"
  ],
- "alertSig": "perf:/|perf:/artikel/garansi-baterai-xpeng/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/pricelist/"
+ "alertSig": "drop:/|perf:/|perf:/artikel/garansi-baterai-xpeng/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/|perf:/pricelist/"
 }

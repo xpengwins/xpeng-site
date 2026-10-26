@@ -1,27 +1,31 @@
 {
- "generated": "2026-10-26T03:06:59.163Z",
+ "generated": "2026-10-26T15:51:30.207Z",
  "platforms": {
   "facebook": {
-   "posted48h": 7,
-   "posted24h": 6,
+   "posted48h": 8,
+   "posted24h": 2,
    "bursts": 2,
    "error": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
   },
   "instagram": {
-   "posted48h": 7,
-   "posted24h": 6,
+   "posted48h": 8,
+   "posted24h": 2,
    "bursts": 2,
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 12
+    "media": 13
    },
-   "posts": 12,
+   "posts": 13,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-26T02:40:43+0000",
+   "last": "2026-10-26T08:50:35+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/De85K2mjrBH/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/De8O1M7jTFM/",
      "eng": 0
@@ -29,43 +33,39 @@
     {
      "url": "https://www.instagram.com/p/De6S1xoFzMa/",
      "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/De5wcV6Fz1c/",
-     "eng": 0
     }
    ],
    "extra": {
     "quota": {
-     "used": 6,
+     "used": 2,
      "total": 100
     }
    }
   },
   "threads": {
-   "posted48h": 7,
-   "posted24h": 6,
+   "posted48h": 8,
+   "posted24h": 2,
    "bursts": 2,
    "account": {
     "name": "@xpengwins",
     "followers": 0
    },
-   "posts": 8,
+   "posts": 9,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 46,
-   "last": "2026-10-26T02:41:04+0000",
+   "avgReachRecent": 42,
+   "last": "2026-10-26T08:50:55+0000",
    "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De85MIvlls-",
+     "eng": 0
+    },
     {
      "url": "https://www.threads.com/@xpengwins/post/De8O3Txl5az",
      "eng": 0
     },
     {
      "url": "https://www.threads.com/@xpengwins/post/De6S3J-luk5",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De5wdmwDJJk",
      "eng": 0
     }
    ],
@@ -74,11 +74,8 @@
  },
  "issues": [
   "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "⚠️ Facebook: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
   "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "⚠️ Instagram: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
   "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "⚠️ Threads: 6 posting dalam 24 jam, terlalu padat. Disarankan maksimal 3 sampai 4 per hari.",
   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
  ],
  "alertKeys": [
