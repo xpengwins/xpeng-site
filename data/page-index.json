@@ -145,6 +145,26 @@
     ]
    },
    {
+    "key": "video-beranda",
+    "title": "Rasakan XPeng dalam gerak",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Video",
+      "tag": "span"
+     },
+     {
+      "t": "Rasakan XPeng dalam gerak",
+      "tag": "h2"
+     },
+     {
+      "t": "Every Drive of Life",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
     "key": "cfg",
     "title": "Atur mobil dan hitung cicilan",
     "hasH1": false,

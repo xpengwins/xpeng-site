@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-26T02:38:08.216Z",
+ "date": "2026-10-26T05:07:56.435Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -34,7 +34,10 @@
     "branch": "main"
    },
    "facebook": "https://www.facebook.com/share/1EDphzUCPP/",
-   "ga4": "G-DKWBG156T4"
+   "ga4": "G-DKWBG156T4",
+   "heroVideo": "https://youtu.be/3Ct_Sm8Njsc?si=1Oj0ZC_1RDxZmXnx",
+   "heroVideoJudul": "",
+   "heroVideoTeks": "Every Drive of Life"
   },
   "models": [
    {
