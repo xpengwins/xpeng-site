@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -699,6 +699,59 @@ VIEWS.backup = async v => {
 };
 
 /* --- Pengaturan --- */
+/* ---------- Halaman: edit teks dan foto, atur urutan, tampil/sembunyi bagian ---------- */
+let PG = '/';
+VIEWS.pages = async v => {
+  v.innerHTML = '<h2>Halaman</h2><p class="muted">Memuat…</p>';
+  let idx = {}, all = {};
+  try { idx = JSON.parse(unb64((await getFile('data/page-index.json')).content)); } catch (e) {}
+  try { all = JSON.parse(unb64((await getFile('data/pages.json')).content)) || {}; } catch (e) { all = {}; }
+  if (!S.media) { try { S.media = (await listDir('assets/img')).filter(x => x.type === 'file').map(x => x.name); } catch (e) { S.media = []; } }
+  const paths = Object.keys(idx);
+  if (!paths.length) { v.innerHTML = '<h2>Halaman</h2><div class="card"><p>Daftar bagian halaman belum tersedia. Buka Beranda, ketuk "Jalankan build & cek ulang", tunggu 2 menit, lalu buka menu ini lagi.</p></div>'; return; }
+  if (!idx[PG]) PG = paths[0];
+  let origin = ''; try { origin = new URL((S.d.site && S.d.site.baseUrl) || '').origin; } catch (e) {}
+  let W, opened = new Set();
+  const load = () => { const c = all[PG] || {}; W = { order: (c.order || []).slice(), hidden: (c.hidden || []).slice(), text: JSON.parse(JSON.stringify(c.text || {})), img: JSON.parse(JSON.stringify(c.img || {})) }; };
+  const secs = () => { const by = {}; idx[PG].sections.forEach(x => by[x.key] = x); const ks = []; W.order.forEach(k => by[k] && !ks.includes(k) && ks.push(k)); idx[PG].sections.forEach(x => ks.includes(x.key) || ks.push(x.key)); return ks.map(k => by[k]); };
+  const pv = src => !src ? '' : /^https?:/.test(src) ? src : origin + (src.startsWith('/') ? '' : '/') + src;
+  const tag = t => ({ h1: 'Judul utama', h2: 'Judul', h3: 'Sub judul', p: 'Paragraf', li: 'Daftar', a: 'Tautan/tombol', button: 'Tombol', summary: 'Pertanyaan', label: 'Label', span: 'Teks', b: 'Teks tebal', strong: 'Teks tebal', em: 'Teks miring', small: 'Teks kecil' }[t] || 'Teks');
+  const draw = () => {
+    const list = secs();
+    $('#pgl').innerHTML = list.map((s, i) => {
+      const hid = W.hidden.includes(s.key), op = opened.has(s.key);
+      const ed = op ? `<div class="pgedit">${s.texts.length ? s.texts.map((t, ti) => { const cur = (W.text[s.key] || {})[t.t]; const val = cur == null ? t.t : cur; return `<label>${tag(t.tag)}<textarea style="min-height:46px" rows="${Math.min(6, Math.max(1, Math.ceil(val.length / 38)))}" data-s="${E(s.key)}" data-ti="${ti}">${E(val)}</textarea></label>`; }).join('') : '<p class="muted">Tidak ada teks yang bisa diedit di bagian ini.</p>'}
+${s.imgs.map((im, n) => { const o = (W.img[s.key] || {})[n] || {}, cur = o.src || ''; return `<div class="pgimg"><img src="${E(pv(cur || im.src))}" alt="" style="height:70px;border-radius:8px;border:1px solid var(--line)"><label>Foto ${n + 1}<select data-is="${E(s.key)}" data-in="${n}"><option value="">(foto saat ini)</option>${(S.media || []).map(m => `<option value="assets/img/${E(m)}"${cur === 'assets/img/' + m ? ' selected' : ''}>${E(m)}</option>`).join('')}</select></label><label>Teks alternatif foto<input data-as="${E(s.key)}" data-an="${n}" value="${E(o.alt != null ? o.alt : im.alt)}"></label></div>`; }).join('')}</div>` : '';
+      return `<div class="card" ${hid ? 'style="opacity:.6"' : ''}><b>${E(s.title)}</b><div class="muted">${hid ? '🙈 Disembunyikan • ' : ''}${s.texts.length} teks • ${s.imgs.length} foto${s.hasH1 ? ' • memuat judul utama' : ''}</div>
+<div class="row" style="margin-top:10px;flex-wrap:nowrap"><button class="s sm" style="flex:1;padding:8px 4px" data-noc data-up="${E(s.key)}" ${i === 0 ? 'disabled' : ''} aria-label="Naikkan">▲</button><button class="s sm" style="flex:1;padding:8px 4px" data-noc data-dn="${E(s.key)}" ${i === list.length - 1 ? 'disabled' : ''} aria-label="Turunkan">▼</button><button class="s sm" style="flex:2;padding:8px 4px" data-noc data-ed="${E(s.key)}">${op ? 'Tutup' : '✏️ Edit isi'}</button><button class="s sm" style="flex:2;padding:8px 4px" data-noc data-hd="${E(s.key)}" ${s.hasH1 ? 'disabled title="Memuat judul utama, tidak boleh disembunyikan"' : ''}>${hid ? '👁 Tampilkan' : '🙈 Sembunyi'}</button></div>${ed}</div>`;
+    }).join('');
+    const L = $('#pgl');
+    L.querySelectorAll('[data-up]').forEach(b => b.onclick = () => { const k = secs().map(x => x.key), i = k.indexOf(b.dataset.up); [k[i - 1], k[i]] = [k[i], k[i - 1]]; W.order = k; draw(); });
+    L.querySelectorAll('[data-dn]').forEach(b => b.onclick = () => { const k = secs().map(x => x.key), i = k.indexOf(b.dataset.dn); [k[i + 1], k[i]] = [k[i], k[i + 1]]; W.order = k; draw(); });
+    L.querySelectorAll('[data-hd]').forEach(b => b.onclick = () => { const k = b.dataset.hd, i = W.hidden.indexOf(k); if (i >= 0) W.hidden.splice(i, 1); else W.hidden.push(k); draw(); });
+    L.querySelectorAll('[data-ed]').forEach(b => b.onclick = () => { const k = b.dataset.ed; opened.has(k) ? opened.delete(k) : opened.add(k); draw(); });
+    const sec = k => idx[PG].sections.find(x => x.key === k);
+    L.querySelectorAll('textarea[data-s]').forEach(t => t.oninput = () => { const s = sec(t.dataset.s), o = s.texts[+t.dataset.ti].t; (W.text[s.key] = W.text[s.key] || {})[o] = t.value; });
+    L.querySelectorAll('select[data-is]').forEach(t => t.onchange = () => { const k = t.dataset.is, n = t.dataset.in; ((W.img[k] = W.img[k] || {})[n] = W.img[k][n] || {}).src = t.value; draw(); });
+    L.querySelectorAll('input[data-as]').forEach(t => t.oninput = () => { const k = t.dataset.as, n = t.dataset.an; ((W.img[k] = W.img[k] || {})[n] = W.img[k][n] || {}).alt = t.value; });
+  };
+  const clean = () => {
+    const out = {}; if (W.order.length) out.order = W.order; if (W.hidden.length) out.hidden = W.hidden;
+    const tx = {}; Object.keys(W.text).forEach(k => { Object.keys(W.text[k]).forEach(o => { const n = W.text[k][o]; if (n != null && n.trim() && n.trim() !== o) (tx[k] = tx[k] || {})[o] = n.trim(); }); }); if (Object.keys(tx).length) out.text = tx;
+    const im = {}; Object.keys(W.img).forEach(k => { const s = idx[PG].sections.find(x => x.key === k); Object.keys(W.img[k]).forEach(n => { const o = W.img[k][n], orig = s && s.imgs[n] ? s.imgs[n] : { alt: '' }, r = {}; if (o.src) r.src = o.src; if (o.alt != null && o.alt.trim() && o.alt.trim() !== orig.alt) r.alt = o.alt.trim(); if (Object.keys(r).length) (im[k] = im[k] || {})[n] = r; }); }); if (Object.keys(im).length) out.img = im;
+    return out;
+  };
+  v.innerHTML = `<h2>Halaman</h2><p class="muted">Atur isi dan susunan halaman website. Ketuk ▲ ▼ untuk memindah bagian, Sembunyikan untuk menyembunyikan, Edit isi untuk mengganti teks dan foto. Ketuk Simpan, lalu situs diperbarui otomatis ±2 menit.</p>
+<div class="card"><label>Halaman<select id="pgs">${paths.map(p => `<option value="${E(p)}"${p === PG ? ' selected' : ''}>${E(idx[p].label.split('|')[0].trim())} (${E(p)})</option>`).join('')}</select></label>
+<div class="row" style="margin-top:10px"><button id="pgsv">Simpan halaman ini</button><a class="btn s" id="pgvw" target="_blank" rel="noopener" style="text-decoration:none">Lihat halaman</a><button class="s d" id="pgrs">Kembalikan ke awal</button></div></div>
+<div id="pgl"></div><div class="row" style="margin:12px 0 80px"><button id="pgsv2">Simpan halaman ini</button></div>`;
+  const view = () => { $('#pgvw').href = origin + PG; };
+  $('#pgs').onchange = () => { PG = $('#pgs').value; opened = new Set(); load(); view(); draw(); };
+  const doSave = async () => { const c = clean(); if (Object.keys(c).length) all[PG] = c; else delete all[PG]; S.d.pages = all; await save('pages', 'Atur halaman ' + PG); };
+  $('#pgsv').onclick = doSave; $('#pgsv2').onclick = doSave;
+  $('#pgrs').onclick = async () => { delete all[PG]; S.d.pages = all; load(); await save('pages', 'Kembalikan halaman ' + PG); draw(); };
+  load(); view(); draw();
+};
 VIEWS.settings = v => {
   const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['ga4', 'ID Google Analytics 4 (contoh G-ABC123XYZ, boleh kosong)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube'], ['facebook', 'URL Facebook']];
   v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
