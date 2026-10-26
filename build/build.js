@@ -60,6 +60,9 @@ const faqLd = f => f && f.length ? { '@context': 'https://schema.org', '@type': 
 function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'website', noindex }) {
   const img = abs(image || 'assets/img/g6-black-depan.webp');
   if (EDITABLE(p)) { try { const r = PL.process(p, body, PAGES_CFG[p] || {}, { esc: E, u }); body = r.html; PAGE_INDEX[p] = { label: title, sections: r.sections }; } catch (e) { console.log('Penyusun halaman dilewati untuk ' + p + ': ' + e.message); } }
+  /* kecepatan: iframe berat (video YouTube, Google Maps) tidak dimuat saat halaman dibuka. src dipindah ke data-src,
+     lalu app.js mengisinya kembali hanya setelah halaman selesai dimuat dan iframe mendekati layar. */
+  body = body.replace(/<iframe\b([^>]*?)\ssrc="(https:\/\/(?:www\.youtube-nocookie\.com|www\.youtube\.com|www\.google\.com\/maps|maps\.google\.com)[^"]*)"([^>]*)>/g, (m, a, s, b) => '<iframe' + (a + b).replace(/\sloading="lazy"/g, '') + ' data-src="' + s + '">');
   /* gambar utama halaman (fetchpriority=high) di-preload; dibaca dari hasil akhir supaya ikut berubah jika fotonya diganti dari admin */
   const pm = body.match(/<img\b[^>]*\bsrc="([^"]+)"[^>]*\bfetchpriority="high"/), preload = pm ? `<link rel="preload" as="image" href="${pm[1]}" fetchpriority="high">\n` : '';
   return `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
@@ -70,7 +73,7 @@ function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'websit
 <meta name="twitter:card" content="summary_large_image">
 ${preload}<link rel="stylesheet" href="${u('assets/css/style.css')}?v=${ASSET_V}">
 ${jsonld(orgLd())}${ld.filter(Boolean).map(jsonld).join('')}
-${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script async src="https://www.googletagmanager.com/gtag/js?id=${site.ga4}"></script><script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${site.ga4}');</script>` : ''}
+${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','${site.ga4}');addEventListener('load',function(){setTimeout(function(){var s=document.createElement('script');s.async=1;s.src='https://www.googletagmanager.com/gtag/js?id=${site.ga4}';document.head.appendChild(s)},300)});</script>` : ''}
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>

@@ -30,6 +30,12 @@ var tx='Halo, saya '+d.get('nama')+'. Saya mau test drive '+d.get('model')+'. Re
 /* reveal */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});$$('.section h2,.mcard,.acard,.stats>div,.panel,.stage,.ccard,.tl li,.mapbox,.soc li').forEach(function(el){el.classList.add('rv');io.observe(el)})}
 if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register(base+'/sw.js').catch(function(){})}
+/* iframe berat (video YouTube, Google Maps): baru dimuat setelah halaman selesai dan saat sudah dekat layar */
+(function(){var fr=$$('iframe[data-src]');if(!fr.length)return;
+function on(f){var s=f.getAttribute('data-src');if(s){f.removeAttribute('data-src');f.src=s}}
+function start(){if(!('IntersectionObserver' in window)){fr.forEach(on);return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){io.unobserve(e.target);on(e.target)}})},{rootMargin:'150px 0px'});fr.forEach(function(f){io.observe(f)})}
+if(document.readyState==='complete')start();else addEventListener('load',start)})();
 /* lightbox: klik foto galeri untuk zoom */
 (function(){var imgs=$$('.track.g img,[data-zoom]');if(!imgs.length)return;
 var ov=document.createElement('div');ov.className='lb';ov.hidden=true;ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','Pratinjau foto');
