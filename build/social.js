@@ -66,14 +66,16 @@ function texts(a, url, cfg) {
 }
 
 /* ---------- gambar JPG persegi untuk Instagram/Threads/Facebook (WebP tidak diterima Instagram) ---------- */
-async function makeJpg(a, origin) {
-  const out = path.join(ROOT, 'social', a.slug + '.jpg'), url = origin + '/social/' + a.slug + '.jpg';
+/* ukuran khusus Threads, bergantian tiap postingan: potret 4:5 (1080x1350) dan landscape 1,91:1 (1200x628) */
+const TH_FMT = { p: { suf: '--p45', w: 1080, h: 1350 }, l: { suf: '--l191', w: 1200, h: 628 } };
+async function makeJpg(a, origin, suf = '', W = 1080, H = 1080) {
+  const out = path.join(ROOT, 'social', a.slug + suf + '.jpg'), url = origin + '/social/' + a.slug + suf + '.jpg';
   if (fs.existsSync(out)) return { url, fresh: false };
   let sharp; try { sharp = require('sharp'); } catch (e) { throw new Error('sharp tidak terpasang'); }
   const rel = String(a.image || 'assets/img/g6-black-depan.webp').replace(/^\//, ''), src = path.join(ROOT, rel);
   if (!fs.existsSync(src)) throw new Error('gambar artikel tidak ditemukan: ' + rel);
   fs.mkdirSync(path.dirname(out), { recursive: true });
-  await sharp(src, { failOn: 'none' }).rotate().resize(1080, 1080, { fit: 'cover', position: sharp.strategy.attention }).flatten({ background: '#0a0b0d' }).jpeg({ quality: 86, mozjpeg: true }).toFile(out);
+  await sharp(src, { failOn: 'none' }).rotate().resize(W, H, { fit: 'cover', position: sharp.strategy.attention }).flatten({ background: '#0a0b0d' }).jpeg({ quality: 86, mozjpeg: true }).toFile(out);
   return { url, fresh: true };
 }
 
@@ -92,7 +94,7 @@ const SEND = {
     return (await api(GRAPH + '/' + IG.id + '/media_publish', { creation_id: m.id, access_token: IG.tok })).id;
   },
   threads: async (a, c) => {
-    const m = await api(THR + '/' + TH.id + '/threads', { media_type: 'IMAGE', image_url: c.img, text: c.t.th, access_token: TH.tok });
+    const m = await api(THR + '/' + TH.id + '/threads', { media_type: 'IMAGE', image_url: c.imgTh || c.img, text: c.t.th, access_token: TH.tok });
     await sleep(10000);
     for (let i = 0; ; i++) {
       const s = await api(THR + '/' + m.id, { fields: 'status,error_message', access_token: TH.tok }, 'GET');
@@ -138,7 +140,7 @@ function cleanImages(arts, cfg, keep) {
   if (DRY) return;
   try {
     for (const f of fs.readdirSync(path.join(ROOT, 'social'))) {
-      const slug = f.replace(/\.jpg$/, ''); if (keep.has(slug)) continue;
+      const slug = f.replace(/(--p45|--l191)?\.jpg$/, ''); if (keep.has(slug)) continue;
       const a = arts.find(x => x.slug === slug);
       if (!a || !(Date.parse(a.date) >= Date.now() - ((cfg.maxAgeDays || 3) + 7) * 864e5)) fs.unlinkSync(path.join(ROOT, 'social', f));
     }
@@ -190,6 +192,14 @@ function cleanImages(arts, cfg, keep) {
     const need = jobs.filter(j => [...j.plats].some(p => p !== 'telegram' && READY[p]));
     const imgs = {}; let fresh = false;
     for (const j of need) { try { const r = await makeJpg(j.a, origin); imgs[j.a.slug] = r.url; fresh = fresh || r.fresh; } catch (e) { imgs[j.a.slug] = null; note(j.a.slug, 'facebook', false, 'gagal buat gambar: ' + e.message); } }
+    /* gambar Threads: bergantian potret 4:5 dan landscape 1,91:1 (hitung dari jumlah postingan Threads sebelumnya) */
+    const thImgs = {}; let thN = Object.values(posted).filter(r => r && r.threads).length;
+    for (const j of need) {
+      if (!j.plats.has('threads') || !READY.threads || !imgs[j.a.slug]) continue;
+      const rec0 = posted[j.a.slug]; if (rec0 && rec0.threads && !j.force) continue;
+      const f = TH_FMT[thN++ % 2 === 0 ? 'p' : 'l'];
+      try { const r = await makeJpg(j.a, origin, f.suf, f.w, f.h); thImgs[j.a.slug] = r.url; fresh = fresh || r.fresh; } catch (e) { note(j.a.slug, 'threads', false, 'gagal buat gambar Threads, pakai persegi: ' + e.message); }
+    }
     if (fresh) gitPush('Gambar sosmed');
 
     // ---- kirim ----
@@ -198,6 +208,8 @@ function cleanImages(arts, cfg, keep) {
       const live = await waitLive(link, false);
       if (!live) { [...j.plats].forEach(p => note(a.slug, p, false, 'halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya')); continue; }
       const img = imgs[a.slug], t = texts(a, link, cfg);
+      let imgTh = thImgs[a.slug] || null;
+      if (imgTh && !(await waitLive(imgTh, true))) { note(a.slug, 'threads', false, 'gambar Threads belum tayang, pakai persegi'); imgTh = null; }
       if (img && [...j.plats].some(p => p !== 'telegram') && !(await waitLive(img, true))) { [...j.plats].filter(p => p !== 'telegram').forEach(p => note(a.slug, p, false, 'gambar JPG belum tayang di situs setelah 6 menit')); j.plats = new Set(['telegram'].filter(p => j.plats.has(p))); }
       for (const p of j.plats) {
         if (rec[p] && !j.force) { note(a.slug, p, true, 'sudah pernah diposting, dilewati'); continue; }
@@ -205,7 +217,7 @@ function cleanImages(arts, cfg, keep) {
         if (p !== 'telegram' && !img) { note(a.slug, p, false, 'tidak ada gambar JPG'); continue; }
         try {
           if (DRY) { console.log('[DRY] ' + p + ' <- ' + a.slug + '\n' + (p === 'facebook' ? t.fb : p === 'instagram' ? t.ig : p === 'threads' ? t.th : t.tg) + '\n'); continue; }
-          const id = await SEND[p](a, { img, t });
+          const id = await SEND[p](a, { img, imgTh: p === 'threads' ? imgTh : null, t });
           rec[p] = { id: String(id || ''), at: new Date().toISOString() }; if (rec._f) delete rec._f[p];
           note(a.slug, p, true, 'terkirim');
         } catch (e) {
