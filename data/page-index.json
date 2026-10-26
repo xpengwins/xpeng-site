@@ -428,6 +428,18 @@
       "tag": "p"
      },
      {
+      "t": "Perbandingan",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G6 Pro vs AWD: Bedanya dan Cara Memilih",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa beda XPeng G6 Pro vs AWD? Bandingkan harga, tenaga, jarak tempuh, dan penggerak roda. Panduan memilih varian G6 yang sesuai kebutuhan dan anggaran Anda.",
+      "tag": "p"
+     },
+     {
       "t": "Teknologi",
       "tag": "span"
      },
@@ -438,14 +450,6 @@
      {
       "t": "Apa itu pengisian cepat 800V pada XPeng? Pahami arti 10-80% sekitar 12 menit, istilah 5C, dan syarat charger agar waktu charging benar-benar singkat.",
       "tag": "p"
-     },
-     {
-      "t": "XPILOT 4.0 XPeng: Fitur, Cara Pakai, dan Batasannya",
-      "tag": "h3"
-     },
-     {
-      "t": "Apa itu XPILOT 4.0 pada XPeng G6 dan X9? Pelajari fitur Navigation Guided Pilot, parkir otomatis, sensor, serta batasan dan tips pemakaiannya di Indonesia.",
-      "tag": "p"
      }
     ],
     "imgs": [
@@ -454,12 +458,12 @@
       "alt": "Detail XPeng G6 abu-abu, mobil listrik dengan garansi baterai 8 tahun"
      },
      {
-      "src": "/assets/img/g6-black-belakang.webp",
-      "alt": "XPeng G6 hitam tampak belakang, mobil listrik dengan pengisian cepat 800V"
+      "src": "/assets/img/222779.webp",
+      "alt": "XPeng G6 abu-abu tampak depan, varian Pro dan AWD"
      },
      {
-      "src": "/assets/img/g6-black-front.webp",
-      "alt": "XPeng G6 hitam dengan sistem bantuan berkendara XPILOT 4.0"
+      "src": "/assets/img/g6-black-belakang.webp",
+      "alt": "XPeng G6 hitam tampak belakang, mobil listrik dengan pengisian cepat 800V"
      }
     ]
    },
