@@ -111,6 +111,17 @@ function autoLink(html, selfPath) {
 }
 const fixLinks = h => h.replace(/(href|src)="(\/(?!\/)[^"]*)"/g, (m, a, v) => (BASE && (v === BASE || v.startsWith(BASE + '/'))) ? m : a + '="' + BASE + v + '"').replace(/src="assets\//g, 'src="' + BASE + '/assets/').replace(/poster="assets\//g, 'poster="' + BASE + '/assets/');
 
+/* ---------- video beranda (opsional): isi site.heroVideo di Admin > Pengaturan; kosong = tidak tampil ---------- */
+function heroVideoSection() {
+  const raw = String(site.heroVideo || '').trim(); if (!raw) return '';
+  let md = '';
+  const yt = raw.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^#]*&)?v=|shorts\/|embed\/|live\/))([A-Za-z0-9_-]{11})/) || raw.match(/^([A-Za-z0-9_-]{11})$/);
+  if (yt) md = '{{youtube:' + yt[1] + '}}'; else if (/^[\w./-]+\.(mp4|webm)$/i.test(raw)) md = '{{video:' + raw.replace(/^\//, '') + '}}';
+  const vh = md ? MD.render(md) : ''; if (!vh) { console.log('PERINGATAN: Video beranda tidak valid, tidak ditampilkan: ' + raw); return ''; }
+  if (/<video /.test(vh) && !fs.existsSync(path.join(ROOT, raw.replace(/^\//, '')))) console.log('PERINGATAN: file video beranda belum ada di repo (mungkin masih dikompres): ' + raw);
+  return `<section class="section" id="video-beranda"><div class="wrap"><span class="eyebrow">Video</span><h2>${E(site.heroVideoJudul || 'Rasakan XPeng dalam gerak')}</h2>${site.heroVideoTeks ? `<p class="muted">${E(site.heroVideoTeks)}</p>` : ''}${vh}</div></section>`;
+}
+
 /* ---------- halaman ---------- */
 function home() {
   const m0 = models[0], m1 = models[1];
@@ -122,7 +133,7 @@ function home() {
 <section class="band"><div class="wrap stats"><div><b>800V</b><span>Platform pengisian cepat</span></div><div><b>8 th</b><span>Garansi baterai dan kendaraan</span></div><div><b>7 &amp; 5</b><span>Pilihan kursi: X9 dan G6</span></div><div><b>${rp(minPrice).replace('Rp', 'Rp ')}</b><span>Harga mulai dari</span></div></div></section>
 <section class="section"><div class="wrap"><span class="eyebrow">Model</span><h2>Pilih XPeng sesuai gaya hidup Anda</h2>
 <div class="car" id="car"><div class="track">${models.map(modelCard).join('')}</div></div></div></section>
-<section class="section dark" id="cfg"><div class="wrap"><span class="eyebrow">Interaktif</span><h2>Atur mobil dan hitung cicilan</h2><div class="cfg" data-models='${JSON.stringify(models.map(m => ({ n: m.name, c: m.colors, v: m.variants, s: m.slug }))).replace(/'/g, '&#39;')}'>
+${(vh => vh ? vh + '\n' : '')(heroVideoSection())}<section class="section dark" id="cfg"><div class="wrap"><span class="eyebrow">Interaktif</span><h2>Atur mobil dan hitung cicilan</h2><div class="cfg" data-models='${JSON.stringify(models.map(m => ({ n: m.name, c: m.colors, v: m.variants, s: m.slug }))).replace(/'/g, '&#39;')}'>
 <div class="stage"><div class="tabs" role="tablist">${cfgModels}</div><img id="cfgimg" src="${u(m0.colors[0].image)}" alt="${E(m0.name)} warna ${E(m0.colors[0].name)}" width="1200" height="800"><div class="swatches" id="sw"></div><p id="colname" class="muted"></p></div>
 <div class="panel"><label>Varian<select id="var"></select></label><div class="big" id="harga"></div>
 <label>Uang muka: <b id="dpv">30%</b><input type="range" id="dp" min="20" max="70" step="5" value="30"></label>
