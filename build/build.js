@@ -16,6 +16,7 @@ if (flipped) fs.writeFileSync(path.join(ROOT, 'data', 'articles.json'), JSON.str
 const articles = rawArticles.filter(a => a.status === 'published').sort((a, b) => b.date.localeCompare(a.date));
 const allArticles = rawArticles;
 const leasing = JO('leasing.json', []).filter(x => x && x.name);
+const profil = Object.assign({ aktif: false, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, JO('profil.json', {}));
 const TODAY_ID = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
 const promos = JO('promo.json', []).filter(p => p && p.title && p.active !== false && (!p.until || String(p.until) >= TODAY_ID));
 const about = Object.assign({ intro: [], photos: [], history: [], services: [], hours: [], mapsQuery: '', mapsEmbed: '' }, JO('about.json', {}));
@@ -41,6 +42,7 @@ const IC = {
   youtube: SV('<rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3z"/>'),
   facebook: SV('<path d="M14 8V6.500c0-.7.300-1 1-1h2V2h-3c-3 0-4.500 1.800-4.500 4.500V8H7v3.500h2.500V22H14V11.500h2.800L17.300 8z"/>'),
   link: SV('<path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'),
+  check: SV('<path d="M5 12.500l4.500 4.500L19 7.500" fill="none" stroke="currentColor" stroke-width="2.400" stroke-linecap="round" stroke-linejoin="round"/>'),
   arrow: SV('<path d="M5 12h12m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
 };
 const SOCIALS = [['instagram', 'Instagram', site.instagram], ['tiktok', 'TikTok', site.tiktok], ['youtube', 'YouTube', site.youtube], ['facebook', 'Facebook', site.facebook]].concat((site.links || []).map(l => ['link', l.name || String(l.url || '').replace(/^https?:\/\/(www\.)?/, '').split('/')[0], l.url])).filter(x => x[2]);
@@ -189,6 +191,13 @@ ${leasingSection()}
   return layout({ title: `Pricelist XPeng ${site.pricelistUpdate} | X9 dan G6`, desc: `Pricelist XPeng ${site.pricelistUpdate}: ${rows.map(r => r.v.name.replace('XPeng ', '').replace('New ', '') + ' ' + rp(r.v.price)).join(', ')}.`.slice(0, 160), path: '/pricelist/', body, image: 'assets/img/pricelist-juli-2026.webp', ld: [crumbs([['Beranda', '/'], ['Pricelist', '/pricelist/']]), faqLd(HOME_FAQ)] });
 }
 
+function profileSection() {
+  if (!profil.aktif || !String(profil.name || '').trim()) return '';
+  const nm = String(profil.name).trim(), ttl = String(profil.title || '').trim(), pts = (profil.points || []).map(x => String(x).trim()).filter(Boolean).slice(0, 4);
+  const photo = profil.photo ? picture(profil.photo, nm + (ttl ? ', ' + ttl : '') + ' ' + site.dealer, '', 640, 640) : `<span class="pmono" aria-hidden="true">${E(nm.charAt(0).toUpperCase())}</span>`;
+  const bio = String(profil.bio || '').trim();
+  return `<section class="section" id="profil"><div class="wrap"><div class="prof"><div class="pfoto"><div class="pring">${photo}</div><span class="pbadge"><i></i>Siap membantu Anda</span></div><div class="pinfo"><span class="eyebrow">Konsultan Anda</span><h2>Kenalan dengan ${E(nm)}</h2>${ttl ? `<p class="ptitle">${E(ttl)}</p>` : ''}${bio ? `<p class="pbio">${E(bio).replace(/\n/g, '<br>')}</p>` : ''}${pts.length ? `<ul class="ppoints">${pts.map(x => `<li>${IC.check}${E(x)}</li>`).join('')}</ul>` : ''}<div class="cta"><a class="btn" href="${wa('Halo ' + nm + ', saya mau tanya XPeng')}" rel="noopener">${E(profil.ctaText || 'Chat Saya di WhatsApp')}</a>${site.phone ? `<a class="btn ghost" href="${telHref}">Telepon</a>` : ''}</div></div></div></div></section>`;
+}
 function contact() {
   const chips = [['Tanya harga XPeng X9', 'Halo, saya mau tanya harga XPeng X9'], ['Tanya harga XPeng G6', 'Halo, saya mau tanya harga XPeng G6'], ['Simulasi cicilan', 'Halo, saya mau simulasi cicilan XPeng'], ['Booking test drive', 'Halo, saya mau booking test drive XPeng']];
   const cards = [
@@ -201,9 +210,10 @@ function contact() {
   const body = `<section class="chero"><i class="orb o1"></i><i class="orb o2"></i><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Kontak</nav><span class="eyebrow">Hubungi kami</span><h1>Kontak dan Test Drive XPeng<em>Ngobrol santai soal XPeng impian Anda. Konsultan kami siap membantu lewat WhatsApp.</em></h1>
 <div class="chips" role="list">${chips.map(c => `<a role="listitem" href="${wa(c[1])}" rel="noopener">${E(c[0])}</a>`).join('')}</div></div></section>
 <section class="section"><div class="wrap"><div class="cgrid">${cards}</div>${SOCIALS.length ? `<div class="socbox"><h2>Ikuti kami</h2><p class="muted">Promo, konten model baru, dan kabar terbaru XPeng.</p>${socialRow()}</div>` : ''}</div></section>
+${profileSection()}
 <section class="section dark" id="testdrive"><div class="wrap two">${leadForm}<div><span class="eyebrow">Mudah dan cepat</span><h2>Test drive dalam 3 langkah</h2><ol class="steps"><li><b>Isi formulir</b><span>Nama, model, dan rencana pembelian Anda.</span></li><li><b>Chat WhatsApp</b><span>Formulir otomatis terkirim ke konsultan kami.</span></li><li><b>Jadwal disepakati</b><span>Datang ke showroom dan coba langsung mobilnya.</span></li></ol>${hours}</div></div></section>
 <section class="section"><div class="wrap two loc"><div><span class="eyebrow">Lokasi</span><h2>Kunjungi showroom kami</h2><p>${E(site.dealer)}<br>${E(site.address)}</p><div class="cta"><a class="btn" href="${E(mapLink)}" target="_blank" rel="noopener">Buka di Google Maps</a><a class="btn ghost" href="${u('/tentang/')}">Tentang kami</a></div></div>${mapBox()}</div></section>`;
-  return layout({ title: 'Kontak dan Test Drive XPeng X9 G6 | Hubungi Kami'.slice(0, 62), desc: `Hubungi ${site.dealer} lewat WhatsApp, telepon, atau email. Jadwalkan test drive XPeng X9 dan G6, lihat lokasi showroom, dan ikuti media sosial kami.`.slice(0, 160), path: '/kontak/', body, ld: [crumbs([['Beranda', '/'], ['Kontak', '/kontak/']]), { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Kontak ' + site.dealer, url: abs('/kontak/') }] });
+  return layout({ title: 'Kontak dan Test Drive XPeng X9 G6 | Hubungi Kami'.slice(0, 62), desc: `Hubungi ${site.dealer} lewat WhatsApp, telepon, atau email. Jadwalkan test drive XPeng X9 dan G6, lihat lokasi showroom, dan ikuti media sosial kami.`.slice(0, 160), path: '/kontak/', body, ld: [crumbs([['Beranda', '/'], ['Kontak', '/kontak/']]), { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Kontak ' + site.dealer, url: abs('/kontak/') }, (profil.aktif && profil.name) ? { '@context': 'https://schema.org', '@type': 'Person', name: profil.name, jobTitle: profil.title || undefined, image: profil.photo ? abs(profil.photo) : undefined, description: profil.bio || undefined, telephone: site.phone, worksFor: { '@type': 'AutoDealer', name: site.dealer, url: abs('/') } } : null] });
 }
 
 function aboutPage() {

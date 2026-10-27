@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo'];
+const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -58,7 +58,7 @@ async function putFile(p, content64, msg, retry) {
 }
 async function delFile(p) { const j = await getFile(p); return gh('contents/' + enc2(p), { method: 'DELETE', body: JSON.stringify({ message: 'Hapus ' + p, sha: j.sha, branch: S.cfg.branch }) }); }
 async function listDir(p) { try { return await gh('contents/' + enc2(p) + '?ref=' + S.cfg.branch); } catch (e) { if (e.status === 404) return []; throw e; } }
-async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = (n === 'site' || n === 'about') ? {} : []; } } }
+async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil') ? {} : []; } } }
 async function save(n, msg) { const btn = document.activeElement; try { await putFile('data/' + n + '.json', b64(JSON.stringify(S.d[n], null, 1)), msg || 'Update ' + n + ' via admin'); toast('Tersimpan. Website update otomatis ±1-2 menit.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); throw e; } }
 
 /* ---------- login ---------- */
@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -453,6 +453,30 @@ ${A.photos.map((ph, i) => `<div class="card" style="margin-top:10px"><img alt=""
     v.querySelectorAll('[data-hu]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hu, -1); draw(); });
     v.querySelectorAll('[data-hd]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hd, 1); draw(); });
     $('#a_sv').onclick = async () => { sync(); A.history = A.history.filter(h => (h.year || h.title || h.text)); await save('about', 'Update halaman Tentang'); };
+  };
+  draw();
+};
+
+/* --- Profil Saya (tampil di halaman Kontak) --- */
+VIEWS.profil = v => {
+  const P = S.d.profil = Object.assign({ aktif: true, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, S.d.profil);
+  const draw = () => {
+    v.innerHTML = `<h2>Profil Saya</h2><div class="card"><p class="muted">Tampil di halaman <b>Kontak</b> sebagai kartu perkenalan konsultan: foto bulat, nama, jabatan, perkenalan singkat, poin layanan, dan tombol WhatsApp. Tanpa foto, tampil huruf depan nama.</p>
+<label style="display:flex;gap:8px;align-items:center;margin:8px 0 12px;color:var(--tx)"><input type="checkbox" id="pf_on" ${P.aktif === false ? '' : 'checked'} style="width:20px;min-height:20px;flex:none">Tampilkan di halaman Kontak</label>
+<label>Nama<input id="pf_name" maxlength="40" value="${E(P.name || '')}" placeholder="contoh: Wins"></label>
+<label>Jabatan<input id="pf_title" maxlength="60" value="${E(P.title || '')}" placeholder="contoh: Konsultan Penjualan XPeng"></label>
+<label>Perkenalan singkat (maks 400 huruf)<textarea id="pf_bio" maxlength="400" style="min-height:130px;font-family:inherit">${E(P.bio || '')}</textarea></label>
+<label>Poin layanan (satu per baris, maks 4)<textarea id="pf_pts" style="min-height:90px;font-family:inherit">${E((P.points || []).join('\n'))}</textarea></label>
+<label>Teks tombol WhatsApp<input id="pf_cta" maxlength="40" value="${E(P.ctaText || '')}" placeholder="Chat Saya di WhatsApp"></label>
+<h3>Foto profil</h3><p class="muted">Pakai foto wajah dengan latar rapi. Bentuk persegi paling bagus (otomatis dipotong bulat).</p>
+<div class="row" style="margin-bottom:8px"><button class="s sm" id="pf_up" data-noc>📷 Upload foto</button><button class="s sm" id="pf_gal" data-noc>🗂️ Pilih dari galeri</button>${P.photo ? '<button class="d sm" id="pf_x" data-noc>Hapus foto</button>' : ''}</div>
+${P.photo ? `<img class="pv" alt="" style="height:110px;width:110px;border-radius:50%" src="${E(S.local[P.photo] || '../' + P.photo)}" onerror="this.style.display='none'">` : '<p class="muted">Belum ada foto.</p>'}
+<button id="pf_sv" style="width:100%;margin-top:16px">Simpan profil</button></div>`;
+    const sync = () => { P.aktif = $('#pf_on').checked; P.name = $('#pf_name').value.trim(); P.title = $('#pf_title').value.trim(); P.bio = $('#pf_bio').value.trim(); P.points = $('#pf_pts').value.split('\n').map(x => x.trim()).filter(Boolean).slice(0, 4); P.ctaText = $('#pf_cta').value.trim(); };
+    $('#pf_up').onclick = () => { sync(); pickUp(false, ps => { P.photo = ps[0]; draw(); }, 900); };
+    $('#pf_gal').onclick = () => { sync(); pickMedia({ multi: false, title: 'Pilih foto profil' }, ps => { if (ps[0]) P.photo = ps[0]; draw(); }); };
+    const x = $('#pf_x'); if (x) x.onclick = () => { sync(); P.photo = ''; draw(); };
+    $('#pf_sv').onclick = async () => { sync(); if (P.aktif && !P.name) return toast('Isi nama dulu.', true); await save('profil', 'Update Profil Saya'); };
   };
   draw();
 };
