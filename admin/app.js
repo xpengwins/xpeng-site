@@ -176,16 +176,34 @@ function copyText(t) { try { if (navigator.clipboard && window.isSecureContext) 
 const liveUrl = a => ((S.d.site.baseUrl || '').replace(/\/$/, '')) + '/artikel/' + a.slug + '/';
 
 const VIEWS = {};
+/* ---------- kartu Pengunjung (data dari Agent 8 / Google Analytics 4) ---------- */
+const LEADN = { klik_whatsapp: 'Klik WhatsApp', kirim_form_test_drive: 'Form test drive', klik_booking_test_drive: 'Booking test drive', klik_telepon: 'Klik telepon', klik_email: 'Klik email', unduh_brosur: 'Unduh brosur' };
+async function trafficBox(el) {
+  let d = null; try { d = JSON.parse(unb64((await getFile('data/traffic.json')).content)); } catch (e) {}
+  if (!d || !d.last30) { el.innerHTML = 'Belum aktif. Hubungkan Google Analytics dengan 3 langkah di <b>docs/panduan-traffic.md</b>, lalu jalankan Agent pantau sekali.'; return; }
+  const n = x => Number(x || 0).toLocaleString('id-ID'), tile = (l, v) => `<div style="flex:1;min-width:64px"><b style="font-size:1.35rem">${n(v)}</b><div class="muted">${l}</div></div>`;
+  const dl = d.daily || [], mx = Math.max(1, ...dl.map(x => x.users));
+  const wow = d.prev30 && d.prev30.users ? Math.round((d.last30.users - d.prev30.users) / d.prev30.users * 100) : null;
+  const leads = Object.keys(d.leads || {}).filter(k => d.leads[k]).map(k => `${E(LEADN[k] || k)} <b>${n(d.leads[k])}</b>`).join(' • ');
+  el.innerHTML = `<div class="row" style="flex-wrap:nowrap;gap:6px">${tile('Hari ini', d.today.users)}${tile('Kemarin', d.yesterday.users)}${tile('7 hari', d.last7.users)}${tile('30 hari', d.last30.users)}</div>
+<div style="display:flex;align-items:flex-end;gap:2px;height:56px;margin:12px 0 4px" aria-label="Grafik pengunjung 30 hari">${dl.map(x => `<i title="${E(x.date)}: ${x.users}" style="flex:1;background:var(--ac);opacity:.85;height:${Math.max(4, Math.round(x.users / mx * 100))}%;border-radius:2px"></i>`).join('')}</div>
+<div class="muted">30 hari terakhir${wow != null ? ' • ' + (wow >= 0 ? '+' : '') + wow + '% dibanding 30 hari sebelumnya' : ''} • ${n(d.last30.views)} halaman dilihat</div>
+${leads ? `<div style="margin-top:10px"><div class="muted">Klik penting (30 hari)</div>${leads}</div>` : ''}
+${(d.pages || []).length ? `<div style="margin-top:10px"><div class="muted">Halaman terpopuler</div>${d.pages.slice(0, 5).map(p => `<div>${E(p.path)} <span class="muted">${n(p.views)}</span></div>`).join('')}</div>` : ''}
+${(d.channels || []).length ? `<div style="margin-top:10px"><div class="muted">Sumber pengunjung</div>${d.channels.slice(0, 5).map(c => `<div>${E(c.k)} <span class="muted">${n(c.v)}</span></div>`).join('')}</div>` : ''}
+<div class="muted" style="margin-top:10px">Diperbarui ${fmtDT(d.generated)}. Data dari Google Analytics 4, otomatis 2x sehari. Hari ini bisa naik beberapa jam ke depan.</div>`;
+}
 VIEWS.home = async v => {
   const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
   v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub - sch - rdy} draft • ${rdy} siap • ${sch} terjadwal</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
+<div class="card"><h3>👥 Pengunjung website</h3><div id="trf" class="muted">Memuat…</div></div>
 <div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
 <div class="card"><h3>Kabar ke Bing (IndexNow)</h3><div id="inx" class="muted">Memuat…</div></div>
 <div class="card"><h3>Proses GitHub Actions</h3><div id="runbox"></div></div>
 <div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
 <div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;
   v.querySelectorAll('[data-go]').forEach(b => b.onclick = () => go(b.dataset.go)); $('#b1').onclick = build; runsWidget($('#runbox'));
-  indexnowBox($('#inx'));
+  indexnowBox($('#inx')); trafficBox($('#trf'));
   const r = await loadReport(); $('#hs').innerHTML = r ? `<div class="row"><div>${sc(r.site.total)}<div class="muted">Total</div></div><div>${sc(r.site.pageScore)}<div class="muted">Halaman</div></div><div>${sc(r.site.articleScore)}<div class="muted">Artikel</div></div><div>${sc(r.site.techScore)}<div class="muted">Teknis</div></div></div>` : 'Belum ada laporan. Jalankan build.';
 };
 

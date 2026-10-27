@@ -114,10 +114,26 @@ function analyse(url, pg, origin) {
     const rb = await getPage(origin + '/robots.txt');
     if (rb.s === 200 && /User-agent:\s*\*[\s\S]*?\n\s*Disallow:\s*\/\s*(\n|$)/i.test(rb.html)) issues.push({ k: 'robots:all', sev: 'bad', page: '/robots.txt', t: '❌ robots.txt memblokir seluruh situs (Disallow: /)' });
 
+    /* 6) file yatim (info saja, tidak dikirim ke Telegram): gambar/video/berkas di repo yang tidak dipakai halaman, CSS, JS, atau data mana pun */
+    let orphanFiles = [];
+    try {
+      const rdt = f => { try { return fs.readFileSync(f, 'utf8'); } catch (e) { return ''; } };
+      const SKIPD = /^(health-log|speed-log|sosmed-stats|riset-tren|agent-brief|agent-brief-sent|seo-report|seo-history|gsc|social-log|social-posted|social-queue|social-status|traffic|traffic-sent|page-index|indexnow-sent|notified)\.json$/;
+      let corpus = pages.map(p => p.html).join('\n') + '\n' + ['sw.js', 'manifest.webmanifest'].map(f => rdt(path.join(ROOT, f))).join('\n');
+      for (const d of ['assets/css', 'assets/js']) { try { fs.readdirSync(path.join(ROOT, d)).forEach(f => { corpus += '\n' + rdt(path.join(ROOT, d, f)); }); } catch (e) {} }
+      try { fs.readdirSync(D('')).filter(f => /\.json$/.test(f) && !SKIPD.test(f)).forEach(f => { corpus += '\n' + rdt(D(f)); }); } catch (e) {}
+      const walk = d => { let o = []; try { fs.readdirSync(path.join(ROOT, d), { withFileTypes: true }).forEach(x => { const r = d + '/' + x.name; if (x.isDirectory()) o = o.concat(walk(r)); else o.push(r); }); } catch (e) {} return o; };
+      ['assets/img', 'assets/video', 'assets/files'].forEach(d => walk(d).forEach(f => {
+        if (/\.(jpg|jpeg|png)$/i.test(f) && /^assets\/video\//.test(f)) { const mp4 = f.replace(/\.(jpg|jpeg|png)$/i, ''); if (corpus.includes(mp4)) return; }   /* poster video ikut videonya */
+        const name = path.basename(f); if (corpus.includes(f) || corpus.includes(name)) return;
+        orphanFiles.push({ path: f, kb: Math.round(fs.statSync(path.join(ROOT, f)).size / 1024) });
+      }));
+    } catch (e) { console.log('Halaman: cek file yatim dilewati: ' + scrub(e.message)); }
+
     const bad = issues.filter(i => i.sev === 'bad').length, warn = issues.length - bad;
     const entry = { date: today, at: new Date().toISOString(), pages: urls.length, ok: pages.filter(p => p.s === 200).length, statusBad: statusBad.map(p => p.u.replace(origin, '') + ' → ' + (p.s || p.err || 'gagal')), bad, warn };
     log.history = (log.history || []).filter(h => h.date !== today).concat(entry).slice(-30);
-    log.generated = entry.at; log.latest = { ...entry, issues: issues.slice(0, 120).map(i => ({ k: i.k, sev: i.sev, page: i.page, t: i.t })) };
+    log.generated = entry.at; log.latest = { ...entry, orphanFiles: orphanFiles.slice(0, 100), orphanTotal: orphanFiles.length, issues: issues.slice(0, 120).map(i => ({ k: i.k, sev: i.sev, page: i.page, t: i.t })) };
 
     /* 5) peringatan: hanya masalah BARU; kabari juga bila ada yang sudah pulih */
     const prevKeys = log.alertKeys || [], keys = issues.map(i => i.k), fresh2 = issues.filter(i => !prevKeys.includes(i.k)), healed = prevKeys.filter(k => !keys.includes(k));
@@ -130,6 +146,6 @@ function analyse(url, pg, origin) {
     }
     if (!sent) log.alertKeys = prevKeys.filter(k => keys.includes(k));
     fs.writeFileSync(D('health-log.json'), JSON.stringify(log, null, 1));
-    console.log('Halaman: ' + urls.length + ' halaman, ' + entry.ok + ' terbuka, ' + bad + ' masalah berat, ' + warn + ' masalah ringan' + (statusBad.length ? ', ' + statusBad.length + ' halaman error (dilaporkan Agent 3)' : '') + '.');
+    console.log('Halaman: ' + urls.length + ' halaman, ' + entry.ok + ' terbuka, ' + bad + ' masalah berat, ' + warn + ' masalah ringan' + (statusBad.length ? ', ' + statusBad.length + ' halaman error (dilaporkan Agent 3)' : '') + ', ' + orphanFiles.length + ' file tidak dipakai.');
   } catch (e) { console.log('Halaman: gagal (diabaikan): ' + scrub(e.message)); }
 })();
