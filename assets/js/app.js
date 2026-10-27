@@ -19,6 +19,12 @@ if(dd){for(var k=0;k<n;k++)(function(k){var d=document.createElement('button');d
 var sync=function(){var st=(tr.children[1].offsetLeft-tr.children[0].offsetLeft)||1,i=Math.round(tr.scrollLeft/st);if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)i=n-1;if(i>n-1)i=n-1;ds.forEach(function(d,k){d.className=k===i?'on':''});if(tr.scrollLeft>8)c.classList.add('moved')};
 tr.addEventListener('scroll',sync,{passive:true});sync();
 if(c.id==='car'&&'IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){c.classList.add('nudge');io.disconnect()}})},{threshold:.6});io.observe(c)}});
+/* artikel di beranda: tampilkan lebih banyak */
+var am=$('#amore');if(am){am.addEventListener('click',function(){var hs=$$('.acard[hidden]',$('#ahome')),k=+am.dataset.step||6;hs.slice(0,k).forEach(function(x){x.hidden=false});if(hs.length<=k)am.parentNode.removeChild(am)})}
+/* cari artikel */
+var aq=$('#aq');if(aq){var cards=$$('.agrid .acard'),cnt=$('#acount'),none=$('#anone'),norm=function(s){return(s||'').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'')};
+var run=function(){var ws=norm(aq.value).split(/\s+/).filter(Boolean),n=0;cards.forEach(function(c){var ok=ws.every(function(w){return(c.dataset.s||'').indexOf(w)>-1});c.hidden=!ok;if(ok)n++});cnt.textContent=ws.length?n+' artikel ditemukan':'';none.hidden=!(ws.length&&!n)};
+aq.addEventListener('input',run);var qm=location.search.match(/[?&]q=([^&]*)/);if(qm){try{aq.value=decodeURIComponent(qm[1].replace(/\+/g,' '))}catch(e){}run()}}
 /* konfigurator */
 var cfg=$('.cfg');if(cfg){var M=JSON.parse(cfg.dataset.models),mi=0,ci=0,img=$('#cfgimg'),sw=$('#sw'),sel=$('#var'),R=function(n){return 'Rp'+Math.round(n).toLocaleString('id-ID')};
 function draw(){var m=M[mi];sw.innerHTML='';m.c.forEach(function(c,k){var b=document.createElement('button');b.style.background=c.hex;b.setAttribute('aria-label','Warna '+c.name);if(k===ci)b.className='on';b.onclick=function(){ci=k;draw()};sw.appendChild(b)});

@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about'];
+const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -220,7 +220,7 @@ async function zipNames(file) {
   while (p + 46 <= cd.byteLength && cv.getUint32(p, true) === 0x02014b50) { const nl = cv.getUint16(p + 28, true), el = cv.getUint16(p + 30, true), cl = cv.getUint16(p + 32, true); names.push(new TextDecoder().decode(u8.subarray(p + 46, p + 46 + nl))); p += 46 + nl + el + cl; }
   return names;
 }
-const KNOWN_DIRS = ['assets', 'data', 'admin', 'build', 'shared', 'docs', 'backup', 'upload', 'model', 'artikel', 'kontak', 'pricelist', 'tentang'];
+const KNOWN_DIRS = ['assets', 'data', 'admin', 'build', 'shared', 'docs', 'backup', 'upload', 'model', 'artikel', 'kontak', 'pricelist', 'tentang', 'promo'];
 function zipReport(names) {
   const files = names.filter(n => !n.endsWith('/') && !/^__MACOSX\//.test(n) && !/\.DS_Store$/.test(n) && !/(^|\/)\.git(hub)?\//.test(n));
   const tops = {}; files.forEach(n => { const t = n.includes('/') ? n.split('/')[0] : '(root)'; tops[t] = (tops[t] || 0) + 1; });
@@ -453,6 +453,44 @@ ${A.photos.map((ph, i) => `<div class="card" style="margin-top:10px"><img alt=""
     v.querySelectorAll('[data-hu]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hu, -1); draw(); });
     v.querySelectorAll('[data-hd]').forEach(b => b.onclick = () => { sync(); mv(A.history, +b.dataset.hd, 1); draw(); });
     $('#a_sv').onclick = async () => { sync(); A.history = A.history.filter(h => (h.year || h.title || h.text)); await save('about', 'Update halaman Tentang'); };
+  };
+  draw();
+};
+
+/* --- Promo --- */
+VIEWS.promo = v => {
+  const P = S.d.promo = Array.isArray(S.d.promo) ? S.d.promo : [];
+  const mv = (arr, i, d) => { const j = i + d; if (j >= 0 && j < arr.length) { [arr[i], arr[j]] = [arr[j], arr[i]]; } };
+  const draw = () => {
+    v.innerHTML = `<h2>Promo</h2><div class="card"><p class="muted">Promo tampil di menu <b>Promo</b> di website. Isi judul, tulisan singkat, tombol ajakan (CTA), dan foto mobil (otomatis jadi slider yang bisa digeser). Kolom link tombol dikosongkan = tombol langsung ke WhatsApp dengan pesan otomatis. Promo yang lewat tanggal berlakunya hilang sendiri dari website.</p><button class="s" id="p_add" data-noc>+ Tambah promo</button></div>
+${P.map((p, i) => `<div class="card"><div class="row" style="margin-bottom:6px"><b style="flex:1">Promo ${i + 1}</b><button class="s sm" data-pmu="${i}" data-noc aria-label="Naik">↑</button><button class="s sm" data-pmd="${i}" data-noc aria-label="Turun">↓</button></div>
+<label>Judul promo<input data-pi="${i}" data-pf="title" maxlength="80" value="${E(p.title || '')}" placeholder="contoh: Promo Akhir Tahun XPeng G6"></label>
+<label>Label kecil di atas judul (boleh kosong)<input data-pi="${i}" data-pf="badge" maxlength="30" value="${E(p.badge || '')}" placeholder="contoh: Terbatas"></label>
+<label>Tulisan singkat (maks 240 huruf)<textarea data-pi="${i}" data-pf="text" maxlength="240" style="min-height:90px;font-family:inherit" placeholder="contoh: Cashback, bunga ringan, dan bonus wall charger untuk pembelian bulan ini.">${E(p.text || '')}</textarea></label>
+<div class="grid"><label>Teks tombol (CTA)<input data-pi="${i}" data-pf="ctaText" maxlength="40" value="${E(p.ctaText || '')}" placeholder="Tanya Promo via WhatsApp"></label><label>Berlaku sampai (boleh kosong)<input type="date" data-pi="${i}" data-pf="until" value="${E(p.until || '')}"></label></div>
+<label>Link tombol (kosong = WhatsApp otomatis)<input data-pi="${i}" data-pf="ctaUrl" inputmode="url" autocapitalize="off" value="${E(p.ctaUrl || '')}" placeholder="https://..."></label>
+<h3>Foto mobil (slider)</h3><p class="muted">Foto pertama tampil paling depan. Geser untuk foto berikutnya.</p>
+<div class="row" style="margin-bottom:8px"><button class="s sm" data-pup="${i}" data-noc>📷 Upload foto</button><button class="s sm" data-pgal="${i}" data-noc>🗂️ Pilih dari galeri</button></div>
+${(p.images || []).map((im, k) => `<div class="row" style="margin-bottom:8px;flex-wrap:nowrap">${thumb(im)}<span style="flex:1;font-size:.8rem;word-break:break-all" class="muted">${E(im.split('/').pop())}</span><button class="s sm" data-fu="${i}:${k}" data-noc aria-label="Naik">↑</button><button class="s sm" data-fd="${i}:${k}" data-noc aria-label="Turun">↓</button><button class="d sm" data-fx="${i}:${k}" data-noc aria-label="Hapus foto">✕</button></div>`).join('') || '<p class="muted">Belum ada foto.</p>'}
+<label style="display:flex;gap:8px;align-items:center;margin:12px 0;color:var(--tx)"><input type="checkbox" data-pi="${i}" data-pf="active" ${p.active === false ? '' : 'checked'} style="width:20px;min-height:20px;flex:none">Tampilkan di website</label>
+<button class="d sm" data-px="${i}">Hapus promo ini</button></div>`).join('') || '<div class="card"><p class="muted">Belum ada promo. Tekan "+ Tambah promo".</p></div>'}
+<button id="p_sv" style="width:100%">Simpan promo</button>`;
+    const sync = () => v.querySelectorAll('[data-pi]').forEach(i => { const p = P[+i.dataset.pi], f = i.dataset.pf; p[f] = i.type === 'checkbox' ? i.checked : i.value; });
+    const idx = s => s.split(':').map(Number);
+    $('#p_add').onclick = () => { sync(); P.push({ id: 'p' + Date.now().toString(36), title: '', badge: '', text: '', ctaText: '', ctaUrl: '', until: '', images: [], active: true }); draw(); window.scrollTo(0, document.body.scrollHeight); };
+    v.querySelectorAll('[data-pmu]').forEach(b => b.onclick = () => { sync(); mv(P, +b.dataset.pmu, -1); draw(); });
+    v.querySelectorAll('[data-pmd]').forEach(b => b.onclick = () => { sync(); mv(P, +b.dataset.pmd, 1); draw(); });
+    v.querySelectorAll('[data-px]').forEach(b => b.onclick = () => { sync(); P.splice(+b.dataset.px, 1); draw(); toast('Promo dihapus dari daftar. Tekan Simpan promo.'); });
+    v.querySelectorAll('[data-pup]').forEach(b => b.onclick = () => { sync(); const p = P[+b.dataset.pup]; pickUp(true, ps => { p.images = (p.images || []).concat(ps); draw(); }); });
+    v.querySelectorAll('[data-pgal]').forEach(b => b.onclick = () => { sync(); const p = P[+b.dataset.pgal]; pickMedia({ multi: true, title: 'Pilih foto untuk promo' }, ps => { p.images = (p.images || []).concat(ps.filter(x => (p.images || []).indexOf(x) < 0)); draw(); }); });
+    v.querySelectorAll('[data-fu]').forEach(b => b.onclick = () => { sync(); const [a, k] = idx(b.dataset.fu); mv(P[a].images, k, -1); draw(); });
+    v.querySelectorAll('[data-fd]').forEach(b => b.onclick = () => { sync(); const [a, k] = idx(b.dataset.fd); mv(P[a].images, k, 1); draw(); });
+    v.querySelectorAll('[data-fx]').forEach(b => b.onclick = () => { sync(); const [a, k] = idx(b.dataset.fx); P[a].images.splice(k, 1); draw(); });
+    $('#p_sv').onclick = async () => {
+      sync(); const bad = P.findIndex(p => !(p.title || '').trim()); if (bad >= 0) return toast('Promo ' + (bad + 1) + ' belum ada judulnya.', true);
+      P.forEach(p => { ['title', 'badge', 'text', 'ctaText', 'ctaUrl'].forEach(f => p[f] = (p[f] || '').trim()); if (/^(javascript|data|vbscript):/i.test(p.ctaUrl)) p.ctaUrl = ''; });
+      await save('promo', 'Update promo');
+    };
   };
   draw();
 };
@@ -754,10 +792,10 @@ ${s.imgs.map((im, n) => { const o = (W.img[s.key] || {})[n] || {}, cur = o.src |
 };
 VIEWS.settings = v => {
   const s = S.d.site; const F = [['name', 'Nama website'], ['dealer', 'Nama dealer'], ['whatsapp', 'WhatsApp (format 62812...)'], ['ga4', 'ID Google Analytics 4 (contoh G-ABC123XYZ, boleh kosong)'], ['phone', 'Telepon tampil'], ['address', 'Alamat showroom'], ['email', 'Email'], ['baseUrl', 'URL website (https://...)'], ['tagline', 'Tagline'], ['heroVideo', 'Video beranda: link YouTube atau assets/video/nama.mp4 (kosong = tidak tampil)'], ['heroVideoJudul', 'Judul di atas video beranda (boleh kosong)'], ['heroVideoTeks', 'Teks pendek di bawah judul video (boleh kosong)'], ['description', 'Deskripsi website (120-160 karakter)'], ['instagram', 'URL Instagram'], ['tiktok', 'URL TikTok'], ['youtube', 'URL YouTube'], ['facebook', 'URL Facebook']];
-  v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Link lainnya</h3><p class="muted">Contoh: Lynk.id, Linktree, katalog, grup WhatsApp. Tampil di footer dan halaman Kontak. Ada link baru? Tempel di kolom bawah lalu tekan Tambah.</p><div id="lnk"></div><label>Tempel link baru di sini<input id="lnew" placeholder="https://..." inputmode="url" autocapitalize="off"></label><button class="s" id="ladd" style="margin-top:8px">+ Tambah link</button><h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
+  v.innerHTML = `<h2>Pengaturan</h2><div class="card">${F.map(f => `<label>${f[1]}<input data-k="${f[0]}" value="${E(s[f[0]] || '')}"></label>`).join('')}<h3>Link lainnya</h3><p class="muted">Contoh: Lynk.id, Linktree, katalog, grup WhatsApp. Tampil di footer dan halaman Kontak. Ada link baru? Tempel di kolom bawah lalu tekan Tambah.</p><div id="lnk"></div><label>Tempel link baru di sini<input id="lnew" placeholder="https://..." inputmode="url" autocapitalize="off"></label><button class="s" id="ladd" data-noc style="margin-top:8px">+ Tambah link</button><h3>Situs backlink milik Anda (Nama|URL|status, per baris)</h3><textarea id="bls">${E((s.backlinkSites || []).map(x => [x.name, x.url, x.status].join('|')).join('\n'))}</textarea><button id="sv" style="margin-top:12px">Simpan pengaturan</button></div>`;
   let L = (s.links || []).map(x => ({ name: x.name || '', url: x.url || '' }));
   const hostOf = u => { try { return new URL(u).hostname.replace(/^www\./, ''); } catch (e) { return ''; } };
-  const drawL = () => { const box = $('#lnk'); box.innerHTML = L.map((x, i) => `<div class="row" style="align-items:flex-end;gap:8px;margin-bottom:8px"><label style="flex:1">Nama<input data-ln="${i}" value="${E(x.name)}"></label><label style="flex:2">Link<input data-lu="${i}" value="${E(x.url)}" inputmode="url" autocapitalize="off"></label><button class="s sm" data-ld="${i}" aria-label="Hapus link">✕</button></div>`).join('') || '<p class="muted">Belum ada link.</p>'; box.querySelectorAll('[data-ln]').forEach(i => i.oninput = () => { L[+i.dataset.ln].name = i.value; }); box.querySelectorAll('[data-lu]').forEach(i => i.oninput = () => { L[+i.dataset.lu].url = i.value; }); box.querySelectorAll('[data-ld]').forEach(b => b.onclick = () => { L.splice(+b.dataset.ld, 1); drawL(); toast('Link dihapus. Tekan Simpan pengaturan.'); }); };
+  const drawL = () => { const box = $('#lnk'); box.innerHTML = L.map((x, i) => `<div class="row" style="align-items:flex-end;gap:8px;margin-bottom:8px"><label style="flex:1">Nama<input data-ln="${i}" value="${E(x.name)}"></label><label style="flex:2">Link<input data-lu="${i}" value="${E(x.url)}" inputmode="url" autocapitalize="off"></label><button class="s sm" data-ld="${i}" data-noc aria-label="Hapus link">✕</button></div>`).join('') || '<p class="muted">Belum ada link.</p>'; box.querySelectorAll('[data-ln]').forEach(i => i.oninput = () => { L[+i.dataset.ln].name = i.value; }); box.querySelectorAll('[data-lu]').forEach(i => i.oninput = () => { L[+i.dataset.lu].url = i.value; }); box.querySelectorAll('[data-ld]').forEach(b => b.onclick = () => { L.splice(+b.dataset.ld, 1); drawL(); toast('Link dihapus. Tekan Simpan pengaturan.'); }); };
   $('#ladd').onclick = () => { let t = $('#lnew').value.trim(); if (!t) return toast('Tempel link dulu', true); if (!/^https?:\/\//i.test(t)) t = 'https://' + t; if (!hostOf(t) || hostOf(t).indexOf('.') < 0) return toast('Link tidak valid', true); const nk = u => u.replace(/\/+$/, '').toLowerCase(); if (L.some(x => nk(x.url) === nk(t))) return toast('Link ini sudah ada', true); L.push({ name: hostOf(t), url: t }); $('#lnew').value = ''; drawL(); toast('Link ditambahkan. Tekan Simpan pengaturan.'); };
   drawL();
   $('#sv').onclick = async () => { v.querySelectorAll('[data-k]').forEach(i => s[i.dataset.k] = i.value.trim()); s.links = L.map(x => ({ name: (x.name || '').trim() || hostOf(x.url.trim()), url: x.url.trim() })).filter(x => /^https?:\/\//i.test(x.url)); s.whatsapp = s.whatsapp.replace(/\D/g, ''); s.backlinkSites = lines($('#bls').value).map(l => { const p = l.split('|'); return { name: p[0], url: p[1] || '', status: p[2] || 'aktif' }; }); s.github = { owner: S.cfg.owner, repo: S.cfg.repo, branch: S.cfg.branch }; await save('site', 'Pengaturan'); };

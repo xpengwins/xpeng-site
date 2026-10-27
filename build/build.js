@@ -16,6 +16,8 @@ if (flipped) fs.writeFileSync(path.join(ROOT, 'data', 'articles.json'), JSON.str
 const articles = rawArticles.filter(a => a.status === 'published').sort((a, b) => b.date.localeCompare(a.date));
 const allArticles = rawArticles;
 const leasing = JO('leasing.json', []).filter(x => x && x.name);
+const TODAY_ID = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
+const promos = JO('promo.json', []).filter(p => p && p.title && p.active !== false && (!p.until || String(p.until) >= TODAY_ID));
 const about = Object.assign({ intro: [], photos: [], history: [], services: [], hours: [], mapsQuery: '', mapsEmbed: '' }, JO('about.json', {}));
 const E = MD.esc, rp = n => 'Rp' + Number(n).toLocaleString('id-ID');
 let BASE = ''; try { BASE = new URL(site.baseUrl).pathname.replace(/\/$/, ''); } catch (e) {}
@@ -78,12 +80,12 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>
-<nav id="nav" aria-label="Menu utama"><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang</a><a href="${u('/kontak/')}">Kontak</a></nav>
+<nav id="nav" aria-label="Menu utama"><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang</a><a href="${u('/kontak/')}">Kontak</a></nav>
 <a class="btn sm" href="${wa('Halo, saya tertarik dengan XPeng. Boleh minta info?')}" rel="noopener">WhatsApp</a><button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button></div></header>
 <main id="main">${body}</main>
 <footer class="site"><div class="wrap fgrid"><div><img src="${u('assets/img/logo-white.svg')}" alt="XPeng" width="120" height="84" loading="lazy"><p>${E(site.tagline)}</p></div>
 <div><h2>Model</h2>${models.map(m => `<a href="${u('/model/' + m.slug + '/')}">${E(m.name)}</a>`).join('')}</div>
-<div><h2>Informasi</h2><a href="${u('/pricelist/')}">Pricelist ${E(site.pricelistUpdate)}</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang kami</a><a href="${u('/kontak/')}">Kontak dan Test Drive</a></div>
+<div><h2>Informasi</h2><a href="${u('/pricelist/')}">Pricelist ${E(site.pricelistUpdate)}</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang kami</a><a href="${u('/kontak/')}">Kontak dan Test Drive</a></div>
 <div><h2>Hubungi</h2><p>${E(site.dealer)}<br>${E(site.address)}<br><a href="${telHref}">${E(site.phone)}</a></p>${socialRow()}</div></div>
 <div class="wrap legal">© ${new Date().getFullYear()} ${E(site.dealer)}. Harga dan spesifikasi dapat berubah tanpa pemberitahuan. XPeng adalah merek dagang pemiliknya.</div></footer>
 <a class="wafab" href="${wa('Halo, saya mau tanya XPeng')}" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 2.3A10.7 10.7 0 1 1 9.5 24l-.4-.3-3.6 1.1 1.2-3.5-.3-.4A10.7 10.7 0 0 1 16 5.3zm-4 5.4c-.3 0-.7.1-1 .5-.4.4-1.3 1.2-1.3 3s1.3 3.5 1.5 3.7c.2.3 2.6 4.1 6.400 5.600 3.200 1.200 3.800.9 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.600-1.200c-.3-.1-.6-.2-.9.200-.3.400-1 1.200-1.200 1.400-.2.200-.4.300-.8.100a8.900 8.900 0 0 1-4.400-3.800c-.3-.6.300-.6 1-1.900.1-.2.100-.4 0-.6l-1.200-2.900c-.3-.7-.6-.6-.9-.6z"/></svg></a>
@@ -93,7 +95,9 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 /* ---------- komponen ---------- */
 const picture = (src, alt, cls = '', w = 1200, h = 800, lazy = true) => `<img class="${cls}" src="${u(src)}" alt="${E(alt)}" width="${w}" height="${h}" ${lazy ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
 const modelCard = m => `<article class="mcard"><a href="${u('/model/' + m.slug + '/')}">${picture(m.hero, m.name + ' - ' + m.type, 'mimg', 960, 640)}<div class="mbody"><span class="eyebrow">${E(m.type)}</span><h3>${E(m.name)}</h3><p>${E(m.tagline)}</p><strong class="mprice">Mulai ${rp(Math.min(...m.variants.map(v => v.price)))}</strong><span class="more">Lihat model →</span></div></a></article>`;
-const artCard = a => `<article class="acard"><a href="${u('/artikel/' + a.slug + '/')}">${a.image ? picture(a.image, a.imageAlt || a.title, '', 600, 400) : '<div class="noimg"></div>'}<div><span class="eyebrow">${E(a.category || 'Artikel')}</span><h3>${E(a.title)}</h3><p>${E(a.description)}</p></div></a></article>`;
+const normS = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
+const searchKey = a => normS([a.title, a.description, a.category, a.keyword].filter(Boolean).join(' '));
+const artCard = a => `<article class="acard" data-s="${E(searchKey(a))}"><a href="${u('/artikel/' + a.slug + '/')}">${a.image ? picture(a.image, a.imageAlt || a.title, '', 600, 400) : '<div class="noimg"></div>'}<div><span class="eyebrow">${E(a.category || 'Artikel')}</span><h3>${E(a.title)}</h3><p>${E(a.description)}</p></div></a></article>`;
 const faqBlock = f => f && f.length ? `<section class="faq"><h2>Pertanyaan yang sering diajukan</h2>${f.map(x => `<details><summary>${E(x.q)}</summary><p>${E(x.a)}</p></details>`).join('')}</section>` : '';
 const leadForm = `<form class="lead" id="lead" novalidate><h3>Jadwalkan test drive</h3><label>Nama<input name="nama" required autocomplete="name"></label><label>Model<select name="model">${models.map(m => `<option>${E(m.name)}</option>`).join('')}</select></label><label>Rencana pembelian<select name="rencana"><option>Secepatnya</option><option>1-3 bulan</option><option>Masih membandingkan</option></select></label><button class="btn" type="submit">Kirim lewat WhatsApp</button><small>Data Anda hanya dikirim ke WhatsApp dealer.</small></form>`;
 
@@ -148,7 +152,7 @@ ${(vh => vh ? vh + '\n' : '')(heroVideoSection())}<section class="section dark" 
 ${leasingSection()}
 <section class="section"><div class="wrap"><span class="eyebrow">Galeri</span><h2>Lihat langsung detailnya</h2><div class="car" id="gal"><div class="track g">${[...m0.gallery.slice(0, 5), ...m1.gallery.slice(0, 5)].map((g, i) => `<figure>${picture(g, 'Galeri XPeng foto ' + (i + 1), '', 900, 600)}</figure>`).join('')}</div></div></div></section>
 <section class="section dark"><div class="wrap two"><div><span class="eyebrow">Pricelist ${E(site.pricelistUpdate)}</span><h2>Harga XPeng terbaru</h2><table class="ptbl"><tbody>${models.flatMap(m => m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`)).join('')}</tbody></table><a class="btn" href="${u('/pricelist/')}">Lihat pricelist lengkap</a></div>${leadForm}</div></section>
-${articles.length ? `<section class="section"><div class="wrap"><span class="eyebrow">Artikel</span><h2>Panduan memilih mobil listrik</h2><div class="agrid">${articles.slice(0, 3).map(artCard).join('')}</div></div></section>` : ''}
+${articles.length ? `<section class="section"><div class="wrap"><span class="eyebrow">Artikel</span><h2>Panduan memilih mobil listrik</h2><div class="agrid" id="ahome">${articles.map((a, i) => i < 6 ? artCard(a) : artCard(a).replace('<article class="acard"', '<article class="acard" hidden')).join('')}</div><div class="morewrap">${articles.length > 6 ? '<button class="btn ghost" id="amore" type="button" data-step="6">Tampilkan Lebih Banyak</button>' : ''}<a class="btn ghost" href="${u('/artikel/')}">Lihat semua artikel</a></div></div></section>` : ''}
 <section class="section"><div class="wrap narrow">${faqBlock(HOME_FAQ)}</div></section>`;
   return layout({ title: `XPeng Indonesia | Harga X9 & G6 ${site.pricelistUpdate}`.slice(0, 62), desc: site.description, path: '/', body, image: m0.hero, ld: [faqLd(HOME_FAQ), { '@context': 'https://schema.org', '@type': 'WebSite', name: site.name, url: abs('/') }] });
 }
@@ -216,7 +220,7 @@ ${about.history.length ? `<section class="section"><div class="wrap narrow"><spa
 }
 
 function articleIndex() {
-  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Artikel</nav><h1>Artikel dan Panduan Mobil Listrik</h1><p>Tips memilih, merawat, dan mengisi daya mobil listrik premium.</p></div></section><section class="section"><div class="wrap agrid">${articles.length ? articles.map(artCard).join('') : '<p>Belum ada artikel.</p>'}</div></section>`;
+  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Artikel</nav><h1>Artikel dan Panduan Mobil Listrik</h1><p>Tips memilih, merawat, dan mengisi daya mobil listrik premium.</p><form class="asearch" role="search" onsubmit="return false"><label class="sr" for="aq">Cari artikel</label>${SV('<circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="m20 20-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>')}<input id="aq" type="search" placeholder="Cari artikel, contoh: harga X9, charging, pajak" autocomplete="off" enterkeyhint="search"><span id="acount" aria-live="polite"></span></form></div></section><section class="section"><div class="wrap"><p id="anone" class="anone" hidden>Artikel yang Anda cari belum ada. Coba kata lain, atau <a href="${wa('Halo, saya mau tanya soal XPeng')}" rel="noopener">tanya langsung via WhatsApp</a>.</p></div><div class="wrap agrid">${articles.length ? articles.map(artCard).join('') : '<p>Belum ada artikel.</p>'}</div></section>`;
   return layout({ title: 'Artikel Mobil Listrik XPeng | Panduan dan Tips', desc: 'Panduan memilih mobil listrik, harga XPeng, dan tips charging dari tim dealer XPeng. Ditulis orisinal dan diperbarui rutin.', path: '/artikel/', body, ld: [crumbs([['Beranda', '/'], ['Artikel', '/artikel/']])] });
 }
 
@@ -245,20 +249,38 @@ function notFound() {
   return layout({ title: 'Halaman tidak ditemukan | XPeng', desc: 'Halaman yang Anda cari tidak ditemukan. Kembali ke beranda XPeng.', path: '/404.html', noindex: true, body: `<section class="pagehead"><div class="wrap"><h1>Halaman tidak ditemukan</h1><p>Coba kembali ke <a href="${u('/')}">beranda</a> atau lihat <a href="${u('/model/')}">model kami</a>.</p></div></section>` });
 }
 
+/* ---------- promo ---------- */
+const fmtDate = d => { try { return new Date(d + 'T00:00:00+07:00').toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'Asia/Jakarta' }); } catch (e) { return d; } };
+const promoCta = p => {
+  let h = String(p.ctaUrl || '').trim(); if (/^(javascript|data|vbscript):/i.test(h)) h = '';
+  const href = h ? (/^(https?:|mailto:|tel:|#)/i.test(h) ? h : u(h.startsWith('/') ? h : '/' + h)) : wa('Halo, saya tertarik dengan promo "' + p.title + '". Boleh minta info?');
+  return `<a class="btn" href="${E(href)}"${/^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : ''}>${E(p.ctaText || 'Tanya Promo via WhatsApp')}</a>`;
+};
+const promoCard = (p, i) => {
+  const imgs = (p.images || []).filter(Boolean);
+  const slider = imgs.length ? `<div class="pmedia"><div class="car"><div class="track p">${imgs.map((s, k) => `<figure>${picture(s, p.title + ' foto ' + (k + 1), '', 900, 600, !(i === 0 && k === 0))}</figure>`).join('')}</div></div></div>` : '';
+  return `<article class="pcard${imgs.length ? '' : ' noimg-p'}" id="${E(p.id || 'promo-' + (i + 1))}">${slider}<div class="pbody">${p.badge ? `<span class="eyebrow">${E(p.badge)}</span>` : ''}<h2>${E(p.title)}</h2>${p.text ? `<p>${E(p.text).replace(/\n/g, '<br>')}</p>` : ''}${p.until ? `<p class="until">Berlaku sampai ${E(fmtDate(p.until))}</p>` : ''}<div class="cta">${promoCta(p)}</div></div></article>`;
+};
+function promoPage() {
+  const has = promos.length > 0;
+  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Promo</nav><h1>Promo XPeng X9 dan G6</h1><p>Penawaran terbaru dari dealer XPeng. Tekan tombol pada promo untuk bertanya langsung ke tim kami lewat WhatsApp.</p></div></section><section class="section"><div class="wrap">${has ? `<div class="plist">${promos.map(promoCard).join('')}</div>` : `<div class="pempty"><p>Belum ada promo aktif saat ini. Tanyakan penawaran terbaru langsung ke tim kami.</p><a class="btn" href="${wa('Halo, apakah ada promo XPeng terbaru?')}" rel="noopener">Tanya Promo via WhatsApp</a></div>`}</div></section>`;
+  return layout({ title: 'Promo XPeng X9 & G6 | Penawaran Terbaru Dealer', desc: 'Promo dan penawaran terbaru XPeng X9 dan G6 dari dealer resmi. Lihat foto mobilnya, baca syarat singkatnya, lalu tanya langsung via WhatsApp.', path: '/promo/', body, noindex: !has, ld: [crumbs([['Beranda', '/'], ['Promo', '/promo/']])] });
+}
+
 /* ---------- jalankan ---------- */
 out['index.html'] = home(); out['model/index.html'] = modelIndex(); out['pricelist/index.html'] = pricelist(); out['kontak/index.html'] = contact(); out['tentang/index.html'] = aboutPage();
-out['artikel/index.html'] = articleIndex(); out['404.html'] = notFound();
+out['artikel/index.html'] = articleIndex(); out['promo/index.html'] = promoPage(); out['404.html'] = notFound();
 models.forEach(m => out['model/' + m.slug + '/index.html'] = modelPage(m));
 articles.forEach(a => out['artikel/' + a.slug + '/index.html'] = articlePage(a));
 // bersihkan folder hasil lama
-['model', 'artikel', 'pricelist', 'kontak', 'tentang'].forEach(d => fs.rmSync(path.join(ROOT, d), { recursive: true, force: true }));
+['model', 'artikel', 'pricelist', 'kontak', 'tentang', 'promo'].forEach(d => fs.rmSync(path.join(ROOT, d), { recursive: true, force: true }));
 Object.entries(out).forEach(([f, h]) => { const fp = path.join(ROOT, f); fs.mkdirSync(path.dirname(fp), { recursive: true }); fs.writeFileSync(fp, h); });
 
 const today = new Date().toISOString().slice(0, 10);
-const urls = [['/', 1.0], ['/model/', .9], ['/pricelist/', .9], ['/artikel/', .7], ['/kontak/', .8], ['/tentang/', .7], ...models.map(m => ['/model/' + m.slug + '/', .9]), ...articles.map(a => ['/artikel/' + a.slug + '/', .7])];
+const urls = [['/', 1.0], ['/model/', .9], ['/pricelist/', .9], ['/artikel/', .7], ['/kontak/', .8], ['/tentang/', .7], ...(promos.length ? [['/promo/', .8]] : []), ...models.map(m => ['/model/' + m.slug + '/', .9]), ...articles.map(a => ['/artikel/' + a.slug + '/', .7])];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([p, pr]) => `<url><loc>${abs(p)}</loc><lastmod>${today}</lastmod><priority>${pr}</priority></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: ${BASE}/admin/\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
-fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# ${site.name}\n> ${site.description}\n\n## Model\n${models.map(m => `- [${m.name}](${abs('/model/' + m.slug + '/')}): ${m.tagline} Harga mulai ${rp(Math.min(...m.variants.map(v => v.price)))}`).join('\n')}\n\n## Harga\n- [Pricelist ${site.pricelistUpdate}](${abs('/pricelist/')}): ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join('; ')}\n\n## Halaman\n- [Tentang kami](${abs('/tentang/')}): profil, lokasi, dan sejarah dealer\n- [Kontak dan test drive](${abs('/kontak/')}): WhatsApp, telepon, email, media sosial\n\n## Artikel\n${articles.map(a => `- [${a.title}](${abs('/artikel/' + a.slug + '/')}): ${a.description}`).join('\n')}\n`);
+fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# ${site.name}\n> ${site.description}\n\n## Model\n${models.map(m => `- [${m.name}](${abs('/model/' + m.slug + '/')}): ${m.tagline} Harga mulai ${rp(Math.min(...m.variants.map(v => v.price)))}`).join('\n')}\n\n## Harga\n- [Pricelist ${site.pricelistUpdate}](${abs('/pricelist/')}): ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join('; ')}\n\n## Halaman\n- [Tentang kami](${abs('/tentang/')}): profil, lokasi, dan sejarah dealer\n${promos.length ? '- [Promo](' + abs('/promo/') + '): ' + promos.map(p => p.title).join('; ') + '\n' : ''}- [Kontak dan test drive](${abs('/kontak/')}): WhatsApp, telepon, email, media sosial\n\n## Artikel\n${articles.map(a => `- [${a.title}](${abs('/artikel/' + a.slug + '/')}): ${a.description}`).join('\n')}\n`);
 fs.writeFileSync(path.join(ROOT, 'manifest.webmanifest'), JSON.stringify({ name: site.name, short_name: 'XPeng', start_url: u('/'), display: 'standalone', background_color: '#0a0b0d', theme_color: '#0a0b0d', icons: [{ src: u('assets/img/favicon.svg'), sizes: 'any', type: 'image/svg+xml' }] }));
 fs.writeFileSync(path.join(ROOT, '.nojekyll'), '');
 { const px = JSON.stringify(PAGE_INDEX, null, 1), pf = path.join(ROOT, 'data/page-index.json'); let old = ''; try { old = fs.readFileSync(pf, 'utf8'); } catch (e) {} if (old !== px) fs.writeFileSync(pf, px); }

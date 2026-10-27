@@ -40,7 +40,7 @@ jobs:
             nd=$(find "$tmp" -mindepth 1 -maxdepth 1 -type d | wc -l)
             if [ "$nf" = "0" ] && [ "$nd" = "1" ]; then
               d=$(find "$tmp" -mindepth 1 -maxdepth 1 -type d); b=$(basename "$d")
-              case "$b" in assets|data|admin|build|shared|docs|backup|upload|model|artikel|kontak|pricelist|tentang) ;; *) src="$d"; echo "Buang folder pembungkus: $b";; esac
+              case "$b" in assets|data|admin|build|shared|docs|backup|upload|model|artikel|kontak|pricelist|tentang|promo) ;; *) src="$d"; echo "Buang folder pembungkus: $b";; esac
             fi
             cp -a "$src"/. .
             rm -rf "$tmp" "$z"
