@@ -416,6 +416,18 @@
       "tag": "h2"
      },
      {
+      "t": "Fitur",
+      "tag": "span"
+     },
+     {
+      "t": "Interior XPeng X9: Kursi Zero-Gravity dan Fitur Kabin",
+      "tag": "h3"
+     },
+     {
+      "t": "Bedah interior XPeng X9: kursi zero-gravity, pijat, layar 21,4 inci, audio Xopera, kulkas, bagasi 2.554 liter, dan tips mencoba kabin MPV listrik ini.",
+      "tag": "p"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -438,21 +450,13 @@
      {
       "t": "Apa beda XPeng G6 Pro vs AWD? Bandingkan harga, tenaga, jarak tempuh, dan penggerak roda. Panduan memilih varian G6 yang sesuai kebutuhan dan anggaran Anda.",
       "tag": "p"
-     },
-     {
-      "t": "Teknologi",
-      "tag": "span"
-     },
-     {
-      "t": "Pengisian Cepat 800V XPeng: Cara Kerja dan Syaratnya",
-      "tag": "h3"
-     },
-     {
-      "t": "Apa itu pengisian cepat 800V pada XPeng? Pahami arti 10-80% sekitar 12 menit, istilah 5C, dan syarat charger agar waktu charging benar-benar singkat.",
-      "tag": "p"
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/x9-white-kursi-2.webp",
+      "alt": "Kursi baris kedua XPeng X9 putih, interior dengan kursi zero-gravity"
+     },
      {
       "src": "/assets/img/222775.webp",
       "alt": "Detail XPeng G6 abu-abu, mobil listrik dengan garansi baterai 8 tahun"
@@ -460,10 +464,6 @@
      {
       "src": "/assets/img/222779.webp",
       "alt": "XPeng G6 abu-abu tampak depan, varian Pro dan AWD"
-     },
-     {
-      "src": "/assets/img/g6-black-belakang.webp",
-      "alt": "XPeng G6 hitam tampak belakang, mobil listrik dengan pengisian cepat 800V"
      }
     ]
    },
