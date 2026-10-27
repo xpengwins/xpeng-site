@@ -1175,7 +1175,12 @@
       "tag": "a"
      }
     ],
-    "imgs": []
+    "imgs": [
+     {
+      "src": "/assets/img/219851.webp",
+      "alt": "Wins, Konsultan Penjualan XPeng Dealer XPeng"
+     }
+    ]
    },
    {
     "key": "testdrive",
