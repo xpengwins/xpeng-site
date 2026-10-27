@@ -123,120 +123,123 @@
   },
   {
    "date": "2026-10-27",
-   "at": "2026-10-27T03:06:14.942Z",
-   "urls": 28,
+   "at": "2026-10-27T15:17:00.523Z",
+   "urls": 30,
    "errors": 0,
    "slow": 0,
-   "avgMs": 136,
+   "avgMs": 107,
    "pages": {
     "/": {
      "score": 88,
-     "lcp": 3776,
+     "lcp": 3650,
      "cls": 0,
-     "tbt": 30,
+     "tbt": 69,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 100,
-     "lcp": 1064,
+     "score": 85,
+     "lcp": 4098,
      "cls": 0,
-     "tbt": 73,
+     "tbt": 77,
      "field": null
     },
     "/model/xpeng-g6/": {
      "score": 100,
      "lcp": 1206,
      "cls": 0,
-     "tbt": 78,
+     "tbt": 47,
      "field": null
     },
     "/pricelist/": {
      "score": 100,
      "lcp": 1357,
      "cls": 0,
-     "tbt": 62,
+     "tbt": 56,
      "field": null
     },
     "/kontak/": {
-     "score": 87,
-     "lcp": 3675,
+     "score": 100,
+     "lcp": 911,
      "cls": 0,
-     "tbt": 200,
+     "tbt": 60,
      "field": null
     },
     "/artikel/interior-xpeng-x9/": {
-     "score": 99,
-     "lcp": 1055,
+     "score": 81,
+     "lcp": 3636,
      "cls": 0.002,
-     "tbt": 103,
+     "tbt": 368,
      "field": null
     }
    },
    "issues": [
     "perf:/",
-    "perf:/kontak/"
+    "perf:/model/xpeng-x9/",
+    "perf:/artikel/interior-xpeng-x9/"
    ]
   }
  ],
- "generated": "2026-10-27T03:06:14.942Z",
+ "generated": "2026-10-27T15:17:00.523Z",
  "latest": {
   "date": "2026-10-27",
-  "at": "2026-10-27T03:06:14.942Z",
-  "urls": 28,
+  "at": "2026-10-27T15:17:00.523Z",
+  "urls": 30,
   "errors": 0,
   "slow": 0,
-  "avgMs": 136,
+  "avgMs": 107,
   "pages": {
    "/": {
     "score": 88,
-    "lcp": 3776,
+    "lcp": 3650,
     "cls": 0,
-    "tbt": 30,
+    "tbt": 69,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 100,
-    "lcp": 1064,
+    "score": 85,
+    "lcp": 4098,
     "cls": 0,
-    "tbt": 73,
+    "tbt": 77,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 100,
     "lcp": 1206,
     "cls": 0,
-    "tbt": 78,
+    "tbt": 47,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
     "lcp": 1357,
     "cls": 0,
-    "tbt": 62,
+    "tbt": 56,
     "field": null
    },
    "/kontak/": {
-    "score": 87,
-    "lcp": 3675,
+    "score": 100,
+    "lcp": 911,
     "cls": 0,
-    "tbt": 200,
+    "tbt": 60,
     "field": null
    },
    "/artikel/interior-xpeng-x9/": {
-    "score": 99,
-    "lcp": 1055,
+    "score": 81,
+    "lcp": 3636,
     "cls": 0.002,
-    "tbt": 103,
+    "tbt": 368,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/kontak/"
+   "perf:/model/xpeng-x9/",
+   "perf:/artikel/interior-xpeng-x9/"
   ],
   "issueText": [
-   "🟠 /: LCP 3.8 dtk",
-   "🟠 /kontak/: LCP 3.7 dtk"
+   "🟠 /: LCP 3.6 dtk",
+   "🔴 /model/xpeng-x9/: LCP 4.1 dtk",
+   "🟠 /artikel/interior-xpeng-x9/: LCP 3.6 dtk, TBT 368 ms"
   ]
  },
  "alertKeys": [

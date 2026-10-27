@@ -1,89 +1,41 @@
 {
- "generated": "2026-10-27T03:06:14.993Z",
+ "generated": "2026-10-27T15:17:01.091Z",
  "platforms": {
   "facebook": {
-   "posted48h": 8,
+   "posted48h": 4,
    "posted24h": 2,
-   "bursts": 2,
-   "error": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   "bursts": 0,
+   "error": "Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)"
   },
   "instagram": {
-   "posted48h": 8,
+   "posted48h": 4,
    "posted24h": 2,
-   "bursts": 2,
-   "account": {
-    "name": "@xpengwins",
-    "followers": 2,
-    "media": 14
-   },
-   "posts": 14,
-   "avgEngRecent": 0,
-   "avgEngBefore": 0,
-   "avgReachRecent": null,
-   "last": "2026-10-27T02:38:47+0000",
-   "top": [
-    {
-     "url": "https://www.instagram.com/p/De-zZ-vF2JV/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/De85K2mjrBH/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/De8O1M7jTFM/",
-     "eng": 0
-    }
-   ],
-   "extra": {
-    "quota": {
-     "used": 2,
-     "total": 100
-    }
-   }
+   "bursts": 0,
+   "error": "Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)"
   },
   "threads": {
-   "posted48h": 8,
+   "posted48h": 4,
    "posted24h": 2,
-   "bursts": 2,
-   "account": {
-    "name": "@xpengwins",
-    "followers": 0
-   },
-   "posts": 10,
-   "avgEngRecent": 0,
-   "avgEngBefore": 0,
-   "avgReachRecent": 28,
-   "last": "2026-10-27T02:39:07+0000",
-   "top": [
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De-zb6Vlk1z",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De85MIvlls-",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De8O3Txl5az",
-     "eng": 0
-    }
-   ],
-   "extra": {}
+   "bursts": 0,
+   "error": "API access blocked. (kode 200)"
   }
  },
  "issues": [
-  "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs",
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (55 → 16). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
+  "❗ Facebook (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
+  "❗ Instagram (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
+  "🚫 Threads (kebijakan): API access blocked. (kode 200)"
  ],
  "alertKeys": [
-  "burst:facebook",
-  "burst:instagram",
-  "burst:threads",
+  "gagal:threads:gambar JPG belum tayang di situs setelah",
+  "gagal:instagram:gambar JPG belum tayang di situs setelah",
+  "gagal:facebook:gambar JPG belum tayang di situs setelah",
+  "gagal:threads:gambar Threads belum tayang, pakai perse",
   "api:facebook:gagal",
-  "reach:threads"
+  "api:instagram:gagal",
+  "api:threads:kebijakan"
  ]
 }

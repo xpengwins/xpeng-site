@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T03:06:23.976Z",
+ "generated": "2026-10-27T15:17:02.969Z",
  "traffic": {
   "periode": [
    "2026-09-27",
@@ -62,9 +62,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 20,
-  "terjadwal": 12,
-  "terbitBerikutnya": "2026-10-27T15:00:00+07:00",
+  "terbit": 21,
+  "terjadwal": 11,
+  "terbitBerikutnya": "2026-10-28T09:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -73,16 +73,19 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: LCP 3.8 dtk",
-    "🟠 /kontak/: LCP 3.7 dtk"
+    "🟠 /: LCP 3.6 dtk",
+    "🔴 /model/xpeng-x9/: LCP 4.1 dtk",
+    "🟠 /artikel/interior-xpeng-x9/: LCP 3.6 dtk, TBT 368 ms"
    ]
   },
   "sosmed": [
-   "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs",
-   "📉 Threads: jangkauan 3 post terbaru turun tajam (55 → 16). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+   "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
+   "❗ Facebook (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
+   "❗ Instagram (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
+   "🚫 Threads (kebijakan): API access blocked. (kode 200)"
   ]
  },
  "E_riset_tren": [
