@@ -1130,6 +1130,54 @@
     "imgs": []
    },
    {
+    "key": "profil",
+    "title": "Kenalan dengan Wins",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Siap membantu Anda",
+      "tag": "span"
+     },
+     {
+      "t": "Konsultan Anda",
+      "tag": "span"
+     },
+     {
+      "t": "Kenalan dengan Wins",
+      "tag": "h2"
+     },
+     {
+      "t": "Konsultan Penjualan XPeng",
+      "tag": "p"
+     },
+     {
+      "t": "Halo, saya Wins. Saya siap menemani Anda memilih XPeng yang paling pas, mulai dari konsultasi model dan varian, simulasi cicilan, sampai jadwal test drive. Tanya apa saja, tanpa sungkan.",
+      "tag": "p"
+     },
+     {
+      "t": "Konsultasi model dan varian",
+      "tag": "li"
+     },
+     {
+      "t": "Simulasi cicilan",
+      "tag": "li"
+     },
+     {
+      "t": "Booking test drive",
+      "tag": "li"
+     },
+     {
+      "t": "Chat Saya di WhatsApp",
+      "tag": "a"
+     },
+     {
+      "t": "Telepon",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   },
+   {
     "key": "testdrive",
     "title": "Test drive dalam 3 langkah",
     "hasH1": false,
