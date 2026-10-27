@@ -13,7 +13,7 @@ var x0=null;hero.addEventListener('touchstart',function(e){x0=e.touches[0].clien
 /* carousel tombol */
 $$('.car').forEach(function(c){var tr=$('.track',c);if(!tr||tr.children.length<2)return;var n=tr.children.length,hasDots=n<=6,w=document.createElement('div');w.className='cbtn';w.innerHTML='<button class="tab" aria-label="Geser kiri">←</button>'+(hasDots?'<div class="cdots"></div>':'')+'<button class="tab" aria-label="Geser kanan">→</button>';
 if(c.id==='car'){var h=document.createElement('p');h.className='chint';h.setAttribute('aria-hidden','true');h.innerHTML='<span>Geser untuk lihat model lainnya</span> <b>→</b>';c.insertBefore(h,tr)}
-c.appendChild(w);var bs=w.querySelectorAll('.tab'),dd=$('.cdots',w),ds=[];
+c.appendChild(w);if(c.classList.contains('pmini')&&tr.scrollWidth<=tr.clientWidth+2)w.style.display='none';var bs=w.querySelectorAll('.tab'),dd=$('.cdots',w),ds=[];
 bs[0].onclick=function(){tr.scrollBy({left:-tr.clientWidth*.7,behavior:'smooth'})};bs[1].onclick=function(){tr.scrollBy({left:tr.clientWidth*.7,behavior:'smooth'})};
 if(dd){for(var k=0;k<n;k++)(function(k){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Tampilan '+(k+1)+' dari '+n);d.onclick=function(){tr.scrollTo({left:tr.children[k].offsetLeft-tr.children[0].offsetLeft,behavior:'smooth'})};dd.appendChild(d);ds.push(d)})(k)}
 var sync=function(){var st=(tr.children[1].offsetLeft-tr.children[0].offsetLeft)||1,i=Math.round(tr.scrollLeft/st);if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)i=n-1;if(i>n-1)i=n-1;ds.forEach(function(d,k){d.className=k===i?'on':''});if(tr.scrollLeft>8)c.classList.add('moved')};

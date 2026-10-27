@@ -257,9 +257,11 @@ const promoCta = p => {
   return `<a class="btn" href="${E(href)}"${/^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : ''}>${E(p.ctaText || 'Tanya Promo via WhatsApp')}</a>`;
 };
 const promoCard = (p, i) => {
-  const imgs = (p.images || []).filter(Boolean);
-  const slider = imgs.length ? `<div class="pmedia"><div class="car"><div class="track p">${imgs.map((s, k) => `<figure>${picture(s, p.title + ' foto ' + (k + 1), '', 900, 600, !(i === 0 && k === 0))}</figure>`).join('')}</div></div></div>` : '';
-  return `<article class="pcard${imgs.length ? '' : ' noimg-p'}" id="${E(p.id || 'promo-' + (i + 1))}">${slider}<div class="pbody">${p.badge ? `<span class="eyebrow">${E(p.badge)}</span>` : ''}<h2>${E(p.title)}</h2>${p.text ? `<p>${E(p.text).replace(/\n/g, '<br>')}</p>` : ''}${p.until ? `<p class="until">Berlaku sampai ${E(fmtDate(p.until))}</p>` : ''}<div class="cta">${promoCta(p)}</div></div></article>`;
+  const imgs = (p.images || []).filter(Boolean), main = String(p.image || '').trim();
+  const mainH = main ? `<div class="pmain">${picture(main, p.title, '', 900, 600, i !== 0)}</div>` : '';
+  const miniH = imgs.length ? `<div class="car pmini"><div class="track m">${imgs.map((s, k) => `<figure>${picture(s, p.title + ' foto mobil ' + (k + 1), '', 300, 200, !(i === 0 && !main && k === 0))}</figure>`).join('')}</div></div>` : '';
+  const media = mainH || miniH ? `<div class="pmedia">${mainH}${miniH}</div>` : '';
+  return `<article class="pcard${media ? '' : ' noimg-p'}" id="${E(p.id || 'promo-' + (i + 1))}">${media}<div class="pbody">${p.badge ? `<span class="eyebrow">${E(p.badge)}</span>` : ''}<h2>${E(p.title)}</h2>${p.text ? `<p>${E(p.text).replace(/\n/g, '<br>')}</p>` : ''}${p.until ? `<p class="until">Berlaku sampai ${E(fmtDate(p.until))}</p>` : ''}<div class="cta">${promoCta(p)}</div></div></article>`;
 };
 function promoPage() {
   const has = promos.length > 0;
