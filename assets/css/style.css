@@ -26,7 +26,11 @@ main{padding-top:64px}
 .section{padding:84px 0}.section.dark{background:var(--bg2)}
 .car{position:relative}.track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding-bottom:6px;-webkit-overflow-scrolling:touch}.track::-webkit-scrollbar{display:none}.track>*{scroll-snap-align:start;flex:0 0 min(86%,560px)}
 .track.g>*{flex-basis:min(78%,420px)}.track.g img{width:100%;height:300px;object-fit:cover;border-radius:var(--r)}
-.cbtn{display:flex;gap:10px;margin-top:16px}
+.cbtn{display:flex;gap:10px;margin-top:16px;align-items:center}
+.cdots{display:flex;gap:2px;flex:1;justify-content:center}.cdots button{width:22px;height:22px;background:none;border:0;cursor:pointer;position:relative;padding:0}.cdots button::after{content:"";position:absolute;left:50%;top:50%;width:8px;height:8px;margin:-4px 0 0 -4px;border-radius:99px;background:var(--line);transition:.25s}.cdots button.on::after{width:22px;margin-left:-11px;background:var(--ac)}
+.chint{display:none}
+@keyframes hintx{0%,100%{transform:translateX(0)}50%{transform:translateX(6px)}}@keyframes nudgex{0%,100%{transform:translateX(0)}50%{transform:translateX(-34px)}}
+@media(max-width:720px),(hover:none){#car .track>*{flex-basis:76%}.chint{display:flex;align-items:center;justify-content:flex-end;gap:8px;color:var(--mu);font-size:.85rem;margin:0 0 12px;transition:opacity .3s}.chint b{color:var(--ac);font-weight:600;display:inline-block;animation:hintx 1.2s ease-in-out infinite}.car.moved .chint{opacity:0}.car.nudge:not(.moved) .mcard{animation:nudgex 1s ease .4s 2}}
 .mcard{background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.3s}.mcard:hover{transform:translateY(-4px);border-color:var(--ac2)}
 .mimg{width:100%;aspect-ratio:3/2;object-fit:cover}.mbody{padding:22px}.mbody p{color:var(--mu);margin:8px 0 14px;font-size:.95rem}.mprice{display:block;font-size:1.15rem;font-weight:500}.more{color:var(--ac);font-size:.9rem;display:inline-block;margin-top:10px}
 .cfg{display:grid;grid-template-columns:1.35fr 1fr;gap:30px;align-items:start}.stage{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:18px}

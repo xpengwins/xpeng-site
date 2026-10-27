@@ -38,9 +38,10 @@ const IC = {
   tiktok: SV('<path d="M16 3c.3 2.200 1.700 3.800 4 4v3a7 7 0 0 1-4-1.300V15a6 6 0 1 1-6-6c.3 0 .7 0 1 .1v3.200a3 3 0 1 0 2 2.800V3z"/>'),
   youtube: SV('<rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="m10 9 5 3-5 3z"/>'),
   facebook: SV('<path d="M14 8V6.500c0-.7.300-1 1-1h2V2h-3c-3 0-4.500 1.800-4.500 4.500V8H7v3.500h2.500V22H14V11.500h2.800L17.300 8z"/>'),
+  link: SV('<path d="M10 14a4 4 0 0 0 5.700 0l3-3a4 4 0 0 0-5.700-5.700l-1 1M14 10a4 4 0 0 0-5.700 0l-3 3a4 4 0 0 0 5.700 5.700l1-1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>'),
   arrow: SV('<path d="M5 12h12m-5-5 5 5-5 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>')
 };
-const SOCIALS = [['instagram', 'Instagram', site.instagram], ['tiktok', 'TikTok', site.tiktok], ['youtube', 'YouTube', site.youtube], ['facebook', 'Facebook', site.facebook]].filter(x => x[2]);
+const SOCIALS = [['instagram', 'Instagram', site.instagram], ['tiktok', 'TikTok', site.tiktok], ['youtube', 'YouTube', site.youtube], ['facebook', 'Facebook', site.facebook]].concat((site.links || []).map(l => ['link', l.name || String(l.url || '').replace(/^https?:\/\/(www\.)?/, '').split('/')[0], l.url])).filter(x => x[2]);
 const socialRow = () => SOCIALS.length ? `<ul class="soc">${SOCIALS.map(x => `<li><a href="${E(x[2])}" target="_blank" rel="noopener me" aria-label="${x[1]} ${E(site.dealer)}">${IC[x[0]]}<span>${x[1]}</span></a></li>`).join('')}</ul>` : '';
 const telHref = 'tel:+' + String(site.whatsapp).replace(/\D/g, '');
 const mapQ = String(about.mapsQuery || site.address || '').trim();
@@ -53,7 +54,7 @@ const out = {}; // path -> html
 const staticFiles = {};
 
 function jsonld(o) { return '<script type="application/ld+json">' + JSON.stringify(o).replace(/</g, '\\u003c') + '</script>'; }
-const orgLd = () => ({ '@context': 'https://schema.org', '@type': 'AutoDealer', name: site.dealer, brand: { '@type': 'Brand', name: 'XPeng' }, url: abs('/'), logo: abs('assets/img/logo.svg'), telephone: site.phone, address: { '@type': 'PostalAddress', streetAddress: site.address, addressCountry: 'ID' }, sameAs: [site.instagram, site.tiktok, site.youtube, site.facebook].filter(Boolean), email: site.email || undefined, hasMap: mapLink || undefined });
+const orgLd = () => ({ '@context': 'https://schema.org', '@type': 'AutoDealer', name: site.dealer, brand: { '@type': 'Brand', name: 'XPeng' }, url: abs('/'), logo: abs('assets/img/logo.svg'), telephone: site.phone, address: { '@type': 'PostalAddress', streetAddress: site.address, addressCountry: 'ID' }, sameAs: [site.instagram, site.tiktok, site.youtube, site.facebook].concat((site.links || []).map(l => l.url)).filter(Boolean), email: site.email || undefined, hasMap: mapLink || undefined });
 const crumbs = list => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c[0], item: abs(c[1]) })) });
 const faqLd = f => f && f.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
 
