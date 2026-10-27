@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T18:25:28.822Z",
+ "generated": "2026-10-27T19:26:00.767Z",
  "traffic": {
   "periode": [
    "2026-09-27",
@@ -73,8 +73,8 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: LCP 4.0 dtk",
-    "🟠 /artikel/interior-xpeng-x9/: LCP 3.9 dtk"
+    "🔴 /: LCP 4.1 dtk",
+    "🔴 /model/xpeng-x9/: LCP 4.0 dtk"
    ]
   },
   "sosmed": [

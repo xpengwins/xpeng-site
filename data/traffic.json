@@ -1,0 +1,193 @@
+{
+ "generated": "2026-10-27T19:25:50.631Z",
+ "property": "560653996",
+ "today": {
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
+ },
+ "yesterday": {
+  "users": 25,
+  "sessions": 34,
+  "views": 79,
+  "newUsers": 23
+ },
+ "last7": {
+  "users": 499,
+  "sessions": 520,
+  "views": 650,
+  "newUsers": 519
+ },
+ "last30": {
+  "users": 499,
+  "sessions": 520,
+  "views": 650,
+  "newUsers": 519
+ },
+ "prev30": {
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
+ },
+ "daily": [
+  {
+   "date": "2026-10-25",
+   "users": 405,
+   "sessions": 408,
+   "views": 476
+  },
+  {
+   "date": "2026-10-26",
+   "users": 72,
+   "sessions": 79,
+   "views": 95
+  },
+  {
+   "date": "2026-10-27",
+   "users": 25,
+   "sessions": 34,
+   "views": 79
+  }
+ ],
+ "pages": [
+  {
+   "path": "/",
+   "views": 537,
+   "users": 443
+  },
+  {
+   "path": "/kontak/",
+   "views": 19,
+   "users": 3
+  },
+  {
+   "path": "/artikel/garansi-baterai-xpeng/",
+   "views": 11,
+   "users": 11
+  },
+  {
+   "path": "/artikel/mobil-listrik-premium-terbaik-indonesia/",
+   "views": 11,
+   "users": 7
+  },
+  {
+   "path": "/artikel/pengisian-cepat-800v-xpeng/",
+   "views": 9,
+   "users": 7
+  },
+  {
+   "path": "/artikel/parkir-otomatis-xpeng-g6/",
+   "views": 8,
+   "users": 7
+  },
+  {
+   "path": "/model/",
+   "views": 8,
+   "users": 2
+  },
+  {
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 7,
+   "users": 7
+  },
+  {
+   "path": "/artikel/mobil-listrik-7-seater-indonesia/",
+   "views": 6,
+   "users": 6
+  },
+  {
+   "path": "/artikel/suv-listrik-terbaik-indonesia/",
+   "views": 5,
+   "users": 5
+  }
+ ],
+ "channels": [
+  {
+   "k": "Paid Social",
+   "v": 419
+  },
+  {
+   "k": "Organic Social",
+   "v": 46
+  },
+  {
+   "k": "Direct",
+   "v": 31
+  },
+  {
+   "k": "Organic Search",
+   "v": 11
+  },
+  {
+   "k": "Paid Search",
+   "v": 7
+  },
+  {
+   "k": "Referral",
+   "v": 5
+  },
+  {
+   "k": "Unassigned",
+   "v": 3
+  }
+ ],
+ "devices": [
+  {
+   "k": "mobile",
+   "v": 472
+  },
+  {
+   "k": "desktop",
+   "v": 47
+  },
+  {
+   "k": "tablet",
+   "v": 1
+  }
+ ],
+ "cities": [
+  {
+   "k": "Jakarta",
+   "v": 228
+  },
+  {
+   "k": "Depok",
+   "v": 43
+  },
+  {
+   "k": "Tangerang",
+   "v": 43
+  },
+  {
+   "k": "South Tangerang",
+   "v": 33
+  },
+  {
+   "k": "Boardman",
+   "v": 13
+  },
+  {
+   "k": "",
+   "v": 10
+  },
+  {
+   "k": "Bekasi",
+   "v": 10
+  },
+  {
+   "k": "(not set)",
+   "v": 9
+  }
+ ],
+ "leads": {
+  "klik_whatsapp": 7,
+  "kirim_form_test_drive": 0,
+  "klik_booking_test_drive": 0,
+  "klik_telepon": 0,
+  "klik_email": 0,
+  "unduh_brosur": 0
+ },
+ "catatan": "Pengunjung = pengguna aktif GA4. Data hari ini bisa naik beberapa jam ke depan (GA4 menunda pemrosesan). Pengunjung yang menolak/menonaktifkan pelacakan tidak terhitung."
+}

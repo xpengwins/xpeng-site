@@ -2,7 +2,7 @@
  "history": [
   {
    "date": "2026-10-27",
-   "at": "2026-10-27T18:25:21.550Z",
+   "at": "2026-10-27T19:25:50.586Z",
    "pages": 30,
    "ok": 30,
    "statusBad": [],
@@ -82,15 +82,106 @@
    "at": 1793125507685
   }
  },
- "generated": "2026-10-27T18:25:21.550Z",
+ "generated": "2026-10-27T19:25:50.586Z",
  "latest": {
   "date": "2026-10-27",
-  "at": "2026-10-27T18:25:21.550Z",
+  "at": "2026-10-27T19:25:50.586Z",
   "pages": 30,
   "ok": 30,
   "statusBad": [],
   "bad": 0,
   "warn": 0,
+  "orphanFiles": [
+   {
+    "path": "assets/img/214631.webp",
+    "kb": 67
+   },
+   {
+    "path": "assets/img/placeholder.svg",
+    "kb": 0
+   },
+   {
+    "path": "assets/img/x9-black-belakang.webp",
+    "kb": 34
+   },
+   {
+    "path": "assets/img/x9-black-dashboard.webp",
+    "kb": 28
+   },
+   {
+    "path": "assets/img/x9-black-kursi-3.webp",
+    "kb": 22
+   },
+   {
+    "path": "assets/img/x9-black-kursi-belakang.webp",
+    "kb": 21
+   },
+   {
+    "path": "assets/img/x9-grey-belakang.webp",
+    "kb": 22
+   },
+   {
+    "path": "assets/img/x9-grey-kursi-2.webp",
+    "kb": 21
+   },
+   {
+    "path": "assets/img/x9-grey-kursi-3.webp",
+    "kb": 33
+   },
+   {
+    "path": "assets/img/x9-grey-kursi-belakang.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/x9-silver-belakang.webp",
+    "kb": 36
+   },
+   {
+    "path": "assets/img/x9-silver-dashboard.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/x9-silver-kursi-2.webp",
+    "kb": 35
+   },
+   {
+    "path": "assets/img/x9-silver-kursi-3.webp",
+    "kb": 26
+   },
+   {
+    "path": "assets/img/x9-silver-kursi-belakang.webp",
+    "kb": 22
+   },
+   {
+    "path": "assets/img/x9-white-blk-belakang.webp",
+    "kb": 35
+   },
+   {
+    "path": "assets/img/x9-white-blk-dashboard.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/x9-white-blk-kursi-2.webp",
+    "kb": 25
+   },
+   {
+    "path": "assets/img/x9-white-blk-kursi-3.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/x9-white-blk-kursi-belakang.webp",
+    "kb": 27
+   },
+   {
+    "path": "assets/img/xpeng-g6-drive-a-brighter-tomorrow.webp",
+    "kb": 91
+   },
+   {
+    "path": "assets/img/xpeng-xpilot-4-0-drive-the-future-gmnx.webp",
+    "kb": 91
+   }
+  ],
+  "orphanTotal": 22,
   "issues": []
  },
  "alertKeys": []
