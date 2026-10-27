@@ -1,5 +1,5 @@
 {
- "auto": true,
+ "auto": false,
  "platforms": {
   "facebook": true,
   "instagram": true,
