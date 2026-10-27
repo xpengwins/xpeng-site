@@ -1262,6 +1262,14 @@
      {
       "t": "Senin - Minggu: 08.30 - 19.00",
       "tag": "li"
+     },
+     {
+      "t": "Jam Layanan Konsultasi Pembelian",
+      "tag": "li"
+     },
+     {
+      "t": "Senin - Minggu: 08.30 - 22.00",
+      "tag": "li"
      }
     ],
     "imgs": []
@@ -1560,6 +1568,14 @@
      },
      {
       "t": "Senin - Minggu: 08.30 - 19.00",
+      "tag": "li"
+     },
+     {
+      "t": "Jam Layanan Konsultasi Pembelian",
+      "tag": "li"
+     },
+     {
+      "t": "Senin - Minggu: 08.30 - 22.00",
       "tag": "li"
      },
      {

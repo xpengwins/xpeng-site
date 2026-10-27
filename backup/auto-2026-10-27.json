@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-27T16:22:39.836Z",
+ "date": "2026-10-27T16:25:25.562Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -1025,7 +1025,9 @@
     }
    ],
    "hours": [
-    "Senin - Minggu: 08.30 - 19.00"
+    "Senin - Minggu: 08.30 - 19.00",
+    "Jam Layanan Konsultasi Pembelian",
+    "Senin - Minggu: 08.30 - 22.00"
    ],
    "mapsQuery": "XPeng Alam Sutera",
    "mapsEmbed": "QM85+VF Pakualam, South Tangerang City, Banten"
