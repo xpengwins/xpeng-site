@@ -43,7 +43,9 @@ async function tgSend(text) {
 const FETCH = {
   facebook: async () => {
     const acc = await get(GRAPH + '/' + FB.id, { fields: 'name,fan_count,followers_count', access_token: FB.tok });
-    const p = await get(GRAPH + '/' + FB.id + '/posts', { fields: 'created_time,permalink_url,reactions.summary(true).limit(0),comments.summary(true).limit(0),shares', limit: 15, access_token: FB.tok });
+    const pq = { fields: 'created_time,permalink_url,reactions.summary(true).limit(0),comments.summary(true).limit(0),shares', limit: 15, access_token: FB.tok };
+    /* /posts butuh izin pages_read_user_content (error #10); /published_posts cukup dengan izin Page biasa, jadi dicoba lebih dulu */
+    const p = await get(GRAPH + '/' + FB.id + '/published_posts', pq).catch(() => get(GRAPH + '/' + FB.id + '/posts', pq));
     return { account: { name: acc.name, followers: acc.followers_count || acc.fan_count || 0 }, posts: (p.data || []).map(x => ({ at: x.created_time, url: x.permalink_url, eng: ((x.reactions && x.reactions.summary && x.reactions.summary.total_count) || 0) + ((x.comments && x.comments.summary && x.comments.summary.total_count) || 0) + ((x.shares && x.shares.count) || 0) })) };
   },
   instagram: async () => {
