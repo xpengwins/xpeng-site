@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-27T03:35:33.745Z",
+ "date": "2026-10-27T03:35:55.541Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -34,6 +34,12 @@
     "branch": "main"
    },
    "facebook": "https://www.facebook.com/share/1EDphzUCPP/",
+   "links": [
+    {
+     "name": "Lynk.id",
+     "url": "https://lynk.id/xpengwins"
+    }
+   ],
    "ga4": "G-DKWBG156T4",
    "heroVideo": "https://youtu.be/3Ct_Sm8Njsc?si=1Oj0ZC_1RDxZmXnx",
    "heroVideoJudul": "",

@@ -893,6 +893,10 @@
      {
       "t": "Facebook",
       "tag": "span"
+     },
+     {
+      "t": "Lynk.id",
+      "tag": "span"
      }
     ],
     "imgs": []
