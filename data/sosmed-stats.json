@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-26T15:51:30.207Z",
+ "generated": "2026-10-27T03:06:14.993Z",
  "platforms": {
   "facebook": {
    "posted48h": 8,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 13
+    "media": 14
    },
-   "posts": 13,
+   "posts": 14,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-26T08:50:35+0000",
+   "last": "2026-10-27T02:38:47+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/De-zZ-vF2JV/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/De85K2mjrBH/",
      "eng": 0
     },
     {
      "url": "https://www.instagram.com/p/De8O1M7jTFM/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/De6S1xoFzMa/",
      "eng": 0
     }
    ],
@@ -50,22 +50,22 @@
     "name": "@xpengwins",
     "followers": 0
    },
-   "posts": 9,
+   "posts": 10,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 42,
-   "last": "2026-10-26T08:50:55+0000",
+   "avgReachRecent": 28,
+   "last": "2026-10-27T02:39:07+0000",
    "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De-zb6Vlk1z",
+     "eng": 0
+    },
     {
      "url": "https://www.threads.com/@xpengwins/post/De85MIvlls-",
      "eng": 0
     },
     {
      "url": "https://www.threads.com/@xpengwins/post/De8O3Txl5az",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De6S3J-luk5",
      "eng": 0
     }
    ],
@@ -76,15 +76,14 @@
   "⚠️ Facebook: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
   "⚠️ Instagram: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
   "⚠️ Threads: 2x posting 3 kali dalam 30 menit (48 jam terakhir). Beri jeda minimal 2 jam per post agar tidak terlihat spam.",
-  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs",
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (55 → 16). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
  ],
  "alertKeys": [
   "burst:facebook",
-  "perday:facebook",
   "burst:instagram",
-  "perday:instagram",
   "burst:threads",
-  "perday:threads",
-  "api:facebook:gagal"
+  "api:facebook:gagal",
+  "reach:threads"
  ]
 }
