@@ -1,0 +1,11 @@
+{
+ "/kontak/": {
+  "order": [
+   "kontak-dan-test-drive-xpeng",
+   "profil",
+   "ikuti-kami",
+   "testdrive",
+   "kunjungi-showroom-kami"
+  ]
+ }
+}
