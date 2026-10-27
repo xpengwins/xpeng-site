@@ -78,3 +78,18 @@ Secret yang dipakai sudah ada semua (TELEGRAM_*, FB_*, IG_*, THREADS_*). Satu ya
 **Mengubah niche atau komposisi:** buat file `data/riset-tren-config.json` berisi hanya bagian yang ingin diganti, misalnya `{"ratio": {"inti": 80, "luas": 20}, "top": 20}`. Mau notifikasi Telegram untuk topik panas? Isi `{"hotAlert": true}`.
 
 **Catatan jujur:** Google tidak menyediakan API resmi untuk Trends. RSS dan Autocomplete yang dipakai gratis tetapi bisa berubah atau dibatasi sewaktu-waktu. Jika satu sumber gagal, sumber lain tetap jalan. Jika semua gagal, data lama dipertahankan dan tidak ada yang rusak. Halaman admin lama (`admin/app.js`) **tidak diubah**: Saran Topik adalah halaman terpisah.
+
+## Agent 7: Cek halaman dan artikel rusak
+
+Membuka semua halaman di sitemap seperti pengunjung dan Google, lalu memeriksa kesehatannya. Jalan otomatis bersama Agent pantau (09:30 dan 21:30 WIB) atau lewat Run workflow. Hasil lengkap di `data/health-log.json`.
+
+| Ikon | Yang dicek | Dampak SEO |
+|---|---|---|
+| ❌ | Halaman noindex tak sengaja, canonical salah, judul atau H1 hilang, data terstruktur (JSON-LD) rusak, link internal 404, robots.txt memblokir seluruh situs | Langsung merugikan: Google bisa tidak memuat halaman, salah memilih halaman utama, atau tidak menampilkan rich result |
+| 🟠 | Gambar rusak, link luar mati, halaman dialihkan, deskripsi hilang, judul kembar, H1 ganda, isi terlalu tipis, konten http, artikel yatim | Melemahkan: pengalaman pengunjung turun, kredibilitas dan penyebaran link internal berkurang |
+
+Cara kerja peringatan: Telegram hanya untuk masalah **baru**. Jika semua masalah sudah beres, dikirim kabar "pulih". Halaman 404/500 dan kecepatan tetap dilaporkan Agent 3, jadi tidak dikirim ganda.
+
+Catatan jujur: link luar yang memblokir bot (Instagram, Facebook, TikTok, WhatsApp, YouTube, dan sejenisnya) tidak dinilai. Link luar baru dianggap mati jika dicek dua kali dan tetap 404 atau domainnya tidak ditemukan. Jika jaringan runner bermasalah, link luar dilewati. Agent ini tidak bisa melihat status indeks di Google. Untuk itu pakai Search Console.
+
+Ubah ambang: buat `data/health-config.json`, misalnya `{"thinWords": 200}`.
