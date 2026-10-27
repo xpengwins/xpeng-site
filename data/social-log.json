@@ -1,5 +1,33 @@
 [
  {
+  "at": "2026-10-27T08:58:34.274Z",
+  "slug": "parkir-otomatis-xpeng-g6",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-27T08:58:34.274Z",
+  "slug": "parkir-otomatis-xpeng-g6",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-27T08:58:34.273Z",
+  "slug": "parkir-otomatis-xpeng-g6",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-27T08:52:31.664Z",
+  "slug": "parkir-otomatis-xpeng-g6",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar Threads belum tayang, pakai persegi"
+ },
+ {
   "at": "2026-10-27T02:39:09.873Z",
   "slug": "interior-xpeng-x9",
   "platform": "threads",
