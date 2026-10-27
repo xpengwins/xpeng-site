@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-27T15:17:02.969Z",
+ "generated": "2026-10-27T18:25:28.822Z",
  "traffic": {
   "periode": [
    "2026-09-27",
@@ -73,9 +73,8 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: LCP 3.6 dtk",
-    "🔴 /model/xpeng-x9/: LCP 4.1 dtk",
-    "🟠 /artikel/interior-xpeng-x9/: LCP 3.6 dtk, TBT 368 ms"
+    "🔴 /: LCP 4.0 dtk",
+    "🟠 /artikel/interior-xpeng-x9/: LCP 3.9 dtk"
    ]
   },
   "sosmed": [
@@ -83,10 +82,13 @@
    "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-   "❗ Facebook (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
-   "❗ Instagram (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
-   "🚫 Threads (kebijakan): API access blocked. (kode 200)"
-  ]
+   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+  ],
+  "halaman": {
+   "berat": 0,
+   "ringan": 0,
+   "masalah": []
+  }
  },
  "E_riset_tren": [
   {

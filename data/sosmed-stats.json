@@ -1,23 +1,75 @@
 {
- "generated": "2026-10-27T15:17:01.091Z",
+ "generated": "2026-10-27T18:25:21.587Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
-   "error": "Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)"
+   "error": "(#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
   },
   "instagram": {
    "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
-   "error": "Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)"
+   "account": {
+    "name": "@xpengwins",
+    "followers": 2,
+    "media": 16
+   },
+   "posts": 15,
+   "avgEngRecent": 0,
+   "avgEngBefore": 0,
+   "avgReachRecent": null,
+   "last": "2026-10-27T09:43:03+0000",
+   "top": [
+    {
+     "url": "https://www.instagram.com/p/De_j-JGlLsk/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/De_KkL8y3FW/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/De-zZ-vF2JV/",
+     "eng": 0
+    }
+   ],
+   "extra": {
+    "quota": {
+     "used": 2,
+     "total": 100
+    }
+   }
   },
   "threads": {
    "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
-   "error": "API access blocked. (kode 200)"
+   "account": {
+    "name": "@xpengwins",
+    "followers": 0
+   },
+   "posts": 11,
+   "avgEngRecent": 0,
+   "avgEngBefore": 0,
+   "avgReachRecent": 49,
+   "last": "2026-10-27T09:43:25+0000",
+   "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De_j_dBlgBW",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De-zb6Vlk1z",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/De85MIvlls-",
+     "eng": 0
+    }
+   ],
+   "extra": {}
   }
  },
  "issues": [
@@ -25,9 +77,7 @@
   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-  "❗ Facebook (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
-  "❗ Instagram (gagal): Cannot call API for app 1287629386827508 on behalf of user 122101800177518420 (kode 200)",
-  "🚫 Threads (kebijakan): API access blocked. (kode 200)"
+  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
  ],
  "alertKeys": [
   "gagal:threads:gambar JPG belum tayang di situs setelah",
