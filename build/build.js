@@ -82,7 +82,7 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>
-<nav id="nav" aria-label="Menu utama"><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang</a><a href="${u('/kontak/')}">Kontak</a></nav>
+<nav id="nav" aria-label="Menu utama"><a href="${u('/')}"${p === '/' ? ' aria-current="page"' : ''}>Home</a><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang</a><a href="${u('/kontak/')}">Kontak</a></nav>
 <a class="btn sm" href="${wa('Halo, saya tertarik dengan XPeng. Boleh minta info?')}" rel="noopener">WhatsApp</a><button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button></div></header>
 <main id="main">${body}</main>
 <footer class="site"><div class="wrap fgrid"><div><img src="${u('assets/img/logo-white.svg')}" alt="XPeng" width="120" height="84" loading="lazy"><p>${E(site.tagline)}</p></div>
