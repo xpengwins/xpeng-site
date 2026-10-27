@@ -43,10 +43,11 @@ const num = x => Number(x) || 0;
     const m4 = ['activeUsers', 'sessions', 'screenPageViews', 'newUsers'].map(name => ({ name }));
     /* total per periode (rentang tanggal GA4 memakai zona waktu properti) */
     const ranges = [{ startDate: 'today', endDate: 'today' }, { startDate: 'yesterday', endDate: 'yesterday' }, { startDate: '6daysAgo', endDate: 'today' }, { startDate: '29daysAgo', endDate: 'today' }, { startDate: '59daysAgo', endDate: '30daysAgo' }];
-    const tot = await run({ dateRanges: ranges, metrics: m4 });
-    const per = i => { const r = tot.find(x => (x.dimensionValues && x.dimensionValues[0] && x.dimensionValues[0].value) === 'date_range_' + i) || (tot.length === 1 && i === 0 ? tot[0] : null); const v = r ? r.metricValues.map(x => num(x.value)) : [0, 0, 0, 0]; return { users: v[0], sessions: v[1], views: v[2], newUsers: v[3] }; };
-    const hasRangeDim = tot.some(x => x.dimensionValues && x.dimensionValues.length);
-    const P = hasRangeDim ? [0, 1, 2, 3, 4].map(per) : null;
+    /* GA4 membatasi 4 rentang tanggal per permintaan: pecah jadi dua */
+    const totA = await run({ dateRanges: ranges.slice(0, 4), metrics: m4 }), totB = await run({ dateRanges: ranges.slice(4), metrics: m4 });
+    const pick = (tot, i) => { const r = tot.find(x => (x.dimensionValues && x.dimensionValues[0] && x.dimensionValues[0].value) === 'date_range_' + i) || (tot.length === 1 && i === 0 ? tot[0] : null); const v = r ? r.metricValues.map(x => num(x.value)) : [0, 0, 0, 0]; return { users: v[0], sessions: v[1], views: v[2], newUsers: v[3] }; };
+    const hasRangeDim = totA.some(x => x.dimensionValues && x.dimensionValues.length);
+    const P = hasRangeDim ? [pick(totA, 0), pick(totA, 1), pick(totA, 2), pick(totA, 3), pick(totB, 0)] : null;
     if (!P) throw new Error('GA4: format laporan tidak dikenali');
     const daily = (await run({ dateRanges: [{ startDate: '29daysAgo', endDate: 'today' }], dimensions: [{ name: 'date' }], metrics: m4, orderBys: [{ dimension: { dimensionName: 'date' } }], limit: 40 }))
       .map(r => { const d = r.dimensionValues[0].value; return { date: d.slice(0, 4) + '-' + d.slice(4, 6) + '-' + d.slice(6, 8), users: num(r.metricValues[0].value), sessions: num(r.metricValues[1].value), views: num(r.metricValues[2].value) }; });
