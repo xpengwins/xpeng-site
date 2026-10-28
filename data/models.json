@@ -4,7 +4,7 @@
   "name": "XPeng X9",
   "type": "MPV Listrik Premium 7 Kursi",
   "tagline": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
-  "hero": "assets/img/x9-white-depan.webp",
+  "hero": "assets/img/whatsapp-image-2026-10-28-at-14-36-37.webp",
   "gallery": [
    "assets/img/x9-white-depan.webp",
    "assets/img/x9-white-belakang.webp",
@@ -20,22 +20,22 @@
    {
     "name": "Putih",
     "hex": "#f4f4f2",
-    "image": "assets/img/x9-white-depan.webp"
+    "image": "assets/img/whatsapp-image-2026-10-28-at-14-36-37-3xjr.webp"
    },
    {
     "name": "Hitam",
     "hex": "#0e0f12",
-    "image": "assets/img/x9-black-depan.webp"
+    "image": "assets/img/whatsapp-image-2026-10-28-at-14-36-49.webp"
    },
    {
     "name": "Abu Biru Matte",
     "hex": "#8b98a6",
-    "image": "assets/img/x9-grey-depan.webp"
+    "image": "assets/img/whatsapp-image-2026-10-28-at-14-36-28.webp"
    },
    {
     "name": "Silver",
     "hex": "#c9cacc",
-    "image": "assets/img/x9-silver-depan.webp"
+    "image": "assets/img/whatsapp-image-2026-10-28-at-14-36-18.webp"
    }
   ],
   "variants": [
