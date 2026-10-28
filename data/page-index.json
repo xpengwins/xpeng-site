@@ -428,6 +428,18 @@
       "tag": "p"
      },
      {
+      "t": "Teknologi",
+      "tag": "span"
+     },
+     {
+      "t": "Baterai LFP vs NCM: Mana untuk Mobil Listrik Keluarga?",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa beda baterai LFP vs NCM pada mobil listrik? Pahami kelebihan, kekurangan, dan contoh pada XPeng X9 dan G6 agar Anda memilih varian yang tepat.",
+      "tag": "p"
+     },
+     {
       "t": "Fitur",
       "tag": "span"
      },
@@ -470,10 +482,6 @@
      {
       "t": "Apa beda XPeng G6 Pro vs AWD? Bandingkan harga, tenaga, jarak tempuh, dan penggerak roda. Panduan memilih varian G6 yang sesuai kebutuhan dan anggaran Anda.",
       "tag": "p"
-     },
-     {
-      "t": "Teknologi",
-      "tag": "span"
      },
      {
       "t": "Pengisian Cepat 800V XPeng: Cara Kerja dan Syaratnya",
@@ -632,6 +640,10 @@
      {
       "src": "/assets/img/x9-silver-depan.webp",
       "alt": "XPeng X9 silver tampak depan, mobil listrik yang dirakit di Indonesia"
+     },
+     {
+      "src": "/assets/img/222761.webp",
+      "alt": "XPeng X9 hitam tampak belakang, varian baterai LFP dan NCM"
      },
      {
       "src": "/assets/img/x9-white-kursi-2.webp",
