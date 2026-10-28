@@ -7,5 +7,19 @@
    "testdrive",
    "kunjungi-showroom-kami"
   ]
+ },
+ "/": {
+  "order": [
+   "hero",
+   "bagian-2",
+   "pilih-xpeng-sesuai-gaya-hidup-anda",
+   "cfg",
+   "video-beranda",
+   "cicilan-mudah-lewat-partner-leasing",
+   "lihat-langsung-detailnya",
+   "harga-xpeng-terbaru",
+   "panduan-memilih-mobil-listrik",
+   "pertanyaan-yang-sering-diajukan"
+  ]
  }
 }
