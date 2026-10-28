@@ -8,6 +8,15 @@
    "statusBad": [],
    "bad": 0,
    "warn": 0
+  },
+  {
+   "date": "2026-10-28",
+   "at": "2026-10-28T03:14:28.980Z",
+   "pages": 31,
+   "ok": 31,
+   "statusBad": [],
+   "bad": 0,
+   "warn": 0
   }
  ],
  "ext": {
@@ -80,14 +89,24 @@
    "s": 0,
    "err": "UND_ERR_CONNECT_TIMEOUT",
    "at": 1793125507685
+  },
+  "https://cnevpost.com/2025/07/24/xpeng-begins-production-indonesia/": {
+   "s": 200,
+   "err": "",
+   "at": 1793157268663
+  },
+  "https://www.autofun.co.id/berita/xpeng-x9-dan-g6-bakal-dirakit-di-indonesia-begini-spesifikasi-lengkapnya-84116": {
+   "s": 403,
+   "err": "",
+   "at": 1793157268663
   }
  },
- "generated": "2026-10-27T19:25:50.586Z",
+ "generated": "2026-10-28T03:14:28.980Z",
  "latest": {
-  "date": "2026-10-27",
-  "at": "2026-10-27T19:25:50.586Z",
-  "pages": 30,
-  "ok": 30,
+  "date": "2026-10-28",
+  "at": "2026-10-28T03:14:28.980Z",
+  "pages": 31,
+  "ok": 31,
   "statusBad": [],
   "bad": 0,
   "warn": 0,

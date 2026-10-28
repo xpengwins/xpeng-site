@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-27T19:26:00.767Z",
+ "generated": "2026-10-28T03:14:38.860Z",
  "traffic": {
   "periode": [
-   "2026-09-27",
-   "2026-10-24"
+   "2026-09-28",
+   "2026-10-25"
   ],
-  "klik": 3,
-  "tayang": 54,
-  "posisi": 21.1,
+  "klik": 4,
+  "tayang": 78,
+  "posisi": 19.2,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -17,17 +17,38 @@
   {
    "kataKunci": "xpeng captain seat",
    "halaman": "/model/xpeng-x9/",
-   "tayang": 3,
-   "posisi": 8.3,
+   "tayang": 4,
+   "posisi": 8.5,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  },
+  {
+   "kataKunci": "\"xpeng\" \"mobil\"",
+   "halaman": "/artikel/xpilot-4-0-xpeng/",
+   "tayang": 2,
+   "posisi": 8,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  },
+  {
+   "kataKunci": "xpeng g9 indonesia",
+   "halaman": "/",
+   "tayang": 2,
+   "posisi": 14,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   }
  ],
  "C_ide_artikel_dari_data": [
   {
    "kataKunci": "xpeng captain seat",
-   "tayang": 3,
-   "posisi": 8.3,
+   "tayang": 4,
+   "posisi": 8.5,
    "halamanSaatIni": "/model/xpeng-x9/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng g9 indonesia",
+   "tayang": 2,
+   "posisi": 14,
+   "halamanSaatIni": "/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
@@ -38,10 +59,10 @@
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
-   "kataKunci": "xpeng g9 indonesia",
+   "kataKunci": "berapa harga mobil xpeng di indonesia?",
    "tayang": 1,
-   "posisi": 10,
-   "halamanSaatIni": "/",
+   "posisi": 3,
+   "halamanSaatIni": "/pricelist/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
@@ -62,9 +83,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 21,
-  "terjadwal": 11,
-  "terbitBerikutnya": "2026-10-28T09:00:00+07:00",
+  "terbit": 22,
+  "terjadwal": 10,
+  "terbitBerikutnya": "2026-10-28T15:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -73,8 +94,10 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: LCP 4.1 dtk",
-    "🔴 /model/xpeng-x9/: LCP 4.0 dtk"
+    "🟠 /: LCP 4.0 dtk, TBT 202 ms",
+    "🔴 /model/xpeng-x9/: LCP 4.1 dtk",
+    "🟠 /model/xpeng-g6/: LCP 4.0 dtk",
+    "📉 /model/xpeng-g6/ turun 100 → 87 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [

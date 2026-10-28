@@ -1,29 +1,29 @@
 {
- "generated": "2026-10-27T19:25:50.631Z",
+ "generated": "2026-10-28T03:14:29.022Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
+  "users": 3,
+  "sessions": 4,
+  "views": 13,
   "newUsers": 0
  },
  "yesterday": {
-  "users": 25,
-  "sessions": 34,
-  "views": 79,
-  "newUsers": 23
+  "users": 28,
+  "sessions": 39,
+  "views": 98,
+  "newUsers": 26
  },
  "last7": {
-  "users": 499,
-  "sessions": 520,
-  "views": 650,
-  "newUsers": 519
+  "users": 502,
+  "sessions": 528,
+  "views": 682,
+  "newUsers": 522
  },
  "last30": {
-  "users": 499,
-  "sessions": 520,
-  "views": 650,
-  "newUsers": 519
+  "users": 502,
+  "sessions": 528,
+  "views": 682,
+  "newUsers": 522
  },
  "prev30": {
   "users": 0,
@@ -46,21 +46,32 @@
   },
   {
    "date": "2026-10-27",
-   "users": 25,
-   "sessions": 34,
-   "views": 79
+   "users": 28,
+   "sessions": 39,
+   "views": 98
+  },
+  {
+   "date": "2026-10-28",
+   "users": 3,
+   "sessions": 4,
+   "views": 13
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 537,
-   "users": 443
+   "views": 548,
+   "users": 446
   },
   {
    "path": "/kontak/",
-   "views": 19,
+   "views": 23,
    "users": 3
+  },
+  {
+   "path": "/tentang/",
+   "views": 15,
+   "users": 1
   },
   {
    "path": "/artikel/garansi-baterai-xpeng/",
@@ -73,19 +84,19 @@
    "users": 7
   },
   {
-   "path": "/artikel/pengisian-cepat-800v-xpeng/",
-   "views": 9,
-   "users": 7
+   "path": "/model/",
+   "views": 11,
+   "users": 2
   },
   {
    "path": "/artikel/parkir-otomatis-xpeng-g6/",
-   "views": 8,
-   "users": 7
+   "views": 10,
+   "users": 9
   },
   {
-   "path": "/model/",
-   "views": 8,
-   "users": 2
+   "path": "/artikel/pengisian-cepat-800v-xpeng/",
+   "views": 9,
+   "users": 7
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
@@ -96,11 +107,6 @@
    "path": "/artikel/mobil-listrik-7-seater-indonesia/",
    "views": 6,
    "users": 6
-  },
-  {
-   "path": "/artikel/suv-listrik-terbaik-indonesia/",
-   "views": 5,
-   "users": 5
   }
  ],
  "channels": [
@@ -110,37 +116,37 @@
   },
   {
    "k": "Organic Social",
-   "v": 46
+   "v": 49
   },
   {
    "k": "Direct",
-   "v": 31
+   "v": 33
   },
   {
    "k": "Organic Search",
    "v": 11
   },
   {
+   "k": "Referral",
+   "v": 8
+  },
+  {
    "k": "Paid Search",
    "v": 7
   },
   {
-   "k": "Referral",
-   "v": 5
-  },
-  {
    "k": "Unassigned",
-   "v": 3
+   "v": 5
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 472
+   "v": 476
   },
   {
    "k": "desktop",
-   "v": 47
+   "v": 52
   },
   {
    "k": "tablet",
@@ -153,11 +159,11 @@
    "v": 228
   },
   {
-   "k": "Depok",
-   "v": 43
+   "k": "Tangerang",
+   "v": 45
   },
   {
-   "k": "Tangerang",
+   "k": "Depok",
    "v": 43
   },
   {
@@ -182,7 +188,7 @@
   }
  ],
  "leads": {
-  "klik_whatsapp": 7,
+  "klik_whatsapp": 8,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 0,
   "klik_telepon": 0,

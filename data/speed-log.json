@@ -176,72 +176,136 @@
     "perf:/",
     "perf:/model/xpeng-x9/"
    ]
+  },
+  {
+   "date": "2026-10-28",
+   "at": "2026-10-28T03:14:23.356Z",
+   "urls": 31,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 127,
+   "pages": {
+    "/": {
+     "score": 83,
+     "lcp": 3952,
+     "cls": 0,
+     "tbt": 202,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 85,
+     "lcp": 4092,
+     "cls": 0,
+     "tbt": 166,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 87,
+     "lcp": 3980,
+     "cls": 0,
+     "tbt": 42,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 99,
+     "lcp": 1357,
+     "cls": 0,
+     "tbt": 93,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 905,
+     "cls": 0,
+     "tbt": 45,
+     "field": null
+    },
+    "/artikel/xpeng-dirakit-di-indonesia/": {
+     "score": 100,
+     "lcp": 1055,
+     "cls": 0.005,
+     "tbt": 83,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "perf:/model/xpeng-g6/",
+    "drop:/model/xpeng-g6/"
+   ]
   }
  ],
- "generated": "2026-10-27T19:25:47.184Z",
+ "generated": "2026-10-28T03:14:23.356Z",
  "latest": {
-  "date": "2026-10-27",
-  "at": "2026-10-27T19:25:47.184Z",
-  "urls": 30,
+  "date": "2026-10-28",
+  "at": "2026-10-28T03:14:23.356Z",
+  "urls": 31,
   "errors": 0,
   "slow": 0,
-  "avgMs": 140,
+  "avgMs": 127,
   "pages": {
    "/": {
-    "score": 86,
-    "lcp": 4122,
+    "score": 83,
+    "lcp": 3952,
     "cls": 0,
-    "tbt": 81,
+    "tbt": 202,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 87,
-    "lcp": 4009,
+    "score": 85,
+    "lcp": 4092,
     "cls": 0,
-    "tbt": 54,
+    "tbt": 166,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 100,
-    "lcp": 1213,
-    "cls": 0,
-    "tbt": 16,
-    "field": null
-   },
-   "/pricelist/": {
-    "score": 100,
-    "lcp": 1357,
-    "cls": 0,
-    "tbt": 24,
-    "field": null
-   },
-   "/kontak/": {
-    "score": 100,
-    "lcp": 918,
+    "score": 87,
+    "lcp": 3980,
     "cls": 0,
     "tbt": 42,
     "field": null
    },
-   "/artikel/interior-xpeng-x9/": {
+   "/pricelist/": {
     "score": 99,
-    "lcp": 1071,
-    "cls": 0.002,
-    "tbt": 129,
+    "lcp": 1357,
+    "cls": 0,
+    "tbt": 93,
+    "field": null
+   },
+   "/kontak/": {
+    "score": 100,
+    "lcp": 905,
+    "cls": 0,
+    "tbt": 45,
+    "field": null
+   },
+   "/artikel/xpeng-dirakit-di-indonesia/": {
+    "score": 100,
+    "lcp": 1055,
+    "cls": 0.005,
+    "tbt": 83,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/model/xpeng-x9/"
+   "perf:/model/xpeng-x9/",
+   "perf:/model/xpeng-g6/",
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: LCP 4.1 dtk",
-   "🔴 /model/xpeng-x9/: LCP 4.0 dtk"
+   "🟠 /: LCP 4.0 dtk, TBT 202 ms",
+   "🔴 /model/xpeng-x9/: LCP 4.1 dtk",
+   "🟠 /model/xpeng-g6/: LCP 4.0 dtk",
+   "📉 /model/xpeng-g6/ turun 100 → 87 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/model/xpeng-x9/"
+  "perf:/model/xpeng-x9/",
+  "perf:/model/xpeng-g6/",
+  "drop:/model/xpeng-g6/"
  ],
- "alertSig": "perf:/|perf:/model/xpeng-x9/"
+ "alertSig": "drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
 }
