@@ -11,9 +11,9 @@
   },
   {
    "date": "2026-10-28",
-   "at": "2026-10-28T03:14:28.980Z",
-   "pages": 31,
-   "ok": 31,
+   "at": "2026-10-28T15:21:44.311Z",
+   "pages": 32,
+   "ok": 32,
    "statusBad": [],
    "bad": 0,
    "warn": 0
@@ -101,12 +101,12 @@
    "at": 1793157268663
   }
  },
- "generated": "2026-10-28T03:14:28.980Z",
+ "generated": "2026-10-28T15:21:44.311Z",
  "latest": {
   "date": "2026-10-28",
-  "at": "2026-10-28T03:14:28.980Z",
-  "pages": 31,
-  "ok": 31,
+  "at": "2026-10-28T15:21:44.311Z",
+  "pages": 32,
+  "ok": 32,
   "statusBad": [],
   "bad": 0,
   "warn": 0,
@@ -118,6 +118,26 @@
    {
     "path": "assets/img/placeholder.svg",
     "kb": 0
+   },
+   {
+    "path": "assets/img/whatsapp-image-2026-10-28-at-14-36-18.webp",
+    "kb": 24
+   },
+   {
+    "path": "assets/img/whatsapp-image-2026-10-28-at-14-36-28.webp",
+    "kb": 22
+   },
+   {
+    "path": "assets/img/whatsapp-image-2026-10-28-at-14-36-37-3xjr.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/whatsapp-image-2026-10-28-at-14-36-37.webp",
+    "kb": 23
+   },
+   {
+    "path": "assets/img/whatsapp-image-2026-10-28-at-14-36-49.webp",
+    "kb": 22
    },
    {
     "path": "assets/img/x9-black-belakang.webp",
@@ -192,15 +212,27 @@
     "kb": 27
    },
    {
+    "path": "assets/img/x9-white-depan-p3v8.webp",
+    "kb": 28
+   },
+   {
     "path": "assets/img/xpeng-g6-drive-a-brighter-tomorrow.webp",
     "kb": 91
    },
    {
+    "path": "assets/img/xpeng-x9-at-twilight-1.webp",
+    "kb": 124
+   },
+   {
     "path": "assets/img/xpeng-xpilot-4-0-drive-the-future-gmnx.webp",
     "kb": 91
+   },
+   {
+    "path": "assets/img/zigi-6a3fc63650110-xpeng-910-512.webp",
+    "kb": 70
    }
   ],
-  "orphanTotal": 22,
+  "orphanTotal": 30,
   "issues": []
  },
  "alertKeys": []
