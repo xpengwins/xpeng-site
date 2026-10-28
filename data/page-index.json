@@ -416,6 +416,18 @@
       "tag": "h2"
      },
      {
+      "t": "Profil",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng Dirakit di Indonesia: Apa Artinya bagi Pembeli?",
+      "tag": "h3"
+     },
+     {
+      "t": "XPeng dirakit di Indonesia sejak Juli 2025 di Purwakarta. Pahami arti CKD, dampaknya ke harga dan suku cadang, serta hal yang perlu Anda tanyakan ke dealer.",
+      "tag": "p"
+     },
+     {
       "t": "Fitur",
       "tag": "span"
      },
@@ -588,10 +600,6 @@
       "tag": "p"
      },
      {
-      "t": "Profil",
-      "tag": "span"
-     },
-     {
       "t": "XPeng Indonesia: Profil, Model, dan Layanan Dealer",
       "tag": "h3"
      },
@@ -621,6 +629,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/x9-silver-depan.webp",
+      "alt": "XPeng X9 silver tampak depan, mobil listrik yang dirakit di Indonesia"
+     },
      {
       "src": "/assets/img/x9-white-kursi-2.webp",
       "alt": "Kursi baris kedua XPeng X9 putih, interior dengan kursi zero-gravity"
