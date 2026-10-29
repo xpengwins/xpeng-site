@@ -99,7 +99,7 @@
   "name": "XPeng G6",
   "type": "SUV Coupe Listrik Premium",
   "tagline": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
-  "hero": "assets/img/g6-black-depan.webp",
+  "hero": "assets/img/225088.webp",
   "gallery": [
    "assets/img/g6-black-depan.webp",
    "assets/img/g6-black-belakang.webp",
@@ -115,7 +115,7 @@
    {
     "name": "Hitam",
     "hex": "#0e0f12",
-    "image": "assets/img/g6-black-depan.webp"
+    "image": "assets/img/226532-kufw.webp"
    },
    {
     "name": "Putih",
