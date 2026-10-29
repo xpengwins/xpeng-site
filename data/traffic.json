@@ -1,29 +1,29 @@
 {
- "generated": "2026-10-28T15:21:44.347Z",
+ "generated": "2026-10-29T03:15:58.092Z",
  "property": "560653996",
  "today": {
-  "users": 73,
-  "sessions": 84,
-  "views": 175,
-  "newUsers": 70
+  "users": 0,
+  "sessions": 1,
+  "views": 1,
+  "newUsers": 0
  },
  "yesterday": {
-  "users": 28,
-  "sessions": 39,
-  "views": 98,
-  "newUsers": 26
+  "users": 76,
+  "sessions": 91,
+  "views": 186,
+  "newUsers": 73
  },
  "last7": {
-  "users": 572,
-  "sessions": 608,
-  "views": 844,
-  "newUsers": 592
+  "users": 575,
+  "sessions": 618,
+  "views": 856,
+  "newUsers": 595
  },
  "last30": {
-  "users": 572,
-  "sessions": 608,
-  "views": 844,
-  "newUsers": 592
+  "users": 575,
+  "sessions": 618,
+  "views": 856,
+  "newUsers": 595
  },
  "prev30": {
   "users": 0,
@@ -52,21 +52,27 @@
   },
   {
    "date": "2026-10-28",
-   "users": 73,
-   "sessions": 84,
-   "views": 175
+   "users": 76,
+   "sessions": 91,
+   "views": 186
+  },
+  {
+   "date": "2026-10-29",
+   "users": 0,
+   "sessions": 1,
+   "views": 1
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 595,
-   "users": 463
+   "views": 604,
+   "users": 465
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 36,
-   "users": 26
+   "views": 38,
+   "users": 27
   },
   {
    "path": "/model/",
@@ -85,7 +91,7 @@
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 17,
+   "views": 18,
    "users": 11
   },
   {
@@ -120,23 +126,23 @@
   },
   {
    "k": "Paid Search",
-   "v": 54
+   "v": 57
   },
   {
    "k": "Direct",
-   "v": 48
+   "v": 50
+  },
+  {
+   "k": "Referral",
+   "v": 14
   },
   {
    "k": "Organic Search",
    "v": 13
   },
   {
-   "k": "Referral",
-   "v": 11
-  },
-  {
    "k": "Unassigned",
-   "v": 9
+   "v": 11
   },
   {
    "k": "Cross-network",
@@ -146,11 +152,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 530
+   "v": 538
   },
   {
    "k": "desktop",
-   "v": 78
+   "v": 80
   },
   {
    "k": "tablet",
@@ -160,7 +166,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 267
+   "v": 269
   },
   {
    "k": "Tangerang",
@@ -175,12 +181,12 @@
    "v": 35
   },
   {
-   "k": "Boardman",
-   "v": 16
+   "k": "(not set)",
+   "v": 19
   },
   {
-   "k": "",
-   "v": 14
+   "k": "Boardman",
+   "v": 16
   },
   {
    "k": "Prineville",

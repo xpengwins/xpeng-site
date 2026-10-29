@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-28T15:21:58.954Z",
+ "generated": "2026-10-29T03:16:10.481Z",
  "traffic": {
   "periode": [
-   "2026-09-28",
-   "2026-10-25"
+   "2026-09-29",
+   "2026-10-26"
   ],
   "klik": 4,
-  "tayang": 78,
-  "posisi": 19.2,
+  "tayang": 97,
+  "posisi": 18.1,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -29,10 +29,10 @@
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
-   "kataKunci": "xpeng g9 indonesia",
-   "halaman": "/",
+   "kataKunci": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
+   "halaman": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
    "tayang": 2,
-   "posisi": 14,
+   "posisi": 11,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   }
  ],
@@ -46,9 +46,16 @@
   },
   {
    "kataKunci": "xpeng g9 indonesia",
-   "tayang": 2,
-   "posisi": 14,
+   "tayang": 3,
+   "posisi": 31.3,
    "halamanSaatIni": "/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
+   "tayang": 2,
+   "posisi": 11,
+   "halamanSaatIni": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
@@ -63,6 +70,13 @@
    "tayang": 1,
    "posisi": 3,
    "halamanSaatIni": "/pricelist/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "rekomendasikan. tolong indonesia. di listrik suv membeli ingin dan 60-an berusia saya",
+   "tayang": 1,
+   "posisi": 10,
+   "halamanSaatIni": "/artikel/suv-listrik-terbaik-indonesia/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
@@ -83,9 +97,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 23,
-  "terjadwal": 9,
-  "terbitBerikutnya": "2026-10-29T09:00:00+07:00",
+  "terbit": 24,
+  "terjadwal": 8,
+  "terbitBerikutnya": "2026-10-29T15:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -94,9 +108,9 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: LCP 4.8 dtk",
-    "🔴 /model/xpeng-g6/: LCP 4.2 dtk, TBT 215 ms",
-    "📉 /model/xpeng-g6/ turun 100 → 81 sejak pengecekan sebelumnya (melambat)"
+    "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
+    "🟠 /kontak/: LCP 3.8 dtk",
+    "📉 /kontak/ turun 100 → 88 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [
@@ -104,7 +118,8 @@
    "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+   "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs",
+   "📉 Threads: jangkauan 3 post terbaru turun tajam (54 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
   ],
   "halaman": {
    "berat": 0,

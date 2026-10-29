@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-28T15:21:47.486Z",
+ "generated": "2026-10-29T03:16:00.224Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 18
+    "media": 19
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-28T08:06:15+0000",
+   "last": "2026-10-29T02:53:19+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/DfD-qD7jQJl/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/DfB9r8lDgZn/",
      "eng": 0
     },
     {
      "url": "https://www.instagram.com/p/DfBZqYUDg07/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/De_j-JGlLsk/",
      "eng": 0
     }
    ],
@@ -50,22 +50,22 @@
     "name": "@xpengwins",
     "followers": 0
    },
-   "posts": 13,
+   "posts": 14,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 35,
-   "last": "2026-10-28T08:06:35+0000",
+   "avgReachRecent": 26,
+   "last": "2026-10-29T02:53:37+0000",
    "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfD-sFeFLyn",
+     "eng": 0
+    },
     {
      "url": "https://www.threads.com/@xpengwins/post/DfB9tN4FWOS",
      "eng": 0
     },
     {
      "url": "https://www.threads.com/@xpengwins/post/DfBZr5CEWtP",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/De_j_dBlgBW",
      "eng": 0
     }
    ],
@@ -77,7 +77,8 @@
   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs"
+  "❗ Facebook (gagal): (#10) This endpoint requires the 'pages_read_user_content' permission or the 'Page Public Content Access' feature. Refer to https://developers.facebook.com/docs",
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (54 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
  ],
  "alertKeys": [
   "gagal:threads:gambar JPG belum tayang di situs setelah",
@@ -85,7 +86,6 @@
   "gagal:facebook:gambar JPG belum tayang di situs setelah",
   "gagal:threads:gambar Threads belum tayang, pakai perse",
   "api:facebook:gagal",
-  "api:instagram:gagal",
-  "api:threads:kebijakan"
+  "reach:threads"
  ]
 }

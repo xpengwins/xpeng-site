@@ -233,76 +233,132 @@
     "perf:/model/xpeng-g6/",
     "drop:/model/xpeng-g6/"
    ]
+  },
+  {
+   "date": "2026-10-29",
+   "at": "2026-10-29T03:15:54.297Z",
+   "urls": 33,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 91,
+   "pages": {
+    "/": {
+     "score": 99,
+     "lcp": 1972,
+     "cls": 0,
+     "tbt": 20,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 100,
+     "lcp": 1365,
+     "cls": 0,
+     "tbt": 73,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 89,
+     "lcp": 3801,
+     "cls": 0,
+     "tbt": 6,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1375,
+     "cls": 0,
+     "tbt": 52,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 88,
+     "lcp": 3756,
+     "cls": 0,
+     "tbt": 132,
+     "field": null
+    },
+    "/artikel/spesifikasi-mobil-listrik-wajib-dicek/": {
+     "score": 99,
+     "lcp": 1660,
+     "cls": 0.014,
+     "tbt": 70,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/model/xpeng-g6/",
+    "perf:/kontak/",
+    "drop:/kontak/"
+   ]
   }
  ],
- "generated": "2026-10-28T15:21:41.399Z",
+ "generated": "2026-10-29T03:15:54.297Z",
  "latest": {
-  "date": "2026-10-28",
-  "at": "2026-10-28T15:21:41.399Z",
-  "urls": 32,
+  "date": "2026-10-29",
+  "at": "2026-10-29T03:15:54.297Z",
+  "urls": 33,
   "errors": 0,
   "slow": 0,
-  "avgMs": 101,
+  "avgMs": 91,
   "pages": {
    "/": {
-    "score": 80,
-    "lcp": 4804,
+    "score": 99,
+    "lcp": 1972,
     "cls": 0,
-    "tbt": 129,
+    "tbt": 20,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 100,
-    "lcp": 1206,
+    "lcp": 1365,
     "cls": 0,
-    "tbt": 21,
+    "tbt": 73,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 81,
-    "lcp": 4155,
+    "score": 89,
+    "lcp": 3801,
     "cls": 0,
-    "tbt": 215,
+    "tbt": 6,
     "field": null
    },
    "/pricelist/": {
-    "score": 99,
-    "lcp": 1440,
+    "score": 100,
+    "lcp": 1375,
     "cls": 0,
-    "tbt": 35,
+    "tbt": 52,
     "field": null
    },
    "/kontak/": {
-    "score": 100,
-    "lcp": 914,
+    "score": 88,
+    "lcp": 3756,
     "cls": 0,
-    "tbt": 62,
+    "tbt": 132,
     "field": null
    },
-   "/artikel/xpeng-dirakit-di-indonesia/": {
-    "score": 100,
-    "lcp": 1056,
-    "cls": 0,
-    "tbt": 33,
+   "/artikel/spesifikasi-mobil-listrik-wajib-dicek/": {
+    "score": 99,
+    "lcp": 1660,
+    "cls": 0.014,
+    "tbt": 70,
     "field": null
    }
   },
   "issues": [
-   "perf:/",
    "perf:/model/xpeng-g6/",
-   "drop:/model/xpeng-g6/"
+   "perf:/kontak/",
+   "drop:/kontak/"
   ],
   "issueText": [
-   "🔴 /: LCP 4.8 dtk",
-   "🔴 /model/xpeng-g6/: LCP 4.2 dtk, TBT 215 ms",
-   "📉 /model/xpeng-g6/ turun 100 → 81 sejak pengecekan sebelumnya (melambat)"
+   "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
+   "🟠 /kontak/: LCP 3.8 dtk",
+   "📉 /kontak/ turun 100 → 88 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
-  "perf:/",
-  "perf:/model/xpeng-x9/",
   "perf:/model/xpeng-g6/",
-  "drop:/model/xpeng-g6/"
+  "perf:/kontak/",
+  "drop:/kontak/"
  ],
- "alertSig": "drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
+ "alertSig": "drop:/kontak/|perf:/kontak/|perf:/model/xpeng-g6/"
 }
