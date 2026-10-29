@@ -416,6 +416,18 @@
       "tag": "h2"
      },
      {
+      "t": "Panduan Beli",
+      "tag": "span"
+     },
+     {
+      "t": "6 Spesifikasi Mobil Listrik yang Wajib Dicek Sebelum Beli",
+      "tag": "h3"
+     },
+     {
+      "t": "Enam spesifikasi mobil listrik yang wajib Anda cek sebelum membeli: jarak tempuh dan standar uji, charging, baterai, ADAS, platform, dan layanan purna jual.",
+      "tag": "p"
+     },
+     {
       "t": "Profil",
       "tag": "span"
      },
@@ -458,10 +470,6 @@
      {
       "t": "Cara kerja fitur parkir otomatis XPeng G6, langkah memakainya, kondisi yang cocok, dan batasan keselamatannya. Panduan praktis untuk pemilik mobil listrik baru.",
       "tag": "p"
-     },
-     {
-      "t": "Panduan Beli",
-      "tag": "span"
      },
      {
       "t": "Garansi Baterai XPeng 8 Tahun: Apa yang Dicakup?",
@@ -637,6 +645,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/222770.webp",
+      "alt": "Dasbor XPeng X9 abu-abu, contoh spesifikasi mobil listrik yang perlu dicek"
+     },
      {
       "src": "/assets/img/x9-silver-depan.webp",
       "alt": "XPeng X9 silver tampak depan, mobil listrik yang dirakit di Indonesia"
