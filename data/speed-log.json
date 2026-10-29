@@ -236,129 +236,121 @@
   },
   {
    "date": "2026-10-29",
-   "at": "2026-10-29T03:15:54.297Z",
-   "urls": 33,
+   "at": "2026-10-29T15:22:29.536Z",
+   "urls": 34,
    "errors": 0,
    "slow": 0,
-   "avgMs": 91,
+   "avgMs": 130,
    "pages": {
     "/": {
-     "score": 99,
-     "lcp": 1972,
+     "score": 79,
+     "lcp": 5096,
      "cls": 0,
-     "tbt": 20,
+     "tbt": 75,
      "field": null
     },
     "/model/xpeng-x9/": {
      "score": 100,
-     "lcp": 1365,
+     "lcp": 1359,
      "cls": 0,
-     "tbt": 73,
+     "tbt": 40,
      "field": null
     },
     "/model/xpeng-g6/": {
-     "score": 89,
-     "lcp": 3801,
+     "score": 100,
+     "lcp": 1372,
      "cls": 0,
-     "tbt": 6,
+     "tbt": 20,
      "field": null
     },
     "/pricelist/": {
      "score": 100,
-     "lcp": 1375,
+     "lcp": 1357,
      "cls": 0,
-     "tbt": 52,
+     "tbt": 55,
      "field": null
     },
     "/kontak/": {
-     "score": 88,
-     "lcp": 3756,
+     "score": 100,
+     "lcp": 905,
      "cls": 0,
-     "tbt": 132,
+     "tbt": 53,
      "field": null
     },
     "/artikel/spesifikasi-mobil-listrik-wajib-dicek/": {
      "score": 99,
      "lcp": 1660,
      "cls": 0.014,
-     "tbt": 70,
+     "tbt": 129,
      "field": null
     }
    },
    "issues": [
-    "perf:/model/xpeng-g6/",
-    "perf:/kontak/",
-    "drop:/kontak/"
+    "perf:/"
    ]
   }
  ],
- "generated": "2026-10-29T03:15:54.297Z",
+ "generated": "2026-10-29T15:22:29.536Z",
  "latest": {
   "date": "2026-10-29",
-  "at": "2026-10-29T03:15:54.297Z",
-  "urls": 33,
+  "at": "2026-10-29T15:22:29.536Z",
+  "urls": 34,
   "errors": 0,
   "slow": 0,
-  "avgMs": 91,
+  "avgMs": 130,
   "pages": {
    "/": {
-    "score": 99,
-    "lcp": 1972,
+    "score": 79,
+    "lcp": 5096,
     "cls": 0,
-    "tbt": 20,
+    "tbt": 75,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 100,
-    "lcp": 1365,
+    "lcp": 1359,
     "cls": 0,
-    "tbt": 73,
+    "tbt": 40,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 89,
-    "lcp": 3801,
+    "score": 100,
+    "lcp": 1372,
     "cls": 0,
-    "tbt": 6,
+    "tbt": 20,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1375,
+    "lcp": 1357,
     "cls": 0,
-    "tbt": 52,
+    "tbt": 55,
     "field": null
    },
    "/kontak/": {
-    "score": 88,
-    "lcp": 3756,
+    "score": 100,
+    "lcp": 905,
     "cls": 0,
-    "tbt": 132,
+    "tbt": 53,
     "field": null
    },
    "/artikel/spesifikasi-mobil-listrik-wajib-dicek/": {
     "score": 99,
     "lcp": 1660,
     "cls": 0.014,
-    "tbt": 70,
+    "tbt": 129,
     "field": null
    }
   },
   "issues": [
-   "perf:/model/xpeng-g6/",
-   "perf:/kontak/",
-   "drop:/kontak/"
+   "perf:/"
   ],
   "issueText": [
-   "🟠 /model/xpeng-g6/: LCP 3.8 dtk",
-   "🟠 /kontak/: LCP 3.8 dtk",
-   "📉 /kontak/ turun 100 → 88 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 79, LCP 5.1 dtk"
   ]
  },
  "alertKeys": [
-  "perf:/model/xpeng-g6/",
-  "perf:/kontak/",
-  "drop:/kontak/"
+  "perf:/"
  ],
- "alertSig": "drop:/kontak/|perf:/kontak/|perf:/model/xpeng-g6/"
+ "alertSig": "perf:/"
 }
