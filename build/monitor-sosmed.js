@@ -101,13 +101,15 @@ const FETCH = {
         const posts = r.posts.filter(x => x.at).sort((a, b) => Date.parse(b.at) - Date.parse(a.at));
         const rec = posts.slice(0, 5), prv = posts.slice(5, 10);
         const a1 = avg(rec.map(x => x.eng)), a0 = avg(prv.map(x => x.eng));
-        const reach = posts.filter(x => typeof x.reach === 'number');
+        /* post yang baru tayang belum sempat dilihat orang; bandingkan hanya post berumur 24 jam ke atas supaya tidak salah dikira turun */
+        const reach = posts.filter(x => typeof x.reach === 'number' && now - Date.parse(x.at) > 24 * 36e5);
         Object.assign(out.platforms[p], { account: r.account, posts: posts.length, avgEngRecent: +a1.toFixed(1), avgEngBefore: +a0.toFixed(1), avgReachRecent: reach.length ? Math.round(avg(reach.slice(0, 5).map(x => x.reach))) : null, last: posts[0] && posts[0].at, top: posts.slice().sort((a, b) => b.eng - a.eng).slice(0, 3).map(x => ({ url: x.url, eng: x.eng })), extra: r.extra || {} });
         if (prv.length >= 3 && a0 >= 3 && a1 < a0 * 0.5) issues.push({ k: 'drop:' + p, t: '📉 ' + NAME[p] + ': interaksi 5 post terbaru turun ' + a0.toFixed(1) + ' → ' + a1.toFixed(1) + ' per post (lebih dari 50%). Cek status akun & ganti format konten.' });
         if (r.extra && r.extra.quota && r.extra.quota.total && r.extra.quota.used / r.extra.quota.total >= 0.8) issues.push({ k: 'igquota', t: '⏳ Instagram: kuota posting 24 jam terpakai ' + r.extra.quota.used + '/' + r.extra.quota.total + '.' });
         if (reach.length >= 6) { const rc = avg(reach.slice(0, 3).map(x => x.reach)), rp = avg(reach.slice(3, 6).map(x => x.reach)); if (rp >= 20 && rc < rp * 0.4) issues.push({ k: 'reach:' + p, t: '📉 ' + NAME[p] + ': jangkauan 3 post terbaru turun tajam (' + Math.round(rp) + ' → ' + Math.round(rc) + '). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta.' }); }
       } catch (e) {
         const m = scrub(e.message).slice(0, 160), kind = POLICY.test(m) ? 'kebijakan' : TOKEN.test(m) ? 'token' : 'gagal';
+        if (/\(#10\)|pages_read_user_content|Page Public Content/i.test(m)) { out.platforms[p].note = 'izin baca data post belum ada (posting tidak terpengaruh)'; continue; }
         out.platforms[p].error = m;
         issues.push({ k: 'api:' + p + ':' + kind, t: (kind === 'kebijakan' ? '🚫 ' : kind === 'token' ? '🔑 ' : '❗ ') + NAME[p] + ' (' + kind + '): ' + m });
       }
