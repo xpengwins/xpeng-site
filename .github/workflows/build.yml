@@ -57,22 +57,8 @@ jobs:
             unzip -o -q "$z" -x '__MACOSX/*' '*/.DS_Store' '.git/*' '.github/*' -d "$dest" || true
             rm -f "$z"
           done
-      - name: Kompres video unggahan (upload/video menjadi assets/video)
-        run: |
-          shopt -s nullglob nocaseglob
-          vids=(upload/video/*.mp4 upload/video/*.mov upload/video/*.m4v upload/video/*.webm upload/video/*.mkv upload/video/*.avi upload/video/*.3gp)
-          if [ ${#vids[@]} -gt 0 ]; then
-            sudo apt-get update -qq && sudo apt-get install -y -qq ffmpeg
-            mkdir -p assets/video
-            for f in "${vids[@]}"; do
-              b=$(basename "${f%.*}"); out="assets/video/$b.mp4"; echo "Kompres $f -> $out"
-              # maksimal 90 detik, sisi terpanjang 1280px, tanpa audio (video selalu bisu), H.264 CRF 29, faststart
-              if ffmpeg -nostdin -y -v error -i "$f" -t 90 -an -vf "scale='if(gt(iw,ih),min(1280,iw),-2)':'if(gt(iw,ih),-2,min(1280,ih))':flags=lanczos,fps=30" -c:v libx264 -preset slow -crf 29 -pix_fmt yuv420p -movflags +faststart "$out"; then
-                ffmpeg -nostdin -y -v error -i "$out" -frames:v 1 -vf "scale='min(960,iw)':-2" -q:v 5 "assets/video/$b.jpg" || true
-                rm -f "$f"; ls -l "$out"
-              else echo "GAGAL kompres $f (file asli dibiarkan)"; fi
-            done
-          fi
+      - name: Kompres semua video (upload/video dan assets/video)
+        run: bash build/compress-video.sh .
       - run: npm install --no-audit --no-fund
       - name: Optimasi gambar dan build situs
         run: npm run build
