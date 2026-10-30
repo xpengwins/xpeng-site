@@ -31,5 +31,15 @@
    "cicilan-mudah-lewat-partner-leasing",
    "pertanyaan-yang-sering-diajukan"
   ]
+ },
+ "/model/xpeng-g6/": {
+  "order": [
+   "xpeng-g6",
+   "video-xpeng-g6",
+   "keunggulan-xpeng-g6",
+   "galeri-xpeng-g6",
+   "cicilan-mudah-lewat-partner-leasing",
+   "pertanyaan-yang-sering-diajukan"
+  ]
  }
 }
