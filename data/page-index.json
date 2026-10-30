@@ -2133,6 +2133,22 @@
     ]
    },
    {
+    "key": "video-xpeng-g6",
+    "title": "Video XPeng G6",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Video",
+      "tag": "span"
+     },
+     {
+      "t": "Video XPeng G6",
+      "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
     "key": "galeri-xpeng-g6",
     "title": "Galeri XPeng G6",
     "hasH1": false,
