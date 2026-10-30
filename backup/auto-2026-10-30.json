@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-30T10:02:18.209Z",
+ "date": "2026-10-30T15:56:01.654Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -139,7 +139,15 @@
      }
     ],
     "metaTitle": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
-    "metaDescription": "Harga XPeng X9 mulai Rp1,219 miliar. Lihat varian Pro dan Pro+, warna, fitur kabin, dan jadwal test drive MPV listrik 7 kursi."
+    "metaDescription": "Harga XPeng X9 mulai Rp1,219 miliar. Lihat varian Pro dan Pro+, warna, fitur kabin, dan jadwal test drive MPV listrik 7 kursi.",
+    "videos": [
+     {
+      "type": "mp4",
+      "src": "assets/video/227779.mp4",
+      "alt": "xpengwins Xpeng X9",
+      "title": ""
+     }
+    ]
    },
    {
     "slug": "xpeng-g6",
