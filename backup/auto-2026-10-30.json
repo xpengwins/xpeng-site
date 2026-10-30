@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-10-30T02:50:15.357Z",
+ "date": "2026-10-30T03:24:16.206Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -212,7 +212,7 @@
      },
      {
       "k": "Jarak tempuh Pro",
-      "v": "hingga 525 km (WLTP)"
+      "v": "hingga 525 km (WLTP) / 618 km (NEDC)"
      },
      {
       "k": "Jarak tempuh AWD",
