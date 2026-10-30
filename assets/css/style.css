@@ -135,7 +135,7 @@ footer.site .soc a{padding:8px 12px}
 .btn,.soc a,.chips a,.tab,.arr{--sw:var(--ac);background-image:linear-gradient(var(--sw),var(--sw));background-repeat:no-repeat;background-position:left center;background-size:0% 100%;transition:background-size .45s cubic-bezier(.22,.8,.3,1),color .3s,border-color .3s,transform .25s,box-shadow .25s}
 .btn{--sw:#fff}
 .btn:hover{background-color:var(--ac);background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%;color:#04110d}
-.btn.ghost{--sw:var(--ac)}
+.btn.ghost{--sw:var(--ac);background-color:transparent;background-image:linear-gradient(var(--sw),var(--sw));background-repeat:no-repeat;background-position:left center;background-size:0% 100%}
 .btn.ghost:hover,a.btn.ghost:hover,.prose a.btn.ghost:hover,.cta-box .btn.ghost:hover{background-color:transparent;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%;color:#04110d;border-color:var(--ac)}
 .soc a:hover{background-color:#ffffff08;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%}
 .chips a:hover{background-color:#ffffff0d;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%}
