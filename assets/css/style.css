@@ -131,15 +131,15 @@ footer.site .soc a{padding:8px 12px}
 .mvid .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,0,0,.6);border:2px solid #fff}
 .mvid .play:after{content:"";position:absolute;left:30px;top:22px;border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}
 .mvid .yt:hover .play,.mvid .yt:focus .play{background:var(--ac,#1be0b0)}
-/* Hover tombol: warna isi menyapu dari kiri ke kanan */
-.btn,.soc a,.chips a,.tab,.arr{--sw:var(--ac);background-image:linear-gradient(var(--sw),var(--sw));background-repeat:no-repeat;background-position:left center;background-size:0% 100%;transition:background-size .45s cubic-bezier(.22,.8,.3,1),color .3s,border-color .3s,transform .25s,box-shadow .25s}
-.btn{--sw:#fff}
-.btn:hover{background-color:var(--ac);background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%;color:#04110d}
-.btn.ghost{--sw:var(--ac);background-color:transparent;background-image:linear-gradient(var(--sw),var(--sw));background-repeat:no-repeat;background-position:left center;background-size:0% 100%}
-.btn.ghost:hover,a.btn.ghost:hover,.prose a.btn.ghost:hover,.cta-box .btn.ghost:hover{background-color:transparent;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%;color:#04110d;border-color:var(--ac)}
-.soc a:hover{background-color:#ffffff08;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%}
-.chips a:hover{background-color:#ffffff0d;background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%}
-.tab:hover,.arr:hover{background-image:linear-gradient(var(--sw),var(--sw));background-size:100% 100%;color:#04110d;border-color:var(--ac)}
-.arr:hover{background-color:#0a0b0d66}
-@media(hover:none){.btn:active,.soc a:active,.chips a:active,.tab:active{background-size:100% 100%}}
-@media(prefers-reduced-motion:reduce){.btn,.soc a,.chips a,.tab,.arr{transition:color .2s}}
+/* Hover tombol: isi warna menyapu ke kanan saat hover masuk, dan terus ke kanan (100% -> 0%) saat dilepas */
+.btn,.soc a,.chips a,.tab,.arr{--sw:var(--ac);isolation:isolate;overflow:hidden}
+.btn,.soc a,.chips a,.tab{position:relative}
+.btn{--sw:#fff}.btn.ghost{--sw:var(--ac)}
+.btn::before,.soc a::before,.chips a::before,.tab::before,.arr::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--sw);border-radius:inherit;transform:scaleX(0);transform-origin:right center;transition:transform .45s cubic-bezier(.22,.8,.3,1);pointer-events:none}
+.btn:hover::before,.soc a:hover::before,.chips a:hover::before,.tab:hover::before,.arr:hover::before{transform:scaleX(1);transform-origin:left center}
+.btn:hover{background-color:var(--ac);color:#04110d}
+.btn.ghost:hover,a.btn.ghost:hover,.prose a.btn.ghost:hover,.cta-box .btn.ghost:hover{background:transparent;color:#04110d;border-color:var(--ac)}
+.soc a:hover{background:#ffffff08}.chips a:hover{background:#ffffff0d}
+.tab:hover,.arr:hover{color:#04110d;border-color:var(--ac)}.arr:hover{background:#0a0b0d66}
+@media(hover:none){.btn:active::before,.soc a:active::before,.chips a:active::before,.tab:active::before{transform:scaleX(1);transform-origin:left center}}
+@media(prefers-reduced-motion:reduce){.btn::before,.soc a::before,.chips a::before,.tab::before,.arr::before{transition:none}}
