@@ -137,3 +137,8 @@ footer.site .soc a{padding:8px 12px}
 .mvidsec~*{position:relative;z-index:1}.mvidsec~.section:not(.dark){background:var(--bg)}
 .mvidsec.multi{position:relative}.mvidsec.multi .mvid{position:sticky;top:64px}
 @media(prefers-reduced-motion:reduce){.mvidsec,.mvidsec.multi .mvid{position:relative;top:auto}}
+/* Video tampil utuh dulu: ada ruang scroll sebelum konten berikutnya mulai naik menutupi */
+.mvidsec:not(.multi){margin-bottom:55vh}
+.mvidsec .mvid video,.mvidsec .mvid .yt{max-height:calc(100vh - 210px)}
+@supports(height:100svh){.mvidsec .mvid video,.mvidsec .mvid .yt{max-height:calc(100svh - 210px)}.mvidsec:not(.multi){margin-bottom:55svh}}
+@media(prefers-reduced-motion:reduce){.mvidsec:not(.multi){margin-bottom:0}}
