@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T03:16:19.868Z",
+ "generated": "2026-10-30T15:22:28.539Z",
  "traffic": {
   "periode": [
    "2026-09-30",
@@ -105,9 +105,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 26,
-  "terjadwal": 6,
-  "terbitBerikutnya": "2026-10-30T15:00:00+07:00",
+  "terbit": 27,
+  "terjadwal": 5,
+  "terbitBerikutnya": "2026-10-31T09:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -116,11 +116,20 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: LCP 5.0 dtk"
+    "🔴 /model/xpeng-g6/: LCP 4.2 dtk, TBT 244 ms",
+    "📉 /model/xpeng-g6/ turun 100 → 81 sejak pengecekan sebelumnya (melambat)",
+    "🔴 /pricelist/: LCP 4.0 dtk",
+    "📉 /pricelist/ turun 100 → 85 sejak pengecekan sebelumnya (melambat)",
+    "🟠 /kontak/: TBT 219 ms",
+    "🟠 /artikel/test-drive-mobil-listrik/: LCP 3.8 dtk"
    ]
   },
   "sosmed": [
-   "📉 Threads: jangkauan 3 post terbaru turun tajam (54 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+   "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
+   "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
   ],
   "halaman": {
    "berat": 0,

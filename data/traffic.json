@@ -1,11 +1,11 @@
 {
- "generated": "2026-10-30T03:16:08.315Z",
+ "generated": "2026-10-30T15:22:14.718Z",
  "property": "560653996",
  "today": {
-  "users": 5,
-  "sessions": 5,
-  "views": 8,
-  "newUsers": 4
+  "users": 52,
+  "sessions": 57,
+  "views": 98,
+  "newUsers": 50
  },
  "yesterday": {
   "users": 67,
@@ -14,16 +14,16 @@
   "newUsers": 66
  },
  "last7": {
-  "users": 645,
-  "sessions": 700,
-  "views": 979,
-  "newUsers": 665
+  "users": 691,
+  "sessions": 752,
+  "views": 1069,
+  "newUsers": 711
  },
  "last30": {
-  "users": 645,
-  "sessions": 700,
-  "views": 979,
-  "newUsers": 665
+  "users": 691,
+  "sessions": 752,
+  "views": 1069,
+  "newUsers": 711
  },
  "prev30": {
   "users": 0,
@@ -64,41 +64,41 @@
   },
   {
    "date": "2026-10-30",
-   "users": 5,
-   "sessions": 5,
-   "views": 8
+   "users": 52,
+   "sessions": 57,
+   "views": 98
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 634,
-   "users": 484
+   "views": 658,
+   "users": 498
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 84,
-   "users": 63
+   "views": 102,
+   "users": 75
   },
   {
    "path": "/pricelist/",
-   "views": 48,
-   "users": 39
+   "views": 75,
+   "users": 60
   },
   {
    "path": "/model/",
-   "views": 36,
-   "users": 15
+   "views": 43,
+   "users": 18
+  },
+  {
+   "path": "/model/xpeng-x9/",
+   "views": 32,
+   "users": 22
   },
   {
    "path": "/kontak/",
    "views": 28,
    "users": 5
-  },
-  {
-   "path": "/model/xpeng-x9/",
-   "views": 27,
-   "users": 18
   },
   {
    "path": "/tentang/",
@@ -111,14 +111,14 @@
    "users": 12
   },
   {
-   "path": "/artikel/garansi-baterai-xpeng/",
-   "views": 12,
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 13,
    "users": 12
   },
   {
-   "path": "/artikel/mobil-listrik-premium-terbaik-indonesia/",
-   "views": 11,
-   "users": 7
+   "path": "/artikel/garansi-baterai-xpeng/",
+   "views": 12,
+   "users": 12
   }
  ],
  "channels": [
@@ -128,15 +128,15 @@
   },
   {
    "k": "Paid Search",
-   "v": 119
+   "v": 156
   },
   {
    "k": "Organic Social",
-   "v": 67
+   "v": 72
   },
   {
    "k": "Direct",
-   "v": 55
+   "v": 63
   },
   {
    "k": "Referral",
@@ -144,11 +144,11 @@
   },
   {
    "k": "Organic Search",
-   "v": 15
+   "v": 17
   },
   {
    "k": "Unassigned",
-   "v": 10
+   "v": 9
   },
   {
    "k": "Cross-network",
@@ -158,29 +158,29 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 603
+   "v": 642
   },
   {
    "k": "desktop",
-   "v": 96
+   "v": 108
   },
   {
    "k": "tablet",
-   "v": 1
+   "v": 3
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 311
+   "v": 333
   },
   {
    "k": "Tangerang",
-   "v": 49
+   "v": 53
   },
   {
    "k": "Depok",
-   "v": 48
+   "v": 49
   },
   {
    "k": "South Tangerang",
@@ -188,11 +188,11 @@
   },
   {
    "k": "(not set)",
-   "v": 23
+   "v": 24
   },
   {
    "k": "Boardman",
-   "v": 17
+   "v": 18
   },
   {
    "k": "Bekasi",
@@ -204,7 +204,7 @@
   }
  ],
  "leads": {
-  "klik_whatsapp": 23,
+  "klik_whatsapp": 26,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 0,
   "klik_telepon": 0,

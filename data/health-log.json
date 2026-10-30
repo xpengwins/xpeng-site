@@ -29,9 +29,9 @@
   },
   {
    "date": "2026-10-30",
-   "at": "2026-10-30T03:16:08.271Z",
-   "pages": 35,
-   "ok": 35,
+   "at": "2026-10-30T15:22:14.671Z",
+   "pages": 36,
+   "ok": 36,
    "statusBad": [],
    "bad": 0,
    "warn": 0
@@ -117,14 +117,19 @@
    "s": 403,
    "err": "",
    "at": 1793157268663
+  },
+  "https://auto2000.co.id/berita-dan-tips/biaya-charge-mobil-listrik-di-spklu": {
+   "s": 200,
+   "err": "",
+   "at": 1793373733247
   }
  },
- "generated": "2026-10-30T03:16:08.271Z",
+ "generated": "2026-10-30T15:22:14.671Z",
  "latest": {
   "date": "2026-10-30",
-  "at": "2026-10-30T03:16:08.271Z",
-  "pages": 35,
-  "ok": 35,
+  "at": "2026-10-30T15:22:14.671Z",
+  "pages": 36,
+  "ok": 36,
   "statusBad": [],
   "bad": 0,
   "warn": 0,
@@ -256,9 +261,13 @@
    {
     "path": "assets/img/zigi-6a3fc63650110-xpeng-910-512.webp",
     "kb": 70
+   },
+   {
+    "path": "assets/video/xpeng-x9-intelligence-0617-v2.webp",
+    "kb": 21
    }
   ],
-  "orphanTotal": 32,
+  "orphanTotal": 33,
   "issues": []
  },
  "alertKeys": []
