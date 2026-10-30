@@ -711,8 +711,8 @@ async function loadTree(force) {
 }
 /* ---------- kompres video DI BROWSER sebelum diunggah ----------
    Video di atas ±20MB diputar tanpa suara, digambar ulang ke ukuran maksimal 1280px, lalu direkam dengan bitrate rendah.
-   Prosesnya selama durasi video (maks 90 detik). Hasilnya kecil dan itulah yang diunggah; GitHub lalu menyelesaikan jadi mp4 final. */
-const VID_BROWSER_MIN = 20 * 1024 * 1024, VID_MAX_UPLOAD = 40 * 1024 * 1024, VID_MAX_SEC = 90;
+   Prosesnya selama durasi video (maks 25 detik). Hasilnya kecil dan itulah yang diunggah; GitHub lalu menyelesaikan jadi mp4 final. */
+const VID_BROWSER_MIN = 20 * 1024 * 1024, VID_MAX_UPLOAD = 40 * 1024 * 1024, VID_MAX_SEC = 25;
 function vidProgress() {
   const el = document.createElement('div'); el.className = 'toast'; el.style.cssText = 'top:auto;bottom:90px;z-index:9999;text-align:center;border-radius:16px;pointer-events:none'; document.body.appendChild(el);
   return { set: t => { el.textContent = t; }, end: () => el.remove() };

@@ -5,7 +5,7 @@
 #      (misalnya masuk lewat ZIP, unggah ke folder, atau langsung dari GitHub)
 # Video yang sudah dikompres diberi penanda "xpeng-compressed" di metadata,
 # jadi tidak diproses ulang setiap build.
-# Aturan hasil: maks 90 detik, sisi terpanjang 1280px, tanpa suara, H.264 CRF 29, faststart.
+# Aturan hasil: maks 25 detik (lebih panjang dipotong, di web berulang), sisi terpanjang 1280px, tanpa suara, H.264 CRF 29, faststart.
 # Jika kompres gagal, file asli dibiarkan (tidak ada yang hilang).
 set -u
 shopt -s nullglob nocaseglob
@@ -32,14 +32,14 @@ needs_compress() {
   [ "$codec" != "h264" ] && return 0
   [ "$pix" != "yuv420p" ] && return 0
   local mx=$(( w > h ? w : h )); [ "$mx" -gt 1280 ] && return 0
-  awk -v d="${dur:-0}" 'BEGIN{exit !(d>90.5)}' && return 0
+  awk -v d="${dur:-0}" 'BEGIN{exit !(d>25.5)}' && return 0
   awk -v b="${br:-0}" 'BEGIN{exit !(b>3500000)}' && return 0   # lebih dari ±3,5 Mbps
   return 1                                           # sudah ringan dan sesuai aturan
 }
 
 # kompres $1 -> $2 (mp4)
 encode() {
-  ffmpeg -nostdin -y -v error -i "$1" -t 90 -an \
+  ffmpeg -nostdin -y -v error -i "$1" -t 25 -an \
     -vf "scale='if(gt(iw,ih),min(1280,iw),-2)':'if(gt(iw,ih),-2,min(1280,ih))':flags=lanczos,fps=30" \
     -c:v libx264 -preset slow -crf 29 -pix_fmt yuv420p -movflags +faststart \
     -metadata comment="$TAG" -f mp4 "$2"
