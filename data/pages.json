@@ -21,5 +21,15 @@
    "panduan-memilih-mobil-listrik",
    "pertanyaan-yang-sering-diajukan"
   ]
+ },
+ "/model/xpeng-x9/": {
+  "order": [
+   "xpeng-x9",
+   "video-xpeng-x9",
+   "galeri-xpeng-x9",
+   "keunggulan-xpeng-x9",
+   "cicilan-mudah-lewat-partner-leasing",
+   "pertanyaan-yang-sering-diajukan"
+  ]
  }
 }
