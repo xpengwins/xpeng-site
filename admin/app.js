@@ -377,7 +377,7 @@ function editArticle(v, a, idx) {
   $('#upmain').onclick = () => pickMedia({ kind: 'image', multi: false, title: 'Pilih gambar utama' }, ps => { if (!ps.length) return; F('image').value = ps[0]; if (!F('imageAlt').value) F('imageAlt').value = F('keyword').value || F('title').value; $('#pvmain').innerHTML = thumb(ps[0]); upd(); });
   $('#upbody').onclick = () => pickMedia({ kind: 'image', multi: true, title: 'Sisipkan foto ke artikel' }, ps => { if (!ps.length) return; const alt = prompt('Teks alt (deskripsi singkat foto, untuk SEO):', F('keyword').value || ''); if (alt === null) return; ins(ps.map(p => '\n![' + alt + '](' + p + ')\n').join('')); });
   const ytId = s => { s = (s || '').trim(); let m = s.match(/^[A-Za-z0-9_-]{11}$/); if (m) return m[0]; m = s.match(/(?:youtu\.be\/|youtube(?:-nocookie)?\.com\/(?:watch\?(?:[^#]*&)?v=|embed\/|shorts\/|live\/|v\/))([A-Za-z0-9_-]{11})/); return m ? m[1] : ''; };
-  $('#vidb').onclick = () => modal('<h3>🎬 Sisipkan video</h3><p class="muted">Video selalu diputar otomatis, tanpa suara, berulang, dan tidak bisa diklik pengunjung.</p><label style="margin-top:10px">Bentuk tampilan<select data-r><option value="16x9">Lebar 16:9 (YouTube, video landscape)</option><option value="9x16">Tegak 9:16 (video HP, Reels)</option><option value="1x1">Kotak 1:1</option><option value="4x5">Potret 4:5</option></select></label><h3>1. Link YouTube</h3><input data-y placeholder="https://www.youtube.com/watch?v=..."><button data-yb style="width:100%;margin-top:8px">Sisipkan video YouTube</button><h3>2. Unggah video dari HP</h3><p class="muted">Maksimal 40MB. Dikompres otomatis (maks 720p, tanpa suara, maks 90 detik). Siap tayang ±2-4 menit setelah diunggah.</p><input data-f type="file" accept="video/*"><button data-fb style="width:100%;margin-top:8px">Unggah dan sisipkan</button><h3>3. Pilih dari galeri</h3><button class="s" data-gb style="width:100%">Buka galeri video</button><div class="row" style="margin-top:14px"><button class="s" data-x>Tutup</button></div>', (b, close) => {
+  $('#vidb').onclick = () => modal('<h3>🎬 Sisipkan video</h3><p class="muted">Video selalu diputar otomatis, tanpa suara, berulang, dan tidak bisa diklik pengunjung.</p><label style="margin-top:10px">Bentuk tampilan<select data-r><option value="16x9">Lebar 16:9 (YouTube, video landscape)</option><option value="9x16">Tegak 9:16 (video HP, Reels)</option><option value="1x1">Kotak 1:1</option><option value="4x5">Potret 4:5</option></select></label><h3>1. Link YouTube</h3><input data-y placeholder="https://www.youtube.com/watch?v=..."><button data-yb style="width:100%;margin-top:8px">Sisipkan video YouTube</button><h3>2. Unggah video dari HP</h3><p class="muted">Ukuran file bebas. Video besar dikecilkan dulu di browser (butuh waktu sepanjang durasinya), lalu dikompres lagi oleh GitHub (maks 720p, tanpa suara, maks 90 detik). Siap tayang ±2-4 menit setelah diunggah.</p><input data-f type="file" accept="video/*"><button data-fb style="width:100%;margin-top:8px">Unggah dan sisipkan</button><h3>3. Pilih dari galeri</h3><button class="s" data-gb style="width:100%">Buka galeri video</button><div class="row" style="margin-top:14px"><button class="s" data-x>Tutup</button></div>', (b, close) => {
     const R = () => b.querySelector('[data-r]').value, put = (tag, r) => ins('\n\n{{' + tag + (r && r !== '16x9' ? '|' + r : '') + '}}\n\n');
     b.querySelector('[data-x]').onclick = close;
     b.querySelector('[data-yb]').onclick = () => { const id = ytId(b.querySelector('[data-y]').value); if (!id) return toast('Link YouTube tidak dikenali. Tempel link lengkap dari YouTube.', true); put('youtube:' + id, R()); close(); toast('✓ Video YouTube disisipkan. Tekan Simpan.'); };
@@ -698,14 +698,69 @@ async function loadTree(force) {
   S.media = S.tree.filter(x => x.kind === 'image').map(x => x.name);
   return S.tree;
 }
-/* video: unggah ke upload/video, GitHub mengompres (720p, tanpa suara) lalu hasilnya ada di assets/video/NAMA.mp4 */
+/* ---------- kompres video DI BROWSER sebelum diunggah ----------
+   Video di atas ±20MB diputar tanpa suara, digambar ulang ke ukuran maksimal 1280px, lalu direkam dengan bitrate rendah.
+   Prosesnya selama durasi video (maks 90 detik). Hasilnya kecil dan itulah yang diunggah; GitHub lalu menyelesaikan jadi mp4 final. */
+const VID_BROWSER_MIN = 20 * 1024 * 1024, VID_MAX_UPLOAD = 40 * 1024 * 1024, VID_MAX_SEC = 90;
+function vidProgress() {
+  const el = document.createElement('div'); el.className = 'toast'; el.style.cssText = 'top:auto;bottom:90px;z-index:9999;text-align:center;border-radius:16px;pointer-events:none'; document.body.appendChild(el);
+  return { set: t => { el.textContent = t; }, end: () => el.remove() };
+}
+async function compressVideoInBrowser(f, onProg) {
+  if (!window.MediaRecorder || !HTMLCanvasElement.prototype.captureStream) throw new Error('browser ini belum mendukung kompres video');
+  const url = URL.createObjectURL(f), v = document.createElement('video');
+  v.muted = true; v.playsInline = true; v.preload = 'auto'; v.src = url;
+  try {
+    await new Promise((ok, no) => { v.onloadedmetadata = ok; v.onerror = () => no(new Error('browser tidak bisa membaca video ini')); });
+    const W0 = v.videoWidth, H0 = v.videoHeight; if (!W0 || !H0) throw new Error('ukuran video tidak terbaca');
+    const sc = Math.min(1, 1280 / Math.max(W0, H0)), W = Math.max(2, Math.round(W0 * sc / 2) * 2), H = Math.max(2, Math.round(H0 * sc / 2) * 2);
+    const dur = Math.min(isFinite(v.duration) && v.duration > 0 ? v.duration : VID_MAX_SEC, VID_MAX_SEC);
+    const cv = document.createElement('canvas'); cv.width = W; cv.height = H; const cx = cv.getContext('2d', { alpha: false });
+    const stream = cv.captureStream(30);
+    const mime = ['video/mp4;codecs=avc1.42E01E', 'video/mp4', 'video/webm;codecs=vp9', 'video/webm;codecs=vp8', 'video/webm'].find(t => MediaRecorder.isTypeSupported(t));
+    if (!mime) throw new Error('format rekam video tidak tersedia');
+    const bps = Math.max(600000, Math.min(3000000, Math.floor(28 * 1024 * 1024 * 8 / dur)));
+    const rec = new MediaRecorder(stream, { mimeType: mime, videoBitsPerSecond: bps });
+    const chunks = []; rec.ondataavailable = e => { if (e.data && e.data.size) chunks.push(e.data); };
+    const stopped = new Promise(ok => { rec.onstop = ok; });
+    rec.start(1000); cx.drawImage(v, 0, 0, W, H);
+    await v.play();
+    await new Promise(ok => {
+      let fin = false, t;
+      const end = () => { if (fin) return; fin = true; clearInterval(t); ok(); };
+      t = setInterval(() => { cx.drawImage(v, 0, 0, W, H); onProg(Math.min(99, Math.round(v.currentTime / dur * 100))); if (v.ended || v.currentTime >= dur) end(); }, 33);
+      v.onended = end; v.onerror = end;
+    });
+    v.pause(); rec.stop(); await stopped; stream.getTracks().forEach(x => x.stop());
+    const blob = new Blob(chunks, { type: mime.split(';')[0] });
+    if (blob.size < 5000) throw new Error('hasil kompres kosong');
+    return { blob, ext: mime.indexOf('video/mp4') === 0 ? '.mp4' : '.webm' };
+  } finally { URL.revokeObjectURL(url); v.removeAttribute('src'); v.load(); }
+}
+/* video: (besar: dikecilkan di browser dulu) -> unggah ke upload/video -> GitHub mengompres (720p, tanpa suara) -> assets/video/NAMA.mp4 */
 async function uploadVideo(f) {
   if (!VIDUP.test(f.name) && !/^video\//.test(f.type)) throw new Error(f.name + ': bukan file video');
-  if (f.size > 40 * 1024 * 1024) throw new Error(f.name + ': lebih dari 40MB. Potong jadi klip pendek (30-60 detik) atau pakai link YouTube.');
+  let data = f, ext = ((f.name.match(/\.[a-z0-9]+$/i) || ['.mp4'])[0]).toLowerCase();
+  if (f.size > VID_BROWSER_MIN) {
+    const pg = vidProgress(), msg = p => 'Mengecilkan video di browser… ' + p + '%\nJangan tutup atau pindah tab sampai selesai.';
+    try { pg.set(msg(0)); const r = await compressVideoInBrowser(f, p => pg.set(msg(p))); data = r.blob; ext = r.ext; pg.set('✓ Video dikecilkan: ' + Math.round(f.size / 1048576) + 'MB → ' + (data.size / 1048576).toFixed(1) + 'MB. Mengunggah…'); }
+    catch (e) {
+      pg.end();
+      if (f.size > VID_MAX_UPLOAD) throw new Error(f.name + ': tidak bisa dikecilkan di browser (' + e.message + '). Coba pakai Chrome terbaru di laptop, atau potong video jadi klip pendek, atau pakai link YouTube.');
+      toast('Kecilkan di browser gagal (' + e.message + '). Mengunggah file asli…', true);
+    }
+    try {
+      if (data.size > VID_MAX_UPLOAD) throw new Error(f.name + ': hasil kompres masih ' + Math.round(data.size / 1048576) + 'MB (batas 40MB). Potong video jadi lebih pendek.');
+      return await sendVideo(f, data, ext);
+    } finally { pg.end(); }
+  }
+  if (f.size > VID_MAX_UPLOAD) throw new Error(f.name + ': lebih dari 40MB.');
+  return sendVideo(f, data, ext);
+}
+async function sendVideo(f, data, ext) {
   const tree = await loadTree(); let name = slugName(f.name); const base = name;
   if (tree.some(x => x.kind === 'video' && x.name.replace(/\.[^.]+$/, '') === name)) name = base + '-' + Date.now().toString(36).slice(-4);
-  const ext = ((f.name.match(/\.[a-z0-9]+$/i) || ['.mp4'])[0]).toLowerCase();
-  await putFile('upload/video/' + name + ext, bufb64(await f.arrayBuffer()), 'Upload video ' + name);
+  await putFile('upload/video/' + name + ext, bufb64(await data.arrayBuffer()), 'Upload video ' + name);
   S.tree = null; return 'assets/video/' + name + '.mp4';
 }
 async function uploadAny(f) {
@@ -745,7 +800,7 @@ function pickMedia(opt, done) {
 }
 let GK = 'all', GQ = '';
 VIEWS.gallery = async v => {
-  v.innerHTML = '<h2>Galeri</h2><div class="card"><p class="muted">Semua gambar, video, dan file yang tersimpan di website. Foto otomatis dikecilkan ke WebP. Video (maks 40MB) dikompres otomatis oleh GitHub dan siap tayang ±2-4 menit setelah diunggah.</p><div class="row"><button id="gu">⬆️ Unggah file</button></div><input id="gf" type="file" multiple style="display:none"><div id="gs" class="muted" style="margin-top:8px"></div></div><div class="fl" id="gk"></div><input id="gq" type="search" placeholder="🔍 Cari nama file…" value="' + E(GQ) + '"><div class="thumbs gal" id="gg" data-pgl="24" style="margin-top:12px">Memuat…</div>';
+  v.innerHTML = '<h2>Galeri</h2><div class="card"><p class="muted">Semua gambar, video, dan file yang tersimpan di website. Foto otomatis dikecilkan ke WebP. Video besar dikecilkan dulu di browser (jangan pindah tab, butuh waktu sepanjang durasinya, maks 90 detik), lalu dikompres oleh GitHub dan siap tayang ±2-4 menit setelah diunggah.</p><div class="row"><button id="gu">⬆️ Unggah file</button></div><input id="gf" type="file" multiple style="display:none"><div id="gs" class="muted" style="margin-top:8px"></div></div><div class="fl" id="gk"></div><input id="gq" type="search" placeholder="🔍 Cari nama file…" value="' + E(GQ) + '"><div class="thumbs gal" id="gg" data-pgl="24" style="margin-top:12px">Memuat…</div>';
   let all = []; try { all = await loadTree(true); } catch (e) { $('#gg').innerHTML = '<p class="muted">Gagal memuat galeri: ' + E(e.message) + '</p>'; return; }
   const USED = JSON.stringify(S.d), CH = [['all', 'Semua'], ['image', 'Gambar'], ['video', 'Video'], ['file', 'File']];
   const extra = x => '<div style="margin-top:6px;display:flex;gap:4px;flex-wrap:wrap"><button class="s sm" data-noc data-copy="' + E(x.path) + '">Salin</button><button class="d sm" data-del="' + E(x.path) + '">Hapus</button></div>' + (USED.indexOf(x.path) >= 0 ? '<span class="pill ok" style="margin-top:4px">dipakai</span>' : '');
