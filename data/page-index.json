@@ -420,6 +420,14 @@
       "tag": "span"
      },
      {
+      "t": "Checklist Test Drive Mobil Listrik: 15 Hal yang Dicek",
+      "tag": "h3"
+     },
+     {
+      "t": "Panduan test drive mobil listrik: persiapan, 15 hal yang wajib dicek, pertanyaan untuk dealer, dan kesalahan umum. Cocok sebelum mencoba XPeng X9 atau G6.",
+      "tag": "p"
+     },
+     {
       "t": "6 Spesifikasi Mobil Listrik yang Wajib Dicek Sebelum Beli",
       "tag": "h3"
      },
@@ -653,6 +661,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/222769-eh0m.webp",
+      "alt": "XPeng G6 silver di jalan saat test drive mobil listrik"
+     },
      {
       "src": "/assets/img/222770.webp",
       "alt": "Dasbor XPeng X9 abu-abu, contoh spesifikasi mobil listrik yang perlu dicek"
