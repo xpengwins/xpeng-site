@@ -428,6 +428,18 @@
       "tag": "p"
      },
      {
+      "t": "Tips EV",
+      "tag": "span"
+     },
+     {
+      "t": "Cara Menghitung Biaya Charging Mobil Listrik di Rumah",
+      "tag": "h3"
+     },
+     {
+      "t": "Panduan menghitung biaya charging mobil listrik di rumah. Rumus, contoh hitungan per 100 km dan per bulan, waktu pengisian, serta tips hemat untuk pemilik EV.",
+      "tag": "p"
+     },
+     {
       "t": "6 Spesifikasi Mobil Listrik yang Wajib Dicek Sebelum Beli",
       "tag": "h3"
      },
@@ -548,10 +560,6 @@
       "tag": "p"
      },
      {
-      "t": "Tips EV",
-      "tag": "span"
-     },
-     {
       "t": "Pajak Mobil Listrik 2026: Aturan Terbaru dan DKI Jakarta",
       "tag": "h3"
      },
@@ -664,6 +672,10 @@
      {
       "src": "/assets/img/222769-eh0m.webp",
       "alt": "XPeng G6 silver di jalan saat test drive mobil listrik"
+     },
+     {
+      "src": "/assets/img/222772.webp",
+      "alt": "XPeng X9 abu-abu di garasi rumah saat charging, biaya charging mobil listrik"
      },
      {
       "src": "/assets/img/222770.webp",
