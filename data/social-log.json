@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-10-30T02:53:48.818Z",
+  "slug": "test-drive-mobil-listrik",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-10-30T02:53:24.635Z",
+  "slug": "test-drive-mobil-listrik",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-10-30T02:53:07.013Z",
+  "slug": "test-drive-mobil-listrik",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-10-29T08:06:02.743Z",
   "slug": "simulasi-cicilan-xpeng",
   "platform": "threads",
