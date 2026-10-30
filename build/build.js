@@ -174,7 +174,7 @@ function videoItems(m) {
 }
 function videoSection(m, vids) {
   if (!vids.length) return '';
-  return `<section class="mvidsec" aria-label="Video ${E(m.name)}"><div class="wrap"><span class="eyebrow">Video</span><h2>Video ${E(m.name)}</h2></div>${vids.map(v => v.type === 'youtube'
+  return `<section class="mvidsec${vids.length > 1 ? ' multi' : ''}" aria-label="Video ${E(m.name)}"><div class="wrap"><span class="eyebrow">Video</span><h2>Video ${E(m.name)}</h2></div>${vids.map(v => v.type === 'youtube'
     ? `<div class="mvid"><div class="yt" data-yt="${v.id}" data-t="${E(v.alt || v.title || m.name)}" role="button" tabindex="0" aria-label="Putar video: ${E(v.alt || v.title || m.name)}"><img src="${v.thumb}" alt="${E(v.alt || v.title || m.name)}" loading="lazy" width="480" height="360"><span class="play" aria-hidden="true"></span></div></div>`
     : `<div class="mvid"><video autoplay muted loop playsinline preload="metadata" ${v.poster ? `poster="${u(v.poster)}"` : ''} aria-label="${E(v.alt || v.title || m.name)}" title="${E(v.alt || v.title || m.name)}"><source src="${u(v.src)}" type="video/mp4"></video></div>`).join('')}</section>`;
 }
