@@ -131,14 +131,3 @@ footer.site .soc a{padding:8px 12px}
 .mvid .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,0,0,.6);border:2px solid #fff}
 .mvid .play:after{content:"";position:absolute;left:30px;top:22px;border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}
 .mvid .yt:hover .play,.mvid .yt:focus .play{background:var(--ac,#1be0b0)}
-
-/* Efek scroll: video menempel di bawah header, konten berikutnya naik menutupinya pelan-pelan */
-.mvidsec{position:sticky;top:64px;z-index:0}
-.mvidsec~*{position:relative;z-index:1}.mvidsec~.section:not(.dark){background:var(--bg)}
-.mvidsec.multi{position:relative}.mvidsec.multi .mvid{position:sticky;top:64px}
-@media(prefers-reduced-motion:reduce){.mvidsec,.mvidsec.multi .mvid{position:relative;top:auto}}
-/* Video tampil utuh dulu: ada ruang scroll sebelum konten berikutnya mulai naik menutupi */
-.mvidsec:not(.multi){margin-bottom:55vh}
-.mvidsec .mvid video,.mvidsec .mvid .yt{max-height:calc(100vh - 210px)}
-@supports(height:100svh){.mvidsec .mvid video,.mvidsec .mvid .yt{max-height:calc(100svh - 210px)}.mvidsec:not(.multi){margin-bottom:55svh}}
-@media(prefers-reduced-motion:reduce){.mvidsec:not(.multi){margin-bottom:0}}
