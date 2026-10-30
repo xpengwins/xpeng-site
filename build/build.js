@@ -164,15 +164,34 @@ const HOME_FAQ = [
   { q: 'Bagaimana cara test drive XPeng?', a: 'Isi formulir test drive atau hubungi kami lewat WhatsApp, lalu konsultan akan mengatur jadwal.' }
 ];
 
+const ytIdM = x => { const r = String(x || '').match(/(?:v=|youtu\.be\/|shorts\/|embed\/|live\/)([\w-]{11})/); return r ? r[1] : (/^[\w-]{11}$/.test(x || '') ? x : ''); };
+function videoItems(m) {
+  return (m.videos || []).map(v => {
+    if (v.type === 'youtube') { const id = ytIdM(v.id); return id ? { ...v, id, thumb: 'https://i.ytimg.com/vi/' + id + '/hqdefault.jpg' } : null; }
+    if (v.type === 'mp4' && v.src && fs.existsSync(path.join(ROOT, v.src))) { const pj = v.src.replace(/\.[^.]+$/, '.jpg'); return { ...v, poster: fs.existsSync(path.join(ROOT, pj)) ? pj : '' }; }
+    return null;
+  }).filter(Boolean);
+}
+function videoSection(m, vids) {
+  if (!vids.length) return '';
+  return `<section class="mvidsec" aria-label="Video ${E(m.name)}"><div class="wrap"><span class="eyebrow">Video</span><h2>Video ${E(m.name)}</h2></div>${vids.map(v => v.type === 'youtube'
+    ? `<div class="mvid"><div class="yt" data-yt="${v.id}" data-t="${E(v.alt || v.title || m.name)}" role="button" tabindex="0" aria-label="Putar video: ${E(v.alt || v.title || m.name)}"><img src="${v.thumb}" alt="${E(v.alt || v.title || m.name)}" loading="lazy" width="480" height="360"><span class="play" aria-hidden="true"></span></div></div>`
+    : `<div class="mvid"><video autoplay muted loop playsinline preload="metadata" ${v.poster ? `poster="${u(v.poster)}"` : ''} aria-label="${E(v.alt || v.title || m.name)}" title="${E(v.alt || v.title || m.name)}"><source src="${u(v.src)}" type="video/mp4"></video></div>`).join('')}</section>`;
+}
+function videoLd(m, vids) {
+  return vids.map(v => ({ '@context': 'https://schema.org', '@type': 'VideoObject', name: v.title || v.alt || m.name + ' video', description: v.alt || v.title || m.name, thumbnailUrl: [abs(v.type === 'youtube' ? v.thumb : (v.poster || m.hero))], uploadDate: v.date || new Date().toISOString().slice(0, 10), ...(v.type === 'youtube' ? { embedUrl: 'https://www.youtube-nocookie.com/embed/' + v.id } : { contentUrl: abs(v.src) }) }));
+}
 function modelPage(m) {
+  const vids = videoItems(m);
   const p = '/model/' + m.slug + '/';
   const body = `<section class="mhero">${picture(m.hero, m.name + ' ' + m.type, 'bg', 1280, 960, false)}<div class="shade"></div><div class="wrap cap"><nav class="crumb" aria-label="Breadcrumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/model/')}">Model</a> › ${E(m.name)}</nav><span class="eyebrow">${E(m.type)}</span><h1>${E(m.name)}</h1><p>${E(m.tagline)}</p><div class="cta"><a class="btn" href="${wa('Halo, saya tertarik ' + m.name)}" rel="noopener">Tanya harga</a><a class="btn ghost" href="${u('/kontak/')}">Test Drive</a></div></div></section>
 <section class="section"><div class="wrap two"><div><h2>Keunggulan ${E(m.name)}</h2><ul class="check">${m.highlights.map(h => `<li>${E(h)}</li>`).join('')}</ul><h2>Harga ${E(m.name)} ${E(site.pricelistUpdate)}</h2><table class="ptbl"><tbody>${m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`).join('')}</tbody></table></div>
 <div><h2>Spesifikasi ringkas</h2><table class="ptbl spec"><tbody>${m.specs.map(s => `<tr><th>${E(s.k)}</th><td>${E(s.v)}</td></tr>`).join('')}</tbody></table></div></div></section>
 ${leasingSection()}
+${videoSection(m, vids)}
 <section class="section dark"><div class="wrap"><h2>Galeri ${E(m.name)}</h2><div class="car"><div class="track g">${m.gallery.map((g, i) => `<figure>${picture(g, m.name + ' foto ' + (i + 1), '', 900, 600)}</figure>`).join('')}</div></div></div></section>
 <section class="section"><div class="wrap two"><div>${faqBlock(m.faq)}</div>${leadForm}</div></section>`;
-  const ld = [crumbs([['Beranda', '/'], ['Model', '/model/'], [m.name, p]]), faqLd(m.faq), { '@context': 'https://schema.org', '@type': 'Product', name: m.name, brand: { '@type': 'Brand', name: 'XPeng' }, image: m.gallery.slice(0, 4).map(abs), description: m.metaDescription, offers: m.variants.map(v => ({ '@type': 'Offer', name: v.name, price: v.price, priceCurrency: 'IDR', availability: 'https://schema.org/InStock', url: abs(p) })) }];
+  const ld = [crumbs([['Beranda', '/'], ['Model', '/model/'], [m.name, p]]), faqLd(m.faq), ...videoLd(m, vids), { '@context': 'https://schema.org', '@type': 'Product', name: m.name, brand: { '@type': 'Brand', name: 'XPeng' }, image: m.gallery.slice(0, 4).map(abs), description: m.metaDescription, offers: m.variants.map(v => ({ '@type': 'Offer', name: v.name, price: v.price, priceCurrency: 'IDR', availability: 'https://schema.org/InStock', url: abs(p) })) }];
   return layout({ title: m.metaTitle, desc: m.metaDescription, path: p, body, image: m.hero, ld });
 }
 

@@ -72,4 +72,7 @@ var pg=location.pathname;
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',pos=(a.closest('[data-cta]')||{dataset:{}}).dataset.cta||(a.classList.contains('wafab')?'melayang':'halaman');
 if(h.indexOf('wa.me/')>-1)ev('klik_whatsapp',{halaman:pg,posisi:pos});else if(h.indexOf('tel:')===0)ev('klik_telepon',{halaman:pg});else if(h.indexOf('mailto:')===0)ev('klik_email',{halaman:pg});else if(/\.pdf(\?|$)/i.test(h))ev('unduh_brosur',{halaman:pg,file:h});else if(h.indexOf('#testdrive')>-1)ev('klik_booking_test_drive',{halaman:pg,posisi:pos})},true);
 document.addEventListener('submit',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('lead'))ev('kirim_form_test_drive',{halaman:pg})},true)})();
+/* video YouTube ringan: iframe dimuat saat diklik */
+$$('.mvid .yt').forEach(function(d){function go(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+d.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=d.dataset.t||'Video';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;d.innerHTML='';d.appendChild(f);d.removeAttribute('role');d.removeAttribute('tabindex')}
+d.addEventListener('click',go);d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 })();

@@ -122,3 +122,12 @@ footer.site .soc a{padding:8px 12px}
 .cta-inline{margin:26px 0;padding:16px 18px;border:1px solid rgba(46,230,182,.35);border-radius:14px;background:rgba(46,230,182,.07);display:flex;flex-wrap:wrap;gap:10px;align-items:center}
 .cta-inline p{flex:1 1 100%;margin:0}
 .cta-inline .btn{flex:0 0 auto}
+
+/* Video model: tanpa border, tanpa jarak kiri-kanan (full lebar) */
+.mvidsec{padding:60px 0 0;background:var(--bg)}.mvidsec .wrap{margin-bottom:20px}
+.mvid{width:100%;margin:0;padding:0;border:0;background:#000;line-height:0}.mvid+.mvid{margin-top:2px}
+.mvid video,.mvid .yt{display:block;width:100%;max-width:none;margin:0;border:0;border-radius:0;aspect-ratio:16/9;background:#000;object-fit:cover}
+.mvid .yt{position:relative;cursor:pointer;overflow:hidden}.mvid .yt img,.mvid .yt iframe{position:absolute;inset:0;width:100%;height:100%;border:0;object-fit:cover}
+.mvid .play{position:absolute;left:50%;top:50%;width:76px;height:76px;margin:-38px 0 0 -38px;border-radius:50%;background:rgba(0,0,0,.6);border:2px solid #fff}
+.mvid .play:after{content:"";position:absolute;left:30px;top:22px;border-left:26px solid #fff;border-top:16px solid transparent;border-bottom:16px solid transparent}
+.mvid .yt:hover .play,.mvid .yt:focus .play{background:var(--ac,#1be0b0)}
