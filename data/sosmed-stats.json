@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-29T15:22:36.619Z",
+ "generated": "2026-10-30T03:16:11.177Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 20
+    "media": 21
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-29T08:05:36+0000",
+   "last": "2026-10-30T02:53:22+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/DfGjdRomzIZ/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/DfEiaFPDSHF/",
      "eng": 0
     },
     {
      "url": "https://www.instagram.com/p/DfD-qD7jQJl/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfB9r8lDgZn/",
      "eng": 0
     }
    ],
@@ -53,9 +53,13 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 35,
-   "last": "2026-10-29T08:05:58+0000",
+   "avgReachRecent": 26,
+   "last": "2026-10-30T02:53:45+0000",
    "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfGjfYsEUx5",
+     "eng": 0
+    },
     {
      "url": "https://www.threads.com/@xpengwins/post/DfEibkXG15A",
      "eng": 0
@@ -63,15 +67,15 @@
     {
      "url": "https://www.threads.com/@xpengwins/post/DfD-sFeFLyn",
      "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfB9tN4FWOS",
-     "eng": 0
     }
    ],
    "extra": {}
   }
  },
- "issues": [],
- "alertKeys": []
+ "issues": [
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (54 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+ ],
+ "alertKeys": [
+  "reach:threads"
+ ]
 }

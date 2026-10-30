@@ -288,57 +288,112 @@
    "issues": [
     "perf:/"
    ]
+  },
+  {
+   "date": "2026-10-30",
+   "at": "2026-10-30T03:16:03.991Z",
+   "urls": 35,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 124,
+   "pages": {
+    "/": {
+     "score": 80,
+     "lcp": 4974,
+     "cls": 0,
+     "tbt": 87,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 100,
+     "lcp": 1359,
+     "cls": 0,
+     "tbt": 11,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 100,
+     "lcp": 1365,
+     "cls": 0,
+     "tbt": 56,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1359,
+     "cls": 0,
+     "tbt": 28,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 791,
+     "cls": 0,
+     "tbt": 91,
+     "field": null
+    },
+    "/artikel/test-drive-mobil-listrik/": {
+     "score": 100,
+     "lcp": 1510,
+     "cls": 0.016,
+     "tbt": 83,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/"
+   ]
   }
  ],
- "generated": "2026-10-29T15:22:29.536Z",
+ "generated": "2026-10-30T03:16:03.991Z",
  "latest": {
-  "date": "2026-10-29",
-  "at": "2026-10-29T15:22:29.536Z",
-  "urls": 34,
+  "date": "2026-10-30",
+  "at": "2026-10-30T03:16:03.991Z",
+  "urls": 35,
   "errors": 0,
   "slow": 0,
-  "avgMs": 130,
+  "avgMs": 124,
   "pages": {
    "/": {
-    "score": 79,
-    "lcp": 5096,
+    "score": 80,
+    "lcp": 4974,
     "cls": 0,
-    "tbt": 75,
+    "tbt": 87,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 100,
     "lcp": 1359,
     "cls": 0,
-    "tbt": 40,
+    "tbt": 11,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 100,
-    "lcp": 1372,
+    "lcp": 1365,
     "cls": 0,
-    "tbt": 20,
+    "tbt": 56,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1357,
+    "lcp": 1359,
     "cls": 0,
-    "tbt": 55,
+    "tbt": 28,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 905,
+    "lcp": 791,
     "cls": 0,
-    "tbt": 53,
+    "tbt": 91,
     "field": null
    },
-   "/artikel/spesifikasi-mobil-listrik-wajib-dicek/": {
-    "score": 99,
-    "lcp": 1660,
-    "cls": 0.014,
-    "tbt": 129,
+   "/artikel/test-drive-mobil-listrik/": {
+    "score": 100,
+    "lcp": 1510,
+    "cls": 0.016,
+    "tbt": 83,
     "field": null
    }
   },
@@ -346,7 +401,7 @@
    "perf:/"
   ],
   "issueText": [
-   "🔴 /: skor 79, LCP 5.1 dtk"
+   "🔴 /: LCP 5.0 dtk"
   ]
  },
  "alertKeys": [
