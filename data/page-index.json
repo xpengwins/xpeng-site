@@ -186,6 +186,22 @@
       "tag": "button"
      },
      {
+      "t": "Interior XPeng X9",
+      "tag": "h3"
+     },
+     {
+      "t": "Coffee",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Meteorite Black",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Rose Brown",
+      "tag": "figcaption"
+     },
+     {
       "t": "Varian",
       "tag": "label"
      },
@@ -214,7 +230,20 @@
       "tag": "a"
      }
     ],
-    "imgs": []
+    "imgs": [
+     {
+      "src": "/assets/img/228023.webp",
+      "alt": "XPeng X9 interior Coffee foto 1"
+     },
+     {
+      "src": "/assets/img/228025.webp",
+      "alt": "XPeng X9 interior Meteorite Black foto 2"
+     },
+     {
+      "src": "/assets/img/228027.webp",
+      "alt": "XPeng X9 interior Rose Brown foto 3"
+     }
+    ]
    },
    {
     "key": "cicilan-mudah-lewat-partner-leasing",
@@ -1773,6 +1802,22 @@
       "tag": "h2"
      },
      {
+      "t": "Interior XPeng X9",
+      "tag": "h3"
+     },
+     {
+      "t": "Coffee",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Meteorite Black",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Rose Brown",
+      "tag": "figcaption"
+     },
+     {
       "t": "Varian",
       "tag": "label"
      },
@@ -1801,7 +1846,20 @@
       "tag": "a"
      }
     ],
-    "imgs": []
+    "imgs": [
+     {
+      "src": "/assets/img/228023.webp",
+      "alt": "XPeng X9 interior Coffee foto 1"
+     },
+     {
+      "src": "/assets/img/228025.webp",
+      "alt": "XPeng X9 interior Meteorite Black foto 2"
+     },
+     {
+      "src": "/assets/img/228027.webp",
+      "alt": "XPeng X9 interior Rose Brown foto 3"
+     }
+    ]
    },
    {
     "key": "cicilan-mudah-lewat-partner-leasing",
