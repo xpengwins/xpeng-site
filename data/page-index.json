@@ -416,6 +416,14 @@
       "tag": "h2"
      },
      {
+      "t": "Tips EV",
+      "tag": "span"
+     },
+     {
+      "t": "Biaya Charging SPKLU: Tarif, Rumus, dan Contoh Hitung",
+      "tag": "h3"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -426,10 +434,6 @@
      {
       "t": "Panduan test drive mobil listrik: persiapan, 15 hal yang wajib dicek, pertanyaan untuk dealer, dan kesalahan umum. Cocok sebelum mencoba XPeng X9 atau G6.",
       "tag": "p"
-     },
-     {
-      "t": "Tips EV",
-      "tag": "span"
      },
      {
       "t": "Cara Menghitung Biaya Charging Mobil Listrik di Rumah",
@@ -669,6 +673,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/222773.webp",
+      "alt": "XPeng G6 hitam tampak belakang saat mengisi daya di SPKLU"
+     },
      {
       "src": "/assets/img/222769-eh0m.webp",
       "alt": "XPeng G6 silver di jalan saat test drive mobil listrik"
@@ -1752,6 +1760,50 @@
     "imgs": []
    },
    {
+    "key": "atur-mobil",
+    "title": "Atur XPeng X9 dan hitung cicilan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Interaktif",
+      "tag": "span"
+     },
+     {
+      "t": "Atur XPeng X9 dan hitung cicilan",
+      "tag": "h2"
+     },
+     {
+      "t": "Varian",
+      "tag": "label"
+     },
+     {
+      "t": "Uang muka:",
+      "tag": "label"
+     },
+     {
+      "t": "Tenor:",
+      "tag": "label"
+     },
+     {
+      "t": "Bunga per tahun:",
+      "tag": "label"
+     },
+     {
+      "t": "Estimasi cicilan per bulan",
+      "tag": "span"
+     },
+     {
+      "t": "Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.",
+      "tag": "small"
+     },
+     {
+      "t": "Minta penawaran via WhatsApp",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   },
+   {
     "key": "cicilan-mudah-lewat-partner-leasing",
     "title": "Cicilan mudah lewat partner leasing",
     "hasH1": false,
@@ -2043,6 +2095,50 @@
      {
       "t": "Spesifikasi ringkas",
       "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "atur-mobil",
+    "title": "Atur XPeng G6 dan hitung cicilan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Interaktif",
+      "tag": "span"
+     },
+     {
+      "t": "Atur XPeng G6 dan hitung cicilan",
+      "tag": "h2"
+     },
+     {
+      "t": "Varian",
+      "tag": "label"
+     },
+     {
+      "t": "Uang muka:",
+      "tag": "label"
+     },
+     {
+      "t": "Tenor:",
+      "tag": "label"
+     },
+     {
+      "t": "Bunga per tahun:",
+      "tag": "label"
+     },
+     {
+      "t": "Estimasi cicilan per bulan",
+      "tag": "span"
+     },
+     {
+      "t": "Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.",
+      "tag": "small"
+     },
+     {
+      "t": "Minta penawaran via WhatsApp",
+      "tag": "a"
      }
     ],
     "imgs": []
