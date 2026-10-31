@@ -163,3 +163,5 @@ section.prebook .pbi img{width:100%;max-width:380px;height:auto;margin:0 auto;di
 .soonwrap{padding-bottom:0}.soonwrap .mcard.soon+.mcard.soon{margin-top:24px}
 .soonwrap .mcard.soon>a{display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.soonwrap .mimg{height:100%;aspect-ratio:auto;min-height:320px}
 @media(max-width:900px){.soonwrap .mcard.soon>a{display:block}.soonwrap .mimg{aspect-ratio:16/10;min-height:0}}
+
+.soonhome{margin:8px 0 28px}
