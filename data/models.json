@@ -100,6 +100,20 @@
     "alt": "xpengwins Xpeng X9",
     "title": ""
    }
+  ],
+  "interior": [
+   {
+    "src": "assets/img/228023.webp",
+    "alt": "Coffee"
+   },
+   {
+    "src": "assets/img/228025.webp",
+    "alt": "Meteorite Black"
+   },
+   {
+    "src": "assets/img/228027.webp",
+    "alt": "Rose Brown"
+   }
   ]
  },
  {
