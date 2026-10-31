@@ -348,84 +348,128 @@
     "perf:/kontak/",
     "perf:/artikel/test-drive-mobil-listrik/"
    ]
+  },
+  {
+   "date": "2026-10-31",
+   "at": "2026-10-31T03:15:10.023Z",
+   "urls": 37,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 125,
+   "pages": {
+    "/": {
+     "score": 82,
+     "lcp": 4334,
+     "cls": 0,
+     "tbt": 19,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 99,
+     "lcp": 1970,
+     "cls": 0,
+     "tbt": 7,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 99,
+     "lcp": 1971,
+     "cls": 0,
+     "tbt": 45,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1358,
+     "cls": 0,
+     "tbt": 15,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 793,
+     "cls": 0,
+     "tbt": 79,
+     "field": null
+    },
+    "/artikel/biaya-charging-spklu/": {
+     "score": 100,
+     "lcp": 1520,
+     "cls": 0.014,
+     "tbt": 80,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "drop:/"
+   ]
   }
  ],
- "generated": "2026-10-30T15:22:09.679Z",
+ "generated": "2026-10-31T03:15:10.023Z",
  "latest": {
-  "date": "2026-10-30",
-  "at": "2026-10-30T15:22:09.679Z",
-  "urls": 36,
+  "date": "2026-10-31",
+  "at": "2026-10-31T03:15:10.023Z",
+  "urls": 37,
   "errors": 0,
   "slow": 0,
-  "avgMs": 127,
+  "avgMs": 125,
   "pages": {
    "/": {
-    "score": 99,
-    "lcp": 1994,
+    "score": 82,
+    "lcp": 4334,
     "cls": 0,
-    "tbt": 32,
+    "tbt": 19,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 100,
-    "lcp": 1365,
+    "score": 99,
+    "lcp": 1970,
     "cls": 0,
-    "tbt": 16,
+    "tbt": 7,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 81,
-    "lcp": 4211,
+    "score": 99,
+    "lcp": 1971,
     "cls": 0,
-    "tbt": 244,
+    "tbt": 45,
     "field": null
    },
    "/pricelist/": {
-    "score": 85,
-    "lcp": 4039,
+    "score": 100,
+    "lcp": 1358,
     "cls": 0,
-    "tbt": 173,
+    "tbt": 15,
     "field": null
    },
    "/kontak/": {
-    "score": 96,
-    "lcp": 806,
+    "score": 100,
+    "lcp": 793,
     "cls": 0,
-    "tbt": 219,
+    "tbt": 79,
     "field": null
    },
-   "/artikel/test-drive-mobil-listrik/": {
-    "score": 85,
-    "lcp": 3809,
-    "cls": 0,
-    "tbt": 172,
+   "/artikel/biaya-charging-spklu/": {
+    "score": 100,
+    "lcp": 1520,
+    "cls": 0.014,
+    "tbt": 80,
     "field": null
    }
   },
   "issues": [
-   "perf:/model/xpeng-g6/",
-   "drop:/model/xpeng-g6/",
-   "perf:/pricelist/",
-   "drop:/pricelist/",
-   "perf:/kontak/",
-   "perf:/artikel/test-drive-mobil-listrik/"
+   "perf:/",
+   "drop:/"
   ],
   "issueText": [
-   "🔴 /model/xpeng-g6/: LCP 4.2 dtk, TBT 244 ms",
-   "📉 /model/xpeng-g6/ turun 100 → 81 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /pricelist/: LCP 4.0 dtk",
-   "📉 /pricelist/ turun 100 → 85 sejak pengecekan sebelumnya (melambat)",
-   "🟠 /kontak/: TBT 219 ms",
-   "🟠 /artikel/test-drive-mobil-listrik/: LCP 3.8 dtk"
+   "🔴 /: LCP 4.3 dtk",
+   "📉 / turun 99 → 82 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
-  "perf:/model/xpeng-g6/",
-  "drop:/model/xpeng-g6/",
-  "perf:/pricelist/",
-  "drop:/pricelist/",
-  "perf:/kontak/",
-  "perf:/artikel/test-drive-mobil-listrik/"
+  "perf:/",
+  "drop:/"
  ],
- "alertSig": "drop:/model/xpeng-g6/|drop:/pricelist/|perf:/artikel/test-drive-mobil-listrik/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/pricelist/"
+ "alertSig": "drop:/|perf:/"
 }

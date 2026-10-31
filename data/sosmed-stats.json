@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-30T15:22:18.856Z",
+ "generated": "2026-10-31T03:15:33.027Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 22
+    "media": 23
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-30T08:56:26+0000",
+   "last": "2026-10-31T02:36:58+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/DfJGYOLidWl/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/DfHNBLlAbX-/",
      "eng": 0
     },
     {
      "url": "https://www.instagram.com/p/DfGjdRomzIZ/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfEiaFPDSHF/",
      "eng": 0
     }
    ],
@@ -53,19 +53,19 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 25,
-   "last": "2026-10-30T08:56:46+0000",
+   "avgReachRecent": 5,
+   "last": "2026-10-31T02:37:18+0000",
    "top": [
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfJGaJ8lLNz",
+     "eng": 0
+    },
     {
      "url": "https://www.threads.com/@xpengwins/post/DfHNCj-GzLQ",
      "eng": 0
     },
     {
      "url": "https://www.threads.com/@xpengwins/post/DfGjfYsEUx5",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfEibkXG15A",
      "eng": 0
     }
    ],
@@ -77,7 +77,7 @@
   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 5). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
  ],
  "alertKeys": [
   "gagal:threads:gambar JPG belum tayang di situs setelah",

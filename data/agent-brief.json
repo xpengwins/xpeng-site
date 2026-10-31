@@ -1,13 +1,13 @@
 {
- "generated": "2026-10-30T15:22:28.539Z",
+ "generated": "2026-10-31T03:15:46.998Z",
  "traffic": {
   "periode": [
-   "2026-09-30",
-   "2026-10-27"
+   "2026-10-01",
+   "2026-10-28"
   ],
-  "klik": 6,
-  "tayang": 138,
-  "posisi": 15,
+  "klik": 8,
+  "tayang": 182,
+  "posisi": 13.8,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -15,8 +15,8 @@
  "A_perbaiki_judul": [
   {
    "halaman": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
-   "tayang": 5,
-   "posisi": 10.4,
+   "tayang": 6,
+   "posisi": 9.8,
    "kataKunci": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   }
@@ -25,8 +25,8 @@
   {
    "kataKunci": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
    "halaman": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
-   "tayang": 5,
-   "posisi": 10.4,
+   "tayang": 6,
+   "posisi": 9.8,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
@@ -47,8 +47,8 @@
  "C_ide_artikel_dari_data": [
   {
    "kataKunci": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
-   "tayang": 5,
-   "posisi": 10.4,
+   "tayang": 6,
+   "posisi": 9.8,
    "halamanSaatIni": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
@@ -105,9 +105,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 27,
-  "terjadwal": 5,
-  "terbitBerikutnya": "2026-10-31T09:00:00+07:00",
+  "terbit": 28,
+  "terjadwal": 4,
+  "terbitBerikutnya": "2026-10-31T15:00:00+07:00",
   "terjadwalHabis": "2026-11-02T09:00:00+07:00",
   "linkRusak": 0
  },
@@ -116,12 +116,8 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /model/xpeng-g6/: LCP 4.2 dtk, TBT 244 ms",
-    "📉 /model/xpeng-g6/ turun 100 → 81 sejak pengecekan sebelumnya (melambat)",
-    "🔴 /pricelist/: LCP 4.0 dtk",
-    "📉 /pricelist/ turun 100 → 85 sejak pengecekan sebelumnya (melambat)",
-    "🟠 /kontak/: TBT 219 ms",
-    "🟠 /artikel/test-drive-mobil-listrik/: LCP 3.8 dtk"
+    "🔴 /: LCP 4.3 dtk",
+    "📉 / turun 99 → 82 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [
@@ -129,7 +125,7 @@
    "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
    "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-   "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 4). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+   "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 5). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
   ],
   "halaman": {
    "berat": 0,

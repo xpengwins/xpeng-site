@@ -1,29 +1,29 @@
 {
- "generated": "2026-10-30T15:22:14.718Z",
+ "generated": "2026-10-31T03:15:30.180Z",
  "property": "560653996",
  "today": {
-  "users": 52,
-  "sessions": 57,
-  "views": 98,
-  "newUsers": 50
+  "users": 3,
+  "sessions": 4,
+  "views": 52,
+  "newUsers": 1
  },
  "yesterday": {
-  "users": 67,
-  "sessions": 78,
-  "views": 116,
-  "newUsers": 66
+  "users": 62,
+  "sessions": 71,
+  "views": 239,
+  "newUsers": 60
  },
  "last7": {
-  "users": 691,
-  "sessions": 752,
-  "views": 1069,
-  "newUsers": 711
+  "users": 702,
+  "sessions": 770,
+  "views": 1262,
+  "newUsers": 722
  },
  "last30": {
-  "users": 691,
-  "sessions": 752,
-  "views": 1069,
-  "newUsers": 711
+  "users": 702,
+  "sessions": 770,
+  "views": 1262,
+  "newUsers": 722
  },
  "prev30": {
   "users": 0,
@@ -64,54 +64,60 @@
   },
   {
    "date": "2026-10-30",
-   "users": 52,
-   "sessions": 57,
-   "views": 98
+   "users": 62,
+   "sessions": 71,
+   "views": 239
+  },
+  {
+   "date": "2026-10-31",
+   "users": 3,
+   "sessions": 4,
+   "views": 52
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 658,
-   "users": 498
+   "views": 698,
+   "users": 501
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 102,
-   "users": 75
-  },
-  {
-   "path": "/pricelist/",
-   "views": 75,
-   "users": 60
+   "views": 142,
+   "users": 82
   },
   {
    "path": "/model/",
-   "views": 43,
-   "users": 18
+   "views": 90,
+   "users": 20
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 32,
-   "users": 22
+   "views": 87,
+   "users": 25
+  },
+  {
+   "path": "/pricelist/",
+   "views": 79,
+   "users": 62
   },
   {
    "path": "/kontak/",
-   "views": 28,
-   "users": 5
+   "views": 30,
+   "users": 6
   },
   {
    "path": "/tentang/",
-   "views": 16,
+   "views": 17,
    "users": 1
   },
   {
-   "path": "/artikel/parkir-otomatis-xpeng-g6/",
-   "views": 13,
-   "users": 12
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 14,
+   "users": 13
   },
   {
-   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "path": "/artikel/parkir-otomatis-xpeng-g6/",
    "views": 13,
    "users": 12
   },
@@ -128,7 +134,7 @@
   },
   {
    "k": "Paid Search",
-   "v": 156
+   "v": 167
   },
   {
    "k": "Organic Social",
@@ -136,19 +142,19 @@
   },
   {
    "k": "Direct",
-   "v": 63
+   "v": 66
   },
   {
    "k": "Referral",
-   "v": 19
+   "v": 21
   },
   {
    "k": "Organic Search",
-   "v": 17
+   "v": 18
   },
   {
    "k": "Unassigned",
-   "v": 9
+   "v": 4
   },
   {
    "k": "Cross-network",
@@ -158,37 +164,37 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 642
+   "v": 652
   },
   {
    "k": "desktop",
-   "v": 108
+   "v": 114
   },
   {
    "k": "tablet",
-   "v": 3
+   "v": 5
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 333
+   "v": 339
   },
   {
    "k": "Tangerang",
-   "v": 53
+   "v": 55
   },
   {
    "k": "Depok",
-   "v": 49
+   "v": 50
   },
   {
    "k": "South Tangerang",
-   "v": 40
+   "v": 41
   },
   {
    "k": "(not set)",
-   "v": 24
+   "v": 27
   },
   {
    "k": "Boardman",
@@ -204,9 +210,9 @@
   }
  ],
  "leads": {
-  "klik_whatsapp": 26,
+  "klik_whatsapp": 27,
   "kirim_form_test_drive": 0,
-  "klik_booking_test_drive": 0,
+  "klik_booking_test_drive": 1,
   "klik_telepon": 0,
   "klik_email": 0,
   "unduh_brosur": 0
