@@ -133,24 +133,32 @@ function heroVideoSection() {
 }
 
 /* ---------- halaman ---------- */
+/* ---------- konfigurator "Atur mobil": dipakai di beranda (gabungan, ada tab model) dan di tiap halaman model (satu model) ---------- */
+const interiorBlocks = list => list.map((m, mi) => { const it = (m.interior || []).filter(x => x && x.src); return it.length ? `<div class="cint" data-mi="${mi}"${mi ? ' hidden' : ''}><h3>Interior ${E(m.name)}</h3><div class="car pmini"><div class="track m">${it.map((x, k) => `<figure>${picture(x.src, m.name + ' interior' + (x.alt ? ' ' + x.alt : '') + ' foto ' + (k + 1), '', 360, 240).replace('<img ', '<img data-zoom ')}${x.alt ? `<figcaption>${E(x.alt)}</figcaption>` : ''}</figure>`).join('')}</div></div></div>` : ''; }).join('');
+function cfgSection(list, o = {}) {
+  const m0 = list[0], multi = list.length > 1;
+  const id = o.id || 'cfg', title = o.title || (multi ? 'Atur mobil dan hitung cicilan' : 'Atur ' + m0.name + ' dan hitung cicilan');
+  const tabs = multi ? `<div class="tabs" role="tablist">${list.map((m, i) => `<button class="tab${i === 0 ? ' on' : ''}" data-m="${i}">${E(m.name)}</button>`).join('')}</div>` : '';
+  return `<section class="section dark" id="${id}"><div class="wrap"><span class="eyebrow">Interaktif</span><h2>${E(title)}</h2><div class="cfg" data-models='${JSON.stringify(list.map(m => ({ n: m.name, c: m.colors, v: m.variants, s: m.slug }))).replace(/'/g, '&#39;')}'>
+<div class="stage">${tabs}<img id="cfgimg" src="${u(m0.colors[0].image)}" alt="${E(m0.name)} warna ${E(m0.colors[0].name)}" width="1200" height="800"><div class="swatches" id="sw"></div><p id="colname" class="muted"></p>${interiorBlocks(list)}</div>
+<div class="panel"><label>Varian<select id="var"></select></label><div class="big" id="harga"></div>
+<label>Uang muka: <b id="dpv">30%</b><input type="range" id="dp" min="20" max="70" step="5" value="30"></label>
+<label>Tenor: <b id="tnv">5 tahun</b><input type="range" id="tn" min="1" max="7" step="1" value="5"></label>
+<label>Bunga per tahun: <b id="bgv">5%</b><input type="range" id="bg" min="0" max="12" step="0.5" value="5"></label>
+<div class="res"><span>Estimasi cicilan per bulan</span><strong id="cic"></strong><small>Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.</small></div>
+<a class="btn" id="cfgwa" href="#" rel="noopener">Minta penawaran via WhatsApp</a></div></div></div></section>`;
+}
+
 function home() {
   const m0 = models[0], m1 = models[1];
   const slides = models.map((m, i) => `<div class="slide${i === 0 ? ' on' : ''}" role="group" aria-label="${E(m.name)}">${picture(m.hero, m.name, 'bg', 1280, 960, i > 0)}<div class="shade"></div><div class="wrap cap"><span class="eyebrow">${E(m.type)}</span>${i === 0 ? `<h1>${E(m.name)}<br><em>${E(site.tagline)}</em></h1>` : `<h2 class="h1">${E(m.name)}<br><em>${E(m.tagline)}</em></h2>`}<p>Mulai ${rp(Math.min(...m.variants.map(v => v.price)))} • Pricelist ${E(site.pricelistUpdate)}</p><div class="cta"><a class="btn" href="${u('/model/' + m.slug + '/')}">Lihat ${E(m.name)}</a><a class="btn ghost" href="${u('/kontak/')}">Test Drive</a></div></div></div>`).join('');
-  const cfgModels = models.map((m, i) => `<button class="tab${i === 0 ? ' on' : ''}" data-m="${i}">${E(m.name)}</button>`).join('');
   const body = `
 <section class="hero" id="hero" aria-roledescription="carousel" aria-label="Model unggulan"><div class="slides">${slides}</div>
 <div class="dots" id="dots">${models.map((m, i) => `<button class="${i === 0 ? 'on' : ''}" aria-label="Slide ${i + 1}"></button>`).join('')}</div><button class="arr prev" aria-label="Sebelumnya">‹</button><button class="arr next" aria-label="Berikutnya">›</button></section>
 <section class="band"><div class="wrap stats"><div><b>800V</b><span>Platform pengisian cepat</span></div><div><b>8 th</b><span>Garansi baterai dan kendaraan</span></div><div><b>7 &amp; 5</b><span>Pilihan kursi: X9 dan G6</span></div><div><b>${rp(minPrice).replace('Rp', 'Rp ')}</b><span>Harga mulai dari</span></div></div></section>
 <section class="section"><div class="wrap"><span class="eyebrow">Model</span><h2>Pilih XPeng sesuai gaya hidup Anda</h2>
 <div class="car" id="car"><div class="track">${models.map(modelCard).join('')}</div></div></div></section>
-${(vh => vh ? vh + '\n' : '')(heroVideoSection())}<section class="section dark" id="cfg"><div class="wrap"><span class="eyebrow">Interaktif</span><h2>Atur mobil dan hitung cicilan</h2><div class="cfg" data-models='${JSON.stringify(models.map(m => ({ n: m.name, c: m.colors, v: m.variants, s: m.slug }))).replace(/'/g, '&#39;')}'>
-<div class="stage"><div class="tabs" role="tablist">${cfgModels}</div><img id="cfgimg" src="${u(m0.colors[0].image)}" alt="${E(m0.name)} warna ${E(m0.colors[0].name)}" width="1200" height="800"><div class="swatches" id="sw"></div><p id="colname" class="muted"></p></div>
-<div class="panel"><label>Varian<select id="var"></select></label><div class="big" id="harga"></div>
-<label>Uang muka: <b id="dpv">30%</b><input type="range" id="dp" min="20" max="70" step="5" value="30"></label>
-<label>Tenor: <b id="tnv">5 tahun</b><input type="range" id="tn" min="1" max="7" step="1" value="5"></label>
-<label>Bunga per tahun: <b id="bgv">5%</b><input type="range" id="bg" min="0" max="12" step="0.5" value="5"></label>
-<div class="res"><span>Estimasi cicilan per bulan</span><strong id="cic"></strong><small>Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.</small></div>
-<a class="btn" id="cfgwa" href="#" rel="noopener">Minta penawaran via WhatsApp</a></div></div></div></section>
+${(vh => vh ? vh + '\n' : '')(heroVideoSection())}${cfgSection(models)}
 ${leasingSection()}
 <section class="section"><div class="wrap"><span class="eyebrow">Galeri</span><h2>Lihat langsung detailnya</h2><div class="car" id="gal"><div class="track g">${[...m0.gallery.slice(0, 5), ...m1.gallery.slice(0, 5)].map((g, i) => `<figure>${picture(g, 'Galeri XPeng foto ' + (i + 1), '', 900, 600)}</figure>`).join('')}</div></div></div></section>
 <section class="section dark"><div class="wrap two"><div><span class="eyebrow">Pricelist ${E(site.pricelistUpdate)}</span><h2>Harga XPeng terbaru</h2><table class="ptbl"><tbody>${models.flatMap(m => m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`)).join('')}</tbody></table><a class="btn" href="${u('/pricelist/')}">Lihat pricelist lengkap</a></div>${leadForm}</div></section>
@@ -187,6 +195,7 @@ function modelPage(m) {
   const body = `<section class="mhero">${picture(m.hero, m.name + ' ' + m.type, 'bg', 1280, 960, false)}<div class="shade"></div><div class="wrap cap"><nav class="crumb" aria-label="Breadcrumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/model/')}">Model</a> › ${E(m.name)}</nav><span class="eyebrow">${E(m.type)}</span><h1>${E(m.name)}</h1><p>${E(m.tagline)}</p><div class="cta"><a class="btn" href="${wa('Halo, saya tertarik ' + m.name)}" rel="noopener">Tanya harga</a><a class="btn ghost" href="${u('/kontak/')}">Test Drive</a></div></div></section>
 <section class="section"><div class="wrap two"><div><h2>Keunggulan ${E(m.name)}</h2><ul class="check">${m.highlights.map(h => `<li>${E(h)}</li>`).join('')}</ul><h2>Harga ${E(m.name)} ${E(site.pricelistUpdate)}</h2><table class="ptbl"><tbody>${m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`).join('')}</tbody></table></div>
 <div><h2>Spesifikasi ringkas</h2><table class="ptbl spec"><tbody>${m.specs.map(s => `<tr><th>${E(s.k)}</th><td>${E(s.v)}</td></tr>`).join('')}</tbody></table></div></div></section>
+${cfgSection([m], { id: 'atur-mobil' })}
 ${leasingSection()}
 ${videoSection(m, vids)}
 <section class="section dark"><div class="wrap"><h2>Galeri ${E(m.name)}</h2><div class="car"><div class="track g">${m.gallery.map((g, i) => `<figure>${picture(g, m.name + ' foto ' + (i + 1), '', 900, 600)}</figure>`).join('')}</div></div></div></section>
