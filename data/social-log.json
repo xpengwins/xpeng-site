@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-10-31T02:37:21.377Z",
+  "slug": "biaya-charging-spklu",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-10-31T02:37:01.121Z",
+  "slug": "biaya-charging-spklu",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-10-31T02:36:44.416Z",
+  "slug": "biaya-charging-spklu",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-10-30T08:56:49.100Z",
   "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "threads",
   "ok": true,
   "msg": "terkirim"
- },
- {
-  "at": "2026-10-24T17:06:55.716Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-24T16:52:07.848Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-23T06:24:15.841Z",
-  "slug": "mpv-listrik-terbaik-indonesia",
-  "platform": "threads",
-  "ok": false,
-  "msg": "secret Threads belum diisi di GitHub"
  }
 ]
