@@ -4,9 +4,29 @@
   "sections": [
    {
     "key": "hero",
-    "title": "XPeng X9",
+    "title": "XPeng G9L",
     "hasH1": true,
     "texts": [
+     {
+      "t": "Segera Launching",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L",
+      "tag": "h2"
+     },
+     {
+      "t": "AI • Future • Mobility",
+      "tag": "em"
+     },
+     {
+      "t": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
+      "tag": "p"
+     },
+     {
+      "t": "OPEN PREBOOK SEKARANG!!!",
+      "tag": "a"
+     },
      {
       "t": "MPV Listrik Premium 7 Kursi",
       "tag": "span"
@@ -46,6 +66,10 @@
     ],
     "imgs": [
      {
+      "src": "/assets/img/g9l-hero.webp",
+      "alt": "XPeng G9L segera launching"
+     },
+     {
       "src": "/assets/img/226028.webp",
       "alt": "XPeng X9"
      },
@@ -56,7 +80,36 @@
     ]
    },
    {
-    "key": "bagian-2",
+    "key": "open-prebook-xpeng-g9l-sekarang",
+    "title": "Open Prebook XPeng G9L Sekarang!",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Segera Launching",
+      "tag": "span"
+     },
+     {
+      "t": "Open Prebook XPeng G9L Sekarang!",
+      "tag": "h2"
+     },
+     {
+      "t": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
+      "tag": "p"
+     },
+     {
+      "t": "OPEN PREBOOK SEKARANG!!!",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g9l-prebook.webp",
+      "alt": "XPeng G9L tampak depan dan interior"
+     }
+    ]
+   },
+   {
+    "key": "bagian-3",
     "title": "800V · Platform pengisian cepat · 8 th",
     "hasH1": false,
     "texts": [
