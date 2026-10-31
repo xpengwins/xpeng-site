@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T03:15:33.027Z",
+ "generated": "2026-10-31T15:03:55.332Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 23
+    "media": 25
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-10-31T02:36:58+0000",
+   "last": "2026-10-31T09:42:39+0000",
    "top": [
     {
+     "url": "https://www.instagram.com/p/DfJ3F6SF5vY/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/DfJiICglJqX/",
+     "eng": 0
+    },
+    {
      "url": "https://www.instagram.com/p/DfJGYOLidWl/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfHNBLlAbX-/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfGjdRomzIZ/",
      "eng": 0
     }
    ],
@@ -53,19 +53,19 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 5,
-   "last": "2026-10-31T02:37:18+0000",
+   "avgReachRecent": 6,
+   "last": "2026-10-31T09:43:01+0000",
    "top": [
     {
+     "url": "https://www.threads.com/@xpengwins/post/DfJ3IBMnFPQ",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfJimFuEp-q",
+     "eng": 0
+    },
+    {
      "url": "https://www.threads.com/@xpengwins/post/DfJGaJ8lLNz",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfHNCj-GzLQ",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfGjfYsEUx5",
      "eng": 0
     }
    ],
@@ -76,8 +76,7 @@
   "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
-  "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi",
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (41 → 5). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi"
  ],
  "alertKeys": [
   "gagal:threads:gambar JPG belum tayang di situs setelah",

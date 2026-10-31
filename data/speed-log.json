@@ -351,52 +351,52 @@
   },
   {
    "date": "2026-10-31",
-   "at": "2026-10-31T03:15:10.023Z",
-   "urls": 37,
+   "at": "2026-10-31T15:03:48.300Z",
+   "urls": 38,
    "errors": 0,
    "slow": 0,
-   "avgMs": 125,
+   "avgMs": 116,
    "pages": {
     "/": {
-     "score": 82,
-     "lcp": 4334,
+     "score": 78,
+     "lcp": 5748,
      "cls": 0,
-     "tbt": 19,
+     "tbt": 14,
      "field": null
     },
     "/model/xpeng-x9/": {
      "score": 99,
-     "lcp": 1970,
+     "lcp": 1983,
      "cls": 0,
-     "tbt": 7,
+     "tbt": 69,
      "field": null
     },
     "/model/xpeng-g6/": {
      "score": 99,
-     "lcp": 1971,
+     "lcp": 1973,
      "cls": 0,
-     "tbt": 45,
+     "tbt": 28,
      "field": null
     },
     "/pricelist/": {
      "score": 100,
-     "lcp": 1358,
+     "lcp": 1357,
      "cls": 0,
-     "tbt": 15,
+     "tbt": 21,
      "field": null
     },
     "/kontak/": {
-     "score": 100,
-     "lcp": 793,
+     "score": 99,
+     "lcp": 803,
      "cls": 0,
-     "tbt": 79,
+     "tbt": 102,
      "field": null
     },
     "/artikel/biaya-charging-spklu/": {
      "score": 100,
-     "lcp": 1520,
+     "lcp": 1508,
      "cls": 0.014,
-     "tbt": 80,
+     "tbt": 58,
      "field": null
     }
    },
@@ -406,55 +406,55 @@
    ]
   }
  ],
- "generated": "2026-10-31T03:15:10.023Z",
+ "generated": "2026-10-31T15:03:48.300Z",
  "latest": {
   "date": "2026-10-31",
-  "at": "2026-10-31T03:15:10.023Z",
-  "urls": 37,
+  "at": "2026-10-31T15:03:48.300Z",
+  "urls": 38,
   "errors": 0,
   "slow": 0,
-  "avgMs": 125,
+  "avgMs": 116,
   "pages": {
    "/": {
-    "score": 82,
-    "lcp": 4334,
+    "score": 78,
+    "lcp": 5748,
     "cls": 0,
-    "tbt": 19,
+    "tbt": 14,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1970,
+    "lcp": 1983,
     "cls": 0,
-    "tbt": 7,
+    "tbt": 69,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1971,
+    "lcp": 1973,
     "cls": 0,
-    "tbt": 45,
+    "tbt": 28,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1358,
+    "lcp": 1357,
     "cls": 0,
-    "tbt": 15,
+    "tbt": 21,
     "field": null
    },
    "/kontak/": {
-    "score": 100,
-    "lcp": 793,
+    "score": 99,
+    "lcp": 803,
     "cls": 0,
-    "tbt": 79,
+    "tbt": 102,
     "field": null
    },
    "/artikel/biaya-charging-spklu/": {
     "score": 100,
-    "lcp": 1520,
+    "lcp": 1508,
     "cls": 0.014,
-    "tbt": 80,
+    "tbt": 58,
     "field": null
    }
   },
@@ -463,8 +463,8 @@
    "drop:/"
   ],
   "issueText": [
-   "🔴 /: LCP 4.3 dtk",
-   "📉 / turun 99 → 82 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 78, LCP 5.7 dtk",
+   "📉 / turun 99 → 78 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
