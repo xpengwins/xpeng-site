@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil'];
+const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil', 'pengingat'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -686,6 +686,21 @@ VIEWS.backlinks = v => {
   $('#bp').onclick = async () => { const r = mk(); B.push({ site: $('#bs').value, target: $('#bt').value, anchor: r.tx, type: r.ty, date: today(), status: 'rencana' }); await save('backlinks', 'Rencana backlink'); VIEWS.backlinks(v); };
   v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { B.splice(+b.dataset.x, 1); await save('backlinks'); VIEWS.backlinks(v); });
   $('#sv').onclick = async () => { v.querySelectorAll('[data-s]').forEach(s => B[s.dataset.s].status = s.value); await save('backlinks', 'Status backlink'); };
+};
+
+/* --- Pengingat: daftar tugas perbarui artikel/konten (data/pengingat.json) --- */
+VIEWS.pengingat = v => {
+  const R = S.d.pengingat = Array.isArray(S.d.pengingat) ? S.d.pengingat : [];
+  const base = (S.d.site.baseUrl || '').replace(/\/$/, '');
+  const open = R.filter(r => r.status !== 'selesai').length;
+  const late = r => r.status !== 'selesai' && r.tenggat && r.tenggat < today();
+  const order = [...R.keys()].sort((a, b) => (R[a].status === 'selesai') - (R[b].status === 'selesai') || String(R[a].tenggat || '9999').localeCompare(String(R[b].tenggat || '9999')));
+  v.innerHTML = `<h2>Pengingat</h2><div class="card"><p class="muted">Tugas yang perlu dikerjakan di website. Centang bila sudah selesai. <b>${open}</b> belum selesai dari ${R.length}.</p></div>
+<div class="card"><h3>Daftar pengingat</h3>${R.length ? order.map(i => { const r = R[i]; return `<div class="chk" style="align-items:flex-start"><input type="checkbox" data-c="${i}" ${r.status === 'selesai' ? 'checked' : ''} style="width:auto;min-height:0;margin-top:4px"><div style="flex:1;${r.status === 'selesai' ? 'opacity:.55;text-decoration:line-through' : ''}"><b>${E(r.judul)}</b>${late(r) ? ' <span class="pill bad">lewat tenggat</span>' : ''}${r.pemicu ? `<div class="t">Kapan: ${E(r.pemicu)}</div>` : ''}${r.detail ? `<div class="t">${E(r.detail)}</div>` : ''}${(r.artikel || []).length ? `<div class="t">Artikel: ${r.artikel.map(s => `<a href="${base}/artikel/${E(s)}/" target="_blank" rel="noopener">${E(s)}</a>`).join(', ')}</div>` : ''}${r.tenggat ? `<div class="t">Tenggat: ${E(r.tenggat)}</div>` : ''}</div><button class="d sm" data-x="${i}">✕</button></div>`; }).join('') : '<p class="muted">Belum ada pengingat.</p>'}</div>
+<div class="card"><h3>Tambah pengingat</h3><label>Judul<input id="rj" placeholder="mis. Perbarui harga di artikel X"></label><label>Catatan<textarea id="rd" style="min-height:70px"></textarea></label><label>Slug artikel terkait (pisahkan koma)<input id="ra" autocapitalize="none" placeholder="harga-xpeng-g9l, prebook-xpeng-g9l"></label><label>Kapan dikerjakan<input id="rp" placeholder="mis. setelah XPeng umumkan harga"></label><label>Tenggat (opsional)<input id="rt" type="date"></label><div class="row"><button id="rb">Tambah</button></div></div>`;
+  v.querySelectorAll('[data-c]').forEach(c => c.onchange = async () => { const r = R[c.dataset.c]; r.status = c.checked ? 'selesai' : 'buka'; if (c.checked) r.selesai = today(); else delete r.selesai; await save('pengingat', 'Pengingat: ' + r.judul); VIEWS.pengingat(v); });
+  v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { if (!confirm('Hapus pengingat ini?')) return; R.splice(+b.dataset.x, 1); await save('pengingat', 'Hapus pengingat'); VIEWS.pengingat(v); });
+  $('#rb').onclick = async () => { const j = $('#rj').value.trim(); if (!j) return toast('Judul wajib diisi', true); R.push({ id: 'r' + Date.now(), judul: j, detail: $('#rd').value.trim(), artikel: $('#ra').value.split(',').map(s => s.trim()).filter(Boolean), pemicu: $('#rp').value.trim(), tenggat: $('#rt').value || '', status: 'buka', dibuat: today() }); await save('pengingat', 'Tambah pengingat'); VIEWS.pengingat(v); };
 };
 
 /* --- Media & Zip --- */

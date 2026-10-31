@@ -1,0 +1,100 @@
+[
+ {
+  "id": "g9l-01",
+  "judul": "Perbarui artikel hub G9L (status Indonesia)",
+  "detail": "Ubah jawaban singkat dan bagian 'Bagaimana dengan Indonesia' dengan tanggal dan harga resmi. Cek juga angka China dan Eropa masih berlaku.",
+  "artikel": [
+   "xpeng-g9l-segera-launching"
+  ],
+  "pemicu": "Setelah XPeng mengumumkan G9L untuk Indonesia",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-03",
+  "judul": "Perbarui harga di artikel Harga XPeng G9L",
+  "detail": "Masukkan harga resmi Indonesia per varian. Ganti bagian 'Kenapa harga Indonesia belum bisa ditebak' dengan penjelasan harga resmi.",
+  "artikel": [
+   "harga-xpeng-g9l"
+  ],
+  "pemicu": "Setelah harga G9L Indonesia diumumkan",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-04",
+  "judul": "Perbarui artikel XPeng G9L Indonesia",
+  "detail": "Isi tanggal peluncuran, varian yang dijual, dan apakah dirakit lokal. Hapus bagian skenario dan rumor bila sudah tidak relevan.",
+  "artikel": [
+   "xpeng-g9l-indonesia"
+  ],
+  "pemicu": "Setelah pengumuman resmi Indonesia",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-12",
+  "judul": "Perbarui jumlah kursi di artikel G9L 7 seater",
+  "detail": "Tulis konfigurasi kursi versi Indonesia (5, 6, atau 7 kursi). Sesuaikan juga FAQ dan tabel kebutuhan.",
+  "artikel": [
+   "xpeng-g9l-7-seater"
+  ],
+  "pemicu": "Setelah konfigurasi Indonesia diumumkan",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-23",
+  "judul": "Perbarui daftar warna G9L",
+  "detail": "Ganti dengan daftar warna resmi Indonesia, dan sesuaikan tips pemilihan warna.",
+  "artikel": [
+   "warna-xpeng-g9l"
+  ],
+  "pemicu": "Setelah daftar warna resmi tersedia",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-27",
+  "judul": "Perbarui syarat prebook G9L",
+  "detail": "Cocokkan dengan ketentuan prebook resmi (biaya, pengembalian, jaminan unit). Jangan menulis syarat yang belum dikonfirmasi XPeng atau dealer.",
+  "artikel": [
+   "prebook-xpeng-g9l"
+  ],
+  "pemicu": "Setelah ketentuan prebook resmi jelas",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-gambar",
+  "judul": "Ganti gambar ilustrasi dengan foto unit asli G9L",
+  "detail": "Sebagian gambar adalah render promosi. Ganti gambar utama dan gambar di isi, pakai alt text 'Xpengwins Xpeng G9L ...'. Hapus keterangan 'ilustrasi' bila sudah foto asli.",
+  "artikel": [
+   "interior-xpeng-g9l",
+   "xpeng-g9l-paris-motor-show",
+   "produksi-xpeng-g9l-magna-steyr",
+   "harga-xpeng-g9l-eropa",
+   "layar-hiburan-belakang-xpeng-g9l"
+  ],
+  "pemicu": "Saat foto unit asli tersedia",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ },
+ {
+  "id": "g9l-cek",
+  "judul": "Cek pengumuman resmi XPeng Indonesia tentang G9L",
+  "detail": "Pantau situs dan media sosial XPeng Indonesia. Bila ada pengumuman, kerjakan semua pengingat G9L di atas dan perbarui halaman Model Launching.",
+  "artikel": [],
+  "pemicu": "Cek rutin tiap minggu",
+  "tenggat": "",
+  "status": "buka",
+  "dibuat": "2026-10-31"
+ }
+]
