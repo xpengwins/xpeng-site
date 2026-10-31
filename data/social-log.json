@@ -1,5 +1,33 @@
 [
  {
+  "at": "2026-10-31T09:00:45.425Z",
+  "slug": "mobil-listrik-untuk-mudik",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-31T09:00:45.425Z",
+  "slug": "mobil-listrik-untuk-mudik",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-31T09:00:45.425Z",
+  "slug": "mobil-listrik-untuk-mudik",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-10-31T08:54:42.163Z",
+  "slug": "mobil-listrik-untuk-mudik",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar Threads belum tayang, pakai persegi"
+ },
+ {
   "at": "2026-10-31T02:37:21.377Z",
   "slug": "biaya-charging-spklu",
   "platform": "threads",
@@ -388,34 +416,6 @@
   "at": "2026-10-25T03:22:05.114Z",
   "slug": "suv-listrik-terbaik-indonesia",
   "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-24T18:37:07.092Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "telegram",
-  "ok": true,
-  "msg": "sudah pernah diposting, dilewati"
- },
- {
-  "at": "2026-10-24T18:36:37.537Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "telegram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-24T17:40:15.696Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "telegram",
-  "ok": false,
-  "msg": "Forbidden: the bot can't send messages to the bot"
- },
- {
-  "at": "2026-10-24T17:40:12.070Z",
-  "slug": "pajak-mobil-listrik-2026",
-  "platform": "threads",
   "ok": true,
   "msg": "terkirim"
  }
