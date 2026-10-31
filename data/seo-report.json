@@ -1,5 +1,5 @@
 {
- "generated": "2026-10-31T02:34:20.218Z",
+ "generated": "2026-10-31T05:21:28.863Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -5554,7 +5554,7 @@
    "internal": 6,
    "external": 1,
    "faq": 4,
-   "overlap": 5,
+   "overlap": 6,
    "checks": [
     {
      "group": "Judul",
@@ -8485,6 +8485,5526 @@
      "tip": ""
     }
    ]
+  },
+  {
+   "slug": "xpeng-g9l-segera-launching",
+   "title": "XPeng G9L Segera Launching: Yang Perlu Kamu Tahu",
+   "status": "scheduled",
+   "keyword": "xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 807,
+   "density": 0.74,
+   "internal": 14,
+   "external": 5,
+   "faq": 4,
+   "overlap": 15,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "spesifikasi-xpeng-g9l",
+   "title": "Spesifikasi XPeng G9L Lengkap: Dimensi, Baterai, Tenaga",
+   "status": "scheduled",
+   "keyword": "spesifikasi xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 816,
+   "density": 0.74,
+   "internal": 10,
+   "external": 5,
+   "faq": 4,
+   "overlap": 9,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "harga-xpeng-g9l",
+   "title": "Harga XPeng G9L: China, Eropa, dan Prediksi Indonesia",
+   "status": "scheduled",
+   "keyword": "harga xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 813,
+   "density": 1.48,
+   "internal": 8,
+   "external": 4,
+   "faq": 4,
+   "overlap": 9,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-indonesia",
+   "title": "XPeng G9L Indonesia: Kapan Rilis dan Apa Kabarnya?",
+   "status": "scheduled",
+   "keyword": "xpeng g9l indonesia",
+   "score": 100,
+   "grade": "A",
+   "words": 835,
+   "density": 1.44,
+   "internal": 12,
+   "external": 4,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "jarak-tempuh-xpeng-g9l",
+   "title": "Jarak Tempuh XPeng G9L: 755 km CLTC, Nyatanya Berapa?",
+   "status": "scheduled",
+   "keyword": "jarak tempuh xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 808,
+   "density": 1.49,
+   "internal": 6,
+   "external": 5,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "charging-5c-xpeng-g9l",
+   "title": "Charging XPeng G9L: Pengisian 5C 11 Menit Itu Nyata?",
+   "status": "scheduled",
+   "keyword": "charging xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 810,
+   "density": 0.74,
+   "internal": 8,
+   "external": 3,
+   "faq": 4,
+   "overlap": 4,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-erev",
+   "title": "XPeng G9L EREV: Listrik Plus Mesin, Cocok untuk Siapa?",
+   "status": "scheduled",
+   "keyword": "xpeng g9l erev",
+   "score": 100,
+   "grade": "A",
+   "words": 808,
+   "density": 1.49,
+   "internal": 8,
+   "external": 4,
+   "faq": 4,
+   "overlap": 5,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "interior-xpeng-g9l",
+   "title": "Interior XPeng G9L: Kursi Rebah, Kulkas, Layar 21,4 Inci",
+   "status": "scheduled",
+   "keyword": "interior xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 812,
+   "density": 1.11,
+   "internal": 12,
+   "external": 3,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-vs-xpeng-x9",
+   "title": "XPeng G9L vs X9: SUV Flagship atau MPV 7 Kursi?",
+   "status": "scheduled",
+   "keyword": "xpeng g9l vs x9",
+   "score": 100,
+   "grade": "A",
+   "words": 803,
+   "density": 1,
+   "internal": 12,
+   "external": 3,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-vs-xpeng-g6",
+   "title": "XPeng G9L vs G6: Beda Kelas, Beda Kebutuhan",
+   "status": "scheduled",
+   "keyword": "xpeng g9l vs g6",
+   "score": 100,
+   "grade": "A",
+   "words": 803,
+   "density": 1,
+   "internal": 14,
+   "external": 3,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "dimensi-xpeng-g9l",
+   "title": "Dimensi XPeng G9L: Muat di Garasi dan Parkiran Mal?",
+   "status": "scheduled",
+   "keyword": "dimensi xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 888,
+   "density": 1.35,
+   "internal": 9,
+   "external": 4,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-7-seater",
+   "title": "XPeng G9L 7 Seater? 5, 6, atau 7 Kursi Penjelasannya",
+   "status": "scheduled",
+   "keyword": "xpeng g9l 7 seater",
+   "score": 100,
+   "grade": "A",
+   "words": 801,
+   "density": 1,
+   "internal": 11,
+   "external": 3,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "vla-2-0-xpeng-g9l",
+   "title": "VLA XPeng di G9L: Otak AI yang Mengerti Jalan",
+   "status": "scheduled",
+   "keyword": "vla xpeng",
+   "score": 100,
+   "grade": "A",
+   "words": 827,
+   "density": 0.97,
+   "internal": 8,
+   "external": 4,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "chip-turing-xpeng-g9l",
+   "title": "Chip Turing XPeng G9L: Arti 2.250 TOPS untuk Pengemudi",
+   "status": "scheduled",
+   "keyword": "chip turing xpeng",
+   "score": 100,
+   "grade": "A",
+   "words": 803,
+   "density": 0.75,
+   "internal": 9,
+   "external": 2,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-paris-motor-show",
+   "title": "G9L Paris Motor Show 2026: Debut Flagship XPeng",
+   "status": "scheduled",
+   "keyword": "g9l paris motor show",
+   "score": 100,
+   "grade": "A",
+   "words": 808,
+   "density": 1.49,
+   "internal": 10,
+   "external": 5,
+   "faq": 4,
+   "overlap": 10,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "harga-xpeng-g9l-eropa",
+   "title": "Harga XPeng G9L Eropa 74.600 Euro: Berapa Rupiahnya?",
+   "status": "scheduled",
+   "keyword": "harga xpeng g9l eropa",
+   "score": 100,
+   "grade": "A",
+   "words": 825,
+   "density": 0.97,
+   "internal": 8,
+   "external": 4,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "kursi-zero-gravity-xpeng-g9l",
+   "title": "Kursi Zero Gravity XPeng G9L: Rebah Datar 1,8 Meter",
+   "status": "scheduled",
+   "keyword": "kursi zero gravity",
+   "score": 100,
+   "grade": "A",
+   "words": 804,
+   "density": 1.12,
+   "internal": 10,
+   "external": 2,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "layar-hiburan-belakang-xpeng-g9l",
+   "title": "Layar Hiburan Belakang XPeng G9L 21,4 Inci: Fungsi",
+   "status": "scheduled",
+   "keyword": "layar hiburan belakang",
+   "score": 100,
+   "grade": "A",
+   "words": 819,
+   "density": 1.1,
+   "internal": 10,
+   "external": 2,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "suspensi-udara-xpeng-g9l",
+   "title": "Suspensi Udara Mobil XPeng G9L: Empuk Tapi Stabil?",
+   "status": "scheduled",
+   "keyword": "suspensi udara mobil",
+   "score": 100,
+   "grade": "A",
+   "words": 800,
+   "density": 0.75,
+   "internal": 7,
+   "external": 2,
+   "faq": 4,
+   "overlap": 5,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "roda-belakang-berbelok-xpeng-g9l",
+   "title": "Roda Belakang Berbelok di XPeng G9L: Manfaat Nyata",
+   "status": "scheduled",
+   "keyword": "roda belakang berbelok",
+   "score": 100,
+   "grade": "A",
+   "words": 807,
+   "density": 2.23,
+   "internal": 9,
+   "external": 2,
+   "faq": 4,
+   "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "suv-listrik-flagship-2026",
+   "title": "SUV Listrik Flagship 2026: Kriteria dan Sosok G9L",
+   "status": "scheduled",
+   "keyword": "suv listrik flagship",
+   "score": 100,
+   "grade": "A",
+   "words": 807,
+   "density": 1.49,
+   "internal": 11,
+   "external": 5,
+   "faq": 4,
+   "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "mobil-listrik-terbaru-2026",
+   "title": "Mobil Listrik Terbaru 2026: G9L dan Cara Menilainya",
+   "status": "scheduled",
+   "keyword": "mobil listrik terbaru",
+   "score": 100,
+   "grade": "A",
+   "words": 841,
+   "density": 1.43,
+   "internal": 14,
+   "external": 3,
+   "faq": 4,
+   "overlap": 8,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "warna-xpeng-g9l",
+   "title": "Warna XPeng G9L: Hijau Zamrud dan Pilihan Lain",
+   "status": "scheduled",
+   "keyword": "warna xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 835,
+   "density": 0.72,
+   "internal": 7,
+   "external": 2,
+   "faq": 4,
+   "overlap": 3,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "suv-listrik-keluarga-xpeng-g9l",
+   "title": "SUV Listrik Keluarga: Apakah XPeng G9L Cocok?",
+   "status": "scheduled",
+   "keyword": "suv listrik keluarga",
+   "score": 100,
+   "grade": "A",
+   "words": 823,
+   "density": 1.46,
+   "internal": 17,
+   "external": 3,
+   "faq": 4,
+   "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "xpeng-g9l-australia",
+   "title": "XPeng G9L Australia: Setir Kanan Siap Dikirim",
+   "status": "scheduled",
+   "keyword": "xpeng g9l australia",
+   "score": 100,
+   "grade": "A",
+   "words": 812,
+   "density": 1.11,
+   "internal": 9,
+   "external": 6,
+   "faq": 4,
+   "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "produksi-xpeng-g9l-magna-steyr",
+   "title": "Produksi XPeng G9L di Austria: Magna Steyr Graz",
+   "status": "scheduled",
+   "keyword": "produksi xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 816,
+   "density": 0.74,
+   "internal": 7,
+   "external": 4,
+   "faq": 4,
+   "overlap": 10,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "prebook-xpeng-g9l",
+   "title": "Prebook XPeng G9L: Apa Itu dan Yang Perlu Disiapkan",
+   "status": "scheduled",
+   "keyword": "prebook xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 815,
+   "density": 0.74,
+   "internal": 11,
+   "external": 2,
+   "faq": 4,
+   "overlap": 6,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "wallbox-charger-rumah-xpeng-g9l",
+   "title": "Wallbox Charger Rumah untuk XPeng G9L: Panduan Awal",
+   "status": "scheduled",
+   "keyword": "wallbox charger rumah",
+   "score": 100,
+   "grade": "A",
+   "words": 850,
+   "density": 1.06,
+   "internal": 8,
+   "external": 4,
+   "faq": 4,
+   "overlap": 4,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "apa-itu-xpeng-g9l",
+   "title": "Apa Itu XPeng G9L? Jawaban Lengkap untuk Pemula",
+   "status": "scheduled",
+   "keyword": "apa itu xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 813,
+   "density": 0.98,
+   "internal": 15,
+   "external": 5,
+   "faq": 4,
+   "overlap": 15,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "kelebihan-dan-kekurangan-xpeng-g9l",
+   "title": "Kelebihan dan Kekurangan XPeng G9L: Ulasan Jujur",
+   "status": "scheduled",
+   "keyword": "kelebihan dan kekurangan xpeng g9l",
+   "score": 100,
+   "grade": "A",
+   "words": 821,
+   "density": 1.22,
+   "internal": 18,
+   "external": 5,
+   "faq": 4,
+   "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
   }
  ],
  "keywords": [
@@ -8925,6 +14445,366 @@
    "tier": "low",
    "page": "/artikel/mobil-listrik-saat-banjir/",
    "position": null,
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l",
+   "tier": "hard",
+   "page": "/artikel/xpeng-g9l-segera-launching/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-01",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "spesifikasi xpeng g9l",
+   "tier": "medium",
+   "page": "/artikel/spesifikasi-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-01",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "harga xpeng g9l",
+   "tier": "hard",
+   "page": "/artikel/harga-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-02",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l indonesia",
+   "tier": "hard",
+   "page": "/artikel/xpeng-g9l-indonesia/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-02",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "jarak tempuh xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/jarak-tempuh-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-03",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "charging xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/charging-5c-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-03",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l erev",
+   "tier": "medium",
+   "page": "/artikel/xpeng-g9l-erev/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-04",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "interior xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/interior-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-04",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l vs x9",
+   "tier": "medium",
+   "page": "/artikel/xpeng-g9l-vs-xpeng-x9/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-05",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l vs g6",
+   "tier": "medium",
+   "page": "/artikel/xpeng-g9l-vs-xpeng-g6/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-05",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "dimensi xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/dimensi-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-06",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l 7 seater",
+   "tier": "medium",
+   "page": "/artikel/xpeng-g9l-7-seater/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-06",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "vla xpeng",
+   "tier": "medium",
+   "page": "/artikel/vla-2-0-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-07",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "chip turing xpeng",
+   "tier": "medium",
+   "page": "/artikel/chip-turing-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-07",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "g9l paris motor show",
+   "tier": "medium",
+   "page": "/artikel/xpeng-g9l-paris-motor-show/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-08",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "harga xpeng g9l eropa",
+   "tier": "low",
+   "page": "/artikel/harga-xpeng-g9l-eropa/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-08",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "kursi zero gravity",
+   "tier": "medium",
+   "page": "/artikel/kursi-zero-gravity-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-09",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "layar hiburan belakang",
+   "tier": "low",
+   "page": "/artikel/layar-hiburan-belakang-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-09",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "suspensi udara mobil",
+   "tier": "medium",
+   "page": "/artikel/suspensi-udara-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-10",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "roda belakang berbelok",
+   "tier": "low",
+   "page": "/artikel/roda-belakang-berbelok-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-10",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "suv listrik flagship",
+   "tier": "hard",
+   "page": "/artikel/suv-listrik-flagship-2026/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-11",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "mobil listrik terbaru",
+   "tier": "hard",
+   "page": "/artikel/mobil-listrik-terbaru-2026/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-11",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "warna xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/warna-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-12",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "suv listrik keluarga",
+   "tier": "medium",
+   "page": "/artikel/suv-listrik-keluarga-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-12",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "xpeng g9l australia",
+   "tier": "low",
+   "page": "/artikel/xpeng-g9l-australia/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-13",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "produksi xpeng g9l",
+   "tier": "low",
+   "page": "/artikel/produksi-xpeng-g9l-magna-steyr/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-13",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "prebook xpeng g9l",
+   "tier": "medium",
+   "page": "/artikel/prebook-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-14",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "wallbox charger rumah",
+   "tier": "low",
+   "page": "/artikel/wallbox-charger-rumah-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-14",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "apa itu xpeng g9l",
+   "tier": "hard",
+   "page": "/artikel/apa-itu-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-15",
+   "onpage": {
+    "inTitle": false,
+    "inH1": false,
+    "count": 0
+   }
+  },
+  {
+   "kw": "kelebihan dan kekurangan xpeng g9l",
+   "tier": "medium",
+   "page": "/artikel/kelebihan-dan-kekurangan-xpeng-g9l/",
+   "position": null,
+   "note": "Seri G9L, terbit 2026-11-15",
    "onpage": {
     "inTitle": false,
     "inH1": false,
