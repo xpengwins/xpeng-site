@@ -158,6 +158,34 @@
       "tag": "h2"
      },
      {
+      "t": "Segera Launching",
+      "tag": "span"
+     },
+     {
+      "t": "SUV Listrik Flagship",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L",
+      "tag": "h3"
+     },
+     {
+      "t": "AI • Future • Mobility",
+      "tag": "p"
+     },
+     {
+      "t": "Rp XXX",
+      "tag": "strong"
+     },
+     {
+      "t": "Harga resmi diumumkan saat launching",
+      "tag": "small"
+     },
+     {
+      "t": "OPEN PREBOOK SEKARANG!!! →",
+      "tag": "span"
+     },
+     {
       "t": "MPV Listrik Premium 7 Kursi",
       "tag": "span"
      },
@@ -187,6 +215,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-prebook.webp",
+      "alt": "XPeng G9L - SUV Listrik Flagship"
+     },
      {
       "src": "/assets/img/226028.webp",
       "alt": "XPeng X9 - MPV Listrik Premium 7 Kursi"
@@ -929,6 +961,47 @@
      }
     ],
     "imgs": []
+   },
+   {
+    "key": "segera-launching",
+    "title": "Segera Launching",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Segera Launching",
+      "tag": "span"
+     },
+     {
+      "t": "SUV Listrik Flagship",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L",
+      "tag": "h3"
+     },
+     {
+      "t": "AI • Future • Mobility",
+      "tag": "p"
+     },
+     {
+      "t": "Rp XXX",
+      "tag": "strong"
+     },
+     {
+      "t": "Harga resmi diumumkan saat launching",
+      "tag": "small"
+     },
+     {
+      "t": "OPEN PREBOOK SEKARANG!!! →",
+      "tag": "span"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g9l-prebook.webp",
+      "alt": "XPeng G9L - SUV Listrik Flagship"
+     }
+    ]
    },
    {
     "key": "mpv-listrik-premium-7-kursi",
