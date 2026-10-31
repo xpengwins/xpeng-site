@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil'];
+const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -396,9 +396,10 @@ function editArticle(v, a, idx) {
 /* --- Model --- */
 const lines = s => s.split('\n').map(x => x.trim()).filter(Boolean);
 VIEWS.models = v => {
-  v.innerHTML = `<h2>Model mobil</h2><button id="nm">+ Model baru</button><div style="margin-top:14px">${S.d.models.map((m, i) => `<div class="card"><b>${E(m.name)}</b><div class="muted">${E(m.type)} • ${m.variants.length} varian</div><div class="row" style="margin-top:8px"><button class="s sm" data-e="${i}">Edit</button><button class="d sm" data-d="${i}">Hapus</button></div></div>`).join('')}</div>`;
+  v.innerHTML = `<h2>Model mobil</h2><div class="card"><b>🚀 Model akan launching</b><div class="muted">Tambah mobil yang belum launching. Otomatis tampil besar dan menonjol di Hero dan bagian Model.</div><div class="row" style="margin-top:8px"><button class="s sm" id="gup">Kelola Model Launching (${(S.d.upcoming || []).length})</button></div></div><h3>Model yang sudah launching</h3><button id="nm">+ Model baru</button><div style="margin-top:14px">${S.d.models.map((m, i) => `<div class="card"><b>${E(m.name)}</b><div class="muted">${E(m.type)} • ${m.variants.length} varian</div><div class="row" style="margin-top:8px"><button class="s sm" data-e="${i}">Edit</button><button class="d sm" data-d="${i}">Hapus</button></div></div>`).join('')}</div>`;
   v.querySelectorAll('[data-e]').forEach(b => b.onclick = () => editModel(v, +b.dataset.e));
   v.querySelectorAll('[data-d]').forEach(b => b.onclick = async () => { if (confirm('Hapus model ini?')) { S.d.models.splice(+b.dataset.d, 1); await save('models', 'Hapus model'); go('models'); } });
+  $('#gup').onclick = () => go('upcoming');
   $('#nm').onclick = () => { S.d.models.push({ slug: 'model-baru', name: 'Model Baru', type: '', tagline: '', hero: 'assets/img/placeholder.svg', gallery: [], colors: [{ name: 'Putih', hex: '#f4f4f2', image: 'assets/img/placeholder.svg' }], variants: [{ name: 'Varian 1', price: 0 }], interior: [], highlights: [], specs: [], faq: [], metaTitle: '', metaDescription: '' }); editModel(v, S.d.models.length - 1); };
 };
 function editModel(v, i) {
@@ -451,6 +452,24 @@ function editModel(v, i) {
     variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: cols.filter(c => c.name.trim()).map(c => ({ name: c.name.trim(), hex: c.hex || '#999999', image: c.image || g('hero') })),
     gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
 }
+
+/* --- Model akan launching / belum launching --- */
+VIEWS.upcoming = v => {
+  const U = (S.d.upcoming || []).map(x => ({ ...x }));
+  const F = [['name', 'Nama mobil', 'XPeng G9L'], ['type', 'Jenis', 'SUV Listrik Flagship'], ['tagline', 'Tagline', 'AI • Future • Mobility'], ['badge', 'Label (contoh: Segera Launching)', 'Segera Launching'], ['priceText', 'Harga (tampil sebagai Rp ...)', 'XXX'], ['cta', 'Tulisan tombol', 'OPEN PREBOOK SEKARANG!!!'], ['wa', 'Pesan WhatsApp saat tombol diklik', 'Halo, saya mau prebook ...']];
+  const draw = () => {
+    v.innerHTML = `<h2>Model Launching</h2><div class="card"><p class="muted">Status <b>Belum launching</b>: tampil sebagai slide Hero di Beranda, banner Prebook, dan kartu besar menonjol di bagian Model. Status <b>Sudah launching</b>: kartu ukuran biasa dan Hero tidak ditampilkan (nanti lengkapi lewat menu Model).</p><div class="row"><button id="add">+ Tambah mobil</button><button id="sv">Simpan</button></div></div>${U.map((x, k) => `<div class="card"><b>${E(x.name || 'Mobil baru')}</b><label>Status<select data-k="${k}" data-f="status"><option value="soon"${x.status !== 'launched' ? ' selected' : ''}>Belum launching (menonjol, Prebook)</option><option value="launched"${x.status === 'launched' ? ' selected' : ''}>Sudah launching</option></select></label>${F.map(f => `<label>${f[1]}<input data-k="${k}" data-f="${f[0]}" value="${E(x[f[0]] || '')}" placeholder="${E(f[2])}"></label>`).join('')}<label>Deskripsi singkat<textarea data-k="${k}" data-f="text" style="min-height:70px;font-family:inherit">${E(x.text || '')}</textarea></label><label>Foto Hero (lebar, untuk slide)<input data-k="${k}" data-f="hero" value="${E(x.hero || '')}"></label><div class="row"><button class="s sm" data-uh="${k}">📷 Upload foto Hero</button></div>${thumb(x.hero)}<label>Foto kartu (opsional, kosong = pakai foto Hero)<input data-k="${k}" data-f="card" value="${E(x.card || '')}"></label><div class="row"><button class="s sm" data-uc="${k}">📷 Upload foto kartu</button></div>${thumb(x.card)}<div class="row" style="margin-top:8px"><button class="s sm" data-up="${k}">↑</button><button class="s sm" data-dn="${k}">↓</button><button class="d sm" data-rm="${k}">Hapus</button></div></div>`).join('') || '<div class="card muted">Belum ada mobil. Klik + Tambah mobil.</div>'}`;
+    v.querySelectorAll('[data-f]').forEach(i => i.oninput = () => { U[i.dataset.k][i.dataset.f] = i.value; });
+    v.querySelectorAll('[data-uh]').forEach(b => b.onclick = () => pickUp(false, ps => { U[b.dataset.uh].hero = ps[0]; draw(); }));
+    v.querySelectorAll('[data-uc]').forEach(b => b.onclick = () => pickUp(false, ps => { U[b.dataset.uc].card = ps[0]; draw(); }));
+    v.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { if (confirm('Hapus mobil ini?')) { U.splice(+b.dataset.rm, 1); draw(); } });
+    v.querySelectorAll('[data-up]').forEach(b => b.onclick = () => { const k = +b.dataset.up; if (k > 0) { [U[k - 1], U[k]] = [U[k], U[k - 1]]; draw(); } });
+    v.querySelectorAll('[data-dn]').forEach(b => b.onclick = () => { const k = +b.dataset.dn; if (k < U.length - 1) { [U[k + 1], U[k]] = [U[k], U[k + 1]]; draw(); } });
+    $('#add').onclick = () => { U.push({ status: 'soon', name: '', type: '', tagline: '', badge: 'Segera Launching', text: '', hero: '', card: '', priceText: 'XXX', cta: 'OPEN PREBOOK SEKARANG!!!', wa: '' }); draw(); };
+    $('#sv').onclick = async () => { const bad = U.findIndex(x => !(x.name || '').trim() || !(x.hero || '').trim()); if (bad >= 0) return toast('Mobil #' + (bad + 1) + ': nama dan foto Hero wajib diisi', true); S.d.upcoming = U.map(x => ({ ...x, name: x.name.trim(), priceText: (x.priceText || 'XXX').trim(), wa: (x.wa || '').trim() || 'Halo, saya mau prebook ' + x.name.trim() })); await save('upcoming', 'Model launching'); };
+  };
+  draw();
+};
 
 /* --- Leasing (marquee logo) --- */
 VIEWS.leasing = v => {

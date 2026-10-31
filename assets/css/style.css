@@ -152,3 +152,14 @@ footer.site .soc a{padding:8px 12px}
 section.prebook .pb{display:grid;grid-template-columns:1.2fr .8fr;gap:36px;align-items:center}section.prebook h2{margin:12px 0}section.prebook p{color:#d6dae0;margin-bottom:22px}
 section.prebook .pbi img{width:100%;max-width:380px;height:auto;margin:0 auto;display:block;border-radius:var(--r);box-shadow:0 18px 50px #000a}
 @media(max-width:900px){section.prebook .pb{grid-template-columns:1fr}section.prebook .pbi{order:-1}}
+
+/* Model akan launching: kartu lebih besar dan menonjol */
+.mcard.soon{position:relative;border-color:var(--ac);background:linear-gradient(160deg,#10261f,var(--card));box-shadow:0 18px 50px #2ee6b633}
+.mcard.soon>a{display:block}.mcard.soon .eyebrow.pulse{position:absolute;top:16px;left:16px;z-index:2}
+.mcard.soon .mimg{aspect-ratio:16/10}.mcard.soon .mbody{padding:28px}.mcard.soon h3{font-size:clamp(1.7rem,4vw,2.4rem)}
+.mcard.soon .mprice{font-size:clamp(2.4rem,7vw,3.6rem);font-weight:800;color:var(--ac);line-height:1.05;letter-spacing:.03em}
+.mprice small{display:block;font-size:.8rem;font-weight:500;color:var(--mu);letter-spacing:0;margin-top:6px}
+#car .track>.mcard.soon{flex-basis:min(92%,760px)}
+.soonwrap{padding-bottom:0}.soonwrap .mcard.soon+.mcard.soon{margin-top:24px}
+.soonwrap .mcard.soon>a{display:grid;grid-template-columns:1.2fr 1fr;align-items:center}.soonwrap .mimg{height:100%;aspect-ratio:auto;min-height:320px}
+@media(max-width:900px){.soonwrap .mcard.soon>a{display:block}.soonwrap .mimg{aspect-ratio:16/10;min-height:0}}
