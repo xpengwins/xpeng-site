@@ -39,5 +39,16 @@
  "ga4": "G-DKWBG156T4",
  "heroVideo": "assets/video/xpeng-x9-intelligence-0617-v2.mp4",
  "heroVideoJudul": "",
- "heroVideoTeks": "Every Drive of Life"
+ "heroVideoTeks": "Every Drive of Life",
+ "launch": {
+  "on": true,
+  "badge": "Segera Launching",
+  "name": "XPeng G9L",
+  "tagline": "AI • Future • Mobility",
+  "text": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
+  "image": "assets/img/g9l-hero.webp",
+  "bandImage": "assets/img/g9l-prebook.webp",
+  "cta": "OPEN PREBOOK SEKARANG!!!",
+  "wa": "Halo, saya mau prebook XPeng G9L"
+ }
 }
