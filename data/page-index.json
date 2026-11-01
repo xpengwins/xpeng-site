@@ -530,6 +530,18 @@
       "tag": "h2"
      },
      {
+      "t": "Panduan Beli",
+      "tag": "span"
+     },
+     {
+      "t": "Mobil Listrik Keluarga: Cara Memilih yang Aman dan Lega",
+      "tag": "h3"
+     },
+     {
+      "t": "Cara memilih mobil listrik keluarga: jumlah kursi, bagasi, keselamatan anak, charging di rumah, dan biaya. Contoh XPeng X9 7 kursi dan G6 SUV 5 kursi.",
+      "tag": "p"
+     },
+     {
       "t": "Tips EV",
       "tag": "span"
      },
@@ -544,10 +556,6 @@
      {
       "t": "Panduan mobil listrik untuk mudik dan perjalanan jauh: hitung jarak nyata, rencana titik SPKLU, waktu charging, dan tips aman agar baterai tidak habis di jalan.",
       "tag": "p"
-     },
-     {
-      "t": "Panduan Beli",
-      "tag": "span"
      },
      {
       "t": "Checklist Test Drive Mobil Listrik: 15 Hal yang Dicek",
@@ -795,6 +803,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/x9-white-depan.webp",
+      "alt": "XPeng X9 putih tampak depan, mobil listrik keluarga 7 kursi"
+     },
      {
       "src": "/assets/img/222773.webp",
       "alt": "XPeng G6 hitam tampak belakang saat mengisi daya di SPKLU"
