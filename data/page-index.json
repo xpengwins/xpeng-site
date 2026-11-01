@@ -542,6 +542,18 @@
       "tag": "p"
      },
      {
+      "t": "XPeng G9L",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L Segera Launching: Yang Perlu Kamu Tahu",
+      "tag": "h3"
+     },
+     {
+      "t": "Kenali XPeng G9L, SUV listrik flagship XPeng. Ringkasan spesifikasi, jarak tempuh, pengisian 5C, harga di China dan Eropa, serta status resmi di Indonesia.",
+      "tag": "p"
+     },
+     {
       "t": "Tips EV",
       "tag": "span"
      },
@@ -806,6 +818,10 @@
      {
       "src": "/assets/img/x9-white-depan.webp",
       "alt": "XPeng X9 putih tampak depan, mobil listrik keluarga 7 kursi"
+     },
+     {
+      "src": "/assets/img/g9l-depan-pantai-senja.webp",
+      "alt": "Xpengwins Xpeng G9L tampak depan saat matahari terbenam di tepi pantai"
      },
      {
       "src": "/assets/img/222773.webp",
