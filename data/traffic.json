@@ -1,29 +1,29 @@
 {
- "generated": "2026-10-31T15:03:51.378Z",
+ "generated": "2026-11-01T03:16:02.169Z",
  "property": "560653996",
  "today": {
-  "users": 55,
-  "sessions": 70,
-  "views": 169,
-  "newUsers": 54
+  "users": 2,
+  "sessions": 2,
+  "views": 2,
+  "newUsers": 2
  },
  "yesterday": {
-  "users": 62,
-  "sessions": 71,
-  "views": 239,
+  "users": 61,
+  "sessions": 80,
+  "views": 187,
   "newUsers": 60
  },
  "last7": {
-  "users": 754,
-  "sessions": 836,
-  "views": 1379,
-  "newUsers": 775
+  "users": 360,
+  "sessions": 440,
+  "views": 923,
+  "newUsers": 361
  },
  "last30": {
-  "users": 754,
-  "sessions": 836,
-  "views": 1379,
-  "newUsers": 775
+  "users": 762,
+  "sessions": 848,
+  "views": 1399,
+  "newUsers": 783
  },
  "prev30": {
   "users": 0,
@@ -70,36 +70,42 @@
   },
   {
    "date": "2026-10-31",
-   "users": 55,
-   "sessions": 70,
-   "views": 169
+   "users": 61,
+   "sessions": 80,
+   "views": 187
+  },
+  {
+   "date": "2026-11-01",
+   "users": 2,
+   "sessions": 2,
+   "views": 2
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 731,
-   "users": 509
+   "views": 739,
+   "users": 512
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 172,
-   "users": 104
+   "views": 176,
+   "users": 106
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 103,
-   "users": 30
+   "views": 105,
+   "users": 31
   },
   {
    "path": "/model/",
-   "views": 100,
+   "views": 101,
    "users": 22
   },
   {
    "path": "/pricelist/",
-   "views": 95,
-   "users": 76
+   "views": 100,
+   "users": 78
   },
   {
    "path": "/kontak/",
@@ -134,7 +140,7 @@
   },
   {
    "k": "Paid Search",
-   "v": 209
+   "v": 215
   },
   {
    "k": "Organic Social",
@@ -142,11 +148,11 @@
   },
   {
    "k": "Direct",
-   "v": 70
+   "v": 72
   },
   {
    "k": "Referral",
-   "v": 28
+   "v": 31
   },
   {
    "k": "Organic Search",
@@ -154,31 +160,31 @@
   },
   {
    "k": "Unassigned",
-   "v": 13
+   "v": 5
   },
   {
    "k": "Cross-network",
-   "v": 3
+   "v": 4
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 707
+   "v": 715
   },
   {
    "k": "desktop",
-   "v": 124
+   "v": 126
   },
   {
    "k": "tablet",
-   "v": 6
+   "v": 7
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 362
+   "v": 366
   },
   {
    "k": "Tangerang",
@@ -190,7 +196,7 @@
   },
   {
    "k": "South Tangerang",
-   "v": 46
+   "v": 47
   },
   {
    "k": "(not set)",

@@ -404,67 +404,120 @@
     "perf:/",
     "drop:/"
    ]
+  },
+  {
+   "date": "2026-11-01",
+   "at": "2026-11-01T03:15:57.007Z",
+   "urls": 39,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 138,
+   "pages": {
+    "/": {
+     "score": 76,
+     "lcp": 4786,
+     "cls": 0,
+     "tbt": 192,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 99,
+     "lcp": 1991,
+     "cls": 0,
+     "tbt": 54,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 99,
+     "lcp": 1961,
+     "cls": 0,
+     "tbt": 27,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1357,
+     "cls": 0,
+     "tbt": 10,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 775,
+     "cls": 0,
+     "tbt": 10,
+     "field": null
+    },
+    "/artikel/mobil-listrik-keluarga/": {
+     "score": 100,
+     "lcp": 1055,
+     "cls": 0.004,
+     "tbt": 31,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/"
+   ]
   }
  ],
- "generated": "2026-10-31T15:03:48.300Z",
+ "generated": "2026-11-01T03:15:57.007Z",
  "latest": {
-  "date": "2026-10-31",
-  "at": "2026-10-31T15:03:48.300Z",
-  "urls": 38,
+  "date": "2026-11-01",
+  "at": "2026-11-01T03:15:57.007Z",
+  "urls": 39,
   "errors": 0,
   "slow": 0,
-  "avgMs": 116,
+  "avgMs": 138,
   "pages": {
    "/": {
-    "score": 78,
-    "lcp": 5748,
+    "score": 76,
+    "lcp": 4786,
     "cls": 0,
-    "tbt": 14,
+    "tbt": 192,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1983,
+    "lcp": 1991,
     "cls": 0,
-    "tbt": 69,
+    "tbt": 54,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1973,
+    "lcp": 1961,
     "cls": 0,
-    "tbt": 28,
+    "tbt": 27,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
     "lcp": 1357,
     "cls": 0,
-    "tbt": 21,
+    "tbt": 10,
     "field": null
    },
    "/kontak/": {
-    "score": 99,
-    "lcp": 803,
+    "score": 100,
+    "lcp": 775,
     "cls": 0,
-    "tbt": 102,
+    "tbt": 10,
     "field": null
    },
-   "/artikel/biaya-charging-spklu/": {
+   "/artikel/mobil-listrik-keluarga/": {
     "score": 100,
-    "lcp": 1508,
-    "cls": 0.014,
-    "tbt": 58,
+    "lcp": 1055,
+    "cls": 0.004,
+    "tbt": 31,
     "field": null
    }
   },
   "issues": [
-   "perf:/",
-   "drop:/"
+   "perf:/"
   ],
   "issueText": [
-   "🔴 /: skor 78, LCP 5.7 dtk",
-   "📉 / turun 99 → 78 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 76, LCP 4.8 dtk"
   ]
  },
  "alertKeys": [
