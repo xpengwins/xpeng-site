@@ -566,6 +566,14 @@
       "tag": "p"
      },
      {
+      "t": "Spesifikasi XPeng G9L Lengkap: Dimensi, Baterai, Tenaga",
+      "tag": "h3"
+     },
+     {
+      "t": "Spesifikasi XPeng G9L lengkap dari sumber terbuka: dimensi, baterai, tenaga motor, pengisian 5C, suspensi, dan beda versi BEV dengan EREV.",
+      "tag": "p"
+     },
+     {
       "t": "Biaya Charging SPKLU: Tarif, Rumus, dan Contoh Hitung",
       "tag": "h3"
      },
@@ -834,6 +842,10 @@
      {
       "src": "/assets/img/g9l-depan-pantai-senja.webp",
       "alt": "Xpengwins Xpeng G9L tampak depan saat matahari terbenam di tepi pantai"
+     },
+     {
+      "src": "/assets/img/g9l-hero.webp",
+      "alt": "Xpengwins Xpeng G9L melaju menerjang air dengan bodi hijau zamrud"
      },
      {
       "src": "/assets/img/222773.webp",
