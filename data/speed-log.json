@@ -407,122 +407,133 @@
   },
   {
    "date": "2026-11-01",
-   "at": "2026-11-01T03:15:57.007Z",
-   "urls": 39,
+   "at": "2026-11-01T15:05:15.844Z",
+   "urls": 42,
    "errors": 0,
    "slow": 0,
-   "avgMs": 138,
+   "avgMs": 78,
    "pages": {
     "/": {
-     "score": 76,
-     "lcp": 4786,
+     "score": 90,
+     "lcp": 3633,
      "cls": 0,
-     "tbt": 192,
+     "tbt": 56,
      "field": null
     },
     "/model/xpeng-x9/": {
      "score": 99,
-     "lcp": 1991,
+     "lcp": 1967,
      "cls": 0,
-     "tbt": 54,
+     "tbt": 9,
      "field": null
     },
     "/model/xpeng-g6/": {
      "score": 99,
-     "lcp": 1961,
+     "lcp": 1970,
      "cls": 0,
-     "tbt": 27,
+     "tbt": 30,
      "field": null
     },
     "/pricelist/": {
-     "score": 100,
-     "lcp": 1357,
+     "score": 89,
+     "lcp": 3685,
      "cls": 0,
-     "tbt": 10,
+     "tbt": 30,
      "field": null
     },
     "/kontak/": {
      "score": 100,
-     "lcp": 775,
+     "lcp": 781,
      "cls": 0,
-     "tbt": 10,
+     "tbt": 45,
      "field": null
     },
     "/artikel/mobil-listrik-keluarga/": {
-     "score": 100,
-     "lcp": 1055,
+     "score": 89,
+     "lcp": 3444,
      "cls": 0.004,
-     "tbt": 31,
+     "tbt": 180,
      "field": null
     }
    },
    "issues": [
-    "perf:/"
+    "perf:/",
+    "perf:/pricelist/",
+    "drop:/pricelist/",
+    "perf:/artikel/mobil-listrik-keluarga/"
    ]
   }
  ],
- "generated": "2026-11-01T03:15:57.007Z",
+ "generated": "2026-11-01T15:05:15.844Z",
  "latest": {
   "date": "2026-11-01",
-  "at": "2026-11-01T03:15:57.007Z",
-  "urls": 39,
+  "at": "2026-11-01T15:05:15.844Z",
+  "urls": 42,
   "errors": 0,
   "slow": 0,
-  "avgMs": 138,
+  "avgMs": 78,
   "pages": {
    "/": {
-    "score": 76,
-    "lcp": 4786,
+    "score": 90,
+    "lcp": 3633,
     "cls": 0,
-    "tbt": 192,
+    "tbt": 56,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1991,
+    "lcp": 1967,
     "cls": 0,
-    "tbt": 54,
+    "tbt": 9,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1961,
+    "lcp": 1970,
     "cls": 0,
-    "tbt": 27,
+    "tbt": 30,
     "field": null
    },
    "/pricelist/": {
-    "score": 100,
-    "lcp": 1357,
+    "score": 89,
+    "lcp": 3685,
     "cls": 0,
-    "tbt": 10,
+    "tbt": 30,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 775,
+    "lcp": 781,
     "cls": 0,
-    "tbt": 10,
+    "tbt": 45,
     "field": null
    },
    "/artikel/mobil-listrik-keluarga/": {
-    "score": 100,
-    "lcp": 1055,
+    "score": 89,
+    "lcp": 3444,
     "cls": 0.004,
-    "tbt": 31,
+    "tbt": 180,
     "field": null
    }
   },
   "issues": [
-   "perf:/"
+   "perf:/",
+   "perf:/pricelist/",
+   "drop:/pricelist/",
+   "perf:/artikel/mobil-listrik-keluarga/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 4.8 dtk"
+   "🟠 /: LCP 3.6 dtk",
+   "🟠 /pricelist/: LCP 3.7 dtk",
+   "📉 /pricelist/ turun 100 → 89 sejak pengecekan sebelumnya (melambat)",
+   "🟠 /artikel/mobil-listrik-keluarga/: LCP 3.4 dtk"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "drop:/"
+  "perf:/pricelist/",
+  "drop:/pricelist/",
+  "perf:/artikel/mobil-listrik-keluarga/"
  ],
- "alertSig": "drop:/|perf:/"
+ "alertSig": "drop:/pricelist/|perf:/|perf:/artikel/mobil-listrik-keluarga/|perf:/pricelist/"
 }

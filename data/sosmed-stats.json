@@ -1,50 +1,50 @@
 {
- "generated": "2026-11-01T03:16:05.620Z",
+ "generated": "2026-11-01T15:05:37.098Z",
  "platforms": {
   "facebook": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 6,
+   "posted24h": 4,
    "bursts": 0,
    "note": "izin baca data post belum ada (posting tidak terpengaruh)"
   },
   "instagram": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 6,
+   "posted24h": 4,
    "bursts": 0,
    "account": {
     "name": "@xpengwins",
     "followers": 2,
-    "media": 26
+    "media": 29
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-01T02:09:33+0000",
+   "last": "2026-11-01T12:53:40+0000",
    "top": [
     {
-     "url": "https://www.instagram.com/p/DfLoCUyjTVR/",
+     "url": "https://www.instagram.com/p/DfMxwfBoHl_/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/DfJ3F6SF5vY/",
+     "url": "https://www.instagram.com/p/DfMccLVDymN/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/DfJiICglJqX/",
+     "url": "https://www.instagram.com/p/DfMBZpSluBA/",
      "eng": 0
     }
    ],
    "extra": {
     "quota": {
-     "used": 2,
+     "used": 4,
      "total": 100
     }
    }
   },
   "threads": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 6,
+   "posted24h": 4,
    "bursts": 0,
    "account": {
     "name": "@xpengwins",
@@ -53,19 +53,19 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 18,
-   "last": "2026-11-01T02:09:53+0000",
+   "avgReachRecent": 26,
+   "last": "2026-11-01T12:54:04+0000",
    "top": [
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfLoENeltIg",
+     "url": "https://www.threads.com/@xpengwins/post/DfMxyNsIYLC",
      "eng": 0
     },
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfJ3IBMnFPQ",
+     "url": "https://www.threads.com/@xpengwins/post/DfMcdzMkXP5",
      "eng": 0
     },
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfJimFuEp-q",
+     "url": "https://www.threads.com/@xpengwins/post/DfMBa75kWOa",
      "eng": 0
     }
    ],

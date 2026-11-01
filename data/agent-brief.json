@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-01T03:16:12.073Z",
+ "generated": "2026-11-01T15:05:44.715Z",
  "traffic": {
   "periode": [
    "2026-10-02",
@@ -112,9 +112,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 30,
-  "terjadwal": 32,
-  "terbitBerikutnya": "2026-11-01T12:00:00+07:00",
+  "terbit": 33,
+  "terjadwal": 29,
+  "terbitBerikutnya": "2026-11-02T09:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
@@ -123,7 +123,10 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 76, LCP 4.8 dtk"
+    "🟠 /: LCP 3.6 dtk",
+    "🟠 /pricelist/: LCP 3.7 dtk",
+    "📉 /pricelist/ turun 100 → 89 sejak pengecekan sebelumnya (melambat)",
+    "🟠 /artikel/mobil-listrik-keluarga/: LCP 3.4 dtk"
    ]
   },
   "sosmed": [

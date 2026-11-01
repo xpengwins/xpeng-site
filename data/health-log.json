@@ -47,9 +47,9 @@
   },
   {
    "date": "2026-11-01",
-   "at": "2026-11-01T03:16:02.136Z",
-   "pages": 39,
-   "ok": 39,
+   "at": "2026-11-01T15:05:33.761Z",
+   "pages": 42,
+   "ok": 42,
    "statusBad": [],
    "bad": 0,
    "warn": 0
@@ -140,14 +140,29 @@
    "s": 200,
    "err": "",
    "at": 1793373733247
+  },
+  "https://en.wikipedia.org/wiki/XPeng_G9L": {
+   "s": 200,
+   "err": "",
+   "at": 1793545518628
+  },
+  "https://cnevpost.com/2026/09/17/xpeng-launches-g9l-china/": {
+   "s": 200,
+   "err": "",
+   "at": 1793545518628
+  },
+  "https://www.kabarbursa.com/otomotif/xpeng-g9l-dibanderol-rp149-miliar-bawa-kabin-7-penumpang": {
+   "s": 0,
+   "err": "The operation was aborted due to timeout",
+   "at": 1793545518628
   }
  },
- "generated": "2026-11-01T03:16:02.136Z",
+ "generated": "2026-11-01T15:05:33.761Z",
  "latest": {
   "date": "2026-11-01",
-  "at": "2026-11-01T03:16:02.136Z",
-  "pages": 39,
-  "ok": 39,
+  "at": "2026-11-01T15:05:33.761Z",
+  "pages": 42,
+  "ok": 42,
   "statusBad": [],
   "bad": 0,
   "warn": 0,
