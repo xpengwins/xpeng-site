@@ -542,6 +542,18 @@
       "tag": "p"
      },
      {
+      "t": "Tips EV",
+      "tag": "span"
+     },
+     {
+      "t": "Perawatan Mobil Listrik: Apa Saja yang Perlu Dirawat?",
+      "tag": "h3"
+     },
+     {
+      "t": "Panduan perawatan mobil listrik: komponen yang tetap perlu servis, bagian yang tidak lagi dirawat, jadwal, dan tips menjaga baterai agar awet dan hemat biaya.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -552,10 +564,6 @@
      {
       "t": "Kenali XPeng G9L, SUV listrik flagship XPeng. Ringkasan spesifikasi, jarak tempuh, pengisian 5C, harga di China dan Eropa, serta status resmi di Indonesia.",
       "tag": "p"
-     },
-     {
-      "t": "Tips EV",
-      "tag": "span"
      },
      {
       "t": "Biaya Charging SPKLU: Tarif, Rumus, dan Contoh Hitung",
@@ -818,6 +826,10 @@
      {
       "src": "/assets/img/x9-white-depan.webp",
       "alt": "XPeng X9 putih tampak depan, mobil listrik keluarga 7 kursi"
+     },
+     {
+      "src": "/assets/img/g6-white-detail.webp",
+      "alt": "Detail XPeng G6 putih, perawatan mobil listrik rem dan ban"
      },
      {
       "src": "/assets/img/g9l-depan-pantai-senja.webp",

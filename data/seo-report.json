@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-01T05:48:33.317Z",
+ "generated": "2026-11-01T08:00:14.234Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 40,
+  "pages": 41,
   "total": 100
  },
  "tech": [
@@ -666,6 +666,75 @@
   },
   {
    "url": "/artikel/mobil-listrik-keluarga/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/perawatan-mobil-listrik/",
    "score": 100,
    "checks": [
     {
@@ -8328,7 +8397,7 @@
   {
    "slug": "perawatan-mobil-listrik",
    "title": "Perawatan Mobil Listrik: Apa Saja yang Perlu Dirawat?",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "perawatan mobil listrik",
    "score": 100,
    "grade": "A",
@@ -14642,9 +14711,9 @@
    "page": "/artikel/perawatan-mobil-listrik/",
    "position": null,
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 13
    }
   },
   {
