@@ -524,22 +524,28 @@ VIEWS.stok = v => {
     box.innerHTML = `<p class="muted">🟢 ${E(info)} · ${b.length} baris</p><div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><thead><tr>${h.map(x => `<th style="text-align:left;padding:8px;border-bottom:2px solid var(--line,#ddd)">${E(x)}</th>`).join('')}</tr></thead><tbody>${b.map(r => `<tr>${h.map((_, i) => `<td style="padding:8px;border-bottom:1px solid var(--line,#ddd)">${E(r[i] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   };
   let last = '';
-  const load = async quiet => {
+  const load = async (quiet, manual) => { try { await load0(quiet, manual); } finally { const b2 = $('#st_go'); if (manual && b2) { b2.disabled = false; b2.textContent = '🔄 Muat ulang'; } } };
+  const load0 = async (quiet, manual) => {
     const box = $('#st_out'); if (!box) return;
+    const btn = $('#st_go'); if (manual && btn) { btn.disabled = true; btn.textContent = '⏳ Mengambil…'; }
     if (!quiet || !box.firstChild) box.innerHTML = '<p class="muted">Mengambil data…</p>';
     try {
       const j = await gh('contents/stok/stok.json?ref=' + S.cfg.branch, { headers: { Accept: 'application/vnd.github.raw+json' } });
       const rows = (j.rows || []).filter(r => r.some(x => String(x).trim())); const sig = JSON.stringify(rows);
+      const chk = $('#st_chk'); if (chk) chk.textContent = 'Terakhir dicek: ' + new Date().toLocaleTimeString('id-ID');
+      if (manual) toast(sig === last ? '✅ Sudah data terbaru, tidak ada perubahan' : '✅ Data diperbarui');
       if (quiet && sig === last) return;
+      if (!quiet && sig === last && box.querySelector('table')) return;
       last = sig; show(rows, 'Data sheet per ' + (j.updated ? new Date(j.updated).toLocaleString('id-ID') : '-'));
     } catch (e) {
+      if (manual) toast('Gagal mengambil data', true);
       box.innerHTML = `<p class="muted" style="color:#c0392b">Gagal mengambil: ${E(e.message)}. ${e.status === 404 ? 'File stok belum ada: jalankan fungsi "pasang" di Apps Script sheet stok.' : ''}</p>`;
     }
   };
   v.innerHTML = `<h2>Laporan Stok</h2><div class="card"><p class="muted">Data dikirim otomatis dari Google Sheet stok setiap ada perubahan. Tabel di sini ikut berubah sendiri (dicek tiap 10 detik).</p>
-<div class="row" style="margin:10px 0"><button class="p" id="st_go" data-noc>🔄 Muat ulang</button></div>
+<div class="row" style="margin:10px 0"><button class="p" id="st_go" data-noc>🔄 Muat ulang</button><span id="st_chk" class="muted" style="align-self:center;font-size:.85rem"></span></div>
 <div id="st_out"></div></div>`;
-  $('#st_go').onclick = () => load(); load();
+  $('#st_go').onclick = () => load(false, true); load();
   const tick = async () => { if (!v.isConnected || !$('#st_out')) return; if (!document.hidden) await load(true); setTimeout(tick, 10000); };
   setTimeout(tick, 10000);
 };
