@@ -254,7 +254,7 @@ const RUN_EVT = { push: 'otomatis (ada perubahan)', schedule: 'terjadwal (tiap j
 function runsWidget(box) {
   box.innerHTML = `<div class="row"><button id="runb">▶ Jalankan workflow sekarang</button><button class="s" id="runr">↻ Segarkan</button></div><div id="runl" class="muted" style="margin-top:10px">Memuat…</div>`;
   let timer = null;
-  const load = async () => {
+  const load = async quiet => {
     clearTimeout(timer); const L = $('#runl'); if (!L || !document.body.contains(box)) return;
     try {
       const j = await gh('actions/runs?per_page=12'), all = j.workflow_runs || [], mine = all.filter(r => (r.path || '').endsWith('build.yml')), rs = (mine.length ? mine : all).slice(0, 5);
@@ -525,28 +525,31 @@ VIEWS.stok = v => {
   const show = (rows, info) => {
     const box = $('#st_out'); if (!rows.length) { box.innerHTML = '<p class="muted">Tidak ada data di blok ini.</p>'; return; }
     const h = rows[0], b = rows.slice(1);
-    box.innerHTML = `<p class="muted">${E(info)} · ${b.length} baris</p><div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><thead><tr>${h.map(x => `<th style="text-align:left;padding:8px;border-bottom:2px solid var(--line,#ddd)">${E(x)}</th>`).join('')}</tr></thead><tbody>${b.map(r => `<tr>${h.map((_, i) => `<td style="padding:8px;border-bottom:1px solid var(--line,#ddd)">${E(r[i] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+    box.innerHTML = `<p class="muted" id="st_live">🟢 ${E(info)} · ${b.length} baris</p><div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><thead><tr>${h.map(x => `<th style="text-align:left;padding:8px;border-bottom:2px solid var(--line,#ddd)">${E(x)}</th>`).join('')}</tr></thead><tbody>${b.map(r => `<tr>${h.map((_, i) => `<td style="padding:8px;border-bottom:1px solid var(--line,#ddd)">${E(r[i] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
   };
   const load = async () => {
     const rng = ($('#st_rng').value || RNG).trim().toUpperCase(); put('rng', rng);
-    const box = $('#st_out'); box.innerHTML = '<p class="muted">Mengambil data…</p>';
+    const box = $('#st_out'); if (!quiet || !box.firstChild) box.innerHTML = '<p class="muted">Mengambil data…</p>';
     try {
       const u = `https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&gid=${GID}&range=${encodeURIComponent(rng)}&headers=0&_=${Date.now()}`;
       const res = await fetch(u); if (!res.ok) throw new Error('HTTP ' + res.status);
       const t = await res.text(); if (/^\s*<(!doctype|html)/i.test(t)) throw new Error('Sheet belum dibagikan ke "Siapa saja yang memiliki link"');
-      const rows = csv(t); put('cache', JSON.stringify({ rows, at: new Date().toLocaleString('id-ID') }));
-      show(rows, 'Diperbarui ' + new Date().toLocaleString('id-ID'));
+      const rows = csv(t); const sig = JSON.stringify(rows); if (quiet && sig === last) { const m = $('#st_live'); if (m) m.textContent = 'Terhubung langsung · dicek ' + new Date().toLocaleTimeString('id-ID'); return; } last = sig; put('cache', JSON.stringify({ rows, at: new Date().toLocaleString('id-ID') }));
+      show(rows, 'Terhubung langsung · diperbarui ' + new Date().toLocaleTimeString('id-ID'));
     } catch (e) {
       const c = JSON.parse(ls('cache', 'null') || 'null');
       box.innerHTML = `<p class="muted" style="color:#c0392b">Gagal mengambil: ${E(e.message)}. Pastikan sheet dibagikan "Siapa saja yang memiliki link" (Pelihat).</p>`;
       if (c) { const d = document.createElement('div'); box.appendChild(d); const keep = box; show(c.rows, 'Data tersimpan terakhir (' + c.at + ')'); }
     }
   };
-  v.innerHTML = `<h2>Laporan Stok</h2><div class="card"><p class="muted">Stok tersedia diambil langsung dari Google Sheet. Tekan Muat ulang untuk data terbaru.</p>
+  v.innerHTML = `<h2>Laporan Stok</h2><div class="card"><p class="muted">Terhubung langsung ke Google Sheet: tabel berubah sendiri (dicek tiap 10 detik) tanpa perlu menekan apa pun.</p>
 <label>Blok sel yang ditampilkan<input id="st_rng" value="${E(ls('rng', RNG))}" placeholder="B66:E70" autocapitalize="characters"></label>
 <div class="row" style="margin:10px 0"><button class="p" id="st_go" data-noc>🔄 Muat ulang</button><a class="s sm" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/${ID}/edit?gid=${GID}#gid=${GID}" style="padding:10px 14px">Buka sheet</a></div>
 <div id="st_out"></div></div>`;
   $('#st_go').onclick = load; load();
+  let last = '';
+  const tick = async () => { if (!v.isConnected || !$('#st_out')) return; if (!document.hidden) { await load(true); } setTimeout(tick, 10000); };
+  setTimeout(tick, 10000);
 };
 VIEWS.profil = v => {
   const P = S.d.profil = Object.assign({ aktif: true, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, S.d.profil);
