@@ -216,12 +216,36 @@ function modelIndex() {
 
 function pricelist() {
   const rows = models.flatMap(m => m.variants.map(v => ({ m, v })));
+  /* FAQ khusus halaman pricelist (data dari models.json dan leasing.json, tidak ditulis manual) */
+  const allV = rows.map(r => r.v), vByName = k => allV.find(v => v.name.indexOf(k) >= 0);
+  const x9 = models.find(m => m.slug === 'xpeng-x9'), g6 = models.find(m => m.slug === 'xpeng-g6');
+  const x9pro = x9 && vByName('X9 Pro') && x9.variants.find(v => !/\+/.test(v.name)), x9plus = x9 && x9.variants.find(v => /\+/.test(v.name));
+  const g6pro = g6 && g6.variants.find(v => /Pro/.test(v.name)), g6awd = g6 && g6.variants.find(v => /AWD/.test(v.name));
+  const sp = (m, k) => { const f = m && m.specs.find(s => s.k === k); return f ? f.v : ''; };
+  const PRICE_FAQ = [
+    { q: 'Berapa harga XPeng di Indonesia?', a: `Pricelist XPeng saat ini: ${rows.map(r => r.v.name + ' ' + rp(r.v.price)).join(', ')}. Harga bisa berubah, hubungi kami untuk konfirmasi.` },
+    ...(x9pro && x9plus ? [{ q: 'Berapa harga XPeng X9 Pro dan Pro+?', a: `${x9pro.name} ${rp(x9pro.price)} dan ${x9plus.name} ${rp(x9plus.price)}. Selisih keduanya ${rp(x9plus.price - x9pro.price)}.` }] : []),
+    ...(g6pro && g6awd ? [{ q: 'Berapa harga XPeng G6 Pro dan AWD?', a: `${g6pro.name} ${rp(g6pro.price)} dan ${g6awd.name} ${rp(g6awd.price)}. Selisih keduanya ${rp(g6awd.price - g6pro.price)}.` }] : []),
+    ...(g6pro && g6awd ? [{ q: 'Apa beda XPeng G6 Pro dan G6 AWD?', a: `${sp(g6, 'Penggerak') ? 'Penggerak: ' + sp(g6, 'Penggerak') + '. ' : ''}${sp(g6, 'Jarak tempuh Pro') ? 'Jarak tempuh Pro ' + sp(g6, 'Jarak tempuh Pro') + '. ' : ''}${sp(g6, 'Jarak tempuh AWD') ? 'Jarak tempuh AWD ' + sp(g6, 'Jarak tempuh AWD') + '. ' : ''}Detail ada di halaman XPeng G6.` }] : []),
+    { q: 'Apakah harga di pricelist sudah termasuk OTR?', a: 'Rincian OTR berbeda untuk tiap kota dan tiap pembeli. Hubungi kami lewat WhatsApp untuk penawaran tertulis yang sesuai dengan data Anda.' },
+    ...(leasing.length ? [{ q: 'Apakah bisa kredit mobil XPeng?', a: `Bisa. Kami bekerja sama dengan partner leasing seperti ${leasing.map(l => l.name).join(', ')}. Konsultan kami membantu simulasi cicilan dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.` }] : []),
+    { q: 'Di mana dealer XPeng dan bagaimana test drive?', a: `Showroom kami di ${site.address}. Untuk jadwal test drive XPeng X9 atau G6, kirim pesan WhatsApp atau isi formulir di halaman Kontak.` }
+  ];
+  const slugOK = s => articles.some(a => a.slug === s), art = s => articles.find(a => a.slug === s);
+  const readMore = ['xpeng-g6-pro-vs-awd', 'xpeng-g6-vs-byd-sealion-7', 'xpeng-x9-vs-toyota-alphard', 'xpeng-x9-vs-denza-d9', 'xpeng-g6-vs-hyundai-ioniq-5', 'harga-mobil-listrik-terbaru-2026', 'pajak-mobil-listrik-2026'].filter(slugOK);
+  const lowest = rows.reduce((a, r) => (!a || r.v.price < a.v.price ? r : a), null), highest = rows.reduce((a, r) => (!a || r.v.price > a.v.price ? r : a), null);
+  const info = `<section class="section"><div class="wrap narrow"><h2>Harga XPeng X9 dan G6 di Indonesia</h2>
+<p>Halaman ini memuat pricelist XPeng dari dealer kami di Alam Sutera, Tangerang Selatan. Harga dimulai dari ${rp(lowest.v.price)} untuk ${E(lowest.v.name)} sampai ${rp(highest.v.price)} untuk ${E(highest.v.name)}. ${models.map(m => `<a href="${u('/model/' + m.slug + '/')}">${E(m.name)}</a> (${E(m.type.toLowerCase())}) tersedia dalam ${m.variants.length} varian`).join(', ')}.</p>
+<p>Harga bisa berubah mengikuti kebijakan pabrikan. Minta penawaran tertulis lewat tombol Tanya di tabel, atau lihat <a href="${u('/promo/')}">promo yang sedang berlaku</a>. Untuk simulasi cicilan, konsultan kami membantu pengajuan lewat partner leasing.</p></div></section>
+${readMore.length ? `<section class="section"><div class="wrap narrow"><h2>Bandingkan sebelum memutuskan</h2><ul class="check">${readMore.map(s => `<li><a href="${u('/artikel/' + s + '/')}">${E(art(s).title)}</a></li>`).join('')}</ul></div></section>` : ''}`;
   const body = `<section class="pagehead"><div class="wrap"><nav class="crumb"><a href="${u('/')}">Beranda</a> › Pricelist</nav><h1>Pricelist XPeng ${E(site.pricelistUpdate)}</h1><p>Harga resmi dealer, selalu diperbarui. Hubungi kami untuk konfirmasi dan promo terbaru.</p></div></section>
 <section class="section"><div class="wrap two"><div><div class="tbl"><table class="ptbl full"><thead><tr><th>Varian</th><th>Harga</th><th></th></tr></thead><tbody>${rows.map(r => `<tr><th><a href="${u('/model/' + r.m.slug + '/')}">${E(r.v.name)}</a></th><td>${rp(r.v.price)}</td><td><a class="btn sm" href="${wa('Halo, saya mau penawaran ' + r.v.name)}" rel="noopener">Tanya</a></td></tr>`).join('')}</tbody></table></div>
 <p class="muted">Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda.</p>${picture('assets/img/pricelist-juli-2026.webp', 'Pricelist XPeng X9 dan G6 terbaru', 'plimg', 540, 656)}</div>${leadForm}</div></section>
+${info}
 ${leasingSection()}
-<section class="section"><div class="wrap narrow">${faqBlock(HOME_FAQ)}</div></section>`;
-  return layout({ title: `Pricelist XPeng ${site.pricelistUpdate} | X9 dan G6`, desc: `Pricelist XPeng ${site.pricelistUpdate}: ${rows.map(r => r.v.name.replace('XPeng ', '').replace('New ', '') + ' ' + rp(r.v.price)).join(', ')}.`.slice(0, 160), path: '/pricelist/', body, image: 'assets/img/pricelist-juli-2026.webp', ld: [crumbs([['Beranda', '/'], ['Pricelist', '/pricelist/']]), faqLd(HOME_FAQ)] });
+<section class="section"><div class="wrap narrow">${faqBlock(PRICE_FAQ)}</div></section>`;
+  const itemList = { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Pricelist XPeng', itemListElement: rows.map((r, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'Product', name: r.v.name, brand: { '@type': 'Brand', name: 'XPeng' }, image: abs(r.m.hero), url: abs('/model/' + r.m.slug + '/'), offers: { '@type': 'Offer', price: String(r.v.price), priceCurrency: 'IDR', url: abs('/pricelist/') } } })) };
+  return layout({ title: `Pricelist XPeng ${site.pricelistUpdate} | Harga X9 dan G6`, desc: `Pricelist XPeng ${site.pricelistUpdate}: ${rows.map(r => r.v.name.replace('XPeng ', '').replace('New ', '') + ' ' + rp(r.v.price)).join(', ')}.`.slice(0, 160), path: '/pricelist/', body, image: 'assets/img/pricelist-juli-2026.webp', ld: [crumbs([['Beranda', '/'], ['Pricelist', '/pricelist/']]), faqLd(PRICE_FAQ), itemList] });
 }
 
 function profileSection() {

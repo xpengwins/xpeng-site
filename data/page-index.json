@@ -754,7 +754,7 @@
       "tag": "p"
      },
      {
-      "t": "XPeng G6 vs BYD Sealion 7: Perbandingan SUV Listrik",
+      "t": "XPeng G6 vs BYD Sealion 7: Harga, Baterai, Charging",
       "tag": "h3"
      },
      {
@@ -762,7 +762,7 @@
       "tag": "p"
      },
      {
-      "t": "XPeng X9 vs Toyota Alphard: Untung Rugi MPV Listrik",
+      "t": "XPeng X9 vs Toyota Alphard: Harga dan Biaya Energi",
       "tag": "h3"
      },
      {
@@ -1127,7 +1127,7 @@
   ]
  },
  "/pricelist/": {
-  "label": "Pricelist XPeng Terbaru | X9 dan G6",
+  "label": "Pricelist XPeng Terbaru | Harga X9 dan G6",
   "sections": [
    {
     "key": "pricelist-xpeng-terbaru",
@@ -1193,6 +1193,86 @@
       "alt": "Pricelist XPeng X9 dan G6 terbaru"
      }
     ]
+   },
+   {
+    "key": "harga-xpeng-x9-dan-g6-di-indonesia",
+    "title": "Harga XPeng X9 dan G6 di Indonesia",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Harga XPeng X9 dan G6 di Indonesia",
+      "tag": "h2"
+     },
+     {
+      "t": "XPeng X9",
+      "tag": "a"
+     },
+     {
+      "t": "(mpv listrik premium 7 kursi) tersedia dalam 2 varian,",
+      "tag": "p"
+     },
+     {
+      "t": "XPeng G6",
+      "tag": "a"
+     },
+     {
+      "t": "(suv coupe listrik premium) tersedia dalam 2 varian.",
+      "tag": "p"
+     },
+     {
+      "t": "Harga bisa berubah mengikuti kebijakan pabrikan. Minta penawaran tertulis lewat tombol Tanya di tabel, atau lihat",
+      "tag": "p"
+     },
+     {
+      "t": "promo yang sedang berlaku",
+      "tag": "a"
+     },
+     {
+      "t": ". Untuk simulasi cicilan, konsultan kami membantu pengajuan lewat partner leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "bandingkan-sebelum-memutuskan",
+    "title": "Bandingkan sebelum memutuskan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Bandingkan sebelum memutuskan",
+      "tag": "h2"
+     },
+     {
+      "t": "XPeng G6 Pro vs AWD: Bedanya dan Cara Memilih",
+      "tag": "a"
+     },
+     {
+      "t": "XPeng G6 vs BYD Sealion 7: Harga, Baterai, Charging",
+      "tag": "a"
+     },
+     {
+      "t": "XPeng X9 vs Toyota Alphard: Harga dan Biaya Energi",
+      "tag": "a"
+     },
+     {
+      "t": "XPeng X9 vs Denza D9: Mana MPV Listrik yang Cocok?",
+      "tag": "a"
+     },
+     {
+      "t": "XPeng G6 vs Hyundai Ioniq 5: Mana yang Lebih Cocok?",
+      "tag": "a"
+     },
+     {
+      "t": "Harga Mobil Listrik Terbaru 2026: Daftar dan Tips Pilih",
+      "tag": "a"
+     },
+     {
+      "t": "Pajak Mobil Listrik 2026: Aturan Terbaru dan DKI Jakarta",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
    },
    {
     "key": "cicilan-mudah-lewat-partner-leasing",
@@ -1293,19 +1373,43 @@
       "tag": "summary"
      },
      {
-      "t": "Model XPeng apa saja yang tersedia?",
+      "t": "Berapa harga XPeng X9 Pro dan Pro+?",
       "tag": "summary"
      },
      {
-      "t": "Saat ini tersedia XPeng X9 (MPV listrik 7 kursi) dan XPeng G6 (SUV coupe listrik).",
+      "t": "Berapa harga XPeng G6 Pro dan AWD?",
+      "tag": "summary"
+     },
+     {
+      "t": "Apa beda XPeng G6 Pro dan G6 AWD?",
+      "tag": "summary"
+     },
+     {
+      "t": "Penggerak: Pro: RWD, AWD: dua motor. Jarak tempuh Pro hingga 525 km (WLTP) / 618 km (NEDC). Jarak tempuh AWD hingga 510 km (WLTP). Detail ada di halaman XPeng G6.",
       "tag": "p"
      },
      {
-      "t": "Bagaimana cara test drive XPeng?",
+      "t": "Apakah harga di pricelist sudah termasuk OTR?",
       "tag": "summary"
      },
      {
-      "t": "Isi formulir test drive atau hubungi kami lewat WhatsApp, lalu konsultan akan mengatur jadwal.",
+      "t": "Rincian OTR berbeda untuk tiap kota dan tiap pembeli. Hubungi kami lewat WhatsApp untuk penawaran tertulis yang sesuai dengan data Anda.",
+      "tag": "p"
+     },
+     {
+      "t": "Apakah bisa kredit mobil XPeng?",
+      "tag": "summary"
+     },
+     {
+      "t": "Bisa. Kami bekerja sama dengan partner leasing seperti Maybank, CIMB Niaga, Clipan Finance, BJI Finance. Konsultan kami membantu simulasi cicilan dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     },
+     {
+      "t": "Di mana dealer XPeng dan bagaimana test drive?",
+      "tag": "summary"
+     },
+     {
+      "t": "Showroom kami di Tangerang Selatan, Jalan Kampung Dongkal No.24, RT.004/RW.003, Pakualam, Alam Sutera, Serpong Utara, South Tangerang City, Banten 15320. Untuk jadwal test drive XPeng X9 atau G6, kirim pesan WhatsApp atau isi formulir di halaman Kontak.",
       "tag": "p"
      }
     ],

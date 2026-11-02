@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T02:08:16.286Z",
+ "generated": "2026-11-02T04:11:31.199Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -3019,12 +3019,12 @@
    "keyword": "harga xpeng",
    "score": 100,
    "grade": "A",
-   "words": 805,
-   "density": 0.99,
-   "internal": 5,
+   "words": 829,
+   "density": 0.97,
+   "internal": 8,
    "external": 1,
    "faq": 5,
-   "overlap": 4,
+   "overlap": 5,
    "checks": [
     {
      "group": "Judul",
@@ -3571,9 +3571,9 @@
    "keyword": "xpeng x9 vs denza d9",
    "score": 100,
    "grade": "A",
-   "words": 924,
-   "density": 1.08,
-   "internal": 8,
+   "words": 946,
+   "density": 1.06,
+   "internal": 9,
    "external": 3,
    "faq": 4,
    "overlap": 6,
@@ -4123,9 +4123,9 @@
    "keyword": "xpeng g6 vs hyundai ioniq 5",
    "score": 100,
    "grade": "A",
-   "words": 858,
-   "density": 0.7,
-   "internal": 7,
+   "words": 870,
+   "density": 0.69,
+   "internal": 8,
    "external": 1,
    "faq": 4,
    "overlap": 15,
@@ -4302,17 +4302,17 @@
   },
   {
    "slug": "xpeng-g6-vs-byd-sealion-7",
-   "title": "XPeng G6 vs BYD Sealion 7: Perbandingan SUV Listrik",
+   "title": "XPeng G6 vs BYD Sealion 7: Harga, Baterai, Charging",
    "status": "published",
    "keyword": "xpeng g6 vs byd sealion 7",
    "score": 100,
    "grade": "A",
-   "words": 857,
-   "density": 0.7,
+   "words": 958,
+   "density": 0.63,
    "internal": 7,
    "external": 1,
    "faq": 4,
-   "overlap": 15,
+   "overlap": 14,
    "checks": [
     {
      "group": "Judul",
@@ -4486,13 +4486,13 @@
   },
   {
    "slug": "xpeng-x9-vs-toyota-alphard",
-   "title": "XPeng X9 vs Toyota Alphard: Untung Rugi MPV Listrik",
+   "title": "XPeng X9 vs Toyota Alphard: Harga dan Biaya Energi",
    "status": "published",
    "keyword": "xpeng x9 vs toyota alphard",
    "score": 100,
    "grade": "A",
-   "words": 880,
-   "density": 0.57,
+   "words": 985,
+   "density": 0.51,
    "internal": 9,
    "external": 1,
    "faq": 4,
@@ -6331,12 +6331,12 @@
    "keyword": "xpeng g6 pro vs awd",
    "score": 100,
    "grade": "A",
-   "words": 835,
-   "density": 0.6,
-   "internal": 6,
+   "words": 849,
+   "density": 0.59,
+   "internal": 7,
    "external": 1,
    "faq": 4,
-   "overlap": 5,
+   "overlap": 6,
    "checks": [
     {
      "group": "Judul",
@@ -14442,7 +14442,7 @@
    "onpage": {
     "inTitle": false,
     "inH1": false,
-    "count": 2
+    "count": 7
    }
   },
   {
