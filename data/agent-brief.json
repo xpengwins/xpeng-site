@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-02T03:20:47.775Z",
+ "generated": "2026-11-02T15:23:27.445Z",
  "traffic": {
   "periode": [
    "2026-10-03",
@@ -119,9 +119,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 34,
-  "terjadwal": 28,
-  "terbitBerikutnya": "2026-11-02T12:00:00+07:00",
+  "terbit": 36,
+  "terjadwal": 26,
+  "terbitBerikutnya": "2026-11-03T12:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
@@ -130,11 +130,10 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 77, LCP 4.8 dtk",
-    "📉 / turun 90 → 77 sejak pengecekan sebelumnya (melambat)",
-    "🟠 /model/xpeng-x9/: LCP 3.6 dtk",
-    "🔴 /model/xpeng-g6/: LCP 4.4 dtk",
-    "📉 /model/xpeng-g6/ turun 99 → 84 sejak pengecekan sebelumnya (melambat)"
+    "🟠 /: LCP 3.2 dtk",
+    "🔴 /pricelist/: skor 78, LCP 4.1 dtk, TBT 323 ms",
+    "📉 /pricelist/ turun 89 → 78 sejak pengecekan sebelumnya (melambat)",
+    "🔴 /artikel/mobil-listrik-saat-banjir/: LCP 4.3 dtk"
    ]
   },
   "sosmed": [

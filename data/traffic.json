@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-02T03:20:02.231Z",
+ "generated": "2026-11-02T15:23:15.062Z",
  "property": "560653996",
  "today": {
-  "users": 3,
-  "sessions": 6,
-  "views": 6,
-  "newUsers": 2
+  "users": 39,
+  "sessions": 48,
+  "views": 56,
+  "newUsers": 34
  },
  "yesterday": {
   "users": 79,
@@ -14,16 +14,16 @@
   "newUsers": 77
  },
  "last7": {
-  "users": 366,
-  "sessions": 451,
-  "views": 944,
-  "newUsers": 364
+  "users": 398,
+  "sessions": 493,
+  "views": 994,
+  "newUsers": 396
  },
  "last30": {
-  "users": 839,
-  "sessions": 937,
-  "views": 1515,
-  "newUsers": 860
+  "users": 871,
+  "sessions": 981,
+  "views": 1565,
+  "newUsers": 892
  },
  "prev30": {
   "users": 0,
@@ -82,36 +82,36 @@
   },
   {
    "date": "2026-11-02",
-   "users": 3,
-   "sessions": 6,
-   "views": 6
+   "users": 39,
+   "sessions": 48,
+   "views": 56
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 754,
-   "users": 521
+   "views": 768,
+   "users": 528
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 194,
-   "users": 120
+   "views": 200,
+   "users": 123
   },
   {
    "path": "/pricelist/",
-   "views": 133,
-   "users": 108
+   "views": 137,
+   "users": 112
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 111,
-   "users": 37
+   "views": 115,
+   "users": 40
   },
   {
    "path": "/model/",
-   "views": 106,
-   "users": 25
+   "views": 107,
+   "users": 26
   },
   {
    "path": "/kontak/",
@@ -146,27 +146,27 @@
   },
   {
    "k": "Paid Search",
-   "v": 267
+   "v": 278
   },
   {
    "k": "Organic Social",
-   "v": 105
+   "v": 117
   },
   {
    "k": "Direct",
-   "v": 76
+   "v": 82
   },
   {
    "k": "Referral",
-   "v": 37
+   "v": 43
   },
   {
    "k": "Organic Search",
-   "v": 23
+   "v": 28
   },
   {
    "k": "Unassigned",
-   "v": 13
+   "v": 10
   },
   {
    "k": "Cross-network",
@@ -176,25 +176,25 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 786
+   "v": 813
   },
   {
    "k": "desktop",
-   "v": 144
+   "v": 160
   },
   {
    "k": "tablet",
-   "v": 8
+   "v": 9
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 401
+   "v": 417
   },
   {
    "k": "Tangerang",
-   "v": 59
+   "v": 61
   },
   {
    "k": "Depok",
@@ -202,11 +202,11 @@
   },
   {
    "k": "South Tangerang",
-   "v": 49
+   "v": 51
   },
   {
    "k": "Boardman",
-   "v": 29
+   "v": 33
   },
   {
    "k": "(not set)",
@@ -214,15 +214,15 @@
   },
   {
    "k": "Prineville",
-   "v": 20
+   "v": 25
   },
   {
    "k": "Semarang",
-   "v": 13
+   "v": 14
   }
  ],
  "leads": {
-  "klik_whatsapp": 38,
+  "klik_whatsapp": 44,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,
