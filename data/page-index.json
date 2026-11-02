@@ -542,6 +542,18 @@
       "tag": "p"
      },
      {
+      "t": "Harga",
+      "tag": "span"
+     },
+     {
+      "t": "Harga XPeng G9L: China, Eropa, dan Status Indonesia",
+      "tag": "h3"
+     },
+     {
+      "t": "Harga XPeng G9L di China mulai 241.800 yuan dan di Eropa mulai 74.600 euro. Simak cara membaca angkanya dan alasan harga Indonesia belum bisa dipastikan.",
+      "tag": "p"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -798,10 +810,6 @@
       "tag": "p"
      },
      {
-      "t": "Harga",
-      "tag": "span"
-     },
-     {
       "t": "Harga Mobil Listrik Terbaru 2026: Daftar dan Tips Pilih",
       "tag": "h3"
      },
@@ -842,6 +850,10 @@
      {
       "src": "/assets/img/222752-1nmq.webp",
       "alt": "XPeng X9 hitam tampak depan, mobil listrik dan risiko banjir"
+     },
+     {
+      "src": "/assets/img/g9l-senja-rumah-modern.webp",
+      "alt": "Xpengwins Xpeng G9L terparkir di depan rumah modern saat senja"
      },
      {
       "src": "/assets/img/x9-white-depan.webp",
