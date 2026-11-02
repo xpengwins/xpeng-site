@@ -115,7 +115,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['stok', '📦', 'Laporan Stok'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -517,6 +517,37 @@ ${A.photos.map((ph, i) => `<div class="card" style="margin-top:10px"><img alt=""
 };
 
 /* --- Profil Saya (tampil di halaman Kontak) --- */
+VIEWS.stok = v => {
+  const ID = '1nsjM9AnHLRIytTn_aJBV-5cUZZS11GVW3KXswXX_edI', GID = '819380002', RNG = 'B66:E70';
+  const ls = (k, d) => { try { return localStorage.getItem('stok_' + k) || d; } catch (e) { return d; } };
+  const put = (k, x) => { try { localStorage.setItem('stok_' + k, x); } catch (e) {} };
+  const csv = t => { const rows = []; let r = [], c = '', q = false; for (let i = 0; i < t.length; i++) { const ch = t[i]; if (q) { if (ch === '"') { if (t[i + 1] === '"') { c += '"'; i++; } else q = false; } else c += ch; } else if (ch === '"') q = true; else if (ch === ',') { r.push(c); c = ''; } else if (ch === '\n' || ch === '\r') { if (ch === '\r' && t[i + 1] === '\n') i++; r.push(c); c = ''; rows.push(r); r = []; } else c += ch; } if (c || r.length) { r.push(c); rows.push(r); } return rows.filter(x => x.some(y => String(y).trim())); };
+  const show = (rows, info) => {
+    const box = $('#st_out'); if (!rows.length) { box.innerHTML = '<p class="muted">Tidak ada data di blok ini.</p>'; return; }
+    const h = rows[0], b = rows.slice(1);
+    box.innerHTML = `<p class="muted">${E(info)} · ${b.length} baris</p><div style="overflow:auto"><table style="width:100%;border-collapse:collapse"><thead><tr>${h.map(x => `<th style="text-align:left;padding:8px;border-bottom:2px solid var(--line,#ddd)">${E(x)}</th>`).join('')}</tr></thead><tbody>${b.map(r => `<tr>${h.map((_, i) => `<td style="padding:8px;border-bottom:1px solid var(--line,#ddd)">${E(r[i] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`;
+  };
+  const load = async () => {
+    const rng = ($('#st_rng').value || RNG).trim().toUpperCase(); put('rng', rng);
+    const box = $('#st_out'); box.innerHTML = '<p class="muted">Mengambil data…</p>';
+    try {
+      const u = `https://docs.google.com/spreadsheets/d/${ID}/gviz/tq?tqx=out:csv&gid=${GID}&range=${encodeURIComponent(rng)}&headers=0&_=${Date.now()}`;
+      const res = await fetch(u); if (!res.ok) throw new Error('HTTP ' + res.status);
+      const t = await res.text(); if (/^\s*<(!doctype|html)/i.test(t)) throw new Error('Sheet belum dibagikan ke "Siapa saja yang memiliki link"');
+      const rows = csv(t); put('cache', JSON.stringify({ rows, at: new Date().toLocaleString('id-ID') }));
+      show(rows, 'Diperbarui ' + new Date().toLocaleString('id-ID'));
+    } catch (e) {
+      const c = JSON.parse(ls('cache', 'null') || 'null');
+      box.innerHTML = `<p class="muted" style="color:#c0392b">Gagal mengambil: ${E(e.message)}. Pastikan sheet dibagikan "Siapa saja yang memiliki link" (Pelihat).</p>`;
+      if (c) { const d = document.createElement('div'); box.appendChild(d); const keep = box; show(c.rows, 'Data tersimpan terakhir (' + c.at + ')'); }
+    }
+  };
+  v.innerHTML = `<h2>Laporan Stok</h2><div class="card"><p class="muted">Stok tersedia diambil langsung dari Google Sheet. Tekan Muat ulang untuk data terbaru.</p>
+<label>Blok sel yang ditampilkan<input id="st_rng" value="${E(ls('rng', RNG))}" placeholder="B66:E70" autocapitalize="characters"></label>
+<div class="row" style="margin:10px 0"><button class="p" id="st_go" data-noc>🔄 Muat ulang</button><a class="s sm" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/${ID}/edit?gid=${GID}#gid=${GID}" style="padding:10px 14px">Buka sheet</a></div>
+<div id="st_out"></div></div>`;
+  $('#st_go').onclick = load; load();
+};
 VIEWS.profil = v => {
   const P = S.d.profil = Object.assign({ aktif: true, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, S.d.profil);
   const draw = () => {
