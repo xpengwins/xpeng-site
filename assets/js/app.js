@@ -1,6 +1,10 @@
 (function(){'use strict';
 var B=document.body,$=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
 var WA=B.dataset.wa,base=B.dataset.base||'';
+/* sumber iklan Google: ingat selama sesi, lalu tandai pesan WhatsApp "(dari iklan Google)" */
+var ADS=false;try{var Q=new URLSearchParams(location.search);if(Q.get('gclid')||(/google/i.test(Q.get('utm_source')||'')&&/cpc/i.test(Q.get('utm_medium')||'')))sessionStorage.setItem('xp_src','ads');ADS=sessionStorage.getItem('xp_src')==='ads'}catch(e){}
+function tagWA(a){if(!ADS)return;try{var h=a.getAttribute('href')||'';if(h.indexOf('wa.me/')<0)return;var u=new URL(h,location.href),t=u.searchParams.get('text')||'';if(!t||t.indexOf('dari iklan Google')>-1)return;u.searchParams.set('text',t+' (dari iklan Google)');a.setAttribute('href',u.toString())}catch(e){}}
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href*="wa.me/"]');if(a)tagWA(a)},true);
 var u=function(p){return /^https?:/.test(p)?p:base+'/'+p.replace(/^\//,'')};
 /* menu */
 var bg=$('#burger'),nav=$('#nav');if(bg)bg.onclick=function(){var o=nav.classList.toggle('open');bg.setAttribute('aria-expanded',o)};
@@ -13,7 +17,7 @@ var x0=null;hero.addEventListener('touchstart',function(e){x0=e.touches[0].clien
 /* carousel tombol */
 $$('.car').forEach(function(c){var tr=$('.track',c);if(!tr||tr.children.length<2)return;var n=tr.children.length,hasDots=n<=6,w=document.createElement('div');w.className='cbtn';w.innerHTML='<button class="tab" aria-label="Geser kiri">←</button>'+(hasDots?'<div class="cdots"></div>':'')+'<button class="tab" aria-label="Geser kanan">→</button>';
 if(c.id==='car'){var h=document.createElement('p');h.className='chint';h.setAttribute('aria-hidden','true');h.innerHTML='<span>Geser untuk lihat model lainnya</span> <b>→</b>';c.insertBefore(h,tr)}
-c.appendChild(w);if(c.classList.contains('pmini')){var fit=function(){w.style.display=(tr.clientWidth&&tr.scrollWidth<=tr.clientWidth+2)?'none':''};fit();if('ResizeObserver' in window)new ResizeObserver(fit).observe(tr)}var bs=w.querySelectorAll('.tab'),dd=$('.cdots',w),ds=[];
+c.appendChild(w);if(c.classList.contains('pmini')&&tr.scrollWidth<=tr.clientWidth+2)w.style.display='none';var bs=w.querySelectorAll('.tab'),dd=$('.cdots',w),ds=[];
 bs[0].onclick=function(){tr.scrollBy({left:-tr.clientWidth*.7,behavior:'smooth'})};bs[1].onclick=function(){tr.scrollBy({left:tr.clientWidth*.7,behavior:'smooth'})};
 if(dd){for(var k=0;k<n;k++)(function(k){var d=document.createElement('button');d.type='button';d.setAttribute('aria-label','Tampilan '+(k+1)+' dari '+n);d.onclick=function(){tr.scrollTo({left:tr.children[k].offsetLeft-tr.children[0].offsetLeft,behavior:'smooth'})};dd.appendChild(d);ds.push(d)})(k)}
 var sync=function(){var st=(tr.children[1].offsetLeft-tr.children[0].offsetLeft)||1,i=Math.round(tr.scrollLeft/st);if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)i=n-1;if(i>n-1)i=n-1;ds.forEach(function(d,k){d.className=k===i?'on':''});if(tr.scrollLeft>8)c.classList.add('moved')};
@@ -27,7 +31,7 @@ var run=function(){var ws=norm(aq.value).split(/\s+/).filter(Boolean),n=0;cards.
 aq.addEventListener('input',run);var qm=location.search.match(/[?&]q=([^&]*)/);if(qm){try{aq.value=decodeURIComponent(qm[1].replace(/\+/g,' '))}catch(e){}run()}}
 /* konfigurator */
 var cfg=$('.cfg');if(cfg){var M=JSON.parse(cfg.dataset.models),mi=0,ci=0,img=$('#cfgimg'),sw=$('#sw'),sel=$('#var'),R=function(n){return 'Rp'+Math.round(n).toLocaleString('id-ID')};
-function draw(){var m=M[mi];$$('.cint',cfg).forEach(function(x){x.hidden=(+x.dataset.mi!==mi)});sw.innerHTML='';m.c.forEach(function(c,k){var b=document.createElement('button');b.style.background=c.hex;b.setAttribute('aria-label','Warna '+c.name);if(k===ci)b.className='on';b.onclick=function(){ci=k;draw()};sw.appendChild(b)});
+function draw(){var m=M[mi];sw.innerHTML='';m.c.forEach(function(c,k){var b=document.createElement('button');b.style.background=c.hex;b.setAttribute('aria-label','Warna '+c.name);if(k===ci)b.className='on';b.onclick=function(){ci=k;draw()};sw.appendChild(b)});
 img.style.opacity=.3;setTimeout(function(){img.src=u(m.c[ci].image);img.alt=m.n+' warna '+m.c[ci].name;img.style.opacity=1},120);$('#colname').textContent='Warna: '+m.c[ci].name;
 var cur=sel.value;sel.innerHTML=m.v.map(function(v,k){return '<option value="'+k+'">'+v.name+'</option>'}).join('');sel.value=m.v[cur]?cur:0;calc()}
 function calc(){var m=M[mi],v=m.v[sel.value||0],p=v.price,dp=+$('#dp').value,tn=+$('#tn').value,bg=+$('#bg').value;
@@ -38,7 +42,7 @@ $$('.tab',cfg).forEach(function(t){if(t.dataset.m===undefined)return;t.onclick=f
 sel.onchange=calc;['dp','tn','bg'].forEach(function(id){$('#'+id).oninput=calc});draw()}
 /* form lead -> WhatsApp */
 $$('form.lead').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(f);if(!String(d.get('nama')||'').trim()){f.nama.focus();return}
-var tx='Halo, saya '+d.get('nama')+'. Saya mau test drive '+d.get('model')+'. Rencana pembelian: '+d.get('rencana')+'. (dari website)';window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(tx),'_blank','noopener')})});
+var tx='Halo, saya '+d.get('nama')+'. Saya mau test drive '+d.get('model')+'. Rencana pembelian: '+d.get('rencana')+'. (dari '+(ADS?'iklan Google':'website')+')';window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(tx),'_blank','noopener')})});
 /* reveal */
 if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}})},{threshold:.12});$$('.section h2,.mcard,.acard,.stats>div,.panel,.stage,.ccard,.tl li,.mapbox,.soc li').forEach(function(el){el.classList.add('rv');io.observe(el)})}
 if('serviceWorker' in navigator&&location.protocol==='https:'){navigator.serviceWorker.register(base+'/sw.js').catch(function(){})}
@@ -53,11 +57,11 @@ if(document.readyState==='complete')start();else addEventListener('load',start)}
 var ov=document.createElement('div');ov.className='lb';ov.hidden=true;ov.setAttribute('role','dialog');ov.setAttribute('aria-modal','true');ov.setAttribute('aria-label','Pratinjau foto');
 ov.innerHTML='<button class="lbx" aria-label="Tutup">&times;</button><button class="lbp" aria-label="Foto sebelumnya">&lsaquo;</button><button class="lbn" aria-label="Foto berikutnya">&rsaquo;</button><div class="lbs"><img alt=""></div><div class="lbc"></div>';
 document.body.appendChild(ov);
-var im=$('img',ov),cap=$('.lbc',ov),sc=$('.lbs',ov),k=0,last=null,cur=imgs,grp=function(e){return e.closest('.cint')||'g'};
-function show(n){k=(n+cur.length)%cur.length;ov.classList.remove('zoom');im.src=cur[k].currentSrc||cur[k].src;im.alt=cur[k].alt;cap.textContent=cur[k].alt+' ('+(k+1)+'/'+cur.length+') \u2022 ketuk foto untuk zoom'}
-function open(n){last=document.activeElement;var g=grp(imgs[n]);cur=imgs.filter(function(x){return grp(x)===g});show(cur.indexOf(imgs[n]));ov.hidden=false;document.documentElement.style.overflow='hidden';$('.lbx',ov).focus()}
+var im=$('img',ov),cap=$('.lbc',ov),sc=$('.lbs',ov),k=0,last=null;
+function show(n){k=(n+imgs.length)%imgs.length;ov.classList.remove('zoom');im.src=imgs[k].currentSrc||imgs[k].src;im.alt=imgs[k].alt;cap.textContent=imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom'}
+function open(n){last=document.activeElement;show(n);ov.hidden=false;document.documentElement.style.overflow='hidden';$('.lbx',ov).focus()}
 function close(){ov.hidden=true;document.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
-function tz(){var z=ov.classList.toggle('zoom');cap.textContent=z?'Geser untuk melihat detail \u2022 ketuk lagi untuk kecilkan':cur[k].alt+' ('+(k+1)+'/'+cur.length+') \u2022 ketuk foto untuk zoom';if(z){sc.scrollLeft=(sc.scrollWidth-sc.clientWidth)/2;sc.scrollTop=(sc.scrollHeight-sc.clientHeight)/2}}
+function tz(){var z=ov.classList.toggle('zoom');cap.textContent=z?'Geser untuk melihat detail \u2022 ketuk lagi untuk kecilkan':imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom';if(z){sc.scrollLeft=(sc.scrollWidth-sc.clientWidth)/2;sc.scrollTop=(sc.scrollHeight-sc.clientHeight)/2}}
 imgs.forEach(function(g,n){g.setAttribute('tabindex','0');g.setAttribute('role','button');g.style.cursor='zoom-in';g.addEventListener('click',function(){open(n)});g.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();open(n)}})});
 $('.lbx',ov).onclick=close;$('.lbp',ov).onclick=function(){show(k-1)};$('.lbn',ov).onclick=function(){show(k+1)};
 im.onclick=tz;sc.addEventListener('click',function(e){if(e.target===sc&&!ov.classList.contains('zoom'))close()});
@@ -70,9 +74,6 @@ $$('.vid video').forEach(function(v){v.muted=true;if('IntersectionObserver'in wi
 (function(){function ev(n,o){try{if(window.gtag)gtag('event',n,o||{})}catch(e){}}
 var pg=location.pathname;
 document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'',pos=(a.closest('[data-cta]')||{dataset:{}}).dataset.cta||(a.classList.contains('wafab')?'melayang':'halaman');
-if(h.indexOf('wa.me/')>-1)ev('klik_whatsapp',{halaman:pg,posisi:pos});else if(h.indexOf('tel:')===0)ev('klik_telepon',{halaman:pg});else if(h.indexOf('mailto:')===0)ev('klik_email',{halaman:pg});else if(/\.pdf(\?|$)/i.test(h))ev('unduh_brosur',{halaman:pg,file:h});else if(h.indexOf('#testdrive')>-1)ev('klik_booking_test_drive',{halaman:pg,posisi:pos})},true);
+if(h.indexOf('wa.me/')>-1)ev('klik_whatsapp',{halaman:pg,posisi:pos,sumber:ADS?'iklan_google':'lainnya'});else if(h.indexOf('tel:')===0)ev('klik_telepon',{halaman:pg});else if(h.indexOf('mailto:')===0)ev('klik_email',{halaman:pg});else if(/\.pdf(\?|$)/i.test(h))ev('unduh_brosur',{halaman:pg,file:h});else if(h.indexOf('#testdrive')>-1)ev('klik_booking_test_drive',{halaman:pg,posisi:pos})},true);
 document.addEventListener('submit',function(e){if(e.target&&e.target.classList&&e.target.classList.contains('lead'))ev('kirim_form_test_drive',{halaman:pg})},true)})();
-/* video YouTube ringan: iframe dimuat saat diklik */
-$$('.mvid .yt').forEach(function(d){function go(){var f=document.createElement('iframe');f.src='https://www.youtube-nocookie.com/embed/'+d.dataset.yt+'?autoplay=1&rel=0&playsinline=1';f.title=d.dataset.t||'Video';f.allow='autoplay; encrypted-media; picture-in-picture; fullscreen';f.allowFullscreen=true;d.innerHTML='';d.appendChild(f);d.removeAttribute('role');d.removeAttribute('tabindex')}
-d.addEventListener('click',go);d.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go()}})});
 })();
