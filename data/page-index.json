@@ -530,6 +530,18 @@
       "tag": "h2"
      },
      {
+      "t": "Tips EV",
+      "tag": "span"
+     },
+     {
+      "t": "Mobil Listrik Banjir: Aman atau Berbahaya? Faktanya",
+      "tag": "h3"
+     },
+     {
+      "t": "Apakah mobil listrik banjir berbahaya? Pahami arti IP68 pada baterai, aturan menerjang genangan, langkah saat terendam, dan tips asuransi untuk pemilik EV.",
+      "tag": "p"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -540,10 +552,6 @@
      {
       "t": "Cara memilih mobil listrik keluarga: jumlah kursi, bagasi, keselamatan anak, charging di rumah, dan biaya. Contoh XPeng X9 7 kursi dan G6 SUV 5 kursi.",
       "tag": "p"
-     },
-     {
-      "t": "Tips EV",
-      "tag": "span"
      },
      {
       "t": "Perawatan Mobil Listrik: Apa Saja yang Perlu Dirawat?",
@@ -831,6 +839,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/222752-1nmq.webp",
+      "alt": "XPeng X9 hitam tampak depan, mobil listrik dan risiko banjir"
+     },
      {
       "src": "/assets/img/x9-white-depan.webp",
       "alt": "XPeng X9 putih tampak depan, mobil listrik keluarga 7 kursi"
