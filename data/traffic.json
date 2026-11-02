@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-01T15:05:34.269Z",
+ "generated": "2026-11-02T03:20:02.231Z",
  "property": "560653996",
  "today": {
-  "users": 65,
-  "sessions": 73,
-  "views": 92,
-  "newUsers": 63
+  "users": 3,
+  "sessions": 6,
+  "views": 6,
+  "newUsers": 2
  },
  "yesterday": {
-  "users": 61,
-  "sessions": 80,
-  "views": 187,
-  "newUsers": 60
+  "users": 79,
+  "sessions": 88,
+  "views": 112,
+  "newUsers": 77
  },
  "last7": {
-  "users": 421,
-  "sessions": 510,
-  "views": 1013,
-  "newUsers": 422
+  "users": 366,
+  "sessions": 451,
+  "views": 944,
+  "newUsers": 364
  },
  "last30": {
-  "users": 823,
-  "sessions": 917,
-  "views": 1489,
-  "newUsers": 844
+  "users": 839,
+  "sessions": 937,
+  "views": 1515,
+  "newUsers": 860
  },
  "prev30": {
   "users": 0,
@@ -76,36 +76,42 @@
   },
   {
    "date": "2026-11-01",
-   "users": 65,
-   "sessions": 73,
-   "views": 92
+   "users": 79,
+   "sessions": 88,
+   "views": 112
+  },
+  {
+   "date": "2026-11-02",
+   "users": 3,
+   "sessions": 6,
+   "views": 6
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 749,
-   "users": 518
+   "views": 754,
+   "users": 521
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 191,
-   "users": 118
+   "views": 194,
+   "users": 120
   },
   {
    "path": "/pricelist/",
-   "views": 129,
-   "users": 105
+   "views": 133,
+   "users": 108
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 109,
-   "users": 35
+   "views": 111,
+   "users": 37
   },
   {
    "path": "/model/",
-   "views": 104,
-   "users": 24
+   "views": 106,
+   "users": 25
   },
   {
    "path": "/kontak/",
@@ -113,14 +119,14 @@
    "users": 6
   },
   {
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 18,
+   "users": 15
+  },
+  {
    "path": "/tentang/",
    "views": 18,
    "users": 2
-  },
-  {
-   "path": "/artikel/xpeng-g6-pro-vs-awd/",
-   "views": 15,
-   "users": 13
   },
   {
    "path": "/artikel/parkir-otomatis-xpeng-g6/",
@@ -140,27 +146,27 @@
   },
   {
    "k": "Paid Search",
-   "v": 259
+   "v": 267
   },
   {
    "k": "Organic Social",
-   "v": 100
+   "v": 105
   },
   {
    "k": "Direct",
-   "v": 73
+   "v": 76
   },
   {
    "k": "Referral",
-   "v": 35
+   "v": 37
   },
   {
    "k": "Organic Search",
-   "v": 21
+   "v": 23
   },
   {
    "k": "Unassigned",
-   "v": 12
+   "v": 13
   },
   {
    "k": "Cross-network",
@@ -170,11 +176,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 769
+   "v": 786
   },
   {
    "k": "desktop",
-   "v": 141
+   "v": 144
   },
   {
    "k": "tablet",
@@ -184,7 +190,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 393
+   "v": 401
   },
   {
    "k": "Tangerang",
@@ -199,16 +205,16 @@
    "v": 49
   },
   {
+   "k": "Boardman",
+   "v": 29
+  },
+  {
    "k": "(not set)",
    "v": 27
   },
   {
-   "k": "Boardman",
-   "v": 27
-  },
-  {
    "k": "Prineville",
-   "v": 19
+   "v": 20
   },
   {
    "k": "Semarang",

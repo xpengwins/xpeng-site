@@ -53,6 +53,15 @@
    "statusBad": [],
    "bad": 0,
    "warn": 0
+  },
+  {
+   "date": "2026-11-02",
+   "at": "2026-11-02T03:20:02.191Z",
+   "pages": 43,
+   "ok": 43,
+   "statusBad": [],
+   "bad": 0,
+   "warn": 0
   }
  ],
  "ext": {
@@ -155,14 +164,19 @@
    "s": 0,
    "err": "The operation was aborted due to timeout",
    "at": 1793545518628
+  },
+  "https://listrikindonesia.com/detail/16065/spesifikasi-lengkap-xpeng-x9-mobil-listrik-premium-untuk-keluarga": {
+   "s": 200,
+   "err": "",
+   "at": 1793589600605
   }
  },
- "generated": "2026-11-01T15:05:33.761Z",
+ "generated": "2026-11-02T03:20:02.191Z",
  "latest": {
-  "date": "2026-11-01",
-  "at": "2026-11-01T15:05:33.761Z",
-  "pages": 42,
-  "ok": 42,
+  "date": "2026-11-02",
+  "at": "2026-11-02T03:20:02.191Z",
+  "pages": 43,
+  "ok": 43,
   "statusBad": [],
   "bad": 0,
   "warn": 0,

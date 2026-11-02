@@ -462,78 +462,140 @@
     "drop:/pricelist/",
     "perf:/artikel/mobil-listrik-keluarga/"
    ]
+  },
+  {
+   "date": "2026-11-02",
+   "at": "2026-11-02T03:19:55.666Z",
+   "urls": 43,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 114,
+   "pages": {
+    "/": {
+     "score": 77,
+     "lcp": 4772,
+     "cls": 0,
+     "tbt": 161,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 90,
+     "lcp": 3579,
+     "cls": 0,
+     "tbt": 90,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 84,
+     "lcp": 4396,
+     "cls": 0,
+     "tbt": 82,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 99,
+     "lcp": 1363,
+     "cls": 0,
+     "tbt": 102,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 765,
+     "cls": 0,
+     "tbt": 64,
+     "field": null
+    },
+    "/artikel/mobil-listrik-saat-banjir/": {
+     "score": 100,
+     "lcp": 1509,
+     "cls": 0.016,
+     "tbt": 19,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "drop:/",
+    "perf:/model/xpeng-x9/",
+    "perf:/model/xpeng-g6/",
+    "drop:/model/xpeng-g6/"
+   ]
   }
  ],
- "generated": "2026-11-01T15:05:15.844Z",
+ "generated": "2026-11-02T03:19:55.666Z",
  "latest": {
-  "date": "2026-11-01",
-  "at": "2026-11-01T15:05:15.844Z",
-  "urls": 42,
+  "date": "2026-11-02",
+  "at": "2026-11-02T03:19:55.666Z",
+  "urls": 43,
   "errors": 0,
   "slow": 0,
-  "avgMs": 78,
+  "avgMs": 114,
   "pages": {
    "/": {
-    "score": 90,
-    "lcp": 3633,
+    "score": 77,
+    "lcp": 4772,
     "cls": 0,
-    "tbt": 56,
+    "tbt": 161,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 1967,
+    "score": 90,
+    "lcp": 3579,
     "cls": 0,
-    "tbt": 9,
+    "tbt": 90,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 99,
-    "lcp": 1970,
+    "score": 84,
+    "lcp": 4396,
     "cls": 0,
-    "tbt": 30,
+    "tbt": 82,
     "field": null
    },
    "/pricelist/": {
-    "score": 89,
-    "lcp": 3685,
+    "score": 99,
+    "lcp": 1363,
     "cls": 0,
-    "tbt": 30,
+    "tbt": 102,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 781,
+    "lcp": 765,
     "cls": 0,
-    "tbt": 45,
+    "tbt": 64,
     "field": null
    },
-   "/artikel/mobil-listrik-keluarga/": {
-    "score": 89,
-    "lcp": 3444,
-    "cls": 0.004,
-    "tbt": 180,
+   "/artikel/mobil-listrik-saat-banjir/": {
+    "score": 100,
+    "lcp": 1509,
+    "cls": 0.016,
+    "tbt": 19,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/pricelist/",
-   "drop:/pricelist/",
-   "perf:/artikel/mobil-listrik-keluarga/"
+   "drop:/",
+   "perf:/model/xpeng-x9/",
+   "perf:/model/xpeng-g6/",
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🟠 /: LCP 3.6 dtk",
-   "🟠 /pricelist/: LCP 3.7 dtk",
-   "📉 /pricelist/ turun 100 → 89 sejak pengecekan sebelumnya (melambat)",
-   "🟠 /artikel/mobil-listrik-keluarga/: LCP 3.4 dtk"
+   "🔴 /: skor 77, LCP 4.8 dtk",
+   "📉 / turun 90 → 77 sejak pengecekan sebelumnya (melambat)",
+   "🟠 /model/xpeng-x9/: LCP 3.6 dtk",
+   "🔴 /model/xpeng-g6/: LCP 4.4 dtk",
+   "📉 /model/xpeng-g6/ turun 99 → 84 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/pricelist/",
-  "drop:/pricelist/",
-  "perf:/artikel/mobil-listrik-keluarga/"
+  "drop:/",
+  "perf:/model/xpeng-x9/",
+  "perf:/model/xpeng-g6/",
+  "drop:/model/xpeng-g6/"
  ],
- "alertSig": "drop:/pricelist/|perf:/|perf:/artikel/mobil-listrik-keluarga/|perf:/pricelist/"
+ "alertSig": "drop:/|drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
 }
