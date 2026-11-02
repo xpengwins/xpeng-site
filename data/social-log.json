@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-02T02:11:06.101Z",
+  "slug": "mobil-listrik-saat-banjir",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-02T02:10:40.868Z",
+  "slug": "mobil-listrik-saat-banjir",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-02T02:10:28.559Z",
+  "slug": "mobil-listrik-saat-banjir",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-01T12:54:08.011Z",
   "slug": "spesifikasi-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "instagram",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-27T08:58:34.273Z",
-  "slug": "parkir-otomatis-xpeng-g6",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-27T08:52:31.664Z",
-  "slug": "parkir-otomatis-xpeng-g6",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-10-27T02:39:09.873Z",
-  "slug": "interior-xpeng-x9",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
