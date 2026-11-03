@@ -65,9 +65,9 @@
   },
   {
    "date": "2026-11-03",
-   "at": "2026-11-03T03:21:50.545Z",
-   "pages": 45,
-   "ok": 45,
+   "at": "2026-11-03T15:16:09.575Z",
+   "pages": 49,
+   "ok": 49,
    "statusBad": [],
    "bad": 0,
    "warn": 0
@@ -188,14 +188,39 @@
    "s": 200,
    "err": "",
    "at": 1793632993342
+  },
+  "https://moladin.com/news/xpeng-indonesia-catat-tren-positif-di-2025-dan-siapkan-model-fresh-di-iims-2026/": {
+   "s": 200,
+   "err": "",
+   "at": 1793718968062
+  },
+  "https://otokuliner.com/2026/08/dealer-xpeng-surabaya-resmi-dibuka-terbesar-di-indonesia/": {
+   "s": 200,
+   "err": "",
+   "at": 1793718968062
+  },
+  "https://www.autojago.com/news/xpeng-perluas-jaringan-di-pulau-jawa-dan-sumatera-resmikan-experience-and-service-center-di-bandung-dan-medan": {
+   "s": 200,
+   "err": "",
+   "at": 1793718968062
+  },
+  "https://www.viva.co.id/otomotif/1912307-xpeng-semakin-serius-di-indonesia": {
+   "s": 200,
+   "err": "",
+   "at": 1793718968062
+  },
+  "https://carnewschina.com/2026/08/11/xpeng-g9l-revealed-price-with-rear-wheel-steering-755-km-range/": {
+   "s": 200,
+   "err": "",
+   "at": 1793718968062
   }
  },
- "generated": "2026-11-03T03:21:50.545Z",
+ "generated": "2026-11-03T15:16:09.575Z",
  "latest": {
   "date": "2026-11-03",
-  "at": "2026-11-03T03:21:50.545Z",
-  "pages": 45,
-  "ok": 45,
+  "at": "2026-11-03T15:16:09.575Z",
+  "pages": 49,
+  "ok": 49,
   "statusBad": [],
   "bad": 0,
   "warn": 0,

@@ -523,52 +523,52 @@
   },
   {
    "date": "2026-11-03",
-   "at": "2026-11-03T03:21:33.352Z",
-   "urls": 45,
+   "at": "2026-11-03T15:16:04.081Z",
+   "urls": 49,
    "errors": 0,
    "slow": 0,
-   "avgMs": 44,
+   "avgMs": 177,
    "pages": {
     "/": {
-     "score": 76,
-     "lcp": 6713,
+     "score": 77,
+     "lcp": 5917,
      "cls": 0,
-     "tbt": 27,
+     "tbt": 39,
      "field": null
     },
     "/model/xpeng-x9/": {
      "score": 99,
-     "lcp": 1976,
+     "lcp": 1979,
      "cls": 0,
-     "tbt": 36,
+     "tbt": 14,
      "field": null
     },
     "/model/xpeng-g6/": {
-     "score": 81,
-     "lcp": 5094,
+     "score": 77,
+     "lcp": 5388,
      "cls": 0,
-     "tbt": 27,
+     "tbt": 147,
      "field": null
     },
     "/pricelist/": {
      "score": 100,
-     "lcp": 1357,
+     "lcp": 1516,
      "cls": 0,
-     "tbt": 41,
+     "tbt": 46,
      "field": null
     },
     "/kontak/": {
-     "score": 99,
+     "score": 100,
      "lcp": 905,
      "cls": 0,
-     "tbt": 97,
+     "tbt": 32,
      "field": null
     },
-    "/artikel/mobil-listrik-saat-banjir/": {
-     "score": 78,
-     "lcp": 4379,
-     "cls": 0.016,
-     "tbt": 320,
+    "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0.008,
+     "tbt": 37,
      "field": null
     }
    },
@@ -576,60 +576,59 @@
     "perf:/",
     "drop:/",
     "perf:/model/xpeng-g6/",
-    "drop:/model/xpeng-g6/",
-    "perf:/artikel/mobil-listrik-saat-banjir/"
+    "drop:/model/xpeng-g6/"
    ]
   }
  ],
- "generated": "2026-11-03T03:21:33.352Z",
+ "generated": "2026-11-03T15:16:04.081Z",
  "latest": {
   "date": "2026-11-03",
-  "at": "2026-11-03T03:21:33.352Z",
-  "urls": 45,
+  "at": "2026-11-03T15:16:04.081Z",
+  "urls": 49,
   "errors": 0,
   "slow": 0,
-  "avgMs": 44,
+  "avgMs": 177,
   "pages": {
    "/": {
-    "score": 76,
-    "lcp": 6713,
+    "score": 77,
+    "lcp": 5917,
     "cls": 0,
-    "tbt": 27,
+    "tbt": 39,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1976,
+    "lcp": 1979,
     "cls": 0,
-    "tbt": 36,
+    "tbt": 14,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 81,
-    "lcp": 5094,
+    "score": 77,
+    "lcp": 5388,
     "cls": 0,
-    "tbt": 27,
+    "tbt": 147,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1357,
+    "lcp": 1516,
     "cls": 0,
-    "tbt": 41,
+    "tbt": 46,
     "field": null
    },
    "/kontak/": {
-    "score": 99,
+    "score": 100,
     "lcp": 905,
     "cls": 0,
-    "tbt": 97,
+    "tbt": 32,
     "field": null
    },
-   "/artikel/mobil-listrik-saat-banjir/": {
-    "score": 78,
-    "lcp": 4379,
-    "cls": 0.016,
-    "tbt": 320,
+   "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
+    "score": 100,
+    "lcp": 1508,
+    "cls": 0.008,
+    "tbt": 37,
     "field": null
    }
   },
@@ -637,15 +636,13 @@
    "perf:/",
    "drop:/",
    "perf:/model/xpeng-g6/",
-   "drop:/model/xpeng-g6/",
-   "perf:/artikel/mobil-listrik-saat-banjir/"
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 6.7 dtk",
-   "📉 / turun 93 → 76 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /model/xpeng-g6/: LCP 5.1 dtk",
-   "📉 /model/xpeng-g6/ turun 99 → 81 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /artikel/mobil-listrik-saat-banjir/: skor 78, LCP 4.4 dtk, TBT 320 ms"
+   "🔴 /: skor 77, LCP 5.9 dtk",
+   "📉 / turun 93 → 77 sejak pengecekan sebelumnya (melambat)",
+   "🔴 /model/xpeng-g6/: skor 77, LCP 5.4 dtk",
+   "📉 /model/xpeng-g6/ turun 99 → 77 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
