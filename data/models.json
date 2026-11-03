@@ -86,7 +86,7 @@
       },
       {
         "k": "Garansi",
-        "v": "Baterai dan kendaraan 8 tahun"
+        "v": "Baterai dan kendaraan 8 tahun atau 160.000 km"
       },
       {
         "k": "Catatan",
@@ -456,8 +456,24 @@
         "g": "Garansi",
         "rows": [
           {
-            "k": "Baterai dan kendaraan",
-            "v": "8 tahun"
+            "k": "Garansi dasar (komponen kendaraan selain komponen utama, habis pakai, dan item garansi khusus)",
+            "v": "96 bulan (8 tahun) atau 160.000 km"
+          },
+          {
+            "k": "Komponen utama (baterai tegangan tinggi, BMS, motor penggerak, intelligent power unit)",
+            "v": "96 bulan (8 tahun) atau 160.000 km"
+          },
+          {
+            "k": "Karet wiper",
+            "v": "3 bulan atau 5.000 km"
+          },
+          {
+            "k": "Baterai smart key, bohlam lampu, sekring, elemen filter AC, kampas rem",
+            "v": "12 bulan atau 20.000 km"
+          },
+          {
+            "k": "Baterai 12 V",
+            "v": "60 bulan atau 100.000 km"
           }
         ]
       }
@@ -796,7 +812,7 @@
           },
           {
             "k": "Kursi",
-            "v": "Nappa leather, kursi depan 10 arah elektrik (lumbar 4 arah) dengan memori, ventilasi, pemanas, dan pijat"
+            "v": "Nappa leather, kursi depan 12 arah elektrik dengan memori, ventilasi, pemanas, dan pijat"
           },
           {
             "k": "Lampu ambient",
@@ -905,6 +921,31 @@
           {
             "k": "Warna interior",
             "v": "Dark Gray, Light Gray"
+          }
+        ]
+      },
+      {
+        "g": "Garansi",
+        "rows": [
+          {
+            "k": "Garansi dasar (komponen kendaraan selain komponen utama, habis pakai, dan item garansi khusus)",
+            "v": "96 bulan (8 tahun) atau 160.000 km"
+          },
+          {
+            "k": "Komponen utama (baterai tegangan tinggi, BMS, motor penggerak, intelligent power unit)",
+            "v": "96 bulan (8 tahun) atau 160.000 km"
+          },
+          {
+            "k": "Karet wiper",
+            "v": "3 bulan atau 5.000 km"
+          },
+          {
+            "k": "Baterai smart key, bohlam lampu, sekring, elemen filter AC, kampas rem",
+            "v": "12 bulan atau 20.000 km"
+          },
+          {
+            "k": "Baterai 12 V",
+            "v": "12 bulan atau 20.000 km"
           }
         ]
       }
