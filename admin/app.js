@@ -58,7 +58,14 @@ async function putFile(p, content64, msg, retry) {
 }
 async function delFile(p) { const j = await getFile(p); return gh('contents/' + enc2(p), { method: 'DELETE', body: JSON.stringify({ message: 'Hapus ' + p, sha: j.sha, branch: S.cfg.branch }) }); }
 async function listDir(p) { try { return await gh('contents/' + enc2(p) + '?ref=' + S.cfg.branch); } catch (e) { if (e.status === 404) return []; throw e; } }
-async function loadData() { for (const n of NAMES) { try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); } catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil') ? {} : []; } } }
+async function loadData(onStep) {
+  let done = 0;
+  await Promise.all(NAMES.map(async n => {
+    try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); }
+    catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil') ? {} : []; }
+    done++; if (onStep) onStep(done, NAMES.length);
+  }));
+}
 async function save(n, msg) { const btn = document.activeElement; try { await putFile('data/' + n + '.json', b64(JSON.stringify(S.d[n], null, 1)), msg || 'Update ' + n + ' via admin'); toast('Tersimpan. Website update otomatis ±1-2 menit.'); } catch (e) { toast('Gagal simpan: ' + e.message, true); throw e; } }
 
 /* ---------- login ---------- */
@@ -107,9 +114,11 @@ function pinView(raw) {
   $('#ok').onclick = async () => { try { S.cfg = await unseal(raw, $('#p').value); start(); } catch (e) { toast('PIN salah', true); } };
   $('#rs').onclick = () => { localStorage.removeItem('xp_cfg'); loginView(); };
 }
+const loaderHTML = txt => `<div class="ld"><div class="ldlogo"><i></i><img src="../assets/img/icon-white.svg" alt=""></div><b>XPENG ADMIN</b><p class="muted" id="ldtxt">${E(txt)}</p><div class="ldb"><i id="ldbar"></i></div></div>`;
 async function start() {
-  app.innerHTML = '<main><p class="muted">Memuat data dari GitHub…</p></main>';
-  try { await loadData(); } catch (e) { return loginView('Gagal memuat: ' + e.message, S.cfg); }
+  app.innerHTML = loaderHTML('Memuat data dari GitHub…');
+  const t0 = Date.now();
+  try { await loadData((d, n) => { const b = $('#ldbar'), t = $('#ldtxt'); if (b) b.style.width = Math.round(d / n * 100) + '%'; if (t) t.textContent = 'Memuat data ' + d + '/' + n + '…'; }); await new Promise(r => setTimeout(r, Math.max(0, 450 - (Date.now() - t0)))); } catch (e) { return loginView('Gagal memuat: ' + e.message, S.cfg); }
   shell(); go('home');
 }
 
@@ -196,9 +205,9 @@ ${(d.channels || []).length ? `<div style="margin-top:10px"><div class="muted">S
 VIEWS.home = async v => {
   const a = S.d.articles, pub = a.filter(x => x.status === 'published').length, sch = a.filter(x => x.status === 'scheduled').length, rdy = a.filter(x => x.status === 'ready').length;
   v.innerHTML = `<h2>Beranda</h2><div class="grid"><div class="card"><div class="muted">Model</div><div class="score">${S.d.models.length}</div></div><div class="card"><div class="muted">Artikel terbit</div><div class="score">${pub}</div><div class="muted">${a.length - pub - sch - rdy} draft • ${rdy} siap • ${sch} terjadwal</div></div><div class="card"><div class="muted">Keyword</div><div class="score">${S.d.keywords.length}</div></div></div>
-<div class="card"><h3>👥 Pengunjung website</h3><div id="trf" class="muted">Memuat…</div></div>
-<div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted">Memuat…</div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
-<div class="card"><h3>Kabar ke Bing (IndexNow)</h3><div id="inx" class="muted">Memuat…</div></div>
+<div class="card"><h3>👥 Pengunjung website</h3><div id="trf" class="muted"><div class="sk"><i></i><i></i><i></i></div></div></div>
+<div class="card"><h3>Skor SEO situs</h3><div id="hs" class="muted"><div class="sk"><i></i><i></i><i></i></div></div><div class="row" style="margin-top:12px"><button id="b1">Jalankan build & cek ulang</button><button class="s" data-go="seo">Lihat laporan</button></div></div>
+<div class="card"><h3>Kabar ke Bing (IndexNow)</h3><div id="inx" class="muted"><div class="sk"><i></i><i></i><i></i></div></div></div>
 <div class="card"><h3>Proses GitHub Actions</h3><div id="runbox"></div></div>
 <div class="card"><h3>Mulai cepat</h3><div class="row"><button class="s" data-go="articles">Tulis artikel</button><button class="s" data-go="prices">Ubah harga</button><button class="s" data-go="media">Upload foto/zip</button><button class="s" data-go="backup">Backup</button></div></div>
 <div class="card"><h3>Langkah awal wajib</h3><p class="muted">1) Pengaturan: isi nama dealer, nomor WhatsApp, alamat, dan baseUrl. 2) Upload foto asli di Media. 3) Cek skor SEO artikel sebelum terbit.</p></div>`;

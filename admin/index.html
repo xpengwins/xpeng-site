@@ -29,7 +29,14 @@ details.cl{padding:0}details.cl>summary{list-style:none;cursor:pointer;padding:1
 @media(min-width:700px){.mdl{align-items:center}.mdlbox{border-radius:16px}}
 .gal{grid-template-columns:repeat(auto-fill,minmax(112px,1fr))}.gal figure{position:relative}.mdl .gal figure{cursor:pointer}.gal figure.on{outline:3px solid var(--ac);outline-offset:-3px}
 .mth{position:relative;height:84px;background:#0d0f13;display:flex;align-items:center;justify-content:center;font-size:1.6rem}.thumbs .mth img{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover}
+.ld{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:24px;text-align:center}.ld b{letter-spacing:.18em;font-weight:600}
+.ldlogo{position:relative;width:84px;height:84px;display:grid;place-items:center}.ldlogo img{width:38px;animation:ldp 1.6s ease-in-out infinite}.ldlogo i{position:absolute;inset:0;border-radius:50%;border:3px solid var(--line);border-top-color:var(--ac);border-right-color:var(--ac);animation:lds 1s linear infinite;box-shadow:0 0 24px #2ee6b633}
+.ldb{width:min(220px,60vw);height:4px;border-radius:9px;background:var(--line);overflow:hidden}.ldb i{display:block;height:100%;width:30%;background:var(--ac);border-radius:9px;transition:width .3s;animation:ldb 1.4s ease-in-out infinite}
+@keyframes lds{to{transform:rotate(360deg)}}@keyframes ldp{0%,100%{opacity:.55;transform:scale(.92)}50%{opacity:1;transform:scale(1.05)}}@keyframes ldb{0%{margin-left:-30%}100%{margin-left:100%}}
+.sk{display:grid;gap:10px;padding:4px 0}.sk i{display:block;height:14px;border-radius:8px;background:linear-gradient(90deg,#1d2129 25%,#2a303b 50%,#1d2129 75%);background-size:200% 100%;animation:skm 1.2s linear infinite}.sk i:nth-child(1){width:70%}.sk i:nth-child(2){width:95%}.sk i:nth-child(3){width:45%}
+@keyframes skm{to{background-position:-200% 0}}
+@media(prefers-reduced-motion:reduce){.ldlogo i,.ldlogo img,.ldb i,.sk i{animation-duration:3s}}
 </style></head><body>
-<div id="app"></div>
+<div id="app"><div class="ld"><div class="ldlogo"><i></i><img src="../assets/img/icon-white.svg" alt=""></div><b>XPENG ADMIN</b><p class="muted">Membuka admin…</p><div class="ldb"><i></i></div></div></div>
 <script>/* selalu muat versi terbaru (hindari cache lama di browser) */(function(){var v=Date.now();['../shared/md.js','../shared/seo.js','app.js'].forEach(function(f){document.write('<script src="'+f+'?v='+v+'"><\/script>')})})();</script>
 </body></html>
