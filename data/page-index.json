@@ -530,6 +530,18 @@
       "tag": "h2"
      },
      {
+      "t": "XPeng G9L",
+      "tag": "span"
+     },
+     {
+      "t": "Jarak Tempuh XPeng G9L: 755 km CLTC, Nyatanya Berapa?",
+      "tag": "h3"
+     },
+     {
+      "t": "Jarak tempuh XPeng G9L BEV hingga 755 km (CLTC) dan EREV 1.602 km gabungan. Pelajari bedanya CLTC dan WLTP serta perkiraan jarak nyata di jalan Indonesia.",
+      "tag": "p"
+     },
+     {
       "t": "Tips EV",
       "tag": "span"
      },
@@ -552,10 +564,6 @@
      {
       "t": "Harga XPeng G9L di China mulai 241.800 yuan dan di Eropa mulai 74.600 euro. Simak cara membaca angkanya dan alasan harga Indonesia belum bisa dipastikan.",
       "tag": "p"
-     },
-     {
-      "t": "XPeng G9L",
-      "tag": "span"
      },
      {
       "t": "XPeng G9L Indonesia: Kapan Rilis dan Apa Kabarnya?",
@@ -855,6 +863,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-depan-pantai-senja.webp",
+      "alt": "Xpengwins Xpeng G9L melaju di pesisir untuk ilustrasi jarak tempuh jauh"
+     },
      {
       "src": "/assets/img/222752-1nmq.webp",
       "alt": "XPeng X9 hitam tampak depan, mobil listrik dan risiko banjir"
