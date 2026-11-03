@@ -423,6 +423,13 @@ function editModel(v, i) {
 <label>Daftar path galeri (otomatis terisi, boleh diedit/urutkan)<textarea id="m_gallery">${E(m.gallery.join('\n'))}</textarea></label>
 <label>Keunggulan (satu per baris)<textarea id="m_highlights" style="font-family:inherit">${E(m.highlights.join('\n'))}</textarea></label>
 <label>Spesifikasi (Nama: nilai)<textarea id="m_specs" style="font-family:inherit">${E(m.specs.map(x => x.k + ': ' + x.v).join('\n'))}</textarea></label>
+<h3 style="margin-top:16px">📋 Spesifikasi lengkap, perbedaan varian, brosur</h3><p class="muted" style="font-size:13px">Tampil di bagian <b>Spesifikasi</b> halaman model: tombol <b>Lihat detail</b> membuka tabel perbedaan antar varian (baris yang beda otomatis diberi tanda <b>Beda</b>) dan spesifikasi lengkap. Judul kelompok ditulis dengan <code>## Nama kelompok</code>.</p>
+<label>Perbedaan varian (urutan nilai sama dengan urutan varian di atas)<textarea id="m_cmp" style="font-family:inherit;min-height:170px" placeholder="## Performa&#10;Tenaga: 218 kW | 358 kW&#10;Kursi pijat: — | ✓">${E(cmpToText(m.compare))}</textarea></label>
+<p class="muted" style="font-size:12px;margin-top:-6px">Format per baris: <code>Nama fitur: nilai varian 1 | nilai varian 2</code>. Tulis <code>✓</code> untuk ada dan <code>—</code> untuk tidak ada. Baris harga dibuat otomatis.</p>
+<label>Spesifikasi lengkap<textarea id="m_det" style="font-family:inherit;min-height:200px" placeholder="## Dimensi&#10;Panjang: 4.758 mm">${E(detToText(m.detail))}</textarea></label>
+<label>Catatan di bawah spesifikasi (boleh kosong)<textarea id="m_snote" style="font-family:inherit">${E(m.specNote || '')}</textarea></label>
+<label>Brosur PDF (path file)<input id="m_brosur" value="${E(m.brosur || '')}" placeholder="belum ada: tombol akan jadi Minta brosur via WhatsApp"></label>
+<div class="row" style="margin-bottom:6px"><button class="s sm" id="up_bro" data-noc>📄 Upload brosur PDF</button><button class="d sm" id="x_bro" data-noc>Hapus brosur</button></div>
 <label>FAQ (Pertanyaan?|Jawaban)<textarea id="m_faq" style="font-family:inherit">${E(m.faq.map(x => x.q + '|' + x.a).join('\n'))}</textarea></label>
 <h3 style="margin-top:16px">🎬 Video model</h3><p class="muted" style="font-size:13px">Tampil di web tanpa border dan tanpa jarak kiri-kanan. Alt text wajib diisi. Video panjang sebaiknya lewat YouTube.</p><div id="vids"></div><div class="row"><button class="s sm" id="addyt">+ Video YouTube</button><button class="s sm" id="addmp">+ Upload video MP4</button></div>
 <div class="row"><button id="sv">Simpan</button><button class="s" id="bk">Kembali</button></div></div>`;
@@ -456,11 +463,20 @@ function editModel(v, i) {
   drawVids();
   $('#addyt').onclick = () => { vids.push({ type: 'youtube', url: '', alt: '', title: '' }); drawVids(); };
   $('#addmp').onclick = () => { const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'video/*,.mp4,.mov,.m4v,.webm'; inp.onchange = async () => { const f = inp.files[0]; if (!f) return; try { const src = await uploadVideo(f); vids.push({ type: 'mp4', src, alt: '', title: '', pending: true }); drawVids(); toast('Video terkirim. Isi alt text lalu klik Simpan.'); } catch (e) { toast(e.message, true); } }; inp.click(); };
+  $('#up_bro').onclick = () => { const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'application/pdf,.pdf'; inp.onchange = async () => { const f = inp.files[0]; if (!f) return; if (!/\.pdf$/i.test(f.name)) return toast('Pilih file PDF', true); try { toast('Mengunggah brosur…'); const p = await uploadAny(f); $('#m_brosur').value = p; toast('✓ Brosur terunggah. Tekan Simpan agar tombol download aktif.'); } catch (e) { toast(e.message, true); } }; inp.click(); };
+  $('#x_bro').onclick = () => { $('#m_brosur').value = ''; toast('Brosur dilepas. Tekan Simpan.'); };
   $('#bk').onclick = () => go('models');
   $('#sv').onclick = async () => { const g = id => $('#m_' + id).value; const bad = vids.findIndex(x => !(x.alt || '').trim() || (x.type === 'youtube' && !ytid(x.url))); if (bad >= 0) return toast('Video #' + (bad + 1) + ': alt text wajib diisi' + (vids[bad].type === 'youtube' ? ' dan link YouTube harus benar' : ''), true); m.interior = ints.filter(x => x.src).map(x => ({ src: x.src, alt: (x.alt || '').trim() })); m.videos = vids.map(x => x.type === 'youtube' ? { type: 'youtube', id: ytid(x.url), alt: x.alt.trim(), title: (x.title || '').trim() } : { type: 'mp4', src: x.src, alt: x.alt.trim(), title: (x.title || '').trim() }); Object.assign(m, { name: g('name'), slug: g('slug').toLowerCase().replace(/[^a-z0-9-]/g, '-'), type: g('type'), tagline: g('tagline'), hero: g('hero'), metaTitle: g('metaTitle'), metaDescription: g('metaDescription'),
     variants: lines(g('variants')).map(l => { const p = l.split('|'); return { name: p[0].trim(), price: parseInt(String(p[1] || '0').replace(/\D/g, '')) || 0 }; }), colors: cols.filter(c => c.name.trim()).map(c => ({ name: c.name.trim(), hex: c.hex || '#999999', image: c.image || g('hero') })),
-    gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
+    gallery: lines(g('gallery')), highlights: lines(g('highlights')), specs: lines(g('specs')).map(l => { const k = l.indexOf(':'); return { k: l.slice(0, k).trim(), v: l.slice(k + 1).trim() }; }), compare: textToCmp(g('cmp')), detail: textToDet(g('det')), specNote: g('snote').trim(), brosur: g('brosur').trim(), faq: lines(g('faq')).map(l => { const p = l.split('|'); return { q: p[0].trim(), a: (p[1] || '').trim() }; }) }); await save('models', 'Model: ' + m.name); };
 }
+
+/* --- format teks <-> data untuk spesifikasi lengkap dan perbedaan varian --- */
+const cmpToText = a => (a || []).map(g => (g.g ? '## ' + g.g + '\n' : '') + (g.rows || []).map(r => r.k + ': ' + (r.vals || []).join(' | ')).join('\n')).join('\n');
+const detToText = a => (a || []).map(g => (g.g ? '## ' + g.g + '\n' : '') + (g.rows || []).map(r => r.k + ': ' + r.v).join('\n')).join('\n');
+function textToGroups(t, mk) { const out = []; let cur = null; String(t || '').split('\n').map(x => x.trim()).filter(Boolean).forEach(l => { if (l.startsWith('##')) { cur = { g: l.replace(/^#+\s*/, ''), rows: [] }; out.push(cur); return; } const i = l.indexOf(':'); if (i < 1) return; if (!cur) { cur = { g: '', rows: [] }; out.push(cur); } cur.rows.push(mk(l.slice(0, i).trim(), l.slice(i + 1).trim())); }); return out; }
+const textToCmp = t => textToGroups(t, (k, v) => ({ k, vals: v.split('|').map(x => x.trim()) }));
+const textToDet = t => textToGroups(t, (k, v) => ({ k, v }));
 
 /* --- Model akan launching / belum launching --- */
 VIEWS.upcoming = v => {

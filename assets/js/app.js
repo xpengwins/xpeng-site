@@ -1,6 +1,8 @@
 (function(){'use strict';
 var B=document.body,$=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
 var WA=B.dataset.wa,base=B.dataset.base||'';
+/* spesifikasi: buka/tutup detail + saring hanya perbedaan */
+(function(){var b=$('#spbtn'),m=$('#spmore');if(!b||!m)return;b.addEventListener('click',function(){var o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Tutup detail':'Lihat detail';if(o)m.scrollIntoView({behavior:'smooth',block:'nearest'})});var c=$('#spdiff'),t=$('#sptbl');if(c&&t)c.addEventListener('change',function(){t.setAttribute('data-only',c.checked?'1':'0')})})();
 /* animasi memuat: gambar tampil shimmer sampai selesai dimuat */
 var mk=function(i){i.classList.add('px');i.classList.remove('ok');var d=function(){i.classList.add('ok')};if(i.complete&&i.naturalWidth)d();else{i.addEventListener('load',d,{once:true});i.addEventListener('error',d,{once:true})}};
 $$('img.px,img[loading="lazy"]:not(.nopx)').forEach(function(i){if(i.naturalWidth&&i.complete){i.classList.add('ok');return}mk(i)});

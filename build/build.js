@@ -194,12 +194,31 @@ function videoSection(m, vids) {
 function videoLd(m, vids) {
   return vids.map(v => ({ '@context': 'https://schema.org', '@type': 'VideoObject', name: v.title || v.alt || m.name + ' video', description: v.alt || v.title || m.name, thumbnailUrl: [abs(v.type === 'youtube' ? v.thumb : (v.poster || m.hero))], uploadDate: v.date || new Date().toISOString().slice(0, 10), ...(v.type === 'youtube' ? { embedUrl: 'https://www.youtube-nocookie.com/embed/' + v.id } : { contentUrl: abs(v.src) }) }));
 }
+
+/* ---- spesifikasi lengkap + perbedaan varian + brosur (data: m.detail, m.compare, m.brosur) ---- */
+const specCell = v => { const t = String(v == null ? '' : v).trim(); return t === '✓' || /^(ya|ada|standar)$/i.test(t) ? '<span class="yes" aria-label="Ada">✓</span>' : t === '—' || t === '-' || /^(tidak|tidak ada)$/i.test(t) ? '<span class="no" aria-label="Tidak ada">—</span>' : E(t); };
+function specSection(m) {
+  const vs = m.variants || [], cmp = (m.compare || []).filter(g => g && (g.rows || []).length), det = (m.detail || []).filter(g => g && (g.rows || []).length);
+  const brosur = m.brosur ? `<a class="btn" href="${u(m.brosur)}" download target="_blank" rel="noopener">⬇ Download brosur (PDF)</a>` : `<a class="btn" href="${wa('Halo, saya minta brosur ' + m.name)}" rel="noopener">⬇ Minta brosur (PDF)</a>`;
+  const prices = vs.map(v => v.price), priceRow = vs.length > 1 ? { k: 'Harga OTR ' + site.pricelistUpdate, vals: vs.map(v => rp(v.price)), diff: prices.some(p => p !== prices[0]) } : null;
+  const rows = g => (g.rows || []).map(r => { const vals = vs.map((_, i) => (r.vals || [])[i] == null ? '' : (r.vals || [])[i]), diff = vals.some(x => String(x).trim() !== String(vals[0]).trim()); return { k: r.k, vals, diff }; });
+  const grp = cmp.map(g => ({ g: g.g, rows: rows(g) }));
+  const nDiff = grp.reduce((a, g) => a + g.rows.filter(r => r.diff).length, 0) + (priceRow && priceRow.diff ? 1 : 0);
+  const th = vs.map(v => `<th scope="col">${E(v.name.replace(/^(New )?XPeng /i, ''))}</th>`).join('');
+  const body = (priceRow ? `<tbody><tr class="diff"><th scope="row">${E(priceRow.k)}</th>${priceRow.vals.map(x => `<td><b>${E(x)}</b></td>`).join('')}</tr></tbody>` : '') + grp.map(g => `<tbody>${g.g ? `<tr class="grp"><th colspan="${vs.length + 1}" scope="colgroup">${E(g.g)}</th></tr>` : ''}${g.rows.map(r => `<tr class="${r.diff ? 'diff' : 'same'}"><th scope="row">${E(r.k)}${r.diff ? ' <i class="bd">Beda</i>' : ''}</th>${r.vals.map(x => `<td>${specCell(x)}</td>`).join('')}</tr>`).join('')}</tbody>`).join('');
+  const cmpHtml = vs.length > 1 ? `<div class="spcmp"><h3>Perbedaan ${E(vs.map(v => v.name.replace(/^(New )?XPeng /i, '')).join(' dan '))}</h3><p class="sphint">${nDiff} perbedaan ditandai <i class="bd">Beda</i>. Baris tanpa tanda berarti sama di semua varian.</p>${cmp.length ? '<label class="spchk"><input type="checkbox" id="spdiff" checked> Tampilkan perbedaan saja</label>' : ''}<div class="tbl spcmpw"><table class="sptbl" id="sptbl" data-only="1"><thead><tr><th scope="col">Fitur</th>${th}</tr></thead>${body}</table></div></div>` : '';
+  const detHtml = det.length ? `<div class="spdet"><h3>Spesifikasi lengkap</h3>${det.map(g => `<div class="spgrp">${g.g ? `<h4>${E(g.g)}</h4>` : ''}<table class="sptbl one"><tbody>${g.rows.map(r => `<tr><th scope="row">${E(r.k)}</th><td>${specCell(r.v)}</td></tr>`).join('')}</tbody></table></div>`).join('')}</div>` : '';
+  const hasMore = !!(cmpHtml && (cmp.length || priceRow) || detHtml);
+  const note = m.specNote || 'Spesifikasi mengacu pada brosur resmi XPeng dan dapat berubah sewaktu-waktu. Konfigurasi unit mengikuti stok dealer. Hubungi kami untuk data terbaru.';
+  return `<section class="section" id="spesifikasi"><noscript><style>#spmore[hidden]{display:block}.sptbl[data-only] tr.same,.sptbl[data-only] tr.grp{display:table-row}</style></noscript><div class="wrap"><span class="eyebrow">Spesifikasi</span><h2>Spesifikasi dan perbedaan varian ${E(m.name)}</h2><p class="splead">Lihat ringkasannya di atas, buka detailnya di sini${vs.length > 1 ? ', lalu bandingkan ' + E(vs.map(v => v.name).join(' dengan ')) : ''}.</p><div class="spbtns">${hasMore ? '<button type="button" class="btn ghost" id="spbtn" aria-expanded="false" aria-controls="spmore">Lihat detail</button>' : ''}${brosur}</div>${hasMore ? `<div id="spmore" class="spmore" hidden>${cmpHtml}${detHtml}<p class="spnote">${E(note)}</p></div>` : ''}</div></section>`;
+}
 function modelPage(m) {
   const vids = videoItems(m);
   const p = '/model/' + m.slug + '/';
   const body = `<section class="mhero">${picture(m.hero, m.name + ' ' + m.type, 'bg', 1280, 960, false)}<div class="shade"></div><div class="wrap cap"><nav class="crumb" aria-label="Breadcrumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/model/')}">Model</a> › ${E(m.name)}</nav><span class="eyebrow">${E(m.type)}</span><h1>${E(m.name)}</h1><p>${E(m.tagline)}</p><div class="cta"><a class="btn" href="${wa('Halo, saya tertarik ' + m.name)}" rel="noopener">Tanya harga</a><a class="btn ghost" href="${u('/kontak/')}">Test Drive</a></div></div></section>
 <section class="section"><div class="wrap two"><div><h2>Keunggulan ${E(m.name)}</h2><ul class="check">${m.highlights.map(h => `<li>${E(h)}</li>`).join('')}</ul><h2>Harga ${E(m.name)} ${E(site.pricelistUpdate)}</h2><table class="ptbl"><tbody>${m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`).join('')}</tbody></table></div>
 <div><h2>Spesifikasi ringkas</h2><table class="ptbl spec"><tbody>${m.specs.map(s => `<tr><th>${E(s.k)}</th><td>${E(s.v)}</td></tr>`).join('')}</tbody></table></div></div></section>
+${specSection(m)}
 ${cfgSection([m], { id: 'atur-mobil' })}
 ${leasingSection()}
 ${videoSection(m, vids)}

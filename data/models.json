@@ -114,7 +114,92 @@
     "src": "assets/img/228027.webp",
     "alt": "Rose Brown"
    }
-  ]
+  ],
+  "compare": [],
+  "detail": [
+   {
+    "g": "Dimensi dan ruang",
+    "rows": [
+     {
+      "k": "Panjang × lebar × tinggi",
+      "v": "5.316 × 1.988 × 1.785 mm"
+     },
+     {
+      "k": "Jarak sumbu roda",
+      "v": "3.160 mm"
+     },
+     {
+      "k": "Kapasitas bagasi",
+      "v": "721 L, hingga 2.554 L"
+     },
+     {
+      "k": "Konfigurasi kursi",
+      "v": "7 kursi"
+     }
+    ]
+   },
+   {
+    "g": "Performa dan sasis",
+    "rows": [
+     {
+      "k": "Tenaga",
+      "v": "235 kW"
+     },
+     {
+      "k": "Torsi",
+      "v": "450 Nm"
+     },
+     {
+      "k": "Akselerasi 0–100 km/jam",
+      "v": "7,7 detik"
+     },
+     {
+      "k": "Penggerak",
+      "v": "Motor listrik, roda depan (FWD)"
+     },
+     {
+      "k": "Arsitektur",
+      "v": "800V"
+     },
+     {
+      "k": "Koefisien drag",
+      "v": "0,236 Cd"
+     },
+     {
+      "k": "Radius putar",
+      "v": "5,4 m"
+     },
+     {
+      "k": "Roda belakang",
+      "v": "Ikut mengarah (rear steering)"
+     },
+     {
+      "k": "Suspensi",
+      "v": "Udara, dua ruang"
+     }
+    ]
+   },
+   {
+    "g": "Warna",
+    "rows": [
+     {
+      "k": "Pilihan warna luar",
+      "v": "Midnight Black, Silver Frost, Arctic White"
+     }
+    ]
+   },
+   {
+    "g": "Garansi",
+    "rows": [
+     {
+      "k": "Baterai dan kendaraan",
+      "v": "8 tahun"
+     }
+    ]
+   }
+  ],
+  "specNote": "Perbedaan fitur lengkap antara varian akan mengikuti brosur resmi XPeng. Unduh brosur atau hubungi kami untuk daftar fitur terbaru tiap varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+  "brosur": ""
  },
  {
   "slug": "xpeng-g6",
@@ -229,6 +314,301 @@
     "alt": "xpengwins xpeng G6 Pro",
     "title": ""
    }
-  ]
+  ],
+  "compare": [
+   {
+    "g": "Performa",
+    "rows": [
+     {
+      "k": "Penggerak",
+      "vals": [
+       "RWD (satu motor)",
+       "AWD (dua motor)"
+      ]
+     },
+     {
+      "k": "Tenaga",
+      "vals": [
+       "218 kW",
+       "358 kW (218 + 140 kW)"
+      ]
+     },
+     {
+      "k": "Torsi",
+      "vals": [
+       "440 Nm",
+       "660 Nm (440 + 220 Nm)"
+      ]
+     },
+     {
+      "k": "Akselerasi 0–100 km/jam",
+      "vals": [
+       "6,7 detik",
+       "4,13 detik"
+      ]
+     },
+     {
+      "k": "Jarak tempuh (WLTP)",
+      "vals": [
+       "525 km",
+       "510 km"
+      ]
+     }
+    ]
+   },
+   {
+    "g": "Baterai dan pengisian",
+    "rows": [
+     {
+      "k": "Baterai",
+      "vals": [
+       "LFP 80,8 kWh",
+       "LFP 80,8 kWh"
+      ]
+     },
+     {
+      "k": "Platform",
+      "vals": [
+       "SEPA 2.0, 800V, 5C",
+       "SEPA 2.0, 800V, 5C"
+      ]
+     },
+     {
+      "k": "Pengisian DC maksimum",
+      "vals": [
+       "451 kW",
+       "451 kW"
+      ]
+     },
+     {
+      "k": "Pengisian AC",
+      "vals": [
+       "11 kW",
+       "11 kW"
+      ]
+     }
+    ]
+   }
+  ],
+  "detail": [
+   {
+    "g": "Performa (G6 Pro)",
+    "rows": [
+     {
+      "k": "Tenaga",
+      "v": "218 kW"
+     },
+     {
+      "k": "Torsi",
+      "v": "440 Nm"
+     },
+     {
+      "k": "Akselerasi 0–100 km/jam",
+      "v": "6,7 detik"
+     },
+     {
+      "k": "Jarak tempuh",
+      "v": "618 km (NEDC) / 525 km (WLTP)"
+     },
+     {
+      "k": "Kecepatan puncak",
+      "v": "202 km/jam"
+     },
+     {
+      "k": "Koefisien drag",
+      "v": "0,248 Cd"
+     },
+     {
+      "k": "Radius putar",
+      "v": "5,8 m"
+     }
+    ]
+   },
+   {
+    "g": "Baterai dan pengisian",
+    "rows": [
+     {
+      "k": "Tipe sel baterai",
+      "v": "LFP"
+     },
+     {
+      "k": "Kapasitas baterai bruto",
+      "v": "80,8 kWh"
+     },
+     {
+      "k": "Daya pengisian AC",
+      "v": "11 kW"
+     },
+     {
+      "k": "Waktu pengisian AC 5–100%",
+      "v": "9,2 jam"
+     },
+     {
+      "k": "Daya pengisian DC maksimum",
+      "v": "451 kW"
+     },
+     {
+      "k": "Pengisian DC 10–80%",
+      "v": "12 menit"
+     },
+     {
+      "k": "V2L (listrik keluar kendaraan)",
+      "v": "✓"
+     },
+     {
+      "k": "Jenis port pengisian",
+      "v": "CCS2"
+     }
+    ]
+   },
+   {
+    "g": "Dimensi",
+    "rows": [
+     {
+      "k": "Panjang",
+      "v": "4.758 mm"
+     },
+     {
+      "k": "Lebar",
+      "v": "1.920 mm"
+     },
+     {
+      "k": "Tinggi",
+      "v": "1.650 mm"
+     },
+     {
+      "k": "Jarak sumbu roda",
+      "v": "2.899 mm"
+     }
+    ]
+   },
+   {
+    "g": "Sasis dan berkendara",
+    "rows": [
+     {
+      "k": "Suspensi depan",
+      "v": "Double wishbone"
+     },
+     {
+      "k": "Mode berkendara",
+      "v": "ECO, Comfort, Sport, Individual, Launch, Escape"
+     },
+     {
+      "k": "Sistem rem",
+      "v": "OneBox, cakram ventilasi depan dan belakang"
+     }
+    ]
+   },
+   {
+    "g": "Kabin dan teknologi",
+    "rows": [
+     {
+      "k": "Panel instrumen digital",
+      "v": "10,25 inci"
+     },
+     {
+      "k": "Layar tengah",
+      "v": "15,6 inci"
+     },
+     {
+      "k": "Audio",
+      "v": "18 speaker, termasuk 2 speaker di sisi kursi pengemudi"
+     },
+     {
+      "k": "Kursi",
+      "v": "Nappa leather, kursi depan 12 arah elektrik dengan memori, ventilasi dan pemanas"
+     },
+     {
+      "k": "Lampu ambient",
+      "v": "256 warna"
+     },
+     {
+      "k": "Kunci",
+      "v": "Kunci Bluetooth di HP, kunci UWB, kartu NFC"
+     }
+    ]
+   },
+   {
+    "g": "Keselamatan",
+    "rows": [
+     {
+      "k": "Airbag",
+      "v": "7"
+     },
+     {
+      "k": "Pemantau tekanan ban (TPMS)",
+      "v": "✓"
+     },
+     {
+      "k": "ISOFIX baris belakang",
+      "v": "✓"
+     },
+     {
+      "k": "Autohold",
+      "v": "✓"
+     },
+     {
+      "k": "Suara peringatan kendaraan (AVAS)",
+      "v": "✓"
+     },
+     {
+      "k": "Pengingat sabuk pengaman",
+      "v": "✓"
+     }
+    ]
+   },
+   {
+    "g": "XPILOT Assist",
+    "rows": [
+     {
+      "k": "Prosesor",
+      "v": "NVIDIA Orin-X"
+     },
+     {
+      "k": "Bantuan mengemudi",
+      "v": "ACC, LCC, ATC, ALC"
+     },
+     {
+      "k": "Pencegahan tabrakan",
+      "v": "AEB, FCW, FDM, LDW, LKA, ELK, BSD, DOW, RCW, RCTA, TSR, IHB, SAS"
+     },
+     {
+      "k": "Bantuan parkir",
+      "v": "Kamera sekeliling, parkir otomatis, keluar parkir otomatis"
+     },
+     {
+      "k": "Pemantau pengemudi dan perekam jalan",
+      "v": "✓"
+     }
+    ]
+   },
+   {
+    "g": "Perangkat lunak",
+    "rows": [
+     {
+      "k": "Asisten suara",
+      "v": "“Hey XPENG”"
+     },
+     {
+      "k": "Konektivitas",
+      "v": "Apple CarPlay, Android Auto, app store, navigasi"
+     },
+     {
+      "k": "Pembaruan jarak jauh (OTA)",
+      "v": "✓"
+     },
+     {
+      "k": "Parkir jarak jauh dan panggil mobil",
+      "v": "✓"
+     },
+     {
+      "k": "Transparent chassis",
+      "v": "✓"
+     }
+    ]
+   }
+  ],
+  "specNote": "Detail lengkap di atas mengacu pada brosur XPeng G6 Pro. Perbedaan tenaga, torsi, akselerasi, dan jarak tempuh G6 AWD ada di tabel perbedaan varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+  "brosur": ""
  }
 ]
