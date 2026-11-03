@@ -2042,6 +2042,363 @@
    }
   ]
  },
+ "/tentang/bengkel-rekanan-luar-kota/": {
+  "label": "Bengkel Rekanan XPeng Luar Kota | Daftar Lengkap",
+  "sections": [
+   {
+    "key": "bengkel-rekanan-xpeng-luar-kota",
+    "title": "Bengkel Rekanan XPeng Luar Kota",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "Tentang",
+      "tag": "a"
+     },
+     {
+      "t": "› Bengkel Rekanan Luar Kota",
+      "tag": "nav"
+     },
+     {
+      "t": "Bengkel Rekanan XPeng Luar Kota",
+      "tag": "h1"
+     },
+     {
+      "t": "Daftar bengkel rekanan di luar kota, untuk service di luar jangkauan dealer atau di kota yang belum memiliki dealer XPeng.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "daftar-bengkel",
+    "title": "Provinsi · Bali · Redana Motor",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Provinsi",
+      "tag": "span"
+     },
+     {
+      "t": "Bali",
+      "tag": "span"
+     },
+     {
+      "t": "Redana Motor",
+      "tag": "h3"
+     },
+     {
+      "t": "Kab. Badung",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Gn. Sari No.6, Sanur Kauh, Denpasar Selatan, Kota Denpasar, Bali 80227",
+      "tag": "p"
+     },
+     {
+      "t": "📍 Buka di Google Maps",
+      "tag": "a"
+     },
+     {
+      "t": "Salin alamat",
+      "tag": "button"
+     },
+     {
+      "t": "Bengkulu",
+      "tag": "span"
+     },
+     {
+      "t": "Holy Ban Bengkulu",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Bengkulu",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Jendral. Sudirman No.27, Tengah Padang, Kec. Tlk. Segara, Kota Bengkulu, Bengkulu 38118",
+      "tag": "p"
+     },
+     {
+      "t": "DI Yogyakarta",
+      "tag": "span"
+     },
+     {
+      "t": "Jogja Speed 3",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Yogyakarta",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Bantul No.110, Gedongkiwo, Kec. Mantrijeron, Kota Yogyakarta, Daerah Istimewa Yogyakarta 55142",
+      "tag": "p"
+     },
+     {
+      "t": "Jambi",
+      "tag": "span"
+     },
+     {
+      "t": "Bengkel Mobil Pandawa Jaya",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Jambi",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Sersan Anwar Bay Lrg. Patin No.91, Bagan Pete, Kec. Kota Baru, Kota Jambi, Jambi",
+      "tag": "p"
+     },
+     {
+      "t": "Jawa Barat",
+      "tag": "span"
+     },
+     {
+      "t": "Chery Inti Mobil Bandung",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Bandung",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Dr. Setiabudi No.65, Gegerkalong, Kec. Sukasari, Kota Bandung, Jawa Barat 40153",
+      "tag": "p"
+     },
+     {
+      "t": "Jawa Tengah",
+      "tag": "span"
+     },
+     {
+      "t": "Chery Inti Mobil Solo",
+      "tag": "h3"
+     },
+     {
+      "t": "Kab. Sukoharjo",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. A. Yani No.302, RW.km 15, Somodinatan, Ngadirejo, Kec. Kartasura, Kabupaten Sukoharjo, Jawa Tengah 57163",
+      "tag": "p"
+     },
+     {
+      "t": "Bengkel Sinar Barito (SITO) Arteri",
+      "tag": "h3"
+     },
+     {
+      "t": "Semarang",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Soekarno Hatta No.50, Tlogosari Kulon, Kec. Pedurungan, Kota Semarang, Jawa Tengah 50196",
+      "tag": "p"
+     },
+     {
+      "t": "Jawa Timur",
+      "tag": "span"
+     },
+     {
+      "t": "Prima AC Kediri",
+      "tag": "h3"
+     },
+     {
+      "t": "Kab. Kediri",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Sersan Bahrun No.mor 27, Dermo, Kec. Mojoroto, Kabupaten Kediri, Jawa Timur 64111",
+      "tag": "p"
+     },
+     {
+      "t": "B & S Service & Carwash",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Surabaya",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Rungkut Asri Utara XIII No.12, Kali Rungkut, Kec. Rungkut, Surabaya, Jawa Timur 60293",
+      "tag": "p"
+     },
+     {
+      "t": "Kalimantan Barat",
+      "tag": "span"
+     },
+     {
+      "t": "CS Auto Mobil",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Pontianak",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Tj. Raya II No.168, Saigon, Kec. Pontianak Tim., Kota Pontianak, Kalimantan Barat 78243",
+      "tag": "p"
+     },
+     {
+      "t": "Kalimantan Selatan",
+      "tag": "span"
+     },
+     {
+      "t": "Autoservice Banjarmasin",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Banjarmasin",
+      "tag": "p"
+     },
+     {
+      "t": "JL. Ahmad Yani KM.5,5 No .23, Pemurus Luar, Banjarmasin Timur, Banjarmasin City, South Kalimantan 70249",
+      "tag": "p"
+     },
+     {
+      "t": "Kalimantan Timur",
+      "tag": "span"
+     },
+     {
+      "t": "Bengkel JRM Samarinda",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Samarinda",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Ahmad Yani No.40, Sungai Pinang Dalam, Kec. Sungai Pinang, Kota Samarinda, Kalimantan Timur 75117",
+      "tag": "p"
+     },
+     {
+      "t": "Kepulauan Bangka Belitung",
+      "tag": "span"
+     },
+     {
+      "t": "Bengkel Berkat Makmur Abadi",
+      "tag": "h3"
+     },
+     {
+      "t": "Kab. Bangka Belitung",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Polwan, Dul, Kec. Pangkalan Baru, Kabupaten Bangka Tengah, Kepulauan Bangka Belitung 33684",
+      "tag": "p"
+     },
+     {
+      "t": "Riau",
+      "tag": "span"
+     },
+     {
+      "t": "DNF Autotech",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Pekanbaru",
+      "tag": "p"
+     },
+     {
+      "t": "Seberang Plaza Meubel, Jl. Soekarno - Hatta No.8, RW.9, Delima, Kec. Tampan, Kota Pekanbaru, Riau 28292",
+      "tag": "p"
+     },
+     {
+      "t": "Sulawesi Selatan",
+      "tag": "span"
+     },
+     {
+      "t": "Bengkel Kita Makassar",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Makassar",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Sultan Alauddin No.193, Gn. Sari, Kec. Rappocini, Kota Makassar, Sulawesi Selatan 90221",
+      "tag": "p"
+     },
+     {
+      "t": "Sulawesi Utara",
+      "tag": "span"
+     },
+     {
+      "t": "Tirezone Maju Ban",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Manado",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Sam Ratulangi 9 No.53, Wenang Sel., Kec. Wenang, Kota Manado, Sulawesi Utara",
+      "tag": "p"
+     },
+     {
+      "t": "Sumatera Barat",
+      "tag": "span"
+     },
+     {
+      "t": "Gama 2000 Auto Service",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Padang",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Gajah Mada No.20, Kp. Olo, Kec. Nanggalo, Kota Padang, Sumatera Barat 25173",
+      "tag": "p"
+     },
+     {
+      "t": "Sumatera Utara",
+      "tag": "span"
+     },
+     {
+      "t": "Fast Prix 1 Medan",
+      "tag": "h3"
+     },
+     {
+      "t": "Kota Medan",
+      "tag": "p"
+     },
+     {
+      "t": "Jl. Iskandar Muda No.8, Darat, Kec. Medan Baru, Kota Medan, Sumatera Utara 20153",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "perlu-bantuan-memilih-bengkel",
+    "title": "Perlu bantuan memilih bengkel?",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Perlu bantuan memilih bengkel?",
+      "tag": "h2"
+     },
+     {
+      "t": "Kami bantu cek bengkel rekanan terdekat dari lokasi Anda sebelum Anda berangkat.",
+      "tag": "p"
+     },
+     {
+      "t": "Tanya lewat WhatsApp",
+      "tag": "a"
+     },
+     {
+      "t": "Tentang kami",
+      "tag": "a"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
  "/model/xpeng-x9/": {
   "label": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
   "sections": [
