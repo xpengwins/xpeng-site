@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-02T15:23:15.062Z",
+ "generated": "2026-11-03T03:21:50.592Z",
  "property": "560653996",
  "today": {
-  "users": 39,
-  "sessions": 48,
-  "views": 56,
-  "newUsers": 34
+  "users": 1,
+  "sessions": 1,
+  "views": 2,
+  "newUsers": 1
  },
  "yesterday": {
-  "users": 79,
-  "sessions": 88,
-  "views": 112,
-  "newUsers": 77
+  "users": 55,
+  "sessions": 66,
+  "views": 80,
+  "newUsers": 50
  },
  "last7": {
-  "users": 398,
-  "sessions": 493,
-  "views": 994,
-  "newUsers": 396
+  "users": 389,
+  "sessions": 474,
+  "views": 922,
+  "newUsers": 387
  },
  "last30": {
-  "users": 871,
-  "sessions": 981,
-  "views": 1565,
-  "newUsers": 892
+  "users": 888,
+  "sessions": 1000,
+  "views": 1591,
+  "newUsers": 909
  },
  "prev30": {
   "users": 0,
@@ -82,36 +82,42 @@
   },
   {
    "date": "2026-11-02",
-   "users": 39,
-   "sessions": 48,
-   "views": 56
+   "users": 55,
+   "sessions": 66,
+   "views": 80
+  },
+  {
+   "date": "2026-11-03",
+   "users": 1,
+   "sessions": 1,
+   "views": 2
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 768,
-   "users": 528
+   "views": 775,
+   "users": 533
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 200,
-   "users": 123
+   "views": 204,
+   "users": 126
   },
   {
    "path": "/pricelist/",
-   "views": 137,
-   "users": 112
+   "views": 139,
+   "users": 113
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 115,
-   "users": 40
+   "views": 121,
+   "users": 46
   },
   {
    "path": "/model/",
-   "views": 107,
-   "users": 26
+   "views": 109,
+   "users": 27
   },
   {
    "path": "/kontak/",
@@ -130,8 +136,8 @@
   },
   {
    "path": "/artikel/parkir-otomatis-xpeng-g6/",
-   "views": 13,
-   "users": 12
+   "views": 14,
+   "users": 13
   },
   {
    "path": "/artikel/garansi-baterai-xpeng/",
@@ -146,41 +152,41 @@
   },
   {
    "k": "Paid Search",
-   "v": 278
+   "v": 288
   },
   {
    "k": "Organic Social",
-   "v": 117
+   "v": 121
   },
   {
    "k": "Direct",
-   "v": 82
+   "v": 83
   },
   {
    "k": "Referral",
-   "v": 43
+   "v": 45
   },
   {
    "k": "Organic Search",
-   "v": 28
-  },
-  {
-   "k": "Unassigned",
-   "v": 10
+   "v": 30
   },
   {
    "k": "Cross-network",
+   "v": 5
+  },
+  {
+   "k": "Unassigned",
    "v": 5
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 813
+   "v": 828
   },
   {
    "k": "desktop",
-   "v": 160
+   "v": 164
   },
   {
    "k": "tablet",
@@ -190,11 +196,11 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 417
+   "v": 423
   },
   {
    "k": "Tangerang",
-   "v": 61
+   "v": 62
   },
   {
    "k": "Depok",
@@ -206,7 +212,7 @@
   },
   {
    "k": "Boardman",
-   "v": 33
+   "v": 34
   },
   {
    "k": "(not set)",
@@ -217,7 +223,7 @@
    "v": 25
   },
   {
-   "k": "Semarang",
+   "k": "Bandung",
    "v": 14
   }
  ],
