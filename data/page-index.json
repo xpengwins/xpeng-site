@@ -530,6 +530,18 @@
       "tag": "h2"
      },
      {
+      "t": "Panduan Beli",
+      "tag": "span"
+     },
+     {
+      "t": "Bengkel Rekanan XPeng Luar Kota: Servis Tetap Dekat",
+      "tag": "h3"
+     },
+     {
+      "t": "Bengkel rekanan XPeng tersedia di 16 provinsi untuk Anda di luar kota. Cek titik servis terdekat dan kabar ekspansi dealer XPeng terbaru.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -572,10 +584,6 @@
      {
       "t": "Status XPeng G9L Indonesia per Oktober 2026: belum ada tanggal dan harga resmi. Baca fakta yang pasti, yang masih rumor, dan cara mendapat kabar lebih dulu.",
       "tag": "p"
-     },
-     {
-      "t": "Panduan Beli",
-      "tag": "span"
      },
      {
       "t": "Mobil Listrik Keluarga: Cara Memilih yang Aman dan Lega",
@@ -863,6 +871,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g6-silver-jalan.webp",
+      "alt": "Mobil XPeng G6 melaju di jalan raya"
+     },
      {
       "src": "/assets/img/g9l-depan-pantai-senja.webp",
       "alt": "Xpengwins Xpeng G9L melaju di pesisir untuk ilustrasi jarak tempuh jauh"

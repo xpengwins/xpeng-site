@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-03T08:26:40.888Z",
+ "generated": "2026-11-03T08:47:37.482Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 47,
+  "pages": 48,
   "total": 100
  },
  "tech": [
@@ -666,6 +666,75 @@
   },
   {
    "url": "/model/xpeng-g6/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/bengkel-rekanan-xpeng-luar-kota/",
    "score": 100,
    "checks": [
     {
@@ -3288,6 +3357,190 @@
   }
  ],
  "articles": [
+  {
+   "slug": "bengkel-rekanan-xpeng-luar-kota",
+   "title": "Bengkel Rekanan XPeng Luar Kota: Servis Tetap Dekat",
+   "status": "published",
+   "keyword": "bengkel rekanan xpeng",
+   "score": 100,
+   "grade": "A",
+   "words": 805,
+   "density": 1.49,
+   "internal": 7,
+   "external": 4,
+   "faq": 4,
+   "overlap": 2,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
   {
    "slug": "harga-xpeng-x9-dan-g6-juli-2026",
    "title": "Harga XPeng X9 dan G6 Terbaru: Pilih yang Mana?",
