@@ -574,6 +574,18 @@
       "tag": "p"
      },
      {
+      "t": "Teknologi",
+      "tag": "span"
+     },
+     {
+      "t": "Charging XPeng G9L: Pengisian 5C 11 Menit Itu Nyata?",
+      "tag": "h3"
+     },
+     {
+      "t": "Charging XPeng G9L memakai platform 800V dan 5C, klaim 10 sampai 80 persen sekitar 11 menit. Pahami syarat, batasan, dan kesiapan SPKLU di Indonesia.",
+      "tag": "p"
+     },
+     {
       "t": "Tips EV",
       "tag": "span"
      },
@@ -692,10 +704,6 @@
      {
       "t": "XPeng dirakit di Indonesia sejak Juli 2025 di Purwakarta. Pahami arti CKD, dampaknya ke harga dan suku cadang, serta hal yang perlu Anda tanyakan ke dealer.",
       "tag": "p"
-     },
-     {
-      "t": "Teknologi",
-      "tag": "span"
      },
      {
       "t": "Baterai LFP vs NCM: Mana untuk Mobil Listrik Keluarga?",
@@ -898,6 +906,10 @@
      {
       "src": "/assets/img/g9l-depan-pantai-senja.webp",
       "alt": "Xpengwins Xpeng G9L melaju di pesisir untuk ilustrasi jarak tempuh jauh"
+     },
+     {
+      "src": "/assets/img/g9l-velg-percikan-air.webp",
+      "alt": "Xpengwins Xpeng G9L detail velg dan bodi depan saat melaju di air"
      },
      {
       "src": "/assets/img/222752-1nmq.webp",

@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-03T09:02:09.482Z",
+ "generated": "2026-11-03T12:46:09.189Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 48,
+  "pages": 49,
   "total": 100
  },
  "tech": [
@@ -804,6 +804,75 @@
   },
   {
    "url": "/artikel/jarak-tempuh-xpeng-g9l/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/charging-5c-xpeng-g9l/",
    "score": 100,
    "checks": [
     {
@@ -10352,7 +10421,7 @@
   {
    "slug": "charging-5c-xpeng-g9l",
    "title": "Charging XPeng G9L: Pengisian 5C 11 Menit Itu Nyata?",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "charging xpeng g9l",
    "score": 100,
    "grade": "A",
@@ -15461,9 +15530,9 @@
    "position": null,
    "note": "Seri G9L, terbit 2026-11-03",
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 11
    }
   },
   {
