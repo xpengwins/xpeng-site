@@ -21,6 +21,8 @@ const leasing = JO('leasing.json', []).filter(x => x && x.name);
 const profil = Object.assign({ aktif: false, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, JO('profil.json', {}));
 const TODAY_ID = new Date(Date.now() + 7 * 3600e3).toISOString().slice(0, 10);
 const promos = JO('promo.json', []).filter(p => p && p.title && p.active !== false && (!p.until || String(p.until) >= TODAY_ID));
+const bengkel = Object.assign({ intro: '', items: [] }, JO('bengkel.json', {}));
+bengkel.items = (bengkel.items || []).filter(x => x && x.name);
 const about = Object.assign({ intro: [], photos: [], history: [], services: [], hours: [], mapsQuery: '', mapsEmbed: '' }, JO('about.json', {}));
 const E = MD.esc, rp = n => 'Rp' + Number(n).toLocaleString('id-ID');
 let BASE = ''; try { BASE = new URL(site.baseUrl).pathname.replace(/\/$/, ''); } catch (e) {}
@@ -84,12 +86,12 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 </head><body data-base="${BASE}" data-wa="${site.whatsapp}">
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>
-<nav id="nav" aria-label="Menu utama"><a href="${u('/')}"${p === '/' ? ' aria-current="page"' : ''}>Home</a><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang</a><a href="${u('/kontak/')}">Kontak</a></nav>
+<nav id="nav" aria-label="Menu utama"><a href="${u('/')}"${p === '/' ? ' aria-current="page"' : ''}>Home</a><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a>${bengkel.items.length ? `<div class="nd${/^\/tentang\//.test(p) ? ' cur' : ''}"><a href="${u('/tentang/')}"${p === '/tentang/' ? ' aria-current="page"' : ''}>Tentang</a><button type="button" class="ndb" aria-expanded="false" aria-label="Buka submenu Tentang"></button><div class="ndm"><a href="${u('/tentang/')}">Tentang Kami</a><a href="${u('/tentang/bengkel-rekanan-luar-kota/')}"${p === '/tentang/bengkel-rekanan-luar-kota/' ? ' aria-current="page"' : ''}>Bengkel Rekanan Luar Kota</a></div></div>` : `<a href="${u('/tentang/')}">Tentang</a>`}<a href="${u('/kontak/')}">Kontak</a></nav>
 <a class="btn sm" href="${wa('Halo, saya tertarik dengan XPeng. Boleh minta info?')}" rel="noopener">WhatsApp</a><button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button></div></header>
 <main id="main">${body}</main>
 <footer class="site"><div class="wrap fgrid"><div><img src="${u('assets/img/logo-white.svg')}" alt="XPeng" width="120" height="84" loading="lazy"><p>${E(site.tagline)}</p></div>
 <div><h2>Model</h2>${models.map(m => `<a href="${u('/model/' + m.slug + '/')}">${E(m.name)}</a>`).join('')}</div>
-<div><h2>Informasi</h2><a href="${u('/pricelist/')}">Pricelist ${E(site.pricelistUpdate)}</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang kami</a><a href="${u('/kontak/')}">Kontak dan Test Drive</a></div>
+<div><h2>Informasi</h2><a href="${u('/pricelist/')}">Pricelist ${E(site.pricelistUpdate)}</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a><a href="${u('/tentang/')}">Tentang kami</a>${bengkel.items.length ? `<a href="${u('/tentang/bengkel-rekanan-luar-kota/')}">Bengkel rekanan luar kota</a>` : ''}<a href="${u('/kontak/')}">Kontak dan Test Drive</a></div>
 <div><h2>Hubungi</h2><p>${E(site.dealer)}<br>${E(site.address)}<br><a href="${telHref}">${E(site.phone)}</a></p>${socialRow()}</div></div>
 <div class="wrap legal">© ${new Date().getFullYear()} ${E(site.dealer)}. Harga dan spesifikasi dapat berubah tanpa pemberitahuan. XPeng adalah merek dagang pemiliknya.</div></footer>
 <a class="wafab" href="${wa('Halo, saya mau tanya XPeng')}" rel="noopener" aria-label="Chat WhatsApp"><svg viewBox="0 0 32 32" width="26" height="26" fill="#fff"><path d="M16 3a13 13 0 0 0-11 19.8L3 29l6.4-2A13 13 0 1 0 16 3zm0 2.3A10.7 10.7 0 1 1 9.5 24l-.4-.3-3.6 1.1 1.2-3.5-.3-.4A10.7 10.7 0 0 1 16 5.3zm-4 5.4c-.3 0-.7.1-1 .5-.4.4-1.3 1.2-1.3 3s1.3 3.5 1.5 3.7c.2.3 2.6 4.1 6.400 5.600 3.200 1.200 3.800.9 4.500.9.700-.1 2.200-.9 2.500-1.800.3-.9.3-1.600.2-1.800-.1-.2-.4-.3-.8-.5l-2.600-1.200c-.3-.1-.6-.2-.9.200-.3.400-1 1.200-1.200 1.400-.2.200-.4.300-.8.100a8.900 8.900 0 0 1-4.400-3.800c-.3-.6.300-.6 1-1.900.1-.2.100-.4 0-.6l-1.200-2.900c-.3-.7-.6-.6-.9-.6z"/></svg></a>
@@ -292,6 +294,18 @@ ${profileSection()}
   return layout({ title: 'Kontak dan Test Drive XPeng X9 G6 | Hubungi Kami'.slice(0, 62), desc: `Hubungi ${site.dealer} lewat WhatsApp, telepon, atau email. Jadwalkan test drive XPeng X9 dan G6, lihat lokasi showroom, dan ikuti media sosial kami.`.slice(0, 160), path: '/kontak/', body, ld: [crumbs([['Beranda', '/'], ['Kontak', '/kontak/']]), { '@context': 'https://schema.org', '@type': 'ContactPage', name: 'Kontak ' + site.dealer, url: abs('/kontak/') }, (profil.aktif && profil.name) ? { '@context': 'https://schema.org', '@type': 'Person', name: profil.name, jobTitle: profil.title || undefined, image: profil.photo ? abs(profil.photo) : undefined, description: profil.bio || undefined, telephone: site.phone, worksFor: { '@type': 'AutoDealer', name: site.dealer, url: abs('/') } } : null] });
 }
 
+
+function bengkelPage() {
+  const items = bengkel.items.slice().sort((a, b) => a.prov.localeCompare(b.prov, 'id') || a.city.localeCompare(b.city, 'id') || a.name.localeCompare(b.name, 'id'));
+  const provs = [...new Set(items.map(x => x.prov))];
+  const intro = bengkel.intro || 'Daftar bengkel rekanan XPeng di luar kota.';
+  const card = x => `<article class="bk" data-p="${E(x.prov)}" data-s="${E((x.name + ' ' + x.city + ' ' + x.prov + ' ' + x.address).toLowerCase())}"><span class="bkp">${E(x.prov)}</span><h3>${E(x.name)}</h3><p class="bkc">${E(x.city)}</p><p class="bka">${E(x.address)}</p><div class="bkb">${x.map ? `<a class="btn sm" href="${E(x.map)}" target="_blank" rel="noopener">📍 Buka di Google Maps</a>` : ''}<button type="button" class="btn ghost sm bkcp" data-t="${E(x.name + ', ' + x.address)}">Salin alamat</button></div></article>`;
+  const body = `<section class="pagehead"><div class="wrap"><nav class="crumb" aria-label="Breadcrumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/tentang/')}">Tentang</a> › Bengkel Rekanan Luar Kota</nav><h1>Bengkel Rekanan XPeng Luar Kota</h1><p>${E(intro)}</p></div></section>
+<section class="section" id="daftar-bengkel"><div class="wrap"><div class="bkf"><div class="asearch bks"><input type="search" id="bq" placeholder="Cari kota, nama bengkel, atau alamat" aria-label="Cari bengkel rekanan" autocomplete="off"></div><label class="bksel"><span>Provinsi</span><select id="bprov"><option value="">Semua provinsi</option>${provs.map(pv => `<option value="${E(pv)}">${E(pv)}</option>`).join('')}</select></label></div><p class="bkn" id="bkn" aria-live="polite">${items.length} bengkel rekanan di ${provs.length} provinsi</p><div class="bkg" id="bkg">${items.map(card).join('')}</div><p class="bkempty" id="bkempty" hidden>Belum ada bengkel yang cocok. Coba kata kunci lain atau hubungi kami lewat WhatsApp.</p></div></section>
+<section class="section dark"><div class="wrap narrow"><h2>Perlu bantuan memilih bengkel?</h2><p>Kami bantu cek bengkel rekanan terdekat dari lokasi Anda sebelum Anda berangkat.</p><div class="cta"><a class="btn" href="${wa('Halo, saya butuh info bengkel rekanan XPeng di kota saya')}" rel="noopener">Tanya lewat WhatsApp</a><a class="btn ghost" href="${u('/tentang/')}">Tentang kami</a></div></div></section>`;
+  const ld = [crumbs([['Beranda', '/'], ['Tentang', '/tentang/'], ['Bengkel Rekanan Luar Kota', '/tentang/bengkel-rekanan-luar-kota/']]), { '@context': 'https://schema.org', '@type': 'ItemList', name: 'Bengkel Rekanan XPeng Luar Kota', numberOfItems: items.length, itemListElement: items.map((x, i) => ({ '@type': 'ListItem', position: i + 1, item: { '@type': 'AutoRepair', name: x.name, address: { '@type': 'PostalAddress', streetAddress: x.address, addressRegion: x.prov, addressCountry: 'ID' }, ...(x.map ? { hasMap: x.map } : {}) } })) }];
+  return layout({ title: 'Bengkel Rekanan XPeng Luar Kota | Daftar Lengkap', desc: `Daftar ${items.length} bengkel rekanan XPeng di ${provs.length} provinsi untuk service di luar coverage dealer, lengkap dengan alamat dan link Google Maps.`.slice(0, 160), path: '/tentang/bengkel-rekanan-luar-kota/', body, ld });
+}
 function aboutPage() {
   const first = about.photos[0];
   const intro = about.intro.length ? about.intro : [`${site.dealer} adalah dealer resmi XPeng. Kami membantu Anda mengenal XPeng X9 dan G6, mulai dari konsultasi harga, simulasi cicilan, sampai test drive.`];
@@ -356,7 +370,7 @@ function promoPage() {
 }
 
 /* ---------- jalankan ---------- */
-out['index.html'] = home(); out['model/index.html'] = modelIndex(); out['pricelist/index.html'] = pricelist(); out['kontak/index.html'] = contact(); out['tentang/index.html'] = aboutPage();
+out['index.html'] = home(); out['model/index.html'] = modelIndex(); out['pricelist/index.html'] = pricelist(); out['kontak/index.html'] = contact(); out['tentang/index.html'] = aboutPage(); if (bengkel.items.length) out['tentang/bengkel-rekanan-luar-kota/index.html'] = bengkelPage();
 out['artikel/index.html'] = articleIndex(); out['promo/index.html'] = promoPage(); out['404.html'] = notFound();
 models.forEach(m => out['model/' + m.slug + '/index.html'] = modelPage(m));
 articles.forEach(a => out['artikel/' + a.slug + '/index.html'] = articlePage(a));
@@ -365,7 +379,7 @@ articles.forEach(a => out['artikel/' + a.slug + '/index.html'] = articlePage(a))
 Object.entries(out).forEach(([f, h]) => { const fp = path.join(ROOT, f); fs.mkdirSync(path.dirname(fp), { recursive: true }); fs.writeFileSync(fp, h); });
 
 const today = new Date().toISOString().slice(0, 10);
-const urls = [['/', 1.0], ['/model/', .9], ['/pricelist/', .9], ['/artikel/', .7], ['/kontak/', .8], ['/tentang/', .7], ...(promos.length ? [['/promo/', .8]] : []), ...models.map(m => ['/model/' + m.slug + '/', .9]), ...articles.map(a => ['/artikel/' + a.slug + '/', .7])];
+const urls = [['/', 1.0], ['/model/', .9], ['/pricelist/', .9], ['/artikel/', .7], ['/kontak/', .8], ['/tentang/', .7], ...(bengkel.items.length ? [['/tentang/bengkel-rekanan-luar-kota/', .6]] : []), ...(promos.length ? [['/promo/', .8]] : []), ...models.map(m => ['/model/' + m.slug + '/', .9]), ...articles.map(a => ['/artikel/' + a.slug + '/', .7])];
 fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([p, pr]) => `<url><loc>${abs(p)}</loc><lastmod>${today}</lastmod><priority>${pr}</priority></url>`).join('\n')}\n</urlset>\n`);
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: ${BASE}/admin/\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
 fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# ${site.name}\n> ${site.description}\n\n## Model\n${models.map(m => `- [${m.name}](${abs('/model/' + m.slug + '/')}): ${m.tagline} Harga mulai ${rp(Math.min(...m.variants.map(v => v.price)))}`).join('\n')}\n\n## Harga\n- [Pricelist ${site.pricelistUpdate}](${abs('/pricelist/')}): ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join('; ')}\n\n## Halaman\n- [Tentang kami](${abs('/tentang/')}): profil, lokasi, dan sejarah dealer\n${promos.length ? '- [Promo](' + abs('/promo/') + '): ' + promos.map(p => p.title).join('; ') + '\n' : ''}- [Kontak dan test drive](${abs('/kontak/')}): WhatsApp, telepon, email, media sosial\n\n## Artikel\n${articles.map(a => `- [${a.title}](${abs('/artikel/' + a.slug + '/')}): ${a.description}`).join('\n')}\n`);

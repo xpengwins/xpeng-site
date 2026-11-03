@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil', 'pengingat'];
+const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil', 'pengingat', 'bengkel'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -62,7 +62,7 @@ async function loadData(onStep) {
   let done = 0;
   await Promise.all(NAMES.map(async n => {
     try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); }
-    catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil') ? {} : []; }
+    catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil' || n === 'bengkel') ? {} : []; }
     done++; if (onStep) onStep(done, NAMES.length);
   }));
 }
@@ -124,7 +124,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['stok', '📦', 'Laporan Stok'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['stok', '📦', 'Laporan Stok'], ['bengkel', '🔧', 'Bengkel Rekanan'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -573,6 +573,30 @@ VIEWS.stok = v => {
   $('#st_go').onclick = () => load(false, true); load();
   const tick = async () => { if (!v.isConnected || !$('#st_out')) return; if (!document.hidden) await load(true); setTimeout(tick, 10000); };
   setTimeout(tick, 10000);
+};
+VIEWS.bengkel = v => {
+  const B = S.d.bengkel = Object.assign({ intro: '', items: [] }, S.d.bengkel); B.items = (B.items || []).map(x => ({ prov: '', city: '', name: '', address: '', map: '', ...x }));
+  const tc = s => String(s || '').toLowerCase().replace(/\b\w/g, c => c.toUpperCase()).replace(/\bDi\b/g, 'DI').replace(/^Kab\.? /, 'Kab. ');
+  const draw = () => {
+    v.innerHTML = `<h2>Bengkel Rekanan Luar Kota</h2><div class="card"><p class="muted">Tampil di halaman <b>Tentang › Bengkel Rekanan Luar Kota</b> (submenu Tentang). Ada kolom cari dan saring provinsi di halaman itu. Total <b>${B.items.length}</b> bengkel.</p>
+<label>Kalimat pembuka halaman<textarea id="bk_intro" style="font-family:inherit">${E(B.intro || '')}</textarea></label>
+<h3>Tambah banyak sekaligus dari Excel / Google Sheet</h3><p class="muted" style="font-size:13px">Salin baris dari sheet (kolom berurutan: Provinsi, Kota, Nama bengkel, Alamat, Link Maps), tempel di bawah. Baris judul dilewati otomatis, bengkel yang sudah ada tidak digandakan.</p>
+<textarea id="bk_paste" style="min-height:110px;font-family:inherit" placeholder="Tempel di sini"></textarea><div class="row" style="margin:8px 0"><button class="s" id="bk_add" data-noc>+ Tambah dari tempelan</button><button class="s" id="bk_one" data-noc>+ Tambah satu bengkel</button></div>
+<h3>Daftar bengkel</h3>${B.items.map((x, i) => `<details class="card" style="padding:0"><summary style="padding:14px;cursor:pointer;min-height:48px"><b>${E(x.name || '(tanpa nama)')}</b> <span class="muted">${E(x.city)}, ${E(x.prov)}</span></summary><div style="padding:0 14px 14px"><div class="grid"><label>Nama bengkel<input data-k="${i}" data-f="name" value="${E(x.name)}"></label><label>Provinsi<input data-k="${i}" data-f="prov" value="${E(x.prov)}"></label><label>Kota / Kabupaten<input data-k="${i}" data-f="city" value="${E(x.city)}"></label></div><label>Alamat lengkap<textarea data-k="${i}" data-f="address" style="font-family:inherit">${E(x.address)}</textarea></label><label>Link Google Maps<input data-k="${i}" data-f="map" value="${E(x.map)}" inputmode="url" autocapitalize="off"></label><button class="d sm" data-rm="${i}">Hapus bengkel ini</button></div></details>`).join('') || '<p class="muted">Belum ada bengkel.</p>'}
+<div class="row" style="margin-top:14px"><button id="bk_sv">Simpan</button></div></div>`;
+    v.querySelectorAll('[data-f]').forEach(i => i.oninput = () => { B.items[+i.dataset.k][i.dataset.f] = i.value; });
+    v.querySelectorAll('[data-rm]').forEach(b => b.onclick = () => { B.items.splice(+b.dataset.rm, 1); draw(); toast('Dihapus. Tekan Simpan.'); });
+    $('#bk_one').onclick = () => { B.intro = $('#bk_intro').value; B.items.unshift({ prov: '', city: '', name: 'Bengkel baru', address: '', map: '' }); draw(); const d = v.querySelector('details'); if (d) d.open = true; };
+    $('#bk_add').onclick = () => {
+      const rows = $('#bk_paste').value.split('\n').map(l => l.split('\t').map(x => x.trim())).filter(r => r.length >= 3 && r.some(Boolean));
+      let n = 0, skip = 0; const key = x => (x.name + '|' + x.address).toLowerCase().replace(/\s+/g, ' ');
+      const have = new Set(B.items.map(key));
+      rows.forEach(r => { if (/^province$|^provinsi$/i.test(r[0])) return; const x = { prov: tc(r[0]), city: tc(r[1]), name: r[2], address: r[3] || '', map: (r[4] || '').trim() }; if (!x.name) return; if (have.has(key(x))) { skip++; return; } have.add(key(x)); B.items.push(x); n++; });
+      B.intro = $('#bk_intro').value; draw(); toast(n ? n + ' bengkel ditambahkan' + (skip ? ', ' + skip + ' sudah ada' : '') + '. Tekan Simpan.' : 'Tidak ada baris baru (pastikan kolom dipisah tab seperti dari Sheet)', !n);
+    };
+    $('#bk_sv').onclick = async () => { B.intro = $('#bk_intro').value.trim(); B.items = B.items.map(x => ({ prov: x.prov.trim(), city: x.city.trim(), name: x.name.trim(), address: x.address.trim(), map: x.map.trim() })).filter(x => x.name); await save('bengkel', 'Bengkel rekanan: ' + B.items.length + ' bengkel'); };
+  };
+  draw();
 };
 VIEWS.profil = v => {
   const P = S.d.profil = Object.assign({ aktif: true, name: '', title: '', photo: '', bio: '', points: [], ctaText: '' }, S.d.profil);

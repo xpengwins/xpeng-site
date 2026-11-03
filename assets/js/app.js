@@ -1,6 +1,14 @@
 (function(){'use strict';
 var B=document.body,$=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
 var WA=B.dataset.wa,base=B.dataset.base||'';
+/* submenu Tentang (HP: ketuk panah) */
+$$('.nd .ndb').forEach(function(b){b.addEventListener('click',function(e){e.stopPropagation();var d=b.parentNode,o=d.classList.toggle('open');b.setAttribute('aria-expanded',o)})});
+document.addEventListener('click',function(e){$$('.nd.open').forEach(function(d){if(!d.contains(e.target)){d.classList.remove('open');var b=$('.ndb',d);if(b)b.setAttribute('aria-expanded','false')}})});
+/* bengkel rekanan: cari, saring provinsi, salin alamat */
+(function(){var g=$('#bkg');if(!g)return;var q=$('#bq'),p=$('#bprov'),n=$('#bkn'),em=$('#bkempty'),cs=$$('.bk',g),tot=cs.length;
+function f(){var s=(q.value||'').trim().toLowerCase(),pv=p.value,c=0;cs.forEach(function(x){var ok=(!pv||x.dataset.p===pv)&&(!s||x.dataset.s.indexOf(s)>-1);x.hidden=!ok;if(ok)c++});em.hidden=c>0;n.textContent=(s||pv)?c+' dari '+tot+' bengkel ditampilkan':tot+' bengkel rekanan'}
+q.addEventListener('input',f);p.addEventListener('change',f);
+g.addEventListener('click',function(e){var b=e.target.closest('.bkcp');if(!b)return;var t=b.dataset.t,done=function(){var o=b.textContent;b.textContent='Tersalin \u2713';setTimeout(function(){b.textContent=o},1600)};if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(t).then(done,function(){});else{var a=document.createElement('textarea');a.value=t;document.body.appendChild(a);a.select();try{document.execCommand('copy');done()}catch(x){}a.remove()}})})();
 /* spesifikasi: buka/tutup detail + saring hanya perbedaan */
 (function(){var b=$('#spbtn'),m=$('#spmore');if(!b||!m)return;b.addEventListener('click',function(){var o=m.hidden;m.hidden=!o;b.setAttribute('aria-expanded',o?'true':'false');b.textContent=o?'Tutup detail':'Lihat detail';if(o)m.scrollIntoView({behavior:'smooth',block:'nearest'})});var c=$('#spdiff'),t=$('#sptbl');if(c&&t)c.addEventListener('change',function(){t.setAttribute('data-only',c.checked?'1':'0')})})();
 /* animasi memuat: gambar tampil shimmer sampai selesai dimuat */
