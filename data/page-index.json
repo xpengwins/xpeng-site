@@ -2131,6 +2131,74 @@
     "imgs": []
    },
    {
+    "key": "spesifikasi",
+    "title": "Spesifikasi dan perbedaan varian XPeng X9",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Spesifikasi",
+      "tag": "span"
+     },
+     {
+      "t": "Spesifikasi dan perbedaan varian XPeng X9",
+      "tag": "h2"
+     },
+     {
+      "t": "Lihat ringkasannya di atas, buka detailnya di sini, lalu bandingkan New XPeng X9 Pro dengan New XPeng X9 Pro+.",
+      "tag": "p"
+     },
+     {
+      "t": "Lihat detail",
+      "tag": "button"
+     },
+     {
+      "t": "⬇ Minta brosur (PDF)",
+      "tag": "a"
+     },
+     {
+      "t": "Perbedaan X9 Pro dan X9 Pro+",
+      "tag": "h3"
+     },
+     {
+      "t": "1 perbedaan ditandai",
+      "tag": "p"
+     },
+     {
+      "t": "Beda",
+      "tag": "i"
+     },
+     {
+      "t": ". Baris tanpa tanda berarti sama di semua varian.",
+      "tag": "p"
+     },
+     {
+      "t": "Spesifikasi lengkap",
+      "tag": "h3"
+     },
+     {
+      "t": "Dimensi dan ruang",
+      "tag": "h4"
+     },
+     {
+      "t": "Performa dan sasis",
+      "tag": "h4"
+     },
+     {
+      "t": "Warna",
+      "tag": "h4"
+     },
+     {
+      "t": "Garansi",
+      "tag": "h4"
+     },
+     {
+      "t": "Perbedaan fitur lengkap antara varian akan mengikuti brosur resmi XPeng. Unduh brosur atau hubungi kami untuk daftar fitur terbaru tiap varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
     "key": "atur-mobil",
     "title": "Atur XPeng X9 dan hitung cicilan",
     "hasH1": false,
@@ -2495,6 +2563,94 @@
      {
       "t": "Spesifikasi ringkas",
       "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "spesifikasi",
+    "title": "Spesifikasi dan perbedaan varian XPeng G6",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Spesifikasi",
+      "tag": "span"
+     },
+     {
+      "t": "Spesifikasi dan perbedaan varian XPeng G6",
+      "tag": "h2"
+     },
+     {
+      "t": "Lihat ringkasannya di atas, buka detailnya di sini, lalu bandingkan XPeng G6 Pro dengan XPeng G6 AWD.",
+      "tag": "p"
+     },
+     {
+      "t": "Lihat detail",
+      "tag": "button"
+     },
+     {
+      "t": "⬇ Minta brosur (PDF)",
+      "tag": "a"
+     },
+     {
+      "t": "Perbedaan G6 Pro dan G6 AWD",
+      "tag": "h3"
+     },
+     {
+      "t": "6 perbedaan ditandai",
+      "tag": "p"
+     },
+     {
+      "t": "Beda",
+      "tag": "i"
+     },
+     {
+      "t": ". Baris tanpa tanda berarti sama di semua varian.",
+      "tag": "p"
+     },
+     {
+      "t": "Tampilkan perbedaan saja",
+      "tag": "label"
+     },
+     {
+      "t": "Spesifikasi lengkap",
+      "tag": "h3"
+     },
+     {
+      "t": "Performa (G6 Pro)",
+      "tag": "h4"
+     },
+     {
+      "t": "Baterai dan pengisian",
+      "tag": "h4"
+     },
+     {
+      "t": "Dimensi",
+      "tag": "h4"
+     },
+     {
+      "t": "Sasis dan berkendara",
+      "tag": "h4"
+     },
+     {
+      "t": "Kabin dan teknologi",
+      "tag": "h4"
+     },
+     {
+      "t": "Keselamatan",
+      "tag": "h4"
+     },
+     {
+      "t": "XPILOT Assist",
+      "tag": "h4"
+     },
+     {
+      "t": "Perangkat lunak",
+      "tag": "h4"
+     },
+     {
+      "t": "Detail lengkap di atas mengacu pada brosur XPeng G6 Pro. Perbedaan tenaga, torsi, akselerasi, dan jarak tempuh G6 AWD ada di tabel perbedaan varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+      "tag": "p"
      }
     ],
     "imgs": []
