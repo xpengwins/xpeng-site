@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-03T13:01:36.337Z",
+  "slug": "charging-5c-xpeng-g9l",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-03T13:01:14.482Z",
+  "slug": "charging-5c-xpeng-g9l",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-03T13:00:56.636Z",
+  "slug": "charging-5c-xpeng-g9l",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-03T12:59:59.030Z",
   "slug": "charging-5c-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-10-30T02:53:48.818Z",
   "slug": "test-drive-mobil-listrik",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-30T02:53:24.635Z",
-  "slug": "test-drive-mobil-listrik",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-30T02:53:07.013Z",
-  "slug": "test-drive-mobil-listrik",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-29T08:06:02.743Z",
-  "slug": "simulasi-cicilan-xpeng",
   "platform": "threads",
   "ok": true,
   "msg": "terkirim"
