@@ -1,614 +1,915 @@
 [
- {
-  "slug": "xpeng-x9",
-  "name": "XPeng X9",
-  "type": "MPV Listrik Premium 7 Kursi",
-  "tagline": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
-  "hero": "assets/img/226028.webp",
-  "gallery": [
-   "assets/img/x9-white-depan.webp",
-   "assets/img/x9-white-belakang.webp",
-   "assets/img/x9-white-dashboard.webp",
-   "assets/img/x9-white-kursi-2.webp",
-   "assets/img/x9-white-kursi-3.webp",
-   "assets/img/x9-white-kursi-belakang.webp",
-   "assets/img/x9-black-depan.webp",
-   "assets/img/x9-grey-depan.webp",
-   "assets/img/x9-silver-depan.webp"
-  ],
-  "colors": [
-   {
-    "name": "Putih",
-    "hex": "#f4f4f2",
-    "image": "assets/img/xpeng-electric-suv-in-futuristic-fog.webp"
-   },
-   {
-    "name": "Hitam",
-    "hex": "#0e0f12",
-    "image": "assets/img/phantom-x9-in-the-mist.webp"
-   },
-   {
-    "name": "Grey Matte",
-    "hex": "#8b98a6",
-    "image": "assets/img/xpeng-x9-at-twilight.webp"
-   },
-   {
-    "name": "Silver",
-    "hex": "#c9cacc",
-    "image": "assets/img/xpeng-x9-in-a-misty-futurescape.webp"
-   }
-  ],
-  "variants": [
-   {
-    "name": "New XPeng X9 Pro",
-    "price": 1219000000
-   },
-   {
-    "name": "New XPeng X9 Pro+",
-    "price": 1259000000
-   }
-  ],
-  "highlights": [
-   "7 kursi dengan captain seat baris kedua",
-   "Pintu geser elektrik yang mudah untuk keluarga",
-   "Platform 800V dengan pengisian daya cepat",
-   "Layar hiburan besar dan kabin senyap",
-   "Garansi baterai dan kendaraan 8 tahun (syarat berlaku)"
-  ],
-  "specs": [
-   {
-    "k": "Tipe",
-    "v": "MPV listrik 7 kursi"
-   },
-   {
-    "k": "Penggerak",
-    "v": "Motor listrik, roda depan (FWD)"
-   },
-   {
-    "k": "Arsitektur",
-    "v": "800V"
-   },
-   {
-    "k": "Garansi",
-    "v": "Baterai dan kendaraan 8 tahun"
-   },
-   {
-    "k": "Catatan",
-    "v": "Spesifikasi detail New X9 Pro/Pro+ mengikuti brosur resmi. Hubungi kami untuk data terbaru."
-   }
-  ],
-  "faq": [
-   {
-    "q": "Berapa harga XPeng X9 di Indonesia?",
-    "a": "Saat ini, New XPeng X9 Pro Rp1.219.000.000 dan New XPeng X9 Pro+ Rp1.259.000.000. Harga bisa berubah, hubungi kami untuk konfirmasi."
-   },
-   {
-    "q": "Berapa kursi XPeng X9?",
-    "a": "XPeng X9 adalah MPV 7 kursi dengan captain seat di baris kedua."
-   },
-   {
-    "q": "Apakah bisa test drive XPeng X9?",
-    "a": "Bisa. Kirim pesan WhatsApp untuk jadwal test drive di showroom."
-   }
-  ],
-  "metaTitle": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
-  "metaDescription": "Harga XPeng X9 mulai Rp1,219 miliar. Lihat varian Pro dan Pro+, warna, fitur kabin, dan jadwal test drive MPV listrik 7 kursi.",
-  "videos": [
-   {
-    "type": "mp4",
-    "src": "assets/video/227779.mp4",
-    "alt": "xpengwins Xpeng X9",
-    "title": ""
-   }
-  ],
-  "interior": [
-   {
-    "src": "assets/img/228023.webp",
-    "alt": "Coffee"
-   },
-   {
-    "src": "assets/img/228025.webp",
-    "alt": "Meteorite Black"
-   },
-   {
-    "src": "assets/img/228027.webp",
-    "alt": "Rose Brown"
-   }
-  ],
-  "compare": [],
-  "detail": [
-   {
-    "g": "Dimensi dan ruang",
-    "rows": [
-     {
-      "k": "Panjang × lebar × tinggi",
-      "v": "5.316 × 1.988 × 1.785 mm"
-     },
-     {
-      "k": "Jarak sumbu roda",
-      "v": "3.160 mm"
-     },
-     {
-      "k": "Kapasitas bagasi",
-      "v": "721 L, hingga 2.554 L"
-     },
-     {
-      "k": "Konfigurasi kursi",
-      "v": "7 kursi"
-     }
-    ]
-   },
-   {
-    "g": "Performa dan sasis",
-    "rows": [
-     {
-      "k": "Tenaga",
-      "v": "235 kW"
-     },
-     {
-      "k": "Torsi",
-      "v": "450 Nm"
-     },
-     {
-      "k": "Akselerasi 0–100 km/jam",
-      "v": "7,7 detik"
-     },
-     {
-      "k": "Penggerak",
-      "v": "Motor listrik, roda depan (FWD)"
-     },
-     {
-      "k": "Arsitektur",
-      "v": "800V"
-     },
-     {
-      "k": "Koefisien drag",
-      "v": "0,236 Cd"
-     },
-     {
-      "k": "Radius putar",
-      "v": "5,4 m"
-     },
-     {
-      "k": "Roda belakang",
-      "v": "Ikut mengarah (rear steering)"
-     },
-     {
-      "k": "Suspensi",
-      "v": "Udara, dua ruang"
-     }
-    ]
-   },
-   {
-    "g": "Warna",
-    "rows": [
-     {
-      "k": "Pilihan warna luar",
-      "v": "Midnight Black, Silver Frost, Arctic White"
-     }
-    ]
-   },
-   {
-    "g": "Garansi",
-    "rows": [
-     {
-      "k": "Baterai dan kendaraan",
-      "v": "8 tahun"
-     }
-    ]
-   }
-  ],
-  "specNote": "Perbedaan fitur lengkap antara varian akan mengikuti brosur resmi XPeng. Unduh brosur atau hubungi kami untuk daftar fitur terbaru tiap varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
-  "brosur": ""
- },
- {
-  "slug": "xpeng-g6",
-  "name": "XPeng G6",
-  "type": "SUV Coupe Listrik Premium",
-  "tagline": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
-  "hero": "assets/img/225088.webp",
-  "gallery": [
-   "assets/img/g6-black-depan.webp",
-   "assets/img/g6-black-belakang.webp",
-   "assets/img/g6-black-samping.webp",
-   "assets/img/g6-black-front.webp",
-   "assets/img/g6-silver-jalan.webp",
-   "assets/img/g6-white-detail.webp",
-   "assets/img/g6-grey-showroom.webp",
-   "assets/img/g6-grey-front.webp",
-   "assets/img/g6-grey-detail.webp"
-  ],
-  "colors": [
-   {
-    "name": "Hitam",
-    "hex": "#0e0f12",
-    "image": "assets/img/226532-kufw.webp"
-   },
-   {
-    "name": "Putih",
-    "hex": "#f4f4f2",
-    "image": "assets/img/g6-white-detail.webp"
-   },
-   {
-    "name": "Silver",
-    "hex": "#c9cacc",
-    "image": "assets/img/g6-silver-jalan.webp"
-   },
-   {
-    "name": "Abu-abu",
-    "hex": "#8d9094",
-    "image": "assets/img/g6-grey-showroom.webp"
-   }
-  ],
-  "variants": [
-   {
-    "name": "XPeng G6 Pro",
-    "price": 679000000
-   },
-   {
-    "name": "XPeng G6 AWD",
-    "price": 769000000
-   }
-  ],
-  "highlights": [
-   "Baterai LFP 80,8 kWh dengan platform 800V 5C",
-   "Jarak tempuh hingga 525 km (WLTP) untuk G6 Pro",
-   "Varian AWD dua motor sekitar 487 HP",
-   "Garansi baterai dan kendaraan 8 tahun/160.000 km",
-   "Gratis servis 5 tahun/100.000 km"
-  ],
-  "specs": [
-   {
-    "k": "Tipe",
-    "v": "SUV coupe listrik"
-   },
-   {
-    "k": "Baterai",
-    "v": "LFP 80,8 kWh"
-   },
-   {
-    "k": "Arsitektur",
-    "v": "SEPA 2.0, 800V, 5C"
-   },
-   {
-    "k": "Jarak tempuh Pro",
-    "v": "hingga 525 km (WLTP) / 618 km (NEDC)"
-   },
-   {
-    "k": "Jarak tempuh AWD",
-    "v": "hingga 510 km (WLTP)"
-   },
-   {
-    "k": "Penggerak",
-    "v": "Pro: RWD, AWD: dua motor"
-   },
-   {
-    "k": "Garansi",
-    "v": "Baterai dan kendaraan 8 tahun/160.000 km"
-   },
-   {
-    "k": "Gratis servis",
-    "v": "5 tahun/100.000 km"
-   }
-  ],
-  "faq": [
-   {
-    "q": "Berapa harga XPeng G6 di Indonesia?",
-    "a": "Saat ini, XPeng G6 Pro Rp679.000.000 dan XPeng G6 AWD Rp769.000.000. Hubungi kami untuk konfirmasi harga terbaru."
-   },
-   {
-    "q": "Berapa jarak tempuh XPeng G6 Pro?",
-    "a": "Hingga sekitar 525 km berdasarkan standar WLTP dengan baterai LFP 80,8 kWh."
-   },
-   {
-    "q": "Apa beda G6 Pro dan G6 AWD?",
-    "a": "G6 Pro memakai satu motor penggerak roda belakang. G6 AWD punya motor tambahan di depan sehingga tenaganya jauh lebih besar, dengan jarak tempuh sedikit lebih pendek."
-   }
-  ],
-  "metaTitle": "XPeng G6 Harga & Spesifikasi 2026 | SUV Listrik Premium",
-  "metaDescription": "Harga XPeng G6 mulai Rp679 juta. Bandingkan G6 Pro dan G6 AWD, jarak tempuh, baterai 80,8 kWh, garansi 8 tahun, dan test drive.",
-  "videos": [
-   {
-    "type": "mp4",
-    "src": "assets/video/227816.mp4",
-    "alt": "xpengwins xpeng G6 Pro",
-    "title": ""
-   }
-  ],
-  "compare": [
-   {
-    "g": "Performa",
-    "rows": [
-     {
-      "k": "Penggerak",
-      "vals": [
-       "RWD (satu motor)",
-       "AWD (dua motor)"
-      ]
-     },
-     {
-      "k": "Tenaga",
-      "vals": [
-       "218 kW",
-       "358 kW (218 + 140 kW)"
-      ]
-     },
-     {
-      "k": "Torsi",
-      "vals": [
-       "440 Nm",
-       "660 Nm (440 + 220 Nm)"
-      ]
-     },
-     {
-      "k": "Akselerasi 0–100 km/jam",
-      "vals": [
-       "6,7 detik",
-       "4,13 detik"
-      ]
-     },
-     {
-      "k": "Jarak tempuh (WLTP)",
-      "vals": [
-       "525 km",
-       "510 km"
-      ]
-     }
-    ]
-   },
-   {
-    "g": "Baterai dan pengisian",
-    "rows": [
-     {
-      "k": "Baterai",
-      "vals": [
-       "LFP 80,8 kWh",
-       "LFP 80,8 kWh"
-      ]
-     },
-     {
-      "k": "Platform",
-      "vals": [
-       "SEPA 2.0, 800V, 5C",
-       "SEPA 2.0, 800V, 5C"
-      ]
-     },
-     {
-      "k": "Pengisian DC maksimum",
-      "vals": [
-       "451 kW",
-       "451 kW"
-      ]
-     },
-     {
-      "k": "Pengisian AC",
-      "vals": [
-       "11 kW",
-       "11 kW"
-      ]
-     }
-    ]
-   }
-  ],
-  "detail": [
-   {
-    "g": "Performa (G6 Pro)",
-    "rows": [
-     {
-      "k": "Tenaga",
-      "v": "218 kW"
-     },
-     {
-      "k": "Torsi",
-      "v": "440 Nm"
-     },
-     {
-      "k": "Akselerasi 0–100 km/jam",
-      "v": "6,7 detik"
-     },
-     {
-      "k": "Jarak tempuh",
-      "v": "618 km (NEDC) / 525 km (WLTP)"
-     },
-     {
-      "k": "Kecepatan puncak",
-      "v": "202 km/jam"
-     },
-     {
-      "k": "Koefisien drag",
-      "v": "0,248 Cd"
-     },
-     {
-      "k": "Radius putar",
-      "v": "5,8 m"
-     }
-    ]
-   },
-   {
-    "g": "Baterai dan pengisian",
-    "rows": [
-     {
-      "k": "Tipe sel baterai",
-      "v": "LFP"
-     },
-     {
-      "k": "Kapasitas baterai bruto",
-      "v": "80,8 kWh"
-     },
-     {
-      "k": "Daya pengisian AC",
-      "v": "11 kW"
-     },
-     {
-      "k": "Waktu pengisian AC 5–100%",
-      "v": "9,2 jam"
-     },
-     {
-      "k": "Daya pengisian DC maksimum",
-      "v": "451 kW"
-     },
-     {
-      "k": "Pengisian DC 10–80%",
-      "v": "12 menit"
-     },
-     {
-      "k": "V2L (listrik keluar kendaraan)",
-      "v": "✓"
-     },
-     {
-      "k": "Jenis port pengisian",
-      "v": "CCS2"
-     }
-    ]
-   },
-   {
-    "g": "Dimensi",
-    "rows": [
-     {
-      "k": "Panjang",
-      "v": "4.758 mm"
-     },
-     {
-      "k": "Lebar",
-      "v": "1.920 mm"
-     },
-     {
-      "k": "Tinggi",
-      "v": "1.650 mm"
-     },
-     {
-      "k": "Jarak sumbu roda",
-      "v": "2.899 mm"
-     }
-    ]
-   },
-   {
-    "g": "Sasis dan berkendara",
-    "rows": [
-     {
-      "k": "Suspensi depan",
-      "v": "Double wishbone"
-     },
-     {
-      "k": "Mode berkendara",
-      "v": "ECO, Comfort, Sport, Individual, Launch, Escape"
-     },
-     {
-      "k": "Sistem rem",
-      "v": "OneBox, cakram ventilasi depan dan belakang"
-     }
-    ]
-   },
-   {
-    "g": "Kabin dan teknologi",
-    "rows": [
-     {
-      "k": "Panel instrumen digital",
-      "v": "10,25 inci"
-     },
-     {
-      "k": "Layar tengah",
-      "v": "15,6 inci"
-     },
-     {
-      "k": "Audio",
-      "v": "18 speaker, termasuk 2 speaker di sisi kursi pengemudi"
-     },
-     {
-      "k": "Kursi",
-      "v": "Nappa leather, kursi depan 12 arah elektrik dengan memori, ventilasi dan pemanas"
-     },
-     {
-      "k": "Lampu ambient",
-      "v": "256 warna"
-     },
-     {
-      "k": "Kunci",
-      "v": "Kunci Bluetooth di HP, kunci UWB, kartu NFC"
-     }
-    ]
-   },
-   {
-    "g": "Keselamatan",
-    "rows": [
-     {
-      "k": "Airbag",
-      "v": "7"
-     },
-     {
-      "k": "Pemantau tekanan ban (TPMS)",
-      "v": "✓"
-     },
-     {
-      "k": "ISOFIX baris belakang",
-      "v": "✓"
-     },
-     {
-      "k": "Autohold",
-      "v": "✓"
-     },
-     {
-      "k": "Suara peringatan kendaraan (AVAS)",
-      "v": "✓"
-     },
-     {
-      "k": "Pengingat sabuk pengaman",
-      "v": "✓"
-     }
-    ]
-   },
-   {
-    "g": "XPILOT Assist",
-    "rows": [
-     {
-      "k": "Prosesor",
-      "v": "NVIDIA Orin-X"
-     },
-     {
-      "k": "Bantuan mengemudi",
-      "v": "ACC, LCC, ATC, ALC"
-     },
-     {
-      "k": "Pencegahan tabrakan",
-      "v": "AEB, FCW, FDM, LDW, LKA, ELK, BSD, DOW, RCW, RCTA, TSR, IHB, SAS"
-     },
-     {
-      "k": "Bantuan parkir",
-      "v": "Kamera sekeliling, parkir otomatis, keluar parkir otomatis"
-     },
-     {
-      "k": "Pemantau pengemudi dan perekam jalan",
-      "v": "✓"
-     }
-    ]
-   },
-   {
-    "g": "Perangkat lunak",
-    "rows": [
-     {
-      "k": "Asisten suara",
-      "v": "“Hey XPENG”"
-     },
-     {
-      "k": "Konektivitas",
-      "v": "Apple CarPlay, Android Auto, app store, navigasi"
-     },
-     {
-      "k": "Pembaruan jarak jauh (OTA)",
-      "v": "✓"
-     },
-     {
-      "k": "Parkir jarak jauh dan panggil mobil",
-      "v": "✓"
-     },
-     {
-      "k": "Transparent chassis",
-      "v": "✓"
-     }
-    ]
-   }
-  ],
-  "specNote": "Detail lengkap di atas mengacu pada brosur XPeng G6 Pro. Perbedaan tenaga, torsi, akselerasi, dan jarak tempuh G6 AWD ada di tabel perbedaan varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
-  "brosur": ""
- }
+  {
+    "slug": "xpeng-x9",
+    "name": "XPeng X9",
+    "type": "MPV Listrik Premium 7 Kursi",
+    "tagline": "First class di jalan raya. Kabin lega, captain seat, pengisian super cepat.",
+    "hero": "assets/img/226028.webp",
+    "gallery": [
+      "assets/img/x9-white-depan.webp",
+      "assets/img/x9-white-belakang.webp",
+      "assets/img/x9-white-dashboard.webp",
+      "assets/img/x9-white-kursi-2.webp",
+      "assets/img/x9-white-kursi-3.webp",
+      "assets/img/x9-white-kursi-belakang.webp",
+      "assets/img/x9-black-depan.webp",
+      "assets/img/x9-grey-depan.webp",
+      "assets/img/x9-silver-depan.webp"
+    ],
+    "colors": [
+      {
+        "name": "Putih",
+        "hex": "#f4f4f2",
+        "image": "assets/img/xpeng-electric-suv-in-futuristic-fog.webp"
+      },
+      {
+        "name": "Hitam",
+        "hex": "#0e0f12",
+        "image": "assets/img/phantom-x9-in-the-mist.webp"
+      },
+      {
+        "name": "Grey Matte",
+        "hex": "#8b98a6",
+        "image": "assets/img/xpeng-x9-at-twilight.webp"
+      },
+      {
+        "name": "Silver",
+        "hex": "#c9cacc",
+        "image": "assets/img/xpeng-x9-in-a-misty-futurescape.webp"
+      }
+    ],
+    "variants": [
+      {
+        "name": "New XPeng X9 Pro",
+        "price": 1219000000
+      },
+      {
+        "name": "New XPeng X9 Pro+",
+        "price": 1259000000
+      }
+    ],
+    "highlights": [
+      "7 kursi dengan captain seat baris kedua",
+      "Pintu geser elektrik yang mudah untuk keluarga",
+      "Platform 800V dengan pengisian daya cepat",
+      "Layar hiburan besar dan kabin senyap",
+      "Garansi baterai dan kendaraan 8 tahun (syarat berlaku)"
+    ],
+    "specs": [
+      {
+        "k": "Tipe",
+        "v": "MPV listrik 7 kursi"
+      },
+      {
+        "k": "Baterai",
+        "v": "NCM 110 kWh"
+      },
+      {
+        "k": "Jarak tempuh",
+        "v": "hingga 715 km (NEDC)"
+      },
+      {
+        "k": "Tenaga dan torsi",
+        "v": "235 kW, 450 Nm"
+      },
+      {
+        "k": "Penggerak",
+        "v": "Motor listrik, roda depan (FWD)"
+      },
+      {
+        "k": "Arsitektur",
+        "v": "800V, pengisian DC puncak 542 kW"
+      },
+      {
+        "k": "Pengisian DC 10–80%",
+        "v": "12 menit"
+      },
+      {
+        "k": "Garansi",
+        "v": "Baterai dan kendaraan 8 tahun"
+      },
+      {
+        "k": "Catatan",
+        "v": "Spesifikasi New X9 Long Range (Pro dan Pro+) mengikuti brosur resmi. Hubungi kami untuk data terbaru."
+      }
+    ],
+    "faq": [
+      {
+        "q": "Berapa harga XPeng X9 di Indonesia?",
+        "a": "Saat ini, New XPeng X9 Pro Rp1.219.000.000 dan New XPeng X9 Pro+ Rp1.259.000.000. Harga bisa berubah, hubungi kami untuk konfirmasi."
+      },
+      {
+        "q": "Berapa kursi XPeng X9?",
+        "a": "XPeng X9 adalah MPV 7 kursi dengan captain seat di baris kedua."
+      },
+      {
+        "q": "Apakah bisa test drive XPeng X9?",
+        "a": "Bisa. Kirim pesan WhatsApp untuk jadwal test drive di showroom."
+      }
+    ],
+    "metaTitle": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
+    "metaDescription": "Harga XPeng X9 mulai Rp1,219 miliar. Lihat varian Pro dan Pro+, warna, fitur kabin, dan jadwal test drive MPV listrik 7 kursi.",
+    "videos": [
+      {
+        "type": "mp4",
+        "src": "assets/video/227779.mp4",
+        "alt": "xpengwins Xpeng X9",
+        "title": ""
+      }
+    ],
+    "interior": [
+      {
+        "src": "assets/img/228023.webp",
+        "alt": "Coffee"
+      },
+      {
+        "src": "assets/img/228025.webp",
+        "alt": "Meteorite Black"
+      },
+      {
+        "src": "assets/img/228027.webp",
+        "alt": "Rose Brown"
+      }
+    ],
+    "compare": [
+      {
+        "g": "Perbedaan Pro dan Pro+ (kursi baris kedua)",
+        "rows": [
+          {
+            "k": "Jenis kursi baris 2",
+            "vals": [
+              "Zero-gravity Sofa Seats (ada lorong tengah)",
+              "Zero-gravity Grand Sofa Seats (tanpa lorong tengah)"
+            ]
+          },
+          {
+            "k": "Pengaturan elektrik kursi baris 2",
+            "vals": [
+              "14 arah (lumbar 4 arah, sandaran kaki 4 arah dengan pemanas)",
+              "18 arah (lumbar 4 arah, sandaran kaki 4 arah dengan pemanas, sandaran kepala 4 arah)"
+            ]
+          },
+          {
+            "k": "Tempat minum baris 2",
+            "vals": [
+              "Pop-up (2)",
+              "Flip-over (2)"
+            ]
+          }
+        ]
+      },
+      {
+        "g": "Sama di kedua varian",
+        "rows": [
+          {
+            "k": "Baterai",
+            "vals": [
+              "NCM 110 kWh",
+              "NCM 110 kWh"
+            ]
+          },
+          {
+            "k": "Jarak tempuh (NEDC)",
+            "vals": [
+              "715 km",
+              "715 km"
+            ]
+          },
+          {
+            "k": "Tenaga dan torsi",
+            "vals": [
+              "235 kW, 450 Nm",
+              "235 kW, 450 Nm"
+            ]
+          },
+          {
+            "k": "Akselerasi 0–100 km/jam",
+            "vals": [
+              "7,75 detik",
+              "7,75 detik"
+            ]
+          },
+          {
+            "k": "Pengisian DC puncak",
+            "vals": [
+              "542 kW",
+              "542 kW"
+            ]
+          },
+          {
+            "k": "Airbag",
+            "vals": [
+              "9",
+              "9"
+            ]
+          },
+          {
+            "k": "Audio",
+            "vals": [
+              "27 speaker XOPERA",
+              "27 speaker XOPERA"
+            ]
+          },
+          {
+            "k": "Bantuan mengemudi",
+            "vals": [
+              "XPILOT Assist, chip Turing XP5",
+              "XPILOT Assist, chip Turing XP5"
+            ]
+          }
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "g": "Dimensi dan ruang",
+        "rows": [
+          {
+            "k": "Panjang × lebar × tinggi",
+            "v": "5.316 × 1.988 × 1.785 mm"
+          },
+          {
+            "k": "Jarak sumbu roda",
+            "v": "3.160 mm"
+          },
+          {
+            "k": "Berat kosong",
+            "v": "2.690 kg"
+          },
+          {
+            "k": "Kapasitas bagasi",
+            "v": "721 L, hingga 2.554 L"
+          },
+          {
+            "k": "Konfigurasi kursi",
+            "v": "7 kursi"
+          },
+          {
+            "k": "Ruang kabin",
+            "v": "7,7 m²"
+          }
+        ]
+      },
+      {
+        "g": "Performa dan sasis",
+        "rows": [
+          {
+            "k": "Tenaga",
+            "v": "235 kW"
+          },
+          {
+            "k": "Torsi",
+            "v": "450 Nm"
+          },
+          {
+            "k": "Akselerasi 0–100 km/jam",
+            "v": "7,75 detik"
+          },
+          {
+            "k": "Kecepatan puncak",
+            "v": "200 km/jam"
+          },
+          {
+            "k": "Penggerak",
+            "v": "Motor listrik PMSM, roda depan (FWD)"
+          },
+          {
+            "k": "Arsitektur",
+            "v": "800V"
+          },
+          {
+            "k": "Koefisien drag",
+            "v": "0,236 Cd"
+          },
+          {
+            "k": "Radius putar",
+            "v": "5,4 m"
+          },
+          {
+            "k": "Roda belakang",
+            "v": "Ikut mengarah (rear steering)"
+          },
+          {
+            "k": "Suspensi",
+            "v": "Udara, dua ruang"
+          },
+          {
+            "k": "Pelek",
+            "v": "20 inci"
+          }
+        ]
+      },
+      {
+        "g": "Baterai dan pengisian",
+        "rows": [
+          {
+            "k": "Tipe sel baterai",
+            "v": "NCM"
+          },
+          {
+            "k": "Kapasitas baterai bruto",
+            "v": "110 kWh"
+          },
+          {
+            "k": "Jarak tempuh (NEDC)",
+            "v": "715 km"
+          },
+          {
+            "k": "Daya pengisian AC",
+            "v": "11 kW"
+          },
+          {
+            "k": "Waktu pengisian AC 5–100%",
+            "v": "11 jam"
+          },
+          {
+            "k": "Daya pengisian DC puncak",
+            "v": "542 kW"
+          },
+          {
+            "k": "Pengisian DC 10–80%",
+            "v": "12 menit"
+          },
+          {
+            "k": "V2L (listrik keluar kendaraan)",
+            "v": "6 kW"
+          }
+        ]
+      },
+      {
+        "g": "Kabin dan teknologi",
+        "rows": [
+          {
+            "k": "Chip kabin",
+            "v": "Qualcomm Snapdragon 8295"
+          },
+          {
+            "k": "Layar tengah",
+            "v": "17,3 inci"
+          },
+          {
+            "k": "Layar hiburan penumpang",
+            "v": "21,4 inci"
+          },
+          {
+            "k": "Head-up display",
+            "v": "21 inci"
+          },
+          {
+            "k": "Audio",
+            "v": "27 speaker XOPERA, amplifier 1.552 W, 7.1.6 kanal"
+          },
+          {
+            "k": "Kursi depan",
+            "v": "Nappa leather, 12 arah elektrik, ventilasi, pemanas, pijat, memori"
+          },
+          {
+            "k": "Kursi baris 2",
+            "v": "Zero gravity, pijat 10 titik, ventilasi dan pemanas"
+          },
+          {
+            "k": "Kursi baris 3",
+            "v": "Sandaran elektrik, pemanas, lipat 40/60"
+          },
+          {
+            "k": "Kulkas",
+            "v": "Panas dan dingin, terintegrasi"
+          },
+          {
+            "k": "AC",
+            "v": "5 zona, filter CN95, pemantau PM2.5"
+          },
+          {
+            "k": "Kunci",
+            "v": "Kunci Bluetooth di HP"
+          }
+        ]
+      },
+      {
+        "g": "Keselamatan",
+        "rows": [
+          {
+            "k": "Airbag",
+            "v": "9"
+          },
+          {
+            "k": "Sistem rem",
+            "v": "Bosch IPB, ESP, rem parkir elektronik, Autohold"
+          },
+          {
+            "k": "Pemantau tekanan ban (TPMS)",
+            "v": "✓"
+          },
+          {
+            "k": "ISOFIX baris belakang",
+            "v": "✓"
+          },
+          {
+            "k": "Suara peringatan kendaraan (AVAS)",
+            "v": "✓"
+          },
+          {
+            "k": "E-call",
+            "v": "✓"
+          },
+          {
+            "k": "Pintu geser elektrik",
+            "v": "Anti jepit, kedua sisi"
+          }
+        ]
+      },
+      {
+        "g": "XPILOT Assist",
+        "rows": [
+          {
+            "k": "Perangkat keras",
+            "v": "Chip Turing XP5, 3 radar gelombang milimeter, 12 radar ultrasonik, 12 kamera"
+          },
+          {
+            "k": "Bantuan mengemudi",
+            "v": "ACC, LCC, ATC, SAS"
+          },
+          {
+            "k": "Pencegahan tabrakan",
+            "v": "AEB, FDM, FCW, TSR, IHB, DSM, BSD, DOW, LDW, LKA, ELK, RCW, RCTA"
+          },
+          {
+            "k": "Bantuan parkir",
+            "v": "EAP, AEP, RPA, RVS, kamera 360°, transparent chassis"
+          }
+        ]
+      },
+      {
+        "g": "Warna",
+        "rows": [
+          {
+            "k": "Warna luar",
+            "v": "Arctic White, Silver Frost, Matte Gray, Midnight Black"
+          },
+          {
+            "k": "Warna interior",
+            "v": "Coffee, Meteorite Black, Rose Brown"
+          }
+        ]
+      },
+      {
+        "g": "Garansi",
+        "rows": [
+          {
+            "k": "Baterai dan kendaraan",
+            "v": "8 tahun"
+          }
+        ]
+      }
+    ],
+    "specNote": "Perbedaan Pro dan Pro+ hanya ada pada kursi baris kedua; fitur lainnya sama. Data mengacu pada brosur New X9 Long Range. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+    "brosur": ""
+  },
+  {
+    "slug": "xpeng-g6",
+    "name": "XPeng G6",
+    "type": "SUV Coupe Listrik Premium",
+    "tagline": "SUV coupe listrik dengan teknologi 800V 5C dan bantuan berkendara cerdas.",
+    "hero": "assets/img/225088.webp",
+    "gallery": [
+      "assets/img/g6-black-depan.webp",
+      "assets/img/g6-black-belakang.webp",
+      "assets/img/g6-black-samping.webp",
+      "assets/img/g6-black-front.webp",
+      "assets/img/g6-silver-jalan.webp",
+      "assets/img/g6-white-detail.webp",
+      "assets/img/g6-grey-showroom.webp",
+      "assets/img/g6-grey-front.webp",
+      "assets/img/g6-grey-detail.webp"
+    ],
+    "colors": [
+      {
+        "name": "Hitam",
+        "hex": "#0e0f12",
+        "image": "assets/img/226532-kufw.webp"
+      },
+      {
+        "name": "Putih",
+        "hex": "#f4f4f2",
+        "image": "assets/img/g6-white-detail.webp"
+      },
+      {
+        "name": "Silver",
+        "hex": "#c9cacc",
+        "image": "assets/img/g6-silver-jalan.webp"
+      },
+      {
+        "name": "Abu-abu",
+        "hex": "#8d9094",
+        "image": "assets/img/g6-grey-showroom.webp"
+      }
+    ],
+    "variants": [
+      {
+        "name": "XPeng G6 Pro",
+        "price": 679000000
+      },
+      {
+        "name": "XPeng G6 AWD",
+        "price": 769000000
+      }
+    ],
+    "highlights": [
+      "Baterai LFP 80,8 kWh dengan platform 800V 5C",
+      "Jarak tempuh hingga 525 km (WLTP) untuk G6 Pro",
+      "Varian AWD dua motor sekitar 487 HP",
+      "Garansi baterai dan kendaraan 8 tahun/160.000 km",
+      "Gratis servis 5 tahun/100.000 km"
+    ],
+    "specs": [
+      {
+        "k": "Tipe",
+        "v": "SUV coupe listrik"
+      },
+      {
+        "k": "Baterai",
+        "v": "LFP 80,8 kWh"
+      },
+      {
+        "k": "Arsitektur",
+        "v": "SEPA 2.0, 800V, 5C"
+      },
+      {
+        "k": "Jarak tempuh Pro",
+        "v": "hingga 525 km (WLTP) / 618 km (NEDC)"
+      },
+      {
+        "k": "Jarak tempuh AWD",
+        "v": "hingga 510 km (WLTP)"
+      },
+      {
+        "k": "Penggerak",
+        "v": "Pro: RWD, AWD: dua motor"
+      },
+      {
+        "k": "Garansi",
+        "v": "Baterai dan kendaraan 8 tahun/160.000 km"
+      },
+      {
+        "k": "Gratis servis",
+        "v": "5 tahun/100.000 km"
+      }
+    ],
+    "faq": [
+      {
+        "q": "Berapa harga XPeng G6 di Indonesia?",
+        "a": "Saat ini, XPeng G6 Pro Rp679.000.000 dan XPeng G6 AWD Rp769.000.000. Hubungi kami untuk konfirmasi harga terbaru."
+      },
+      {
+        "q": "Berapa jarak tempuh XPeng G6 Pro?",
+        "a": "Hingga sekitar 525 km berdasarkan standar WLTP dengan baterai LFP 80,8 kWh."
+      },
+      {
+        "q": "Apa beda G6 Pro dan G6 AWD?",
+        "a": "G6 Pro memakai satu motor penggerak roda belakang. G6 AWD punya motor tambahan di depan sehingga tenaganya jauh lebih besar, dengan jarak tempuh sedikit lebih pendek."
+      }
+    ],
+    "metaTitle": "XPeng G6 Harga & Spesifikasi 2026 | SUV Listrik Premium",
+    "metaDescription": "Harga XPeng G6 mulai Rp679 juta. Bandingkan G6 Pro dan G6 AWD, jarak tempuh, baterai 80,8 kWh, garansi 8 tahun, dan test drive.",
+    "videos": [
+      {
+        "type": "mp4",
+        "src": "assets/video/227816.mp4",
+        "alt": "xpengwins xpeng G6 Pro",
+        "title": ""
+      }
+    ],
+    "compare": [
+      {
+        "g": "Performa",
+        "rows": [
+          {
+            "k": "Penggerak",
+            "vals": [
+              "RWD (satu motor)",
+              "AWD (dua motor)"
+            ]
+          },
+          {
+            "k": "Tenaga",
+            "vals": [
+              "218 kW",
+              "358 kW (218 + 140 kW)"
+            ]
+          },
+          {
+            "k": "Torsi",
+            "vals": [
+              "440 Nm",
+              "660 Nm (440 + 220 Nm)"
+            ]
+          },
+          {
+            "k": "Akselerasi 0–100 km/jam",
+            "vals": [
+              "6,7 detik",
+              "4,13 detik"
+            ]
+          },
+          {
+            "k": "Jarak tempuh (WLTP)",
+            "vals": [
+              "525 km",
+              "510 km"
+            ]
+          }
+        ]
+      },
+      {
+        "g": "Baterai dan pengisian",
+        "rows": [
+          {
+            "k": "Baterai",
+            "vals": [
+              "LFP 80,8 kWh",
+              "LFP 80,8 kWh"
+            ]
+          },
+          {
+            "k": "Platform",
+            "vals": [
+              "SEPA 2.0, 800V, 5C",
+              "SEPA 2.0, 800V, 5C"
+            ]
+          },
+          {
+            "k": "Pengisian DC maksimum",
+            "vals": [
+              "451 kW",
+              "451 kW"
+            ]
+          },
+          {
+            "k": "Pengisian AC",
+            "vals": [
+              "11 kW",
+              "11 kW"
+            ]
+          }
+        ]
+      }
+    ],
+    "detail": [
+      {
+        "g": "Performa (G6 Pro)",
+        "rows": [
+          {
+            "k": "Tenaga",
+            "v": "218 kW"
+          },
+          {
+            "k": "Torsi",
+            "v": "440 Nm"
+          },
+          {
+            "k": "Akselerasi 0–100 km/jam",
+            "v": "6,7 detik"
+          },
+          {
+            "k": "Jarak tempuh",
+            "v": "618 km (NEDC) / 525 km (WLTP)"
+          },
+          {
+            "k": "Kecepatan puncak",
+            "v": "202 km/jam"
+          },
+          {
+            "k": "Koefisien drag",
+            "v": "0,248 Cd"
+          },
+          {
+            "k": "Radius putar",
+            "v": "5,8 m"
+          }
+        ]
+      },
+      {
+        "g": "Baterai dan pengisian",
+        "rows": [
+          {
+            "k": "Tipe sel baterai",
+            "v": "LFP"
+          },
+          {
+            "k": "Kapasitas baterai bruto",
+            "v": "80,8 kWh"
+          },
+          {
+            "k": "Daya pengisian AC",
+            "v": "11 kW"
+          },
+          {
+            "k": "Waktu pengisian AC 5–100%",
+            "v": "9,2 jam"
+          },
+          {
+            "k": "Daya pengisian DC maksimum",
+            "v": "451 kW"
+          },
+          {
+            "k": "Pengisian DC 10–80%",
+            "v": "12 menit"
+          },
+          {
+            "k": "V2L (listrik keluar kendaraan)",
+            "v": "✓"
+          },
+          {
+            "k": "Jenis port pengisian",
+            "v": "CCS2"
+          }
+        ]
+      },
+      {
+        "g": "Dimensi",
+        "rows": [
+          {
+            "k": "Panjang",
+            "v": "4.758 mm"
+          },
+          {
+            "k": "Lebar",
+            "v": "1.920 mm"
+          },
+          {
+            "k": "Tinggi",
+            "v": "1.650 mm"
+          },
+          {
+            "k": "Jarak sumbu roda",
+            "v": "2.899 mm"
+          },
+          {
+            "k": "Jumlah kursi",
+            "v": "5"
+          },
+          {
+            "k": "Lebar jejak depan / belakang",
+            "v": "1.635 / 1.650 mm"
+          },
+          {
+            "k": "Kapasitas bagasi",
+            "v": "571 L, 1.374 L dengan kursi belakang dilipat"
+          },
+          {
+            "k": "Pelek",
+            "v": "20 inci"
+          }
+        ]
+      },
+      {
+        "g": "Sasis dan berkendara",
+        "rows": [
+          {
+            "k": "Suspensi depan",
+            "v": "Double wishbone"
+          },
+          {
+            "k": "Mode berkendara",
+            "v": "ECO, Comfort, Sport, Individual, Launch, Escape"
+          },
+          {
+            "k": "Sistem rem",
+            "v": "OneBox, cakram ventilasi depan dan belakang"
+          }
+        ]
+      },
+      {
+        "g": "Kabin dan teknologi",
+        "rows": [
+          {
+            "k": "Panel instrumen digital",
+            "v": "10,25 inci"
+          },
+          {
+            "k": "Layar tengah",
+            "v": "15,6 inci"
+          },
+          {
+            "k": "Audio",
+            "v": "18 speaker, termasuk 2 speaker di sisi kursi pengemudi"
+          },
+          {
+            "k": "Kursi",
+            "v": "Nappa leather, kursi depan 10 arah elektrik (lumbar 4 arah) dengan memori, ventilasi, pemanas, dan pijat"
+          },
+          {
+            "k": "Lampu ambient",
+            "v": "256 warna"
+          },
+          {
+            "k": "Kunci",
+            "v": "Kunci Bluetooth di HP, kunci UWB, kartu NFC"
+          },
+          {
+            "k": "Kursi belakang",
+            "v": "Sandaran bisa diatur, lipat 60/40, sandaran tangan tengah dengan tempat minum"
+          },
+          {
+            "k": "AC",
+            "v": "Otomatis dengan pompa panas, filter N95 dan pemantau PM2.5"
+          }
+        ]
+      },
+      {
+        "g": "Keselamatan",
+        "rows": [
+          {
+            "k": "Airbag",
+            "v": "7"
+          },
+          {
+            "k": "Pemantau tekanan ban (TPMS)",
+            "v": "✓"
+          },
+          {
+            "k": "ISOFIX baris belakang",
+            "v": "✓"
+          },
+          {
+            "k": "Autohold",
+            "v": "✓"
+          },
+          {
+            "k": "Suara peringatan kendaraan (AVAS)",
+            "v": "✓"
+          },
+          {
+            "k": "Pengingat sabuk pengaman",
+            "v": "✓"
+          }
+        ]
+      },
+      {
+        "g": "XPILOT Assist",
+        "rows": [
+          {
+            "k": "Prosesor",
+            "v": "NVIDIA Orin-X"
+          },
+          {
+            "k": "Bantuan mengemudi",
+            "v": "ACC, LCC, ATC, ALC"
+          },
+          {
+            "k": "Pencegahan tabrakan",
+            "v": "AEB, FCW, FDM, LDW, LKA, ELK, BSD, DOW, RCW, RCTA, TSR, IHB, SAS"
+          },
+          {
+            "k": "Bantuan parkir",
+            "v": "Kamera sekeliling, parkir otomatis, keluar parkir otomatis"
+          },
+          {
+            "k": "Pemantau pengemudi dan perekam jalan",
+            "v": "✓"
+          }
+        ]
+      },
+      {
+        "g": "Perangkat lunak",
+        "rows": [
+          {
+            "k": "Asisten suara",
+            "v": "“Hey XPENG”"
+          },
+          {
+            "k": "Konektivitas",
+            "v": "Apple CarPlay, Android Auto, app store, navigasi"
+          },
+          {
+            "k": "Pembaruan jarak jauh (OTA)",
+            "v": "✓"
+          },
+          {
+            "k": "Parkir jarak jauh dan panggil mobil",
+            "v": "✓"
+          },
+          {
+            "k": "Transparent chassis",
+            "v": "✓"
+          }
+        ]
+      },
+      {
+        "g": "Warna",
+        "rows": [
+          {
+            "k": "Warna luar",
+            "v": "Arctic White, Silver Frost, Graphite Gray, Midnight Black, Stellar Purple"
+          },
+          {
+            "k": "Warna interior",
+            "v": "Dark Gray, Light Gray"
+          }
+        ]
+      }
+    ],
+    "specNote": "Detail lengkap di atas mengacu pada brosur XPeng G6 Pro. Perbedaan tenaga, torsi, akselerasi, dan jarak tempuh G6 AWD ada di tabel perbedaan varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+    "brosur": ""
+  }
 ]
