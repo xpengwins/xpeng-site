@@ -2529,7 +2529,7 @@
       "tag": "h3"
      },
      {
-      "t": "1 perbedaan ditandai",
+      "t": "4 perbedaan ditandai",
       "tag": "p"
      },
      {
@@ -2539,6 +2539,10 @@
      {
       "t": ". Baris tanpa tanda berarti sama di semua varian.",
       "tag": "p"
+     },
+     {
+      "t": "Tampilkan perbedaan saja",
+      "tag": "label"
      },
      {
       "t": "Spesifikasi lengkap",
@@ -2553,6 +2557,22 @@
       "tag": "h4"
      },
      {
+      "t": "Baterai dan pengisian",
+      "tag": "h4"
+     },
+     {
+      "t": "Kabin dan teknologi",
+      "tag": "h4"
+     },
+     {
+      "t": "Keselamatan",
+      "tag": "h4"
+     },
+     {
+      "t": "XPILOT Assist",
+      "tag": "h4"
+     },
+     {
       "t": "Warna",
       "tag": "h4"
      },
@@ -2561,7 +2581,7 @@
       "tag": "h4"
      },
      {
-      "t": "Perbedaan fitur lengkap antara varian akan mengikuti brosur resmi XPeng. Unduh brosur atau hubungi kami untuk daftar fitur terbaru tiap varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+      "t": "Perbedaan Pro dan Pro+ hanya ada pada kursi baris kedua; fitur lainnya sama. Data mengacu pada brosur New X9 Long Range. Spesifikasi dapat berubah dan mengikuti stok dealer.",
       "tag": "p"
      }
     ],
@@ -3015,6 +3035,10 @@
      },
      {
       "t": "Perangkat lunak",
+      "tag": "h4"
+     },
+     {
+      "t": "Warna",
       "tag": "h4"
      },
      {

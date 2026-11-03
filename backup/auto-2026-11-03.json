@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-11-03T09:02:09.680Z",
+ "date": "2026-11-03T09:08:03.625Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -108,12 +108,28 @@
       "v": "MPV listrik 7 kursi"
      },
      {
+      "k": "Baterai",
+      "v": "NCM 110 kWh"
+     },
+     {
+      "k": "Jarak tempuh",
+      "v": "hingga 715 km (NEDC)"
+     },
+     {
+      "k": "Tenaga dan torsi",
+      "v": "235 kW, 450 Nm"
+     },
+     {
       "k": "Penggerak",
       "v": "Motor listrik, roda depan (FWD)"
      },
      {
       "k": "Arsitektur",
-      "v": "800V"
+      "v": "800V, pengisian DC puncak 542 kW"
+     },
+     {
+      "k": "Pengisian DC 10–80%",
+      "v": "12 menit"
      },
      {
       "k": "Garansi",
@@ -121,7 +137,7 @@
      },
      {
       "k": "Catatan",
-      "v": "Spesifikasi detail New X9 Pro/Pro+ mengikuti brosur resmi. Hubungi kami untuk data terbaru."
+      "v": "Spesifikasi New X9 Long Range (Pro dan Pro+) mengikuti brosur resmi. Hubungi kami untuk data terbaru."
      }
     ],
     "faq": [
@@ -162,7 +178,95 @@
       "alt": "Rose Brown"
      }
     ],
-    "compare": [],
+    "compare": [
+     {
+      "g": "Perbedaan Pro dan Pro+ (kursi baris kedua)",
+      "rows": [
+       {
+        "k": "Jenis kursi baris 2",
+        "vals": [
+         "Zero-gravity Sofa Seats (ada lorong tengah)",
+         "Zero-gravity Grand Sofa Seats (tanpa lorong tengah)"
+        ]
+       },
+       {
+        "k": "Pengaturan elektrik kursi baris 2",
+        "vals": [
+         "14 arah (lumbar 4 arah, sandaran kaki 4 arah dengan pemanas)",
+         "18 arah (lumbar 4 arah, sandaran kaki 4 arah dengan pemanas, sandaran kepala 4 arah)"
+        ]
+       },
+       {
+        "k": "Tempat minum baris 2",
+        "vals": [
+         "Pop-up (2)",
+         "Flip-over (2)"
+        ]
+       }
+      ]
+     },
+     {
+      "g": "Sama di kedua varian",
+      "rows": [
+       {
+        "k": "Baterai",
+        "vals": [
+         "NCM 110 kWh",
+         "NCM 110 kWh"
+        ]
+       },
+       {
+        "k": "Jarak tempuh (NEDC)",
+        "vals": [
+         "715 km",
+         "715 km"
+        ]
+       },
+       {
+        "k": "Tenaga dan torsi",
+        "vals": [
+         "235 kW, 450 Nm",
+         "235 kW, 450 Nm"
+        ]
+       },
+       {
+        "k": "Akselerasi 0–100 km/jam",
+        "vals": [
+         "7,75 detik",
+         "7,75 detik"
+        ]
+       },
+       {
+        "k": "Pengisian DC puncak",
+        "vals": [
+         "542 kW",
+         "542 kW"
+        ]
+       },
+       {
+        "k": "Airbag",
+        "vals": [
+         "9",
+         "9"
+        ]
+       },
+       {
+        "k": "Audio",
+        "vals": [
+         "27 speaker XOPERA",
+         "27 speaker XOPERA"
+        ]
+       },
+       {
+        "k": "Bantuan mengemudi",
+        "vals": [
+         "XPILOT Assist, chip Turing XP5",
+         "XPILOT Assist, chip Turing XP5"
+        ]
+       }
+      ]
+     }
+    ],
     "detail": [
      {
       "g": "Dimensi dan ruang",
@@ -176,12 +280,20 @@
         "v": "3.160 mm"
        },
        {
+        "k": "Berat kosong",
+        "v": "2.690 kg"
+       },
+       {
         "k": "Kapasitas bagasi",
         "v": "721 L, hingga 2.554 L"
        },
        {
         "k": "Konfigurasi kursi",
         "v": "7 kursi"
+       },
+       {
+        "k": "Ruang kabin",
+        "v": "7,7 m²"
        }
       ]
      },
@@ -198,11 +310,15 @@
        },
        {
         "k": "Akselerasi 0–100 km/jam",
-        "v": "7,7 detik"
+        "v": "7,75 detik"
+       },
+       {
+        "k": "Kecepatan puncak",
+        "v": "200 km/jam"
        },
        {
         "k": "Penggerak",
-        "v": "Motor listrik, roda depan (FWD)"
+        "v": "Motor listrik PMSM, roda depan (FWD)"
        },
        {
         "k": "Arsitektur",
@@ -223,6 +339,150 @@
        {
         "k": "Suspensi",
         "v": "Udara, dua ruang"
+       },
+       {
+        "k": "Pelek",
+        "v": "20 inci"
+       }
+      ]
+     },
+     {
+      "g": "Baterai dan pengisian",
+      "rows": [
+       {
+        "k": "Tipe sel baterai",
+        "v": "NCM"
+       },
+       {
+        "k": "Kapasitas baterai bruto",
+        "v": "110 kWh"
+       },
+       {
+        "k": "Jarak tempuh (NEDC)",
+        "v": "715 km"
+       },
+       {
+        "k": "Daya pengisian AC",
+        "v": "11 kW"
+       },
+       {
+        "k": "Waktu pengisian AC 5–100%",
+        "v": "11 jam"
+       },
+       {
+        "k": "Daya pengisian DC puncak",
+        "v": "542 kW"
+       },
+       {
+        "k": "Pengisian DC 10–80%",
+        "v": "12 menit"
+       },
+       {
+        "k": "V2L (listrik keluar kendaraan)",
+        "v": "6 kW"
+       }
+      ]
+     },
+     {
+      "g": "Kabin dan teknologi",
+      "rows": [
+       {
+        "k": "Chip kabin",
+        "v": "Qualcomm Snapdragon 8295"
+       },
+       {
+        "k": "Layar tengah",
+        "v": "17,3 inci"
+       },
+       {
+        "k": "Layar hiburan penumpang",
+        "v": "21,4 inci"
+       },
+       {
+        "k": "Head-up display",
+        "v": "21 inci"
+       },
+       {
+        "k": "Audio",
+        "v": "27 speaker XOPERA, amplifier 1.552 W, 7.1.6 kanal"
+       },
+       {
+        "k": "Kursi depan",
+        "v": "Nappa leather, 12 arah elektrik, ventilasi, pemanas, pijat, memori"
+       },
+       {
+        "k": "Kursi baris 2",
+        "v": "Zero gravity, pijat 10 titik, ventilasi dan pemanas"
+       },
+       {
+        "k": "Kursi baris 3",
+        "v": "Sandaran elektrik, pemanas, lipat 40/60"
+       },
+       {
+        "k": "Kulkas",
+        "v": "Panas dan dingin, terintegrasi"
+       },
+       {
+        "k": "AC",
+        "v": "5 zona, filter CN95, pemantau PM2.5"
+       },
+       {
+        "k": "Kunci",
+        "v": "Kunci Bluetooth di HP"
+       }
+      ]
+     },
+     {
+      "g": "Keselamatan",
+      "rows": [
+       {
+        "k": "Airbag",
+        "v": "9"
+       },
+       {
+        "k": "Sistem rem",
+        "v": "Bosch IPB, ESP, rem parkir elektronik, Autohold"
+       },
+       {
+        "k": "Pemantau tekanan ban (TPMS)",
+        "v": "✓"
+       },
+       {
+        "k": "ISOFIX baris belakang",
+        "v": "✓"
+       },
+       {
+        "k": "Suara peringatan kendaraan (AVAS)",
+        "v": "✓"
+       },
+       {
+        "k": "E-call",
+        "v": "✓"
+       },
+       {
+        "k": "Pintu geser elektrik",
+        "v": "Anti jepit, kedua sisi"
+       }
+      ]
+     },
+     {
+      "g": "XPILOT Assist",
+      "rows": [
+       {
+        "k": "Perangkat keras",
+        "v": "Chip Turing XP5, 3 radar gelombang milimeter, 12 radar ultrasonik, 12 kamera"
+       },
+       {
+        "k": "Bantuan mengemudi",
+        "v": "ACC, LCC, ATC, SAS"
+       },
+       {
+        "k": "Pencegahan tabrakan",
+        "v": "AEB, FDM, FCW, TSR, IHB, DSM, BSD, DOW, LDW, LKA, ELK, RCW, RCTA"
+       },
+       {
+        "k": "Bantuan parkir",
+        "v": "EAP, AEP, RPA, RVS, kamera 360°, transparent chassis"
        }
       ]
      },
@@ -230,8 +490,12 @@
       "g": "Warna",
       "rows": [
        {
-        "k": "Pilihan warna luar",
-        "v": "Midnight Black, Silver Frost, Arctic White"
+        "k": "Warna luar",
+        "v": "Arctic White, Silver Frost, Matte Gray, Midnight Black"
+       },
+       {
+        "k": "Warna interior",
+        "v": "Coffee, Meteorite Black, Rose Brown"
        }
       ]
      },
@@ -245,7 +509,7 @@
       ]
      }
     ],
-    "specNote": "Perbedaan fitur lengkap antara varian akan mengikuti brosur resmi XPeng. Unduh brosur atau hubungi kami untuk daftar fitur terbaru tiap varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+    "specNote": "Perbedaan Pro dan Pro+ hanya ada pada kursi baris kedua; fitur lainnya sama. Data mengacu pada brosur New X9 Long Range. Spesifikasi dapat berubah dan mengikuti stok dealer.",
     "brosur": ""
    },
    {
@@ -526,6 +790,22 @@
        {
         "k": "Jarak sumbu roda",
         "v": "2.899 mm"
+       },
+       {
+        "k": "Jumlah kursi",
+        "v": "5"
+       },
+       {
+        "k": "Lebar jejak depan / belakang",
+        "v": "1.635 / 1.650 mm"
+       },
+       {
+        "k": "Kapasitas bagasi",
+        "v": "571 L, 1.374 L dengan kursi belakang dilipat"
+       },
+       {
+        "k": "Pelek",
+        "v": "20 inci"
        }
       ]
      },
@@ -563,7 +843,7 @@
        },
        {
         "k": "Kursi",
-        "v": "Nappa leather, kursi depan 12 arah elektrik dengan memori, ventilasi dan pemanas"
+        "v": "Nappa leather, kursi depan 10 arah elektrik (lumbar 4 arah) dengan memori, ventilasi, pemanas, dan pijat"
        },
        {
         "k": "Lampu ambient",
@@ -572,6 +852,14 @@
        {
         "k": "Kunci",
         "v": "Kunci Bluetooth di HP, kunci UWB, kartu NFC"
+       },
+       {
+        "k": "Kursi belakang",
+        "v": "Sandaran bisa diatur, lipat 60/40, sandaran tangan tengah dengan tempat minum"
+       },
+       {
+        "k": "AC",
+        "v": "Otomatis dengan pompa panas, filter N95 dan pemantau PM2.5"
        }
       ]
      },
@@ -651,6 +939,19 @@
        {
         "k": "Transparent chassis",
         "v": "✓"
+       }
+      ]
+     },
+     {
+      "g": "Warna",
+      "rows": [
+       {
+        "k": "Warna luar",
+        "v": "Arctic White, Silver Frost, Graphite Gray, Midnight Black, Stellar Purple"
+       },
+       {
+        "k": "Warna interior",
+        "v": "Dark Gray, Light Gray"
        }
       ]
      }
