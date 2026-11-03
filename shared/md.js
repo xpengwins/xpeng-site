@@ -41,6 +41,7 @@
       }
       if (/^[-*]\s+/.test(l)) { const it = []; while (i < lines.length && /^[-*]\s+/.test(lines[i])) { it.push('<li>' + inline(lines[i].replace(/^[-*]\s+/, '')) + '</li>'); i++; } out.push('<ul>' + it.join('') + '</ul>'); continue; }
       if (/^\d+\.\s+/.test(l)) { const it = []; while (i < lines.length && /^\d+\.\s+/.test(lines[i])) { it.push('<li>' + inline(lines[i].replace(/^\d+\.\s+/, '')) + '</li>'); i++; } out.push('<ol>' + it.join('') + '</ol>'); continue; }
+      if ((m = l.match(/^\[\[([^\]]+)\]\(([^)\s]+)\)\]$/))) { out.push('<p class="mdcta"><a class="btn" href="' + m[2] + '">' + esc(m[1]) + '</a></p>'); i++; continue; }
       if (/^>\s?/.test(l)) { out.push('<blockquote>' + inline(l.replace(/^>\s?/, '')) + '</blockquote>'); i++; continue; }
       const p = []; while (i < lines.length && lines[i].trim() && !/^(#{1,4}\s|[-*]\s|\d+\.\s|\||>|\{\{\s*(youtube|video)\s*:)/i.test(lines[i])) { p.push(lines[i]); i++; }
       out.push('<p>' + inline(p.join(' ')) + '</p>');
