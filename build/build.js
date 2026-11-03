@@ -356,12 +356,33 @@ const promoCta = p => {
   const href = h ? (/^(https?:|mailto:|tel:|#)/i.test(h) ? h : u(h.startsWith('/') ? h : '/' + h)) : wa('Halo, saya tertarik dengan promo "' + p.title + '". Boleh minta info?');
   return `<a class="btn" href="${E(href)}"${/^https?:/i.test(href) ? ' target="_blank" rel="noopener"' : ''}>${E(p.ctaText || 'Tanya Promo via WhatsApp')}</a>`;
 };
+
+/* tabel promo + syarat dan ketentuan (teks dari admin: p.table, p.terms) */
+function promoDetail(p) {
+  const cut = s => String(s || '').split('\n').map(x => x.trim()).filter(Boolean);
+  const tl = cut(p.table), tl2 = cut(p.terms); let html = '';
+  if (tl.length > 1) {
+    const sp = l => l.split('|').map(x => x.trim()), head = sp(tl[0]), n = head.length, rows = tl.slice(1).map(sp).map(r => head.map((_, i) => r[i] || ''));
+    const same = (a, b, c) => { for (let k = 0; k <= c; k++) if (a[k] !== b[k]) return false; return true; };
+    const hot = x => /rate\s*0\s*%/i.test(x) ? ' class="hot"' : '';
+    const tr = rows.map((r, i) => `<tr>${r.map((x, c) => { if (c < 2 && i > 0 && same(r, rows[i - 1], c)) return ''; let rs = 1; if (c < 2) while (i + rs < rows.length && same(r, rows[i + rs], c)) rs++; return c === 0 ? `<th scope="rowgroup"${rs > 1 ? ` rowspan="${rs}"` : ''}>${E(x)}</th>` : `<td${rs > 1 ? ` rowspan="${rs}"` : ''}${hot(x)}>${c === 4 ? `<b>${E(x)}</b>` : E(x)}</td>`; }).join('')}</tr>`).join('');
+    const groups = []; rows.forEach(r => { let g = groups[groups.length - 1]; if (!g || g.k !== r[0]) { g = { k: r[0], rows: [] }; groups.push(g); } g.rows.push(r); });
+    const mob = groups.map(g => `<div class="ptg"><h4>${E(g.k)}</h4>${g.rows.map(r => `<div class="ptr${/rate\s*0\s*%/i.test(r.join(' ')) ? ' hot' : ''}"><h5>${E(r[1])}${r[2] ? ' · ' + E(r[2]) : ''}</h5><dl>${r.slice(3).map((x, k) => x ? `<div><dt>${E(head[k + 3])}</dt><dd>${E(x)}</dd></div>` : '').join('')}</dl></div>`).join('')}</div>`).join('');
+    html += `<div class="ptwrap"><h3>${E(p.tableTitle || 'Program yang berlaku')}</h3><div class="tbl spcmpw ptd"><table class="sptbl ptbl2"><thead><tr>${head.map(x => `<th scope="col">${E(x)}</th>`).join('')}</tr></thead><tbody>${tr}</tbody></table></div><div class="ptm">${mob}</div></div>`;
+  }
+  if (tl2.length) {
+    const items = []; tl2.forEach(l => { if (/^[-–•]\s*/.test(l) && items.length) items[items.length - 1].sub.push(l.replace(/^[-–•]\s*/, '')); else items.push({ t: l.replace(/^\d+[.)]\s*/, ''), sub: [] }); });
+    html += `<div class="ptsk"><h3>Syarat dan Ketentuan</h3><ol>${items.map(i => `<li>${E(i.t)}${i.sub.length ? `<ul>${i.sub.map(s => `<li>${E(s)}</li>`).join('')}</ul>` : ''}</li>`).join('')}</ol></div>`;
+  }
+  return html ? `<div class="pdetail">${html}</div>` : '';
+}
 const promoCard = (p, i) => {
   const imgs = (p.images || []).filter(Boolean), main = String(p.image || '').trim();
   const mainH = main ? `<div class="pmain">${picture(main, p.title, '', 900, 600, i !== 0)}</div>` : '';
   const miniH = imgs.length ? `<div class="car pmini"><div class="track m">${imgs.map((s, k) => `<figure>${picture(s, p.title + ' foto mobil ' + (k + 1), '', 300, 200, !(i === 0 && !main && k === 0))}</figure>`).join('')}</div></div>` : '';
   const media = mainH || miniH ? `<div class="pmedia">${mainH}${miniH}</div>` : '';
-  return `<article class="pcard${media ? '' : ' noimg-p'}" id="${E(p.id || 'promo-' + (i + 1))}">${media}<div class="pbody">${p.badge ? `<span class="eyebrow">${E(p.badge)}</span>` : ''}<h2>${E(p.title)}</h2>${p.text ? `<p>${E(p.text).replace(/\n/g, '<br>')}</p>` : ''}${p.until ? `<p class="until">Berlaku sampai ${E(fmtDate(p.until))}</p>` : ''}<div class="cta">${promoCta(p)}</div></div></article>`;
+  const det = promoDetail(p);
+  return `<article class="pcard${media ? '' : ' noimg-p'}${media && !main && det ? ' pwide' : ''}" id="${E(p.id || 'promo-' + (i + 1))}">${media}<div class="pbody">${p.badge ? `<span class="eyebrow">${E(p.badge)}</span>` : ''}<h2>${E(p.title)}</h2>${p.text ? `<p>${E(p.text).replace(/\n/g, '<br>')}</p>` : ''}${p.until ? `<p class="until">Berlaku sampai ${E(fmtDate(p.until))}</p>` : ''}<div class="cta">${promoCta(p)}</div></div>${det}</article>`;
 };
 function promoPage() {
   const has = promos.length > 0;
