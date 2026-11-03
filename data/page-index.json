@@ -287,6 +287,10 @@
       "tag": "figcaption"
      },
      {
+      "t": "Interior XPeng G6",
+      "tag": "h3"
+     },
+     {
       "t": "Varian",
       "tag": "label"
      },
@@ -327,6 +331,22 @@
      {
       "src": "/assets/img/228027.webp",
       "alt": "XPeng X9 interior Rose Brown foto 3"
+     },
+     {
+      "src": "/assets/img/230840.webp",
+      "alt": "XPeng G6 interior foto 1"
+     },
+     {
+      "src": "/assets/img/230834.webp",
+      "alt": "XPeng G6 interior foto 2"
+     },
+     {
+      "src": "/assets/img/230836.webp",
+      "alt": "XPeng G6 interior foto 3"
+     },
+     {
+      "src": "/assets/img/230835.webp",
+      "alt": "XPeng G6 interior foto 4"
      }
     ]
    },
@@ -3066,6 +3086,10 @@
       "tag": "h2"
      },
      {
+      "t": "Interior XPeng G6",
+      "tag": "h3"
+     },
+     {
       "t": "Varian",
       "tag": "label"
      },
@@ -3094,7 +3118,24 @@
       "tag": "a"
      }
     ],
-    "imgs": []
+    "imgs": [
+     {
+      "src": "/assets/img/230840.webp",
+      "alt": "XPeng G6 interior foto 1"
+     },
+     {
+      "src": "/assets/img/230834.webp",
+      "alt": "XPeng G6 interior foto 2"
+     },
+     {
+      "src": "/assets/img/230836.webp",
+      "alt": "XPeng G6 interior foto 3"
+     },
+     {
+      "src": "/assets/img/230835.webp",
+      "alt": "XPeng G6 interior foto 4"
+     }
+    ]
    },
    {
     "key": "cicilan-mudah-lewat-partner-leasing",

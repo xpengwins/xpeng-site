@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-11-03T09:13:36.826Z",
+ "date": "2026-11-03T10:44:09.433Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -998,7 +998,25 @@
      }
     ],
     "specNote": "Detail lengkap di atas mengacu pada brosur XPeng G6 Pro. Perbedaan tenaga, torsi, akselerasi, dan jarak tempuh G6 AWD ada di tabel perbedaan varian. Spesifikasi dapat berubah dan mengikuti stok dealer.",
-    "brosur": ""
+    "brosur": "",
+    "interior": [
+     {
+      "src": "assets/img/230840.webp",
+      "alt": ""
+     },
+     {
+      "src": "assets/img/230834.webp",
+      "alt": ""
+     },
+     {
+      "src": "assets/img/230836.webp",
+      "alt": ""
+     },
+     {
+      "src": "assets/img/230835.webp",
+      "alt": ""
+     }
+    ]
    }
   ],
   "articles": [
