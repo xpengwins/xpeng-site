@@ -97,7 +97,7 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 }
 
 /* ---------- komponen ---------- */
-const picture = (src, alt, cls = '', w = 1200, h = 800, lazy = true) => `<img class="${cls}" src="${u(src)}" alt="${E(alt)}" width="${w}" height="${h}" ${lazy ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
+const picture = (src, alt, cls = '', w = 1200, h = 800, lazy = true) => `<img class="${(cls + (lazy ? ' px' : '')).trim()}" src="${u(src)}" alt="${E(alt)}" width="${w}" height="${h}" ${lazy ? 'loading="lazy"' : 'fetchpriority="high"'} decoding="async">`;
 const modelCard = m => `<article class="mcard"><a href="${u('/model/' + m.slug + '/')}">${picture(m.hero, m.name + ' - ' + m.type, 'mimg', 960, 640)}<div class="mbody"><span class="eyebrow">${E(m.type)}</span><h3>${E(m.name)}</h3><p>${E(m.tagline)}</p><strong class="mprice">Mulai ${rp(Math.min(...m.variants.map(v => v.price)))}</strong><span class="more">Lihat model →</span></div></a></article>`;
 const upCard = x => `<article class="mcard${x.status === 'launched' ? '' : ' soon'}"><a href="${wa(x.wa || 'Halo, saya tertarik ' + x.name)}" rel="noopener">${x.status === 'launched' ? '' : `<span class="eyebrow pulse">${E(x.badge || 'Segera Launching')}</span>`}${picture(x.card || x.hero, x.name + ' - ' + (x.type || 'XPeng'), 'mimg', 960, 640)}<div class="mbody"><span class="eyebrow">${E(x.type || 'XPeng')}</span><h3>${E(x.name)}</h3><p>${E(x.tagline || '')}</p><strong class="mprice">Rp ${E(x.priceText || 'XXX')}<small>${x.status === 'launched' ? 'Harga hubungi kami' : 'Harga resmi diumumkan saat launching'}</small></strong><span class="more">${x.status === 'launched' ? 'Tanya via WhatsApp →' : E(x.cta || 'Prebook sekarang') + ' →'}</span></div></a></article>`;
 const normS = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '');
@@ -143,7 +143,7 @@ function cfgSection(list, o = {}) {
   const id = o.id || 'cfg', title = o.title || (multi ? 'Atur mobil dan hitung cicilan' : 'Atur ' + m0.name + ' dan hitung cicilan');
   const tabs = multi ? `<div class="tabs" role="tablist">${list.map((m, i) => `<button class="tab${i === 0 ? ' on' : ''}" data-m="${i}">${E(m.name)}</button>`).join('')}</div>` : '';
   return `<section class="section dark" id="${id}"><div class="wrap"><span class="eyebrow">Interaktif</span><h2>${E(title)}</h2><div class="cfg" data-models='${JSON.stringify(list.map(m => ({ n: m.name, c: m.colors, v: m.variants, s: m.slug }))).replace(/'/g, '&#39;')}'>
-<div class="stage">${tabs}<img id="cfgimg" src="${u(m0.colors[0].image)}" alt="${E(m0.name)} warna ${E(m0.colors[0].name)}" width="1200" height="800"><div class="swatches" id="sw"></div><p id="colname" class="muted"></p>${interiorBlocks(list)}</div>
+<div class="stage">${tabs}<img id="cfgimg" class="px" src="${u(m0.colors[0].image)}" alt="${E(m0.name)} warna ${E(m0.colors[0].name)}" width="1200" height="800"><div class="swatches" id="sw"></div><p id="colname" class="muted"></p>${interiorBlocks(list)}</div>
 <div class="panel"><label>Varian<select id="var"></select></label><div class="big" id="harga"></div>
 <label>Uang muka: <b id="dpv">30%</b><input type="range" id="dp" min="20" max="70" step="5" value="30"></label>
 <label>Tenor: <b id="tnv">5 tahun</b><input type="range" id="tn" min="1" max="7" step="1" value="5"></label>

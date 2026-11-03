@@ -165,3 +165,11 @@ section.prebook .pbi img{width:100%;max-width:380px;height:auto;margin:0 auto;di
 @media(max-width:900px){.soonwrap .mcard.soon>a{display:block}.soonwrap .mimg{aspect-ratio:16/10;min-height:0}}
 
 .soonhome{margin:8px 0 28px}
+
+/* ---- animasi memuat (shimmer, spinner, bar halaman) ---- */
+@keyframes pxs{to{background-position:-200% 0}}@keyframes pxr{to{transform:rotate(360deg)}}@keyframes navp{0%{width:0}100%{width:88%}}
+img.px:not(.ok){background:linear-gradient(110deg,#14171d 30%,#23272f 50%,#14171d 70%) 0 0/200% 100%;animation:pxs 1.3s linear infinite}
+.vid::before,.mvid::before,.mapbox::before{content:"";position:absolute;z-index:0;left:50%;top:50%;width:34px;height:34px;margin:-17px 0 0 -17px;border-radius:50%;border:3px solid #ffffff26;border-top-color:var(--ac,#2ee6b6);animation:pxr .9s linear infinite;pointer-events:none}
+.mvid,.mapbox{position:relative}.mvid video,.mvid .yt,.mapbox iframe{position:relative;z-index:1}.vid.ok::before,.mvid.ok::before,.mapbox.ok::before{display:none}
+.navp{position:fixed;left:0;top:0;height:3px;width:0;background:var(--ac,#2ee6b6);z-index:200;box-shadow:0 0 10px var(--ac,#2ee6b6);pointer-events:none}.navp.go{animation:navp 6s cubic-bezier(.1,.6,.2,1) forwards}
+@media(prefers-reduced-motion:reduce){img.px:not(.ok),.vid::before,.mvid::before,.mapbox::before{animation-duration:3s}.navp.go{animation-duration:.01s}}

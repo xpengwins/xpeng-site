@@ -1,6 +1,13 @@
 (function(){'use strict';
 var B=document.body,$=function(s,r){return(r||document).querySelector(s)},$$=function(s,r){return[].slice.call((r||document).querySelectorAll(s))};
 var WA=B.dataset.wa,base=B.dataset.base||'';
+/* animasi memuat: gambar tampil shimmer sampai selesai dimuat */
+var mk=function(i){i.classList.add('px');i.classList.remove('ok');var d=function(){i.classList.add('ok')};if(i.complete&&i.naturalWidth)d();else{i.addEventListener('load',d,{once:true});i.addEventListener('error',d,{once:true})}};
+$$('img.px,img[loading="lazy"]:not(.nopx)').forEach(function(i){if(i.naturalWidth&&i.complete){i.classList.add('ok');return}mk(i)});
+$$('.vid,.mvid,.mapbox').forEach(function(w){var v=$('video',w),f=$('iframe',w),d=function(){w.classList.add('ok')};if(v){if(v.readyState>=2)d();else{v.addEventListener('loadeddata',d,{once:true});v.addEventListener('error',d,{once:true})}}else if(f){f.addEventListener('load',d,{once:true})}else d()});
+/* bar kemajuan saat pindah halaman */
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a||e.defaultPrevented||e.button||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||a.target&&a.target!=='_self'||a.hasAttribute('download'))return;var u;try{u=new URL(a.href,location.href)}catch(x){return}if(u.origin!==location.origin||(u.pathname===location.pathname&&u.search===location.search))return;var p=$('.navp');if(!p){p=document.createElement('div');p.className='navp';p.setAttribute('aria-hidden','true');B.appendChild(p)}p.className='navp go'});
+window.addEventListener('pageshow',function(){var p=$('.navp');if(p)p.remove()});
 /* sumber iklan Google: ingat selama sesi, lalu tandai pesan WhatsApp "(dari iklan Google)" */
 var ADS=false;try{var Q=new URLSearchParams(location.search);if(Q.get('gclid')||(/google/i.test(Q.get('utm_source')||'')&&/cpc/i.test(Q.get('utm_medium')||'')))sessionStorage.setItem('xp_src','ads');ADS=sessionStorage.getItem('xp_src')==='ads'}catch(e){}
 function tagWA(a){if(!ADS)return;try{var h=a.getAttribute('href')||'';if(h.indexOf('wa.me/')<0)return;var u=new URL(h,location.href),t=u.searchParams.get('text')||'';if(!t||t.indexOf('dari iklan Google')>-1)return;u.searchParams.set('text',t+' (dari iklan Google)');a.setAttribute('href',u.toString())}catch(e){}}
@@ -32,7 +39,7 @@ aq.addEventListener('input',run);var qm=location.search.match(/[?&]q=([^&]*)/);i
 /* konfigurator */
 var cfg=$('.cfg');if(cfg){var M=JSON.parse(cfg.dataset.models),mi=0,ci=0,img=$('#cfgimg'),sw=$('#sw'),sel=$('#var'),R=function(n){return 'Rp'+Math.round(n).toLocaleString('id-ID')};
 function draw(){var m=M[mi];sw.innerHTML='';m.c.forEach(function(c,k){var b=document.createElement('button');b.style.background=c.hex;b.setAttribute('aria-label','Warna '+c.name);if(k===ci)b.className='on';b.onclick=function(){ci=k;draw()};sw.appendChild(b)});
-img.style.opacity=.3;setTimeout(function(){img.src=u(m.c[ci].image);img.alt=m.n+' warna '+m.c[ci].name;img.style.opacity=1},120);$('#colname').textContent='Warna: '+m.c[ci].name;
+img.style.opacity=.3;setTimeout(function(){img.src=u(m.c[ci].image);img.alt=m.n+' warna '+m.c[ci].name;mk(img);img.style.opacity=1},120);$('#colname').textContent='Warna: '+m.c[ci].name;
 var cur=sel.value;sel.innerHTML=m.v.map(function(v,k){return '<option value="'+k+'">'+v.name+'</option>'}).join('');sel.value=m.v[cur]?cur:0;calc()}
 function calc(){var m=M[mi],v=m.v[sel.value||0],p=v.price,dp=+$('#dp').value,tn=+$('#tn').value,bg=+$('#bg').value;
 $('#dpv').textContent=dp+'% ('+R(p*dp/100)+')';$('#tnv').textContent=tn+' tahun';$('#bgv').textContent=bg+'%';$('#harga').textContent=R(p);
@@ -58,7 +65,7 @@ var ov=document.createElement('div');ov.className='lb';ov.hidden=true;ov.setAttr
 ov.innerHTML='<button class="lbx" aria-label="Tutup">&times;</button><button class="lbp" aria-label="Foto sebelumnya">&lsaquo;</button><button class="lbn" aria-label="Foto berikutnya">&rsaquo;</button><div class="lbs"><img alt=""></div><div class="lbc"></div>';
 document.body.appendChild(ov);
 var im=$('img',ov),cap=$('.lbc',ov),sc=$('.lbs',ov),k=0,last=null;
-function show(n){k=(n+imgs.length)%imgs.length;ov.classList.remove('zoom');im.src=imgs[k].currentSrc||imgs[k].src;im.alt=imgs[k].alt;cap.textContent=imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom'}
+function show(n){k=(n+imgs.length)%imgs.length;ov.classList.remove('zoom');im.src=imgs[k].currentSrc||imgs[k].src;im.alt=imgs[k].alt;mk(im);cap.textContent=imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom'}
 function open(n){last=document.activeElement;show(n);ov.hidden=false;document.documentElement.style.overflow='hidden';$('.lbx',ov).focus()}
 function close(){ov.hidden=true;document.documentElement.style.overflow='';if(last&&last.focus)last.focus()}
 function tz(){var z=ov.classList.toggle('zoom');cap.textContent=z?'Geser untuk melihat detail \u2022 ketuk lagi untuk kecilkan':imgs[k].alt+' ('+(k+1)+'/'+imgs.length+') \u2022 ketuk foto untuk zoom';if(z){sc.scrollLeft=(sc.scrollWidth-sc.clientWidth)/2;sc.scrollTop=(sc.scrollHeight-sc.clientHeight)/2}}
