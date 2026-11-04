@@ -1,41 +1,47 @@
 [
-  {
-    "id": "pgaiw2026",
-    "title": "Promo Gaikindo Auto Week 2026: Gratis Asuransi hingga 3 Tahun dan Rate 0%",
-    "badge": "Gaikindo Auto Week 2026",
-    "text": "",
-    "ctaText": "Tanya Promo via WhatsApp",
-    "ctaUrl": "",
-    "until": "2026-11-30",
-    "image": "assets/img/promo-gaikindo-2026.webp",
-    "images": [],
-    "active": true,
-    "tableTitle": "",
-    "table": "",
-    "terms": ""
-  },
-  {
-    "id": "pmvqnnmt6",
-    "title": "Special Price XPeng G6, Harga Khusus Bulan Ini",
-    "badge": "Special Price",
-    "text": "Special price untuk XPeng G6 Pro dan G6 AWD di dealer XPeng Alam Sutera, Tangerang Selatan. Tanya nilai special price, stok unit, dan simulasi cicilan via WhatsApp. Untuk unit yang tersedia. Syarat dan ketentuan berlaku.",
-    "ctaText": "Tanya Special Price G6 via WhatsApp",
-    "ctaUrl": "",
-    "until": "2026-11-30",
-    "image": "",
-    "images": [],
-    "active": true
-  },
-  {
-    "id": "pmvqnox9c",
-    "title": "Special Price XPeng X9, MPV Listrik 7 Kursi untuk Keluarga",
-    "badge": "Special Price",
-    "text": "Special price untuk XPeng X9 Pro dan X9 Pro+ di dealer XPeng Alam Sutera, Tangerang Selatan. Tanya nilai special price, stok unit, dan skema cicilan via WhatsApp, lalu jadwalkan test drive. Syarat dan ketentuan berlaku.",
-    "ctaText": "Tanya Special Price X9 via WhatsApp",
-    "ctaUrl": "",
-    "until": "2026-11-30",
-    "image": "",
-    "images": [],
-    "active": true
-  }
+ {
+  "id": "pgaiw2026",
+  "title": "Promo Gaikindo Auto Week 2026: Gratis Asuransi hingga 3 Tahun dan Rate 0%",
+  "badge": "Gaikindo Auto Week 2026",
+  "text": "",
+  "ctaText": "Tanya Promo via WhatsApp",
+  "ctaUrl": "",
+  "until": "2026-11-30",
+  "image": "assets/img/promo-gaikindo-2026.webp",
+  "images": [],
+  "active": true,
+  "tableTitle": "",
+  "table": "Free 0% 3 Tahun\nFree Insurance 2 Tahun",
+  "terms": ""
+ },
+ {
+  "id": "pmvqnnmt6",
+  "title": "Special Price XPeng G6, Harga Khusus Bulan Ini",
+  "badge": "Special Price",
+  "text": "Special price untuk XPeng G6 Pro dan G6 AWD di dealer XPeng Alam Sutera, Tangerang Selatan. Tanya nilai special price, stok unit, dan simulasi cicilan via WhatsApp. Untuk unit yang tersedia. Syarat dan ketentuan berlaku.",
+  "ctaText": "Tanya Special Price G6 via WhatsApp",
+  "ctaUrl": "",
+  "until": "2026-11-30",
+  "image": "",
+  "images": [],
+  "active": true,
+  "tableTitle": "",
+  "table": "",
+  "terms": ""
+ },
+ {
+  "id": "pmvqnox9c",
+  "title": "Special Price XPeng X9, MPV Listrik 7 Kursi untuk Keluarga",
+  "badge": "Special Price",
+  "text": "Special price untuk XPeng X9 Pro dan X9 Pro+ di dealer XPeng Alam Sutera, Tangerang Selatan. Tanya nilai special price, stok unit, dan skema cicilan via WhatsApp, lalu jadwalkan test drive. Syarat dan ketentuan berlaku.",
+  "ctaText": "Tanya Special Price X9 via WhatsApp",
+  "ctaUrl": "",
+  "until": "2026-11-30",
+  "image": "",
+  "images": [],
+  "active": true,
+  "tableTitle": "",
+  "table": "",
+  "terms": ""
+ }
 ]
