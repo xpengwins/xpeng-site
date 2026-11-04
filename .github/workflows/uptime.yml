@@ -1,0 +1,35 @@
+name: Alarm situs mati (tiap 15 menit)
+# FILE BARU. Mengecek beranda, sitemap, dan satu halaman model. Telegram hanya dikirim saat situs mulai down,
+# pulih, atau masih down (pengingat tiap 3 jam). Commit hanya saat status berubah.
+# Catatan: GitHub tidak menjamin jadwal tepat waktu; pada praktiknya jeda bisa 15 sampai 60 menit.
+on:
+  schedule:
+    - cron: '*/15 * * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+jobs:
+  cek:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Cek situs
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node build/uptime.js
+      - name: Simpan status bila berubah
+        run: |
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          [ -f data/uptime-state.json ] && git add data/uptime-state.json; true
+          if git diff --cached --quiet; then echo "Status tidak berubah"; exit 0; fi
+          git commit -q -m "Alarm situs: status berubah"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          echo "Gagal menyimpan setelah 3 percobaan"; exit 1
