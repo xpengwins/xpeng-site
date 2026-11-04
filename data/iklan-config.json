@@ -1,0 +1,13 @@
+{
+ "catatan": "Pengaturan laporan Google Ads harian. Ubah angka di sini kapan saja. danaTotal = dana iklan yang tersedia; mulai = tanggal pertama biaya dihitung terhadap dana itu; akhir = hari terakhir dana harus cukup.",
+ "danaTotal": 1500000,
+ "mulai": "2026-11-03",
+ "akhir": "2026-11-30",
+ "domain": "xpengwins.com",
+ "tabIklan": "Iklan Harian",
+ "tabChat": "Chat WA",
+ "minKlikTanpaAksi": 10,
+ "ambangInvalidPersen": 10,
+ "lonjakanKali": 2.5,
+ "batasBorosKali": 1.25
+}

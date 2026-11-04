@@ -1,0 +1,17 @@
+{
+ "aktif": true,
+ "catatan": "Rolling mingguan untuk beranda. Ganti aktif ke false untuk mematikan semuanya. Nama file dan alt gambar tidak pernah diubah. Tambah video baru ke pool setelah diunggah lewat upload/video/.",
+ "videoBeranda": {
+  "aktif": true,
+  "pool": [
+   { "src": "assets/video/xpeng-x9-intelligence-0617-v2.mp4", "judul": "", "teks": "Every Drive of Life" },
+   { "src": "assets/video/227779.mp4", "judul": "Rasakan XPeng X9 dalam gerak", "teks": "" },
+   { "src": "assets/video/227816.mp4", "judul": "Rasakan XPeng G6 Pro dalam gerak", "teks": "" }
+  ]
+ },
+ "galeriBeranda": {
+  "aktif": true,
+  "jumlahPerModel": 5,
+  "langkah": 3
+ }
+}

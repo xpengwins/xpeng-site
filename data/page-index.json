@@ -231,7 +231,7 @@
    },
    {
     "key": "video-beranda",
-    "title": "Rasakan XPeng dalam gerak",
+    "title": "Rasakan XPeng X9 dalam gerak",
     "hasH1": false,
     "texts": [
      {
@@ -239,12 +239,8 @@
       "tag": "span"
      },
      {
-      "t": "Rasakan XPeng dalam gerak",
+      "t": "Rasakan XPeng X9 dalam gerak",
       "tag": "h2"
-     },
-     {
-      "t": "Every Drive of Life",
-      "tag": "p"
      }
     ],
     "imgs": []
@@ -451,43 +447,43 @@
     ],
     "imgs": [
      {
-      "src": "/assets/img/x9-white-depan.webp",
+      "src": "/assets/img/x9-white-kursi-2.webp",
       "alt": "Galeri XPeng foto 1"
      },
      {
-      "src": "/assets/img/x9-white-belakang.webp",
+      "src": "/assets/img/x9-white-kursi-3.webp",
       "alt": "Galeri XPeng foto 2"
      },
      {
-      "src": "/assets/img/x9-white-dashboard.webp",
+      "src": "/assets/img/x9-white-kursi-belakang.webp",
       "alt": "Galeri XPeng foto 3"
      },
      {
-      "src": "/assets/img/x9-white-kursi-2.webp",
+      "src": "/assets/img/x9-black-depan.webp",
       "alt": "Galeri XPeng foto 4"
      },
      {
-      "src": "/assets/img/x9-white-kursi-3.webp",
+      "src": "/assets/img/x9-grey-depan.webp",
       "alt": "Galeri XPeng foto 5"
      },
      {
-      "src": "/assets/img/g6-black-depan.webp",
+      "src": "/assets/img/g6-black-front.webp",
       "alt": "Galeri XPeng foto 6"
      },
      {
-      "src": "/assets/img/g6-black-belakang.webp",
+      "src": "/assets/img/g6-silver-jalan.webp",
       "alt": "Galeri XPeng foto 7"
      },
      {
-      "src": "/assets/img/g6-black-samping.webp",
+      "src": "/assets/img/g6-white-detail.webp",
       "alt": "Galeri XPeng foto 8"
      },
      {
-      "src": "/assets/img/g6-black-front.webp",
+      "src": "/assets/img/g6-grey-showroom.webp",
       "alt": "Galeri XPeng foto 9"
      },
      {
-      "src": "/assets/img/g6-silver-jalan.webp",
+      "src": "/assets/img/g6-grey-front.webp",
       "alt": "Galeri XPeng foto 10"
      }
     ]

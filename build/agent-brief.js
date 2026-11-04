@@ -50,8 +50,8 @@ const pct = (a, b) => b ? Math.round((a - b) / b * 100) : null;
     if (!DRY) fs.writeFileSync(D('agent-brief.json'), JSON.stringify(brief, null, 1));
     console.log('Brief: A=' + brief.A_perbaiki_judul.length + ' B=' + brief.B_dorong_ke_halaman_1.length + ' C=' + brief.C_ide_artikel_dari_data.length + ' | artikel di bawah 100: ' + low.length + ' | terjadwal: ' + sched.length);
 
-    /* kirim Telegram: Senin 06:00-09:59 WIB (build jalan tiap jam, kirim sekali per minggu) */
-    const wib = new Date(Date.now() + 7 * 36e5), isMon = wib.getUTCDay() === 1 && wib.getUTCHours() >= 6 && wib.getUTCHours() < 10, wk = wib.toISOString().slice(0, 10);
+    /* kirim Telegram: Senin mulai 06:00 WIB sampai tengah malam (jadwal GitHub sering terlambat; state mingguan mencegah kirim dobel) */
+    const wib = new Date(Date.now() + 7 * 36e5), isMon = wib.getUTCDay() === 1 && wib.getUTCHours() >= 6, wk = wib.toISOString().slice(0, 10);
     const state = rd('agent-brief-sent.json', {});
     if (!DRY && TG.tok && TG.chat && (FORCE || (isMon && state.week !== wk))) {
       const tr = brief.traffic || {}, L = [];
