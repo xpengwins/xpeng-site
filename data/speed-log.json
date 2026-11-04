@@ -578,79 +578,136 @@
     "perf:/model/xpeng-g6/",
     "drop:/model/xpeng-g6/"
    ]
+  },
+  {
+   "date": "2026-11-04",
+   "at": "2026-11-04T03:20:47.466Z",
+   "urls": 49,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 91,
+   "pages": {
+    "/": {
+     "score": 76,
+     "lcp": 5950,
+     "cls": 0,
+     "tbt": 53,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 80,
+     "lcp": 4994,
+     "cls": 0,
+     "tbt": 15,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 79,
+     "lcp": 5119,
+     "cls": 0,
+     "tbt": 40,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1518,
+     "cls": 0,
+     "tbt": 32,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 906,
+     "cls": 0,
+     "tbt": 14,
+     "field": null
+    },
+    "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0.008,
+     "tbt": 45,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "drop:/model/xpeng-x9/",
+    "perf:/model/xpeng-g6/"
+   ]
   }
  ],
- "generated": "2026-11-03T15:16:04.081Z",
+ "generated": "2026-11-04T03:20:47.466Z",
  "latest": {
-  "date": "2026-11-03",
-  "at": "2026-11-03T15:16:04.081Z",
+  "date": "2026-11-04",
+  "at": "2026-11-04T03:20:47.466Z",
   "urls": 49,
   "errors": 0,
   "slow": 0,
-  "avgMs": 177,
+  "avgMs": 91,
   "pages": {
    "/": {
-    "score": 77,
-    "lcp": 5917,
+    "score": 76,
+    "lcp": 5950,
     "cls": 0,
-    "tbt": 39,
+    "tbt": 53,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 1979,
+    "score": 80,
+    "lcp": 4994,
     "cls": 0,
-    "tbt": 14,
+    "tbt": 15,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 77,
-    "lcp": 5388,
+    "score": 79,
+    "lcp": 5119,
     "cls": 0,
-    "tbt": 147,
+    "tbt": 40,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1516,
+    "lcp": 1518,
     "cls": 0,
-    "tbt": 46,
+    "tbt": 32,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 905,
+    "lcp": 906,
     "cls": 0,
-    "tbt": 32,
+    "tbt": 14,
     "field": null
    },
    "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
     "score": 100,
     "lcp": 1508,
     "cls": 0.008,
-    "tbt": 37,
+    "tbt": 45,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "drop:/",
-   "perf:/model/xpeng-g6/",
-   "drop:/model/xpeng-g6/"
+   "perf:/model/xpeng-x9/",
+   "drop:/model/xpeng-x9/",
+   "perf:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: skor 77, LCP 5.9 dtk",
-   "📉 / turun 93 → 77 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /model/xpeng-g6/: skor 77, LCP 5.4 dtk",
-   "📉 /model/xpeng-g6/ turun 99 → 77 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 76, LCP 6.0 dtk",
+   "🔴 /model/xpeng-x9/: LCP 5.0 dtk",
+   "📉 /model/xpeng-x9/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)",
+   "🔴 /model/xpeng-g6/: skor 79, LCP 5.1 dtk"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "drop:/",
-  "perf:/model/xpeng-g6/",
-  "drop:/model/xpeng-g6/",
-  "perf:/artikel/mobil-listrik-saat-banjir/"
+  "perf:/model/xpeng-x9/",
+  "drop:/model/xpeng-x9/",
+  "perf:/model/xpeng-g6/"
  ],
- "alertSig": "drop:/|drop:/model/xpeng-g6/|perf:/|perf:/artikel/mobil-listrik-saat-banjir/|perf:/model/xpeng-g6/"
+ "alertSig": "drop:/model/xpeng-x9/|perf:/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
 }

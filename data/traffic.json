@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-03T15:16:12.252Z",
+ "generated": "2026-11-04T03:20:52.493Z",
  "property": "560653996",
  "today": {
-  "users": 30,
-  "sessions": 36,
-  "views": 111,
-  "newUsers": 28
+  "users": 1,
+  "sessions": 1,
+  "views": 1,
+  "newUsers": 1
  },
  "yesterday": {
-  "users": 55,
-  "sessions": 66,
-  "views": 80,
-  "newUsers": 50
+  "users": 41,
+  "sessions": 48,
+  "views": 126,
+  "newUsers": 38
  },
  "last7": {
-  "users": 416,
-  "sessions": 509,
-  "views": 1031,
-  "newUsers": 414
+  "users": 353,
+  "sessions": 430,
+  "views": 861,
+  "newUsers": 352
  },
  "last30": {
-  "users": 915,
-  "sessions": 1034,
-  "views": 1700,
-  "newUsers": 936
+  "users": 926,
+  "sessions": 1046,
+  "views": 1716,
+  "newUsers": 947
  },
  "prev30": {
   "users": 0,
@@ -88,16 +88,22 @@
   },
   {
    "date": "2026-11-03",
-   "users": 30,
-   "sessions": 36,
-   "views": 111
+   "users": 41,
+   "sessions": 48,
+   "views": 126
+  },
+  {
+   "date": "2026-11-04",
+   "users": 1,
+   "sessions": 1,
+   "views": 1
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 794,
-   "users": 542
+   "views": 799,
+   "users": 545
   },
   {
    "path": "/model/xpeng-g6/",
@@ -106,18 +112,18 @@
   },
   {
    "path": "/pricelist/",
-   "views": 147,
-   "users": 118
+   "views": 148,
+   "users": 119
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 137,
-   "users": 51
+   "views": 138,
+   "users": 52
   },
   {
    "path": "/model/",
-   "views": 124,
-   "users": 29
+   "views": 125,
+   "users": 30
   },
   {
    "path": "/kontak/",
@@ -126,8 +132,13 @@
   },
   {
    "path": "/promo/",
-   "views": 24,
-   "users": 6
+   "views": 25,
+   "users": 7
+  },
+  {
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 19,
+   "users": 16
   },
   {
    "path": "/tentang/",
@@ -135,14 +146,9 @@
    "users": 2
   },
   {
-   "path": "/artikel/xpeng-g6-pro-vs-awd/",
-   "views": 18,
-   "users": 15
-  },
-  {
-   "path": "/artikel/parkir-otomatis-xpeng-g6/",
+   "path": "/artikel/",
    "views": 14,
-   "users": 13
+   "users": 9
   }
  ],
  "channels": [
@@ -152,23 +158,23 @@
   },
   {
    "k": "Paid Search",
-   "v": 307
+   "v": 311
   },
   {
    "k": "Organic Social",
-   "v": 131
+   "v": 135
   },
   {
    "k": "Direct",
-   "v": 84
+   "v": 86
   },
   {
    "k": "Referral",
-   "v": 48
+   "v": 49
   },
   {
    "k": "Organic Search",
-   "v": 31
+   "v": 33
   },
   {
    "k": "Unassigned",
@@ -182,11 +188,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 848
+   "v": 858
   },
   {
    "k": "desktop",
-   "v": 178
+   "v": 181
   },
   {
    "k": "tablet",
@@ -196,23 +202,23 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 432
+   "v": 435
   },
   {
    "k": "Tangerang",
    "v": 64
   },
   {
+   "k": "South Tangerang",
+   "v": 53
+  },
+  {
    "k": "Depok",
    "v": 52
   },
   {
-   "k": "South Tangerang",
-   "v": 52
-  },
-  {
    "k": "Boardman",
-   "v": 36
+   "v": 37
   },
   {
    "k": "Prineville",
@@ -224,11 +230,11 @@
   },
   {
    "k": "Lulea",
-   "v": 16
+   "v": 17
   }
  ],
  "leads": {
-  "klik_whatsapp": 49,
+  "klik_whatsapp": 50,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,
