@@ -550,6 +550,18 @@
       "tag": "h2"
      },
      {
+      "t": "XPeng G9L",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L EREV: Listrik Plus Mesin, Cocok untuk Siapa?",
+      "tag": "h3"
+     },
+     {
+      "t": "XPeng G9L EREV memakai baterai 63,3 kWh dan mesin 1.5 turbo sebagai pembangkit, jarak gabungan 1.602 km. Pahami cara kerja, kelebihan, dan batasannya.",
+      "tag": "p"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -560,10 +572,6 @@
      {
       "t": "Bengkel rekanan XPeng tersedia di 16 provinsi untuk Anda di luar kota. Cek titik servis terdekat dan kabar ekspansi dealer XPeng terbaru.",
       "tag": "p"
-     },
-     {
-      "t": "XPeng G9L",
-      "tag": "span"
      },
      {
       "t": "Jarak Tempuh XPeng G9L: 755 km CLTC, Nyatanya Berapa?",
@@ -899,6 +907,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-tepi-laut-matahari.webp",
+      "alt": "Xpengwins Xpeng G9L tampak samping depan untuk pembahasan versi EREV"
+     },
      {
       "src": "/assets/img/bengkel-xpeng-dekat-servis-berkualitas.webp",
       "alt": "Mobil XPeng G6 melaju di jalan raya"
