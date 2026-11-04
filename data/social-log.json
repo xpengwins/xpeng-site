@@ -1,5 +1,33 @@
 [
  {
+  "at": "2026-11-04T13:18:40.452Z",
+  "slug": "interior-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-04T13:18:40.452Z",
+  "slug": "interior-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-04T13:18:40.452Z",
+  "slug": "interior-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-04T13:12:38.364Z",
+  "slug": "interior-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar Threads belum tayang, pakai persegi"
+ },
+ {
   "at": "2026-11-04T06:03:18.496Z",
   "slug": "xpeng-g9l-erev",
   "platform": "threads",
@@ -390,33 +418,5 @@
   "platform": "threads",
   "ok": true,
   "msg": "terkirim"
- },
- {
-  "at": "2026-10-30T08:56:28.854Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-30T08:56:16.838Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-30T08:17:01.651Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-30T08:17:01.651Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
  }
 ]
