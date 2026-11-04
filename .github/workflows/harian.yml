@@ -1,0 +1,41 @@
+name: Agent harian (laporan jam 06.00 WIB)
+# FILE BARU. Tidak mengubah build.yml maupun monitor.yml.
+# Jadwal: 22:10 UTC = 05:10 WIB. Di repo ini GitHub biasanya terlambat 30 sampai 80 menit, jadi laporan tiba sekitar 06.00 WIB.
+# Isi: biaya Google Ads, klik mencurigakan, domain dan sertifikat, token sosmed, ringkasan alarm situs.
+on:
+  schedule:
+    - cron: '10 22 * * *'
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: build            # sama dengan build.yml: antre, tidak bentrok saat menulis data
+  cancel-in-progress: false
+jobs:
+  harian:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Laporan harian ke Telegram
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          GSC_KEY: ${{ secrets.GSC_KEY }}
+          SHEET_ID: ${{ secrets.SHEET_ID }}
+          CHAT_SHEET_ID: ${{ secrets.CHAT_SHEET_ID }}
+          GA4_PROPERTY_ID: ${{ secrets.GA4_PROPERTY_ID }}
+          FB_PAGE_TOKEN: ${{ secrets.FB_PAGE_TOKEN }}
+          THREADS_TOKEN: ${{ secrets.THREADS_TOKEN }}
+        run: node build/agent-harian.js
+      - name: Simpan hasil
+        run: |
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          [ -f data/harian.json ] && git add data/harian.json; true
+          if git diff --cached --quiet; then echo "Tidak ada data baru"; exit 0; fi
+          git commit -q -m "Agent harian: data terbaru"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          echo "Gagal menyimpan setelah 3 percobaan"; exit 1
