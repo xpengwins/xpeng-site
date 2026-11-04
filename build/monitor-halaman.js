@@ -118,7 +118,7 @@ function analyse(url, pg, origin) {
     let orphanFiles = [];
     try {
       const rdt = f => { try { return fs.readFileSync(f, 'utf8'); } catch (e) { return ''; } };
-      const SKIPD = /^(health-log|speed-log|sosmed-stats|riset-tren|agent-brief|agent-brief-sent|seo-report|seo-history|gsc|social-log|social-posted|social-queue|social-status|traffic|traffic-sent|page-index|indexnow-sent|notified)\.json$/;
+      const SKIPD = /^(health-log|speed-log|sosmed-stats|riset-tren|agent-brief|agent-brief-sent|seo-report|seo-history|penawaran|gsc|social-log|social-posted|social-queue|social-status|traffic|traffic-sent|page-index|indexnow-sent|notified)\.json$/;
       let corpus = pages.map(p => p.html).join('\n') + '\n' + ['sw.js', 'manifest.webmanifest'].map(f => rdt(path.join(ROOT, f))).join('\n');
       for (const d of ['assets/css', 'assets/js']) { try { fs.readdirSync(path.join(ROOT, d)).forEach(f => { corpus += '\n' + rdt(path.join(ROOT, d, f)); }); } catch (e) {} }
       try { fs.readdirSync(D('')).filter(f => /\.json$/.test(f) && !SKIPD.test(f)).forEach(f => { corpus += '\n' + rdt(D(f)); }); } catch (e) {}

@@ -4,7 +4,7 @@
 const $ = (s, r) => (r || document).querySelector(s), app = $('#app');
 const E = s => String(s == null ? '' : s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 const S = { cfg: null, d: {}, sha: {}, tab: 'home', art: null, report: null };
-const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil', 'pengingat', 'bengkel'];
+const NAMES = ['site', 'models', 'upcoming', 'articles', 'keywords', 'backlinks', 'leasing', 'about', 'promo', 'profil', 'pengingat', 'bengkel', 'penawaran'];
 const today = () => new Date().toISOString().slice(0, 10);
 const rp = n => 'Rp' + Number(n || 0).toLocaleString('id-ID');
 function toast(m, bad) { const t = document.createElement('div'); t.className = 'toast' + (bad ? ' bad' : ''); t.textContent = m; document.body.appendChild(t); setTimeout(() => t.remove(), bad ? 5000 : 2400); }
@@ -62,7 +62,7 @@ async function loadData(onStep) {
   let done = 0;
   await Promise.all(NAMES.map(async n => {
     try { const j = await getFile('data/' + n + '.json'); S.d[n] = JSON.parse(unb64(j.content)); }
-    catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil' || n === 'bengkel') ? {} : []; }
+    catch (e) { S.d[n] = (n === 'site' || n === 'about' || n === 'profil' || n === 'bengkel' || n === 'penawaran') ? {} : []; }
     done++; if (onStep) onStep(done, NAMES.length);
   }));
 }
@@ -124,7 +124,7 @@ async function start() {
 
 /* ---------- kerangka ---------- */
 const TABS = [['home', '🏠', 'Beranda'], ['articles', '✍️', 'Artikel'], ['models', '🚗', 'Model'], ['seo', '📈', 'SEO'], ['more', '⋯', 'Lainnya']];
-const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['stok', '📦', 'Laporan Stok'], ['bengkel', '🔧', 'Bengkel Rekanan'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
+const MORE = [['upcoming', '🚀', 'Model Launching'], ['pages', '🧩', 'Halaman'], ['prices', '💰', 'Pricelist'], ['promo', '🎁', 'Promo'], ['profil', '🙋', 'Profil Saya'], ['penawaran', '📝', 'Penawaran'], ['stok', '📦', 'Laporan Stok'], ['bengkel', '🔧', 'Bengkel Rekanan'], ['leasing', '🏦', 'Leasing'], ['about', '🏢', 'Tentang & lokasi'], ['laporan', '📤', 'Export Laporan'], ['social', '📣', 'Sosmed'], ['ranking', '📊', 'Ranking Google'], ['keywords', '🔑', 'Keyword'], ['backlinks', '🔗', 'Backlink'], ['gallery', '🗂️', 'Galeri'], ['media', '🖼️', 'Media & Zip'], ['pengingat', '🔔', 'Pengingat'], ['backup', '💾', 'Backup'], ['settings', '⚙️', 'Pengaturan'], ['logout', '🚪', 'Keluar']];
 function shell() {
   app.innerHTML = `<header><img src="../assets/img/icon-white.svg" alt=""><b>XPENG ADMIN</b><span class="muted" style="margin-left:auto">${E(S.cfg.owner)}/${E(S.cfg.repo)}</span></header><main id="v"></main>
 <div class="menu" id="menu">${MORE.map(m => `<button data-t="${m[0]}"><span>${m[1]}</span>${m[2]}</button>`).join('')}</div>
@@ -771,6 +771,146 @@ VIEWS.backlinks = v => {
   $('#bp').onclick = async () => { const r = mk(); B.push({ site: $('#bs').value, target: $('#bt').value, anchor: r.tx, type: r.ty, date: today(), status: 'rencana' }); await save('backlinks', 'Rencana backlink'); VIEWS.backlinks(v); };
   v.querySelectorAll('[data-x]').forEach(b => b.onclick = async () => { B.splice(+b.dataset.x, 1); await save('backlinks'); VIEWS.backlinks(v); });
   $('#sv').onclick = async () => { v.querySelectorAll('[data-s]').forEach(s => B[s.dataset.s].status = s.value); await save('backlinks', 'Status backlink'); };
+};
+
+/* --- Penawaran: surat penawaran untuk perusahaan (data/penawaran.json). Logika surat ada di admin/penawaran.js --- */
+VIEWS.penawaran = v => {
+  if (!window.PN) { v.innerHTML = '<h2>Penawaran</h2><div class="card"><p class="muted">File admin/penawaran.js belum termuat. Muat ulang halaman admin.</p></div>'; return; }
+  const D = S.d.penawaran = Object.assign({ counter: 0, items: [], template: null }, S.d.penawaran); if (!Array.isArray(D.items)) D.items = [];
+  const st = S.pn = S.pn || { mode: 'list', open: {} }; st.open = st.open || {};
+  const models = Array.isArray(S.d.models) ? S.d.models : [];
+  const pad2 = n => String(n).padStart(2, '0'), nowD = () => { const d = new Date(); return d.getFullYear() + '-' + pad2(d.getMonth() + 1) + '-' + pad2(d.getDate()); };
+  const noOf = o => PN.nomor(o.seq || (D.counter + 1), o.created);
+  const tplOnly = o => ({ city: o.city, intro: o.intro, unitNote: o.unitNote, sections: o.sections, closing: o.closing, closing2: o.closing2, sign: o.sign });
+  PN.injectCSS();
+
+  /* ----- daftar ----- */
+  function card(o) {
+    return `<div class="card" data-id="${E(o.id)}"><b>${E(noOf(o))}</b><div>${E(o.perusahaan || '(tanpa nama)')}${o.pic ? ' • ' + E(o.pic) : ''}</div><div class="muted">${E(PN.dateText(o.created, ''))} • ${E(PN.mobil(o) || '-')}</div>
+<div class="row" style="margin-top:10px"><button class="sm" data-open data-noc>Buka / Edit</button><button class="s sm" data-pdf data-noc>PDF</button><button class="s sm" data-doc data-noc>Word</button><button class="s sm" data-dup data-noc>Duplikat</button><button class="d sm" data-del>Hapus</button></div></div>`;
+  }
+  function listHTML() {
+    const q = (st.q || '').toLowerCase(), items = D.items.slice().sort((a, b) => (b.seq || 0) - (a.seq || 0)).filter(o => !q || (noOf(o) + ' ' + (o.perusahaan || '') + ' ' + (o.pic || '')).toLowerCase().includes(q));
+    return items.map(card).join('') || '<p class="muted">' + (D.items.length ? 'Tidak ada yang cocok.' : 'Belum ada penawaran. Tekan "Buat penawaran baru".') + '</p>';
+  }
+  function list() {
+    st.mode = 'list'; st.cur = null;
+    v.innerHTML = `<h2>📝 Penawaran</h2>
+<div class="card"><p class="muted" style="margin-bottom:10px">Surat penawaran perusahaan dengan kop PT Era Dealer Otomotif. Nomor berikutnya: <b>${E(PN.nomor(D.counter + 1, nowD()))}</b></p>
+<div class="row"><button id="pn_new" data-noc>+ Buat penawaran baru</button><button class="s" id="pn_tpl" data-noc>✏️ Edit isi default</button></div>
+<label style="margin-top:14px">Nomor urut terakhir yang sudah terpakai<input id="pn_cnt" type="number" min="0" value="${D.counter}"></label><button class="s sm" id="pn_setcnt">Simpan nomor urut</button></div>
+<input id="pn_q" placeholder="Cari nomor / nama perusahaan / PIC…" value="${E(st.q || '')}" style="margin-bottom:12px">
+<div id="pn_list" data-pgl="8">${listHTML()}</div>
+<p class="muted" style="font-size:12px">Catatan: data penawaran tersimpan di repo GitHub (data/penawaran.json) seperti data admin lainnya, sehingga bisa dibuka dari HP maupun komputer.</p>`;
+    $('#pn_new').onclick = () => edit(PN.newOffer(D.template, nowD()), true, false);
+    $('#pn_tpl').onclick = () => edit(Object.assign(PN.mergeTpl(D.template), { rows: [], created: nowD() }), false, true);
+    $('#pn_setcnt').onclick = async () => { const n = Math.max(0, parseInt($('#pn_cnt').value, 10) || 0), old = D.counter; D.counter = n; try { await save('penawaran', 'Nomor urut penawaran: ' + n); list(); } catch (e) { D.counter = old; } };
+    $('#pn_q').oninput = e => { st.q = e.target.value; $('#pn_list').innerHTML = listHTML(); };
+    $('#pn_list').onclick = async e => {
+      const b = e.target.closest('button'), c = b && b.closest('[data-id]'); if (!c) return; const o = D.items.find(x => x.id === c.dataset.id); if (!o) return;
+      if (b.hasAttribute('data-open')) edit(PN.clone(o), false, false);
+      else if (b.hasAttribute('data-dup')) { const n = PN.clone(o); Object.assign(n, { id: 'p' + Date.now().toString(36), seq: 0, created: nowD(), perusahaan: '', pic: '' }); edit(n, true, false); toast('Penawaran diduplikat. Isi nama perusahaan baru.'); }
+      else if (b.hasAttribute('data-pdf')) PN.printPDF(o, noOf(o), PN.fname(o, noOf(o), 'x').replace(/\.x$/, ''));
+      else if (b.hasAttribute('data-doc')) { toast('Menyiapkan file Word…'); try { await PN.exportWord(o, noOf(o)); } catch (er) { toast(er.message, true); } }
+      else if (b.hasAttribute('data-del')) { const i = D.items.indexOf(o); D.items.splice(i, 1); try { await save('penawaran', 'Hapus penawaran ' + noOf(o)); list(); } catch (er) { D.items.splice(i, 0, o); } }
+    };
+  }
+
+  /* ----- editor ----- */
+  function edit(O, isNew, tpl) { st.mode = tpl ? 'tpl' : 'edit'; st.cur = O; st.isNew = isNew; st.dirty = false; draw(); window.scrollTo(0, 0); }
+  const HINT = { bullets: 'satu baris = satu butir', cols: 'satu baris = satu butir, otomatis 2 kolom', numbered: 'satu baris = satu nomor', steps: 'satu baris = satu langkah', free: 'ketik paragraf biasa; awali baris dengan "- " untuk butir' };
+  function actions() { const tpl = st.mode === 'tpl'; return `<div class="row act" style="margin:10px 0"><button data-act="save">💾 ${tpl ? 'Simpan template' : 'Simpan'}</button>${tpl ? '<button class="s" data-act="reset" data-noc>Kembalikan ke bawaan</button>' : '<button class="s" data-act="pdf" data-noc>📄 Export PDF</button><button class="s" data-act="doc" data-noc>📝 Export Word</button>'}<button class="s" data-act="back" data-noc>← Kembali</button></div>`; }
+  function secHTML(s, i, n) {
+    const hl = s.id === 'unggul' && st.mode !== 'tpl' ? '<button class="s sm" data-hl data-noc style="margin-bottom:10px">Isi dari keunggulan model terpilih</button>' : '';
+    return `<details class="card" style="padding:0" data-si="${i}" data-sid="${E(s.id)}" ${st.open[s.id] ? 'open' : ''}><summary style="padding:12px;cursor:pointer;min-height:44px"><b>${E(s.title || '(sub judul kosong)')}</b> <span class="pill ${s.show === false ? '' : 'ok'}">${s.show === false ? 'disembunyikan' : (s.type === 'unit' ? 'otomatis' : (String(s.body || '').trim() ? 'tampil' : 'kosong, tidak dicetak'))}</span></summary><div style="padding:0 12px 12px">
+<label style="display:flex;flex-direction:row;gap:8px;align-items:center"><input type="checkbox" data-sf="show" style="width:auto;min-height:0" ${s.show !== false ? 'checked' : ''}> Tampilkan di surat</label>
+<label>Judul sub bagian (kosong = tanpa judul)<input data-sf="title" value="${E(s.title)}"></label>
+${s.type === 'unit' ? '<p class="muted">Tabel diisi otomatis dari mobil yang dipilih di atas.</p>' : `${hl}<label>Isi (${HINT[s.type] || ''}; **teks** = tebal)<textarea data-sf="body" style="min-height:120px;font-family:inherit">${E(s.body)}</textarea></label>`}
+<div class="row"><button class="s sm" data-mv="-1" data-noc ${i === 0 ? 'disabled' : ''}>↑ Naik</button><button class="s sm" data-mv="1" data-noc ${i === n - 1 ? 'disabled' : ''}>↓ Turun</button>${s.type !== 'unit' ? '<button class="d sm" data-rm>Hapus bagian</button>' : ''}</div></div></details>`;
+  }
+  function draw() {
+    const O = st.cur, tpl = st.mode === 'tpl', y = window.scrollY;
+    const vars = models.map(m => `<div class="muted" style="margin:10px 0 4px"><b>${E(m.name)}</b></div>` + (m.variants || []).map(vr => { const key = m.slug + '|' + vr.name; return `<label style="display:flex;flex-direction:row;gap:8px;align-items:center;color:var(--tx);font-size:.95rem;margin-bottom:6px"><input type="checkbox" data-var="${E(key)}" style="width:auto;min-height:0" ${O.rows.some(r => r.key === key) ? 'checked' : ''}> ${E(vr.name)} <span class="muted">${vr.price ? PN.rpFmt(vr.price) : ''}</span></label>`; }).join('')).join('');
+    const rows = O.rows.map((r, i) => `<div class="crow"><b>${E(r.type || 'Baris ' + (i + 1))}</b><div class="grid" style="margin-top:8px"><label>Type<input data-r="type" data-i="${i}" value="${E(r.type)}"></label><label>Exterior<input data-r="ext" data-i="${i}" value="${E(r.ext)}"></label><label>Interior<input data-r="int" data-i="${i}" value="${E(r.int)}" placeholder="mis. ROSE BROWN"></label><label>Harga OTR Jakarta<input data-r="harga" data-i="${i}" value="${E(r.harga)}"></label><label>Keterangan<input data-r="ket" data-i="${i}" value="${E(r.ket)}"></label></div><button class="d sm" data-rr="${i}" data-noc>Hapus baris</button></div>`).join('');
+    v.innerHTML = `<div id="pn_root"><h2>${tpl ? '✏️ Edit isi default penawaran' : (st.isNew ? '📝 Penawaran baru' : '📝 Edit penawaran')}</h2>
+<p class="muted">${tpl ? 'Isi ini dipakai sebagai awal setiap penawaran baru. Penawaran yang sudah dibuat tidak berubah.' : `Nomor: <b>${E(noOf(O))}</b>${st.isNew ? ' (terkunci saat disimpan)' : ''} • Tanggal: <b>${E(PN.dateText(O.created, O.city))}</b>`}</p>
+${actions()}
+${tpl ? '' : `<div class="card"><h3>Tujuan penawaran</h3><label>Nama perusahaan<input data-f="perusahaan" value="${E(O.perusahaan)}" placeholder="mis. PT Paramount Enterprise International"></label><label>PIC / Jabatan yang dituju<input data-f="pic" value="${E(O.pic)}" placeholder="mis. Ibu Ratna Purchasing"></label><label>Perihal (otomatis dari mobil, boleh diubah)<input data-f="perihal" id="pn_perihal" value="${E(O.perihal)}"></label></div>
+<div class="card"><h3>Mobil XPENG yang ditawarkan</h3><p class="muted">Centang varian yang ingin ditawarkan. Harga diambil dari data model, lalu bisa diubah per baris.</p>${vars || '<p class="muted">Belum ada data model.</p>'}${rows ? '<h3>Baris tabel penawaran</h3>' + rows : ''}<button class="s sm" id="pn_addrow" data-noc style="margin-top:8px">+ Tambah baris manual</button></div>`}
+<div class="card"><h3>Isi surat</h3><label>Kota surat<input data-f="city" value="${E(O.city)}"></label><label>Paragraf pembuka (pakai {mobil} untuk nama mobil, **teks** untuk tebal)<textarea data-f="intro" style="min-height:130px;font-family:inherit">${E(O.intro)}</textarea></label><label>Catatan di bawah tabel<input data-f="unitNote" value="${E(O.unitNote)}"></label></div>
+<h3>Sub bagian surat</h3><p class="muted" style="margin-bottom:8px">Bagian yang kosong tidak dicetak. Tiga sub judul kosong sudah disiapkan; isi judul dan teksnya bila perlu.</p>
+${O.sections.map((s, i) => secHTML(s, i, O.sections.length)).join('')}
+<button class="s" id="pn_addsec" data-noc style="margin-bottom:14px">+ Tambah sub judul</button>
+<div class="card"><h3>Penutup &amp; penandatangan</h3><label>Paragraf kontak ({kontak} dan {jabatan} diisi dari data di bawah)<textarea data-f="closing" style="min-height:80px;font-family:inherit">${E(O.closing)}</textarea></label><label>Kalimat penutup<textarea data-f="closing2" style="min-height:70px;font-family:inherit">${E(O.closing2)}</textarea></label>
+<div class="grid"><label>Nama<input data-sg="name" value="${E(O.sign.name)}"></label><label>Jabatan<input data-sg="role" value="${E(O.sign.role)}"></label><label>No. HP<input data-sg="hp" value="${E(O.sign.hp)}"></label><label>Email<input data-sg="email" value="${E(O.sign.email)}"></label></div><label>Nama perusahaan di tanda tangan<input data-sg="company" value="${E(O.sign.company)}"></label></div>
+<h3>Pratinjau</h3><div id="pn_pvw" style="overflow:hidden;border-radius:10px"><div id="pn_pv"></div></div>
+${actions()}</div>`;
+    bind(); pv(); window.scrollTo(0, y);
+  }
+  function pv() { const el = $('#pn_pv'); if (!el) return; el.innerHTML = PN.sheetHTML(st.cur, noOf(st.cur)); const w = $('#pn_pvw').clientWidth || 794, z = Math.min(1, w / 794); el.style.zoom = z; }
+  let pvT; const pvLater = () => { clearTimeout(pvT); pvT = setTimeout(pv, 120); };
+  const syncPerihal = () => { const O = st.cur; if (!O.perihalManual) { O.perihal = PN.autoPerihal(O); const i = $('#pn_perihal'); if (i) i.value = O.perihal; } };
+  function bind() {
+    const O = st.cur, R = $('#pn_root');
+    R.oninput = e => {
+      const t = e.target; st.dirty = true;
+      if (t.dataset.f) { O[t.dataset.f] = t.value; if (t.dataset.f === 'perihal') { O.perihalManual = !!t.value.trim(); if (!O.perihalManual) syncPerihal(); } }
+      else if (t.dataset.sg) O.sign[t.dataset.sg] = t.value;
+      else if (t.dataset.r) O.rows[+t.dataset.i][t.dataset.r] = t.value;
+      else if (t.dataset.sf && t.closest('[data-si]')) { const s = O.sections[+t.closest('[data-si]').dataset.si]; s[t.dataset.sf] = t.type === 'checkbox' ? t.checked : t.value; }
+      pvLater();
+    };
+    R.onchange = e => {
+      const t = e.target;
+      if (t.dataset.var) {
+        const key = t.dataset.var; st.dirty = true;
+        if (t.checked) { for (const m of models) for (const vr of (m.variants || [])) if (m.slug + '|' + vr.name === key) O.rows.push(PN.rowFrom(m, vr)); }
+        else O.rows = O.rows.filter(r => r.key !== key);
+        syncPerihal(); draw();
+      } else if (t.dataset.sf === 'show') { st.dirty = true; draw(); }
+    };
+    R.addEventListener('toggle', e => { const d = e.target; if (d && d.dataset && d.dataset.sid) st.open[d.dataset.sid] = d.open; }, true);
+    R.onclick = async e => {
+      const b = e.target.closest('button'); if (!b) return;
+      const sec = b.closest('[data-si]'), i = sec ? +sec.dataset.si : -1;
+      if (b.dataset.act) return act(b.dataset.act);
+      if (b.hasAttribute('data-rr')) { O.rows.splice(+b.dataset.rr, 1); st.dirty = true; syncPerihal(); return draw(); }
+      if (b.id === 'pn_addrow') { O.rows.push({ key: 'manual' + Date.now(), mname: '', type: '', ext: '', int: '', harga: '', ket: 'SESUAI STOK' }); st.dirty = true; return draw(); }
+      if (b.id === 'pn_addsec') { const s = { id: 'f' + Date.now(), type: 'free', title: '', show: true, body: '' }; O.sections.push(s); st.open[s.id] = true; st.dirty = true; return draw(); }
+      if (b.dataset.mv && i >= 0) { const j = i + +b.dataset.mv; if (j >= 0 && j < O.sections.length) { const t = O.sections[i]; O.sections[i] = O.sections[j]; O.sections[j] = t; st.dirty = true; draw(); } return; }
+      if (b.hasAttribute('data-rm') && i >= 0) { O.sections.splice(i, 1); st.dirty = true; return draw(); }
+      if (b.hasAttribute('data-hl') && i >= 0) {
+        const L = []; const slugs = []; O.rows.forEach(r => { const k = String(r.key || '').split('|')[0]; if (slugs.indexOf(k) < 0) slugs.push(k); });
+        slugs.forEach(sl => { const m = models.find(x => x.slug === sl); (m && m.highlights || []).forEach(h => { if (L.indexOf(h) < 0) L.push(h); }); });
+        if (!L.length) return toast('Pilih mobil dari data model dulu', true); O.sections[i].body = L.join('\n'); st.dirty = true; return draw();
+      }
+    };
+  }
+  async function doSave() {
+    const O = st.cur, tpl = st.mode === 'tpl';
+    if (tpl) { const old = D.template; D.template = PN.clone(tplOnly(O)); try { await save('penawaran', 'Template penawaran'); st.dirty = false; return true; } catch (e) { D.template = old; return false; } }
+    if (!String(O.perusahaan || '').trim()) { toast('Isi nama perusahaan dulu', true); return false; }
+    const copy = PN.clone(O), wasNew = st.isNew, prev = D.counter, idx = D.items.findIndex(x => x.id === O.id), old = idx >= 0 ? D.items[idx] : null;
+    if (wasNew) { copy.seq = D.counter + 1; D.counter = copy.seq; D.items.push(copy); } else if (idx >= 0) D.items[idx] = copy; else D.items.push(copy);
+    try { await save('penawaran', 'Penawaran ' + PN.nomor(copy.seq, copy.created) + ' ' + copy.perusahaan); }
+    catch (e) { if (wasNew) { D.counter = prev; D.items = D.items.filter(x => x !== copy); } else if (old) D.items[idx] = old; return false; }
+    st.cur = PN.clone(copy); st.isNew = false; st.dirty = false; return true;
+  }
+  async function act(a) {
+    const O = st.cur, tpl = st.mode === 'tpl';
+    if (a === 'back') { if (st.dirty && !nativeConfirm('Perubahan belum disimpan. Tetap keluar?')) return; return list(); }
+    if (a === 'reset') { if (!nativeConfirm('Kembalikan isi default ke bawaan awal? (belum tersimpan sampai Anda tekan Simpan)')) return; st.cur = Object.assign(PN.defaults(), { rows: [], created: nowD() }); st.dirty = true; return draw(); }
+    if (a === 'save') { if (await doSave()) draw(); return; }
+    if (a === 'pdf' || a === 'doc') {
+      if (!String(O.perusahaan || '').trim()) return toast('Isi nama perusahaan dulu', true);
+      const w = a === 'pdf' ? PN.openWin() : null; /* jendela dibuka sekarang supaya tidak diblokir browser */
+      const wasNew = st.isNew; if (wasNew && !(await doSave())) { if (w) w.close(); return; }
+      if (wasNew) draw(); const X = st.cur, no = noOf(X);
+      if (a === 'pdf') PN.printPDF(X, no, PN.fname(X, no, 'x').replace(/\.x$/, ''), w);
+      else { toast('Menyiapkan file Word…'); try { await PN.exportWord(X, no); toast('File Word diunduh'); } catch (e) { toast(e.message, true); } }
+    }
+  }
+  if (st.mode !== 'list' && st.cur) draw(); else list();
 };
 
 /* --- Pengingat: daftar tugas perbarui artikel/konten (data/pengingat.json) --- */
