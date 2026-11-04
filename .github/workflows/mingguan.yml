@@ -1,0 +1,58 @@
+name: Agent mingguan (media, hampir halaman 1, pembaruan artikel)
+# FILE BARU. Tidak mengubah build.yml maupun monitor.yml.
+# Jadwal: Minggu 22:20 UTC = Senin 05:20 WIB. Karena GitHub biasanya terlambat, pesan tiba sekitar Senin 06.00 WIB.
+# Urutan: (1) rolling gambar dan video, (2) laporan Hampir halaman 1 + prompt eksekusi, (3) pembaruan artikel (penjaga + prompt).
+on:
+  schedule:
+    - cron: '20 22 * * 0'
+  workflow_dispatch:
+    inputs:
+      kirim_ulang:
+        description: 'Kirim ulang prompt Hampir halaman 1 walau sudah dikirim dalam 14 hari (yes/no)'
+        required: false
+        default: 'no'
+      jumlah_prompt:
+        description: 'Jumlah prompt per laporan (angka, default 3)'
+        required: false
+        default: '3'
+permissions:
+  contents: write
+concurrency:
+  group: build
+  cancel-in-progress: false
+jobs:
+  mingguan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 22 }
+      - name: Rolling gambar dan video mingguan
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node build/rolling-media.js
+      - name: Laporan Hampir halaman 1 dan prompt eksekusi
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          NEAR_FORCE: ${{ github.event.inputs.kirim_ulang == 'yes' && '1' || '0' }}
+          NEAR_N: ${{ github.event.inputs.jumlah_prompt || '3' }}
+        run: node build/near-page1.js
+      - name: Pembaruan artikel (penjaga dan pemilih)
+        continue-on-error: true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node build/refresh-artikel.js
+      - name: Simpan hasil
+        run: |
+          git config user.name "xpeng-bot"; git config user.email "bot@users.noreply.github.com"
+          for f in rolling-state near-page1 near-page1-sent refresh-log refresh-sent; do [ -f data/$f.json ] && git add data/$f.json; done; true
+          if git diff --cached --quiet; then echo "Tidak ada data baru"; exit 0; fi
+          git commit -q -m "Agent mingguan: data terbaru"
+          for i in 1 2 3; do git pull --rebase --autostash -q && git push -q && exit 0; sleep 5; done
+          echo "Gagal menyimpan setelah 3 percobaan"; exit 1
