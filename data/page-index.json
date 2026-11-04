@@ -562,6 +562,18 @@
       "tag": "p"
      },
      {
+      "t": "Fitur",
+      "tag": "span"
+     },
+     {
+      "t": "Interior XPeng G9L: Kursi Rebah, Kulkas, Layar 21,4 Inci",
+      "tag": "h3"
+     },
+     {
+      "t": "Interior XPeng G9L menonjolkan kursi zero gravity yang rebah datar, layar belakang 21,4 inci, kulkas 12,5 liter, dan konsol eksekutif untuk penumpang.",
+      "tag": "p"
+     },
+     {
       "t": "Panduan Beli",
       "tag": "span"
      },
@@ -720,10 +732,6 @@
      {
       "t": "Apa beda baterai LFP vs NCM pada mobil listrik? Pahami kelebihan, kekurangan, dan contoh pada XPeng X9 dan G6 agar Anda memilih varian yang tepat.",
       "tag": "p"
-     },
-     {
-      "t": "Fitur",
-      "tag": "span"
      },
      {
       "t": "Interior XPeng X9: Kursi Zero-Gravity dan Fitur Kabin",
@@ -910,6 +918,10 @@
      {
       "src": "/assets/img/g9l-tepi-laut-matahari.webp",
       "alt": "Xpengwins Xpeng G9L tampak samping depan untuk pembahasan versi EREV"
+     },
+     {
+      "src": "/assets/img/g9l-kabin-kulit-cokelat.webp",
+      "alt": "Xpengwins Xpeng G9L ilustrasi kabin berlapis kulit cokelat dengan layar tengah besar"
      },
      {
       "src": "/assets/img/bengkel-xpeng-dekat-servis-berkualitas.webp",
