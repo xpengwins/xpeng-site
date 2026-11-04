@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-04T06:03:18.496Z",
+  "slug": "xpeng-g9l-erev",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-04T06:02:57.046Z",
+  "slug": "xpeng-g9l-erev",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-04T06:02:41.231Z",
+  "slug": "xpeng-g9l-erev",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-03T13:01:36.337Z",
   "slug": "charging-5c-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "instagram",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-30T08:17:01.651Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-30T08:10:58.548Z",
-  "slug": "cara-menghitung-biaya-charging-mobil-listrik-di-rumah",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-10-30T02:53:48.818Z",
-  "slug": "test-drive-mobil-listrik",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
