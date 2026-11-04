@@ -1,0 +1,23 @@
+{
+ "generated": "2026-11-04T22:51:10.867Z",
+ "iklan": null,
+ "kualitas": null,
+ "peringatan": [],
+ "aset": {
+  "domain": "xpengwins.com",
+  "domainHabis": "2027-10-16T12:57:50.000Z",
+  "sertifikatHabis": "2027-01-14T15:49:50.000Z",
+  "token": [
+   {
+    "nama": "Facebook/Instagram",
+    "valid": true,
+    "habis": null
+   },
+   {
+    "nama": "Threads",
+    "valid": true
+   }
+  ]
+ },
+ "riwayat": []
+}
