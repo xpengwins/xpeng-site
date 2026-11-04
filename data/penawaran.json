@@ -1,0 +1,130 @@
+{
+ "counter": 1,
+ "items": [
+  {
+   "city": "Tangerang",
+   "intro": "Puji syukur atas hubungan baik yang terjalin. Bersama ini kami dari **XPENG Alam Sutera** (PT Era Dealer Otomotif), selaku Authorized Dealer kendaraan XPENG di Indonesia, dengan bangga mengajukan penawaran khusus kendaraan listrik premium **{mobil}** untuk mendukung mobilitas pimpinan, eksekutif, maupun operasional representatif perusahaan Bapak/Ibu.",
+   "unitNote": "Ketersediaan unit dengan pilihan warna lain dapat kami informasikan sesuai stok yang tersedia.",
+   "sections": [
+    {
+     "id": "unit",
+     "type": "unit",
+     "title": "Penawaran Unit",
+     "show": true,
+     "body": ""
+    },
+    {
+     "id": "unggul",
+     "type": "bullets",
+     "title": "Mengapa XPENG",
+     "show": true,
+     "body": "**Kendaraan listrik (EV) premium** yang mengutamakan kenyamanan kabin bagi penumpang dan eksekutif.\n**Garansi baterai 8 tahun / 160.000 km**, memberikan ketenangan penggunaan jangka panjang.\n**Layanan Roadside Assistance 1 tahun** serta dukungan purna jual dari dealer resmi.\n**Efisiensi biaya operasional** dibandingkan kendaraan konvensional, sekaligus mencerminkan citra perusahaan yang modern dan berwawasan lingkungan."
+    },
+    {
+     "id": "termasuk",
+     "type": "cols",
+     "title": "Harga Sudah Termasuk",
+     "show": true,
+     "body": "Kaca Film Premium ( Vkool )\nTire tool kit\nFloor Mat\nPlat Sementara 1x (1 Bulan)\nWarranty Battery 8 tahun / 160.000 km\nRoadside Assistance 1 Year\nPortable Charger"
+    },
+    {
+     "id": "ketentuan",
+     "type": "numbered",
+     "title": "Ketentuan Penawaran",
+     "show": true,
+     "body": "Harga & BBN tidak mengikat.\nBooking Fee sebesar **Rp 10.000.000** untuk XPENG ditransfer ke rekening **BCA 2688811177 a/n PT. ERA DEALER OTOMOTIF.**\nSkema pembayaran, baik tunai maupun pembiayaan, dapat kami diskusikan lebih lanjut sesuai kebutuhan perusahaan.\nPenawaran berlaku selama 14 (empat belas) hari sejak tanggal surat ini dan dapat berubah sewaktu-waktu mengikuti kebijakan prinsipal."
+    },
+    {
+     "id": "dokumen",
+     "type": "bullets",
+     "title": "Dokumen Persyaratan Pengajuan Faktur STNK",
+     "show": true,
+     "body": "Fotocopy **NPWP** (2 lembar + stempel perusahaan di setiap lembarnya)\nFotocopy **NIB berbasis risiko** (2 lembar + stempel di setiap lembarnya)\nSurat kuasa pengajuan STNK yang dicetak di atas kop surat perusahaan, disertai **materai 10.000**, stempel perusahaan dan TTD pemberi kuasa (sebanyak 2 lembar)"
+    },
+    {
+     "id": "alur",
+     "type": "steps",
+     "title": "Alur Pemesanan",
+     "show": true,
+     "body": "Konfirmasi unit & warna\nPembayaran Booking Fee\nPengajuan faktur & STNK\nSerah terima kendaraan"
+    },
+    {
+     "id": "free1",
+     "type": "free",
+     "title": "",
+     "show": true,
+     "body": ""
+    },
+    {
+     "id": "free2",
+     "type": "free",
+     "title": "",
+     "show": true,
+     "body": ""
+    },
+    {
+     "id": "free3",
+     "type": "free",
+     "title": "",
+     "show": true,
+     "body": ""
+    }
+   ],
+   "closing": "Apabila terdapat pertanyaan atau kebutuhan simulasi lebih lanjut, silakan menghubungi **{kontak}** selaku {jabatan} XPENG Alam Sutera Tangerang.",
+   "closing2": "Demikian surat penawaran ini kami sampaikan. Atas perhatian dan kerja sama Bapak/Ibu, kami ucapkan terima kasih.",
+   "sign": {
+    "company": "PT Era Dealer Otomotif – XPENG Alam Sutera",
+    "name": "Edwin Sowita S",
+    "role": "Sales Consultant",
+    "hp": "087810208822",
+    "email": "sales@xpengwins.com"
+   },
+   "id": "pmw1sol23",
+   "created": "2026-11-04",
+   "perusahaan": "PT Sinarmas.TBK",
+   "pic": "Purchasing",
+   "perihal": "Penawaran Kendaraan XPENG X9 & XPENG G6 untuk Kebutuhan Perusahaan",
+   "perihalManual": false,
+   "rows": [
+    {
+     "key": "xpeng-x9|New XPeng X9 Pro",
+     "mname": "XPeng X9",
+     "type": "New XPeng X9 Pro",
+     "ext": "Putih / Hitam / Grey Matte / Silver",
+     "int": "",
+     "harga": "Rp 1.219.000.000",
+     "ket": "SESUAI STOK"
+    },
+    {
+     "key": "xpeng-x9|New XPeng X9 Pro+",
+     "mname": "XPeng X9",
+     "type": "New XPeng X9 Pro+",
+     "ext": "Putih / Hitam / Grey Matte / Silver",
+     "int": "",
+     "harga": "Rp 1.259.000.000",
+     "ket": "SESUAI STOK"
+    },
+    {
+     "key": "xpeng-g6|XPeng G6 Pro",
+     "mname": "XPeng G6",
+     "type": "XPeng G6 Pro",
+     "ext": "Hitam / Putih / Silver / Abu-abu",
+     "int": "",
+     "harga": "Rp 679.000.000",
+     "ket": "SESUAI STOK"
+    },
+    {
+     "key": "xpeng-g6|XPeng G6 AWD",
+     "mname": "XPeng G6",
+     "type": "XPeng G6 AWD",
+     "ext": "Hitam / Putih / Silver / Abu-abu",
+     "int": "",
+     "harga": "Rp 769.000.000",
+     "ket": "SESUAI STOK"
+    }
+   ],
+   "seq": 1
+  }
+ ],
+ "template": null
+}
