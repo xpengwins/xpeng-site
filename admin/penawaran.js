@@ -106,7 +106,7 @@
 .pl p.j,.pl .j{text-align:justify}`;
   function blockHTML(b) {
     switch (b.k) {
-      case 'meta': return '<div class="row"><span>Nomor : ' + esc(b.no) + '</span><span>' + esc(b.date) + '</span></div><p style="margin-bottom:10px">Perihal : <b>' + esc(b.perihal) + '</b></p>';
+      case 'meta': return '<p style="text-align:right;margin:0 0 10px">' + esc(b.date) + '</p><p style="margin:0">Nomor : ' + esc(b.no) + '</p><p style="margin-bottom:10px">Perihal : <b>' + esc(b.perihal) + '</b></p>';
       case 'addr': return '<div style="margin-bottom:10px">' + b.lines.map(l => '<p style="margin:0">' + (l.b ? '<b>' + esc(l.t) + '</b>' : esc(l.t)) + '</p>').join('') + '</div>';
       case 'p': return '<p class="' + (b.just ? 'j' : '') + '" style="margin-top:' + ((b.before || 0) / 20) + 'px;margin-bottom:' + (b.after != null ? b.after / 20 : 4) + 'px">' + ih(b.t) + '</p>';
       case 'h': return '<h4>' + esc(b.t) + '</h4>';
@@ -162,7 +162,8 @@
     const bulP = (t, ref) => P(RR(t), { numbering: { reference: ref || 'bul', level: 0 }, alignment: AlignmentType.JUSTIFIED, spacing: { before: 0, after: 50, line: 288 } });
     blocks.forEach(b => {
       if (b.k === 'meta') {
-        out.push(P([TR('Nomor : ' + b.no), new TextRun({ children: [new Tab(), b.date], font: 'Arial', size: 21 })], { tabStops: [{ type: TabStopType.RIGHT, position: FW }], spacing: { after: 0, line: 288 } }));
+        out.push(P([TR(b.date)], { alignment: AlignmentType.RIGHT, spacing: { after: 200, line: 288 } }));
+        out.push(P([TR('Nomor : ' + b.no)], { spacing: { after: 0, line: 288 } }));
         out.push(P([TR('Perihal : '), TR(b.perihal, { bold: true })], { spacing: { after: 200, line: 288 } }));
       } else if (b.k === 'addr') b.lines.forEach((l, i) => out.push(P([TR(l.t, { bold: !!l.b })], { spacing: { after: i === b.lines.length - 1 ? 200 : 0, line: 288 } })));
       else if (b.k === 'p') out.push(P(RR(b.t), { alignment: b.just ? AlignmentType.JUSTIFIED : AlignmentType.LEFT, spacing: { before: b.before || 0, after: b.after != null ? b.after : 80, line: 288 } }));
