@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-11-04T04:51:00.967Z",
+ "date": "2026-11-04T04:52:38.365Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -45,7 +45,7 @@
    "heroVideoJudul": "",
    "heroVideoTeks": "Every Drive of Life",
    "chatSalam": "Halo Bapak/Ibu, terima kasih atas minatnya terhadap product XPENG. Perkenalkan Saya Edwin dari dealer XPeng Alam Sutera. ada yang dapat aku bantu Unit XPENG mana yang Bpk/Ibu Butuhkan ^^",
-   "chatHook": "https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnQ-SM4r1QBDDbTnBYAcORAdM5Rm2xEontdkfEMdSrVs-e4CDNHBH0UAXoEfQQhfspjkUKRtNWKFFiENN51v4Th4j5CEI8HTksDFKvEdHE1Y1WkLsnP_gIDOPSuDP7zP6k8FqY2mKAm0Mhi2-lD87AJNG7dJMLW-wDAZYenfYjnG445Gobmmtk2G5JMdgAbbcun61CZD7hYZhxi2DXgDNfTVmIp-OYcwZkL0Ufk9a-bXT3q09psljzKK8k6gaqdKZojw5hmf2s0O8aQeas-HuaKZe241uw&lib=MxEh3mDKRkjvB98EDj8P5tD1pNw2LVzUN"
+   "chatHook": "https://script.google.com/macros/s/AKfycbxx4qBmC2UCtOx_Cr0hot6rP2RADVYJL53bQ6I0G0kOHYrlNG4j6SG-ouTmSDd56s-0OA/exec"
   },
   "models": [
    {
