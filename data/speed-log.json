@@ -581,52 +581,52 @@
   },
   {
    "date": "2026-11-04",
-   "at": "2026-11-04T03:20:47.466Z",
-   "urls": 49,
+   "at": "2026-11-04T15:20:29.260Z",
+   "urls": 51,
    "errors": 0,
    "slow": 0,
-   "avgMs": 91,
+   "avgMs": 66,
    "pages": {
     "/": {
-     "score": 76,
-     "lcp": 5950,
+     "score": 95,
+     "lcp": 2782,
      "cls": 0,
-     "tbt": 53,
+     "tbt": 111,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 80,
-     "lcp": 4994,
+     "score": 69,
+     "lcp": 5274,
      "cls": 0,
-     "tbt": 15,
+     "tbt": 423,
      "field": null
     },
     "/model/xpeng-g6/": {
      "score": 79,
-     "lcp": 5119,
+     "lcp": 5189,
      "cls": 0,
-     "tbt": 40,
+     "tbt": 69,
      "field": null
     },
     "/pricelist/": {
      "score": 100,
-     "lcp": 1518,
+     "lcp": 1515,
      "cls": 0,
-     "tbt": 32,
+     "tbt": 80,
      "field": null
     },
     "/kontak/": {
-     "score": 100,
-     "lcp": 906,
+     "score": 98,
+     "lcp": 909,
      "cls": 0,
-     "tbt": 14,
+     "tbt": 63,
      "field": null
     },
-    "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
+    "/artikel/xpeng-g9l-erev/": {
      "score": 100,
-     "lcp": 1508,
-     "cls": 0.008,
-     "tbt": 45,
+     "lcp": 1207,
+     "cls": 0.019,
+     "tbt": 19,
      "field": null
     }
    },
@@ -638,55 +638,55 @@
    ]
   }
  ],
- "generated": "2026-11-04T03:20:47.466Z",
+ "generated": "2026-11-04T15:20:29.260Z",
  "latest": {
   "date": "2026-11-04",
-  "at": "2026-11-04T03:20:47.466Z",
-  "urls": 49,
+  "at": "2026-11-04T15:20:29.260Z",
+  "urls": 51,
   "errors": 0,
   "slow": 0,
-  "avgMs": 91,
+  "avgMs": 66,
   "pages": {
    "/": {
-    "score": 76,
-    "lcp": 5950,
+    "score": 95,
+    "lcp": 2782,
     "cls": 0,
-    "tbt": 53,
+    "tbt": 111,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 80,
-    "lcp": 4994,
+    "score": 69,
+    "lcp": 5274,
     "cls": 0,
-    "tbt": 15,
+    "tbt": 423,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 79,
-    "lcp": 5119,
+    "lcp": 5189,
     "cls": 0,
-    "tbt": 40,
+    "tbt": 69,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1518,
+    "lcp": 1515,
     "cls": 0,
-    "tbt": 32,
+    "tbt": 80,
     "field": null
    },
    "/kontak/": {
-    "score": 100,
-    "lcp": 906,
+    "score": 98,
+    "lcp": 909,
     "cls": 0,
-    "tbt": 14,
+    "tbt": 63,
     "field": null
    },
-   "/artikel/bengkel-rekanan-xpeng-luar-kota/": {
+   "/artikel/xpeng-g9l-erev/": {
     "score": 100,
-    "lcp": 1508,
-    "cls": 0.008,
-    "tbt": 45,
+    "lcp": 1207,
+    "cls": 0.019,
+    "tbt": 19,
     "field": null
    }
   },
@@ -697,10 +697,10 @@
    "perf:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 6.0 dtk",
-   "🔴 /model/xpeng-x9/: LCP 5.0 dtk",
-   "📉 /model/xpeng-x9/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /model/xpeng-g6/: skor 79, LCP 5.1 dtk"
+   "🟠 /: LCP 2.8 dtk",
+   "🔴 /model/xpeng-x9/: skor 69, LCP 5.3 dtk, TBT 423 ms",
+   "📉 /model/xpeng-x9/ turun 99 → 69 sejak pengecekan sebelumnya (melambat)",
+   "🔴 /model/xpeng-g6/: skor 79, LCP 5.2 dtk"
   ]
  },
  "alertKeys": [

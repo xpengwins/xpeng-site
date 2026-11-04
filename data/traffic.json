@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-04T03:20:52.493Z",
+ "generated": "2026-11-04T15:20:37.754Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 1,
-  "views": 1,
-  "newUsers": 1
+  "users": 27,
+  "sessions": 32,
+  "views": 66,
+  "newUsers": 24
  },
  "yesterday": {
   "users": 41,
@@ -14,16 +14,16 @@
   "newUsers": 38
  },
  "last7": {
-  "users": 353,
-  "sessions": 430,
-  "views": 861,
-  "newUsers": 352
+  "users": 376,
+  "sessions": 462,
+  "views": 926,
+  "newUsers": 375
  },
  "last30": {
-  "users": 926,
-  "sessions": 1046,
-  "views": 1716,
-  "newUsers": 947
+  "users": 949,
+  "sessions": 1079,
+  "views": 1781,
+  "newUsers": 970
  },
  "prev30": {
   "users": 0,
@@ -94,45 +94,45 @@
   },
   {
    "date": "2026-11-04",
-   "users": 1,
-   "sessions": 1,
-   "views": 1
+   "users": 27,
+   "sessions": 32,
+   "views": 66
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 799,
-   "users": 545
+   "views": 824,
+   "users": 550
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 210,
-   "users": 130
+   "views": 214,
+   "users": 132
   },
   {
    "path": "/pricelist/",
-   "views": 148,
-   "users": 119
+   "views": 153,
+   "users": 123
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 138,
-   "users": 52
+   "views": 147,
+   "users": 58
   },
   {
    "path": "/model/",
-   "views": 125,
-   "users": 30
+   "views": 132,
+   "users": 32
   },
   {
    "path": "/kontak/",
-   "views": 32,
-   "users": 6
+   "views": 33,
+   "users": 7
   },
   {
    "path": "/promo/",
-   "views": 25,
+   "views": 27,
    "users": 7
   },
   {
@@ -147,7 +147,7 @@
   },
   {
    "path": "/artikel/",
-   "views": 14,
+   "views": 16,
    "users": 9
   }
  ],
@@ -158,27 +158,27 @@
   },
   {
    "k": "Paid Search",
-   "v": 311
+   "v": 327
   },
   {
    "k": "Organic Social",
-   "v": 135
+   "v": 144
   },
   {
    "k": "Direct",
-   "v": 86
+   "v": 87
   },
   {
    "k": "Referral",
-   "v": 49
+   "v": 53
   },
   {
    "k": "Organic Search",
-   "v": 33
+   "v": 35
   },
   {
    "k": "Unassigned",
-   "v": 9
+   "v": 8
   },
   {
    "k": "Cross-network",
@@ -188,11 +188,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 858
+   "v": 878
   },
   {
    "k": "desktop",
-   "v": 181
+   "v": 193
   },
   {
    "k": "tablet",
@@ -202,11 +202,11 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 435
+   "v": 448
   },
   {
    "k": "Tangerang",
-   "v": 64
+   "v": 65
   },
   {
    "k": "South Tangerang",
@@ -218,11 +218,11 @@
   },
   {
    "k": "Boardman",
-   "v": 37
+   "v": 40
   },
   {
    "k": "Prineville",
-   "v": 28
+   "v": 29
   },
   {
    "k": "(not set)",
@@ -230,11 +230,11 @@
   },
   {
    "k": "Lulea",
-   "v": 17
+   "v": 18
   }
  ],
  "leads": {
-  "klik_whatsapp": 50,
+  "klik_whatsapp": 62,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,
