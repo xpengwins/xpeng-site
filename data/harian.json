@@ -1,8 +1,30 @@
 {
- "generated": "2026-11-04T22:51:10.867Z",
- "iklan": null,
- "kualitas": null,
- "peringatan": [],
+ "generated": "2026-11-05T02:58:33.412Z",
+ "iklan": {
+  "kemarin": "2026-11-04",
+  "biaya": 52723,
+  "klik": 19,
+  "tayang": 221,
+  "invalid": 2,
+  "terpakai": 103231,
+  "sisa": 1396769,
+  "persen": 7,
+  "hariSisa": 26,
+  "amanPerHari": 53722,
+  "rata7": 51616
+ },
+ "kualitas": {
+  "klikKemarin": 19,
+  "sesiChatKemarin": 2,
+  "aksiKemarin": 0,
+  "leadKemarin": 0,
+  "klik3": 37,
+  "aksi3": 0
+ },
+ "peringatan": [
+  "Klik mencurigakan: 37 klik iklan dalam 3 hari, tetapi 0 aksi chat/WhatsApp dari pengunjung iklan",
+  "Klik tidak valid versi Google 10.5% kemarin. Cek laporan \"Klik tidak valid\" dan ajukan pengembalian biaya bila perlu"
+ ],
  "aset": {
   "domain": "xpengwins.com",
   "domainHabis": "2027-10-16T12:57:50.000Z",
@@ -19,5 +41,13 @@
    }
   ]
  },
- "riwayat": []
+ "riwayat": [
+  {
+   "d": "2026-11-04",
+   "biaya": 52723,
+   "klik": 19,
+   "aksi": 0,
+   "lead": 0
+  }
+ ]
 }
