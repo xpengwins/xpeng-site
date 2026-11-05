@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-05T03:18:26.807Z",
+ "generated": "2026-11-05T15:26:53.949Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 1,
-  "views": 1,
-  "newUsers": 1
+  "users": 23,
+  "sessions": 24,
+  "views": 45,
+  "newUsers": 21
  },
  "yesterday": {
   "users": 34,
@@ -14,16 +14,16 @@
   "newUsers": 31
  },
  "last7": {
-  "users": 318,
-  "sessions": 397,
-  "views": 832,
-  "newUsers": 317
+  "users": 338,
+  "sessions": 420,
+  "views": 876,
+  "newUsers": 337
  },
  "last30": {
-  "users": 957,
-  "sessions": 1092,
-  "views": 1803,
-  "newUsers": 978
+  "users": 977,
+  "sessions": 1115,
+  "views": 1847,
+  "newUsers": 998
  },
  "prev30": {
   "users": 0,
@@ -100,36 +100,36 @@
   },
   {
    "date": "2026-11-05",
-   "users": 1,
-   "sessions": 1,
-   "views": 1
+   "users": 23,
+   "sessions": 24,
+   "views": 45
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 833,
-   "users": 552
+   "views": 847,
+   "users": 559
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 218,
-   "users": 134
+   "views": 227,
+   "users": 140
   },
   {
    "path": "/pricelist/",
-   "views": 156,
-   "users": 124
+   "views": 161,
+   "users": 128
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 150,
-   "users": 60
+   "views": 154,
+   "users": 63
   },
   {
    "path": "/model/",
-   "views": 133,
-   "users": 32
+   "views": 137,
+   "users": 34
   },
   {
    "path": "/kontak/",
@@ -138,13 +138,13 @@
   },
   {
    "path": "/promo/",
-   "views": 27,
+   "views": 28,
    "users": 7
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
-   "views": 19,
-   "users": 16
+   "views": 21,
+   "users": 17
   },
   {
    "path": "/tentang/",
@@ -153,8 +153,8 @@
   },
   {
    "path": "/artikel/",
-   "views": 16,
-   "users": 9
+   "views": 17,
+   "users": 10
   }
  ],
  "channels": [
@@ -164,41 +164,41 @@
   },
   {
    "k": "Paid Search",
-   "v": 331
+   "v": 346
   },
   {
    "k": "Organic Social",
-   "v": 146
+   "v": 148
   },
   {
    "k": "Direct",
-   "v": 88
+   "v": 90
   },
   {
    "k": "Referral",
-   "v": 56
+   "v": 58
   },
   {
    "k": "Organic Search",
-   "v": 36
-  },
-  {
-   "k": "Unassigned",
-   "v": 8
+   "v": 38
   },
   {
    "k": "Cross-network",
    "v": 6
+  },
+  {
+   "k": "Unassigned",
+   "v": 5
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 888
+   "v": 904
   },
   {
    "k": "desktop",
-   "v": 195
+   "v": 202
   },
   {
    "k": "tablet",
@@ -208,7 +208,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 451
+   "v": 464
   },
   {
    "k": "Tangerang",
@@ -220,7 +220,7 @@
   },
   {
    "k": "Depok",
-   "v": 52
+   "v": 53
   },
   {
    "k": "Boardman",
@@ -240,7 +240,7 @@
   }
  ],
  "leads": {
-  "klik_whatsapp": 66,
+  "klik_whatsapp": 68,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,

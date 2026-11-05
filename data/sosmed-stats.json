@@ -1,37 +1,37 @@
 {
- "generated": "2026-11-05T03:18:29.565Z",
+ "generated": "2026-11-05T15:26:58.132Z",
  "platforms": {
   "facebook": {
-   "posted48h": 5,
+   "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
    "note": "izin baca data post belum ada (posting tidak terpengaruh)"
   },
   "instagram": {
-   "posted48h": 5,
+   "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
    "account": {
     "name": "@xpengwins",
     "followers": 3,
-    "media": 40
+    "media": 43
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-04T14:22:21+0000",
+   "last": "2026-11-05T14:52:04+0000",
    "top": [
     {
-     "url": "https://www.instagram.com/p/DfUqSqlIHCA/",
+     "url": "https://www.instagram.com/reel/DfXScQ-yqAp/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/DfTxIFKja5c/",
+     "url": "https://www.instagram.com/p/DfXHcUHD5Q_/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/DfR8MoegXvM/",
+     "url": "https://www.instagram.com/p/DfWPJtuDYur/",
      "eng": 0
     }
    ],
@@ -43,7 +43,7 @@
    }
   },
   "threads": {
-   "posted48h": 5,
+   "posted48h": 4,
    "posted24h": 2,
    "bursts": 0,
    "account": {
@@ -53,19 +53,19 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 14,
-   "last": "2026-11-04T14:22:41+0000",
+   "avgReachRecent": 29,
+   "last": "2026-11-05T13:16:01+0000",
    "top": [
     {
+     "url": "https://www.threads.com/@xpengwins/post/DfXHef1kWu8",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfWPLDbFhmv",
+     "eng": 0
+    },
+    {
      "url": "https://www.threads.com/@xpengwins/post/DfUqUAoEbNj",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfTxJ88lUPO",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfR8OwLG275",
      "eng": 0
     }
    ],
