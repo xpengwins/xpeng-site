@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-05T05:04:06.413Z",
+  "slug": "xpeng-g9l-vs-xpeng-x9",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-05T05:03:43.348Z",
+  "slug": "xpeng-g9l-vs-xpeng-x9",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-05T05:03:32.244Z",
+  "slug": "xpeng-g9l-vs-xpeng-x9",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-04T14:22:44.821Z",
   "slug": "interior-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "instagram",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-31T09:00:45.425Z",
-  "slug": "mobil-listrik-untuk-mudik",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-31T08:54:42.163Z",
-  "slug": "mobil-listrik-untuk-mudik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-10-31T02:37:21.377Z",
-  "slug": "biaya-charging-spklu",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
