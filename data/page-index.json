@@ -546,6 +546,18 @@
       "tag": "h2"
      },
      {
+      "t": "Perbandingan",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L vs X9: SUV Flagship atau MPV 7 Kursi?",
+      "tag": "h3"
+     },
+     {
+      "t": "Perbandingan XPeng G9L vs X9 dari sisi bentuk, kursi, harga, teknologi, dan status penjualan di Indonesia. Cari tahu mana yang lebih cocok untuk keluargamu.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -754,10 +766,6 @@
       "tag": "p"
      },
      {
-      "t": "Perbandingan",
-      "tag": "span"
-     },
-     {
       "t": "XPeng G6 Pro vs AWD: Bedanya dan Cara Memilih",
       "tag": "h3"
      },
@@ -911,6 +919,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/emerald-suv-breaking-through-water.webp",
+      "alt": "Xpengwins Xpeng G9L SUV hijau menerjang air sebagai pembanding MPV X9"
+     },
      {
       "src": "/assets/img/g9l-tepi-laut-matahari.webp",
       "alt": "Xpengwins Xpeng G9L tampak samping depan untuk pembahasan versi EREV"
