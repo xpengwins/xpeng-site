@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-05T13:16:04.672Z",
+  "slug": "xpeng-g9l-vs-xpeng-g6",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-05T13:15:42.792Z",
+  "slug": "xpeng-g9l-vs-xpeng-g6",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-05T13:15:24.129Z",
+  "slug": "xpeng-g9l-vs-xpeng-g6",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-05T05:04:06.413Z",
   "slug": "xpeng-g9l-vs-xpeng-x9",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "instagram",
   "ok": true,
   "msg": "terkirim"
- },
- {
-  "at": "2026-10-31T09:42:25.121Z",
-  "slug": "mobil-listrik-untuk-mudik",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-10-31T09:00:45.425Z",
-  "slug": "mobil-listrik-untuk-mudik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-10-31T09:00:45.425Z",
-  "slug": "mobil-listrik-untuk-mudik",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
  }
 ]
