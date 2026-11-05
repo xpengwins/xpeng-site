@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-04T15:20:37.754Z",
+ "generated": "2026-11-05T03:18:26.807Z",
  "property": "560653996",
  "today": {
-  "users": 27,
-  "sessions": 32,
-  "views": 66,
-  "newUsers": 24
+  "users": 1,
+  "sessions": 1,
+  "views": 1,
+  "newUsers": 1
  },
  "yesterday": {
-  "users": 41,
-  "sessions": 48,
-  "views": 126,
-  "newUsers": 38
+  "users": 34,
+  "sessions": 43,
+  "views": 87,
+  "newUsers": 31
  },
  "last7": {
-  "users": 376,
-  "sessions": 462,
-  "views": 926,
-  "newUsers": 375
+  "users": 318,
+  "sessions": 397,
+  "views": 832,
+  "newUsers": 317
  },
  "last30": {
-  "users": 949,
-  "sessions": 1079,
-  "views": 1781,
-  "newUsers": 970
+  "users": 957,
+  "sessions": 1092,
+  "views": 1803,
+  "newUsers": 978
  },
  "prev30": {
   "users": 0,
@@ -94,35 +94,41 @@
   },
   {
    "date": "2026-11-04",
-   "users": 27,
-   "sessions": 32,
-   "views": 66
+   "users": 34,
+   "sessions": 43,
+   "views": 87
+  },
+  {
+   "date": "2026-11-05",
+   "users": 1,
+   "sessions": 1,
+   "views": 1
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 824,
-   "users": 550
+   "views": 833,
+   "users": 552
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 214,
-   "users": 132
+   "views": 218,
+   "users": 134
   },
   {
    "path": "/pricelist/",
-   "views": 153,
-   "users": 123
+   "views": 156,
+   "users": 124
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 147,
-   "users": 58
+   "views": 150,
+   "users": 60
   },
   {
    "path": "/model/",
-   "views": 132,
+   "views": 133,
    "users": 32
   },
   {
@@ -158,23 +164,23 @@
   },
   {
    "k": "Paid Search",
-   "v": 327
+   "v": 331
   },
   {
    "k": "Organic Social",
-   "v": 144
+   "v": 146
   },
   {
    "k": "Direct",
-   "v": 87
+   "v": 88
   },
   {
    "k": "Referral",
-   "v": 53
+   "v": 56
   },
   {
    "k": "Organic Search",
-   "v": 35
+   "v": 36
   },
   {
    "k": "Unassigned",
@@ -182,17 +188,17 @@
   },
   {
    "k": "Cross-network",
-   "v": 5
+   "v": 6
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 878
+   "v": 888
   },
   {
    "k": "desktop",
-   "v": 193
+   "v": 195
   },
   {
    "k": "tablet",
@@ -202,7 +208,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 448
+   "v": 451
   },
   {
    "k": "Tangerang",
@@ -210,7 +216,7 @@
   },
   {
    "k": "South Tangerang",
-   "v": 53
+   "v": 54
   },
   {
    "k": "Depok",
@@ -230,11 +236,11 @@
   },
   {
    "k": "Lulea",
-   "v": 18
+   "v": 19
   }
  ],
  "leads": {
-  "klik_whatsapp": 62,
+  "klik_whatsapp": 66,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,

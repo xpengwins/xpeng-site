@@ -636,78 +636,140 @@
     "drop:/model/xpeng-x9/",
     "perf:/model/xpeng-g6/"
    ]
+  },
+  {
+   "date": "2026-11-05",
+   "at": "2026-11-05T03:18:22.044Z",
+   "urls": 51,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 83,
+   "pages": {
+    "/": {
+     "score": 76,
+     "lcp": 5909,
+     "cls": 0,
+     "tbt": 25,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 79,
+     "lcp": 5155,
+     "cls": 0,
+     "tbt": 117,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 80,
+     "lcp": 5253,
+     "cls": 0,
+     "tbt": 72,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1517,
+     "cls": 0,
+     "tbt": 74,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 94,
+     "lcp": 1006,
+     "cls": 0,
+     "tbt": 290,
+     "field": null
+    },
+    "/artikel/xpeng-g9l-erev/": {
+     "score": 100,
+     "lcp": 1222,
+     "cls": 0.019,
+     "tbt": 45,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "drop:/",
+    "perf:/model/xpeng-x9/",
+    "perf:/model/xpeng-g6/",
+    "perf:/kontak/"
+   ]
   }
  ],
- "generated": "2026-11-04T15:20:29.260Z",
+ "generated": "2026-11-05T03:18:22.044Z",
  "latest": {
-  "date": "2026-11-04",
-  "at": "2026-11-04T15:20:29.260Z",
+  "date": "2026-11-05",
+  "at": "2026-11-05T03:18:22.044Z",
   "urls": 51,
   "errors": 0,
   "slow": 0,
-  "avgMs": 66,
+  "avgMs": 83,
   "pages": {
    "/": {
-    "score": 95,
-    "lcp": 2782,
+    "score": 76,
+    "lcp": 5909,
     "cls": 0,
-    "tbt": 111,
+    "tbt": 25,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 69,
-    "lcp": 5274,
+    "score": 79,
+    "lcp": 5155,
     "cls": 0,
-    "tbt": 423,
+    "tbt": 117,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 79,
-    "lcp": 5189,
+    "score": 80,
+    "lcp": 5253,
     "cls": 0,
-    "tbt": 69,
+    "tbt": 72,
     "field": null
    },
    "/pricelist/": {
     "score": 100,
-    "lcp": 1515,
+    "lcp": 1517,
     "cls": 0,
-    "tbt": 80,
+    "tbt": 74,
     "field": null
    },
    "/kontak/": {
-    "score": 98,
-    "lcp": 909,
+    "score": 94,
+    "lcp": 1006,
     "cls": 0,
-    "tbt": 63,
+    "tbt": 290,
     "field": null
    },
    "/artikel/xpeng-g9l-erev/": {
     "score": 100,
-    "lcp": 1207,
+    "lcp": 1222,
     "cls": 0.019,
-    "tbt": 19,
+    "tbt": 45,
     "field": null
    }
   },
   "issues": [
    "perf:/",
+   "drop:/",
    "perf:/model/xpeng-x9/",
-   "drop:/model/xpeng-x9/",
-   "perf:/model/xpeng-g6/"
+   "perf:/model/xpeng-g6/",
+   "perf:/kontak/"
   ],
   "issueText": [
-   "🟠 /: LCP 2.8 dtk",
-   "🔴 /model/xpeng-x9/: skor 69, LCP 5.3 dtk, TBT 423 ms",
-   "📉 /model/xpeng-x9/ turun 99 → 69 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /model/xpeng-g6/: skor 79, LCP 5.2 dtk"
+   "🔴 /: skor 76, LCP 5.9 dtk",
+   "📉 / turun 95 → 76 sejak pengecekan sebelumnya (melambat)",
+   "🔴 /model/xpeng-x9/: skor 79, LCP 5.2 dtk",
+   "🔴 /model/xpeng-g6/: LCP 5.3 dtk",
+   "🟠 /kontak/: TBT 290 ms"
   ]
  },
  "alertKeys": [
   "perf:/",
+  "drop:/",
   "perf:/model/xpeng-x9/",
-  "drop:/model/xpeng-x9/",
-  "perf:/model/xpeng-g6/"
+  "perf:/model/xpeng-g6/",
+  "perf:/kontak/"
  ],
- "alertSig": "drop:/model/xpeng-x9/|perf:/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
+ "alertSig": "drop:/|perf:/|perf:/kontak/|perf:/model/xpeng-g6/|perf:/model/xpeng-x9/"
 }
