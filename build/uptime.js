@@ -31,8 +31,8 @@ const lama = (a, b) => { const m = Math.max(1, Math.round((b - a) / 6e4)); retur
     const targets = [[base + '/', '</html>'], [base + '/sitemap.xml', '<urlset'], ...(m0 ? [[base + '/model/' + m0 + '/', '</html>']] : [])];
     const hasil = []; for (const [u, h] of targets) hasil.push(await cek(u, h));
     const gagal = hasil.filter(r => !r.ok), now = new Date().toISOString();
-    const st = rd('uptime-state.json', { status: 'up', since: now, incidents: [] });
-    let ubah = false;
+    const st0 = rd('uptime-state.json', null), st = st0 || { status: 'up', since: now, incidents: [] };
+    let ubah = !st0;   // file status belum ada: tulis sekali supaya laporan harian tahu alarm sudah aktif
     if (gagal.length && st.status !== 'down') {
       st.status = 'down'; st.since = now; st.lastRemind = now; st.incidents = (st.incidents || []).concat([{ from: now, to: null, alasan: gagal.map(g => g.url.replace(base, '') + ' ' + g.alasan).join('; ') }]).slice(-40); ubah = true;
       await tg('<b>ALARM: situs tidak bisa dibuka</b>\n⚠ ' + esc(base) + '\n' + gagal.map(g => esc(g.url.replace(base, '') || '/') + ': ' + esc(g.alasan)).join('\n') + '\n\nDicek 3 kali berturut-turut dan semuanya gagal (' + esc(jam(now)) + '). Cek tab Actions dan status GitHub Pages.');
