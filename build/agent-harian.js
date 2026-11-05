@@ -70,13 +70,13 @@ async function bagianIklan(hari, kemarin) {
     const c = d => chat[d] || { sesi: new Set(), aksi: new Set(), lead: new Set() };
     const klik3 = sum(ads.filter(r => hari3.includes(r.d)), r => r.klik), aksi3 = hari3.reduce((s, d) => s + c(d).aksi.size, 0), sesi3 = hari3.reduce((s, d) => s + c(d).sesi.size, 0);
     out.kualitas = { klikKemarin: klikKmr, sesiChatKemarin: c(kemarin).sesi.size, aksiKemarin: c(kemarin).aksi.size, leadKemarin: c(kemarin).lead.size, klik3, aksi3 };
-    out.kualitasBaris = ['Kemarin: ' + klikKmr + ' klik iklan, ' + c(kemarin).sesi.size + ' pengunjung iklan yang membuka chat, ' + c(kemarin).aksi.size + ' yang mengirim pesan/lanjut ke WhatsApp (' + c(kemarin).lead.size + ' lead isi nama dan nomor)', '3 hari terakhir: ' + klik3 + ' klik, ' + aksi3 + ' aksi chat/WhatsApp' + (klik3 ? ' (' + (aksi3 / klik3 * 100).toFixed(1) + '% dari klik)' : '')];
+    out.catatan = [];
     const hariData = hari3.filter(d => d >= cfg.mulai).length;   // jumlah hari yang benar-benar punya data iklan
-    if (hariData < 3) out.kualitasBaris.push('Data iklan baru ' + hariData + ' hari: penilaian klik mencurigakan dimulai setelah 3 hari data (konversi di Google Ads dan aksi chat bisa berbeda cara hitung).');
+    if (hariData < 3) out.catatan.push('Data iklan baru ' + hariData + ' hari: penilaian klik mencurigakan dimulai setelah 3 hari data (konversi di Google Ads dan aksi chat bisa berbeda cara hitung).');
     else if (klik3 >= cfg.minKlikTanpaAksi && aksi3 === 0) out.flags.push('Klik mencurigakan: ' + klik3 + ' klik iklan dalam 3 hari, tetapi 0 aksi chat/WhatsApp dari pengunjung iklan');
     else if (klik3 >= 30 && aksi3 / klik3 < 0.02) out.flags.push('Rasio aksi rendah: hanya ' + aksi3 + ' aksi dari ' + klik3 + ' klik (' + (aksi3 / klik3 * 100).toFixed(1) + '%)');
-  } else out.kualitasBaris = ['Data chat belum bisa dibaca' + (out.chatError ? ' (' + out.chatError + ')' : '') + '. Jika tab "' + cfg.tabChat + '" ada di Sheet lain, isi secret CHAT_SHEET_ID.'];
-  if (invKmr != null && klikKmr >= 5) { const p = invKmr / klikKmr * 100; out.kualitasBaris.push('Klik tidak valid versi Google kemarin: ' + invKmr + ' (' + p.toFixed(1) + '%)'); if (p >= cfg.ambangInvalidPersen) out.flags.push('Klik tidak valid versi Google ' + p.toFixed(1) + '% kemarin. Cek laporan "Klik tidak valid" dan ajukan pengembalian biaya bila perlu'); }
+  } else out.chatInfo = 'Data chat belum bisa dibaca' + (out.chatError ? ' (' + out.chatError + ')' : '') + '. Jika tab "' + cfg.tabChat + '" ada di Sheet lain, isi secret CHAT_SHEET_ID.';
+  if (invKmr != null && klikKmr >= 5) { const p = invKmr / klikKmr * 100; if (p >= cfg.ambangInvalidPersen) out.flags.push('Klik tidak valid versi Google ' + p.toFixed(1) + '% kemarin. Cek laporan "Klik tidak valid" dan ajukan pengembalian biaya bila perlu'); }
   const prev = ads.filter(r => r.d < kemarin && r.d >= addDays(kemarin, -7)), prevByDay = {}; prev.forEach(r => { prevByDay[r.d] = (prevByDay[r.d] || 0) + r.klik; });
   const med = median(Object.values(prevByDay).filter(x => x > 0));
   if (klikKmr >= 8 && med > 0 && klikKmr > med * cfg.lonjakanKali) out.flags.push('Lonjakan klik: ' + klikKmr + ' kemarin, biasanya sekitar ' + Math.round(med) + ' per hari');
@@ -87,11 +87,10 @@ async function bagianIklan(hari, kemarin) {
       if (ga) {
         const terlibat = ga.sesi ? Math.round(ga.terlibat / ga.sesi * 100) : 0;
         out.ga4 = { sesi3: ga.sesi, terlibatPersen: terlibat, durasiDetik: ga.durasi };
-        (out.kualitasBaris = out.kualitasBaris || []).push('Google Analytics, sesi dari iklan 3 hari: ' + ga.sesi + ' sesi, ' + terlibat + '% terlibat (bertahan lebih dari 10 detik atau lebih dari 1 halaman), rata-rata ' + ga.durasi + ' detik');
         if (klik3b >= 15 && ga.sesi < klik3b * 0.5) out.flags.push('Klik iklan ' + klik3b + ' tetapi Google Analytics hanya mencatat ' + ga.sesi + ' sesi dari iklan (selisih wajar sampai 30%). Klik tidak sampai ke situs, klik tidak sengaja, atau situs lambat dibuka');
         if (ga.sesi >= 15 && terlibat < 25) out.flags.push('Hanya ' + terlibat + '% pengunjung iklan yang bertahan lebih dari 10 detik. Pola ini umum pada klik tidak sengaja atau bot, atau halaman tujuan kurang cocok dengan iklan');
       }
-    } catch (e) { (out.kualitasBaris = out.kualitasBaris || []).push('Google Analytics belum bisa dibaca: ' + clean(e.message).slice(0, 80)); }
+    } catch (e) { (out.catatan = out.catatan || []).push('Google Analytics belum bisa dibaca: ' + clean(e.message).slice(0, 80)); }
   }
   /* riwayat ringkas */
   out.riwayat = Object.keys(dayCost).sort().slice(-14).map(d => ({ d, biaya: Math.round(dayCost[d]), klik: sum(ads.filter(r => r.d === d), r => r.klik), aksi: chat ? c2(chat, d) : null }));
@@ -155,15 +154,7 @@ function bagianSitus() {
     const [ik, as] = await Promise.all([bagianIklan(hari, kemarin), bagianAset()]), st = bagianSitus();
     const flags = [...ik.flags, ...as.flags, ...st.flags], L = [];
     const hariNama = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'][now.getUTCDay()];
-    L.push('<b>Laporan harian xpengwins.com</b>\n' + hariNama + ', ' + tgl(hari + 'T12:00:00Z'));
-    if (flags.length) L.push('\n<b>PERHATIAN (' + flags.length + ')</b>\n' + flags.map(f => '⚠ ' + esc(f)).join('\n'));
-    else L.push('\n' + (ik.belum.length ? 'Tidak ada peringatan dari data yang tersedia.' : 'Semua normal, tidak ada yang perlu ditindaklanjuti.'));
-    if (ik.belum.length) L.push('\n<b>Perlu dipasang</b>\n' + ik.belum.map(esc).join('\n'));
-    if (ik.baris.length) L.push('\n<b>Google Ads</b>\n' + ik.baris.map(esc).join('\n'));
-    if (ik.kualitasBaris) L.push('\n<b>Kualitas klik</b>\n' + ik.kualitasBaris.map(esc).join('\n') + (ik.flags.length ? '\nIni indikasi, bukan bukti. Google umumnya mengembalikan biaya klik tidak valid yang terdeteksi.' : ''));
-    L.push('\n<b>Domain dan token</b>\n' + as.baris.map(esc).join('\n'));
-    L.push('\n<b>Situs</b>\n' + st.baris.map(esc).join('\n'));
-    const msg = L.join('\n');
+    const msg = require('./laporan-format.js').susun({ situsNama: 'xpengwins.com', hariNama, tanggal: tgl(hari + 'T12:00:00Z'), cfg, flags, belum: ik.belum, ik, aset: as.baris, situs: st.baris });
 
     /* simpan ringkasan (riwayat 60 hari) */
     const old = rd('harian.json', { riwayat: [] }), rw = (old.riwayat || []).filter(x => x.d !== kemarin);
