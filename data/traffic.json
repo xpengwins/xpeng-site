@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-06T03:19:22.477Z",
+ "generated": "2026-11-06T15:14:11.055Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 2,
-  "views": 2,
-  "newUsers": 1
+  "users": 20,
+  "sessions": 22,
+  "views": 26,
+  "newUsers": 18
  },
  "yesterday": {
   "users": 33,
@@ -14,16 +14,16 @@
   "newUsers": 31
  },
  "last7": {
-  "users": 290,
-  "sessions": 365,
-  "views": 657,
-  "newUsers": 288
+  "users": 308,
+  "sessions": 385,
+  "views": 681,
+  "newUsers": 305
  },
  "last30": {
-  "users": 988,
-  "sessions": 1130,
-  "views": 1867,
-  "newUsers": 1009
+  "users": 1006,
+  "sessions": 1149,
+  "views": 1891,
+  "newUsers": 1026
  },
  "prev30": {
   "users": 0,
@@ -106,16 +106,16 @@
   },
   {
    "date": "2026-11-06",
-   "users": 1,
-   "sessions": 2,
-   "views": 2
+   "users": 20,
+   "sessions": 22,
+   "views": 26
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 856,
-   "users": 562
+   "views": 861,
+   "users": 565
   },
   {
    "path": "/model/xpeng-g6/",
@@ -124,13 +124,13 @@
   },
   {
    "path": "/pricelist/",
-   "views": 164,
-   "users": 131
+   "views": 168,
+   "users": 135
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 155,
-   "users": 64
+   "views": 162,
+   "users": 71
   },
   {
    "path": "/model/",
@@ -159,8 +159,8 @@
   },
   {
    "path": "/artikel/",
-   "views": 17,
-   "users": 10
+   "views": 18,
+   "users": 11
   }
  ],
  "channels": [
@@ -170,41 +170,41 @@
   },
   {
    "k": "Paid Search",
-   "v": 351
+   "v": 363
   },
   {
    "k": "Organic Social",
-   "v": 152
+   "v": 156
   },
   {
    "k": "Direct",
-   "v": 93
+   "v": 94
   },
   {
    "k": "Referral",
-   "v": 60
+   "v": 61
   },
   {
    "k": "Organic Search",
    "v": 39
   },
   {
-   "k": "Cross-network",
-   "v": 6
+   "k": "Unassigned",
+   "v": 9
   },
   {
-   "k": "Unassigned",
-   "v": 5
+   "k": "Cross-network",
+   "v": 7
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 915
+   "v": 931
   },
   {
    "k": "desktop",
-   "v": 206
+   "v": 209
   },
   {
    "k": "tablet",
@@ -214,7 +214,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 469
+   "v": 475
   },
   {
    "k": "Tangerang",
@@ -230,19 +230,19 @@
   },
   {
    "k": "Boardman",
-   "v": 41
+   "v": 42
   },
   {
    "k": "Prineville",
-   "v": 29
+   "v": 30
   },
   {
    "k": "(not set)",
-   "v": 27
+   "v": 28
   },
   {
    "k": "Lulea",
-   "v": 19
+   "v": 20
   }
  ],
  "leads": {
