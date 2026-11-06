@@ -1,10 +1,10 @@
-name: Agent harian (laporan jam 06.00 WIB)
+name: Agent harian (laporan jam 23.00 WIB)
 # FILE BARU. Tidak mengubah build.yml maupun monitor.yml.
-# Jadwal: 22:10 UTC = 05:10 WIB. Di repo ini GitHub biasanya terlambat 30 sampai 80 menit, jadi laporan tiba sekitar 06.00 WIB.
+# Jadwal: 15:20 UTC = 22:20 WIB. Di repo ini GitHub biasanya terlambat 30 sampai 80 menit, jadi laporan tiba sekitar 23.00 WIB.
 # Isi: biaya Google Ads, klik mencurigakan, domain dan sertifikat, token sosmed, ringkasan alarm situs.
 on:
   schedule:
-    - cron: '10 22 * * *'
+    - cron: '20 15 * * *'
   workflow_dispatch:
 permissions:
   contents: write
