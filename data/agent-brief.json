@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-05T15:27:08.677Z",
+ "generated": "2026-11-06T03:19:30.970Z",
  "traffic": {
   "periode": [
-   "2026-10-06",
-   "2026-11-02"
+   "2026-10-07",
+   "2026-11-03"
   ],
-  "klik": 15,
-  "tayang": 395,
-  "posisi": 10.8,
+  "klik": 18,
+  "tayang": 449,
+  "posisi": 10.3,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -144,9 +144,10 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 76, LCP 5.8 dtk",
-    "📉 / turun 95 → 76 sejak pengecekan sebelumnya (melambat)",
-    "🔴 /model/xpeng-x9/: LCP 5.3 dtk"
+    "🟠 /: LCP 2.7 dtk",
+    "🔴 /model/xpeng-x9/: skor 79, LCP 5.2 dtk",
+    "🔴 /pricelist/: LCP 4.3 dtk",
+    "📉 /pricelist/ turun 100 → 83 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [

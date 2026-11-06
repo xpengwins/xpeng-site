@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-05T15:26:53.949Z",
+ "generated": "2026-11-06T03:19:22.477Z",
  "property": "560653996",
  "today": {
-  "users": 23,
-  "sessions": 24,
-  "views": 45,
-  "newUsers": 21
+  "users": 1,
+  "sessions": 2,
+  "views": 2,
+  "newUsers": 1
  },
  "yesterday": {
-  "users": 34,
-  "sessions": 43,
-  "views": 87,
+  "users": 33,
+  "sessions": 37,
+  "views": 63,
   "newUsers": 31
  },
  "last7": {
-  "users": 338,
-  "sessions": 420,
-  "views": 876,
-  "newUsers": 337
+  "users": 290,
+  "sessions": 365,
+  "views": 657,
+  "newUsers": 288
  },
  "last30": {
-  "users": 977,
-  "sessions": 1115,
-  "views": 1847,
-  "newUsers": 998
+  "users": 988,
+  "sessions": 1130,
+  "views": 1867,
+  "newUsers": 1009
  },
  "prev30": {
   "users": 0,
@@ -100,16 +100,22 @@
   },
   {
    "date": "2026-11-05",
-   "users": 23,
-   "sessions": 24,
-   "views": 45
+   "users": 33,
+   "sessions": 37,
+   "views": 63
+  },
+  {
+   "date": "2026-11-06",
+   "users": 1,
+   "sessions": 2,
+   "views": 2
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 847,
-   "users": 559
+   "views": 856,
+   "users": 562
   },
   {
    "path": "/model/xpeng-g6/",
@@ -118,18 +124,18 @@
   },
   {
    "path": "/pricelist/",
-   "views": 161,
-   "users": 128
+   "views": 164,
+   "users": 131
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 154,
-   "users": 63
+   "views": 155,
+   "users": 64
   },
   {
    "path": "/model/",
-   "views": 137,
-   "users": 34
+   "views": 138,
+   "users": 35
   },
   {
    "path": "/kontak/",
@@ -164,23 +170,23 @@
   },
   {
    "k": "Paid Search",
-   "v": 346
+   "v": 351
   },
   {
    "k": "Organic Social",
-   "v": 148
+   "v": 152
   },
   {
    "k": "Direct",
-   "v": 90
+   "v": 93
   },
   {
    "k": "Referral",
-   "v": 58
+   "v": 60
   },
   {
    "k": "Organic Search",
-   "v": 38
+   "v": 39
   },
   {
    "k": "Cross-network",
@@ -194,11 +200,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 904
+   "v": 915
   },
   {
    "k": "desktop",
-   "v": 202
+   "v": 206
   },
   {
    "k": "tablet",
@@ -208,7 +214,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 464
+   "v": 469
   },
   {
    "k": "Tangerang",
@@ -224,7 +230,7 @@
   },
   {
    "k": "Boardman",
-   "v": 40
+   "v": 41
   },
   {
    "k": "Prineville",
@@ -240,7 +246,7 @@
   }
  ],
  "leads": {
-  "klik_whatsapp": 68,
+  "klik_whatsapp": 69,
   "kirim_form_test_drive": 0,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,
