@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-07T05:53:22.188Z",
+  "slug": "vla-2-0-xpeng-g9l",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-07T05:52:57.999Z",
+  "slug": "vla-2-0-xpeng-g9l",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-07T05:52:42.549Z",
+  "slug": "vla-2-0-xpeng-g9l",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-06T13:11:42.030Z",
   "slug": "xpeng-g9l-7-seater",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "facebook",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T08:07:58.216Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-11-01T05:51:30.801Z",
-  "slug": "xpeng-g9l-segera-launching",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-01T05:51:09.007Z",
-  "slug": "xpeng-g9l-segera-launching",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
