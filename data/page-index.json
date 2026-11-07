@@ -558,6 +558,14 @@
       "tag": "p"
      },
      {
+      "t": "Chip Turing XPeng G9L: Arti 2.250 TOPS untuk Pengemudi",
+      "tag": "h3"
+     },
+     {
+      "t": "Chip Turing XPeng di G9L: Max satu chip, Ultra SE dua chip, Ultra tiga chip dengan tenaga hingga 2.250 TOPS. Pahami arti TOPS dalam bahasa sederhana.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -954,6 +962,10 @@
      {
       "src": "/assets/img/g9l-layar-tengah-kabin.webp",
       "alt": "Xpengwins Xpeng G9L ilustrasi layar kabin sebagai pusat teknologi VLA"
+     },
+     {
+      "src": "/assets/img/g9l-tepi-laut-matahari.webp",
+      "alt": "Xpengwins Xpeng G9L hijau zamrud dengan teknologi chip Turing"
      },
      {
       "src": "/assets/img/g9l-hero.webp",
