@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-07T03:19:18.087Z",
+ "generated": "2026-11-07T15:11:00.586Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 1,
-  "views": 1,
-  "newUsers": 0
+  "users": 26,
+  "sessions": 31,
+  "views": 38,
+  "newUsers": 26
  },
  "yesterday": {
   "users": 41,
@@ -14,16 +14,16 @@
   "newUsers": 40
  },
  "last7": {
-  "users": 271,
-  "sessions": 332,
-  "views": 543,
-  "newUsers": 267
+  "users": 297,
+  "sessions": 363,
+  "views": 580,
+  "newUsers": 293
  },
  "last30": {
-  "users": 1027,
-  "sessions": 1177,
-  "views": 1940,
-  "newUsers": 1048
+  "users": 1053,
+  "sessions": 1209,
+  "views": 1977,
+  "newUsers": 1074
  },
  "prev30": {
   "users": 0,
@@ -112,36 +112,36 @@
   },
   {
    "date": "2026-11-07",
-   "users": 0,
-   "sessions": 1,
-   "views": 1
+   "users": 26,
+   "sessions": 31,
+   "views": 38
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 874,
-   "users": 571
+   "views": 882,
+   "users": 577
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 240,
-   "users": 144
-  },
-  {
-   "path": "/pricelist/",
-   "views": 169,
-   "users": 136
+   "views": 245,
+   "users": 148
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 167,
-   "users": 73
+   "views": 174,
+   "users": 80
+  },
+  {
+   "path": "/pricelist/",
+   "views": 174,
+   "users": 140
   },
   {
    "path": "/model/",
-   "views": 142,
-   "users": 37
+   "views": 143,
+   "users": 38
   },
   {
    "path": "/kontak/",
@@ -150,13 +150,13 @@
   },
   {
    "path": "/promo/",
-   "views": 28,
-   "users": 7
+   "views": 30,
+   "users": 9
   },
   {
    "path": "/artikel/",
-   "views": 22,
-   "users": 13
+   "views": 23,
+   "users": 14
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
@@ -165,8 +165,8 @@
   },
   {
    "path": "/tentang/",
-   "views": 19,
-   "users": 2
+   "views": 20,
+   "users": 3
   }
  ],
  "channels": [
@@ -176,63 +176,63 @@
   },
   {
    "k": "Paid Search",
-   "v": 375
+   "v": 396
   },
   {
    "k": "Organic Social",
-   "v": 161
+   "v": 164
   },
   {
    "k": "Direct",
-   "v": 99
+   "v": 100
   },
   {
    "k": "Referral",
-   "v": 67
+   "v": 71
   },
   {
    "k": "Organic Search",
-   "v": 40
+   "v": 42
   },
   {
    "k": "Unassigned",
-   "v": 20
+   "v": 10
   },
   {
    "k": "Cross-network",
-   "v": 8
+   "v": 6
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 953
+   "v": 979
   },
   {
    "k": "desktop",
-   "v": 215
+   "v": 219
   },
   {
    "k": "tablet",
-   "v": 9
+   "v": 11
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 483
+   "v": 495
   },
   {
    "k": "Tangerang",
-   "v": 66
+   "v": 67
   },
   {
    "k": "South Tangerang",
-   "v": 55
+   "v": 56
   },
   {
    "k": "Depok",
-   "v": 53
+   "v": 54
   },
   {
    "k": "Boardman",
@@ -244,11 +244,11 @@
   },
   {
    "k": "(not set)",
-   "v": 28
+   "v": 29
   },
   {
    "k": "Lulea",
-   "v": 20
+   "v": 21
   }
  ],
  "leads": {
