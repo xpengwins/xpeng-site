@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-07T12:54:44.271Z",
+  "slug": "chip-turing-xpeng-g9l",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-07T12:54:21.197Z",
+  "slug": "chip-turing-xpeng-g9l",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-07T12:54:06.322Z",
+  "slug": "chip-turing-xpeng-g9l",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-07T05:53:22.188Z",
   "slug": "vla-2-0-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "threads",
   "ok": false,
   "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-11-01T08:14:01.134Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T08:14:01.134Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T08:14:01.133Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
  }
 ]
