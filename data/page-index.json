@@ -546,6 +546,18 @@
       "tag": "h2"
      },
      {
+      "t": "Teknologi",
+      "tag": "span"
+     },
+     {
+      "t": "VLA XPeng di G9L: Otak AI yang Mengerti Jalan",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa itu VLA XPeng pada G9L? Penjelasan sederhana model Vision-Language-Action, perbedaan versi Max dan Ultra, serta batasan bantuan berkendara di Indonesia.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -624,10 +636,6 @@
      {
       "t": "Jarak tempuh XPeng G9L BEV hingga 755 km (CLTC) dan EREV 1.602 km gabungan. Pelajari bedanya CLTC dan WLTP serta perkiraan jarak nyata di jalan Indonesia.",
       "tag": "p"
-     },
-     {
-      "t": "Teknologi",
-      "tag": "span"
      },
      {
       "t": "Charging XPeng G9L: Pengisian 5C 11 Menit Itu Nyata?",
@@ -943,6 +951,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-layar-tengah-kabin.webp",
+      "alt": "Xpengwins Xpeng G9L ilustrasi layar kabin sebagai pusat teknologi VLA"
+     },
      {
       "src": "/assets/img/g9l-hero.webp",
       "alt": "Xpengwins Xpeng G9L tampak samping memperlihatkan panjang bodi SUV besar"
