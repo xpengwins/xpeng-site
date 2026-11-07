@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-06T15:14:27.746Z",
+ "generated": "2026-11-07T03:19:30.709Z",
  "traffic": {
   "periode": [
-   "2026-10-07",
-   "2026-11-03"
+   "2026-10-08",
+   "2026-11-04"
   ],
-  "klik": 18,
-  "tayang": 449,
-  "posisi": 10.3,
+  "klik": 19,
+  "tayang": 489,
+  "posisi": 10.2,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -39,6 +39,13 @@
    "tayang": 3,
    "posisi": 7.3,
    "kataKunci": "\"xpeng\" \"mobil\"",
+   "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
+  },
+  {
+   "halaman": "/artikel/interior-xpeng-x9/",
+   "tayang": 3,
+   "posisi": 8.3,
+   "kataKunci": "interior mobil xpeng x9",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   }
  ],
@@ -96,8 +103,15 @@
   },
   {
    "kataKunci": "xpeng x9 pro plus harga",
+   "tayang": 3,
+   "posisi": 43.7,
+   "halamanSaatIni": "/pricelist/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
+   "kataKunci": "xpeng price list",
    "tayang": 2,
-   "posisi": 48,
+   "posisi": 1,
    "halamanSaatIni": "/pricelist/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
@@ -121,13 +135,6 @@
    "posisi": 25,
    "halamanSaatIni": "/pricelist/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
-  },
-  {
-   "kataKunci": "rekomendasikan. tolong indonesia. di listrik suv membeli ingin dan 60-an berusia saya",
-   "tayang": 1,
-   "posisi": 10,
-   "halamanSaatIni": "/artikel/suv-listrik-terbaik-indonesia/",
-   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   }
  ],
  "D_kualitas": {
@@ -144,10 +151,9 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 69, LCP 6.2 dtk, TBT 322 ms",
-    "🔴 /model/xpeng-x9/: LCP 5.0 dtk",
-    "🔴 /model/xpeng-g6/: skor 77, LCP 5.2 dtk",
-    "📉 /model/xpeng-g6/ turun 99 → 77 sejak pengecekan sebelumnya (melambat)"
+    "🔴 /: skor 74, LCP 6.0 dtk",
+    "🔴 /model/xpeng-x9/: LCP 5.2 dtk",
+    "🔴 /model/xpeng-g6/: skor 78, LCP 5.2 dtk"
    ]
   },
   "sosmed": [],
