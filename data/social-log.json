@@ -1,5 +1,33 @@
 [
  {
+  "at": "2026-11-08T06:05:49.980Z",
+  "slug": "xpeng-g9l-paris-motor-show",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-08T06:05:49.980Z",
+  "slug": "xpeng-g9l-paris-motor-show",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-08T06:05:49.980Z",
+  "slug": "xpeng-g9l-paris-motor-show",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
+ },
+ {
+  "at": "2026-11-08T05:59:48.292Z",
+  "slug": "xpeng-g9l-paris-motor-show",
+  "platform": "threads",
+  "ok": false,
+  "msg": "gambar Threads belum tayang, pakai persegi"
+ },
+ {
   "at": "2026-11-07T12:54:44.271Z",
   "slug": "chip-turing-xpeng-g9l",
   "platform": "threads",
@@ -390,33 +418,5 @@
   "platform": "facebook",
   "ok": true,
   "msg": "terkirim"
- },
- {
-  "at": "2026-11-01T09:02:58.549Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T09:02:58.549Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T09:02:58.548Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-01T08:56:55.703Z",
-  "slug": "perawatan-mobil-listrik",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
  }
 ]
