@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T03:20:22.423Z",
+ "generated": "2026-11-08T15:09:29.224Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 5,
-    "media": 51
+    "media": 55
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-07T12:54:18+0000",
+   "last": "2026-11-08T12:22:23+0000",
    "top": [
     {
+     "url": "https://www.instagram.com/p/DfevvjCl3rd/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/DfeKyB2FKhO/",
+     "eng": 0
+    },
+    {
      "url": "https://www.instagram.com/p/DfcOl-TF8d0/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfbeXmYFKZI/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfZrvxJCQvk/",
      "eng": 0
     }
    ],
@@ -53,19 +53,19 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 29,
-   "last": "2026-11-07T12:54:40+0000",
+   "avgReachRecent": 15,
+   "last": "2026-11-08T12:22:44+0000",
    "top": [
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfcOn1fEYP6",
+     "url": "https://www.threads.com/@xpengwins/post/Dfevw34IMwe",
      "eng": 0
     },
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfbeZfEEX2n",
+     "url": "https://www.threads.com/@xpengwins/post/DfeMXRgmXSs",
      "eng": 0
     },
     {
-     "url": "https://www.threads.com/@xpengwins/post/DfZrxRJIOrA",
+     "url": "https://www.threads.com/@xpengwins/post/DfeK0GcFvkO",
      "eng": 0
     }
    ],
@@ -73,9 +73,15 @@
   }
  },
  "issues": [
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (49 → 6). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+  "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi"
  ],
  "alertKeys": [
-  "reach:threads"
+  "gagal:threads:gambar JPG belum tayang di situs setelah",
+  "gagal:instagram:gambar JPG belum tayang di situs setelah",
+  "gagal:facebook:gambar JPG belum tayang di situs setelah",
+  "gagal:threads:gambar Threads belum tayang, pakai perse"
  ]
 }

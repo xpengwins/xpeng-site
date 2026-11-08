@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T03:20:30.962Z",
+ "generated": "2026-11-08T15:09:38.068Z",
  "traffic": {
   "periode": [
    "2026-10-09",
@@ -161,9 +161,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 47,
-  "terjadwal": 16,
-  "terbitBerikutnya": "2026-11-08T12:00:00+07:00",
+  "terbit": 49,
+  "terjadwal": 14,
+  "terbitBerikutnya": "2026-11-09T12:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
@@ -172,13 +172,14 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 75, LCP 6.2 dtk",
-    "🔴 /model/xpeng-x9/: LCP 5.0 dtk",
-    "📉 /model/xpeng-x9/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
+    "🔴 /: skor 77, LCP 5.8 dtk"
    ]
   },
   "sosmed": [
-   "📉 Threads: jangkauan 3 post terbaru turun tajam (49 → 6). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+   "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
+   "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi"
   ],
   "halaman": {
    "berat": 0,
