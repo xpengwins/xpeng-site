@@ -218,12 +218,23 @@ function specSection(m) {
   const note = m.specNote || 'Spesifikasi mengacu pada brosur resmi XPeng dan dapat berubah sewaktu-waktu. Konfigurasi unit mengikuti stok dealer. Hubungi kami untuk data terbaru.';
   return `<section class="section" id="spesifikasi"><noscript><style>#spmore[hidden]{display:block}.sptbl[data-only] tr.same,.sptbl[data-only] tr.grp{display:table-row}</style></noscript><div class="wrap"><span class="eyebrow">Spesifikasi</span><h2>Spesifikasi dan perbedaan varian ${E(m.name)}</h2><p class="splead">Lihat ringkasannya di atas, buka detailnya di sini${vs.length > 1 ? ', lalu bandingkan ' + E(vs.map(v => v.name).join(' dengan ')) : ''}.</p><div class="spbtns">${hasMore ? '<button type="button" class="btn ghost" id="spbtn" aria-expanded="false" aria-controls="spmore">Lihat detail</button>' : ''}${brosur}</div>${hasMore ? `<div id="spmore" class="spmore" hidden>${cmpHtml}${detHtml}<p class="spnote">${E(note)}</p></div>` : ''}</div></section>`;
 }
+/* ---- perbandingan model terbaru vs lama (data: m.facelift; kosong = bagian tidak tampil) ---- */
+function faceliftSection(m) {
+  const f = m.facelift;
+  if (!f || !(f.groups || []).length) return '';
+  const nm = m.name.replace(/^XPeng /i, '');
+  const stats = (f.stats || []).map(s => `<div class="flst"><span class="fll">${E(s.label)}</span><strong>${E(s.baru)}</strong><span class="flo">Sebelumnya ${E(s.lama)}</span>${s.gain ? `<i class="bd">${E(s.gain)}</i>` : ''}</div>`).join('');
+  const tbl = `<div class="tbl spcmpw"><table class="sptbl fltbl"><thead><tr><th scope="col">Aspek</th><th scope="col">${E(nm)} lama</th><th scope="col" class="flnew">${E(nm)} terbaru</th></tr></thead>${f.groups.map(g => `<tbody>${g.g ? `<tr class="grp"><th colspan="3" scope="colgroup">${E(g.g)}</th></tr>` : ''}${g.rows.map(r => `<tr><th scope="row">${E(r.k)}</th><td>${specCell(r.lama)}</td><td class="flnew">${specCell(r.baru)}</td></tr>`).join('')}</tbody>`).join('')}</table></div>`;
+  const extras = (f.extras || []).length ? `<div class="flx"><h3>Nilai tambah yang hanya ada di ${E(m.name)} terbaru</h3><ul class="check">${f.extras.map(x => `<li>${E(x)}</li>`).join('')}</ul></div>` : '';
+  return `<section class="section" id="baru-vs-lama"><div class="wrap"><span class="eyebrow">Baru vs lama</span><h2>${E(f.title || 'Perbedaan ' + m.name + ' terbaru dan versi lama')}</h2>${f.lead ? `<p class="splead">${E(f.lead)}</p>` : ''}${stats ? `<div class="flgrid">${stats}</div>` : ''}${tbl}${extras}<div class="spbtns"><a class="btn" href="${wa('Halo, saya mau info ' + m.name + ' terbaru dan test drive')}" rel="noopener">Tanya ${E(m.name)} terbaru</a><a class="btn ghost" href="${u('/kontak/')}">Jadwalkan Test Drive</a></div>${f.note ? `<p class="spnote">${E(f.note)}</p>` : ''}</div></section>`;
+}
 function modelPage(m) {
   const vids = videoItems(m);
   const p = '/model/' + m.slug + '/';
   const body = `<section class="mhero">${picture(m.hero, m.name + ' ' + m.type, 'bg', 1280, 960, false)}<div class="shade"></div><div class="wrap cap"><nav class="crumb" aria-label="Breadcrumb"><a href="${u('/')}">Beranda</a> › <a href="${u('/model/')}">Model</a> › ${E(m.name)}</nav><span class="eyebrow">${E(m.type)}</span><h1>${E(m.name)}</h1><p>${E(m.tagline)}</p><div class="cta"><a class="btn" href="${wa('Halo, saya tertarik ' + m.name)}" rel="noopener">Tanya harga</a><a class="btn ghost" href="${u('/kontak/')}">Test Drive</a></div></div></section>
 <section class="section"><div class="wrap two"><div><h2>Keunggulan ${E(m.name)}</h2><ul class="check">${m.highlights.map(h => `<li>${E(h)}</li>`).join('')}</ul><h2>Harga ${E(m.name)} ${E(site.pricelistUpdate)}</h2><table class="ptbl"><tbody>${m.variants.map(v => `<tr><th>${E(v.name)}</th><td>${rp(v.price)}</td></tr>`).join('')}</tbody></table></div>
 <div><h2>Spesifikasi ringkas</h2><table class="ptbl spec"><tbody>${m.specs.map(s => `<tr><th>${E(s.k)}</th><td>${E(s.v)}</td></tr>`).join('')}</tbody></table></div></div></section>
+${faceliftSection(m)}
 ${specSection(m)}
 ${cfgSection([m], { id: 'atur-mobil' })}
 ${leasingSection()}

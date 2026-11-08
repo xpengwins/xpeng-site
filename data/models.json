@@ -105,6 +105,10 @@
    {
     "q": "Apakah bisa test drive XPeng X9?",
     "a": "Bisa. Kirim pesan WhatsApp untuk jadwal test drive di showroom."
+   },
+   {
+    "q": "Apa bedanya XPeng X9 terbaru dengan X9 lama?",
+    "a": "X9 terbaru memakai baterai NCM 110 kWh (sebelumnya 101,5 kWh) dengan jarak tempuh hingga 715 km NEDC (sebelumnya 690 km). Daya pengisian DC puncaknya 542 kW (sebelumnya 317 kW), sehingga pengisian 10–80% sekitar 12 menit (sebelumnya 20 menit). Desainnya juga diperbarui dan ada tambahan fitur seperti head-up display, Road Noise Cancellation, dan Flat Tire Stability Control. Hubungi kami untuk detail dan jadwal test drive."
    }
   ],
   "metaTitle": "XPeng X9 Harga & Spesifikasi 2026 | MPV Listrik Premium",
@@ -479,7 +483,112 @@
    }
   ],
   "specNote": "Perbedaan Pro dan Pro+ hanya ada pada kursi baris kedua; fitur lainnya sama. Data mengacu pada brosur New X9 Long Range. Spesifikasi dapat berubah dan mengikuti stok dealer.",
-  "brosur": ""
+  "brosur": "",
+  "facelift": {
+   "title": "Kenapa XPeng X9 terbaru lebih bernilai dibanding X9 lama",
+   "lead": "XPeng X9 terbaru menggantikan versi yang dijual sejak 2025. Jika Anda membandingkan dengan X9 lama atau unit bekasnya, ini yang bertambah: baterai lebih besar, jarak tempuh lebih jauh, dan pengisian jauh lebih cepat.",
+   "stats": [
+    {
+     "label": "Pengisian DC 10–80%",
+     "baru": "12 menit",
+     "lama": "20 menit",
+     "gain": "40% lebih singkat"
+    },
+    {
+     "label": "Daya pengisian DC puncak",
+     "baru": "542 kW",
+     "lama": "317 kW",
+     "gain": "naik 71%"
+    },
+    {
+     "label": "Jarak tempuh (NEDC)",
+     "baru": "715 km",
+     "lama": "690 km",
+     "gain": "+25 km"
+    },
+    {
+     "label": "Kapasitas baterai (NCM)",
+     "baru": "110 kWh",
+     "lama": "101,5 kWh",
+     "gain": "+8,5 kWh"
+    }
+   ],
+   "groups": [
+    {
+     "g": "Baterai dan pengisian",
+     "rows": [
+      {
+       "k": "Kapasitas baterai (NCM)",
+       "lama": "101,5 kWh",
+       "baru": "110 kWh"
+      },
+      {
+       "k": "Jarak tempuh NEDC",
+       "lama": "690 km",
+       "baru": "715 km"
+      },
+      {
+       "k": "Jarak tempuh WLTP",
+       "lama": "590 km",
+       "baru": "615 km"
+      },
+      {
+       "k": "Daya pengisian DC puncak",
+       "lama": "317 kW",
+       "baru": "542 kW"
+      },
+      {
+       "k": "Pengisian DC 10–80%",
+       "lama": "20 menit",
+       "baru": "12 menit"
+      },
+      {
+       "k": "V2L (listrik keluar kendaraan)",
+       "lama": "3,3 kW",
+       "baru": "6 kW"
+      }
+     ]
+    },
+    {
+     "g": "Desain",
+     "rows": [
+      {
+       "k": "Bumper depan",
+       "lama": "Grille honeycomb",
+       "baru": "Air intake baru dengan active grille shutter dan air curtain"
+      },
+      {
+       "k": "Pelek",
+       "lama": "Emblem ikut berputar",
+       "baru": "20 inci multi-spoke, emblem tetap tegak (stationary)"
+      }
+     ]
+    },
+    {
+     "g": "Kabin",
+     "rows": [
+      {
+       "k": "Jok baris 3",
+       "lama": "Dilipat penuh",
+       "baru": "Dilipat terbagi 60:40"
+      },
+      {
+       "k": "Road Noise Cancellation",
+       "lama": "—",
+       "baru": "Ada"
+      }
+     ]
+    }
+   ],
+   "extras": [
+    "Head-up display (HUD) di kaca depan",
+    "Road Noise Cancellation untuk kabin lebih senyap",
+    "Audio 27 speaker XOPERA Premium",
+    "Tombol pilih mode berkendara dan dua tombol ADAS di setir",
+    "Flat Tire Stability Control saat ban pecah di kecepatan tinggi"
+   ],
+   "note": "Pembanding: X9 Long Range yang dijual di Indonesia sejak 2025 (data peluncuran) dengan New X9 Long Range (Pro dan Pro+) sesuai brosur resmi. Spesifikasi dapat berubah dan mengikuti stok dealer."
+  }
  },
  {
   "slug": "xpeng-g6",
