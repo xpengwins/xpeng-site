@@ -809,78 +809,132 @@
     "drop:/pricelist/",
     "perf:/artikel/vla-2-0-xpeng-g9l/"
    ]
+  },
+  {
+   "date": "2026-11-08",
+   "at": "2026-11-08T03:20:09.072Z",
+   "urls": 57,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 76,
+   "pages": {
+    "/": {
+     "score": 75,
+     "lcp": 6216,
+     "cls": 0,
+     "tbt": 104,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 80,
+     "lcp": 4964,
+     "cls": 0,
+     "tbt": 76,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 99,
+     "lcp": 1975,
+     "cls": 0,
+     "tbt": 33,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0,
+     "tbt": 29,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 905,
+     "cls": 0,
+     "tbt": 47,
+     "field": null
+    },
+    "/artikel/vla-2-0-xpeng-g9l/": {
+     "score": 98,
+     "lcp": 910,
+     "cls": 0,
+     "tbt": 25,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "drop:/model/xpeng-x9/"
+   ]
   }
  ],
- "generated": "2026-11-07T15:10:53.032Z",
+ "generated": "2026-11-08T03:20:09.072Z",
  "latest": {
-  "date": "2026-11-07",
-  "at": "2026-11-07T15:10:53.032Z",
+  "date": "2026-11-08",
+  "at": "2026-11-08T03:20:09.072Z",
   "urls": 57,
   "errors": 0,
   "slow": 0,
-  "avgMs": 112,
+  "avgMs": 76,
   "pages": {
    "/": {
-    "score": 77,
-    "lcp": 5887,
+    "score": 75,
+    "lcp": 6216,
     "cls": 0,
-    "tbt": 60,
+    "tbt": 104,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 2002,
+    "score": 80,
+    "lcp": 4964,
     "cls": 0,
-    "tbt": 42,
+    "tbt": 76,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1962,
+    "lcp": 1975,
     "cls": 0,
-    "tbt": 18,
+    "tbt": 33,
     "field": null
    },
    "/pricelist/": {
-    "score": 88,
-    "lcp": 3885,
+    "score": 100,
+    "lcp": 1508,
     "cls": 0,
-    "tbt": 66,
+    "tbt": 29,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 906,
+    "lcp": 905,
     "cls": 0,
-    "tbt": 73,
+    "tbt": 47,
     "field": null
    },
    "/artikel/vla-2-0-xpeng-g9l/": {
-    "score": 96,
-    "lcp": 905,
-    "cls": 0.116,
-    "tbt": 23,
+    "score": 98,
+    "lcp": 910,
+    "cls": 0,
+    "tbt": 25,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/pricelist/",
-   "drop:/pricelist/",
-   "perf:/artikel/vla-2-0-xpeng-g9l/"
+   "perf:/model/xpeng-x9/",
+   "drop:/model/xpeng-x9/"
   ],
   "issueText": [
-   "🔴 /: skor 77, LCP 5.9 dtk",
-   "🟠 /pricelist/: LCP 3.9 dtk",
-   "📉 /pricelist/ turun 99 → 88 sejak pengecekan sebelumnya (melambat)",
-   "🟠 /artikel/vla-2-0-xpeng-g9l/: CLS 0.116"
+   "🔴 /: skor 75, LCP 6.2 dtk",
+   "🔴 /model/xpeng-x9/: LCP 5.0 dtk",
+   "📉 /model/xpeng-x9/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/pricelist/",
-  "drop:/pricelist/",
-  "perf:/artikel/vla-2-0-xpeng-g9l/"
+  "perf:/model/xpeng-x9/",
+  "drop:/model/xpeng-x9/"
  ],
- "alertSig": "drop:/pricelist/|perf:/|perf:/artikel/vla-2-0-xpeng-g9l/|perf:/pricelist/"
+ "alertSig": "drop:/model/xpeng-x9/|perf:/|perf:/model/xpeng-x9/"
 }

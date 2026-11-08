@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-07T15:11:00.586Z",
+ "generated": "2026-11-08T03:20:19.658Z",
  "property": "560653996",
  "today": {
-  "users": 26,
-  "sessions": 31,
-  "views": 38,
-  "newUsers": 26
+  "users": 5,
+  "sessions": 6,
+  "views": 24,
+  "newUsers": 5
  },
  "yesterday": {
-  "users": 41,
-  "sessions": 49,
-  "views": 74,
-  "newUsers": 40
+  "users": 35,
+  "sessions": 41,
+  "views": 51,
+  "newUsers": 33
  },
  "last7": {
-  "users": 297,
-  "sessions": 363,
-  "views": 580,
-  "newUsers": 293
+  "users": 234,
+  "sessions": 290,
+  "views": 505,
+  "newUsers": 228
  },
  "last30": {
-  "users": 1053,
-  "sessions": 1209,
-  "views": 1977,
-  "newUsers": 1074
+  "users": 1065,
+  "sessions": 1225,
+  "views": 2014,
+  "newUsers": 1086
  },
  "prev30": {
   "users": 0,
@@ -112,41 +112,47 @@
   },
   {
    "date": "2026-11-07",
-   "users": 26,
-   "sessions": 31,
-   "views": 38
+   "users": 35,
+   "sessions": 41,
+   "views": 51
+  },
+  {
+   "date": "2026-11-08",
+   "users": 5,
+   "sessions": 6,
+   "views": 24
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 882,
-   "users": 577
+   "views": 886,
+   "users": 578
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 245,
-   "users": 148
+   "views": 246,
+   "users": 149
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 174,
-   "users": 80
+   "views": 177,
+   "users": 82
   },
   {
    "path": "/pricelist/",
-   "views": 174,
-   "users": 140
+   "views": 177,
+   "users": 143
   },
   {
    "path": "/model/",
-   "views": 143,
+   "views": 144,
    "users": 38
   },
   {
    "path": "/kontak/",
-   "views": 33,
-   "users": 7
+   "views": 35,
+   "users": 8
   },
   {
    "path": "/promo/",
@@ -165,7 +171,7 @@
   },
   {
    "path": "/tentang/",
-   "views": 20,
+   "views": 21,
    "users": 3
   }
  ],
@@ -176,23 +182,23 @@
   },
   {
    "k": "Paid Search",
-   "v": 396
+   "v": 403
   },
   {
    "k": "Organic Social",
-   "v": 164
+   "v": 167
   },
   {
    "k": "Direct",
-   "v": 100
+   "v": 102
   },
   {
    "k": "Referral",
-   "v": 71
+   "v": 72
   },
   {
    "k": "Organic Search",
-   "v": 42
+   "v": 45
   },
   {
    "k": "Unassigned",
@@ -206,21 +212,21 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 979
+   "v": 985
   },
   {
    "k": "desktop",
-   "v": 219
+   "v": 227
   },
   {
    "k": "tablet",
-   "v": 11
+   "v": 13
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 495
+   "v": 501
   },
   {
    "k": "Tangerang",
@@ -240,7 +246,7 @@
   },
   {
    "k": "Prineville",
-   "v": 33
+   "v": 35
   },
   {
    "k": "(not set)",
