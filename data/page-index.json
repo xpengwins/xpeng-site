@@ -231,7 +231,7 @@
    },
    {
     "key": "video-beranda",
-    "title": "Rasakan XPeng X9 dalam gerak",
+    "title": "Rasakan XPeng G6 Pro dalam gerak",
     "hasH1": false,
     "texts": [
      {
@@ -239,7 +239,7 @@
       "tag": "span"
      },
      {
-      "t": "Rasakan XPeng X9 dalam gerak",
+      "t": "Rasakan XPeng G6 Pro dalam gerak",
       "tag": "h2"
      }
     ],
@@ -447,43 +447,43 @@
     ],
     "imgs": [
      {
-      "src": "/assets/img/x9-white-kursi-2.webp",
+      "src": "/assets/img/x9-black-depan.webp",
       "alt": "Galeri XPeng foto 1"
      },
      {
-      "src": "/assets/img/x9-white-kursi-3.webp",
+      "src": "/assets/img/x9-grey-depan.webp",
       "alt": "Galeri XPeng foto 2"
      },
      {
-      "src": "/assets/img/x9-white-kursi-belakang.webp",
+      "src": "/assets/img/x9-silver-depan.webp",
       "alt": "Galeri XPeng foto 3"
      },
      {
-      "src": "/assets/img/x9-black-depan.webp",
+      "src": "/assets/img/x9-white-depan.webp",
       "alt": "Galeri XPeng foto 4"
      },
      {
-      "src": "/assets/img/x9-grey-depan.webp",
+      "src": "/assets/img/x9-white-belakang.webp",
       "alt": "Galeri XPeng foto 5"
      },
      {
-      "src": "/assets/img/g6-black-front.webp",
+      "src": "/assets/img/g6-grey-showroom.webp",
       "alt": "Galeri XPeng foto 6"
      },
      {
-      "src": "/assets/img/g6-silver-jalan.webp",
+      "src": "/assets/img/g6-grey-front.webp",
       "alt": "Galeri XPeng foto 7"
      },
      {
-      "src": "/assets/img/g6-white-detail.webp",
+      "src": "/assets/img/g6-grey-detail.webp",
       "alt": "Galeri XPeng foto 8"
      },
      {
-      "src": "/assets/img/g6-grey-showroom.webp",
+      "src": "/assets/img/g6-black-depan.webp",
       "alt": "Galeri XPeng foto 9"
      },
      {
-      "src": "/assets/img/g6-grey-front.webp",
+      "src": "/assets/img/g6-black-belakang.webp",
       "alt": "Galeri XPeng foto 10"
      }
     ]
