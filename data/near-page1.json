@@ -1,0 +1,213 @@
+{
+ "generated": "2026-11-08T22:54:40.050Z",
+ "periode": [
+  "2026-10-09",
+  "2026-11-05"
+ ],
+ "rentang": "8-20",
+ "total": 11,
+ "halaman": [
+  {
+   "page": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
+   "tipe": "artikel",
+   "impr": 6,
+   "terbaik": 9.8,
+   "kata": [
+    {
+     "q": "xpeng atau hyundai, mana yang lebih layak dibeli di indonesia?",
+     "pos": 9.8,
+     "impr": 6,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/interior-xpeng-x9/",
+   "tipe": "artikel",
+   "impr": 5,
+   "terbaik": 8,
+   "kata": [
+    {
+     "q": "x9 interior",
+     "pos": 8.5,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "interior xpeng x9",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng x9 indonesia interior",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "interior mobil xpeng x9",
+     "pos": 9,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/pricelist/",
+   "tipe": "halaman",
+   "impr": 5,
+   "terbaik": 8,
+   "kata": [
+    {
+     "q": "pricelist xpeng",
+     "pos": 12.5,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "price list xpeng",
+     "pos": 13,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "pricelist xpeng 2026",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-g6-vs-byd-sealion-7/",
+   "tipe": "artikel",
+   "impr": 4,
+   "terbaik": 8,
+   "kata": [
+    {
+     "q": "xpeng g6 pro vs byd sealion 7",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "byd sealion 7 xpeng g6",
+     "pos": 11,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng g6 vs sealion 7",
+     "pos": 13,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "g6 vs sealion 7",
+     "pos": 14,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/model/xpeng-x9/",
+   "tipe": "model",
+   "impr": 4,
+   "terbaik": 8.5,
+   "kata": [
+    {
+     "q": "xpeng captain seat",
+     "pos": 8.5,
+     "impr": 4,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-g9l-segera-launching/",
+   "tipe": "artikel",
+   "impr": 3,
+   "terbaik": 8.7,
+   "kata": [
+    {
+     "q": "xpeng g9l",
+     "pos": 8.7,
+     "impr": 3,
+     "clicks": 1
+    }
+   ]
+  },
+  {
+   "page": "/",
+   "tipe": "halaman",
+   "impr": 1,
+   "terbaik": 8,
+   "kata": [
+    {
+     "q": "x9 xpeng leasing",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/model/xpeng-g6/",
+   "tipe": "model",
+   "impr": 1,
+   "terbaik": 8,
+   "kata": [
+    {
+     "q": "xpeng g6 2026",
+     "pos": 8,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/teknologi-xpeng/",
+   "tipe": "artikel",
+   "impr": 1,
+   "terbaik": 9,
+   "kata": [
+    {
+     "q": "sepa 2.0",
+     "pos": 9,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-g9l-vs-xpeng-g6/",
+   "tipe": "artikel",
+   "impr": 1,
+   "terbaik": 11,
+   "kata": [
+    {
+     "q": "xpeng g9l harga",
+     "pos": 11,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-x9-vs-toyota-alphard/",
+   "tipe": "artikel",
+   "impr": 1,
+   "terbaik": 11,
+   "kata": [
+    {
+     "q": "xpeng vs alphard",
+     "pos": 11,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  }
+ ]
+}

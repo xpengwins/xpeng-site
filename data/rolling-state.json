@@ -1,0 +1,21 @@
+{
+ "minggu": 44,
+ "video": "assets/video/227816.mp4",
+ "galeri": {
+  "xpeng-x9": [
+   "x9-black-depan.webp",
+   "x9-grey-depan.webp",
+   "x9-silver-depan.webp",
+   "x9-white-depan.webp",
+   "x9-white-belakang.webp"
+  ],
+  "xpeng-g6": [
+   "g6-grey-showroom.webp",
+   "g6-grey-front.webp",
+   "g6-grey-detail.webp",
+   "g6-black-depan.webp",
+   "g6-black-belakang.webp"
+  ]
+ },
+ "at": "2026-11-08T22:54:38.907Z"
+}
