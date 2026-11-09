@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-08T12:19:51.989Z",
+ "generated": "2026-11-09T03:01:14.118Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -15537,6 +15537,190 @@
    "external": 5,
    "faq": 4,
    "overlap": 7,
+   "checks": [
+    {
+     "group": "Judul",
+     "label": "Panjang judul 30-60 karakter",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Judul",
+     "label": "Keyword ada di judul",
+     "pass": true,
+     "points": 8,
+     "max": 8,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Meta description 120-160 karakter",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Meta",
+     "label": "Keyword ada di deskripsi",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "URL",
+     "label": "Slug pendek (maks 70) dan mengandung kata kunci",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Panjang artikel minimal 800 kata",
+     "pass": true,
+     "points": 10,
+     "max": 10,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Keyword di 100 kata pertama",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Isi",
+     "label": "Kepadatan keyword 0,5-2,5%",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Minimal 3 subjudul H2",
+     "pass": true,
+     "points": 6,
+     "max": 6,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Keyword ada di salah satu H2",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Struktur",
+     "label": "Tidak ada H1 ganda di isi (H1 = judul)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 3 internal link",
+     "pass": true,
+     "points": 7,
+     "max": 7,
+     "tip": ""
+    },
+    {
+     "group": "Link",
+     "label": "Minimal 1 link keluar ke sumber terpercaya",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Gambar utama + alt text",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Media",
+     "label": "Semua gambar di isi punya alt",
+     "pass": true,
+     "points": 2,
+     "max": 2,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Kalimat rata-rata maks 20 kata",
+     "pass": true,
+     "points": 4,
+     "max": 4,
+     "tip": ""
+    },
+    {
+     "group": "Keterbacaan",
+     "label": "Tidak ada paragraf lebih dari 90 kata",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada jawaban singkat di awal (**Jawaban singkat:**)",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "AEO",
+     "label": "Ada FAQ minimal 3 pertanyaan",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    },
+    {
+     "group": "GEO",
+     "label": "Ada list atau tabel (mudah dikutip AI)",
+     "pass": true,
+     "points": 3,
+     "max": 3,
+     "tip": ""
+    },
+    {
+     "group": "Orisinal",
+     "label": "Kemiripan dengan artikel lain di bawah 30%",
+     "pass": true,
+     "points": 5,
+     "max": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "slug": "airbag-xpeng-x9-tidak-mengembang",
+   "title": "Airbag XPeng X9 Tidak Mengembang: Penjelasan Pabrikan",
+   "status": "draft",
+   "keyword": "airbag xpeng x9",
+   "score": 100,
+   "grade": "A",
+   "words": 1397,
+   "density": 0.86,
+   "internal": 9,
+   "external": 8,
+   "faq": 6,
+   "overlap": 2,
    "checks": [
     {
      "group": "Judul",
