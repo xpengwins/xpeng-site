@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T04:11:20.986Z",
+ "generated": "2026-11-09T04:12:28.234Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -5779,12 +5779,12 @@
    "keyword": "xpeng x9 vs toyota alphard",
    "score": 100,
    "grade": "A",
-   "words": 985,
-   "density": 0.51,
-   "internal": 9,
-   "external": 1,
-   "faq": 4,
-   "overlap": 6,
+   "words": 1351,
+   "density": 1.85,
+   "internal": 11,
+   "external": 2,
+   "faq": 7,
+   "overlap": 5,
    "checks": [
     {
      "group": "Judul",
@@ -16103,7 +16103,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 9
+    "count": 14
    }
   },
   {
