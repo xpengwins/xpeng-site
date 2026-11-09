@@ -546,6 +546,18 @@
       "tag": "h2"
      },
      {
+      "t": "Fitur",
+      "tag": "span"
+     },
+     {
+      "t": "Kursi Zero Gravity XPeng G9L: Rebah Datar 1,8 Meter",
+      "tag": "h3"
+     },
+     {
+      "t": "Kursi zero gravity XPeng G9L depan dan belakang bisa rebah bersamaan hingga ruang datar lebih dari 1,8 meter. Pahami konsep, manfaat, dan batasannya.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L",
       "tag": "span"
      },
@@ -628,10 +640,6 @@
      {
       "t": "XPeng G9L EREV memakai baterai 63,3 kWh dan mesin 1.5 turbo sebagai pembangkit, jarak gabungan 1.602 km. Pahami cara kerja, kelebihan, dan batasannya.",
       "tag": "p"
-     },
-     {
-      "t": "Fitur",
-      "tag": "span"
      },
      {
       "t": "Interior XPeng G9L: Kursi Rebah, Kulkas, Layar 21,4 Inci",
@@ -971,6 +979,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-kabin-kulit-cokelat.webp",
+      "alt": "Xpengwins Xpeng G9L ilustrasi kabin kulit cokelat untuk kursi zero gravity"
+     },
      {
       "src": "/assets/img/xpeng-g9l-paris-motor-show-reveal.webp",
       "alt": "Xpengwins Xpeng G9L ilustrasi panggung Paris Motor Show 2026 dengan Menara Eiffel"
