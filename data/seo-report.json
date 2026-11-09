@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T04:09:16.781Z",
+ "generated": "2026-11-09T04:11:20.986Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -5043,12 +5043,12 @@
    "keyword": "harga mobil listrik",
    "score": 100,
    "grade": "A",
-   "words": 923,
+   "words": 1228,
    "density": 1.95,
-   "internal": 10,
-   "external": 2,
-   "faq": 4,
-   "overlap": 6,
+   "internal": 16,
+   "external": 3,
+   "faq": 6,
+   "overlap": 5,
    "checks": [
     {
      "group": "Judul",
@@ -6520,7 +6520,7 @@
    "internal": 7,
    "external": 11,
    "faq": 9,
-   "overlap": 2,
+   "overlap": 3,
    "checks": [
     {
      "group": "Judul",
@@ -16059,7 +16059,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 19
+    "count": 23
    }
   },
   {
