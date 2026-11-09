@@ -116,6 +116,15 @@
    "statusBad": [],
    "bad": 0,
    "warn": 0
+  },
+  {
+   "date": "2026-11-09",
+   "at": "2026-11-09T03:18:12.101Z",
+   "pages": 59,
+   "ok": 59,
+   "statusBad": [],
+   "bad": 0,
+   "warn": 0
   }
  ],
  "ext": {
@@ -202,7 +211,7 @@
   "https://auto2000.co.id/berita-dan-tips/biaya-charge-mobil-listrik-di-spklu": {
    "s": 200,
    "err": "",
-   "at": 1793892412332
+   "at": 1794194290302
   },
   "https://en.wikipedia.org/wiki/XPeng_G9L": {
    "s": 200,
@@ -222,17 +231,17 @@
   "https://listrikindonesia.com/detail/16065/spesifikasi-lengkap-xpeng-x9-mobil-listrik-premium-untuk-keluarga": {
    "s": 200,
    "err": "",
-   "at": 1793892412332
+   "at": 1794194290302
   },
   "https://cnevpost.com/2026/08/11/xpeng-starts-g9l-pre-sales/": {
    "s": 200,
    "err": "",
-   "at": 1793892412332
+   "at": 1794194290302
   },
   "https://autonews.gasgoo.com/articles/ev/xpeng-g9l-goes-on-sale-with-bev-reev-powertrains-2100932123174563841": {
    "s": 200,
    "err": "",
-   "at": 1793892412332
+   "at": 1794194290302
   },
   "https://moladin.com/news/xpeng-indonesia-catat-tren-positif-di-2025-dan-siapkan-model-fresh-di-iims-2026/": {
    "s": 200,
@@ -265,10 +274,10 @@
    "at": 1794064257721
   }
  },
- "generated": "2026-11-08T15:09:25.325Z",
+ "generated": "2026-11-09T03:18:12.101Z",
  "latest": {
-  "date": "2026-11-08",
-  "at": "2026-11-08T15:09:25.325Z",
+  "date": "2026-11-09",
+  "at": "2026-11-09T03:18:12.101Z",
   "pages": 59,
   "ok": 59,
   "statusBad": [],

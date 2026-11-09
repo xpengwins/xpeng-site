@@ -864,71 +864,140 @@
    "issues": [
     "perf:/"
    ]
+  },
+  {
+   "date": "2026-11-09",
+   "at": "2026-11-09T03:18:07.162Z",
+   "urls": 59,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 45,
+   "pages": {
+    "/": {
+     "score": 76,
+     "lcp": 5787,
+     "cls": 0,
+     "tbt": 8,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 81,
+     "lcp": 5133,
+     "cls": 0,
+     "tbt": 25,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 99,
+     "lcp": 1962,
+     "cls": 0,
+     "tbt": 48,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 84,
+     "lcp": 4215,
+     "cls": 0,
+     "tbt": 153,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 905,
+     "cls": 0,
+     "tbt": 22,
+     "field": null
+    },
+    "/artikel/xpeng-g9l-paris-motor-show/": {
+     "score": 100,
+     "lcp": 1673,
+     "cls": 0.008,
+     "tbt": 26,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "drop:/model/xpeng-x9/",
+    "perf:/pricelist/",
+    "drop:/pricelist/"
+   ]
   }
  ],
- "generated": "2026-11-08T15:09:20.823Z",
+ "generated": "2026-11-09T03:18:07.162Z",
  "latest": {
-  "date": "2026-11-08",
-  "at": "2026-11-08T15:09:20.823Z",
+  "date": "2026-11-09",
+  "at": "2026-11-09T03:18:07.162Z",
   "urls": 59,
   "errors": 0,
   "slow": 0,
-  "avgMs": 115,
+  "avgMs": 45,
   "pages": {
    "/": {
-    "score": 77,
-    "lcp": 5837,
+    "score": 76,
+    "lcp": 5787,
     "cls": 0,
-    "tbt": 36,
+    "tbt": 8,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 1975,
-    "cls": 0,
-    "tbt": 9,
-    "field": null
-   },
-   "/model/xpeng-g6/": {
-    "score": 100,
-    "lcp": 1374,
+    "score": 81,
+    "lcp": 5133,
     "cls": 0,
     "tbt": 25,
     "field": null
    },
-   "/pricelist/": {
+   "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1515,
+    "lcp": 1962,
     "cls": 0,
-    "tbt": 97,
+    "tbt": 48,
+    "field": null
+   },
+   "/pricelist/": {
+    "score": 84,
+    "lcp": 4215,
+    "cls": 0,
+    "tbt": 153,
     "field": null
    },
    "/kontak/": {
-    "score": 99,
+    "score": 100,
     "lcp": 905,
     "cls": 0,
-    "tbt": 118,
+    "tbt": 22,
     "field": null
    },
    "/artikel/xpeng-g9l-paris-motor-show/": {
-    "score": 99,
-    "lcp": 1672,
+    "score": 100,
+    "lcp": 1673,
     "cls": 0.008,
-    "tbt": 103,
+    "tbt": 26,
     "field": null
    }
   },
   "issues": [
-   "perf:/"
+   "perf:/",
+   "perf:/model/xpeng-x9/",
+   "drop:/model/xpeng-x9/",
+   "perf:/pricelist/",
+   "drop:/pricelist/"
   ],
   "issueText": [
-   "🔴 /: skor 77, LCP 5.8 dtk"
+   "🔴 /: skor 76, LCP 5.8 dtk",
+   "🔴 /model/xpeng-x9/: LCP 5.1 dtk",
+   "📉 /model/xpeng-x9/ turun 99 → 81 sejak pengecekan sebelumnya (melambat)",
+   "🔴 /pricelist/: LCP 4.2 dtk",
+   "📉 /pricelist/ turun 99 → 84 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
   "perf:/model/xpeng-x9/",
-  "drop:/model/xpeng-x9/"
+  "drop:/model/xpeng-x9/",
+  "perf:/pricelist/",
+  "drop:/pricelist/"
  ],
- "alertSig": "drop:/model/xpeng-x9/|perf:/|perf:/model/xpeng-x9/"
+ "alertSig": "drop:/model/xpeng-x9/|drop:/pricelist/|perf:/|perf:/model/xpeng-x9/|perf:/pricelist/"
 }

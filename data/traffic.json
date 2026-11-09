@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-08T15:09:25.377Z",
+ "generated": "2026-11-09T03:18:12.149Z",
  "property": "560653996",
  "today": {
-  "users": 34,
-  "sessions": 38,
-  "views": 80,
-  "newUsers": 33
+  "users": 3,
+  "sessions": 3,
+  "views": 5,
+  "newUsers": 2
  },
  "yesterday": {
-  "users": 35,
-  "sessions": 41,
-  "views": 51,
-  "newUsers": 33
+  "users": 36,
+  "sessions": 44,
+  "views": 88,
+  "newUsers": 35
  },
  "last7": {
-  "users": 262,
-  "sessions": 322,
-  "views": 561,
-  "newUsers": 256
+  "users": 213,
+  "sessions": 265,
+  "views": 494,
+  "newUsers": 210
  },
  "last30": {
-  "users": 1093,
-  "sessions": 1256,
-  "views": 2070,
-  "newUsers": 1114
+  "users": 1097,
+  "sessions": 1265,
+  "views": 2083,
+  "newUsers": 1118
  },
  "prev30": {
   "users": 0,
@@ -118,31 +118,37 @@
   },
   {
    "date": "2026-11-08",
-   "users": 34,
-   "sessions": 38,
-   "views": 80
+   "users": 36,
+   "sessions": 44,
+   "views": 88
+  },
+  {
+   "date": "2026-11-09",
+   "users": 3,
+   "sessions": 3,
+   "views": 5
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 900,
-   "users": 584
+   "views": 907,
+   "users": 585
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 251,
-   "users": 152
+   "views": 253,
+   "users": 153
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 187,
+   "views": 188,
    "users": 87
   },
   {
    "path": "/pricelist/",
-   "views": 184,
-   "users": 149
+   "views": 186,
+   "users": 151
   },
   {
    "path": "/model/",
@@ -161,8 +167,8 @@
   },
   {
    "path": "/artikel/",
-   "views": 24,
-   "users": 15
+   "views": 25,
+   "users": 16
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
@@ -182,7 +188,7 @@
   },
   {
    "k": "Paid Search",
-   "v": 414
+   "v": 418
   },
   {
    "k": "Organic Social",
@@ -190,11 +196,11 @@
   },
   {
    "k": "Direct",
-   "v": 111
+   "v": 112
   },
   {
    "k": "Referral",
-   "v": 74
+   "v": 78
   },
   {
    "k": "Organic Search",
@@ -202,7 +208,7 @@
   },
   {
    "k": "Unassigned",
-   "v": 9
+   "v": 10
   },
   {
    "k": "Cross-network",
@@ -212,7 +218,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1007
+   "v": 1016
   },
   {
    "k": "desktop",
@@ -226,11 +232,11 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 511
+   "v": 512
   },
   {
    "k": "Tangerang",
-   "v": 67
+   "v": 68
   },
   {
    "k": "South Tangerang",
