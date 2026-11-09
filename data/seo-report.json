@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T03:01:14.118Z",
+ "generated": "2026-11-09T03:41:47.223Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -5411,12 +5411,12 @@
    "keyword": "xpeng g6 vs hyundai ioniq 5",
    "score": 100,
    "grade": "A",
-   "words": 870,
-   "density": 0.69,
-   "internal": 8,
-   "external": 1,
-   "faq": 4,
-   "overlap": 15,
+   "words": 1469,
+   "density": 1.23,
+   "internal": 14,
+   "external": 2,
+   "faq": 9,
+   "overlap": 11,
    "checks": [
     {
      "group": "Judul",
@@ -5600,7 +5600,7 @@
    "internal": 7,
    "external": 1,
    "faq": 4,
-   "overlap": 14,
+   "overlap": 15,
    "checks": [
     {
      "group": "Judul",
@@ -6336,7 +6336,7 @@
    "internal": 8,
    "external": 2,
    "faq": 4,
-   "overlap": 11,
+   "overlap": 12,
    "checks": [
     {
      "group": "Judul",
@@ -16081,7 +16081,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 9
+    "count": 11
    }
   },
   {
