@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T03:18:53.407Z",
+ "generated": "2026-11-09T15:27:19.775Z",
  "traffic": {
   "periode": [
    "2026-10-10",
@@ -175,9 +175,9 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 49,
-  "terjadwal": 14,
-  "terbitBerikutnya": "2026-11-09T12:00:00+07:00",
+  "terbit": 51,
+  "terjadwal": 12,
+  "terbitBerikutnya": "2026-11-10T12:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
@@ -186,11 +186,9 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 76, LCP 5.8 dtk",
-    "🔴 /model/xpeng-x9/: LCP 5.1 dtk",
-    "📉 /model/xpeng-x9/ turun 99 → 81 sejak pengecekan sebelumnya (melambat)",
-    "🔴 /pricelist/: LCP 4.2 dtk",
-    "📉 /pricelist/ turun 99 → 84 sejak pengecekan sebelumnya (melambat)"
+    "🔴 /: skor 71, LCP 6.4 dtk, TBT 210 ms",
+    "🔴 /model/xpeng-g6/: skor 79, LCP 5.2 dtk",
+    "📉 /model/xpeng-g6/ turun 100 → 79 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [

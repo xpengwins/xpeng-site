@@ -119,9 +119,9 @@
   },
   {
    "date": "2026-11-09",
-   "at": "2026-11-09T03:18:12.101Z",
-   "pages": 59,
-   "ok": 59,
+   "at": "2026-11-09T15:27:07.227Z",
+   "pages": 61,
+   "ok": 61,
    "statusBad": [],
    "bad": 0,
    "warn": 0
@@ -131,82 +131,82 @@
   "https://lynk.id/xpengwins": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-7950664/ini-yang-bikin-xpeng-x9-beda-dari-denza-d9-toyota-alphard": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1793978037718
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
   },
   "https://listrikindonesia.com/detail/17066/xpeng-g6-alternatif-suv-listrik-dengan-kemudahan-parkir": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-8509176/6-spesifikasi-ev-yang-wajib-dicek-sebelum-beli-mobil-listrik": {
-   "s": 200,
-   "err": "",
-   "at": 1793978037718
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-7973511/spesifikasi-xpeng-x9-yang-dijual-lebih-tinggi-dari-denza-d9-di-indonesia": {
-   "s": 200,
-   "err": "",
-   "at": 1793978037718
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
   },
   "https://moladin.com/news/otr-denza-d9-juni-2026/": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://moladin.com/news/spesifikasi-hyundai-ioniq-5/": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-7776327/byd-sealion-7-mengaspal-di-iims-2025-segini-harganya": {
-   "s": 200,
-   "err": "",
-   "at": 1793978037718
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-8451945/pajak-mobil-motor-listrik-tak-gratis-lagi-tapi-ada-insentif-jadi-lebih-murah": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://pajakku.com/artikel/kendaraan-listrik-di-jakarta-tetap-bebas-pajak-ini-rinciannya": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://ortax.org/pemprov-dki-jakarta-pertahankan-pembebasan-pajak-kendaraan-listrik": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil-listrik/d-8613301/wacana-mobil-listrik-kena-pajak-tahunan-sempat-dibatalkan-kini-muncul-lagi": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1793978037718
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
   },
   "https://www.autofun.co.id/berita/dari-startup-jadi-raksasa-ev-xpeng-tunjukkan-taji-di-pasar-global-477390": {
    "s": 403,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://oto.detik.com/mobil/d-8488470/alphard-versi-murah-vs-denza-d9-ternyata-ini-yang-lebih-laris": {
-   "s": 200,
-   "err": "",
-   "at": 1793978037718
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
   },
   "https://cnevpost.com/2025/07/24/xpeng-begins-production-indonesia/": {
    "s": 200,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://www.autofun.co.id/berita/xpeng-x9-dan-g6-bakal-dirakit-di-indonesia-begini-spesifikasi-lengkapnya-84116": {
    "s": 403,
    "err": "",
-   "at": 1793978037718
+   "at": 1794237999474
   },
   "https://auto2000.co.id/berita-dan-tips/biaya-charge-mobil-listrik-di-spklu": {
    "s": 200,
@@ -272,14 +272,94 @@
    "s": 200,
    "err": "",
    "at": 1794064257721
+  },
+  "https://www.medcom.id/otomotif/mobil/4baOM2BK-xpeng-x9-pro-terlalu-royal-demi-nama-kemewahan-dan-kenyamanan": {
+   "s": 502,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://www.zigwheels.co.id/motovaganza/xpeng-x9-penantang-serius-di-kelas-mpv-listrik-premium-indonesia/": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://bapenda.jakarta.go.id/artikel/pajak-kendaraan-listrik-tak-lagi-gratis-pemprov-dki-tetap-beri-keringanan": {
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
+  },
+  "https://otomotifnet.gridoto.com/read/234377766/resmi-dki-jakarta-membatalkan-rencana-pajak-tahunan-kendaraan-listrik-terbaru-2026": {
+   "s": 202,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://oto.detik.com/mobil-listrik/d-8608173/alasan-dprd-dki-usul-mobil-listrik-kena-pajak-tahunan": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://www.liputan6.com/otomotif/read/6320532/aturan-baru-pajak-mobil-listrik-2026-dki-jakarta-cari-solusi-jabar-tegas-tarik-pajak": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://jateng.idntimes.com/news/jawa-tengah/status-pajak-kendaraan-listrik-jateng-2026-tetap-nol-persen-00-2m8jx-1hy6kx": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://jatim.jpnn.com/jatim-terkini/49050/mobil-listrik-di-jatim-tembus-17-persen-bapenda-ungkap-alasan-pajaknya-masih-dibebaskan": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://news.ddtc.co.id/berita/nasional/1820265/ppn-dtp-kendaraan-listrik-belum-dirilis-airlangga-masih-dikaji-ulang": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://otodriver.com/komparasi/2026/komparasi-spesifikasi-mg-s6-vs-byd-sealion-7-vs-xpeng-g6-komeffgbgg6": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://auto2000.co.id/dealer-toyota/jakarta-pusat/auto2000sudirman/sales-advisor/agung-jaya-00063808/berita-dan-tips/harga-alphard-hybrid-termurah-jakarta-pusat": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://auto.katadata.co.id/car/the-price-of-the-hyundai-ioniq-5-increased-by-rp-81-million-in-mid-january-2026-22971": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://jateng.antaranews.com/berita/490080/hmid-genjot-produksi-ioniq-5-untuk-urai-antrean-yang-panjang": {
+   "s": 200,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://industri.kontan.co.id/news/harga-mobil-ev-impor-bisa-naik-30-usai-insentif-cbu-dihentikan-2026": {
+   "s": 403,
+   "err": "",
+   "at": 1794237999474
+  },
+  "https://oto.detik.com/mobil-listrik/d-8124944/harga-mobil-listrik-impor-diprediksi-naik-30-usai-insentif-dicabut": {
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
+  },
+  "https://oto.detik.com/mobil-listrik/d-8555009/harga-mobil-listrik-termurah-juli-2026": {
+   "s": 0,
+   "err": "UND_ERR_CONNECT_TIMEOUT",
+   "at": 1794237999474
   }
  },
- "generated": "2026-11-09T03:18:12.101Z",
+ "generated": "2026-11-09T15:27:07.227Z",
  "latest": {
   "date": "2026-11-09",
-  "at": "2026-11-09T03:18:12.101Z",
-  "pages": 59,
-  "ok": 59,
+  "at": "2026-11-09T15:27:07.227Z",
+  "pages": 61,
+  "ok": 61,
   "statusBad": [],
   "bad": 0,
   "warn": 0,

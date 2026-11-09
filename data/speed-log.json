@@ -867,137 +867,129 @@
   },
   {
    "date": "2026-11-09",
-   "at": "2026-11-09T03:18:07.162Z",
-   "urls": 59,
+   "at": "2026-11-09T15:26:34.949Z",
+   "urls": 61,
    "errors": 0,
    "slow": 0,
-   "avgMs": 45,
+   "avgMs": 72,
    "pages": {
     "/": {
-     "score": 76,
-     "lcp": 5787,
+     "score": 71,
+     "lcp": 6418,
      "cls": 0,
-     "tbt": 8,
+     "tbt": 210,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 81,
-     "lcp": 5133,
+     "score": 99,
+     "lcp": 1979,
      "cls": 0,
-     "tbt": 25,
+     "tbt": 16,
      "field": null
     },
     "/model/xpeng-g6/": {
-     "score": 99,
-     "lcp": 1962,
+     "score": 79,
+     "lcp": 5209,
      "cls": 0,
-     "tbt": 48,
+     "tbt": 104,
      "field": null
     },
     "/pricelist/": {
-     "score": 84,
-     "lcp": 4215,
+     "score": 100,
+     "lcp": 1516,
      "cls": 0,
-     "tbt": 153,
+     "tbt": 55,
      "field": null
     },
     "/kontak/": {
      "score": 100,
      "lcp": 905,
      "cls": 0,
-     "tbt": 22,
+     "tbt": 60,
      "field": null
     },
-    "/artikel/xpeng-g9l-paris-motor-show/": {
-     "score": 100,
-     "lcp": 1673,
-     "cls": 0.008,
-     "tbt": 26,
+    "/artikel/kursi-zero-gravity-xpeng-g9l/": {
+     "score": 99,
+     "lcp": 905,
+     "cls": 0.081,
+     "tbt": 63,
      "field": null
     }
    },
    "issues": [
     "perf:/",
-    "perf:/model/xpeng-x9/",
-    "drop:/model/xpeng-x9/",
-    "perf:/pricelist/",
-    "drop:/pricelist/"
+    "perf:/model/xpeng-g6/",
+    "drop:/model/xpeng-g6/"
    ]
   }
  ],
- "generated": "2026-11-09T03:18:07.162Z",
+ "generated": "2026-11-09T15:26:34.949Z",
  "latest": {
   "date": "2026-11-09",
-  "at": "2026-11-09T03:18:07.162Z",
-  "urls": 59,
+  "at": "2026-11-09T15:26:34.949Z",
+  "urls": 61,
   "errors": 0,
   "slow": 0,
-  "avgMs": 45,
+  "avgMs": 72,
   "pages": {
    "/": {
-    "score": 76,
-    "lcp": 5787,
+    "score": 71,
+    "lcp": 6418,
     "cls": 0,
-    "tbt": 8,
+    "tbt": 210,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 81,
-    "lcp": 5133,
+    "score": 99,
+    "lcp": 1979,
     "cls": 0,
-    "tbt": 25,
+    "tbt": 16,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 99,
-    "lcp": 1962,
+    "score": 79,
+    "lcp": 5209,
     "cls": 0,
-    "tbt": 48,
+    "tbt": 104,
     "field": null
    },
    "/pricelist/": {
-    "score": 84,
-    "lcp": 4215,
+    "score": 100,
+    "lcp": 1516,
     "cls": 0,
-    "tbt": 153,
+    "tbt": 55,
     "field": null
    },
    "/kontak/": {
     "score": 100,
     "lcp": 905,
     "cls": 0,
-    "tbt": 22,
+    "tbt": 60,
     "field": null
    },
-   "/artikel/xpeng-g9l-paris-motor-show/": {
-    "score": 100,
-    "lcp": 1673,
-    "cls": 0.008,
-    "tbt": 26,
+   "/artikel/kursi-zero-gravity-xpeng-g9l/": {
+    "score": 99,
+    "lcp": 905,
+    "cls": 0.081,
+    "tbt": 63,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/model/xpeng-x9/",
-   "drop:/model/xpeng-x9/",
-   "perf:/pricelist/",
-   "drop:/pricelist/"
+   "perf:/model/xpeng-g6/",
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 5.8 dtk",
-   "🔴 /model/xpeng-x9/: LCP 5.1 dtk",
-   "📉 /model/xpeng-x9/ turun 99 → 81 sejak pengecekan sebelumnya (melambat)",
-   "🔴 /pricelist/: LCP 4.2 dtk",
-   "📉 /pricelist/ turun 99 → 84 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 71, LCP 6.4 dtk, TBT 210 ms",
+   "🔴 /model/xpeng-g6/: skor 79, LCP 5.2 dtk",
+   "📉 /model/xpeng-g6/ turun 100 → 79 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/model/xpeng-x9/",
-  "drop:/model/xpeng-x9/",
-  "perf:/pricelist/",
-  "drop:/pricelist/"
+  "perf:/model/xpeng-g6/",
+  "drop:/model/xpeng-g6/"
  ],
- "alertSig": "drop:/model/xpeng-x9/|drop:/pricelist/|perf:/|perf:/model/xpeng-x9/|perf:/pricelist/"
+ "alertSig": "drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/"
 }
