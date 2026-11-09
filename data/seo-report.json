@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T03:41:47.223Z",
+ "generated": "2026-11-09T03:44:35.571Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -7803,12 +7803,12 @@
    "keyword": "interior xpeng x9",
    "score": 100,
    "grade": "A",
-   "words": 803,
-   "density": 1.12,
-   "internal": 5,
-   "external": 1,
-   "faq": 4,
-   "overlap": 7,
+   "words": 1172,
+   "density": 1.02,
+   "internal": 8,
+   "external": 3,
+   "faq": 8,
+   "overlap": 5,
    "checks": [
     {
      "group": "Judul",
@@ -16202,7 +16202,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 12
+    "count": 14
    }
   },
   {
