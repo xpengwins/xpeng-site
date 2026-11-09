@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T03:50:48.882Z",
+ "generated": "2026-11-09T04:09:16.781Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -6515,12 +6515,12 @@
    "keyword": "pajak mobil listrik",
    "score": 100,
    "grade": "A",
-   "words": 806,
-   "density": 1.49,
-   "internal": 5,
-   "external": 4,
-   "faq": 4,
-   "overlap": 3,
+   "words": 1308,
+   "density": 1.61,
+   "internal": 7,
+   "external": 11,
+   "faq": 9,
+   "overlap": 2,
    "checks": [
     {
      "group": "Judul",
@@ -16147,7 +16147,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 14
+    "count": 19
    }
   },
   {
