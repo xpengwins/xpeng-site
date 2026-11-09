@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-09T03:44:35.571Z",
+ "generated": "2026-11-09T03:50:48.882Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -5416,7 +5416,7 @@
    "internal": 14,
    "external": 2,
    "faq": 9,
-   "overlap": 11,
+   "overlap": 13,
    "checks": [
     {
      "group": "Judul",
@@ -5595,12 +5595,12 @@
    "keyword": "xpeng g6 vs byd sealion 7",
    "score": 100,
    "grade": "A",
-   "words": 958,
-   "density": 0.63,
-   "internal": 7,
-   "external": 1,
-   "faq": 4,
-   "overlap": 15,
+   "words": 1338,
+   "density": 1.35,
+   "internal": 11,
+   "external": 2,
+   "faq": 8,
+   "overlap": 14,
    "checks": [
     {
      "group": "Judul",
@@ -6336,7 +6336,7 @@
    "internal": 8,
    "external": 2,
    "faq": 4,
-   "overlap": 12,
+   "overlap": 13,
    "checks": [
     {
      "group": "Judul",
@@ -7624,7 +7624,7 @@
    "internal": 7,
    "external": 1,
    "faq": 4,
-   "overlap": 6,
+   "overlap": 7,
    "checks": [
     {
      "group": "Judul",
@@ -16092,7 +16092,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 9
+    "count": 11
    }
   },
   {
