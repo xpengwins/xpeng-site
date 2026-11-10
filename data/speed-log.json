@@ -924,126 +924,123 @@
   },
   {
    "date": "2026-11-10",
-   "at": "2026-11-10T03:17:22.282Z",
-   "urls": 61,
+   "at": "2026-11-10T15:17:04.047Z",
+   "urls": 63,
    "errors": 0,
    "slow": 0,
-   "avgMs": 71,
+   "avgMs": 103,
    "pages": {
     "/": {
-     "score": 96,
-     "lcp": 2705,
+     "score": 79,
+     "lcp": 3754,
      "cls": 0,
-     "tbt": 32,
+     "tbt": 113,
      "field": null
     },
     "/model/xpeng-x9/": {
      "score": 99,
-     "lcp": 1976,
+     "lcp": 1982,
      "cls": 0,
-     "tbt": 32,
+     "tbt": 29,
      "field": null
     },
     "/model/xpeng-g6/": {
-     "score": 84,
-     "lcp": 4592,
+     "score": 99,
+     "lcp": 1975,
      "cls": 0,
-     "tbt": 43,
+     "tbt": 10,
      "field": null
     },
     "/pricelist/": {
-     "score": 86,
-     "lcp": 4166,
+     "score": 64,
+     "lcp": 4560,
      "cls": 0,
-     "tbt": 73,
+     "tbt": 776,
      "field": null
     },
     "/kontak/": {
      "score": 100,
-     "lcp": 905,
+     "lcp": 906,
      "cls": 0,
-     "tbt": 58,
+     "tbt": 59,
      "field": null
     },
-    "/artikel/kursi-zero-gravity-xpeng-g9l/": {
-     "score": 99,
-     "lcp": 905,
-     "cls": 0.081,
-     "tbt": 40,
+    "/artikel/suspensi-udara-xpeng-g9l/": {
+     "score": 100,
+     "lcp": 1510,
+     "cls": 0,
+     "tbt": 15,
      "field": null
     }
    },
    "issues": [
     "perf:/",
-    "perf:/model/xpeng-g6/",
     "perf:/pricelist/",
     "drop:/pricelist/"
    ]
   }
  ],
- "generated": "2026-11-10T03:17:22.282Z",
+ "generated": "2026-11-10T15:17:04.047Z",
  "latest": {
   "date": "2026-11-10",
-  "at": "2026-11-10T03:17:22.282Z",
-  "urls": 61,
+  "at": "2026-11-10T15:17:04.047Z",
+  "urls": 63,
   "errors": 0,
   "slow": 0,
-  "avgMs": 71,
+  "avgMs": 103,
   "pages": {
    "/": {
-    "score": 96,
-    "lcp": 2705,
+    "score": 79,
+    "lcp": 3754,
     "cls": 0,
-    "tbt": 32,
+    "tbt": 113,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1976,
+    "lcp": 1982,
     "cls": 0,
-    "tbt": 32,
+    "tbt": 29,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 84,
-    "lcp": 4592,
+    "score": 99,
+    "lcp": 1975,
     "cls": 0,
-    "tbt": 43,
+    "tbt": 10,
     "field": null
    },
    "/pricelist/": {
-    "score": 86,
-    "lcp": 4166,
+    "score": 64,
+    "lcp": 4560,
     "cls": 0,
-    "tbt": 73,
+    "tbt": 776,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 905,
+    "lcp": 906,
     "cls": 0,
-    "tbt": 58,
+    "tbt": 59,
     "field": null
    },
-   "/artikel/kursi-zero-gravity-xpeng-g9l/": {
-    "score": 99,
-    "lcp": 905,
-    "cls": 0.081,
-    "tbt": 40,
+   "/artikel/suspensi-udara-xpeng-g9l/": {
+    "score": 100,
+    "lcp": 1510,
+    "cls": 0,
+    "tbt": 15,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/model/xpeng-g6/",
    "perf:/pricelist/",
    "drop:/pricelist/"
   ],
   "issueText": [
-   "🟠 /: LCP 2.7 dtk",
-   "🔴 /model/xpeng-g6/: LCP 4.6 dtk",
-   "🔴 /pricelist/: LCP 4.2 dtk",
-   "📉 /pricelist/ turun 100 → 86 sejak pengecekan sebelumnya (melambat)"
+   "🟠 /: skor 79, LCP 3.8 dtk",
+   "🔴 /pricelist/: skor 64, LCP 4.6 dtk, TBT 776 ms",
+   "📉 /pricelist/ turun 100 → 64 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [

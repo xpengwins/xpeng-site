@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-10T03:17:33.347Z",
+ "generated": "2026-11-10T15:17:14.524Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 5,
-    "media": 62
+    "media": 66
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-09T13:17:45+0000",
+   "last": "2026-11-10T12:07:56+0000",
    "top": [
     {
+     "url": "https://www.instagram.com/p/Dfj3rW0Dd7A/",
+     "eng": 0
+    },
+    {
+     "url": "https://www.instagram.com/p/DfjNfXoCX-6/",
+     "eng": 0
+    },
+    {
      "url": "https://www.instagram.com/p/Dfha3tfjUq-/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfhMtruNWt-/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/DfhLtrqlF1B/",
      "eng": 0
     }
    ],
@@ -53,35 +53,25 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 21,
-   "last": "2026-11-09T13:18:06+0000",
+   "avgReachRecent": 18,
+   "last": "2026-11-10T12:08:17+0000",
    "top": [
     {
+     "url": "https://www.threads.com/@xpengwins/post/Dfj3suGEawW",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DfjNgscFROn",
+     "eng": 0
+    },
+    {
      "url": "https://www.threads.com/@xpengwins/post/Dfha5QAFgyA",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfhMu0WgU4d",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfhLuZ_FB7n",
      "eng": 0
     }
    ],
    "extra": {}
   }
  },
- "issues": [
-  "❗ Threads (gagal): gambar JPG belum tayang di situs setelah 6 menit",
-  "❗ Instagram (gagal): gambar JPG belum tayang di situs setelah 6 menit",
-  "❗ Facebook (gagal): gambar JPG belum tayang di situs setelah 6 menit",
-  "❗ Threads (gagal): gambar Threads belum tayang, pakai persegi"
- ],
- "alertKeys": [
-  "gagal:threads:gambar JPG belum tayang di situs setelah",
-  "gagal:instagram:gambar JPG belum tayang di situs setelah",
-  "gagal:facebook:gambar JPG belum tayang di situs setelah",
-  "gagal:threads:gambar Threads belum tayang, pakai perse"
- ]
+ "issues": [],
+ "alertKeys": []
 }
