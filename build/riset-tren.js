@@ -13,6 +13,7 @@
    Aman: sumber yang gagal dilewati, error tidak menggagalkan workflow, tanpa secret tetap jalan.
    Uji tanpa internet: RISET_FIXTURE=folder_contoh node build/riset-tren.js  (RISET_DRY=1 = tanpa menulis file) */
 const fs = require('fs'), path = require('path');
+const FUN = require('./funnel.js');
 const ROOT = path.join(__dirname, '..'), D = f => path.join(ROOT, 'data', f);
 const E = process.env, DRY = E.RISET_DRY === '1', FIX = E.RISET_FIXTURE || '', FORCE = E.RISET_FORCE === '1';
 const TG = { tok: E.TELEGRAM_BOT_TOKEN, chat: E.TELEGRAM_CHAT_ID };
@@ -186,6 +187,7 @@ async function suggestItems() {
       c.risiko = r;
       const dasar = c.jenis === 'pencarian' ? 'Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan.' : c.jenis === 'tren' ? 'Terbitkan cepat (topik naik) dengan sudut yang membantu calon pembeli.' : 'Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data.';
       c.saranSudut = dasar + (c.kelompok === 'luas' ? ' Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.' : ' Hubungkan ke model XPeng yang relevan.');
+      { const fs_ = FUN.stage(c); c.funnel = fs_; c.strategiFunnel = FUN.INFO[fs_].label + ' (' + FUN.INFO[fs_].nama + '). ' + FUN.INFO[fs_].tujuan + ' ' + FUN.INFO[fs_].cta; }
       picked.push(c);
     });
 

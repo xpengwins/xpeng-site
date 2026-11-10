@@ -4,6 +4,7 @@
    Aman: platform tanpa secret dilewati. Token tidak pernah dicetak. Error tidak menggagalkan workflow.
    Uji tanpa kirim apa pun: SOCIAL_DRY=1 node build/social.js */
 const fs = require('fs'), path = require('path'), { execSync } = require('child_process');
+const FUN = require('./funnel.js');
 const ROOT = path.join(__dirname, '..'), D = f => path.join(ROOT, 'data', f);
 const E = process.env, DRY = E.SOCIAL_DRY === '1', CI = !!E.GITHUB_ACTIONS;
 const GRAPH = E.GRAPH_BASE || 'https://graph.facebook.com/' + (E.GRAPH_VERSION || 'v25.0'), THR = E.THREADS_BASE || 'https://graph.threads.net/v1.0', TGAPI = E.TG_BASE || 'https://api.telegram.org';
@@ -54,15 +55,22 @@ function gitPush(msg) {
 }
 
 /* ---------- teks per platform ---------- */
-function texts(a, url, cfg) {
-  const tags = (cfg.hashtags || '#XPeng #MobilListrik').trim(), desc = (a.description || '').trim();
-  const fb = a.title + '\n\n' + desc + '\n\nBaca selengkapnya: ' + url + '\n\n' + tags;
-  const ig = a.title + '\n\n' + desc + '\n\nArtikel lengkap: buka link di bio.\n\n' + tags;
-  const th = d => a.title + '\n\n' + d + '\n\n' + url + '\n' + tags;
+function texts(a, url, cfg, wa) {
+  const st = FUN.stage(a), w = 'https://wa.me/' + (wa || ''), wn = wa ? '+' + String(wa).replace(/^(\d{2})(\d{3})(\d{4})(\d+)$/, '$1 $2-$3-$4') : '';
+  /* ajakan (CTA) mengikuti tahap funnel: TOFU = edukasi, MOFU = menimbang, BOFU = siap beli */
+  const C = {
+    tofu: { hook: 'Biar tidak salah pilih, pahami dulu dasarnya.', fb: 'Baca selengkapnya: ' + url, ig: 'Baca selengkapnya: buka link di bio.', th: url, tag: ' #TipsMobilListrik #EdukasiEV' },
+    mofu: { hook: 'Lagi menimbang? Ini perbandingan dan datanya.', fb: 'Lihat perbandingan lengkapnya: ' + url + '\n\nButuh bantuan memilih? Chat konsultan kami: ' + w, ig: 'Lihat perbandingan lengkapnya: buka link di bio.\nButuh bantuan memilih? Chat WhatsApp ' + wn + '.', th: url + '\nChat konsultan: ' + w, tag: ' #BandingkanMobil #SUVListrik' },
+    bofu: { hook: 'Siap lanjut? Cek harga, promo, dan langkah berikutnya.', fb: 'Detail lengkap: ' + url + '\n\nTanya harga, promo, dan jadwal test drive via WhatsApp: ' + w, ig: 'Detail lengkap: buka link di bio.\nTanya harga, promo, dan test drive via WhatsApp ' + wn + '.', th: url + '\nTanya harga dan test drive: ' + w, tag: ' #TestDriveXPeng #PromoXPeng' }
+  }[st];
+  const tags = ((cfg.hashtags || '#XPeng #MobilListrik').trim() + C.tag).split(/\s+/).filter((x, i, r) => r.indexOf(x) === i).join(' '), desc = (a.description || '').trim();
+  const fb = a.title + '\n\n' + desc + '\n\n' + C.hook + '\n' + C.fb + '\n\n' + tags;
+  const ig = a.title + '\n\n' + desc + '\n\n' + C.hook + '\n' + C.ig + '\n\n' + tags;
+  const th = d => a.title + '\n\n' + d + '\n\n' + C.th + '\n' + tags;
   let d = desc, t = th(d);
   if (t.length > 490) { const over = t.length - 490; d = desc.slice(0, Math.max(0, desc.length - over - 1)).replace(/\s+\S*$/, '') + '…'; t = th(d); }
-  const tg = '📣 <b>' + esc(a.title) + '</b>\n\n' + esc(desc) + '\n\n' + esc(url);
-  return { fb: fb.slice(0, 5000), ig: ig.slice(0, 2200), th: t.slice(0, 500), tg };
+  const tg = '📣 <b>' + esc(a.title) + '</b> [' + FUN.INFO[st].label + ']\n\n' + esc(desc) + '\n\n' + esc(url);
+  return { fb: fb.slice(0, 5000), ig: ig.slice(0, 2200), th: t.slice(0, 500), tg, stage: st };
 }
 
 /* ---------- gambar JPG persegi untuk Instagram/Threads/Facebook (WebP tidak diterima Instagram) ---------- */
@@ -207,7 +215,7 @@ function cleanImages(arts, cfg, keep) {
       const a = j.a, rec = (posted[a.slug] = posted[a.slug] || {}), link = origin + '/artikel/' + a.slug + '/';
       const live = await waitLive(link, false);
       if (!live) { [...j.plats].forEach(p => note(a.slug, p, false, 'halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya')); continue; }
-      const img = imgs[a.slug], t = texts(a, link, cfg);
+      const img = imgs[a.slug], t = texts(a, link, cfg, site.whatsapp);
       let imgTh = thImgs[a.slug] || null;
       if (imgTh && !(await waitLive(imgTh, true))) { note(a.slug, 'threads', false, 'gambar Threads belum tayang, pakai persegi'); imgTh = null; }
       if (img && [...j.plats].some(p => p !== 'telegram') && !(await waitLive(img, true))) { [...j.plats].filter(p => p !== 'telegram').forEach(p => note(a.slug, p, false, 'gambar JPG belum tayang di situs setelah 6 menit')); j.plats = new Set(['telegram'].filter(p => j.plats.has(p))); }
@@ -218,7 +226,7 @@ function cleanImages(arts, cfg, keep) {
         try {
           if (DRY) { console.log('[DRY] ' + p + ' <- ' + a.slug + '\n' + (p === 'facebook' ? t.fb : p === 'instagram' ? t.ig : p === 'threads' ? t.th : t.tg) + '\n'); continue; }
           const id = await SEND[p](a, { img, imgTh: p === 'threads' ? imgTh : null, t });
-          rec[p] = { id: String(id || ''), at: new Date().toISOString() }; if (rec._f) delete rec._f[p];
+          rec[p] = { id: String(id || ''), at: new Date().toISOString(), funnel: t.stage }; if (rec._f) delete rec._f[p];
           note(a.slug, p, true, 'terkirim');
         } catch (e) {
           if (!j.manual) { rec._f = rec._f || {}; rec._f[p] = (rec._f[p] || 0) + 1; }
