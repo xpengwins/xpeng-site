@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-09T15:27:07.275Z",
+ "generated": "2026-11-10T03:17:26.949Z",
  "property": "560653996",
  "today": {
-  "users": 24,
-  "sessions": 31,
-  "views": 52,
-  "newUsers": 23
+  "users": 4,
+  "sessions": 4,
+  "views": 5,
+  "newUsers": 4
  },
  "yesterday": {
   "users": 36,
   "sessions": 44,
-  "views": 88,
+  "views": 68,
   "newUsers": 35
  },
  "last7": {
-  "users": 234,
-  "sessions": 293,
-  "views": 541,
-  "newUsers": 231
+  "users": 212,
+  "sessions": 262,
+  "views": 436,
+  "newUsers": 209
  },
  "last30": {
-  "users": 1118,
-  "sessions": 1292,
-  "views": 2130,
-  "newUsers": 1139
+  "users": 1134,
+  "sessions": 1310,
+  "views": 2151,
+  "newUsers": 1155
  },
  "prev30": {
   "users": 0,
@@ -124,31 +124,37 @@
   },
   {
    "date": "2026-11-09",
-   "users": 24,
-   "sessions": 31,
-   "views": 52
+   "users": 36,
+   "sessions": 44,
+   "views": 68
+  },
+  {
+   "date": "2026-11-10",
+   "users": 4,
+   "sessions": 4,
+   "views": 5
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 920,
-   "users": 591
+   "views": 924,
+   "users": 595
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 257,
-   "users": 155
+   "views": 258,
+   "users": 156
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 195,
-   "users": 91
+   "views": 199,
+   "users": 95
   },
   {
    "path": "/pricelist/",
-   "views": 192,
-   "users": 156
+   "views": 193,
+   "users": 157
   },
   {
    "path": "/model/",
@@ -167,8 +173,8 @@
   },
   {
    "path": "/artikel/",
-   "views": 28,
-   "users": 18
+   "views": 29,
+   "users": 19
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
@@ -184,7 +190,7 @@
  "channels": [
   {
    "k": "Paid Search",
-   "v": 431
+   "v": 436
   },
   {
    "k": "Paid Social",
@@ -192,11 +198,11 @@
   },
   {
    "k": "Organic Social",
-   "v": 177
+   "v": 185
   },
   {
    "k": "Direct",
-   "v": 114
+   "v": 116
   },
   {
    "k": "Referral",
@@ -204,7 +210,7 @@
   },
   {
    "k": "Organic Search",
-   "v": 53
+   "v": 55
   },
   {
    "k": "Unassigned",
@@ -218,21 +224,21 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1033
+   "v": 1044
   },
   {
    "k": "desktop",
-   "v": 245
+   "v": 249
   },
   {
    "k": "tablet",
-   "v": 14
+   "v": 16
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 525
+   "v": 530
   },
   {
    "k": "Tangerang",
@@ -248,7 +254,7 @@
   },
   {
    "k": "Boardman",
-   "v": 47
+   "v": 50
   },
   {
    "k": "Prineville",
