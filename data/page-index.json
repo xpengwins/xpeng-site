@@ -546,6 +546,18 @@
       "tag": "h2"
      },
      {
+      "t": "Teknologi",
+      "tag": "span"
+     },
+     {
+      "t": "Suspensi Udara Mobil XPeng G9L: Empuk Tapi Stabil?",
+      "tag": "h3"
+     },
+     {
+      "t": "Suspensi udara mobil XPeng G9L memakai dua ruang udara dan peredam variabel, standar semua varian. Pahami cara kerja, manfaat, dan risikonya di jalan Indonesia.",
+      "tag": "p"
+     },
+     {
       "t": "Fitur",
       "tag": "span"
      },
@@ -584,10 +596,6 @@
      {
       "t": "Harga XPeng G9L Eropa 74.600 Euro: Berapa Rupiahnya?",
       "tag": "h3"
-     },
-     {
-      "t": "Teknologi",
-      "tag": "span"
      },
      {
       "t": "VLA XPeng di G9L: Otak AI yang Mengerti Jalan",
@@ -983,6 +991,10 @@
      }
     ],
     "imgs": [
+     {
+      "src": "/assets/img/g9l-velg-percikan-air.webp",
+      "alt": "Xpengwins Xpeng G9L detail roda dan bodi bawah untuk pembahasan suspensi udara"
+     },
      {
       "src": "/assets/img/g9l-kabin-kulit-cokelat.webp",
       "alt": "Xpengwins Xpeng G9L ilustrasi kabin kulit cokelat untuk kursi zero gravity"
