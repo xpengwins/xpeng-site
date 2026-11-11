@@ -270,7 +270,7 @@ section.prebook.pbwide .pb{grid-template-columns:1fr}section.prebook .pbb{margin
 .mgrid .mcard.soon>a{display:block}
 .mgrid .mimg{width:100%;height:auto;min-height:0;aspect-ratio:3/2}
 .mgrid.mtop{gap:26px;margin:8px 0 26px}
-.mgrid.mtop .mcard.soon .mimg{aspect-ratio:4/3}
+.mgrid.mtop .mcard.soon .mimg{aspect-ratio:960/596;object-fit:contain;background:#0b0f12}
 .mgrid.mtop .mcard.soon .mbody{padding:30px 28px 28px}
 .mgrid.mtop .mcard.soon h3{font-size:clamp(1.5rem,2.6vw,2.2rem)}
 .mgrid.mtop .mcard.soon .mprice{font-size:clamp(1.7rem,3vw,2.6rem);overflow-wrap:anywhere}
