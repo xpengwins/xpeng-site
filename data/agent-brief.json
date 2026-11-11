@@ -1,12 +1,12 @@
 {
- "generated": "2026-11-10T15:17:21.411Z",
+ "generated": "2026-11-11T03:22:14.307Z",
  "traffic": {
   "periode": [
-   "2026-10-11",
-   "2026-11-07"
+   "2026-10-12",
+   "2026-11-08"
   ],
-  "klik": 28,
-  "tayang": 767,
+  "klik": 30,
+  "tayang": 863,
   "posisi": 9.1,
   "perubahanKlik": null,
   "perubahanTayang": null,
@@ -53,7 +53,7 @@
   {
    "kataKunci": "xpeng g9l harga",
    "halaman": "/artikel/xpeng-g9l-vs-xpeng-g6/",
-   "tayang": 26,
+   "tayang": 36,
    "posisi": 10.6,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
@@ -179,9 +179,9 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🟠 /: skor 79, LCP 3.8 dtk",
-    "🔴 /pricelist/: skor 64, LCP 4.6 dtk, TBT 776 ms",
-    "📉 /pricelist/ turun 100 → 64 sejak pengecekan sebelumnya (melambat)"
+    "🔴 /: skor 77, LCP 5.9 dtk",
+    "🔴 /model/xpeng-g6/: LCP 5.2 dtk",
+    "📉 /model/xpeng-g6/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [],

@@ -978,76 +978,132 @@
     "perf:/pricelist/",
     "drop:/pricelist/"
    ]
+  },
+  {
+   "date": "2026-11-11",
+   "at": "2026-11-11T03:21:56.417Z",
+   "urls": 72,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 46,
+   "pages": {
+    "/": {
+     "score": 77,
+     "lcp": 5915,
+     "cls": 0,
+     "tbt": 56,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 99,
+     "lcp": 1975,
+     "cls": 0,
+     "tbt": 43,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 80,
+     "lcp": 5228,
+     "cls": 0,
+     "tbt": 96,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0,
+     "tbt": 10,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 907,
+     "cls": 0,
+     "tbt": 40,
+     "field": null
+    },
+    "/artikel/suspensi-udara-xpeng-g9l/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0.014,
+     "tbt": 18,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-g6/",
+    "drop:/model/xpeng-g6/"
+   ]
   }
  ],
- "generated": "2026-11-10T15:17:04.047Z",
+ "generated": "2026-11-11T03:21:56.417Z",
  "latest": {
-  "date": "2026-11-10",
-  "at": "2026-11-10T15:17:04.047Z",
-  "urls": 63,
+  "date": "2026-11-11",
+  "at": "2026-11-11T03:21:56.417Z",
+  "urls": 72,
   "errors": 0,
   "slow": 0,
-  "avgMs": 103,
+  "avgMs": 46,
   "pages": {
    "/": {
-    "score": 79,
-    "lcp": 3754,
+    "score": 77,
+    "lcp": 5915,
     "cls": 0,
-    "tbt": 113,
+    "tbt": 56,
     "field": null
    },
    "/model/xpeng-x9/": {
     "score": 99,
-    "lcp": 1982,
+    "lcp": 1975,
     "cls": 0,
-    "tbt": 29,
+    "tbt": 43,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 99,
-    "lcp": 1975,
+    "score": 80,
+    "lcp": 5228,
+    "cls": 0,
+    "tbt": 96,
+    "field": null
+   },
+   "/pricelist/": {
+    "score": 100,
+    "lcp": 1508,
     "cls": 0,
     "tbt": 10,
     "field": null
    },
-   "/pricelist/": {
-    "score": 64,
-    "lcp": 4560,
-    "cls": 0,
-    "tbt": 776,
-    "field": null
-   },
    "/kontak/": {
     "score": 100,
-    "lcp": 906,
+    "lcp": 907,
     "cls": 0,
-    "tbt": 59,
+    "tbt": 40,
     "field": null
    },
    "/artikel/suspensi-udara-xpeng-g9l/": {
     "score": 100,
-    "lcp": 1510,
-    "cls": 0,
-    "tbt": 15,
+    "lcp": 1508,
+    "cls": 0.014,
+    "tbt": 18,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/pricelist/",
-   "drop:/pricelist/"
+   "perf:/model/xpeng-g6/",
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🟠 /: skor 79, LCP 3.8 dtk",
-   "🔴 /pricelist/: skor 64, LCP 4.6 dtk, TBT 776 ms",
-   "📉 /pricelist/ turun 100 → 64 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 77, LCP 5.9 dtk",
+   "🔴 /model/xpeng-g6/: LCP 5.2 dtk",
+   "📉 /model/xpeng-g6/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
   "perf:/model/xpeng-g6/",
-  "perf:/pricelist/",
-  "drop:/pricelist/"
+  "drop:/model/xpeng-g6/"
  ],
- "alertSig": "drop:/pricelist/|perf:/|perf:/model/xpeng-g6/|perf:/pricelist/"
+ "alertSig": "drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/"
 }

@@ -134,6 +134,15 @@
    "statusBad": [],
    "bad": 0,
    "warn": 0
+  },
+  {
+   "date": "2026-11-11",
+   "at": "2026-11-11T03:22:04.439Z",
+   "pages": 72,
+   "ok": 72,
+   "statusBad": [],
+   "bad": 0,
+   "warn": 0
   }
  ],
  "ext": {
@@ -225,17 +234,17 @@
   "https://en.wikipedia.org/wiki/XPeng_G9L": {
    "s": 200,
    "err": "",
-   "at": 1794108013938
+   "at": 1794367319608
   },
   "https://cnevpost.com/2026/09/17/xpeng-launches-g9l-china/": {
    "s": 200,
    "err": "",
-   "at": 1794108013938
+   "at": 1794367319608
   },
   "https://www.kabarbursa.com/otomotif/xpeng-g9l-dibanderol-rp149-miliar-bawa-kabin-7-penumpang": {
    "s": 200,
    "err": "",
-   "at": 1794108013938
+   "at": 1794367319608
   },
   "https://listrikindonesia.com/detail/16065/spesifikasi-lengkap-xpeng-x9-mobil-listrik-premium-untuk-keluarga": {
    "s": 200,
@@ -363,12 +372,12 @@
    "at": 1794237999474
   }
  },
- "generated": "2026-11-10T15:17:10.219Z",
+ "generated": "2026-11-11T03:22:04.439Z",
  "latest": {
-  "date": "2026-11-10",
-  "at": "2026-11-10T15:17:10.219Z",
-  "pages": 63,
-  "ok": 63,
+  "date": "2026-11-11",
+  "at": "2026-11-11T03:22:04.439Z",
+  "pages": 72,
+  "ok": 72,
   "statusBad": [],
   "bad": 0,
   "warn": 0,
