@@ -8,8 +8,9 @@
   ],
   "pemicu": "Setelah XPeng mengumumkan G9L untuk Indonesia",
   "tenggat": "",
-  "status": "buka",
-  "dibuat": "2026-10-31"
+  "status": "selesai",
+  "dibuat": "2026-10-31",
+  "selesai": "2026-11-11"
  },
  {
   "id": "g9l-03",
@@ -20,8 +21,9 @@
   ],
   "pemicu": "Setelah harga G9L Indonesia diumumkan",
   "tenggat": "",
-  "status": "buka",
-  "dibuat": "2026-10-31"
+  "status": "selesai",
+  "dibuat": "2026-10-31",
+  "selesai": "2026-11-11"
  },
  {
   "id": "g9l-04",
@@ -32,8 +34,9 @@
   ],
   "pemicu": "Setelah pengumuman resmi Indonesia",
   "tenggat": "",
-  "status": "buka",
-  "dibuat": "2026-10-31"
+  "status": "selesai",
+  "dibuat": "2026-10-31",
+  "selesai": "2026-11-11"
  },
  {
   "id": "g9l-12",

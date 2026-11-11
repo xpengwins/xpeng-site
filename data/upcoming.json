@@ -1,15 +1,32 @@
 [
  {
-  "status": "soon",
-  "name": "XPeng G9L",
+  "status": "booking",
+  "name": "XPeng G9L Ultra AWD",
   "type": "SUV Listrik Flagship",
-  "tagline": "AI • Future • Mobility",
-  "badge": "Segera Launching",
-  "text": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
+  "tagline": "Drive Further, Live Bigger",
+  "badge": "Baru Launching",
+  "text": "SUV listrik flagship XPeng resmi diluncurkan di Jakarta pada 11 November 2026. Booking sekarang, tim kami bantu unit, simulasi cicilan, dan jadwal test drive.",
   "hero": "assets/img/emerald-suv-breaking-through-water.webp",
-  "card": "assets/img/xpeng-g9l-paris-motor-show-reveal.webp",
-  "priceText": "XXX",
-  "cta": "OPEN PREBOOK SEKARANG!!!",
-  "wa": "Halo, saya mau prebook XPeng G9L"
+  "card": "assets/img/g9l-ultra-awd-card.webp",
+  "banner": "assets/img/g9l-ultra-awd-booking.webp",
+  "bannerAlt": "XPeng G9L Ultra AWD hijau di Jakarta, peluncuran 11 November 2026, harga OTR Jakarta Rp 1.289.000.000",
+  "priceText": "1.289.000.000",
+  "cta": "BOOKING SEKARANG",
+  "wa": "Halo, saya mau booking XPeng G9L Ultra AWD"
+ },
+ {
+  "status": "booking",
+  "name": "XPeng X9 Long Range AWD",
+  "type": "MPV Listrik Premium 7 Kursi",
+  "tagline": "Physical AI For All",
+  "badge": "Baru Launching",
+  "text": "Varian terbaru XPeng X9 Long Range AWD diluncurkan di Jakarta pada 11 November 2026. Booking sekarang, tim kami bantu unit, simulasi cicilan, dan jadwal test drive.",
+  "hero": "assets/img/226028.webp",
+  "card": "assets/img/x9-long-range-awd-card.webp",
+  "banner": "assets/img/x9-long-range-awd-booking.webp",
+  "bannerAlt": "XPeng X9 Long Range AWD putih di Jakarta, peluncuran 11 November 2026, harga OTR Jakarta Rp 1.339.000.000",
+  "priceText": "1.339.000.000",
+  "cta": "BOOKING SEKARANG",
+  "wa": "Halo, saya mau booking XPeng X9 Long Range AWD"
  }
 ]
