@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T05:01:44.383Z",
+ "generated": "2026-11-11T05:05:21.079Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
@@ -10540,7 +10540,7 @@
    "keyword": "xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 853,
+   "words": 858,
    "density": 0.7,
    "internal": 14,
    "external": 5,
@@ -10724,12 +10724,12 @@
    "keyword": "spesifikasi xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 827,
-   "density": 0.73,
-   "internal": 10,
+   "words": 985,
+   "density": 0.61,
+   "internal": 9,
    "external": 5,
    "faq": 4,
-   "overlap": 9,
+   "overlap": 10,
    "checks": [
     {
      "group": "Judul",
@@ -11092,8 +11092,8 @@
    "keyword": "xpeng g9l indonesia",
    "score": 100,
    "grade": "A",
-   "words": 845,
-   "density": 1.42,
+   "words": 866,
+   "density": 1.39,
    "internal": 12,
    "external": 4,
    "faq": 4,
@@ -11276,12 +11276,12 @@
    "keyword": "jarak tempuh xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 818,
-   "density": 1.47,
-   "internal": 6,
+   "words": 879,
+   "density": 1.37,
+   "internal": 5,
    "external": 5,
    "faq": 4,
-   "overlap": 6,
+   "overlap": 8,
    "checks": [
     {
      "group": "Judul",
@@ -11460,12 +11460,12 @@
    "keyword": "charging xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 810,
-   "density": 0.74,
+   "words": 900,
+   "density": 0.67,
    "internal": 8,
    "external": 3,
    "faq": 4,
-   "overlap": 4,
+   "overlap": 6,
    "checks": [
     {
      "group": "Judul",
@@ -11649,7 +11649,7 @@
    "internal": 8,
    "external": 4,
    "faq": 4,
-   "overlap": 5,
+   "overlap": 4,
    "checks": [
     {
      "group": "Judul",
@@ -11828,8 +11828,8 @@
    "keyword": "interior xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 814,
-   "density": 1.11,
+   "words": 889,
+   "density": 1.35,
    "internal": 12,
    "external": 3,
    "faq": 4,
@@ -12012,12 +12012,12 @@
    "keyword": "xpeng g9l vs x9",
    "score": 100,
    "grade": "A",
-   "words": 838,
-   "density": 0.95,
+   "words": 853,
+   "density": 0.94,
    "internal": 12,
    "external": 3,
    "faq": 4,
-   "overlap": 9,
+   "overlap": 10,
    "checks": [
     {
      "group": "Judul",
@@ -12196,12 +12196,12 @@
    "keyword": "xpeng g9l vs g6",
    "score": 100,
    "grade": "A",
-   "words": 825,
-   "density": 0.97,
+   "words": 841,
+   "density": 0.95,
    "internal": 14,
    "external": 3,
    "faq": 4,
-   "overlap": 9,
+   "overlap": 10,
    "checks": [
     {
      "group": "Judul",
@@ -12380,12 +12380,12 @@
    "keyword": "dimensi xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 890,
-   "density": 1.35,
+   "words": 957,
+   "density": 1.25,
    "internal": 9,
    "external": 4,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 10,
    "checks": [
     {
      "group": "Judul",
@@ -12564,12 +12564,12 @@
    "keyword": "xpeng g9l 7 seater",
    "score": 100,
    "grade": "A",
-   "words": 820,
-   "density": 0.98,
+   "words": 854,
+   "density": 0.94,
    "internal": 11,
    "external": 3,
    "faq": 4,
-   "overlap": 7,
+   "overlap": 8,
    "checks": [
     {
      "group": "Judul",
@@ -14588,12 +14588,12 @@
    "keyword": "warna xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 836,
-   "density": 0.72,
+   "words": 858,
+   "density": 0.7,
    "internal": 7,
    "external": 2,
    "faq": 4,
-   "overlap": 3,
+   "overlap": 5,
    "checks": [
     {
      "group": "Judul",
@@ -14772,7 +14772,7 @@
    "keyword": "suv listrik keluarga",
    "score": 100,
    "grade": "A",
-   "words": 843,
+   "words": 846,
    "density": 1.42,
    "internal": 17,
    "external": 3,
@@ -15692,12 +15692,12 @@
    "keyword": "apa itu xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 819,
-   "density": 0.98,
+   "words": 828,
+   "density": 0.97,
    "internal": 15,
    "external": 5,
    "faq": 4,
-   "overlap": 16,
+   "overlap": 15,
    "checks": [
     {
      "group": "Judul",
@@ -16703,7 +16703,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 10
+    "count": 9
    }
   },
   {
@@ -16739,7 +16739,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 12
+    "count": 11
    }
   },
   {
@@ -16775,7 +16775,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 13
+    "count": 15
    }
   },
   {
