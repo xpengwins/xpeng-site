@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-11T02:25:36.441Z",
+ "generated": "2026-11-11T05:01:44.383Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 63,
+  "pages": 64,
   "total": 100
  },
  "tech": [
@@ -666,6 +666,75 @@
   },
   {
    "url": "/model/xpeng-g6/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/suv-listrik-flagship-2026/",
    "score": 100,
    "checks": [
     {
@@ -10471,8 +10540,8 @@
    "keyword": "xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 807,
-   "density": 0.74,
+   "words": 853,
+   "density": 0.7,
    "internal": 14,
    "external": 5,
    "faq": 4,
@@ -10655,8 +10724,8 @@
    "keyword": "spesifikasi xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 816,
-   "density": 0.74,
+   "words": 827,
+   "density": 0.73,
    "internal": 10,
    "external": 5,
    "faq": 4,
@@ -10839,8 +10908,8 @@
    "keyword": "harga xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 813,
-   "density": 1.48,
+   "words": 843,
+   "density": 1.42,
    "internal": 8,
    "external": 4,
    "faq": 4,
@@ -11023,12 +11092,12 @@
    "keyword": "xpeng g9l indonesia",
    "score": 100,
    "grade": "A",
-   "words": 835,
-   "density": 1.44,
+   "words": 845,
+   "density": 1.42,
    "internal": 12,
    "external": 4,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 9,
    "checks": [
     {
      "group": "Judul",
@@ -11207,8 +11276,8 @@
    "keyword": "jarak tempuh xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 808,
-   "density": 1.49,
+   "words": 818,
+   "density": 1.47,
    "internal": 6,
    "external": 5,
    "faq": 4,
@@ -11759,7 +11828,7 @@
    "keyword": "interior xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 812,
+   "words": 814,
    "density": 1.11,
    "internal": 12,
    "external": 3,
@@ -11943,12 +12012,12 @@
    "keyword": "xpeng g9l vs x9",
    "score": 100,
    "grade": "A",
-   "words": 803,
-   "density": 1,
+   "words": 838,
+   "density": 0.95,
    "internal": 12,
    "external": 3,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 9,
    "checks": [
     {
      "group": "Judul",
@@ -12127,12 +12196,12 @@
    "keyword": "xpeng g9l vs g6",
    "score": 100,
    "grade": "A",
-   "words": 803,
-   "density": 1,
+   "words": 825,
+   "density": 0.97,
    "internal": 14,
    "external": 3,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 9,
    "checks": [
     {
      "group": "Judul",
@@ -12311,7 +12380,7 @@
    "keyword": "dimensi xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 888,
+   "words": 890,
    "density": 1.35,
    "internal": 9,
    "external": 4,
@@ -12495,12 +12564,12 @@
    "keyword": "xpeng g9l 7 seater",
    "score": 100,
    "grade": "A",
-   "words": 801,
-   "density": 1,
+   "words": 820,
+   "density": 0.98,
    "internal": 11,
    "external": 3,
    "faq": 4,
-   "overlap": 6,
+   "overlap": 7,
    "checks": [
     {
      "group": "Judul",
@@ -13047,8 +13116,8 @@
    "keyword": "g9l paris motor show",
    "score": 100,
    "grade": "A",
-   "words": 808,
-   "density": 1.49,
+   "words": 829,
+   "density": 1.45,
    "internal": 10,
    "external": 5,
    "faq": 4,
@@ -13231,12 +13300,12 @@
    "keyword": "harga xpeng g9l eropa",
    "score": 100,
    "grade": "A",
-   "words": 825,
-   "density": 0.97,
+   "words": 833,
+   "density": 0.96,
    "internal": 8,
    "external": 4,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 9,
    "checks": [
     {
      "group": "Judul",
@@ -14147,16 +14216,16 @@
   {
    "slug": "suv-listrik-flagship-2026",
    "title": "SUV Listrik Flagship 2026: Kriteria dan Sosok G9L",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "suv listrik flagship",
    "score": 100,
    "grade": "A",
-   "words": 807,
-   "density": 1.49,
+   "words": 810,
+   "density": 1.48,
    "internal": 11,
    "external": 5,
    "faq": 4,
-   "overlap": 7,
+   "overlap": 8,
    "checks": [
     {
      "group": "Judul",
@@ -14335,12 +14404,12 @@
    "keyword": "mobil listrik terbaru",
    "score": 100,
    "grade": "A",
-   "words": 841,
-   "density": 1.43,
+   "words": 864,
+   "density": 1.39,
    "internal": 14,
    "external": 3,
    "faq": 4,
-   "overlap": 8,
+   "overlap": 9,
    "checks": [
     {
      "group": "Judul",
@@ -14519,7 +14588,7 @@
    "keyword": "warna xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 835,
+   "words": 836,
    "density": 0.72,
    "internal": 7,
    "external": 2,
@@ -14703,8 +14772,8 @@
    "keyword": "suv listrik keluarga",
    "score": 100,
    "grade": "A",
-   "words": 823,
-   "density": 1.46,
+   "words": 843,
+   "density": 1.42,
    "internal": 17,
    "external": 3,
    "faq": 4,
@@ -14892,7 +14961,7 @@
    "internal": 9,
    "external": 6,
    "faq": 4,
-   "overlap": 7,
+   "overlap": 6,
    "checks": [
     {
      "group": "Judul",
@@ -15255,12 +15324,12 @@
    "keyword": "prebook xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 815,
-   "density": 0.74,
+   "words": 840,
+   "density": 0.71,
    "internal": 11,
    "external": 2,
    "faq": 4,
-   "overlap": 6,
+   "overlap": 7,
    "checks": [
     {
      "group": "Judul",
@@ -15623,12 +15692,12 @@
    "keyword": "apa itu xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 813,
+   "words": 819,
    "density": 0.98,
    "internal": 15,
    "external": 5,
    "faq": 4,
-   "overlap": 15,
+   "overlap": 16,
    "checks": [
     {
      "group": "Judul",
@@ -15807,12 +15876,12 @@
    "keyword": "kelebihan dan kekurangan xpeng g9l",
    "score": 100,
    "grade": "A",
-   "words": 821,
-   "density": 1.22,
+   "words": 842,
+   "density": 1.19,
    "internal": 18,
    "external": 5,
    "faq": 4,
-   "overlap": 7,
+   "overlap": 8,
    "checks": [
     {
      "group": "Judul",
@@ -16622,7 +16691,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 25
+    "count": 23
    }
   },
   {
@@ -16658,7 +16727,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 11
+    "count": 12
    }
   },
   {
@@ -16860,9 +16929,9 @@
    "position": null,
    "note": "Seri G9L, terbit 2026-11-11",
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 15
    }
   },
   {

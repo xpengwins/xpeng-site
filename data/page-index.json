@@ -4,28 +4,44 @@
   "sections": [
    {
     "key": "hero",
-    "title": "XPeng G9L",
+    "title": "XPeng G9L Ultra AWD",
     "hasH1": true,
     "texts": [
      {
-      "t": "Segera Launching",
+      "t": "Baru Launching",
       "tag": "span"
      },
      {
-      "t": "XPeng G9L",
+      "t": "XPeng G9L Ultra AWD",
       "tag": "h2"
      },
      {
-      "t": "AI • Future • Mobility",
+      "t": "Drive Further, Live Bigger",
       "tag": "em"
      },
      {
-      "t": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
+      "t": "SUV listrik flagship XPeng resmi diluncurkan di Jakarta pada 11 November 2026. Booking sekarang, tim kami bantu unit, simulasi cicilan, dan jadwal test drive.",
       "tag": "p"
      },
      {
-      "t": "OPEN PREBOOK SEKARANG!!!",
+      "t": "OTR Jakarta",
+      "tag": "p"
+     },
+     {
+      "t": "BOOKING SEKARANG",
       "tag": "a"
+     },
+     {
+      "t": "XPeng X9 Long Range AWD",
+      "tag": "h2"
+     },
+     {
+      "t": "Physical AI For All",
+      "tag": "em"
+     },
+     {
+      "t": "Varian terbaru XPeng X9 Long Range AWD diluncurkan di Jakarta pada 11 November 2026. Booking sekarang, tim kami bantu unit, simulasi cicilan, dan jadwal test drive.",
+      "tag": "p"
      },
      {
       "t": "MPV Listrik Premium 7 Kursi",
@@ -67,7 +83,11 @@
     "imgs": [
      {
       "src": "/assets/img/emerald-suv-breaking-through-water.webp",
-      "alt": "XPeng G9L segera launching"
+      "alt": "XPeng G9L Ultra AWD sudah launching, booking sekarang"
+     },
+     {
+      "src": "/assets/img/226028.webp",
+      "alt": "XPeng X9 Long Range AWD sudah launching, booking sekarang"
      },
      {
       "src": "/assets/img/226028.webp",
@@ -80,36 +100,57 @@
     ]
    },
    {
-    "key": "open-prebook-xpeng-g9l-sekarang",
-    "title": "Open Prebook XPeng G9L Sekarang!",
+    "key": "booking-xpeng-g9l-ultra-awd-sekarang",
+    "title": "Booking XPeng G9L Ultra AWD Sekarang!",
     "hasH1": false,
     "texts": [
      {
-      "t": "Segera Launching",
+      "t": "Baru Launching",
       "tag": "span"
      },
      {
-      "t": "Open Prebook XPeng G9L Sekarang!",
+      "t": "Booking XPeng G9L Ultra AWD Sekarang!",
       "tag": "h2"
      },
      {
-      "t": "SUV listrik flagship XPeng segera hadir. Prebook sekarang, tim kami kabari info terbaru dan prioritas unit.",
-      "tag": "p"
-     },
-     {
-      "t": "OPEN PREBOOK SEKARANG!!!",
+      "t": "BOOKING SEKARANG",
       "tag": "a"
      }
     ],
     "imgs": [
      {
-      "src": "/assets/img/xpeng-g9l-paris-motor-show-reveal.webp",
-      "alt": "XPeng G9L tampak depan dan interior"
+      "src": "/assets/img/g9l-ultra-awd-booking.webp",
+      "alt": "XPeng G9L Ultra AWD hijau di Jakarta, peluncuran 11 November 2026, harga OTR Jakarta Rp 1.289.000.000"
      }
     ]
    },
    {
-    "key": "bagian-3",
+    "key": "booking-xpeng-x9-long-range-awd-sekarang",
+    "title": "Booking XPeng X9 Long Range AWD Sekarang!",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Baru Launching",
+      "tag": "span"
+     },
+     {
+      "t": "Booking XPeng X9 Long Range AWD Sekarang!",
+      "tag": "h2"
+     },
+     {
+      "t": "BOOKING SEKARANG",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/x9-long-range-awd-booking.webp",
+      "alt": "XPeng X9 Long Range AWD putih di Jakarta, peluncuran 11 November 2026, harga OTR Jakarta Rp 1.339.000.000"
+     }
+    ]
+   },
+   {
+    "key": "bagian-4",
     "title": "800V · Platform pengisian cepat · 8 th",
     "hasH1": false,
     "texts": [
@@ -158,7 +199,7 @@
       "tag": "h2"
      },
      {
-      "t": "Segera Launching",
+      "t": "Baru Launching",
       "tag": "span"
      },
      {
@@ -166,28 +207,32 @@
       "tag": "span"
      },
      {
-      "t": "XPeng G9L",
+      "t": "XPeng G9L Ultra AWD",
       "tag": "h3"
      },
      {
-      "t": "AI • Future • Mobility",
+      "t": "Drive Further, Live Bigger",
       "tag": "p"
      },
      {
-      "t": "Rp XXX",
-      "tag": "strong"
-     },
-     {
-      "t": "Harga resmi diumumkan saat launching",
+      "t": "Harga OTR Jakarta. Hubungi kami untuk konfirmasi",
       "tag": "small"
      },
      {
-      "t": "OPEN PREBOOK SEKARANG!!! →",
+      "t": "BOOKING SEKARANG →",
       "tag": "span"
      },
      {
       "t": "MPV Listrik Premium 7 Kursi",
       "tag": "span"
+     },
+     {
+      "t": "XPeng X9 Long Range AWD",
+      "tag": "h3"
+     },
+     {
+      "t": "Physical AI For All",
+      "tag": "p"
      },
      {
       "t": "XPeng X9",
@@ -216,8 +261,12 @@
     ],
     "imgs": [
      {
-      "src": "/assets/img/xpeng-g9l-paris-motor-show-reveal.webp",
-      "alt": "XPeng G9L - SUV Listrik Flagship"
+      "src": "/assets/img/g9l-ultra-awd-card.webp",
+      "alt": "XPeng G9L Ultra AWD - SUV Listrik Flagship"
+     },
+     {
+      "src": "/assets/img/x9-long-range-awd-card.webp",
+      "alt": "XPeng X9 Long Range AWD - MPV Listrik Premium 7 Kursi"
      },
      {
       "src": "/assets/img/226028.webp",
@@ -546,6 +595,18 @@
       "tag": "h2"
      },
      {
+      "t": "Panduan Beli",
+      "tag": "span"
+     },
+     {
+      "t": "SUV Listrik Flagship 2026: Kriteria dan Sosok G9L",
+      "tag": "h3"
+     },
+     {
+      "t": "Apa itu SUV listrik flagship dan bagaimana menilainya? Pahami kriteria ukuran, teknologi, kenyamanan, serta posisi XPeng G9L di kelas flagship 2026.",
+      "tag": "p"
+     },
+     {
       "t": "Teknologi",
       "tag": "span"
      },
@@ -668,10 +729,6 @@
      {
       "t": "Interior XPeng G9L menonjolkan kursi zero gravity yang rebah datar, layar belakang 21,4 inci, kulkas 12,5 liter, dan konsol eksekutif untuk penumpang.",
       "tag": "p"
-     },
-     {
-      "t": "Panduan Beli",
-      "tag": "span"
      },
      {
       "t": "Bengkel Rekanan XPeng Luar Kota: Servis Tetap Dekat",
@@ -1000,6 +1057,10 @@
     ],
     "imgs": [
      {
+      "src": "/assets/img/g9l-hero.webp",
+      "alt": "Xpengwins Xpeng G9L SUV listrik flagship menerjang air dengan bodi hijau zamrud"
+     },
+     {
       "src": "/assets/img/g9l-velg-percikan-air.webp",
       "alt": "Xpengwins Xpeng G9L detail roda dan bodi bawah untuk pembahasan suspensi udara"
      },
@@ -1275,12 +1336,12 @@
     "imgs": []
    },
    {
-    "key": "segera-launching",
-    "title": "Segera Launching",
+    "key": "baru-launching",
+    "title": "Baru Launching",
     "hasH1": false,
     "texts": [
      {
-      "t": "Segera Launching",
+      "t": "Baru Launching",
       "tag": "span"
      },
      {
@@ -1288,30 +1349,42 @@
       "tag": "span"
      },
      {
-      "t": "XPeng G9L",
+      "t": "XPeng G9L Ultra AWD",
       "tag": "h3"
      },
      {
-      "t": "AI • Future • Mobility",
+      "t": "Drive Further, Live Bigger",
       "tag": "p"
      },
      {
-      "t": "Rp XXX",
-      "tag": "strong"
-     },
-     {
-      "t": "Harga resmi diumumkan saat launching",
+      "t": "Harga OTR Jakarta. Hubungi kami untuk konfirmasi",
       "tag": "small"
      },
      {
-      "t": "OPEN PREBOOK SEKARANG!!! →",
+      "t": "BOOKING SEKARANG →",
       "tag": "span"
+     },
+     {
+      "t": "MPV Listrik Premium 7 Kursi",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng X9 Long Range AWD",
+      "tag": "h3"
+     },
+     {
+      "t": "Physical AI For All",
+      "tag": "p"
      }
     ],
     "imgs": [
      {
-      "src": "/assets/img/xpeng-g9l-paris-motor-show-reveal.webp",
-      "alt": "XPeng G9L - SUV Listrik Flagship"
+      "src": "/assets/img/g9l-ultra-awd-card.webp",
+      "alt": "XPeng G9L Ultra AWD - SUV Listrik Flagship"
+     },
+     {
+      "src": "/assets/img/x9-long-range-awd-card.webp",
+      "alt": "XPeng X9 Long Range AWD - MPV Listrik Premium 7 Kursi"
      }
     ]
    },
@@ -1395,7 +1468,7 @@
     "hasH1": false,
     "texts": [
      {
-      "t": "Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda.",
+      "t": "Harga dapat berubah. Tanyakan rincian OTR sesuai kota Anda. *Harga OTR Jakarta untuk model yang baru launching, hubungi kami untuk konfirmasi.",
       "tag": "p"
      },
      {
