@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-11T13:13:11.552Z",
+  "slug": "mobil-listrik-terbaru-2026",
+  "platform": "threads",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-11T13:12:49.910Z",
+  "slug": "mobil-listrik-terbaru-2026",
+  "platform": "instagram",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
+  "at": "2026-11-11T13:12:39.254Z",
+  "slug": "mobil-listrik-terbaru-2026",
+  "platform": "facebook",
+  "ok": true,
+  "msg": "terkirim"
+ },
+ {
   "at": "2026-11-11T05:04:40.817Z",
   "slug": "suv-listrik-flagship-2026",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "threads",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-03T12:59:59.030Z",
-  "slug": "charging-5c-xpeng-g9l",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-03T12:59:59.029Z",
-  "slug": "charging-5c-xpeng-g9l",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-03T12:53:55.976Z",
-  "slug": "charging-5c-xpeng-g9l",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
  }
 ]
