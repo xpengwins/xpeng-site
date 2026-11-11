@@ -70,6 +70,14 @@ const orgLd = () => ({ '@context': 'https://schema.org', '@type': 'AutoDealer', 
 const crumbs = list => ({ '@context': 'https://schema.org', '@type': 'BreadcrumbList', itemListElement: list.map((c, i) => ({ '@type': 'ListItem', position: i + 1, name: c[0], item: abs(c[1]) })) });
 const faqLd = f => f && f.length ? { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity: f.map(x => ({ '@type': 'Question', name: x.q, acceptedAnswer: { '@type': 'Answer', text: x.a } })) } : null;
 
+/* ---------- bahasa: halaman utama punya versi Inggris di /en/ ---------- */
+const EN_RE = /^\/(model\/|model\/[^/]+\/|pricelist\/|kontak\/|tentang\/|tentang\/bengkel-rekanan-luar-kota\/|promo\/)?$/;
+const hasEn = p => EN_RE.test(p) && (p !== '/promo/' || promos.length > 0);
+const FLAG_ID = '<svg viewBox="0 0 60 40" width="30" height="20" aria-hidden="true" focusable="false"><rect width="60" height="20" fill="#e70011"/><rect y="20" width="60" height="20" fill="#fff"/></svg>';
+const FLAG_EN = '<svg viewBox="0 0 60 40" width="30" height="20" aria-hidden="true" focusable="false"><rect width="60" height="40" fill="#012169"/><path d="M0 0l60 40M60 0L0 40" stroke="#fff" stroke-width="8"/><path d="M0 0l60 40M60 0L0 40" stroke="#c8102e" stroke-width="3"/><path d="M30 0v40M0 20h60" stroke="#fff" stroke-width="13"/><path d="M30 0v40M0 20h60" stroke="#c8102e" stroke-width="8"/></svg>';
+const langSwitch = (p, cur) => `<div class="lang" role="group" aria-label="Language"><a class="lgf" href="${u(p)}" hreflang="id" lang="id" data-lang="id" title="Bahasa Indonesia" aria-label="Bahasa Indonesia"${cur === 'id' ? ' aria-current="true"' : ''}>${FLAG_ID}</a><a class="lgf" href="${u(hasEn(p) ? '/en' + (p === '/' ? '/' : p) : '/en/')}" hreflang="en" lang="en" data-lang="en" title="English" aria-label="English"${cur === 'en' ? ' aria-current="true"' : ''}>${FLAG_EN}</a></div>`;
+const alternates = p => hasEn(p) ? `<link rel="alternate" hreflang="id" href="${abs(p)}"><link rel="alternate" hreflang="en" href="${abs('/en' + p)}"><link rel="alternate" hreflang="x-default" href="${abs(p)}">\n` : '';
+
 function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'website', noindex }) {
   const img = abs(image || 'assets/img/g6-black-depan.webp');
   if (EDITABLE(p)) { try { const r = PL.process(p, body, PAGES_CFG[p] || {}, { esc: E, u }); body = r.html; PAGE_INDEX[p] = { label: title, sections: r.sections }; } catch (e) { console.log('Penyusun halaman dilewati untuk ' + p + ': ' + e.message); } }
@@ -80,7 +88,7 @@ function layout({ title, desc, path: p, h1, body, ld = [], image, type = 'websit
   const pm = body.match(/<img\b[^>]*\bsrc="([^"]+)"[^>]*\bfetchpriority="high"/), preload = pm ? `<link rel="preload" as="image" href="${pm[1]}" fetchpriority="high">\n` : '';
   return `<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 <title>${E(title)}</title><meta name="description" content="${E(desc)}">
-<link rel="canonical" href="${abs(p)}"><meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'}">
+<link rel="canonical" href="${abs(p)}">${alternates(p)}<meta name="robots" content="${noindex ? 'noindex,follow' : 'index,follow,max-image-preview:large'}">
 <meta name="theme-color" content="#0a0b0d"><link rel="icon" href="${u('assets/img/favicon.svg')}" type="image/svg+xml"><link rel="manifest" href="${u('manifest.webmanifest')}">
 <meta property="og:type" content="${type}"><meta property="og:title" content="${E(title)}"><meta property="og:description" content="${E(desc)}"><meta property="og:image" content="${img}"><meta property="og:url" content="${abs(p)}"><meta property="og:locale" content="id_ID"><meta property="og:site_name" content="${E(site.name)}">
 <meta name="twitter:card" content="summary_large_image">
@@ -91,7 +99,7 @@ ${/^G-[A-Z0-9]{6,14}$/.test(site.ga4 || '') && !noindex ? `<script>window.dataLa
 <a class="skip" href="#main">Lewati ke konten</a>
 <header class="site"><div class="wrap bar"><a class="brand" href="${u('/')}" aria-label="${E(site.name)} beranda"><img src="${u('assets/img/icon-white.svg')}" alt="" width="40" height="22"><span>XPENG</span></a>
 <nav id="nav" aria-label="Menu utama"><a href="${u('/')}"${p === '/' ? ' aria-current="page"' : ''}>Home</a><a href="${u('/model/')}">Model</a><a href="${u('/pricelist/')}">Pricelist</a><a href="${u('/promo/')}">Promo</a><a href="${u('/artikel/')}">Artikel</a>${bengkel.items.length ? `<div class="nd${/^\/tentang\//.test(p) ? ' cur' : ''}"><a href="${u('/tentang/')}"${p === '/tentang/' ? ' aria-current="page"' : ''}>Tentang</a><button type="button" class="ndb" aria-expanded="false" aria-label="Buka submenu Tentang"></button><div class="ndm"><a href="${u('/tentang/')}">Tentang Kami</a><a href="${u('/tentang/bengkel-rekanan-luar-kota/')}"${p === '/tentang/bengkel-rekanan-luar-kota/' ? ' aria-current="page"' : ''}>Bengkel Rekanan Luar Kota</a></div></div>` : `<a href="${u('/tentang/')}">Tentang</a>`}<a href="${u('/kontak/')}">Kontak</a></nav>
-<a class="btn sm" href="${wa('Halo, saya tertarik dengan XPeng. Boleh minta info?')}" rel="noopener">WhatsApp</a><button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button></div></header>
+${langSwitch(p, 'id')}<a class="btn sm" href="${wa('Halo, saya tertarik dengan XPeng. Boleh minta info?')}" rel="noopener">WhatsApp</a><button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button></div></header>
 <main id="main">${body}</main>
 <footer class="site"><div class="wrap fgrid"><div><img src="${u('assets/img/logo-white.svg')}" alt="XPeng" width="120" height="84" loading="lazy"><p>${E(site.tagline)}</p></div>
 <div><h2>Model</h2>${models.map(m => `<a href="${u('/model/' + m.slug + '/')}">${E(m.name)}</a>`).join('')}</div>
@@ -382,7 +390,7 @@ function promoDetail(p) {
     const hot = x => /rate\s*0\s*%/i.test(x) ? ' class="hot"' : '';
     const tr = rows.map((r, i) => `<tr>${r.map((x, c) => { if (c < 2 && i > 0 && same(r, rows[i - 1], c)) return ''; let rs = 1; if (c < 2) while (i + rs < rows.length && same(r, rows[i + rs], c)) rs++; return c === 0 ? `<th scope="rowgroup"${rs > 1 ? ` rowspan="${rs}"` : ''}>${E(x)}</th>` : `<td${rs > 1 ? ` rowspan="${rs}"` : ''}${hot(x)}>${c === 4 ? `<b>${E(x)}</b>` : E(x)}</td>`; }).join('')}</tr>`).join('');
     const groups = []; rows.forEach(r => { let g = groups[groups.length - 1]; if (!g || g.k !== r[0]) { g = { k: r[0], rows: [] }; groups.push(g); } g.rows.push(r); });
-    const mob = groups.map(g => `<div class="ptg"><h4>${E(g.k)}</h4>${g.rows.map(r => `<div class="ptr${/rate\s*0\s*%/i.test(r.join(' ')) ? ' hot' : ''}"><h5>${E(r[1])}${r[2] ? ' · ' + E(r[2]) : ''}</h5><dl>${r.slice(3).map((x, k) => x ? `<div><dt>${E(head[k + 3])}</dt><dd>${E(x)}</dd></div>` : '').join('')}</dl></div>`).join('')}</div>`).join('');
+    const mob = groups.map(g => `<div class="ptg"><h4>${E(g.k)}</h4>${g.rows.map(r => `<div class="ptr${/rate\s*0\s*%/i.test(r.join(' ')) ? ' hot' : ''}">${r[1] ? `<h5>${E(r[1])}${r[2] ? ' · ' + E(r[2]) : ''}</h5>` : ''}<dl>${r.slice(3).map((x, k) => x ? `<div><dt>${E(head[k + 3])}</dt><dd>${E(x)}</dd></div>` : '').join('')}</dl></div>`).join('')}</div>`).join('');
     html += `<div class="ptwrap"><h3>${E(p.tableTitle || 'Program yang berlaku')}</h3><div class="tbl spcmpw ptd"><table class="sptbl ptbl2"><thead><tr>${head.map(x => `<th scope="col">${E(x)}</th>`).join('')}</tr></thead><tbody>${tr}</tbody></table></div><div class="ptm">${mob}</div></div>`;
   }
   if (tl2.length) {
@@ -410,16 +418,39 @@ out['index.html'] = home(); out['model/index.html'] = modelIndex(); out['priceli
 out['artikel/index.html'] = articleIndex(); out['promo/index.html'] = promoPage(); out['404.html'] = notFound();
 models.forEach(m => out['model/' + m.slug + '/index.html'] = modelPage(m));
 articles.forEach(a => out['artikel/' + a.slug + '/index.html'] = articlePage(a));
+
+/* ---------- versi Inggris (/en/) dari halaman yang punya padanan ---------- */
+const I18N = require('./i18n.js'), outEn = {};
+(function () {
+  const keys = Object.keys(out).filter(f => f !== '404.html'), P = f => '/' + f.replace(/index\.html$/, '');
+  const enKeys = keys.filter(f => hasEn(P(f)));
+  const urlMap = {}; enKeys.forEach(f => { urlMap[abs(P(f))] = abs('/en' + P(f)); });
+  const rw = h => h.replace(/href="(\/[^"]*)"/g, (m, v) => { const rest = BASE && v.startsWith(BASE + '/') ? v.slice(BASE.length) : v, raw = rest.split(/[#?]/)[0]; return hasEn(raw) ? 'href="' + BASE + '/en' + rest + '"' : m; });
+  enKeys.forEach(f => {
+    const p = P(f); let h = out[f];
+    const sw = (h.match(/<div class="lang"[\s\S]*?<\/div>/) || [''])[0]; h = h.replace(sw, '\u0001');
+    h = I18N.toEn(h, { urlMap });
+    h = rw(h);
+    h = h.replace(/<a href="(\/artikel\/[^"\/]+\/)"/g, '<a lang="id" href="$1"');
+    h = h.replace('<html lang="id">', '<html lang="en">').replace('<link rel="canonical" href="' + abs(p) + '">', '<link rel="canonical" href="' + abs('/en' + p) + '">').replace('content="id_ID"', 'content="en_US"').replace('<meta property="og:url" content="' + abs(p) + '">', '<meta property="og:url" content="' + abs('/en' + p) + '">').replace('assets/js/app.js?', 'assets/js/app-en.js?');
+    h = h.replace('\u0001', sw.replace(' aria-current="true"', '').replace(/(data-lang="en"[^>]*?)(>)/, '$1 aria-current="true"$2'));
+    outEn['en/' + f] = h;
+  });
+})();
 // bersihkan folder hasil lama
-['model', 'artikel', 'pricelist', 'kontak', 'tentang', 'promo'].forEach(d => fs.rmSync(path.join(ROOT, d), { recursive: true, force: true }));
-Object.entries(out).forEach(([f, h]) => { const fp = path.join(ROOT, f); fs.mkdirSync(path.dirname(fp), { recursive: true }); fs.writeFileSync(fp, h); });
+['model', 'artikel', 'pricelist', 'kontak', 'tentang', 'promo', 'en'].forEach(d => fs.rmSync(path.join(ROOT, d), { recursive: true, force: true }));
+Object.entries(Object.assign({}, out, outEn)).forEach(([f, h]) => { const fp = path.join(ROOT, f); fs.mkdirSync(path.dirname(fp), { recursive: true }); fs.writeFileSync(fp, h); });
 
 const today = new Date().toISOString().slice(0, 10);
 const urls = [['/', 1.0], ['/model/', .9], ['/pricelist/', .9], ['/artikel/', .7], ['/kontak/', .8], ['/tentang/', .7], ...(bengkel.items.length ? [['/tentang/bengkel-rekanan-luar-kota/', .6]] : []), ...(promos.length ? [['/promo/', .8]] : []), ...models.map(m => ['/model/' + m.slug + '/', .9]), ...articles.map(a => ['/artikel/' + a.slug + '/', .7, String(a.updated || a.date || '').slice(0, 10)])];
-fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.map(([p, pr, lm]) => `<url><loc>${abs(p)}</loc><lastmod>${lm || today}</lastmod><priority>${pr}</priority></url>`).join('\n')}\n</urlset>\n`);
+{ const alt = p => hasEn(p) ? `<xhtml:link rel="alternate" hreflang="id" href="${abs(p)}"/><xhtml:link rel="alternate" hreflang="en" href="${abs('/en' + p)}"/><xhtml:link rel="alternate" hreflang="x-default" href="${abs(p)}"/>` : '';
+  const rows = urls.flatMap(([p, pr, lm]) => [[p, pr, lm]].concat(hasEn(p) ? [['/en' + p, pr, lm, p]] : [])).map(([p, pr, lm, base]) => `<url><loc>${abs(p)}</loc><lastmod>${lm || today}</lastmod><priority>${pr}</priority>${alt(base || p)}</url>`);
+  fs.writeFileSync(path.join(ROOT, 'sitemap.xml'), `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">\n${rows.join('\n')}\n</urlset>\n`); }
 fs.writeFileSync(path.join(ROOT, 'robots.txt'), `User-agent: *\nAllow: /\nDisallow: ${BASE}/admin/\n\nUser-agent: GPTBot\nAllow: /\nUser-agent: ClaudeBot\nAllow: /\nUser-agent: PerplexityBot\nAllow: /\nUser-agent: Google-Extended\nAllow: /\n\nSitemap: ${abs('/sitemap.xml')}\n`);
 fs.writeFileSync(path.join(ROOT, 'llms.txt'), `# ${site.name}\n> ${site.description}\n\n## Model\n${models.map(m => `- [${m.name}](${abs('/model/' + m.slug + '/')}): ${m.tagline} Harga mulai ${rp(Math.min(...m.variants.map(v => v.price)))}`).join('\n')}\n\n## Harga\n- [Pricelist ${site.pricelistUpdate}](${abs('/pricelist/')}): ${models.flatMap(m => m.variants.map(v => v.name + ' ' + rp(v.price))).join('; ')}\n\n## Halaman\n- [Tentang kami](${abs('/tentang/')}): profil, lokasi, dan sejarah dealer\n${promos.length ? '- [Promo](' + abs('/promo/') + '): ' + promos.map(p => p.title).join('; ') + '\n' : ''}- [Kontak dan test drive](${abs('/kontak/')}): WhatsApp, telepon, email, media sosial\n\n## Artikel\n${articles.map(a => `- [${a.title}](${abs('/artikel/' + a.slug + '/')}): ${a.description}`).join('\n')}\n`);
 fs.writeFileSync(path.join(ROOT, 'manifest.webmanifest'), JSON.stringify({ name: site.name, short_name: 'XPeng', start_url: u('/'), display: 'standalone', background_color: '#0a0b0d', theme_color: '#0a0b0d', icons: [{ src: u('assets/img/favicon.svg'), sizes: 'any', type: 'image/svg+xml' }] }));
+/* JavaScript versi Inggris (obrolan, simulasi cicilan, pratinjau foto) */
+{ const r = I18N.jsEn(fs.readFileSync(path.join(ROOT, 'assets/js/app.js'), 'utf8')); fs.writeFileSync(path.join(ROOT, 'assets/js/app-en.js'), r.src); if (r.miss.length) console.log('i18n: ' + r.miss.length + ' teks JS di kamus tidak ditemukan di app.js'); console.log('i18n: ' + Object.keys(outEn).length + ' halaman Inggris, ' + I18N.saveMissing() + ' teks belum diterjemahkan'); }
 fs.writeFileSync(path.join(ROOT, '.nojekyll'), '');
 { const px = JSON.stringify(PAGE_INDEX, null, 1), pf = path.join(ROOT, 'data/page-index.json'); let old = ''; try { old = fs.readFileSync(pf, 'utf8'); } catch (e) {} if (old !== px) fs.writeFileSync(pf, px); }
 

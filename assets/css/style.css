@@ -251,3 +251,7 @@ img.px:not(.ok){background:linear-gradient(110deg,#14171d 30%,#23272f 50%,#14171
 .flx{margin-top:26px}
 .flx h3{margin-bottom:10px}
 @media(min-width:760px){.flgrid{grid-template-columns:repeat(4,1fr)}.flst strong{font-size:1.7rem}}
+
+/* pilihan bahasa (bendera) */
+.lang{display:flex;gap:8px;align-items:center;margin-left:4px}.lang .lgf{display:block;width:30px;height:20px;border-radius:4px;overflow:hidden;opacity:.5;outline:1px solid #ffffff40;outline-offset:1px;transition:.2s;line-height:0}.lang .lgf svg{display:block;width:100%;height:100%}.lang .lgf:hover{opacity:.9}.lang .lgf[aria-current]{opacity:1;outline:2px solid var(--ac);outline-offset:2px}
+@media(max-width:560px){.lang{gap:6px}.lang .lgf{width:26px;height:18px}.bar{gap:10px}}
