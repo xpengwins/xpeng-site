@@ -23,6 +23,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 40
     if: github.actor != 'github-actions[bot]'
     steps:
       - uses: actions/checkout@v4
@@ -58,6 +59,8 @@ jobs:
             rm -f "$z"
           done
       - name: Kompres semua video (upload/video dan assets/video)
+        timeout-minutes: 15   # batas waktu: jika macet, langkah dihentikan dan build lanjut (tidak memblokir workflow lain)
+        continue-on-error: true
         run: bash build/compress-video.sh .
       - run: npm install --no-audit --no-fund
       - name: Optimasi gambar dan build situs
