@@ -1,5 +1,12 @@
 {
- "status": "up",
- "since": "2026-11-05T03:07:43.103Z",
- "incidents": []
+ "status": "down",
+ "since": "2026-11-11T14:44:36.866Z",
+ "incidents": [
+  {
+   "from": "2026-11-11T14:44:36.866Z",
+   "to": null,
+   "alasan": "/ tidak bisa dihubungi (fetch failed); /sitemap.xml tidak bisa dihubungi (fetch failed); /model/xpeng-x9/ tidak bisa dihubungi (fetch failed)"
+  }
+ ],
+ "lastRemind": "2026-11-11T14:44:36.866Z"
 }
