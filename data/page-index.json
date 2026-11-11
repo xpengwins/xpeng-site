@@ -32,6 +32,10 @@
       "tag": "a"
      },
      {
+      "t": "Lihat model & spesifikasi",
+      "tag": "a"
+     },
+     {
       "t": "XPeng X9 Long Range AWD",
       "tag": "h2"
      },
@@ -114,6 +118,10 @@
      },
      {
       "t": "BOOKING SEKARANG",
+      "tag": "a"
+     },
+     {
+      "t": "Lihat model & spesifikasi",
       "tag": "a"
      }
     ],
@@ -316,6 +324,10 @@
       "tag": "button"
      },
      {
+      "t": "XPeng G9L",
+      "tag": "button"
+     },
+     {
       "t": "Interior XPeng X9",
       "tag": "h3"
      },
@@ -334,6 +346,18 @@
      {
       "t": "Interior XPeng G6",
       "tag": "h3"
+     },
+     {
+      "t": "Interior XPeng G9L",
+      "tag": "h3"
+     },
+     {
+      "t": "Kabin G9L",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Layar tengah G9L",
+      "tag": "figcaption"
      },
      {
       "t": "Varian",
@@ -392,6 +416,14 @@
      {
       "src": "/assets/img/230835.webp",
       "alt": "XPeng G6 interior foto 4"
+     },
+     {
+      "src": "/assets/img/g9l-kabin-kulit-cokelat.webp",
+      "alt": "XPeng G9L interior Kabin G9L foto 1"
+     },
+     {
+      "src": "/assets/img/g9l-layar-tengah-kabin.webp",
+      "alt": "XPeng G9L interior Layar tengah G9L foto 2"
      }
     ]
    },
@@ -1329,7 +1361,7 @@
       "tag": "h1"
      },
      {
-      "t": "Pilih antara MPV listrik 7 kursi XPeng X9 dan SUV coupe XPeng G6.",
+      "t": "Pilih antara MPV listrik 7 kursi XPeng X9, SUV coupe XPeng G6, dan SUV flagship 6 kursi XPeng G9L.",
       "tag": "p"
      }
     ],
@@ -1436,7 +1468,7 @@
   ]
  },
  "/pricelist/": {
-  "label": "Pricelist XPeng Terbaru | Harga X9 dan G6",
+  "label": "Pricelist XPeng Terbaru | Harga X9, G6, dan G9L",
   "sections": [
    {
     "key": "pricelist-xpeng-terbaru",
@@ -1504,12 +1536,12 @@
     ]
    },
    {
-    "key": "harga-xpeng-x9-dan-g6-di-indonesia",
-    "title": "Harga XPeng X9 dan G6 di Indonesia",
+    "key": "harga-xpeng-x9-g6-dan-g9l-di-indonesia",
+    "title": "Harga XPeng X9, G6, dan G9L di Indonesia",
     "hasH1": false,
     "texts": [
      {
-      "t": "Harga XPeng X9 dan G6 di Indonesia",
+      "t": "Harga XPeng X9, G6, dan G9L di Indonesia",
       "tag": "h2"
      },
      {
@@ -1525,7 +1557,15 @@
       "tag": "a"
      },
      {
-      "t": "(suv coupe listrik premium) tersedia dalam 2 varian.",
+      "t": "(suv coupe listrik premium) tersedia dalam 2 varian,",
+      "tag": "p"
+     },
+     {
+      "t": "XPeng G9L",
+      "tag": "a"
+     },
+     {
+      "t": "(suv listrik flagship) tersedia dalam 1 varian.",
       "tag": "p"
      },
      {
@@ -3683,6 +3723,427 @@
      },
      {
       "t": "G6 Pro memakai satu motor penggerak roda belakang. G6 AWD punya motor tambahan di depan sehingga tenaganya jauh lebih besar, dengan jarak tempuh sedikit lebih pendek.",
+      "tag": "p"
+     },
+     {
+      "t": "Jadwalkan test drive",
+      "tag": "h3"
+     },
+     {
+      "t": "Nama",
+      "tag": "label"
+     },
+     {
+      "t": "Model",
+      "tag": "label"
+     },
+     {
+      "t": "Rencana pembelian",
+      "tag": "label"
+     },
+     {
+      "t": "Kirim lewat WhatsApp",
+      "tag": "button"
+     },
+     {
+      "t": "Data Anda hanya dikirim ke WhatsApp dealer.",
+      "tag": "small"
+     }
+    ],
+    "imgs": []
+   }
+  ]
+ },
+ "/model/xpeng-g9l/": {
+  "label": "XPeng G9L Harga & Spesifikasi 2026 | SUV Listrik Flagship",
+  "sections": [
+   {
+    "key": "xpeng-g9l",
+    "title": "XPeng G9L",
+    "hasH1": true,
+    "texts": [
+     {
+      "t": "Beranda",
+      "tag": "a"
+     },
+     {
+      "t": "Model",
+      "tag": "a"
+     },
+     {
+      "t": "› XPeng G9L",
+      "tag": "nav"
+     },
+     {
+      "t": "SUV Listrik Flagship",
+      "tag": "span"
+     },
+     {
+      "t": "XPeng G9L",
+      "tag": "h1"
+     },
+     {
+      "t": "SUV listrik flagship 6 kursi dengan baterai 106,7 kWh dan pengisian 5C.",
+      "tag": "p"
+     },
+     {
+      "t": "Booking sekarang",
+      "tag": "a"
+     },
+     {
+      "t": "Test Drive",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g9l-hero.webp",
+      "alt": "XPeng G9L SUV Listrik Flagship"
+     }
+    ]
+   },
+   {
+    "key": "keunggulan-xpeng-g9l",
+    "title": "Keunggulan XPeng G9L",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Keunggulan XPeng G9L",
+      "tag": "h2"
+     },
+     {
+      "t": "AWD Performance Ultra 6-Seater, kabin lounge enam kursi",
+      "tag": "li"
+     },
+     {
+      "t": "Dual motor 430 kW dan 695 Nm, 0-100 km/jam 4,9 detik",
+      "tag": "li"
+     },
+     {
+      "t": "Baterai NCM 106,7 kWh, jarak tempuh 553 km (WLTP)",
+      "tag": "li"
+     },
+     {
+      "t": "Pengisian 5C 540 kW, 10-80% sekitar 12 menit",
+      "tag": "li"
+     },
+     {
+      "t": "Garansi kendaraan 6 tahun/120.000 km, baterai 8 tahun/160.000 km",
+      "tag": "li"
+     },
+     {
+      "t": "Harga XPeng G9L Terbaru",
+      "tag": "h2"
+     },
+     {
+      "t": "*Harga OTR Jakarta untuk model yang baru launching, hubungi kami untuk konfirmasi.",
+      "tag": "p"
+     },
+     {
+      "t": "Spesifikasi ringkas",
+      "tag": "h2"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "spesifikasi",
+    "title": "Spesifikasi dan perbedaan varian XPeng G9L",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Spesifikasi",
+      "tag": "span"
+     },
+     {
+      "t": "Spesifikasi dan perbedaan varian XPeng G9L",
+      "tag": "h2"
+     },
+     {
+      "t": "Lihat ringkasannya di atas, buka detailnya di sini.",
+      "tag": "p"
+     },
+     {
+      "t": "Lihat detail",
+      "tag": "button"
+     },
+     {
+      "t": "⬇ Minta brosur (PDF)",
+      "tag": "a"
+     },
+     {
+      "t": "Spesifikasi lengkap",
+      "tag": "h3"
+     },
+     {
+      "t": "Dimensi dan ruang",
+      "tag": "h4"
+     },
+     {
+      "t": "Performa",
+      "tag": "h4"
+     },
+     {
+      "t": "Baterai dan pengisian",
+      "tag": "h4"
+     },
+     {
+      "t": "Eksterior",
+      "tag": "h4"
+     },
+     {
+      "t": "Interior dan kenyamanan",
+      "tag": "h4"
+     },
+     {
+      "t": "Teknologi dan bantuan berkendara",
+      "tag": "h4"
+     },
+     {
+      "t": "Keselamatan dan garansi",
+      "tag": "h4"
+     },
+     {
+      "t": "Data mengacu pada brosur resmi XPENG untuk varian AWD Performance Ultra 6-Seater. Harga OTR Jakarta*. Foto warna selain Waving Green belum tersedia. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+      "tag": "p"
+     }
+    ],
+    "imgs": []
+   },
+   {
+    "key": "atur-mobil",
+    "title": "Atur XPeng G9L dan hitung cicilan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Interaktif",
+      "tag": "span"
+     },
+     {
+      "t": "Atur XPeng G9L dan hitung cicilan",
+      "tag": "h2"
+     },
+     {
+      "t": "Interior XPeng G9L",
+      "tag": "h3"
+     },
+     {
+      "t": "Kabin G9L",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Layar tengah G9L",
+      "tag": "figcaption"
+     },
+     {
+      "t": "Varian",
+      "tag": "label"
+     },
+     {
+      "t": "Uang muka:",
+      "tag": "label"
+     },
+     {
+      "t": "Tenor:",
+      "tag": "label"
+     },
+     {
+      "t": "Bunga per tahun:",
+      "tag": "label"
+     },
+     {
+      "t": "Estimasi cicilan per bulan",
+      "tag": "span"
+     },
+     {
+      "t": "Simulasi saja, bunga anuitas. Skema leasing resmi bisa berbeda.",
+      "tag": "small"
+     },
+     {
+      "t": "Minta penawaran via WhatsApp",
+      "tag": "a"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g9l-kabin-kulit-cokelat.webp",
+      "alt": "XPeng G9L interior Kabin G9L foto 1"
+     },
+     {
+      "src": "/assets/img/g9l-layar-tengah-kabin.webp",
+      "alt": "XPeng G9L interior Layar tengah G9L foto 2"
+     }
+    ]
+   },
+   {
+    "key": "cicilan-mudah-lewat-partner-leasing",
+    "title": "Cicilan mudah lewat partner leasing",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pembiayaan",
+      "tag": "span"
+     },
+     {
+      "t": "Cicilan mudah lewat partner leasing",
+      "tag": "h2"
+     },
+     {
+      "t": "Pilih skema cicilan yang sesuai. Konsultan kami membantu simulasi dan pengajuan. Persetujuan pembiayaan mengikuti ketentuan masing-masing leasing.",
+      "tag": "p"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     },
+     {
+      "src": "/assets/img/214388.webp",
+      "alt": "Maybank"
+     },
+     {
+      "src": "/assets/img/214391.webp",
+      "alt": "CIMB Niaga"
+     },
+     {
+      "src": "/assets/img/214393.webp",
+      "alt": "Clipan Finance"
+     },
+     {
+      "src": "/assets/img/214392.webp",
+      "alt": "BJI Finance"
+     }
+    ]
+   },
+   {
+    "key": "galeri-xpeng-g9l",
+    "title": "Galeri XPeng G9L",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Galeri XPeng G9L",
+      "tag": "h2"
+     }
+    ],
+    "imgs": [
+     {
+      "src": "/assets/img/g9l-hero.webp",
+      "alt": "XPeng G9L foto 1"
+     },
+     {
+      "src": "/assets/img/g9l-depan-pantai-senja.webp",
+      "alt": "XPeng G9L foto 2"
+     },
+     {
+      "src": "/assets/img/g9l-tepi-laut-matahari.webp",
+      "alt": "XPeng G9L foto 3"
+     },
+     {
+      "src": "/assets/img/g9l-senja-gedung.webp",
+      "alt": "XPeng G9L foto 4"
+     },
+     {
+      "src": "/assets/img/g9l-senja-rumah-modern.webp",
+      "alt": "XPeng G9L foto 5"
+     },
+     {
+      "src": "/assets/img/g9l-velg-percikan-air.webp",
+      "alt": "XPeng G9L foto 6"
+     },
+     {
+      "src": "/assets/img/emerald-suv-breaking-through-water.webp",
+      "alt": "XPeng G9L foto 7"
+     }
+    ]
+   },
+   {
+    "key": "pertanyaan-yang-sering-diajukan",
+    "title": "Pertanyaan yang sering diajukan",
+    "hasH1": false,
+    "texts": [
+     {
+      "t": "Pertanyaan yang sering diajukan",
+      "tag": "h2"
+     },
+     {
+      "t": "Berapa harga XPeng G9L di Indonesia?",
+      "tag": "summary"
+     },
+     {
+      "t": "Berapa kursi XPeng G9L?",
+      "tag": "summary"
+     },
+     {
+      "t": "Varian Indonesia adalah AWD Performance Ultra 6-Seater dengan enam kursi kulit Nappa, Zero Gravity di baris depan dan tengah.",
+      "tag": "p"
+     },
+     {
+      "t": "Berapa jarak tempuh XPeng G9L?",
+      "tag": "summary"
+     },
+     {
+      "t": "553 km menurut WLTP dan 648 km menurut NEDC, dengan baterai NCM 106,7 kWh.",
+      "tag": "p"
+     },
+     {
+      "t": "Berapa lama charging XPeng G9L?",
+      "tag": "summary"
+     },
+     {
+      "t": "Sekitar 12 menit untuk 10 sampai 80 persen pada charger DC hingga 540 kW, tergantung kondisi dan daya charger.",
+      "tag": "p"
+     },
+     {
+      "t": "Apa garansi XPeng G9L?",
+      "tag": "summary"
+     },
+     {
+      "t": "Garansi kendaraan 6 tahun atau 120.000 km dan garansi baterai 8 tahun atau 160.000 km menurut brosur resmi.",
       "tag": "p"
      },
      {

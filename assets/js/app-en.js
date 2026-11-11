@@ -49,7 +49,7 @@ aq.addEventListener('input',run);var qm=location.search.match(/[?&]q=([^&]*)/);i
 /* konfigurator */
 var cfg=$('.cfg');if(cfg){var M=JSON.parse(cfg.dataset.models),mi=0,ci=0,img=$('#cfgimg'),sw=$('#sw'),sel=$('#var'),R=function(n){return 'IDR '+Math.round(n).toLocaleString('en-US')};
 function draw(){var m=M[mi];sw.innerHTML='';m.c.forEach(function(c,k){var b=document.createElement('button');b.style.background=c.hex;b.setAttribute('aria-label','Color '+c.name);if(k===ci)b.className='on';b.onclick=function(){ci=k;draw()};sw.appendChild(b)});
-img.style.opacity=.3;setTimeout(function(){img.src=u(m.c[ci].image);img.alt=m.n+' color '+m.c[ci].name;mk(img);img.style.opacity=1},120);$('#colname').textContent='Color: '+m.c[ci].name;
+img.style.opacity=.3;setTimeout(function(){if(m.c[ci].image){img.src=u(m.c[ci].image);img.alt=m.n+' color '+m.c[ci].name;mk(img)}img.style.opacity=1},120);$('#colname').textContent='Color: '+m.c[ci].name+(m.c[ci].image?'':' (foto color ini belum tersedia)');
 var cur=sel.value;sel.innerHTML=m.v.map(function(v,k){return '<option value="'+k+'">'+v.name+'</option>'}).join('');sel.value=m.v[cur]?cur:0;calc()}
 function calc(){var m=M[mi],v=m.v[sel.value||0],p=v.price,dp=+$('#dp').value,tn=+$('#tn').value,bg=+$('#bg').value;
 $('#dpv').textContent=dp+'% ('+R(p*dp/100)+')';$('#tnv').textContent=tn+' years';$('#bgv').textContent=bg+'%';$('#harga').textContent=R(p);

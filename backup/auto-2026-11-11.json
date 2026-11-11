@@ -1,6 +1,6 @@
 {
  "app": "xpeng-site",
- "date": "2026-11-11T05:05:21.244Z",
+ "date": "2026-11-11T05:20:46.002Z",
  "data": {
   "site": {
    "name": "XPeng Premium Indonesia",
@@ -1128,6 +1128,403 @@
       "alt": ""
      }
     ]
+   },
+   {
+    "slug": "xpeng-g9l",
+    "name": "XPeng G9L",
+    "type": "SUV Listrik Flagship",
+    "tagline": "SUV listrik flagship 6 kursi dengan baterai 106,7 kWh dan pengisian 5C.",
+    "hero": "assets/img/g9l-hero.webp",
+    "gallery": [
+     "assets/img/g9l-hero.webp",
+     "assets/img/g9l-depan-pantai-senja.webp",
+     "assets/img/g9l-tepi-laut-matahari.webp",
+     "assets/img/g9l-senja-gedung.webp",
+     "assets/img/g9l-senja-rumah-modern.webp",
+     "assets/img/g9l-velg-percikan-air.webp",
+     "assets/img/emerald-suv-breaking-through-water.webp"
+    ],
+    "colors": [
+     {
+      "name": "Waving Green",
+      "hex": "#2f5d4a",
+      "image": "assets/img/g9l-hero.webp"
+     },
+     {
+      "name": "Arctic White",
+      "hex": "#f4f4f2"
+     },
+     {
+      "name": "Mirror Gray",
+      "hex": "#8d9094"
+     },
+     {
+      "name": "Diamond Black",
+      "hex": "#0e0f12"
+     }
+    ],
+    "variants": [
+     {
+      "name": "XPeng G9L Ultra AWD",
+      "price": 1289000000
+     }
+    ],
+    "highlights": [
+     "AWD Performance Ultra 6-Seater, kabin lounge enam kursi",
+     "Dual motor 430 kW dan 695 Nm, 0-100 km/jam 4,9 detik",
+     "Baterai NCM 106,7 kWh, jarak tempuh 553 km (WLTP)",
+     "Pengisian 5C 540 kW, 10-80% sekitar 12 menit",
+     "Garansi kendaraan 6 tahun/120.000 km, baterai 8 tahun/160.000 km"
+    ],
+    "specs": [
+     {
+      "k": "Tipe",
+      "v": "SUV listrik flagship, 6 kursi"
+     },
+     {
+      "k": "Dimensi",
+      "v": "5.120 x 1.999 x 1.788 mm"
+     },
+     {
+      "k": "Penggerak",
+      "v": "Dual Motor AWD, 430 kW / 695 Nm"
+     },
+     {
+      "k": "Baterai",
+      "v": "NCM 106,7 kWh (nett), 800V 5C"
+     },
+     {
+      "k": "Jarak tempuh",
+      "v": "553 km (WLTP) / 648 km (NEDC)"
+     },
+     {
+      "k": "Pengisian DC",
+      "v": "540 kW, 10-80% sekitar 12 menit"
+     },
+     {
+      "k": "Chip",
+      "v": "Turing AI XP5 (750 TOPS)"
+     },
+     {
+      "k": "Garansi",
+      "v": "Kendaraan 6 tahun/120.000 km, baterai 8 tahun/160.000 km"
+     }
+    ],
+    "faq": [
+     {
+      "q": "Berapa harga XPeng G9L di Indonesia?",
+      "a": "XPeng G9L Ultra AWD Rp1.289.000.000 (OTR Jakarta*). Hubungi kami untuk konfirmasi harga terbaru."
+     },
+     {
+      "q": "Berapa kursi XPeng G9L?",
+      "a": "Varian Indonesia adalah AWD Performance Ultra 6-Seater dengan enam kursi kulit Nappa, Zero Gravity di baris depan dan tengah."
+     },
+     {
+      "q": "Berapa jarak tempuh XPeng G9L?",
+      "a": "553 km menurut WLTP dan 648 km menurut NEDC, dengan baterai NCM 106,7 kWh."
+     },
+     {
+      "q": "Berapa lama charging XPeng G9L?",
+      "a": "Sekitar 12 menit untuk 10 sampai 80 persen pada charger DC hingga 540 kW, tergantung kondisi dan daya charger."
+     },
+     {
+      "q": "Apa garansi XPeng G9L?",
+      "a": "Garansi kendaraan 6 tahun atau 120.000 km dan garansi baterai 8 tahun atau 160.000 km menurut brosur resmi."
+     }
+    ],
+    "metaTitle": "XPeng G9L Harga & Spesifikasi 2026 | SUV Listrik Flagship",
+    "metaDescription": "Harga XPeng G9L Ultra AWD Rp1,289 miliar (OTR Jakarta*). 6 kursi, baterai 106,7 kWh, jarak 553 km WLTP, charging 5C, garansi 6 tahun. Booking sekarang.",
+    "videos": [],
+    "interior": [
+     {
+      "src": "assets/img/g9l-kabin-kulit-cokelat.webp",
+      "alt": "Kabin G9L"
+     },
+     {
+      "src": "assets/img/g9l-layar-tengah-kabin.webp",
+      "alt": "Layar tengah G9L"
+     }
+    ],
+    "compare": [],
+    "detail": [
+     {
+      "g": "Dimensi dan ruang",
+      "rows": [
+       {
+        "k": "Panjang x lebar x tinggi",
+        "v": "5.120 x 1.999 x 1.788 mm"
+       },
+       {
+        "k": "Wheelbase",
+        "v": "3.100 mm"
+       },
+       {
+        "k": "Jumlah kursi",
+        "v": "6"
+       },
+       {
+        "k": "Lebar bahu belakang",
+        "v": "1.854 mm"
+       },
+       {
+        "k": "Velg",
+        "v": "21 inci Starburst, ban 265/45 R21"
+       },
+       {
+        "k": "Koefisien drag",
+        "v": "0,246 Cd"
+       },
+       {
+        "k": "Rear Wheel Steering",
+        "v": "Hingga 7,5 derajat"
+       },
+       {
+        "k": "Radius putar",
+        "v": "Kurang dari 5,5 m"
+       },
+       {
+        "k": "Suspensi",
+        "v": "Hydraulic Bushing di 6 titik"
+       },
+       {
+        "k": "Ketahanan air",
+        "v": "700 mm"
+       },
+       {
+        "k": "Bagasi belakang",
+        "v": "259 sampai 1.222 L"
+       },
+       {
+        "k": "Frunk",
+        "v": "109 L"
+       },
+       {
+        "k": "Kompartemen penyimpanan",
+        "v": "34 slot"
+       }
+      ]
+     },
+     {
+      "g": "Performa",
+      "rows": [
+       {
+        "k": "Penggerak",
+        "v": "Dual Motor AWD"
+       },
+       {
+        "k": "Tenaga maksimum",
+        "v": "430 kW (depan 160 + belakang 270)"
+       },
+       {
+        "k": "Torsi maksimum",
+        "v": "695 Nm (depan 230 + belakang 465)"
+       },
+       {
+        "k": "Akselerasi 0-100 km/jam",
+        "v": "4,9 detik"
+       },
+       {
+        "k": "Kecepatan maksimum",
+        "v": "200 km/jam"
+       },
+       {
+        "k": "Pengereman 100 km/jam ke 0",
+        "v": "35,1 m"
+       }
+      ]
+     },
+     {
+      "g": "Baterai dan pengisian",
+      "rows": [
+       {
+        "k": "Tipe baterai",
+        "v": "NCM"
+       },
+       {
+        "k": "Kapasitas",
+        "v": "106,7 kWh (nett) / 110 kWh (gross)"
+       },
+       {
+        "k": "Platform",
+        "v": "800V, teknologi 5C"
+       },
+       {
+        "k": "Jarak tempuh WLTP",
+        "v": "553 km"
+       },
+       {
+        "k": "Jarak tempuh NEDC",
+        "v": "648 km"
+       },
+       {
+        "k": "Daya DC maksimum",
+        "v": "540 kW"
+       },
+       {
+        "k": "Charging DC 10-80%",
+        "v": "sekitar 12 menit"
+       },
+       {
+        "k": "Charging DC 80-100%",
+        "v": "18 menit"
+       },
+       {
+        "k": "Daya AC maksimum",
+        "v": "Hingga 22 kW"
+       },
+       {
+        "k": "Keamanan baterai",
+        "v": "Thermal Safety, 24/7 AI BMS"
+       },
+       {
+        "k": "Sistem rem",
+        "v": "IPB 2.0"
+       }
+      ]
+     },
+     {
+      "g": "Eksterior",
+      "rows": [
+       {
+        "k": "Pilihan warna",
+        "v": "Waving Green, Arctic White, Mirror Gray, Diamond Black"
+       },
+       {
+        "k": "Lampu",
+        "v": "Ultra-Long Dual Full-Width Lights, DLP Matrix Headlight"
+       },
+       {
+        "k": "Pijakan samping",
+        "v": "Hidden side step dengan lampu"
+       },
+       {
+        "k": "Atap",
+        "v": "Double glass frameless, panoramic canopy"
+       }
+      ]
+     },
+     {
+      "g": "Interior dan kenyamanan",
+      "rows": [
+       {
+        "k": "Warna interior",
+        "v": "Tangerine, Meteorite Black"
+       },
+       {
+        "k": "Material jok",
+        "v": "Kulit Nappa"
+       },
+       {
+        "k": "Zero Gravity",
+        "v": "Baris depan dan tengah"
+       },
+       {
+        "k": "Layar langit-langit",
+        "v": "21,4 inci 3K+"
+       },
+       {
+        "k": "Layar tengah",
+        "v": "17,3 inci LTPS In-Cell"
+       },
+       {
+        "k": "Tech Island Screen",
+        "v": "8,8 inci"
+       },
+       {
+        "k": "AR-HUD",
+        "v": "Tampilan virtual setara 88 inci"
+       },
+       {
+        "k": "Ambient light",
+        "v": "256 warna"
+       },
+       {
+        "k": "Kulkas pintar",
+        "v": "12,5 L, -6 sampai 50 derajat C"
+       },
+       {
+        "k": "AC",
+        "v": "Gentle Breeze, 6.000 titik, 5-zone"
+       },
+       {
+        "k": "Audio",
+        "v": "23 speaker 7.1.4 Dolby Atmos"
+       },
+       {
+        "k": "Redaman bising",
+        "v": "Road Noise Cancellation"
+       }
+      ]
+     },
+     {
+      "g": "Teknologi dan bantuan berkendara",
+      "rows": [
+       {
+        "k": "Chipset",
+        "v": "Turing AI XP5 (750 TOPS)"
+       },
+       {
+        "k": "Sensor",
+        "v": "33 sensor"
+       },
+       {
+        "k": "Bantuan berkendara",
+        "v": "ACC + LCC + ATC, Copilot Mode"
+       },
+       {
+        "k": "Parkir",
+        "v": "4 cara auto parking"
+       },
+       {
+        "k": "Navigasi",
+        "v": "Google Maps SDK"
+       },
+       {
+        "k": "Akses pintar",
+        "v": "Kunci digital iPhone dan Apple Watch (NFC dan UWB)"
+       }
+      ]
+     },
+     {
+      "g": "Keselamatan dan garansi",
+      "rows": [
+       {
+        "k": "Airbag",
+        "v": "9"
+       },
+       {
+        "k": "Fitur keselamatan aktif",
+        "v": "14"
+       },
+       {
+        "k": "Uji tabrak",
+        "v": "62 jenis (acuan C-NCAP 5-Star, C-IASI Good, Euro NCAP 5-Star 2027)"
+       },
+       {
+        "k": "Struktur bodi",
+        "v": "Baja ultra-kuat hingga 2 GPa dan aluminium"
+       },
+       {
+        "k": "Beban statis bodi",
+        "v": "Hingga 14,1 ton"
+       },
+       {
+        "k": "Tire Blowout Stability",
+        "v": "Ya"
+       },
+       {
+        "k": "Garansi kendaraan",
+        "v": "6 tahun / 120.000 km"
+       },
+       {
+        "k": "Garansi baterai",
+        "v": "8 tahun / 160.000 km"
+       }
+      ]
+     }
+    ],
+    "specNote": "Data mengacu pada brosur resmi XPENG untuk varian AWD Performance Ultra 6-Seater. Harga OTR Jakarta*. Foto warna selain Waving Green belum tersedia. Spesifikasi dapat berubah dan mengikuti stok dealer.",
+    "brosur": ""
    }
   ],
   "articles": [
