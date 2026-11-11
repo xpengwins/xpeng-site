@@ -47,8 +47,9 @@
   ],
   "pemicu": "Setelah konfigurasi Indonesia diumumkan",
   "tenggat": "",
-  "status": "buka",
-  "dibuat": "2026-10-31"
+  "status": "selesai",
+  "dibuat": "2026-10-31",
+  "selesai": "2026-11-11"
  },
  {
   "id": "g9l-23",
@@ -59,8 +60,9 @@
   ],
   "pemicu": "Setelah daftar warna resmi tersedia",
   "tenggat": "",
-  "status": "buka",
-  "dibuat": "2026-10-31"
+  "status": "selesai",
+  "dibuat": "2026-10-31",
+  "selesai": "2026-11-11"
  },
  {
   "id": "g9l-27",
