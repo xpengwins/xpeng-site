@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T17:12:54.782Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T17:12:54.782Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T17:12:54.781Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T16:10:22.318Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "facebook",
   "ok": false,
   "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-08T05:59:48.292Z",
-  "slug": "xpeng-g9l-paris-motor-show",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar Threads belum tayang, pakai persegi"
- },
- {
-  "at": "2026-11-07T12:54:44.271Z",
-  "slug": "chip-turing-xpeng-g9l",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-07T12:54:21.197Z",
-  "slug": "chip-turing-xpeng-g9l",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
