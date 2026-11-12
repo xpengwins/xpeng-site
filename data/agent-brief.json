@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-12T03:24:46.286Z",
+ "generated": "2026-11-12T15:31:30.857Z",
  "traffic": {
   "periode": [
    "2026-10-13",
@@ -175,15 +175,15 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 55,
-  "terjadwal": 8,
-  "terbitBerikutnya": "2026-11-12T12:00:00+07:00",
+  "terbit": 57,
+  "terjadwal": 6,
+  "terbitBerikutnya": "2026-11-13T12:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
  "kesehatan": {
   "kecepatan": {
-   "error": 78,
+   "error": 80,
    "lambat": 0,
    "masalah": [
     "❌ / → tidak bisa dibuka (fetch failed)",
@@ -207,6 +207,8 @@
     "❌ /en/model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
     "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/warna-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/suv-listrik-keluarga-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/suv-listrik-flagship-2026/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/mobil-listrik-terbaru-2026/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/suspensi-udara-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
@@ -266,11 +268,17 @@
     "❌ /sitemap.xml → tidak bisa dibuka (fetch failed)"
    ]
   },
-  "sosmed": [],
+  "sosmed": [
+   "❗ Threads (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
+   "❗ Instagram (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
+   "❗ Facebook (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+  ],
   "halaman": {
    "berat": 0,
-   "ringan": 55,
+   "ringan": 57,
    "masalah": [
+    "🟠 /artikel/warna-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/suv-listrik-keluarga-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/suv-listrik-flagship-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
@@ -278,9 +286,7 @@
     "🟠 /artikel/kursi-zero-gravity-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/layar-hiburan-belakang-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/xpeng-g9l-paris-motor-show/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/harga-xpeng-g9l-eropa/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/vla-2-0-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/chip-turing-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+    "🟠 /artikel/harga-xpeng-g9l-eropa/ tidak punya link masuk dari halaman lain (artikel yatim)"
    ]
   }
  },

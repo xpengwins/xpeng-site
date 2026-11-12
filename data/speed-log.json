@@ -1038,9 +1038,9 @@
   },
   {
    "date": "2026-11-12",
-   "at": "2026-11-12T03:24:33.842Z",
-   "urls": 76,
-   "errors": 78,
+   "at": "2026-11-12T15:31:09.383Z",
+   "urls": 78,
+   "errors": 80,
    "slow": 0,
    "avgMs": 0,
    "pages": {
@@ -1059,7 +1059,7 @@
     "/kontak/": {
      "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
     },
-    "/artikel/suv-listrik-flagship-2026/": {
+    "/artikel/warna-xpeng-g9l/": {
      "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
     }
    },
@@ -1085,6 +1085,8 @@
     "error:/en/model/xpeng-g6/",
     "error:/model/xpeng-g9l/",
     "error:/en/model/xpeng-g9l/",
+    "error:/artikel/warna-xpeng-g9l/",
+    "error:/artikel/suv-listrik-keluarga-xpeng-g9l/",
     "error:/artikel/suv-listrik-flagship-2026/",
     "error:/artikel/mobil-listrik-terbaru-2026/",
     "error:/artikel/suspensi-udara-xpeng-g9l/",
@@ -1145,12 +1147,12 @@
    ]
   }
  ],
- "generated": "2026-11-12T03:24:33.842Z",
+ "generated": "2026-11-12T15:31:09.383Z",
  "latest": {
   "date": "2026-11-12",
-  "at": "2026-11-12T03:24:33.842Z",
-  "urls": 76,
-  "errors": 78,
+  "at": "2026-11-12T15:31:09.383Z",
+  "urls": 78,
+  "errors": 80,
   "slow": 0,
   "avgMs": 0,
   "pages": {
@@ -1169,7 +1171,7 @@
    "/kontak/": {
     "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
    },
-   "/artikel/suv-listrik-flagship-2026/": {
+   "/artikel/warna-xpeng-g9l/": {
     "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
    }
   },
@@ -1195,6 +1197,8 @@
    "error:/en/model/xpeng-g6/",
    "error:/model/xpeng-g9l/",
    "error:/en/model/xpeng-g9l/",
+   "error:/artikel/warna-xpeng-g9l/",
+   "error:/artikel/suv-listrik-keluarga-xpeng-g9l/",
    "error:/artikel/suv-listrik-flagship-2026/",
    "error:/artikel/mobil-listrik-terbaru-2026/",
    "error:/artikel/suspensi-udara-xpeng-g9l/",
@@ -1275,6 +1279,8 @@
    "❌ /en/model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
    "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
    "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+   "❌ /artikel/warna-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+   "❌ /artikel/suv-listrik-keluarga-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/suv-listrik-flagship-2026/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/mobil-listrik-terbaru-2026/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/suspensi-udara-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
@@ -1356,6 +1362,8 @@
   "error:/en/model/xpeng-g6/",
   "error:/model/xpeng-g9l/",
   "error:/en/model/xpeng-g9l/",
+  "error:/artikel/warna-xpeng-g9l/",
+  "error:/artikel/suv-listrik-keluarga-xpeng-g9l/",
   "error:/artikel/suv-listrik-flagship-2026/",
   "error:/artikel/mobil-listrik-terbaru-2026/",
   "error:/artikel/suspensi-udara-xpeng-g9l/",
@@ -1414,5 +1422,5 @@
   "error:/robots.txt",
   "error:/sitemap.xml"
  ],
- "alertSig": "error:/|error:/artikel/|error:/artikel/baterai-lfp-vs-ncm/|error:/artikel/bengkel-rekanan-xpeng-luar-kota/|error:/artikel/biaya-charging-spklu/|error:/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/|error:/artikel/charging-5c-xpeng-g9l/|error:/artikel/chip-turing-xpeng-g9l/|error:/artikel/dimensi-xpeng-g9l/|error:/artikel/garansi-baterai-xpeng/|error:/artikel/harga-mobil-listrik-terbaru-2026/|error:/artikel/harga-xpeng-g9l-eropa/|error:/artikel/harga-xpeng-g9l/|error:/artikel/harga-xpeng-x9-dan-g6-juli-2026/|error:/artikel/interior-xpeng-g9l/|error:/artikel/interior-xpeng-x9/|error:/artikel/jarak-tempuh-xpeng-g9l/|error:/artikel/kenapa-harus-xpeng/|error:/artikel/keunggulan-xpeng/|error:/artikel/kursi-zero-gravity-xpeng-g9l/|error:/artikel/layar-hiburan-belakang-xpeng-g9l/|error:/artikel/mobil-listrik-7-seater-indonesia/|error:/artikel/mobil-listrik-keluarga/|error:/artikel/mobil-listrik-premium-terbaik-indonesia/|error:/artikel/mobil-listrik-saat-banjir/|error:/artikel/mobil-listrik-terbaru-2026/|error:/artikel/mobil-listrik-untuk-mudik/|error:/artikel/mpv-listrik-terbaik-indonesia/|error:/artikel/pajak-mobil-listrik-2026/|error:/artikel/parkir-otomatis-xpeng-g6/|error:/artikel/pengisian-cepat-800v-xpeng/|error:/artikel/perawatan-mobil-listrik/|error:/artikel/roda-belakang-berbelok-xpeng-g9l/|error:/artikel/simulasi-cicilan-xpeng/|error:/artikel/spesifikasi-mobil-listrik-wajib-dicek/|error:/artikel/spesifikasi-xpeng-g9l/|error:/artikel/suspensi-udara-xpeng-g9l/|error:/artikel/suv-listrik-flagship-2026/|error:/artikel/suv-listrik-terbaik-indonesia/|error:/artikel/teknologi-xpeng/|error:/artikel/test-drive-mobil-listrik/|error:/artikel/vla-2-0-xpeng-g9l/|error:/artikel/xpeng-dirakit-di-indonesia/|error:/artikel/xpeng-g6-pro-vs-awd/|error:/artikel/xpeng-g6-vs-byd-sealion-7/|error:/artikel/xpeng-g6-vs-hyundai-ioniq-5/|error:/artikel/xpeng-g9l-7-seater/|error:/artikel/xpeng-g9l-erev/|error:/artikel/xpeng-g9l-indonesia/|error:/artikel/xpeng-g9l-paris-motor-show/|error:/artikel/xpeng-g9l-segera-launching/|error:/artikel/xpeng-g9l-vs-xpeng-g6/|error:/artikel/xpeng-g9l-vs-xpeng-x9/|error:/artikel/xpeng-indonesia-profil-dan-model/|error:/artikel/xpeng-x9-vs-denza-d9/|error:/artikel/xpeng-x9-vs-toyota-alphard/|error:/artikel/xpilot-4-0-xpeng/|error:/en/|error:/en/kontak/|error:/en/model/|error:/en/model/xpeng-g6/|error:/en/model/xpeng-g9l/|error:/en/model/xpeng-x9/|error:/en/pricelist/|error:/en/promo/|error:/en/tentang/|error:/en/tentang/bengkel-rekanan-luar-kota/|error:/kontak/|error:/model/|error:/model/xpeng-g6/|error:/model/xpeng-g9l/|error:/model/xpeng-x9/|error:/pricelist/|error:/promo/|error:/robots.txt|error:/sitemap.xml|error:/tentang/|error:/tentang/bengkel-rekanan-luar-kota/"
+ "alertSig": "error:/|error:/artikel/|error:/artikel/baterai-lfp-vs-ncm/|error:/artikel/bengkel-rekanan-xpeng-luar-kota/|error:/artikel/biaya-charging-spklu/|error:/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/|error:/artikel/charging-5c-xpeng-g9l/|error:/artikel/chip-turing-xpeng-g9l/|error:/artikel/dimensi-xpeng-g9l/|error:/artikel/garansi-baterai-xpeng/|error:/artikel/harga-mobil-listrik-terbaru-2026/|error:/artikel/harga-xpeng-g9l-eropa/|error:/artikel/harga-xpeng-g9l/|error:/artikel/harga-xpeng-x9-dan-g6-juli-2026/|error:/artikel/interior-xpeng-g9l/|error:/artikel/interior-xpeng-x9/|error:/artikel/jarak-tempuh-xpeng-g9l/|error:/artikel/kenapa-harus-xpeng/|error:/artikel/keunggulan-xpeng/|error:/artikel/kursi-zero-gravity-xpeng-g9l/|error:/artikel/layar-hiburan-belakang-xpeng-g9l/|error:/artikel/mobil-listrik-7-seater-indonesia/|error:/artikel/mobil-listrik-keluarga/|error:/artikel/mobil-listrik-premium-terbaik-indonesia/|error:/artikel/mobil-listrik-saat-banjir/|error:/artikel/mobil-listrik-terbaru-2026/|error:/artikel/mobil-listrik-untuk-mudik/|error:/artikel/mpv-listrik-terbaik-indonesia/|error:/artikel/pajak-mobil-listrik-2026/|error:/artikel/parkir-otomatis-xpeng-g6/|error:/artikel/pengisian-cepat-800v-xpeng/|error:/artikel/perawatan-mobil-listrik/|error:/artikel/roda-belakang-berbelok-xpeng-g9l/|error:/artikel/simulasi-cicilan-xpeng/|error:/artikel/spesifikasi-mobil-listrik-wajib-dicek/|error:/artikel/spesifikasi-xpeng-g9l/|error:/artikel/suspensi-udara-xpeng-g9l/|error:/artikel/suv-listrik-flagship-2026/|error:/artikel/suv-listrik-keluarga-xpeng-g9l/|error:/artikel/suv-listrik-terbaik-indonesia/|error:/artikel/teknologi-xpeng/|error:/artikel/test-drive-mobil-listrik/|error:/artikel/vla-2-0-xpeng-g9l/|error:/artikel/warna-xpeng-g9l/|error:/artikel/xpeng-dirakit-di-indonesia/|error:/artikel/xpeng-g6-pro-vs-awd/|error:/artikel/xpeng-g6-vs-byd-sealion-7/|error:/artikel/xpeng-g6-vs-hyundai-ioniq-5/|error:/artikel/xpeng-g9l-7-seater/|error:/artikel/xpeng-g9l-erev/|error:/artikel/xpeng-g9l-indonesia/|error:/artikel/xpeng-g9l-paris-motor-show/|error:/artikel/xpeng-g9l-segera-launching/|error:/artikel/xpeng-g9l-vs-xpeng-g6/|error:/artikel/xpeng-g9l-vs-xpeng-x9/|error:/artikel/xpeng-indonesia-profil-dan-model/|error:/artikel/xpeng-x9-vs-denza-d9/|error:/artikel/xpeng-x9-vs-toyota-alphard/|error:/artikel/xpilot-4-0-xpeng/|error:/en/|error:/en/kontak/|error:/en/model/|error:/en/model/xpeng-g6/|error:/en/model/xpeng-g9l/|error:/en/model/xpeng-x9/|error:/en/pricelist/|error:/en/promo/|error:/en/tentang/|error:/en/tentang/bengkel-rekanan-luar-kota/|error:/kontak/|error:/model/|error:/model/xpeng-g6/|error:/model/xpeng-g9l/|error:/model/xpeng-x9/|error:/pricelist/|error:/promo/|error:/robots.txt|error:/sitemap.xml|error:/tentang/|error:/tentang/bengkel-rekanan-luar-kota/"
 }

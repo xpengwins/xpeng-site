@@ -1,15 +1,15 @@
 {
- "generated": "2026-11-12T03:24:38.942Z",
+ "generated": "2026-11-12T15:31:21.839Z",
  "platforms": {
   "facebook": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 2,
+   "posted24h": 0,
    "bursts": 0,
    "note": "izin baca data post belum ada (posting tidak terpengaruh)"
   },
   "instagram": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 2,
+   "posted24h": 0,
    "bursts": 0,
    "account": {
     "name": "@xpengwins",
@@ -37,14 +37,14 @@
    ],
    "extra": {
     "quota": {
-     "used": 2,
+     "used": 0,
      "total": 100
     }
    }
   },
   "threads": {
-   "posted48h": 4,
-   "posted24h": 2,
+   "posted48h": 2,
+   "posted24h": 0,
    "bursts": 0,
    "account": {
     "name": "@xpengwins",
@@ -53,7 +53,7 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 18,
+   "avgReachRecent": 43,
    "last": "2026-11-11T13:13:07+0000",
    "top": [
     {
@@ -72,6 +72,14 @@
    "extra": {}
   }
  },
- "issues": [],
- "alertKeys": []
+ "issues": [
+  "❗ Threads (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
+  "❗ Instagram (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
+  "❗ Facebook (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ ],
+ "alertKeys": [
+  "gagal:threads:halaman artikel belum tayang setelah 6 m",
+  "gagal:instagram:halaman artikel belum tayang setelah 6 m",
+  "gagal:facebook:halaman artikel belum tayang setelah 6 m"
+ ]
 }

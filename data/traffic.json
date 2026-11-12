@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-12T03:24:35.975Z",
+ "generated": "2026-11-12T15:31:11.236Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 1,
-  "views": 1,
-  "newUsers": 0
+  "users": 4,
+  "sessions": 5,
+  "views": 16,
+  "newUsers": 1
  },
  "yesterday": {
   "users": 29,
@@ -14,16 +14,16 @@
   "newUsers": 27
  },
  "last7": {
-  "users": 209,
-  "sessions": 270,
-  "views": 472,
-  "newUsers": 206
+  "users": 210,
+  "sessions": 274,
+  "views": 487,
+  "newUsers": 207
  },
  "last30": {
-  "users": 1193,
-  "sessions": 1398,
-  "views": 2337,
-  "newUsers": 1214
+  "users": 1194,
+  "sessions": 1402,
+  "views": 2352,
+  "newUsers": 1215
  },
  "prev30": {
   "users": 0,
@@ -142,16 +142,16 @@
   },
   {
    "date": "2026-11-12",
-   "users": 1,
-   "sessions": 1,
-   "views": 1
+   "users": 4,
+   "sessions": 5,
+   "views": 16
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 975,
-   "users": 605
+   "views": 985,
+   "users": 606
   },
   {
    "path": "/model/xpeng-g6/",
@@ -165,17 +165,17 @@
   },
   {
    "path": "/pricelist/",
-   "views": 216,
+   "views": 217,
    "users": 170
   },
   {
    "path": "/model/",
-   "views": 172,
+   "views": 174,
    "users": 45
   },
   {
    "path": "/kontak/",
-   "views": 37,
+   "views": 39,
    "users": 9
   },
   {
@@ -202,7 +202,7 @@
  "channels": [
   {
    "k": "Paid Search",
-   "v": 471
+   "v": 472
   },
   {
    "k": "Paid Social",
@@ -214,33 +214,33 @@
   },
   {
    "k": "Direct",
-   "v": 122
+   "v": 123
   },
   {
    "k": "Referral",
-   "v": 97
+   "v": 99
   },
   {
    "k": "Organic Search",
    "v": 66
   },
   {
-   "k": "Unassigned",
-   "v": 14
+   "k": "Cross-network",
+   "v": 6
   },
   {
-   "k": "Cross-network",
+   "k": "Unassigned",
    "v": 6
   }
  ],
  "devices": [
   {
    "k": "mobile",
-   "v": 1097
+   "v": 1099
   },
   {
    "k": "desktop",
-   "v": 285
+   "v": 287
   },
   {
    "k": "tablet",
@@ -250,7 +250,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 555
+   "v": 556
   },
   {
    "k": "Tangerang",

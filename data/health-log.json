@@ -146,8 +146,8 @@
   },
   {
    "date": "2026-11-12",
-   "at": "2026-11-12T03:24:35.328Z",
-   "pages": 76,
+   "at": "2026-11-12T15:31:10.655Z",
+   "pages": 78,
    "ok": 0,
    "statusBad": [
     "/ → ENOTFOUND",
@@ -171,6 +171,8 @@
     "/en/model/xpeng-g6/ → ENOTFOUND",
     "/model/xpeng-g9l/ → ENOTFOUND",
     "/en/model/xpeng-g9l/ → ENOTFOUND",
+    "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/suv-listrik-keluarga-xpeng-g9l/ → ENOTFOUND",
     "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
     "/artikel/mobil-listrik-terbaru-2026/ → ENOTFOUND",
     "/artikel/suspensi-udara-xpeng-g9l/ → ENOTFOUND",
@@ -228,15 +230,15 @@
     "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
    ],
    "bad": 0,
-   "warn": 55
+   "warn": 57
   }
  ],
  "ext": {},
- "generated": "2026-11-12T03:24:35.328Z",
+ "generated": "2026-11-12T15:31:10.655Z",
  "latest": {
   "date": "2026-11-12",
-  "at": "2026-11-12T03:24:35.328Z",
-  "pages": 76,
+  "at": "2026-11-12T15:31:10.655Z",
+  "pages": 78,
   "ok": 0,
   "statusBad": [
    "/ → ENOTFOUND",
@@ -260,6 +262,8 @@
    "/en/model/xpeng-g6/ → ENOTFOUND",
    "/model/xpeng-g9l/ → ENOTFOUND",
    "/en/model/xpeng-g9l/ → ENOTFOUND",
+   "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/suv-listrik-keluarga-xpeng-g9l/ → ENOTFOUND",
    "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
    "/artikel/mobil-listrik-terbaru-2026/ → ENOTFOUND",
    "/artikel/suspensi-udara-xpeng-g9l/ → ENOTFOUND",
@@ -317,7 +321,7 @@
    "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
   ],
   "bad": 0,
-  "warn": 55,
+  "warn": 57,
   "orphanFiles": [
    {
     "path": "assets/img/214631.webp",
@@ -470,6 +474,18 @@
   ],
   "orphanTotal": 37,
   "issues": [
+   {
+    "k": "orphan:/artikel/warna-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/warna-xpeng-g9l/",
+    "t": "🟠 /artikel/warna-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/suv-listrik-keluarga-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/suv-listrik-keluarga-xpeng-g9l/",
+    "t": "🟠 /artikel/suv-listrik-keluarga-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
    {
     "k": "orphan:/artikel/suv-listrik-flagship-2026/",
     "sev": "warn",
@@ -803,6 +819,8 @@
   ]
  },
  "alertKeys": [
+  "orphan:/artikel/warna-xpeng-g9l/",
+  "orphan:/artikel/suv-listrik-keluarga-xpeng-g9l/",
   "orphan:/artikel/suv-listrik-flagship-2026/",
   "orphan:/artikel/mobil-listrik-terbaru-2026/",
   "orphan:/artikel/suspensi-udara-xpeng-g9l/",
