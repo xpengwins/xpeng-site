@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T21:58:28.047Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T21:58:28.047Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T21:58:28.046Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T21:00:54.457Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-11-10T05:59:08.434Z",
   "slug": "suspensi-udara-xpeng-g9l",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T13:18:10.419Z",
-  "slug": "layar-hiburan-belakang-xpeng-g9l",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T13:17:47.947Z",
-  "slug": "layar-hiburan-belakang-xpeng-g9l",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T13:17:34.813Z",
-  "slug": "layar-hiburan-belakang-xpeng-g9l",
   "platform": "facebook",
   "ok": true,
   "msg": "terkirim"
