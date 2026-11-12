@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T12:12:58.036Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T12:12:58.036Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T12:12:58.035Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T11:14:43.646Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-11-06T06:03:04.087Z",
   "slug": "dimensi-xpeng-g9l",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-06T06:02:53.038Z",
-  "slug": "dimensi-xpeng-g9l",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-05T13:16:04.672Z",
-  "slug": "xpeng-g9l-vs-xpeng-g6",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-05T13:15:42.792Z",
-  "slug": "xpeng-g9l-vs-xpeng-g6",
   "platform": "instagram",
   "ok": true,
   "msg": "terkirim"
