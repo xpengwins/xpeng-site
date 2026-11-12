@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T13:24:02.627Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T13:24:02.627Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T13:24:02.625Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T12:12:58.036Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-11-06T13:11:19.283Z",
   "slug": "xpeng-g9l-7-seater",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-06T13:11:07.472Z",
-  "slug": "xpeng-g9l-7-seater",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-06T06:03:25.862Z",
-  "slug": "dimensi-xpeng-g9l",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-06T06:03:04.087Z",
-  "slug": "dimensi-xpeng-g9l",
   "platform": "instagram",
   "ok": true,
   "msg": "terkirim"
