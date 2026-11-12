@@ -143,244 +143,181 @@
    "statusBad": [],
    "bad": 0,
    "warn": 0
+  },
+  {
+   "date": "2026-11-12",
+   "at": "2026-11-12T03:24:35.328Z",
+   "pages": 76,
+   "ok": 0,
+   "statusBad": [
+    "/ → ENOTFOUND",
+    "/en/ → ENOTFOUND",
+    "/model/ → ENOTFOUND",
+    "/en/model/ → ENOTFOUND",
+    "/pricelist/ → ENOTFOUND",
+    "/en/pricelist/ → ENOTFOUND",
+    "/artikel/ → ENOTFOUND",
+    "/kontak/ → ENOTFOUND",
+    "/en/kontak/ → ENOTFOUND",
+    "/tentang/ → ENOTFOUND",
+    "/en/tentang/ → ENOTFOUND",
+    "/tentang/bengkel-rekanan-luar-kota/ → ENOTFOUND",
+    "/en/tentang/bengkel-rekanan-luar-kota/ → ENOTFOUND",
+    "/promo/ → ENOTFOUND",
+    "/en/promo/ → ENOTFOUND",
+    "/model/xpeng-x9/ → ENOTFOUND",
+    "/en/model/xpeng-x9/ → ENOTFOUND",
+    "/model/xpeng-g6/ → ENOTFOUND",
+    "/en/model/xpeng-g6/ → ENOTFOUND",
+    "/model/xpeng-g9l/ → ENOTFOUND",
+    "/en/model/xpeng-g9l/ → ENOTFOUND",
+    "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
+    "/artikel/mobil-listrik-terbaru-2026/ → ENOTFOUND",
+    "/artikel/suspensi-udara-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/roda-belakang-berbelok-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/kursi-zero-gravity-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/layar-hiburan-belakang-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-paris-motor-show/ → ENOTFOUND",
+    "/artikel/harga-xpeng-g9l-eropa/ → ENOTFOUND",
+    "/artikel/vla-2-0-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/chip-turing-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/dimensi-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-7-seater/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-vs-xpeng-x9/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-vs-xpeng-g6/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-erev/ → ENOTFOUND",
+    "/artikel/interior-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/bengkel-rekanan-xpeng-luar-kota/ → ENOTFOUND",
+    "/artikel/jarak-tempuh-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/charging-5c-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/mobil-listrik-saat-banjir/ → ENOTFOUND",
+    "/artikel/harga-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-indonesia/ → ENOTFOUND",
+    "/artikel/mobil-listrik-keluarga/ → ENOTFOUND",
+    "/artikel/perawatan-mobil-listrik/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-segera-launching/ → ENOTFOUND",
+    "/artikel/spesifikasi-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/biaya-charging-spklu/ → ENOTFOUND",
+    "/artikel/mobil-listrik-untuk-mudik/ → ENOTFOUND",
+    "/artikel/test-drive-mobil-listrik/ → ENOTFOUND",
+    "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/ → ENOTFOUND",
+    "/artikel/spesifikasi-mobil-listrik-wajib-dicek/ → ENOTFOUND",
+    "/artikel/simulasi-cicilan-xpeng/ → ENOTFOUND",
+    "/artikel/xpeng-dirakit-di-indonesia/ → ENOTFOUND",
+    "/artikel/baterai-lfp-vs-ncm/ → ENOTFOUND",
+    "/artikel/interior-xpeng-x9/ → ENOTFOUND",
+    "/artikel/parkir-otomatis-xpeng-g6/ → ENOTFOUND",
+    "/artikel/garansi-baterai-xpeng/ → ENOTFOUND",
+    "/artikel/xpeng-g6-pro-vs-awd/ → ENOTFOUND",
+    "/artikel/pengisian-cepat-800v-xpeng/ → ENOTFOUND",
+    "/artikel/xpilot-4-0-xpeng/ → ENOTFOUND",
+    "/artikel/mobil-listrik-premium-terbaik-indonesia/ → ENOTFOUND",
+    "/artikel/mobil-listrik-7-seater-indonesia/ → ENOTFOUND",
+    "/artikel/suv-listrik-terbaik-indonesia/ → ENOTFOUND",
+    "/artikel/pajak-mobil-listrik-2026/ → ENOTFOUND",
+    "/artikel/teknologi-xpeng/ → ENOTFOUND",
+    "/artikel/mpv-listrik-terbaik-indonesia/ → ENOTFOUND",
+    "/artikel/xpeng-g6-vs-byd-sealion-7/ → ENOTFOUND",
+    "/artikel/xpeng-x9-vs-toyota-alphard/ → ENOTFOUND",
+    "/artikel/keunggulan-xpeng/ → ENOTFOUND",
+    "/artikel/xpeng-g6-vs-hyundai-ioniq-5/ → ENOTFOUND",
+    "/artikel/xpeng-x9-vs-denza-d9/ → ENOTFOUND",
+    "/artikel/harga-mobil-listrik-terbaru-2026/ → ENOTFOUND",
+    "/artikel/xpeng-indonesia-profil-dan-model/ → ENOTFOUND",
+    "/artikel/kenapa-harus-xpeng/ → ENOTFOUND",
+    "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
+   ],
+   "bad": 0,
+   "warn": 55
   }
  ],
- "ext": {
-  "https://lynk.id/xpengwins": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-7950664/ini-yang-bikin-xpeng-x9-beda-dari-denza-d9-toyota-alphard": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://listrikindonesia.com/detail/17066/xpeng-g6-alternatif-suv-listrik-dengan-kemudahan-parkir": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8509176/6-spesifikasi-ev-yang-wajib-dicek-sebelum-beli-mobil-listrik": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-7973511/spesifikasi-xpeng-x9-yang-dijual-lebih-tinggi-dari-denza-d9-di-indonesia": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://moladin.com/news/otr-denza-d9-juni-2026/": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://moladin.com/news/spesifikasi-hyundai-ioniq-5/": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-7776327/byd-sealion-7-mengaspal-di-iims-2025-segini-harganya": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8451945/pajak-mobil-motor-listrik-tak-gratis-lagi-tapi-ada-insentif-jadi-lebih-murah": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://pajakku.com/artikel/kendaraan-listrik-di-jakarta-tetap-bebas-pajak-ini-rinciannya": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://ortax.org/pemprov-dki-jakarta-pertahankan-pembebasan-pajak-kendaraan-listrik": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8613301/wacana-mobil-listrik-kena-pajak-tahunan-sempat-dibatalkan-kini-muncul-lagi": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://www.autofun.co.id/berita/dari-startup-jadi-raksasa-ev-xpeng-tunjukkan-taji-di-pasar-global-477390": {
-   "s": 403,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil/d-8488470/alphard-versi-murah-vs-denza-d9-ternyata-ini-yang-lebih-laris": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://cnevpost.com/2025/07/24/xpeng-begins-production-indonesia/": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://www.autofun.co.id/berita/xpeng-x9-dan-g6-bakal-dirakit-di-indonesia-begini-spesifikasi-lengkapnya-84116": {
-   "s": 403,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://auto2000.co.id/berita-dan-tips/biaya-charge-mobil-listrik-di-spklu": {
-   "s": 200,
-   "err": "",
-   "at": 1794194290302
-  },
-  "https://en.wikipedia.org/wiki/XPeng_G9L": {
-   "s": 200,
-   "err": "",
-   "at": 1794367319608
-  },
-  "https://cnevpost.com/2026/09/17/xpeng-launches-g9l-china/": {
-   "s": 200,
-   "err": "",
-   "at": 1794367319608
-  },
-  "https://www.kabarbursa.com/otomotif/xpeng-g9l-dibanderol-rp149-miliar-bawa-kabin-7-penumpang": {
-   "s": 200,
-   "err": "",
-   "at": 1794367319608
-  },
-  "https://listrikindonesia.com/detail/16065/spesifikasi-lengkap-xpeng-x9-mobil-listrik-premium-untuk-keluarga": {
-   "s": 200,
-   "err": "",
-   "at": 1794194290302
-  },
-  "https://cnevpost.com/2026/08/11/xpeng-starts-g9l-pre-sales/": {
-   "s": 200,
-   "err": "",
-   "at": 1794194290302
-  },
-  "https://autonews.gasgoo.com/articles/ev/xpeng-g9l-goes-on-sale-with-bev-reev-powertrains-2100932123174563841": {
-   "s": 200,
-   "err": "",
-   "at": 1794194290302
-  },
-  "https://moladin.com/news/xpeng-indonesia-catat-tren-positif-di-2025-dan-siapkan-model-fresh-di-iims-2026/": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://otokuliner.com/2026/08/dealer-xpeng-surabaya-resmi-dibuka-terbesar-di-indonesia/": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://www.autojago.com/news/xpeng-perluas-jaringan-di-pulau-jawa-dan-sumatera-resmikan-experience-and-service-center-di-bandung-dan-medan": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://www.viva.co.id/otomotif/1912307-xpeng-semakin-serius-di-indonesia": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://carnewschina.com/2026/08/11/xpeng-g9l-revealed-price-with-rear-wheel-steering-755-km-range/": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://autonews.gasgoo.com/articles/ev/2086839837377449984": {
-   "s": 200,
-   "err": "",
-   "at": 1794323828487
-  },
-  "https://www.medcom.id/otomotif/mobil/4baOM2BK-xpeng-x9-pro-terlalu-royal-demi-nama-kemewahan-dan-kenyamanan": {
-   "s": 502,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://www.zigwheels.co.id/motovaganza/xpeng-x9-penantang-serius-di-kelas-mpv-listrik-premium-indonesia/": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://bapenda.jakarta.go.id/artikel/pajak-kendaraan-listrik-tak-lagi-gratis-pemprov-dki-tetap-beri-keringanan": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://otomotifnet.gridoto.com/read/234377766/resmi-dki-jakarta-membatalkan-rencana-pajak-tahunan-kendaraan-listrik-terbaru-2026": {
-   "s": 202,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8608173/alasan-dprd-dki-usul-mobil-listrik-kena-pajak-tahunan": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://www.liputan6.com/otomotif/read/6320532/aturan-baru-pajak-mobil-listrik-2026-dki-jakarta-cari-solusi-jabar-tegas-tarik-pajak": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://jateng.idntimes.com/news/jawa-tengah/status-pajak-kendaraan-listrik-jateng-2026-tetap-nol-persen-00-2m8jx-1hy6kx": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://jatim.jpnn.com/jatim-terkini/49050/mobil-listrik-di-jatim-tembus-17-persen-bapenda-ungkap-alasan-pajaknya-masih-dibebaskan": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://news.ddtc.co.id/berita/nasional/1820265/ppn-dtp-kendaraan-listrik-belum-dirilis-airlangga-masih-dikaji-ulang": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://otodriver.com/komparasi/2026/komparasi-spesifikasi-mg-s6-vs-byd-sealion-7-vs-xpeng-g6-komeffgbgg6": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://auto2000.co.id/dealer-toyota/jakarta-pusat/auto2000sudirman/sales-advisor/agung-jaya-00063808/berita-dan-tips/harga-alphard-hybrid-termurah-jakarta-pusat": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://auto.katadata.co.id/car/the-price-of-the-hyundai-ioniq-5-increased-by-rp-81-million-in-mid-january-2026-22971": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://jateng.antaranews.com/berita/490080/hmid-genjot-produksi-ioniq-5-untuk-urai-antrean-yang-panjang": {
-   "s": 200,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://industri.kontan.co.id/news/harga-mobil-ev-impor-bisa-naik-30-usai-insentif-cbu-dihentikan-2026": {
-   "s": 403,
-   "err": "",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8124944/harga-mobil-listrik-impor-diprediksi-naik-30-usai-insentif-dicabut": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  },
-  "https://oto.detik.com/mobil-listrik/d-8555009/harga-mobil-listrik-termurah-juli-2026": {
-   "s": 0,
-   "err": "UND_ERR_CONNECT_TIMEOUT",
-   "at": 1794237999474
-  }
- },
- "generated": "2026-11-11T03:22:04.439Z",
+ "ext": {},
+ "generated": "2026-11-12T03:24:35.328Z",
  "latest": {
-  "date": "2026-11-11",
-  "at": "2026-11-11T03:22:04.439Z",
-  "pages": 72,
-  "ok": 72,
-  "statusBad": [],
+  "date": "2026-11-12",
+  "at": "2026-11-12T03:24:35.328Z",
+  "pages": 76,
+  "ok": 0,
+  "statusBad": [
+   "/ → ENOTFOUND",
+   "/en/ → ENOTFOUND",
+   "/model/ → ENOTFOUND",
+   "/en/model/ → ENOTFOUND",
+   "/pricelist/ → ENOTFOUND",
+   "/en/pricelist/ → ENOTFOUND",
+   "/artikel/ → ENOTFOUND",
+   "/kontak/ → ENOTFOUND",
+   "/en/kontak/ → ENOTFOUND",
+   "/tentang/ → ENOTFOUND",
+   "/en/tentang/ → ENOTFOUND",
+   "/tentang/bengkel-rekanan-luar-kota/ → ENOTFOUND",
+   "/en/tentang/bengkel-rekanan-luar-kota/ → ENOTFOUND",
+   "/promo/ → ENOTFOUND",
+   "/en/promo/ → ENOTFOUND",
+   "/model/xpeng-x9/ → ENOTFOUND",
+   "/en/model/xpeng-x9/ → ENOTFOUND",
+   "/model/xpeng-g6/ → ENOTFOUND",
+   "/en/model/xpeng-g6/ → ENOTFOUND",
+   "/model/xpeng-g9l/ → ENOTFOUND",
+   "/en/model/xpeng-g9l/ → ENOTFOUND",
+   "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
+   "/artikel/mobil-listrik-terbaru-2026/ → ENOTFOUND",
+   "/artikel/suspensi-udara-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/roda-belakang-berbelok-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/kursi-zero-gravity-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/layar-hiburan-belakang-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-paris-motor-show/ → ENOTFOUND",
+   "/artikel/harga-xpeng-g9l-eropa/ → ENOTFOUND",
+   "/artikel/vla-2-0-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/chip-turing-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/dimensi-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-7-seater/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-vs-xpeng-x9/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-vs-xpeng-g6/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-erev/ → ENOTFOUND",
+   "/artikel/interior-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/bengkel-rekanan-xpeng-luar-kota/ → ENOTFOUND",
+   "/artikel/jarak-tempuh-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/charging-5c-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/mobil-listrik-saat-banjir/ → ENOTFOUND",
+   "/artikel/harga-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-indonesia/ → ENOTFOUND",
+   "/artikel/mobil-listrik-keluarga/ → ENOTFOUND",
+   "/artikel/perawatan-mobil-listrik/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-segera-launching/ → ENOTFOUND",
+   "/artikel/spesifikasi-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/biaya-charging-spklu/ → ENOTFOUND",
+   "/artikel/mobil-listrik-untuk-mudik/ → ENOTFOUND",
+   "/artikel/test-drive-mobil-listrik/ → ENOTFOUND",
+   "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/ → ENOTFOUND",
+   "/artikel/spesifikasi-mobil-listrik-wajib-dicek/ → ENOTFOUND",
+   "/artikel/simulasi-cicilan-xpeng/ → ENOTFOUND",
+   "/artikel/xpeng-dirakit-di-indonesia/ → ENOTFOUND",
+   "/artikel/baterai-lfp-vs-ncm/ → ENOTFOUND",
+   "/artikel/interior-xpeng-x9/ → ENOTFOUND",
+   "/artikel/parkir-otomatis-xpeng-g6/ → ENOTFOUND",
+   "/artikel/garansi-baterai-xpeng/ → ENOTFOUND",
+   "/artikel/xpeng-g6-pro-vs-awd/ → ENOTFOUND",
+   "/artikel/pengisian-cepat-800v-xpeng/ → ENOTFOUND",
+   "/artikel/xpilot-4-0-xpeng/ → ENOTFOUND",
+   "/artikel/mobil-listrik-premium-terbaik-indonesia/ → ENOTFOUND",
+   "/artikel/mobil-listrik-7-seater-indonesia/ → ENOTFOUND",
+   "/artikel/suv-listrik-terbaik-indonesia/ → ENOTFOUND",
+   "/artikel/pajak-mobil-listrik-2026/ → ENOTFOUND",
+   "/artikel/teknologi-xpeng/ → ENOTFOUND",
+   "/artikel/mpv-listrik-terbaik-indonesia/ → ENOTFOUND",
+   "/artikel/xpeng-g6-vs-byd-sealion-7/ → ENOTFOUND",
+   "/artikel/xpeng-x9-vs-toyota-alphard/ → ENOTFOUND",
+   "/artikel/keunggulan-xpeng/ → ENOTFOUND",
+   "/artikel/xpeng-g6-vs-hyundai-ioniq-5/ → ENOTFOUND",
+   "/artikel/xpeng-x9-vs-denza-d9/ → ENOTFOUND",
+   "/artikel/harga-mobil-listrik-terbaru-2026/ → ENOTFOUND",
+   "/artikel/xpeng-indonesia-profil-dan-model/ → ENOTFOUND",
+   "/artikel/kenapa-harus-xpeng/ → ENOTFOUND",
+   "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
+  ],
   "bad": 0,
-  "warn": 0,
+  "warn": 55,
   "orphanFiles": [
    {
     "path": "assets/img/214631.webp",
@@ -389,6 +326,14 @@
    {
     "path": "assets/img/226532.webp",
     "kb": 122
+   },
+   {
+    "path": "assets/img/logo-white.svg",
+    "kb": 1
+   },
+   {
+    "path": "assets/img/logo.svg",
+    "kb": 1
    },
    {
     "path": "assets/img/placeholder.svg",
@@ -523,8 +468,395 @@
     "kb": 21
    }
   ],
-  "orphanTotal": 35,
-  "issues": []
+  "orphanTotal": 37,
+  "issues": [
+   {
+    "k": "orphan:/artikel/suv-listrik-flagship-2026/",
+    "sev": "warn",
+    "page": "/artikel/suv-listrik-flagship-2026/",
+    "t": "🟠 /artikel/suv-listrik-flagship-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-terbaru-2026/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-terbaru-2026/",
+    "t": "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/suspensi-udara-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/suspensi-udara-xpeng-g9l/",
+    "t": "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/roda-belakang-berbelok-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/roda-belakang-berbelok-xpeng-g9l/",
+    "t": "🟠 /artikel/roda-belakang-berbelok-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/kursi-zero-gravity-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/kursi-zero-gravity-xpeng-g9l/",
+    "t": "🟠 /artikel/kursi-zero-gravity-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/layar-hiburan-belakang-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/layar-hiburan-belakang-xpeng-g9l/",
+    "t": "🟠 /artikel/layar-hiburan-belakang-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-paris-motor-show/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-paris-motor-show/",
+    "t": "🟠 /artikel/xpeng-g9l-paris-motor-show/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/harga-xpeng-g9l-eropa/",
+    "sev": "warn",
+    "page": "/artikel/harga-xpeng-g9l-eropa/",
+    "t": "🟠 /artikel/harga-xpeng-g9l-eropa/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/vla-2-0-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/vla-2-0-xpeng-g9l/",
+    "t": "🟠 /artikel/vla-2-0-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/chip-turing-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/chip-turing-xpeng-g9l/",
+    "t": "🟠 /artikel/chip-turing-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/dimensi-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/dimensi-xpeng-g9l/",
+    "t": "🟠 /artikel/dimensi-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-7-seater/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-7-seater/",
+    "t": "🟠 /artikel/xpeng-g9l-7-seater/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-vs-xpeng-x9/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-vs-xpeng-x9/",
+    "t": "🟠 /artikel/xpeng-g9l-vs-xpeng-x9/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-vs-xpeng-g6/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-vs-xpeng-g6/",
+    "t": "🟠 /artikel/xpeng-g9l-vs-xpeng-g6/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-erev/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-erev/",
+    "t": "🟠 /artikel/xpeng-g9l-erev/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/interior-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/interior-xpeng-g9l/",
+    "t": "🟠 /artikel/interior-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/bengkel-rekanan-xpeng-luar-kota/",
+    "sev": "warn",
+    "page": "/artikel/bengkel-rekanan-xpeng-luar-kota/",
+    "t": "🟠 /artikel/bengkel-rekanan-xpeng-luar-kota/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/jarak-tempuh-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/jarak-tempuh-xpeng-g9l/",
+    "t": "🟠 /artikel/jarak-tempuh-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/charging-5c-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/charging-5c-xpeng-g9l/",
+    "t": "🟠 /artikel/charging-5c-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-saat-banjir/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-saat-banjir/",
+    "t": "🟠 /artikel/mobil-listrik-saat-banjir/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/harga-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/harga-xpeng-g9l/",
+    "t": "🟠 /artikel/harga-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-indonesia/",
+    "t": "🟠 /artikel/xpeng-g9l-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-keluarga/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-keluarga/",
+    "t": "🟠 /artikel/mobil-listrik-keluarga/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/perawatan-mobil-listrik/",
+    "sev": "warn",
+    "page": "/artikel/perawatan-mobil-listrik/",
+    "t": "🟠 /artikel/perawatan-mobil-listrik/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g9l-segera-launching/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-segera-launching/",
+    "t": "🟠 /artikel/xpeng-g9l-segera-launching/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/spesifikasi-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/spesifikasi-xpeng-g9l/",
+    "t": "🟠 /artikel/spesifikasi-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/biaya-charging-spklu/",
+    "sev": "warn",
+    "page": "/artikel/biaya-charging-spklu/",
+    "t": "🟠 /artikel/biaya-charging-spklu/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-untuk-mudik/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-untuk-mudik/",
+    "t": "🟠 /artikel/mobil-listrik-untuk-mudik/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/test-drive-mobil-listrik/",
+    "sev": "warn",
+    "page": "/artikel/test-drive-mobil-listrik/",
+    "t": "🟠 /artikel/test-drive-mobil-listrik/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+    "sev": "warn",
+    "page": "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+    "t": "🟠 /artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/spesifikasi-mobil-listrik-wajib-dicek/",
+    "sev": "warn",
+    "page": "/artikel/spesifikasi-mobil-listrik-wajib-dicek/",
+    "t": "🟠 /artikel/spesifikasi-mobil-listrik-wajib-dicek/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/simulasi-cicilan-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/simulasi-cicilan-xpeng/",
+    "t": "🟠 /artikel/simulasi-cicilan-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-dirakit-di-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-dirakit-di-indonesia/",
+    "t": "🟠 /artikel/xpeng-dirakit-di-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/baterai-lfp-vs-ncm/",
+    "sev": "warn",
+    "page": "/artikel/baterai-lfp-vs-ncm/",
+    "t": "🟠 /artikel/baterai-lfp-vs-ncm/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/interior-xpeng-x9/",
+    "sev": "warn",
+    "page": "/artikel/interior-xpeng-x9/",
+    "t": "🟠 /artikel/interior-xpeng-x9/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/parkir-otomatis-xpeng-g6/",
+    "sev": "warn",
+    "page": "/artikel/parkir-otomatis-xpeng-g6/",
+    "t": "🟠 /artikel/parkir-otomatis-xpeng-g6/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/garansi-baterai-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/garansi-baterai-xpeng/",
+    "t": "🟠 /artikel/garansi-baterai-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g6-pro-vs-awd/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g6-pro-vs-awd/",
+    "t": "🟠 /artikel/xpeng-g6-pro-vs-awd/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/pengisian-cepat-800v-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/pengisian-cepat-800v-xpeng/",
+    "t": "🟠 /artikel/pengisian-cepat-800v-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpilot-4-0-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/xpilot-4-0-xpeng/",
+    "t": "🟠 /artikel/xpilot-4-0-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-premium-terbaik-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-premium-terbaik-indonesia/",
+    "t": "🟠 /artikel/mobil-listrik-premium-terbaik-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mobil-listrik-7-seater-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/mobil-listrik-7-seater-indonesia/",
+    "t": "🟠 /artikel/mobil-listrik-7-seater-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/suv-listrik-terbaik-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/suv-listrik-terbaik-indonesia/",
+    "t": "🟠 /artikel/suv-listrik-terbaik-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/pajak-mobil-listrik-2026/",
+    "sev": "warn",
+    "page": "/artikel/pajak-mobil-listrik-2026/",
+    "t": "🟠 /artikel/pajak-mobil-listrik-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/teknologi-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/teknologi-xpeng/",
+    "t": "🟠 /artikel/teknologi-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/mpv-listrik-terbaik-indonesia/",
+    "sev": "warn",
+    "page": "/artikel/mpv-listrik-terbaik-indonesia/",
+    "t": "🟠 /artikel/mpv-listrik-terbaik-indonesia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g6-vs-byd-sealion-7/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g6-vs-byd-sealion-7/",
+    "t": "🟠 /artikel/xpeng-g6-vs-byd-sealion-7/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-x9-vs-toyota-alphard/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-x9-vs-toyota-alphard/",
+    "t": "🟠 /artikel/xpeng-x9-vs-toyota-alphard/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/keunggulan-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/keunggulan-xpeng/",
+    "t": "🟠 /artikel/keunggulan-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
+    "t": "🟠 /artikel/xpeng-g6-vs-hyundai-ioniq-5/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-x9-vs-denza-d9/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-x9-vs-denza-d9/",
+    "t": "🟠 /artikel/xpeng-x9-vs-denza-d9/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/harga-mobil-listrik-terbaru-2026/",
+    "sev": "warn",
+    "page": "/artikel/harga-mobil-listrik-terbaru-2026/",
+    "t": "🟠 /artikel/harga-mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/xpeng-indonesia-profil-dan-model/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-indonesia-profil-dan-model/",
+    "t": "🟠 /artikel/xpeng-indonesia-profil-dan-model/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/kenapa-harus-xpeng/",
+    "sev": "warn",
+    "page": "/artikel/kenapa-harus-xpeng/",
+    "t": "🟠 /artikel/kenapa-harus-xpeng/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/harga-xpeng-x9-dan-g6-juli-2026/",
+    "sev": "warn",
+    "page": "/artikel/harga-xpeng-x9-dan-g6-juli-2026/",
+    "t": "🟠 /artikel/harga-xpeng-x9-dan-g6-juli-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   }
+  ]
  },
- "alertKeys": []
+ "alertKeys": [
+  "orphan:/artikel/suv-listrik-flagship-2026/",
+  "orphan:/artikel/mobil-listrik-terbaru-2026/",
+  "orphan:/artikel/suspensi-udara-xpeng-g9l/",
+  "orphan:/artikel/roda-belakang-berbelok-xpeng-g9l/",
+  "orphan:/artikel/kursi-zero-gravity-xpeng-g9l/",
+  "orphan:/artikel/layar-hiburan-belakang-xpeng-g9l/",
+  "orphan:/artikel/xpeng-g9l-paris-motor-show/",
+  "orphan:/artikel/harga-xpeng-g9l-eropa/",
+  "orphan:/artikel/vla-2-0-xpeng-g9l/",
+  "orphan:/artikel/chip-turing-xpeng-g9l/",
+  "orphan:/artikel/dimensi-xpeng-g9l/",
+  "orphan:/artikel/xpeng-g9l-7-seater/",
+  "orphan:/artikel/xpeng-g9l-vs-xpeng-x9/",
+  "orphan:/artikel/xpeng-g9l-vs-xpeng-g6/",
+  "orphan:/artikel/xpeng-g9l-erev/",
+  "orphan:/artikel/interior-xpeng-g9l/",
+  "orphan:/artikel/bengkel-rekanan-xpeng-luar-kota/",
+  "orphan:/artikel/jarak-tempuh-xpeng-g9l/",
+  "orphan:/artikel/charging-5c-xpeng-g9l/",
+  "orphan:/artikel/mobil-listrik-saat-banjir/",
+  "orphan:/artikel/harga-xpeng-g9l/",
+  "orphan:/artikel/xpeng-g9l-indonesia/",
+  "orphan:/artikel/mobil-listrik-keluarga/",
+  "orphan:/artikel/perawatan-mobil-listrik/",
+  "orphan:/artikel/xpeng-g9l-segera-launching/",
+  "orphan:/artikel/spesifikasi-xpeng-g9l/",
+  "orphan:/artikel/biaya-charging-spklu/",
+  "orphan:/artikel/mobil-listrik-untuk-mudik/",
+  "orphan:/artikel/test-drive-mobil-listrik/",
+  "orphan:/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+  "orphan:/artikel/spesifikasi-mobil-listrik-wajib-dicek/",
+  "orphan:/artikel/simulasi-cicilan-xpeng/",
+  "orphan:/artikel/xpeng-dirakit-di-indonesia/",
+  "orphan:/artikel/baterai-lfp-vs-ncm/",
+  "orphan:/artikel/interior-xpeng-x9/",
+  "orphan:/artikel/parkir-otomatis-xpeng-g6/",
+  "orphan:/artikel/garansi-baterai-xpeng/",
+  "orphan:/artikel/xpeng-g6-pro-vs-awd/",
+  "orphan:/artikel/pengisian-cepat-800v-xpeng/",
+  "orphan:/artikel/xpilot-4-0-xpeng/",
+  "orphan:/artikel/mobil-listrik-premium-terbaik-indonesia/",
+  "orphan:/artikel/mobil-listrik-7-seater-indonesia/",
+  "orphan:/artikel/suv-listrik-terbaik-indonesia/",
+  "orphan:/artikel/pajak-mobil-listrik-2026/",
+  "orphan:/artikel/teknologi-xpeng/",
+  "orphan:/artikel/mpv-listrik-terbaik-indonesia/",
+  "orphan:/artikel/xpeng-g6-vs-byd-sealion-7/",
+  "orphan:/artikel/xpeng-x9-vs-toyota-alphard/",
+  "orphan:/artikel/keunggulan-xpeng/",
+  "orphan:/artikel/xpeng-g6-vs-hyundai-ioniq-5/",
+  "orphan:/artikel/xpeng-x9-vs-denza-d9/",
+  "orphan:/artikel/harga-mobil-listrik-terbaru-2026/",
+  "orphan:/artikel/xpeng-indonesia-profil-dan-model/",
+  "orphan:/artikel/kenapa-harus-xpeng/",
+  "orphan:/artikel/harga-xpeng-x9-dan-g6-juli-2026/"
+ ]
 }

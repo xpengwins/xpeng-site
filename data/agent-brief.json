@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-11T03:22:14.307Z",
+ "generated": "2026-11-12T03:24:46.286Z",
  "traffic": {
   "periode": [
-   "2026-10-12",
-   "2026-11-08"
+   "2026-10-13",
+   "2026-11-09"
   ],
-  "klik": 30,
-  "tayang": 863,
-  "posisi": 9.1,
+  "klik": 35,
+  "tayang": 970,
+  "posisi": 8.9,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -15,7 +15,7 @@
  "A_perbaiki_judul": [
   {
    "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
-   "tayang": 10,
+   "tayang": 11,
    "posisi": 11.3,
    "kataKunci": "xpeng g6 pro vs byd sealion 7",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
@@ -47,14 +47,21 @@
    "posisi": 7.3,
    "kataKunci": "\"xpeng\" \"mobil\"",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
+  },
+  {
+   "halaman": "/artikel/dimensi-xpeng-g9l/",
+   "tayang": 3,
+   "posisi": 4,
+   "kataKunci": "dimensi xpeng g9l",
+   "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   }
  ],
  "B_dorong_ke_halaman_1": [
   {
    "kataKunci": "xpeng g9l harga",
    "halaman": "/artikel/xpeng-g9l-vs-xpeng-g6/",
-   "tayang": 36,
-   "posisi": 10.6,
+   "tayang": 41,
+   "posisi": 10.1,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
@@ -65,17 +72,17 @@
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
+   "kataKunci": "xpeng g6 pro vs byd sealion 7",
+   "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
+   "tayang": 5,
+   "posisi": 11,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  },
+  {
    "kataKunci": "xpeng captain seat",
    "halaman": "/model/xpeng-x9/",
    "tayang": 4,
    "posisi": 8.5,
-   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
-  },
-  {
-   "kataKunci": "xpeng g6 pro vs byd sealion 7",
-   "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
-   "tayang": 4,
-   "posisi": 11,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
@@ -93,25 +100,25 @@
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
+   "kataKunci": "xpeng g9l harga",
+   "halaman": "/",
+   "tayang": 3,
+   "posisi": 29,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  },
+  {
    "kataKunci": "\"xpeng\" \"mobil\"",
    "halaman": "/artikel/xpilot-4-0-xpeng/",
    "tayang": 2,
    "posisi": 8,
-   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
-  },
-  {
-   "kataKunci": "g9l xpeng",
-   "halaman": "/artikel/xpeng-g9l-segera-launching/",
-   "tayang": 2,
-   "posisi": 10,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   }
  ],
  "C_ide_artikel_dari_data": [
   {
    "kataKunci": "xpeng price list",
-   "tayang": 14,
-   "posisi": 1.6,
+   "tayang": 17,
+   "posisi": 2.9,
    "halamanSaatIni": "/pricelist/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
@@ -168,27 +175,113 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 53,
-  "terjadwal": 10,
-  "terbitBerikutnya": "2026-11-11T12:00:00+07:00",
+  "terbit": 55,
+  "terjadwal": 8,
+  "terbitBerikutnya": "2026-11-12T12:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
  "kesehatan": {
   "kecepatan": {
-   "error": 0,
+   "error": 78,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 77, LCP 5.9 dtk",
-    "🔴 /model/xpeng-g6/: LCP 5.2 dtk",
-    "📉 /model/xpeng-g6/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
+    "❌ / → tidak bisa dibuka (fetch failed)",
+    "❌ /en/ → tidak bisa dibuka (fetch failed)",
+    "❌ /model/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/model/ → tidak bisa dibuka (fetch failed)",
+    "❌ /pricelist/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/pricelist/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/ → tidak bisa dibuka (fetch failed)",
+    "❌ /kontak/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/kontak/ → tidak bisa dibuka (fetch failed)",
+    "❌ /tentang/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/tentang/ → tidak bisa dibuka (fetch failed)",
+    "❌ /tentang/bengkel-rekanan-luar-kota/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/tentang/bengkel-rekanan-luar-kota/ → tidak bisa dibuka (fetch failed)",
+    "❌ /promo/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/promo/ → tidak bisa dibuka (fetch failed)",
+    "❌ /model/xpeng-x9/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/model/xpeng-x9/ → tidak bisa dibuka (fetch failed)",
+    "❌ /model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
+    "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/suv-listrik-flagship-2026/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-terbaru-2026/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/suspensi-udara-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/roda-belakang-berbelok-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/kursi-zero-gravity-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/layar-hiburan-belakang-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-paris-motor-show/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/harga-xpeng-g9l-eropa/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/vla-2-0-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/chip-turing-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/dimensi-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-7-seater/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-vs-xpeng-x9/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-vs-xpeng-g6/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-erev/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/interior-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/bengkel-rekanan-xpeng-luar-kota/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/jarak-tempuh-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/charging-5c-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-saat-banjir/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/harga-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-keluarga/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/perawatan-mobil-listrik/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g9l-segera-launching/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/spesifikasi-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/biaya-charging-spklu/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-untuk-mudik/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/test-drive-mobil-listrik/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/spesifikasi-mobil-listrik-wajib-dicek/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/simulasi-cicilan-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-dirakit-di-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/baterai-lfp-vs-ncm/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/interior-xpeng-x9/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/parkir-otomatis-xpeng-g6/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/garansi-baterai-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g6-pro-vs-awd/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/pengisian-cepat-800v-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpilot-4-0-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-premium-terbaik-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mobil-listrik-7-seater-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/suv-listrik-terbaik-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/pajak-mobil-listrik-2026/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/teknologi-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/mpv-listrik-terbaik-indonesia/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g6-vs-byd-sealion-7/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-x9-vs-toyota-alphard/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/keunggulan-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-g6-vs-hyundai-ioniq-5/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-x9-vs-denza-d9/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/harga-mobil-listrik-terbaru-2026/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/xpeng-indonesia-profil-dan-model/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/kenapa-harus-xpeng/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/harga-xpeng-x9-dan-g6-juli-2026/ → tidak bisa dibuka (fetch failed)",
+    "❌ /robots.txt → tidak bisa dibuka (fetch failed)",
+    "❌ /sitemap.xml → tidak bisa dibuka (fetch failed)"
    ]
   },
   "sosmed": [],
   "halaman": {
    "berat": 0,
-   "ringan": 0,
-   "masalah": []
+   "ringan": 55,
+   "masalah": [
+    "🟠 /artikel/suv-listrik-flagship-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/roda-belakang-berbelok-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/kursi-zero-gravity-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/layar-hiburan-belakang-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/xpeng-g9l-paris-motor-show/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/harga-xpeng-g9l-eropa/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/vla-2-0-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/chip-turing-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   ]
   }
  },
  "E_riset_tren": [

@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-11T03:22:08.591Z",
+ "generated": "2026-11-12T03:24:38.942Z",
  "platforms": {
   "facebook": {
    "posted48h": 4,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 5,
-    "media": 66
+    "media": 72
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-10T12:07:56+0000",
+   "last": "2026-11-11T13:12:47+0000",
    "top": [
     {
-     "url": "https://www.instagram.com/p/Dfj3rW0Dd7A/",
+     "url": "https://www.instagram.com/p/Dfmj5UaF211/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/DfjNfXoCX-6/",
+     "url": "https://www.instagram.com/p/Dfls-eeyh0A/",
      "eng": 0
     },
     {
-     "url": "https://www.instagram.com/p/Dfha3tfjUq-/",
+     "url": "https://www.instagram.com/p/Dfls1Dey4g_/",
      "eng": 0
     }
    ],
@@ -54,18 +54,18 @@
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": 18,
-   "last": "2026-11-10T12:08:17+0000",
+   "last": "2026-11-11T13:13:07+0000",
    "top": [
     {
+     "url": "https://www.threads.com/@xpengwins/post/Dfmj6oNldg_",
+     "eng": 0
+    },
+    {
+     "url": "https://www.threads.com/@xpengwins/post/DflsAuYkeKU",
+     "eng": 0
+    },
+    {
      "url": "https://www.threads.com/@xpengwins/post/Dfj3suGEawW",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/DfjNgscFROn",
-     "eng": 0
-    },
-    {
-     "url": "https://www.threads.com/@xpengwins/post/Dfha5QAFgyA",
      "eng": 0
     }
    ],
