@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T21:00:54.457Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T21:00:54.457Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T21:00:54.456Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T20:04:36.897Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-11-09T13:17:34.813Z",
   "slug": "layar-hiburan-belakang-xpeng-g9l",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T05:09:45.194Z",
-  "slug": "kursi-zero-gravity-xpeng-g9l",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T05:09:25.559Z",
-  "slug": "kursi-zero-gravity-xpeng-g9l",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-09T05:09:12.487Z",
-  "slug": "kursi-zero-gravity-xpeng-g9l",
   "platform": "facebook",
   "ok": true,
   "msg": "terkirim"
