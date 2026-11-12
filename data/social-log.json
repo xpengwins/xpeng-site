@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T20:04:36.897Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T20:04:36.897Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T20:04:36.896Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T19:04:45.262Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -394,27 +415,6 @@
  {
   "at": "2026-11-09T05:09:12.487Z",
   "slug": "kursi-zero-gravity-xpeng-g9l",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-08T12:22:48.128Z",
-  "slug": "harga-xpeng-g9l-eropa",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-08T12:22:25.663Z",
-  "slug": "harga-xpeng-g9l-eropa",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-08T12:22:15.090Z",
-  "slug": "harga-xpeng-g9l-eropa",
   "platform": "facebook",
   "ok": true,
   "msg": "terkirim"
