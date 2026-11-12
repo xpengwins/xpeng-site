@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-12T18:04:27.094Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T18:04:27.094Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-12T18:04:27.093Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-12T17:12:54.782Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "facebook",
   "ok": true,
   "msg": "terkirim"
- },
- {
-  "at": "2026-11-08T06:05:49.980Z",
-  "slug": "xpeng-g9l-paris-motor-show",
-  "platform": "threads",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-08T06:05:49.980Z",
-  "slug": "xpeng-g9l-paris-motor-show",
-  "platform": "instagram",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
- },
- {
-  "at": "2026-11-08T06:05:49.980Z",
-  "slug": "xpeng-g9l-paris-motor-show",
-  "platform": "facebook",
-  "ok": false,
-  "msg": "gambar JPG belum tayang di situs setelah 6 menit"
  }
 ]
