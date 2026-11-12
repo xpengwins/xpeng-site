@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-11T16:54:22.125Z",
+ "generated": "2026-11-12T16:22:42.519Z",
  "iklan": {
-  "kemarin": "2026-11-10",
+  "kemarin": "2026-11-11",
   "biaya": 0,
   "klik": 0,
   "tayang": 0,
@@ -9,20 +9,20 @@
   "terpakai": 103231,
   "sisa": 1396769,
   "persen": 7,
-  "hariSisa": 20,
-  "amanPerHari": 69838,
-  "rata7": 7532
+  "hariSisa": 19,
+  "amanPerHari": 73514,
+  "rata7": 0
  },
  "kualitas": {
   "klikKemarin": 0,
   "sesiChatKemarin": 2,
-  "aksiKemarin": 1,
-  "leadKemarin": 1,
+  "aksiKemarin": 2,
+  "leadKemarin": 0,
   "klik3": 0,
-  "aksi3": 2
+  "aksi3": 3
  },
  "peringatan": [
-  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-10). Cek jadwal skrip di Google Ads",
+  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-11). Cek jadwal skrip di Google Ads",
   "Situs SEDANG DOWN sejak 11 Nov, 21.44 WIB"
  ],
  "aset": {
@@ -90,6 +90,13 @@
    "klik": 0,
    "aksi": 1,
    "lead": 1
+  },
+  {
+   "d": "2026-11-11",
+   "biaya": 0,
+   "klik": 0,
+   "aksi": 2,
+   "lead": 0
   }
  ]
 }
