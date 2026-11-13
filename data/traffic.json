@@ -1,29 +1,29 @@
 {
- "generated": "2026-11-12T15:31:11.236Z",
+ "generated": "2026-11-13T03:23:16.843Z",
  "property": "560653996",
  "today": {
-  "users": 4,
-  "sessions": 5,
-  "views": 16,
-  "newUsers": 1
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
  },
  "yesterday": {
-  "users": 29,
-  "sessions": 42,
-  "views": 102,
-  "newUsers": 27
+  "users": 5,
+  "sessions": 7,
+  "views": 18,
+  "newUsers": 2
  },
  "last7": {
-  "users": 210,
-  "sessions": 274,
-  "views": 487,
-  "newUsers": 207
+  "users": 171,
+  "sessions": 227,
+  "views": 415,
+  "newUsers": 168
  },
  "last30": {
-  "users": 1194,
-  "sessions": 1402,
-  "views": 2352,
-  "newUsers": 1215
+  "users": 1195,
+  "sessions": 1404,
+  "views": 2354,
+  "newUsers": 1216
  },
  "prev30": {
   "users": 0,
@@ -142,15 +142,15 @@
   },
   {
    "date": "2026-11-12",
-   "users": 4,
-   "sessions": 5,
-   "views": 16
+   "users": 5,
+   "sessions": 7,
+   "views": 18
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 985,
+   "views": 986,
    "users": 606
   },
   {
@@ -185,8 +185,8 @@
   },
   {
    "path": "/artikel/",
-   "views": 31,
-   "users": 20
+   "views": 32,
+   "users": 21
   },
   {
    "path": "/tentang/",
@@ -214,11 +214,11 @@
   },
   {
    "k": "Direct",
-   "v": 123
+   "v": 124
   },
   {
    "k": "Referral",
-   "v": 99
+   "v": 100
   },
   {
    "k": "Organic Search",
@@ -236,7 +236,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1099
+   "v": 1101
   },
   {
    "k": "desktop",
@@ -250,7 +250,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 556
+   "v": 557
   },
   {
    "k": "Tangerang",
