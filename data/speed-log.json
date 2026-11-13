@@ -1148,9 +1148,9 @@
   },
   {
    "date": "2026-11-13",
-   "at": "2026-11-13T03:23:16.257Z",
-   "urls": 78,
-   "errors": 80,
+   "at": "2026-11-13T15:23:19.055Z",
+   "urls": 80,
+   "errors": 82,
    "slow": 0,
    "avgMs": 0,
    "pages": {
@@ -1169,7 +1169,7 @@
     "/kontak/": {
      "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
     },
-    "/artikel/warna-xpeng-g9l/": {
+    "/artikel/xpeng-g9l-australia/": {
      "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
     }
    },
@@ -1195,6 +1195,8 @@
     "error:/en/model/xpeng-g6/",
     "error:/model/xpeng-g9l/",
     "error:/en/model/xpeng-g9l/",
+    "error:/artikel/xpeng-g9l-australia/",
+    "error:/artikel/produksi-xpeng-g9l-magna-steyr/",
     "error:/artikel/warna-xpeng-g9l/",
     "error:/artikel/suv-listrik-keluarga-xpeng-g9l/",
     "error:/artikel/suv-listrik-flagship-2026/",
@@ -1257,12 +1259,12 @@
    ]
   }
  ],
- "generated": "2026-11-13T03:23:16.257Z",
+ "generated": "2026-11-13T15:23:19.055Z",
  "latest": {
   "date": "2026-11-13",
-  "at": "2026-11-13T03:23:16.257Z",
-  "urls": 78,
-  "errors": 80,
+  "at": "2026-11-13T15:23:19.055Z",
+  "urls": 80,
+  "errors": 82,
   "slow": 0,
   "avgMs": 0,
   "pages": {
@@ -1281,7 +1283,7 @@
    "/kontak/": {
     "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
    },
-   "/artikel/warna-xpeng-g9l/": {
+   "/artikel/xpeng-g9l-australia/": {
     "err": "PSI 400 Lighthouse returned error: FAILED_DOCUMENT_REQUEST. Lighthouse was unable to rel"
    }
   },
@@ -1307,6 +1309,8 @@
    "error:/en/model/xpeng-g6/",
    "error:/model/xpeng-g9l/",
    "error:/en/model/xpeng-g9l/",
+   "error:/artikel/xpeng-g9l-australia/",
+   "error:/artikel/produksi-xpeng-g9l-magna-steyr/",
    "error:/artikel/warna-xpeng-g9l/",
    "error:/artikel/suv-listrik-keluarga-xpeng-g9l/",
    "error:/artikel/suv-listrik-flagship-2026/",
@@ -1389,6 +1393,8 @@
    "❌ /en/model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
    "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
    "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+   "❌ /artikel/xpeng-g9l-australia/ → tidak bisa dibuka (fetch failed)",
+   "❌ /artikel/produksi-xpeng-g9l-magna-steyr/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/warna-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/suv-listrik-keluarga-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
    "❌ /artikel/suv-listrik-flagship-2026/ → tidak bisa dibuka (fetch failed)",

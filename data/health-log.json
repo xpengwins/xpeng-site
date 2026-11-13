@@ -234,8 +234,8 @@
   },
   {
    "date": "2026-11-13",
-   "at": "2026-11-13T03:23:16.788Z",
-   "pages": 78,
+   "at": "2026-11-13T15:23:20.229Z",
+   "pages": 80,
    "ok": 0,
    "statusBad": [
     "/ → ENOTFOUND",
@@ -259,6 +259,8 @@
     "/en/model/xpeng-g6/ → ENOTFOUND",
     "/model/xpeng-g9l/ → ENOTFOUND",
     "/en/model/xpeng-g9l/ → ENOTFOUND",
+    "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
+    "/artikel/produksi-xpeng-g9l-magna-steyr/ → ENOTFOUND",
     "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
     "/artikel/suv-listrik-keluarga-xpeng-g9l/ → ENOTFOUND",
     "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
@@ -318,15 +320,15 @@
     "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
    ],
    "bad": 0,
-   "warn": 57
+   "warn": 59
   }
  ],
  "ext": {},
- "generated": "2026-11-13T03:23:16.788Z",
+ "generated": "2026-11-13T15:23:20.229Z",
  "latest": {
   "date": "2026-11-13",
-  "at": "2026-11-13T03:23:16.788Z",
-  "pages": 78,
+  "at": "2026-11-13T15:23:20.229Z",
+  "pages": 80,
   "ok": 0,
   "statusBad": [
    "/ → ENOTFOUND",
@@ -350,6 +352,8 @@
    "/en/model/xpeng-g6/ → ENOTFOUND",
    "/model/xpeng-g9l/ → ENOTFOUND",
    "/en/model/xpeng-g9l/ → ENOTFOUND",
+   "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
+   "/artikel/produksi-xpeng-g9l-magna-steyr/ → ENOTFOUND",
    "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
    "/artikel/suv-listrik-keluarga-xpeng-g9l/ → ENOTFOUND",
    "/artikel/suv-listrik-flagship-2026/ → ENOTFOUND",
@@ -409,7 +413,7 @@
    "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
   ],
   "bad": 0,
-  "warn": 57,
+  "warn": 59,
   "orphanFiles": [
    {
     "path": "assets/img/214631.webp",
@@ -562,6 +566,18 @@
   ],
   "orphanTotal": 37,
   "issues": [
+   {
+    "k": "orphan:/artikel/xpeng-g9l-australia/",
+    "sev": "warn",
+    "page": "/artikel/xpeng-g9l-australia/",
+    "t": "🟠 /artikel/xpeng-g9l-australia/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/produksi-xpeng-g9l-magna-steyr/",
+    "sev": "warn",
+    "page": "/artikel/produksi-xpeng-g9l-magna-steyr/",
+    "t": "🟠 /artikel/produksi-xpeng-g9l-magna-steyr/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
    {
     "k": "orphan:/artikel/warna-xpeng-g9l/",
     "sev": "warn",
@@ -907,6 +923,8 @@
   ]
  },
  "alertKeys": [
+  "orphan:/artikel/xpeng-g9l-australia/",
+  "orphan:/artikel/produksi-xpeng-g9l-magna-steyr/",
   "orphan:/artikel/warna-xpeng-g9l/",
   "orphan:/artikel/suv-listrik-keluarga-xpeng-g9l/",
   "orphan:/artikel/suv-listrik-flagship-2026/",

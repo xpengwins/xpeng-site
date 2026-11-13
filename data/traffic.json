@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-13T03:23:16.843Z",
+ "generated": "2026-11-13T15:23:20.746Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
-  "newUsers": 0
+  "users": 1,
+  "sessions": 2,
+  "views": 5,
+  "newUsers": 1
  },
  "yesterday": {
   "users": 5,
@@ -15,15 +15,15 @@
  },
  "last7": {
   "users": 171,
-  "sessions": 227,
-  "views": 415,
-  "newUsers": 168
+  "sessions": 229,
+  "views": 420,
+  "newUsers": 169
  },
  "last30": {
   "users": 1195,
-  "sessions": 1404,
-  "views": 2354,
-  "newUsers": 1216
+  "sessions": 1407,
+  "views": 2359,
+  "newUsers": 1217
  },
  "prev30": {
   "users": 0,
@@ -145,12 +145,18 @@
    "users": 5,
    "sessions": 7,
    "views": 18
+  },
+  {
+   "date": "2026-11-13",
+   "users": 1,
+   "sessions": 2,
+   "views": 5
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 986,
+   "views": 989,
    "users": 606
   },
   {
@@ -170,7 +176,7 @@
   },
   {
    "path": "/model/",
-   "views": 174,
+   "views": 175,
    "users": 45
   },
   {
@@ -218,7 +224,7 @@
   },
   {
    "k": "Referral",
-   "v": 100
+   "v": 102
   },
   {
    "k": "Organic Search",
@@ -236,7 +242,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1101
+   "v": 1103
   },
   {
    "k": "desktop",
