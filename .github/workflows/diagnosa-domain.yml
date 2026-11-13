@@ -1,0 +1,42 @@
+name: Diagnosa domain (manual)
+# Hanya jalan saat ditekan manual. Tidak mengubah apa pun: cuma membaca status domain, DNS, dan koneksi.
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  diagnosa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Status domain di registry (RDAP)
+        run: |
+          D=xpengwins.com
+          curl -sS -m 20 "https://rdap.verisign.com/com/v1/domain/$D" | python3 -c "
+          import sys,json
+          j=json.load(sys.stdin)
+          print('STATUS   :', j.get('status'))
+          print('NS       :', [n.get('ldhName') for n in j.get('nameservers',[])])
+          for e in j.get('events',[]): print('EVENT    :', e.get('eventAction'), e.get('eventDate'))
+          for x in j.get('entities',[]):
+            v=x.get('vcardArray',[None,[]])[1]
+            print('ENTITY   :', x.get('roles'), [i[3] for i in v if i[0]=='fn'], [p.get('identifier') for p in x.get('publicIds',[])])
+          print('DNSSEC   :', j.get('secureDNS'))
+          " || echo "RDAP gagal"
+      - name: Jawaban DNS
+        if: always()
+        run: |
+          D=xpengwins.com
+          for r in 8.8.8.8 1.1.1.1 9.9.9.9; do
+            echo "== resolver $r"; for t in NS A AAAA CNAME; do echo "-- $t"; dig +time=5 +tries=1 @$r $D $t +noall +answer +comments | grep -E "status:|IN" || true; done
+            echo "-- www"; dig +time=5 +tries=1 @$r www.$D +noall +answer +comments | grep -E "status:|IN" || true
+          done
+          echo "== dari server .com langsung"; dig +time=5 +tries=1 @a.gtld-servers.net $D NS +noall +authority +answer +comments | grep -E "status:|IN" || true
+          echo "== trace"; dig +time=5 +tries=1 +trace $D A | tail -25 || true
+      - name: Koneksi ke situs
+        if: always()
+        run: |
+          curl -sS -m 20 -o /dev/null -w "https: kode %{http_code}, ip %{remote_ip}\n" https://xpengwins.com/ || true
+          curl -sS -m 20 -o /dev/null -w "http : kode %{http_code}, ip %{remote_ip}\n" http://xpengwins.com/ || true
+          curl -sS -m 20 -o /dev/null -w "github.io: kode %{http_code}, redirect %{redirect_url}\n" https://xpengwins.github.io/xpeng-site/ || true
+          curl -sS -m 20 -o /dev/null -w "langsung ke IP Pages + Host: kode %{http_code}\n" --resolve xpengwins.com:443:185.199.108.153 https://xpengwins.com/ || true
