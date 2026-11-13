@@ -1,5 +1,26 @@
 [
  {
+  "at": "2026-11-13T02:58:58.810Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "threads",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-13T02:58:58.809Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "instagram",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
+  "at": "2026-11-13T02:58:58.809Z",
+  "slug": "warna-xpeng-g9l",
+  "platform": "facebook",
+  "ok": false,
+  "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
+ },
+ {
   "at": "2026-11-13T01:17:59.237Z",
   "slug": "warna-xpeng-g9l",
   "platform": "threads",
@@ -397,26 +418,5 @@
   "platform": "facebook",
   "ok": false,
   "msg": "halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
- },
- {
-  "at": "2026-11-11T13:13:11.552Z",
-  "slug": "mobil-listrik-terbaru-2026",
-  "platform": "threads",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-11T13:12:49.910Z",
-  "slug": "mobil-listrik-terbaru-2026",
-  "platform": "instagram",
-  "ok": true,
-  "msg": "terkirim"
- },
- {
-  "at": "2026-11-11T13:12:39.254Z",
-  "slug": "mobil-listrik-terbaru-2026",
-  "platform": "facebook",
-  "ok": true,
-  "msg": "terkirim"
  }
 ]
