@@ -1,28 +1,28 @@
 {
- "generated": "2026-11-13T15:23:20.746Z",
+ "generated": "2026-11-14T03:22:48.480Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 2,
-  "views": 5,
-  "newUsers": 1
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
  },
  "yesterday": {
-  "users": 5,
-  "sessions": 7,
-  "views": 18,
-  "newUsers": 2
+  "users": 1,
+  "sessions": 3,
+  "views": 7,
+  "newUsers": 1
  },
  "last7": {
-  "users": 171,
-  "sessions": 229,
-  "views": 420,
-  "newUsers": 169
+  "users": 138,
+  "sessions": 189,
+  "views": 371,
+  "newUsers": 136
  },
  "last30": {
   "users": 1195,
-  "sessions": 1407,
-  "views": 2359,
+  "sessions": 1408,
+  "views": 2361,
   "newUsers": 1217
  },
  "prev30": {
@@ -149,14 +149,14 @@
   {
    "date": "2026-11-13",
    "users": 1,
-   "sessions": 2,
-   "views": 5
+   "sessions": 3,
+   "views": 7
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 989,
+   "views": 991,
    "users": 606
   },
   {
@@ -224,7 +224,7 @@
   },
   {
    "k": "Referral",
-   "v": 102
+   "v": 103
   },
   {
    "k": "Organic Search",
@@ -242,7 +242,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1103
+   "v": 1104
   },
   {
    "k": "desktop",
