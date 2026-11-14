@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-14T05:53:45.997Z",
+ "generated": "2026-11-14T12:53:06.535Z",
  "site": {
   "pageScore": 100,
   "articleScore": 100,
   "techScore": 100,
-  "pages": 71,
+  "pages": 72,
   "total": 100
  },
  "tech": [
@@ -804,6 +804,75 @@
   },
   {
    "url": "/artikel/prebook-xpeng-g9l/",
+   "score": 100,
+   "checks": [
+    {
+     "label": "Title 30-60 karakter",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Meta description 110-160",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Tepat satu H1",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Canonical ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Open Graph ada",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Structured data (JSON-LD)",
+     "pass": true,
+     "max": 15,
+     "points": 15,
+     "tip": ""
+    },
+    {
+     "label": "Semua gambar punya alt",
+     "pass": true,
+     "max": 10,
+     "points": 10,
+     "tip": ""
+    },
+    {
+     "label": "Viewport mobile",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    },
+    {
+     "label": "Ukuran gambar wajar (<250KB)",
+     "pass": true,
+     "max": 5,
+     "points": 5,
+     "tip": ""
+    }
+   ]
+  },
+  {
+   "url": "/artikel/wallbox-charger-rumah-xpeng-g9l/",
    "score": 100,
    "checks": [
     {
@@ -15987,7 +16056,7 @@
   {
    "slug": "wallbox-charger-rumah-xpeng-g9l",
    "title": "Wallbox Charger Rumah untuk XPeng G9L: Panduan Awal",
-   "status": "scheduled",
+   "status": "published",
    "keyword": "wallbox charger rumah",
    "score": 100,
    "grade": "A",
@@ -17174,7 +17243,7 @@
    "onpage": {
     "inTitle": true,
     "inH1": true,
-    "count": 32
+    "count": 29
    }
   },
   {
@@ -17496,9 +17565,9 @@
    "position": null,
    "note": "Seri G9L, terbit 2026-11-14",
    "onpage": {
-    "inTitle": false,
-    "inH1": false,
-    "count": 0
+    "inTitle": true,
+    "inH1": true,
+    "count": 12
    }
   },
   {

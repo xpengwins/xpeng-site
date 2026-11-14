@@ -639,6 +639,18 @@
       "tag": "p"
      },
      {
+      "t": "Tips EV",
+      "tag": "span"
+     },
+     {
+      "t": "Wallbox Charger Rumah untuk XPeng G9L: Panduan Awal",
+      "tag": "h3"
+     },
+     {
+      "t": "Panduan wallbox charger rumah untuk SUV listrik besar seperti XPeng G9L: kebutuhan daya, perkiraan waktu isi, keamanan, dan langkah menyiapkan instalasi.",
+      "tag": "p"
+     },
+     {
       "t": "XPeng G9L Australia: Setir Kanan Siap Dikirim",
       "tag": "h3"
      },
@@ -833,10 +845,6 @@
      {
       "t": "Charging XPeng G9L memakai platform 800V dan 5C, klaim 10 sampai 80 persen sekitar 11 menit. Pahami syarat, batasan, dan kesiapan SPKLU di Indonesia.",
       "tag": "p"
-     },
-     {
-      "t": "Tips EV",
-      "tag": "span"
      },
      {
       "t": "Mobil Listrik Banjir: Aman atau Berbahaya? Faktanya",
@@ -1139,6 +1147,10 @@
      {
       "src": "/assets/img/g9l-prebook.webp",
       "alt": "Xpengwins Xpeng G9L materi prebook dengan tombol book sekarang dan tampilan kabin"
+     },
+     {
+      "src": "/assets/img/g9l-senja-rumah-modern.webp",
+      "alt": "Xpengwins Xpeng G9L terparkir di depan rumah modern siap diisi daya"
      },
      {
       "src": "/assets/img/emerald-suv-breaking-through-water.webp",
