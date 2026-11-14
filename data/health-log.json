@@ -324,8 +324,8 @@
   },
   {
    "date": "2026-11-14",
-   "at": "2026-11-14T03:22:48.445Z",
-   "pages": 80,
+   "at": "2026-11-14T15:16:46.664Z",
+   "pages": 82,
    "ok": 0,
    "statusBad": [
     "/ → ENOTFOUND",
@@ -349,6 +349,8 @@
     "/en/model/xpeng-g6/ → ENOTFOUND",
     "/model/xpeng-g9l/ → ENOTFOUND",
     "/en/model/xpeng-g9l/ → ENOTFOUND",
+    "/artikel/prebook-xpeng-g9l/ → ENOTFOUND",
+    "/artikel/wallbox-charger-rumah-xpeng-g9l/ → ENOTFOUND",
     "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
     "/artikel/produksi-xpeng-g9l-magna-steyr/ → ENOTFOUND",
     "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
@@ -410,15 +412,15 @@
     "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
    ],
    "bad": 0,
-   "warn": 59
+   "warn": 61
   }
  ],
  "ext": {},
- "generated": "2026-11-14T03:22:48.445Z",
+ "generated": "2026-11-14T15:16:46.664Z",
  "latest": {
   "date": "2026-11-14",
-  "at": "2026-11-14T03:22:48.445Z",
-  "pages": 80,
+  "at": "2026-11-14T15:16:46.664Z",
+  "pages": 82,
   "ok": 0,
   "statusBad": [
    "/ → ENOTFOUND",
@@ -442,6 +444,8 @@
    "/en/model/xpeng-g6/ → ENOTFOUND",
    "/model/xpeng-g9l/ → ENOTFOUND",
    "/en/model/xpeng-g9l/ → ENOTFOUND",
+   "/artikel/prebook-xpeng-g9l/ → ENOTFOUND",
+   "/artikel/wallbox-charger-rumah-xpeng-g9l/ → ENOTFOUND",
    "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
    "/artikel/produksi-xpeng-g9l-magna-steyr/ → ENOTFOUND",
    "/artikel/warna-xpeng-g9l/ → ENOTFOUND",
@@ -503,7 +507,7 @@
    "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
   ],
   "bad": 0,
-  "warn": 59,
+  "warn": 61,
   "orphanFiles": [
    {
     "path": "assets/img/214631.webp",
@@ -656,6 +660,18 @@
   ],
   "orphanTotal": 37,
   "issues": [
+   {
+    "k": "orphan:/artikel/prebook-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/prebook-xpeng-g9l/",
+    "t": "🟠 /artikel/prebook-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
+   {
+    "k": "orphan:/artikel/wallbox-charger-rumah-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/wallbox-charger-rumah-xpeng-g9l/",
+    "t": "🟠 /artikel/wallbox-charger-rumah-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
    {
     "k": "orphan:/artikel/xpeng-g9l-australia/",
     "sev": "warn",
@@ -1013,6 +1029,8 @@
   ]
  },
  "alertKeys": [
+  "orphan:/artikel/prebook-xpeng-g9l/",
+  "orphan:/artikel/wallbox-charger-rumah-xpeng-g9l/",
   "orphan:/artikel/xpeng-g9l-australia/",
   "orphan:/artikel/produksi-xpeng-g9l-magna-steyr/",
   "orphan:/artikel/warna-xpeng-g9l/",
