@@ -1,23 +1,23 @@
 {
- "generated": "2026-11-14T15:16:47.344Z",
+ "generated": "2026-11-15T03:22:55.315Z",
  "property": "560653996",
  "today": {
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
+ },
+ "yesterday": {
   "users": 1,
   "sessions": 2,
   "views": 2,
   "newUsers": 0
  },
- "yesterday": {
-  "users": 1,
-  "sessions": 3,
-  "views": 7,
-  "newUsers": 1
- },
  "last7": {
-  "users": 138,
-  "sessions": 191,
-  "views": 373,
-  "newUsers": 136
+  "users": 103,
+  "sessions": 147,
+  "views": 285,
+  "newUsers": 101
  },
  "last30": {
   "users": 1195,
