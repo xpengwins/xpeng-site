@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-15T03:23:08.959Z",
+ "generated": "2026-11-15T15:16:56.462Z",
  "traffic": {
   "periode": [
    "2026-10-16",
@@ -189,15 +189,15 @@
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 61,
-  "terjadwal": 2,
-  "terbitBerikutnya": "2026-11-15T12:00:00+07:00",
+  "terbit": 62,
+  "terjadwal": 1,
+  "terbitBerikutnya": "2026-11-15T19:00:00+07:00",
   "terjadwalHabis": "2026-11-15T19:00:00+07:00",
   "linkRusak": 0
  },
  "kesehatan": {
   "kecepatan": {
-   "error": 84,
+   "error": 85,
    "lambat": 0,
    "masalah": [
     "❌ / → tidak bisa dibuka (fetch failed)",
@@ -221,6 +221,7 @@
     "❌ /en/model/xpeng-g6/ → tidak bisa dibuka (fetch failed)",
     "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/apa-itu-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/prebook-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/wallbox-charger-rumah-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/xpeng-g9l-australia/ → tidak bisa dibuka (fetch failed)",
@@ -293,8 +294,9 @@
   ],
   "halaman": {
    "berat": 0,
-   "ringan": 61,
+   "ringan": 62,
    "masalah": [
+    "🟠 /artikel/apa-itu-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/prebook-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/wallbox-charger-rumah-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/xpeng-g9l-australia/ tidak punya link masuk dari halaman lain (artikel yatim)",
@@ -303,8 +305,7 @@
     "🟠 /artikel/suv-listrik-keluarga-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/suv-listrik-flagship-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/roda-belakang-berbelok-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+    "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
    ]
   }
  },

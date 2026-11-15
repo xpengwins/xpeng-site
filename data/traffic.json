@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-15T03:22:55.315Z",
+ "generated": "2026-11-15T15:16:40.945Z",
  "property": "560653996",
  "today": {
   "users": 0,
-  "sessions": 0,
-  "views": 0,
+  "sessions": 1,
+  "views": 1,
   "newUsers": 0
  },
  "yesterday": {
@@ -15,14 +15,14 @@
  },
  "last7": {
   "users": 103,
-  "sessions": 147,
-  "views": 285,
+  "sessions": 148,
+  "views": 286,
   "newUsers": 101
  },
  "last30": {
   "users": 1195,
-  "sessions": 1410,
-  "views": 2363,
+  "sessions": 1411,
+  "views": 2364,
   "newUsers": 1217
  },
  "prev30": {
@@ -157,12 +157,18 @@
    "users": 1,
    "sessions": 2,
    "views": 2
+  },
+  {
+   "date": "2026-11-15",
+   "users": 0,
+   "sessions": 1,
+   "views": 1
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 993,
+   "views": 994,
    "users": 606
   },
   {
@@ -230,7 +236,7 @@
   },
   {
    "k": "Referral",
-   "v": 105
+   "v": 106
   },
   {
    "k": "Organic Search",
@@ -248,7 +254,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1106
+   "v": 1107
   },
   {
    "k": "desktop",

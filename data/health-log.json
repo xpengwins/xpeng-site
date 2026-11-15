@@ -416,8 +416,8 @@
   },
   {
    "date": "2026-11-15",
-   "at": "2026-11-15T03:22:55.266Z",
-   "pages": 82,
+   "at": "2026-11-15T15:16:40.187Z",
+   "pages": 83,
    "ok": 0,
    "statusBad": [
     "/ → ENOTFOUND",
@@ -441,6 +441,7 @@
     "/en/model/xpeng-g6/ → ENOTFOUND",
     "/model/xpeng-g9l/ → ENOTFOUND",
     "/en/model/xpeng-g9l/ → ENOTFOUND",
+    "/artikel/apa-itu-xpeng-g9l/ → ENOTFOUND",
     "/artikel/prebook-xpeng-g9l/ → ENOTFOUND",
     "/artikel/wallbox-charger-rumah-xpeng-g9l/ → ENOTFOUND",
     "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
@@ -504,15 +505,15 @@
     "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
    ],
    "bad": 0,
-   "warn": 61
+   "warn": 62
   }
  ],
  "ext": {},
- "generated": "2026-11-15T03:22:55.266Z",
+ "generated": "2026-11-15T15:16:40.187Z",
  "latest": {
   "date": "2026-11-15",
-  "at": "2026-11-15T03:22:55.266Z",
-  "pages": 82,
+  "at": "2026-11-15T15:16:40.187Z",
+  "pages": 83,
   "ok": 0,
   "statusBad": [
    "/ → ENOTFOUND",
@@ -536,6 +537,7 @@
    "/en/model/xpeng-g6/ → ENOTFOUND",
    "/model/xpeng-g9l/ → ENOTFOUND",
    "/en/model/xpeng-g9l/ → ENOTFOUND",
+   "/artikel/apa-itu-xpeng-g9l/ → ENOTFOUND",
    "/artikel/prebook-xpeng-g9l/ → ENOTFOUND",
    "/artikel/wallbox-charger-rumah-xpeng-g9l/ → ENOTFOUND",
    "/artikel/xpeng-g9l-australia/ → ENOTFOUND",
@@ -599,7 +601,7 @@
    "/artikel/harga-xpeng-x9-dan-g6-juli-2026/ → ENOTFOUND"
   ],
   "bad": 0,
-  "warn": 61,
+  "warn": 62,
   "orphanFiles": [
    {
     "path": "assets/img/214631.webp",
@@ -752,6 +754,12 @@
   ],
   "orphanTotal": 37,
   "issues": [
+   {
+    "k": "orphan:/artikel/apa-itu-xpeng-g9l/",
+    "sev": "warn",
+    "page": "/artikel/apa-itu-xpeng-g9l/",
+    "t": "🟠 /artikel/apa-itu-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+   },
    {
     "k": "orphan:/artikel/prebook-xpeng-g9l/",
     "sev": "warn",
@@ -1121,6 +1129,7 @@
   ]
  },
  "alertKeys": [
+  "orphan:/artikel/apa-itu-xpeng-g9l/",
   "orphan:/artikel/prebook-xpeng-g9l/",
   "orphan:/artikel/wallbox-charger-rumah-xpeng-g9l/",
   "orphan:/artikel/xpeng-g9l-australia/",
