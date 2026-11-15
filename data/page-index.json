@@ -288,7 +288,7 @@
    },
    {
     "key": "video-beranda",
-    "title": "Rasakan XPeng G6 Pro dalam gerak",
+    "title": "Rasakan XPeng dalam gerak",
     "hasH1": false,
     "texts": [
      {
@@ -296,8 +296,12 @@
       "tag": "span"
      },
      {
-      "t": "Rasakan XPeng G6 Pro dalam gerak",
+      "t": "Rasakan XPeng dalam gerak",
       "tag": "h2"
+     },
+     {
+      "t": "Every Drive of Life",
+      "tag": "p"
      }
     ],
     "imgs": []
@@ -528,43 +532,43 @@
     ],
     "imgs": [
      {
-      "src": "/assets/img/x9-black-depan.webp",
+      "src": "/assets/img/x9-white-depan.webp",
       "alt": "Galeri XPeng foto 1"
      },
      {
-      "src": "/assets/img/x9-grey-depan.webp",
+      "src": "/assets/img/x9-white-belakang.webp",
       "alt": "Galeri XPeng foto 2"
      },
      {
-      "src": "/assets/img/x9-silver-depan.webp",
+      "src": "/assets/img/x9-white-dashboard.webp",
       "alt": "Galeri XPeng foto 3"
      },
      {
-      "src": "/assets/img/x9-white-depan.webp",
+      "src": "/assets/img/x9-white-kursi-2.webp",
       "alt": "Galeri XPeng foto 4"
      },
      {
-      "src": "/assets/img/x9-white-belakang.webp",
+      "src": "/assets/img/x9-white-kursi-3.webp",
       "alt": "Galeri XPeng foto 5"
      },
      {
-      "src": "/assets/img/g6-grey-showroom.webp",
+      "src": "/assets/img/g6-black-depan.webp",
       "alt": "Galeri XPeng foto 6"
      },
      {
-      "src": "/assets/img/g6-grey-front.webp",
+      "src": "/assets/img/g6-black-belakang.webp",
       "alt": "Galeri XPeng foto 7"
      },
      {
-      "src": "/assets/img/g6-grey-detail.webp",
+      "src": "/assets/img/g6-black-samping.webp",
       "alt": "Galeri XPeng foto 8"
      },
      {
-      "src": "/assets/img/g6-black-depan.webp",
+      "src": "/assets/img/g6-black-front.webp",
       "alt": "Galeri XPeng foto 9"
      },
      {
-      "src": "/assets/img/g6-black-belakang.webp",
+      "src": "/assets/img/g6-silver-jalan.webp",
       "alt": "Galeri XPeng foto 10"
      }
     ]
@@ -636,6 +640,14 @@
      },
      {
       "t": "Apa itu XPeng G9L? SUV listrik besar XPeng yang meluncur di China 17 September 2026. Pahami arti nama, varian BEV dan EREV, fitur utama, dan status Indonesia.",
+      "tag": "p"
+     },
+     {
+      "t": "Kelebihan dan Kekurangan XPeng G9L: Ulasan Jujur",
+      "tag": "h3"
+     },
+     {
+      "t": "Kelebihan dan kekurangan XPeng G9L dari data peluncuran: pengisian 5C, kabin mewah, AI, tetapi ukuran besar dan status Indonesia belum jelas. Ulasan jujur.",
       "tag": "p"
      },
      {
@@ -1155,6 +1167,10 @@
      {
       "src": "/assets/img/g9l-depan-pantai-senja.webp",
       "alt": "Xpengwins Xpeng G9L SUV listrik besar tampak depan di tepi pantai saat senja"
+     },
+     {
+      "src": "/assets/img/g9l-senja-gedung.webp",
+      "alt": "Xpengwins Xpeng G9L tampak depan samping saat senja untuk ulasan kelebihan dan kekurangan"
      },
      {
       "src": "/assets/img/g9l-prebook.webp",
