@@ -1,28 +1,28 @@
 {
- "generated": "2026-11-16T10:09:47.986Z",
+ "generated": "2026-11-16T23:35:53.651Z",
  "property": "560653996",
  "today": {
-  "users": 1,
-  "sessions": 2,
-  "views": 2,
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
   "newUsers": 0
  },
  "yesterday": {
-  "users": 0,
-  "sessions": 1,
-  "views": 1,
+  "users": 1,
+  "sessions": 5,
+  "views": 3,
   "newUsers": 0
  },
  "last7": {
-  "users": 68,
-  "sessions": 106,
-  "views": 220,
-  "newUsers": 66
+  "users": 32,
+  "sessions": 60,
+  "views": 133,
+  "newUsers": 30
  },
  "last30": {
   "users": 1195,
-  "sessions": 1413,
-  "views": 2366,
+  "sessions": 1416,
+  "views": 2367,
   "newUsers": 1217
  },
  "prev30": {
@@ -167,14 +167,14 @@
   {
    "date": "2026-11-16",
    "users": 1,
-   "sessions": 2,
-   "views": 2
+   "sessions": 5,
+   "views": 3
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 996,
+   "views": 997,
    "users": 606
   },
   {
@@ -226,7 +226,7 @@
  "channels": [
   {
    "k": "Paid Search",
-   "v": 472
+   "v": 473
   },
   {
    "k": "Paid Social",
@@ -246,7 +246,7 @@
   },
   {
    "k": "Organic Search",
-   "v": 66
+   "v": 68
   },
   {
    "k": "Cross-network",
@@ -264,7 +264,7 @@
   },
   {
    "k": "desktop",
-   "v": 287
+   "v": 290
   },
   {
    "k": "tablet",
