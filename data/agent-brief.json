@@ -1,13 +1,13 @@
 {
- "generated": "2026-11-15T15:16:56.462Z",
+ "generated": "2026-11-16T10:10:28.924Z",
  "traffic": {
   "periode": [
-   "2026-10-16",
-   "2026-11-12"
+   "2026-10-17",
+   "2026-11-13"
   ],
-  "klik": 41,
-  "tayang": 1395,
-  "posisi": 7.9,
+  "klik": 43,
+  "tayang": 1549,
+  "posisi": 7.8,
   "perubahanKlik": null,
   "perubahanTayang": null,
   "catatan": "Periode pembanding masih kosong (situs baru), persen perubahan belum bermakna."
@@ -15,16 +15,23 @@
  "A_perbaiki_judul": [
   {
    "halaman": "/artikel/dimensi-xpeng-g9l/",
-   "tayang": 29,
+   "tayang": 31,
    "posisi": 3.4,
    "kataKunci": "dimensi xpeng g9l",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   },
   {
    "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
-   "tayang": 19,
-   "posisi": 9.4,
+   "tayang": 26,
+   "posisi": 9.1,
    "kataKunci": "xpeng g6 pro vs byd sealion 7",
+   "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
+  },
+  {
+   "halaman": "/artikel/xpeng-indonesia-profil-dan-model/",
+   "tayang": 7,
+   "posisi": 14.6,
+   "kataKunci": "xpeng dari negara mana",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   },
   {
@@ -56,17 +63,10 @@
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   },
   {
-   "halaman": "/artikel/xpilot-4-0-xpeng/",
-   "tayang": 3,
-   "posisi": 7.3,
-   "kataKunci": "\"xpeng\" \"mobil\"",
-   "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
-  },
-  {
-   "halaman": "/artikel/xpeng-g6-pro-vs-awd/",
-   "tayang": 3,
-   "posisi": 6,
-   "kataKunci": "jarak tempuh",
+   "halaman": "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+   "tayang": 4,
+   "posisi": 6.8,
+   "kataKunci": "cara hitung kwh charge mobil listrik",
    "saran": "Tulis ulang judul (30-60 karakter, keyword di depan) dan meta description yang menjawab maksud pencarian."
   }
  ],
@@ -86,24 +86,24 @@
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
-   "kataKunci": "baterai ncm adalah",
-   "halaman": "/artikel/baterai-lfp-vs-ncm/",
-   "tayang": 5,
-   "posisi": 9.6,
-   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
-  },
-  {
    "kataKunci": "xpeng g6 pro vs byd sealion 7",
    "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
-   "tayang": 5,
-   "posisi": 11,
+   "tayang": 6,
+   "posisi": 9.3,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
    "kataKunci": "xpeng g6 vs byd sealion 7",
    "halaman": "/artikel/xpeng-g6-vs-byd-sealion-7/",
+   "tayang": 6,
+   "posisi": 9,
+   "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
+  },
+  {
+   "kataKunci": "baterai ncm adalah",
+   "halaman": "/artikel/baterai-lfp-vs-ncm/",
    "tayang": 5,
-   "posisi": 9.2,
+   "posisi": 9.6,
    "saran": "Perkaya bagian yang menjawab kata kunci ini, tambah link internal dari 2 sampai 3 artikel terkait."
   },
   {
@@ -165,6 +165,13 @@
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   },
   {
+   "kataKunci": "cara hitung kwh charge mobil listrik",
+   "tayang": 2,
+   "posisi": 10,
+   "halamanSaatIni": "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
+  },
+  {
    "kataKunci": "price list xpeng",
    "tayang": 2,
    "posisi": 13,
@@ -177,27 +184,20 @@
    "posisi": 7,
    "halamanSaatIni": "/pricelist/",
    "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
-  },
-  {
-   "kataKunci": "xpeng g9l size",
-   "tayang": 2,
-   "posisi": 7,
-   "halamanSaatIni": "/artikel/dimensi-xpeng-g9l/",
-   "saran": "Belum ada artikel yang membahas ini. Riset dulu, tulis orisinal, cek harga dari pricelist resmi."
   }
  ],
  "D_kualitas": {
   "skorSitus": 100,
   "artikelDibawah100": [],
-  "terbit": 62,
-  "terjadwal": 1,
-  "terbitBerikutnya": "2026-11-15T19:00:00+07:00",
-  "terjadwalHabis": "2026-11-15T19:00:00+07:00",
+  "terbit": 63,
+  "terjadwal": 0,
+  "terbitBerikutnya": null,
+  "terjadwalHabis": null,
   "linkRusak": 0
  },
  "kesehatan": {
   "kecepatan": {
-   "error": 85,
+   "error": 86,
    "lambat": 0,
    "masalah": [
     "❌ / → tidak bisa dibuka (fetch failed)",
@@ -222,6 +222,7 @@
     "❌ /model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /en/model/xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/apa-itu-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
+    "❌ /artikel/kelebihan-dan-kekurangan-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/prebook-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/wallbox-charger-rumah-xpeng-g9l/ → tidak bisa dibuka (fetch failed)",
     "❌ /artikel/xpeng-g9l-australia/ → tidak bisa dibuka (fetch failed)",
@@ -294,9 +295,10 @@
   ],
   "halaman": {
    "berat": 0,
-   "ringan": 62,
+   "ringan": 63,
    "masalah": [
     "🟠 /artikel/apa-itu-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
+    "🟠 /artikel/kelebihan-dan-kekurangan-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/prebook-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/wallbox-charger-rumah-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/xpeng-g9l-australia/ tidak punya link masuk dari halaman lain (artikel yatim)",
@@ -304,56 +306,63 @@
     "🟠 /artikel/warna-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/suv-listrik-keluarga-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)",
     "🟠 /artikel/suv-listrik-flagship-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)",
-    "🟠 /artikel/suspensi-udara-xpeng-g9l/ tidak punya link masuk dari halaman lain (artikel yatim)"
+    "🟠 /artikel/mobil-listrik-terbaru-2026/ tidak punya link masuk dari halaman lain (artikel yatim)"
    ]
   }
  },
  "E_riset_tren": [
   {
-   "topik": "XPeng G9L Hadirkan SUV Listrik Premium AWD di Indonesia",
-   "jenis": "berita",
-   "skor": 95,
-   "alasan": "8 media membahas dalam 14 hari, terbaru 1 hari lalu",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Mobil Hybrid Rp 300 Jutaan Hadirkan Banyak Pilihan",
+   "topik": "BYD Luncurkan Denza N8 EV dengan Jarak Tempuh 1.003 Km",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "31 media membahas dalam 14 hari, terbaru hari ini",
+   "alasan": "96 media membahas dalam 14 hari, terbaru hari ini",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "5 Mobil Listrik Wuling Ini Punya TKDN 60 Persen!",
+   "topik": "Mobil Listrik Terlaris Oktober 2026: Top 10",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "11 media membahas dalam 14 hari, terbaru hari ini",
+   "alasan": "9 media membahas dalam 14 hari, terbaru hari ini",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "TRON Gandeng Aulton Kembangkan Tukar Baterai Mobil Listrik",
+   "topik": "BYD dan Pertamina Jajaki Pengembangan Flash Charging di Jaringan GES",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "9 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "alasan": "17 media membahas dalam 14 hari, terbaru hari ini",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Thailand Naikkan Pajak Impor Mobil Listrik Jadi 35 Persen",
+   "topik": "Toyota Siap Penuhi TKDN Mobil Listrik 60 Persen pada 2027",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Hadirkan SPKLU Center Taman Sriwedari, PLN Perkuat Ekosistem Kendaraan Listrik di Cibubur",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Pabrik BYD Subang Serap Hampir 6.000 Pekerja Lokal",
    "jenis": "berita",
    "skor": 80,
    "alasan": "7 media membahas dalam 14 hari, terbaru hari ini",
@@ -363,31 +372,20 @@
    ]
   },
   {
-   "topik": "As Roda BYD Atto 1 Copot Usai Tabrak Pembatas Jalan",
+   "topik": "Menperin Sarmuji Usul Mobil Hybrid dan Emisi Rendah Bebas Aturan Ganjil-Genap",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "10 media membahas dalam 14 hari, terbaru hari ini",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "alasan": "10 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Saat Penjualan Mobil Naik 20,1%, Premi Asuransi Kendaraan Malah Menyusut",
+   "topik": "Tak Hanya Rakitan Lokal, Xpeng Siapkan Teknologi Mobil untuk Pasar Indonesia",
    "jenis": "berita",
-   "skor": 73,
-   "alasan": "6 media membahas dalam 14 hari, terbaru 6 hari lalu",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "CATL Kembangkan Baterai Udara, Mobil Listrik Bisa Tempuh 2.000 Km",
-   "jenis": "berita",
-   "skor": 70,
-   "alasan": "5 media membahas dalam 14 hari, terbaru hari ini",
+   "skor": 75,
+   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."

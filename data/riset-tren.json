@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-09T03:18:53.357Z",
- "week": "2026-11-09",
+ "generated": "2026-11-16T10:10:28.887Z",
+ "week": "2026-11-16",
  "sumber": {
-  "berita": 742,
+  "berita": 789,
   "tren": 0,
-  "pencarian": 435
+  "pencarian": 434
  },
  "komposisi": {
   "target": "70:30",
@@ -16,59 +16,361 @@
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "XPeng G9L Hadirkan SUV Listrik Premium AWD di Indonesia",
-   "skor": 95,
-   "alasan": "8 media membahas dalam 14 hari, terbaru 1 hari lalu",
-   "umurHari": 1.1,
-   "jumlahMedia": 8,
+   "topik": "BYD Luncurkan Denza N8 EV dengan Jarak Tempuh 1.003 Km",
+   "skor": 80,
+   "alasan": "96 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0,
+   "jumlahMedia": 96,
    "sumber": [
     {
-     "judul": "Xpeng G9L Siap Meluncur di Indonesia, SUV Listrik Flagship Produksi Dalam Negeri",
-     "media": "Oto",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxONklPRWl1OV9oZzhPNnctc1BpM3dtX1c5bXAtNVpTS0ZWaXMtQlBiOXBzc0NMaVZodFpodGVVUW81SXhpS0FuQk1DOUtkSVVQbmhtUEptQ2FYcjFjcjZHdWRNWmNzYmZLX0hEdGV0Sk96R0R6N0ZHZjVmS3UtTVpYczhVVHhsS3lfNmtEbkgwdUxVbkxNY2tRaG1MMXF6OXJ6UWxjRXQydkluTldxa2YxWGp30gG6AUFVX3lxTFBKWDBuQjk2WG9hR2RYUXluY29VTFk0M2dyOUtXOWJsUHhFVGRvV1hUVjhtYjd6ZTQxVS0wcVpyRldDLS1oZTFoM0tmSEcyb1RmRFI5MGNIMkkzcEZWUmZyeWtfR2MxS0tDUVRYQk5oNklwNWE4VjMteUhocHd2UHA2TXBPNzFLM3FWbUNWRzI3YlRsS2V0cVd6dkhBalhIQk1wTXdncjRsTjJPUFNaTHNuR3dmSzJCeGZXQQ?oc=5",
-     "tanggal": "2026-11-05"
+     "judul": "XPENG G9L Ultra AWD dan X9 Long Range AWD Resmi Meluncur di Indonesia, SUV dan MPV Listrik",
+     "media": "AFTERMARKETPLUS.id",
+     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxOdVdrekZtbjhnWElGT19UNFpjSFNyV1JaSHRaNlFJTUxiVUJlZS1WSzVWRnJGTFlzY21XRHVoYlAxdmh4MGg3VXNqNTNwaWZDODFReF9ONThET3lVb29CbkFsdE1RUURsd3FDVU4xOFV6ZTRuVGQyN2sxU195SXpxSFFjVmoxang1V2ZzM1VPcGtzcjN0ZGhGcWhoMjdCdzFUMDRrMHpWdUUzSm9NdE12UC1GXzhGYjE5UHJRbmtjN0VRX2NfVUhnUnhfTS12RlZzRDAxUEtRaVlYRWdCRjllUGYwOGo?oc=5",
+     "tanggal": "2026-11-12"
     },
     {
-     "judul": "Xpeng G9L Siap Meluncur di Indonesia, SUV Listrik Premium dengan Teknologi AI",
+     "judul": "XPeng G9L Resmi Dijual di Indonesia, Harga Rp 1,2 Miliar",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxNbTdOUFVHRF91OE1tRGpSTUtJUVdDY2lpQkVJOGdFNmUzUnJ6SzZPMnd6cXBRWFdmSmE2bWNkRGVzZjJuNExfdTBMUmZvNFoxYV8zc0pZRWwtQjNDOXRLVGNRek9Sc2hNUkxoZi1Wd1p4ZlB4RWV2OS16LXFfM0FyNmU0YTM3S3RQOTN6bVN0NDNGVDNVNklzZllIbjlEdi1PSElDcDVTNGlQdTdY?oc=5",
+     "tanggal": "2026-11-11"
+    },
+    {
+     "judul": "Xpeng Rilis G9L dan X9 AWD di Indonesia, Harga Rp 1 Miliaran",
+     "media": "detikOto",
+     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPNDNpTnVwTHNsUTAxOU1UMWVuSUNtVUJ3djRzcjJpYXZFVUNzSHhsVGZ6cUxQM21pVGlMQVJPUnhPakx4SlZwcHFNNU9BOVVvdjdyNm9XX1g1UkU3MHNJUFhOUUxLWGJscGZ6SzljWnpsT1lTcWl1TG1QSkVpeEQ0ZXBXd3l0RDFlWVNoWWxLX0xSNUZCVEdqRUxRQmJBMDlXNlpOVDBMS1_SAa4BQVVfeXFMT2hPNGdMTng2OHFSLUhkX1pjazBiSHFXVzhNdWJjZ05ZTGpBcVZSdXFCbVVBNDdCQXRzVVk5blo1dW55clBObTdBZC0tbXBvRDFqNDlSNDJQT3JMbkhwWnc3MWJNQXpPQktXamphaGRsVjlVempLQTlyb05uYXdsQzZTQVZyX3d6ekh3cHJ5VktfZmtJdXlZRFA3WnV4cFJmNW9TOFFyVzRRUGhSeExB?oc=5",
+     "tanggal": "2026-11-11"
+    },
+    {
+     "judul": "Xpeng Tambah Lini EV di Indonesia lewat G9L Ultra AWD dan X9 Long Range AWD",
      "media": "Carvaganza",
-     "link": "https://news.google.com/rss/articles/CBMiogFBVV95cUxQMzUycFlPWUZWbDdHVkQtSXRLT29fUHBMRmxLRk9nZFFMV2VmVExtSE9pWWgxc1BablhiRUNiTFQwdzJuUHNzamFucWRNMzVuQ01aM25GdjdPSWctUFdHbUpDN1RnOHR2NDQyRlRXZ2RkcUduMndoamZQeG1tSXVCcjRwVXcxeU1MbjFrenNTdGh0RFBmbTZjREtmRmo0UjBoTkE?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "XPeng G9L Hadirkan SUV Listrik Premium AWD di Indonesia",
-     "media": "cwibc.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5IY25oclM3NFl0dnhoc05NTmNTT050cndiREJfcmN5d215c3A0SkQyZjVZTElHc25hS1pMTEx4ZV9RTnppLVE1QlJJdFZQcjJtNWc4dW4tRDgxU1pmVEE?oc=5",
-     "tanggal": "2026-11-07"
-    },
-    {
-     "judul": "XPeng Siap Bawa G9L ke Indonesia Bulan Ini!",
-     "media": "RiderTua.com",
-     "link": "https://news.google.com/rss/articles/CBMic0FVX3lxTE1fQkxZa0FPLXRlcTZaUDNMYmtLWF81bDV3RUZydVdIVHgxdFhsTl90MzQyWkIzTlFZcm5PTkpzakVMZVdUaWZnT1hGbjI4N3liMGZoamVWT0Nlc1loQnd1WDhjZm81SUYzR25SSGY5XzhFaVU?oc=5",
-     "tanggal": "2026-11-07"
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQV21HNWVTOTBOanI0cXFpZWgxenZiMTNIbnVUUDFXZXlOY1NNMDFSa3NqTDAxWDhaNjZFMVNXQXlBaE1kV0tUcFR6OFpHUW5PQ29FYkFvYjRZUVl5dms5cmdKQWhZRFRDTzNBMXRaUEFRUG5zMEJibnBlN0thaEhrNHJndzBBYzJHSVVKYzdTNEMxeEI4TmhydXVtZnk5bzVB?oc=5",
+     "tanggal": "2026-11-12"
     }
    ],
    "sudahAdaDiSearchConsole": false,
    "baru": true,
    "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "mofu",
+   "strategiFunnel": "MOFU (Menimbang (consideration)). Pembaca yang sudah tahu dan sedang membandingkan pilihan. Beri data, tabel, dan alasan jujur. Arahkan ke halaman model dan 1 artikel BOFU (harga, promo, cicilan). CTA: tanya konsultan."
   },
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "Mobil Hybrid Rp 300 Jutaan Hadirkan Banyak Pilihan",
+   "topik": "Mobil Listrik Terlaris Oktober 2026: Top 10",
    "skor": 80,
-   "alasan": "31 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0,
-   "jumlahMedia": 31,
+   "alasan": "9 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.1,
+   "jumlahMedia": 9,
    "sumber": [
     {
-     "judul": "XPeng Siapkan G9L untuk Pasar Indonesia pada 11 November 2026",
+     "judul": "10 Mobil Listrik Terlaris Oktober 2026: BYD Atto 1 Teratas",
+     "media": "detikOto",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxQOXFIcTJ6enpsbGhjX04ySEJxREh5WjBpaFdIMV91T3JTZHA1QndZM0FMbm5SMXY1T0VyUGltR0hXYVVQNDJNcUE2VEZPNDBfbndhd3JRWnBtcGcwNjUxc1c3N2JrWDhEcXJ5bkUtdFhYS1l5eUNQY1JyZ2dDZnlGa3lJMlpKVDVSMWsxVUZpUDMxNXZ1STlxSFBGTzVoNnVVMkNDYkRn0gGrAUFVX3lxTE1vc3ZPSzFLU2ZUV2E1ZVBfXzVJLVBYdHo1QVI4UUxTS3d4eTFnOW1EaEtLcDc1Z2dUZHVnWVNDWDFRMkhxc1BfWHpadjBWSjJOV1RoZGhlLS1FclVUbGpmenVCUkViZjY2cGpHd3BQVjlUcnM0cU9vbDhJeUFoZGdYc3UtZVNwY1JZMGJDSGFYckZPRkstSF9jalJyOVp1TTFjMDN1X0p3NU1ESQ?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "10 Mobil Listrik Terlaris Oktober 2026",
+     "media": "CNN Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNcHNkLVJYUnFvYzJrbEtvV0cyRTJ4ejJpalB5QnNwNUYzbWlMdmkyS2IwY1lkal9XRnhMejlZNDd0T3QtX3ZGaElXOXNTVGFZa2pjSmsyd3oxby1reGw5VEFvY24zSXFKWS1LbjgyNk45N0Q3MXgwSFdsUmlPWnJhQmd4elpGVk0yVTV3bUVqaWF6dDEyc2duUC1jRHpWV3NBLXJfWml3?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Mobil Listrik Terlaris Oktober 2026, BYD Atto 1 Masih Teratas",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOLVA5WWNjY0NaRTJwSmJQN1dVWjVPY29aYkRoNm5TS09LWHFSMzZPWEZURVA2eFBZemFjcE90VjJ0SmtFZVRPWjliSmw0ZDVVaElVWEpiaFhubHpIT1pFRFdVNjZkdWdRX1NmdHY0Y1RwYTNqT2NiWGwtUmt2Z1lqd1EwVjFfdVBvWmRvVEE0dlpTQ19UVklHYzVINk9OYXVYd1A4a0pVN2lsZEF4T3hIVTJrbE0?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "20 Mobil Listrik Terlaris Di Indonesia Oktober 2026, BYD Atto 1 Memimpin!",
+     "media": "Moladin",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1yM0tkdjRNS1M5LTd0aVRGc2ZOUnhCdTc4alNQQ1IzTTFwYlhmUmUwMVE1bzRYNlZEY2JCQ1BoMThSRFhXTldVSHZmRW5iY0ExTnEzVlZVU3ZRV18zS2hOeVdKc0V3YndSb2d3WWlB?oc=5",
+     "tanggal": "2026-11-13"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "BYD dan Pertamina Jajaki Pengembangan Flash Charging di Jaringan GES",
+   "skor": 80,
+   "alasan": "17 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0,
+   "jumlahMedia": 17,
+   "sumber": [
+    {
+     "judul": "SPBU Pertamina Bakal Dijajal untuk Teknologi Cas Kilat Mobil Listrik BYD",
+     "media": "detikFinance",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZllCRlpoS3Jmenl2dHV6N0wyTUxCZzZoQlkxOFZ4VGxpQ0xvTzliTENSZUNoVmlWZU1SUF9aVjU0Q0VYNTdyMjEzZWNBUWNQeEhZSHlWYWk4LTl5eW9wdm8xOVZtT0NmckdRZ3JLNjNCaXFqcmRQMEFhbFlTSmdLLS1pdXlWM1ZxNTlMMGFRSWNPeFBmUHk5bDJndjJPMjQydWRUOHBzcmFmMVFUVjlWa0xfNjNud9IBuwFBVV95cUxNV200TUYtdFZJd1lLUm50dDQ5a201R1RPM244V0kxZkk0cXJJcG9oYTZQcTctZGpLNmRSTmpqX3lwRlQ0Sk1yM3JSeWN4UnVKYnV5OGxvVlRkelhpNER4WVN1UWlONC12MGd6bXFyNFhPWTNOSUtSUnAxcVF4QnVJanM2VnloU1dxNFB5RHVwWGJyVXRwXzMyTXRBQWs3WS14SFp4V1l2ZEs0SWM0czlQQVdGR05QRHJjTzZZ?oc=5",
+     "tanggal": "2026-11-14"
+    },
+    {
+     "judul": "Pertamina dan BYD Jajaki Pengisian Mobil Listrik Supercepat di SPBU",
+     "media": "VOI.ID",
+     "link": "https://news.google.com/rss/articles/CBMingFBVV95cUxPbHp0QU00UGd1WWtqQk1kTGk5RldhSFRSRnFRQWdVb00zNU52bTZ1V3FMTGtxQUNHTmFaNTdlQ3MxTkZKRjFFNGhxVmJQRC02RDBSRWNGaGY3OGpQWWluRUhEdXAxSkt4Z2dSekFiaHlNQldtbkxrdHB5UDVHRkl2MkRabDZZRnBvTzdmQjJfOWtPajY5NzBHZXJycjF0UdIBmAFBVV95cUxOX3R5UlAwNDdGd0RjcXprbnJWVTBHRks0TFNjVm5hMUs1X2NFcGdid3NiRHdQSjkxbzZLWUN2bFp4eHVHRXBuemZZaEhEdUpKbXdWbW1mT0s1bVBwMmxSZ3d3R3NTSlJsT19wRkRyRDhBejRydDFBVTVCMjBFVGF2cHpBSi1LUEliVm50WFRqM3VKeDA4dndQVQ?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "Pertamina Gandeng BYD Jajaki Teknologi Flash Charging di SPBU Green",
+     "media": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxNNnhNbGhUcTg5WG9NT1g4OW5DZ3ZBNC1UNERoeExZa0NBaW94OUdtcllBaXlWQ0N0RVQ5aUh3WENadWI2bjJ5NDIzbmZjYnV2Z3Vmc2F0eE1DQll3OE9ack40WWREbklUb21ScUdPellsN1Vabi1SN0xRS2hibG1hb0FDaEV1UHZtSm9kN0UtaWVnc0NkWHBpZXZhYkVlWkF2R1V5Z0NfM09GeUxIWHduSVNnOVRwZDFoVkZNYl96a2NBRFZU0gHKAUFVX3lxTE1UWjJ3bnRXQmFISG15RUFTODRfR3ZrT0Y0NS1rTnpKOVpOeUUyMndCV0RVT1VUYWJadXBEaFk3bTlQbzFua0phQTNkQ2JWUkRXYzlkcWRLenIzaGJUajRLU21qYXd3TExwWHdUZVFkVjJZYWsxS1JJOFNqNVZ0VmNNRjRLSG5sMWc0NmRZYkVWS1hzd1F6NjNkWFd6cGtZQ0VfdF9zV3U4WHZMNFQwTUlZUGdCSHJaN1lOWmxoSlJnNHVLMXU5NFY2cWc?oc=5",
+     "tanggal": "2026-11-14"
+    },
+    {
+     "judul": "BYD Gandeng Pertamina Uji Teknologi Flash Charging di Indonesia",
+     "media": "cwibc.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiYkFVX3lxTFBuQ01JSVcwckRSbWFUT3pQNWt2bC1tR0ozdk1sVll1R1YxTEZQWXZBOXVWUnJMMEw3aFJvYVFFdTB2S3g5ak9Lamt1S0R0YTlIa01zS0JwOGRYUHBLaDk3VDZ3?oc=5",
+     "tanggal": "2026-11-16"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Toyota Siap Penuhi TKDN Mobil Listrik 60 Persen pada 2027",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "umurHari": 1.4,
+   "jumlahMedia": 6,
+   "sumber": [
+    {
+     "judul": "Toyota Siap Penuhi Aturan TKDN Mobil Listrik 60 Persen pada 2027",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxNQmpLeUNXSllIT1FsRXZBQmF2dDYxcUEtTmZ3aGViZWE2OWxaTTlwNHk0MEV3VUlPb2pGVlFiakQ2ckh6YUFBWG1YUWtBNmVHRG41QUdGcjZ4RHRSbDRyZkp5MklILTlIMW9tS2NvOTZiTVhWdVo4d3IxNHpHU3UxMTZaX3NvY3ZrNEgyaFlDdFEtaTFyVkI0VkNrVk1DNktzZDFKakJUWWtBV0xaeVM2WFhMaWZ3TUlKYTdaMmVJY2wxd2p5eVF4SHpJTkEwM1VJWG1QS2NIWU4?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "Toyota Sesuaikan Produksi Mobil Listrik Hadapi TKDN 60 Persen",
+     "media": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE5tOFZMWVZEMGFsdWh3SmFjY21ad0NUZG9KbTA5YndvUW5ySUprS0E4RWVMWTkyUk04bkNNYWNrM3o3WWxfNl8zRU5JQzlRS0VPMGhJeVJwTlFhdDUwV09OUkFqNkp3bXhlX3c?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "Toyota Sesuaikan Produksi Mobil Listrik dengan TKDN 60 Persen",
+     "media": "cwibc.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5tMXV4T0pDR3RDWmVKeWJZVWhKYlo5ZlNQODh0dGtkYTU3Y2NjVGN2WFJZSEZhQUlnTG1SVy1DdGFmeWI3c1E0T2M0S3A4aThnaG5PYWQ0WDB5cUszNXd4RElhN2I?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "Toyota Siapkan Produksi Lokal Hadapi TKDN Mobil Listrik 60 Persen",
      "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE11TWJWNlpDdHNPd05ZUVg0aEw1WERiT3JISHo1RlBYU2RwU0pXU3VxZzlvN2xRWE5UMWFiYUYzN3NvTnY3cS1CV01KYTd3R0hWV0FfTm5OdHktRWw3enBF?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTFBydlZXNXBaUjA4OTU4QnV5OW1FQUx5MHA4Z0w5OFE3ckZINHRiNG1uWHM5ZjU2UlZXMGFtQ3hNTVFFa0l0cEVfXy11ZGJkMEU2SEFLR2R4bC1JZW50TXc3OE5nQ21Mdw?oc=5",
+     "tanggal": "2026-11-15"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Hadirkan SPKLU Center Taman Sriwedari, PLN Perkuat Ekosistem Kendaraan Listrik di Cibubur",
+   "skor": 80,
+   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.9,
+   "jumlahMedia": 6,
+   "sumber": [
+    {
+     "judul": "PLN UID Jakarta Raya dan Mitra Resmikan SPKLU Center Taman Sriwedari dengan 17 Konektor",
+     "media": "tvMu",
+     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPbHpOTnNKLVgtdmxONGxNVWNnb1N3bWZsMHAwa1lvWFo1dmZGTHhLRFhwNXVPamZIcWY1R1pIOWp5a2NlSkxpSGtIU3VIRUlZcElkcG84S3FMUDdPQS1PQWVzM29oRzduZGU2Si1zclBoUUp5ZlMzQ1ZtdVZpdWN4UEtQR0d0cThCZWgwYUFNOE1GckpjRlVWOE9YR2ZrMHRnbmVaTWZR?oc=5",
+     "tanggal": "2026-11-14"
+    },
+    {
+     "judul": "Perkuat Ekosistem Kendaraan Listrik, PLN Hadirkan SPKLU Center Taman Sriwedari",
+     "media": "Kosadata",
+     "link": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQa2dLXzBLUC1fQzFVR200aWNpZUYwNTNVNFJfSWhRQ2wyVzV0bkZ6a3J0d0xjRzBvV2hSVkVTWTlzejZTaVBCeHZxb3JkVlpNODFhYkR1SmFaTTg0RW9wNWItWnNvMGtzOWRobEpIaHE5cjZ5OEhnNm80Nlh5ZU9pMTlvYm4yNFpHclpuRkN3c2l2MXBwSm5NVnVfdlJTNW8?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "PLN Hadirkan SPKLU Center Taman Sriwedari, Perkuat Ekosistem Kendaraan Listrik di Cibubur.",
+     "media": "Koran Jakarta",
+     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOT09qUGNlS3RQZFhiYjJseW82QW91RmFPU1l5aVVQN2dxb01CbG9CNDZtT29BOHlBTzRpRGNCX1JJV1pacWFSaklHb3p2MzR3bG1vVWYyZGxiejVrbDZYLVNrZ29XLUpEX2Qwamc0U3NOcG1qWDUta24ycnI2bmF0QmVvUzVKYUJpOGJNaEhEdW9GTm9YbW9xM1dOZmVpSkxBamo4cHdQaVk5RmJxZF9vaWdadEtoWGk4NE9nWHN0US0xTTRDMjg3MtIByAFBVV95cUxOT09qUGNlS3RQZFhiYjJseW82QW91RmFPU1l5aVVQN2dxb01CbG9CNDZtT29BOHlBTzRpRGNCX1JJV1pacWFSaklHb3p2MzR3bG1vVWYyZGxiejVrbDZYLVNrZ29XLUpEX2Qwamc0U3NOcG1qWDUta24ycnI2bmF0QmVvUzVKYUJpOGJNaEhEdW9GTm9YbW9xM1dOZmVpSkxBamo4cHdQaVk5RmJxZF9vaWdadEtoWGk4NE9nWHN0US0xTTRDMjg3Mg?oc=5",
+     "tanggal": "2026-11-15"
+    },
+    {
+     "judul": "Hadirkan SPKLU Center Taman Sriwedari, PLN Perkuat Ekosistem Kendaraan Listrik di Cibubur",
+     "media": "Ipol.id",
+     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNT3pscExVbG1ON3hmdHhybXl1eXI2Q3c5X3puSWhiU2ZjeEZ6eXQxNFBCaFdrbzREZVduWVA3Q3Ftd1llNHlucWh2X2JPbGJKdGc3dTZHX1NUb2MtcVBaM0xoTW4xc3Q3ZHJnYWt4dkdkc3c3UHd5RFFYaDI1d1pFMFZvdHBUUXgzSW5WSFUtUjlBZWw2dnV5czg3Zm51MUNteUxFMzJQZTdjaEJkaHcwVFh6RQ?oc=5",
+     "tanggal": "2026-11-15"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Pabrik BYD Subang Serap Hampir 6.000 Pekerja Lokal",
+   "skor": 80,
+   "alasan": "7 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.4,
+   "jumlahMedia": 7,
+   "sumber": [
+    {
+     "judul": "Serap Hampir 6.000 Pekerja, 90 Persen Karyawan Pabrik BYD di Subang Warga Indonesia",
+     "media": "republika.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNMVJkZm9tR1ZiSVRsa0hLcXRjeXdMYk93dDZvclg0R045alZvcTFlWTk3VHpjNlBCdGU2akVSRTNIZ1h0bDRka1ItYVVLYXRnQW51M1NxRzhia0tqLTVWQUNrQml1c1VJUjVlWFNRcENnRlJmdmxjN3NWRmRjLVVqMDNVWUowbnpCdWZqNkdmLVJXVVBnbmlIemw5VnNtTlNnb214djRIMXRQMUF1dTNxQzFKTjZqWC0yVWwtT1FoX09wQVE4RGp5UG5R?oc=5",
+     "tanggal": "2026-11-10"
+    },
+    {
+     "judul": "Begini Kesaksian Warga Lokal yang Kerja di Pabrik BYD Subang",
+     "media": "detikOto",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxNd3dOUTFBQU9pbFV6ampROTg0UmE3cC1LZk1wMGRoMVNHQXExbFN6czIxNTl2TFVGVnRSMm82UEN1UllZYTlQYl9OMVNveUY3VXlNVzRXQjM5OHV1QkVPbl94YmRtV0dZTWNfZ3FiR2JvNnkzUVJYd014dC1tSE55Uk5ZRlZzcEhDR3RtV3pMbGtwaDFzeHBBNEh1YmxfOVVO0gGmAUFVX3lxTE15UkJVVXZhVE5Oak9fRmRLT0dQQ19XRkRiT2ZxZTA2OGhOT3JjVU1hZ21mUjdEM0FYMkJOX0FfTEl0MWNJRDhZS0lKUi1hU3g5LU1paUhxREhfS3lhSjBTczZMRmFxNWp5YUN2UnlqQ0EzR21JWE1OMDcwMjBxTEdJWEpzVEc4cGtjdEJBUFlCYUxINS1zck1WUXlSSkUyR0VWTTR3SFE?oc=5",
+     "tanggal": "2026-11-16"
+    },
+    {
+     "judul": "Penampakan Pabrik BYD di Subang yang Sempat Didemo Warga",
+     "media": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNbVVxSnlPOFpXMy1uQUxDWTFqZFdNM01uNnpBYklHX29nMnBUYnBwMi15Nzg0d1pTcHd4OFlhRkhHbHhzTTZiSnIyN29DSUFtYjNmN1lOQ3RyMmlTekE1ZDd6ejdwbEEtUUpVV0ExSGNvZzlIbktHU3g2OVBUV1BfVUM4SWwzd2pyVnFOZTdwZTZhVTZYemhfZTVnbjdTWE5vTElpYkttSFduV3VWbTh3LUtEMnJQQdIBuwFBVV95cUxNM0JTWVJRODJhZEVoVWFqNEYzS3hWU0JjblZFck5pd1lNNnBPYTIzTlZwdTJvVlVJaTREblFuajRIQzB1MVdkWWVRb0dJNUtxSExHWF8teVU5NVJlOGh0N0hXNV96bjBHb1l3TndKdzVIVjRXbTVHOWMzeG8zZ0pZRHVYN2d3aWRoaGRkZmppRWVOVWN2R2luemZ6TVBmMzdCNG92VUVzSzY4Y3JaREZuUHdUeXhlc1NCMkZF?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "Segini Jumlah Warlok yang Kerja di Pabrik BYD Subang",
+     "media": "detikOto",
+     "link": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPcXBVV2FqTkl6ZGl2TmVBZDRRYTJ2WmgyMmNmaVktRGFtMjZHck82VV9kSVdRUWU0RE01ZmxVcERpb3UtQXBhNkQ1QTBDVy1RUk1faW5MQURPWXJfelEtQURkc2h3TlpSRlk2RmtUT2xtdlY3Y2g1QkV3Um1MZU94SVNDelgyUElRd3lVYmVRaV9LSGc1NVHSAZsBQVVfeXFMT1JtVWI0dy1oMG9FMVRZb3Q4MC1DSDBvZTI4NDZXX1VISHNISHYzWkF1ZXVBWEhZeU9iaTB3d0o1UUIwbGJOM3RMRUdGaTBpQWtIMkx5RUNka09LRGY3QnhjNmtwdXQybnJkdlBkZ0FwbkVmdlBrRi16Si16UkNSYWppajhpdFVqOVhLVXFVTGI3cnI4SG9xX2hBbDQ?oc=5",
+     "tanggal": "2026-11-14"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "luas",
+   "topik": "Menperin Sarmuji Usul Mobil Hybrid dan Emisi Rendah Bebas Aturan Ganjil-Genap",
+   "skor": 80,
+   "alasan": "10 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "umurHari": 1.1,
+   "jumlahMedia": 10,
+   "sumber": [
+    {
+     "judul": "Bukan Insentif Pajak, Menperin Minta Mobil Hybrid Bebas Ganjil-Genap",
+     "media": "DDTCNews",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNN3RPQXRqYWF1bENLbHVQcXdOYWhLZnk1cVRKQ2puakpzNzNWS0JYUE5Zc2x4QUk5ZTRHR2RWTm02ZTJBeG52MmJaR3FkRUx6bUlldUM3MTdZTm5wdWRzdktJUkhVbGItYWxTWThNdFVUVWtpMUswVlVEVFIzbG5GX0hzY19EN2g1dzJMOHh2V1VQczU1al9oQUZ0eTNVUEowY1ZaVm44aXhyRDRKYzJXYnN2OVpvZw?oc=5",
+     "tanggal": "2026-11-10"
+    },
+    {
+     "judul": "Industri Otomotif Minta Mobil Hybrid Bebas Ganjil-Genap",
+     "media": "Emitennews.com",
+     "link": "https://news.google.com/rss/articles/CBMiiwFBVV95cUxNSVNlSEgwQXctSnVKQlRnd1Q5a0lxek9qS3E3ejl6bU12S3dVWmZmcndnMks2b21fa2NpLXhjTXQ4RjlyZTl1QThYdkdwblFZUnNuMHViRkhHVzRDRjM3X1lYTDNUSGdYTW9KcHVnUjhKcTVVMDVnYjhZczNJTTJ4NDl4MmdqMmdUXzRj?oc=5",
+     "tanggal": "2026-11-11"
+    },
+    {
+     "judul": "Harapan Mobil Hybrid Bebas Ganjil Genap",
+     "media": "detikOto",
+     "link": "https://news.google.com/rss/articles/CBMigwFBVV95cUxOZlExOUllZUNPbkJpRVpSMTRoSi12RHVCVFVpYk9zeVpTVHBacURMNlhTVTRLZmc0SUl1d2xBWEREMmdxb3QyTFMzRURBVHRrMHV0UEVkaVZ6b29od2hONDM1clZKcFRyVFEwVHA2cXZickFsOEhKOV9XYTI1TGFweTN1RdIBiAFBVV95cUxPbWp2NzFHenRrZGlmVTVNVGtVdUFsbzBRckpDVDZDLTJPMV9CVHN1c3V2X1dWMmhvV0RYVzl3OGhiLXZCdFpYenFwTzlBa29wNXFmRkllNWNJYUVGaWs4YmJ1NXJjNXhNX0x3VEM3UkJhV2JLeXVDM0ZLSEkzRXg4WTdqYU5SRjFh?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "MG Sambut Positif Wacana Mobil Hybrid Bebas Ganjil Genap",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOU2pTN3gwdkRfaEh3QWxqbHVvNGE3d0xSQThCZTgyaW04Z2pGWWlEODZ6T3l6SEkxdi1ER0FocU9CcWFRQTR1UnM2Y3FpTmR1MHVHRDVwTVhPSTQ5Q21sOXJRVGlZM1pWd2M4R2RtdTFUR1RVbE5sRjIycTVyY0lmc19Ob2k4ajJrZTIxdkx1eDJsOWJqOVFlZFZEWFBVbGs5MXRFakZaSGxXNjZLSWdZ?oc=5",
      "tanggal": "2026-11-05"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Tak Hanya Rakitan Lokal, Xpeng Siapkan Teknologi Mobil untuk Pasar Indonesia",
+   "skor": 75,
+   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.3,
+   "jumlahMedia": 4,
+   "sumber": [
+    {
+     "judul": "XPeng Siapkan Teknologi Mengemudi Otonom untuk Pasar Indonesia",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQSmFpVkpkRnZoR19IUnVzUm1IcEJqa1Vub1BXUXdUTm5JS2cwQ1BnMk5TdHR0TGtJaHVXNzlXdVZkVW1DellDdVFoYm53ZTNCMlVNekRiTVo3MVI2TWxpQzl2bXYtN0FqTmV5cEw2RXdMRUtpeVI2ajdHMEpwTzhZZERWb0hPbVRNdXRyMHZYQUFRd2p5MFdQQXpUb05VVU5SQ1J2aUpjaGVFRjJNNXF0aG1YY1EyN28?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Tak Hanya Rakitan Lokal, Xpeng Siapkan Teknologi Mobil untuk Pasar Indonesia",
+     "media": "kabaroto",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOTk1teUtKSlRQaTM3bml4ZUl6VkdaX0xPSGVVMEZfS3BmNFc1NUVveHhXSVVqS3hibWFfLTVaUHdBLXFiRGZhWXQ5VFktQktRWnlOXzFGTVc1dTFGZEhSVDdGZm41cDhJb3gtaVl4bXh0VXNLYWZpaElmcFlJeEZwUUVJb3hhVlBYZndMaTVwWGZ6aEdVd01YVDlMWmlOZG9oOGZzREZ0UDdzZ9IBqAFBVV95cUxObklxcG1waWE1Vm95MnUtMlgyZXpQd1h2RTF5WGhXOXhuQUVHcmJxZW9YNktEVlJ2cnBYLXNjczdNMlZSZnBoUnlyeWRFXzVJeldBbG9hSXBiZENIX1I3SlJtczMxN0NXZ2l1VUxqUlVWZzVKSTg3WmcweHlaMjhFTUsxMzhNMzFtWFpPU2NfWUVQNllWeHR3OFpkdEpiQjl1WFhkTzRDVnk?oc=5",
+     "tanggal": "2026-11-16"
+    },
+    {
+     "judul": "XPeng Perluas Model Kendaraan dan Siapkan Teknologi Otonom di Indonesia",
+     "media": "Demokratis.co.id",
+     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE9ERmJXdkNkbndnelpEWWtxUmRYeUZCZWRNeXhBbnJ3TjFxRVZMUTV0R1AzamFVby05ZlRsRlIyblN5d1Y4dTZxeTBSZlJkRWR2bXlLT0p1elIxWUJyMXowZFRZekVDbjJfa2xfdThn?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "XPeng Siapkan Teknologi Mengemudi Otonom untuk Pasar Indonesia Halaman 1",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxOTVIwSmtjUUV2Y0cyUkF2UDlRQTBjWjlJU3VzQU9oLU5uY0YyWEpMX3ljSzJYbXJGMWtIRXBzbFJCakFXNjRYbjdLT3B3Sno4Q3pXN3p1c3VWSy1XYnFEdTh6SzhGdFViMVdCR1F5U1k1UnBBN0JmckhoanNqZXh6ZUlsYTFLbnI3dTFtaVMxM2Y4Y0VRMHBwR0hTSG9hdi1GNElyb1BxWmhSUkNzNlZGUlVGeEI0T09EbU42dmwzbi1iZw?oc=5",
+     "tanggal": "2026-11-12"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Update Harga Kia Carens EV Di Indonesia",
+   "skor": 73,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 3 hari lalu",
+   "umurHari": 3.4,
+   "jumlahMedia": 6,
+   "sumber": [
+    {
+     "judul": "Spesifikasi XPeng G9L yang Mau Meluncur di Indonesia",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxObTUyVFRIYm5yVjdjZ1puNDNxOC1hc3Z0SXZ6VGFFNE1YLU1hUTZaREs4SS14NGJjY0p0bU5rSXZEOFpJZ1htLUU2VHhLU0JDXzJFbE84eGlSa29WSUZEZDJVLVlKZUp5TlgtQ1JwNEFXWHNiXy00dDNlYlJiT2hQVVNrRW5Va3NUX0QyNzNHN0pNa3JhbC1wRHRtWEc0UC1uZC02UzNMbzBBUQ?oc=5",
+     "tanggal": "2026-11-06"
     },
     {
      "judul": "XPeng G9L Meluncur di Indonesia 11 November 2026",
@@ -77,15 +379,15 @@
      "tanggal": "2026-11-05"
     },
     {
-     "judul": "Xpeng G9L Debut di Thailand pada 11 November, Indonesia Selanjutnya? - Bincang Bincang Mob",
-     "media": "Bincang Bincang Mobil",
-     "link": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQOWZ3M2tOUnQ1VU1wTnNXZU04bnozUG9aNS1oazhENGFsaWdGUXBFdi15NlpHd0JXeHB1cFVuNGdrN2t0eGxXU2V3SVU4ZmF3NzN0aGxoYnJKaFpUTGlFMklQMUpBU1pGcTJCcE1RVU4zdENJbkpPb2JxbDA1blQwdU5mZWNkVFJlVmdPQm9UYXpzbnVPNXZWVXVFRzVpTGtndC01R2daV2NlLWdKdjdlODdwcUxJWGdxemM1dGV5dmV1UjdmZE9r0gHMAUFVX3lxTE5JNWlhSGVkN0VqSVFxeHFIaUxBa2h6YzFsRnlMbVlkQnlBWndwekZZRnBsVE5kQmxvWFVYY0szaE40aWNUSHNodnVlaFNEenBCc20zT182Q3RoMHVDRjhoTk81SFUyQ0l1dUFWVXVhTV9ubDJDWU5zdExDQWU2ZWptWjRnTU5XQm02U1dKZm9Fdk1yb2ZGZlYtMjNVazRrUlBOdHZuYXlJbktiRzlwN0NnR2NCcHJoa0dqQW0tU1h2VlItODlKQ2xOYXEyVg?oc=5",
-     "tanggal": "2026-11-05"
+     "judul": "Bisa Fast Charging 11 Menit, Simak Spesifikasi XPeng G9L yang Segera Meluncur di Indonesia",
+     "media": "OtoDriver",
+     "link": "https://news.google.com/rss/articles/CBMi2gFBVV95cUxNVi1ycWwyU1RZZVVKbndxTy1zdWhHMlF6ZUdSUERFOXNEUFM3N1E5al9mLTNQb2tBSHpETXpHY2x0U0Vhc0JudkVxaC1RclRzYVBKaW9CTnB4YzJiVkN1ZGRYU0xubF9hM2VqOE92c3BXZFRNaWkzV0JEdzFGTTNMUGlSUHlXWWlfSGZpMFM2NUtnOFlwTExmRUVtajFYWWVxdUhWbmF3Sll2b19MQ0ZNUGpfNElPNjA3U3FPTnBVOGpOckJwc3hNRm9ZQWVHN0pLMlhZOXlyX3dyUdIB3wFBVV95cUxQS2tqN2Q2Zlh3UmV3VnVGNmNGNkRRNllNa28tOHQ0dHVXY202TmlVaHFZS1pURzdlODBVbmJvMDZzOGZLYzJra0QzLWNPNnJ3aWpmdUQtRU0tVHNvWjVDaGdvV3VUelpyMUJTTXU4dVNFNXl1cHNpNThqVkZLTjZ0a28yUUx1YS1qcjg5TnlUOVpQVTZMY1NkblQzYzJkVVdiazFnTjlpY0ZqLVlWZU5zU2pxeVBoR2Y4Tm4zek84MVlBaGZIUENERks4M0Z3bjlEVTdraTJDZHRjd1JRTEpn?oc=5",
+     "tanggal": "2026-11-11"
     },
     {
-     "judul": "XPeng G9L Meluncur 11 November dengan Tenaga 585 PS",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiakFVX3lxTE0yOTRxaWNXNWpiVWpHRzZ5cHk1eEZpVllISlp2LXY4ZGp1amZ2X204d0JRanViSWxrQVhlSkNzWnpmdnJtUXhXY0V2QVd4WUNFVmRSTE5Wb0ZYX2JJX0RrdUl5eFRuVFZOcnc?oc=5",
+     "judul": "Spesifikasi XPeng G9L yang Mau Meluncur di Indonesia Halaman 3",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNeEVhbGlwcS1ITnBreGlWVUJ2NjVnV0FZSUh6M2JBODRGLU5HelJpMWFMMm45a29tN3dmVHlMMFJZSG0ySl9YVkhxTTUtUGZlYUVGeWZtVTY0WEZhS1Y4elJIX2ZjLUIzUVg2WWJsQVkzU1BVTFpwazNwT0lyMnFVdkQ5Ty13cWFlV3FJMWVEQUFacGpGbmphSUd6VzRMUXVUbzI5VnJJTDM0RmtIa0Z2dTRFOXQ?oc=5",
      "tanggal": "2026-11-06"
     }
    ],
@@ -95,40 +397,42 @@
     "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "bofu",
+   "strategiFunnel": "BOFU (Siap beli (decision)). Pembaca yang hampir memutuskan. Jawab harga, promo, cicilan, dan langkah berikutnya dengan jelas. Arahkan ke WhatsApp, test drive, atau prebook. Tulis tanggal data dan syarat promo."
   },
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "5 Mobil Listrik Wuling Ini Punya TKDN 60 Persen!",
-   "skor": 80,
-   "alasan": "11 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 1,
-   "jumlahMedia": 11,
+   "topik": "Penjualan Mobil Listrik Indonesia Tumbuh 94,9 Persen",
+   "skor": 73,
+   "alasan": "10 media membahas dalam 14 hari, terbaru 3 hari lalu",
+   "umurHari": 3,
+   "jumlahMedia": 10,
    "sumber": [
     {
-     "judul": "Lima Mobil Listrik Wuling Capai TKDN 60 Persen, Perakitan Baterai Lokal Jadi Pendongkrak",
-     "media": "Carvaganza",
-     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxQVWZ2SVlqRy1QWFlnZFlRNjFBSk1kR084VGJnUWRlakh6OE42Y2dVVWdXQmN4dXpFTTRKVzI2VWd1TFB0TTRXNXZKczg0YV9NQzZKOE52cW8yS3RFS3VuTU5nOFFfbHYwSktNaFZ0bTFiRUdmbU52T1l5WDg2N0lLTDJLZEt5ekpuRE1peTNOR3J5VVZlV1ZvV2JhV1ZJWC1FMHkxcTd4Rk1Nam9qa1NCNQ?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Lima Mobil Listrik Wuling yang Kini Mengantongi TKDN 60 Persen",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPQlF6RkdsYlhWZFFtM3BxNDBwUndOYnM5ZU1IZEl2dXB6UFpFdDczenllVkpEYWhSNEpEZlNBMUtUWHg2NjVrNWxqOE52NXkzZGVFbllUOTBEN19sZ21aeFQwZjduX2FZZFhvNWpyWjRUTFFEU1dXa0RjaW5HUWZXQk1GeU1VeW1KRWUzdkJrTThVY2YtQWhTbG44bW5lWHpVLTBlNWxJaW14N2w5OExVenRqbTJPN3M?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Lima Mobil Listrik Wuling Sudah Kantongi TKDN 60 Persen",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPb3RtUTNhZDkxaTJsWFFMbGZhOWs3MWpWNU90eUhmQkNrZW1peXhmbkZuUDFyeTBRLTYwb094eXJWSVV6S3hmaFVvWUIzNXdQa1BtRmFESG13N3d6OXRSdjh5bjRKWEh1RGZqNGExUDRHN0V2bGdvcnlSRnlfTUJ4cGh3OHN5M1dZLW5Nc3R0dlhBLVAyRG9kZTcyWEJMMTRvbXgyeUV1MHlxT0RXRkE?oc=5",
-     "tanggal": "2026-11-04"
-    },
-    {
-     "judul": "Wuling Tingkatkan TKDN Lima Mobil Listrik Menjadi 60 Persen",
+     "judul": "XPeng Catat Kenaikan Penjualan 242,6 Persen di Indonesia",
      "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1QWFd3Q1hBNVNwbnhlOVh1SWNMbGxtR3J6ajljSVFqNkdDbHJTRDltNTNKeks4OFpQYmJJYWJFaGVPcThXTXA3V0dMYThLQ2JnYUFoZFJzS3A4cTM2aXJlN1l0c3JXaGR3cEROWVZB?oc=5",
-     "tanggal": "2026-11-05"
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE5uQTljQnVJS1BQa19IMUtKN1BRd0pKT09abHp4Z2pkOVp5WF9ZRmtHR0E4enh4d09MSTJVWFpBcmRQVWFuRFF5T1ZQd1BoRnMwRmhmQ09rR3pBdFBXbk1FcjFYbkFoN29FZ29pdQ?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "XPeng Catat Pertumbuhan Penjualan Lebih dari 200 Persen di Indonesia",
+     "media": "Demokratis.co.id",
+     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTFBUT2lmelNSV3pjMjc1TkJCU1dTY3NGaFRKUFc3bmdWQnhINm5ZeU92ajNPak9BVlZ0cnMxdGwwd1FUZEc2RjlnSFhGM29PUEdJOEZqMVhoTDg0MjllMllKV0p2TjB1V0c5RnFpbkZFYnZWQQ?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Penjualan XPeng di Indonesia Diklaim Tumbuh 200 Persen",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxQaG9hbW93M2F1ZjhuSXd6VzRUNTk3QkpKaUxkOVo2Smh2Y21Tc3djVDRrMGkwem5uTWwyUVRRQzVJOWlpc2NveWZGOXkwNFNqMGdVSGVtQ2hzSHNTbm1vNlpiNzZSeW5qa3M2Mmg4ZlRBVHV3ZjNXR2ctTXFSeENwRndZZmM4NUhJR2dtSVF4QzNpU0xqSHFHZGdsc3JCbkxDWTAwMFNLamd4LWZR?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "XPeng Catat Pertumbuhan Penjualan Lebih dari 200 Persen",
+     "media": "cwibc.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1oNmptUF9SRndXbldjT053MVJFTmhtTXNnQndIVmxpTnRyTTJxeHZLUHh1RktmY005OTZuYXlSWWd3d0NhUjlWMlItRHRNZDFkMVJlZTlNQk1USTNmRDZScEFwWXQwOHpM?oc=5",
+     "tanggal": "2026-11-12"
     }
    ],
    "sudahAdaDiSearchConsole": false,
@@ -136,27 +440,66 @@
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
   },
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "TRON Gandeng Aulton Kembangkan Tukar Baterai Mobil Listrik",
-   "skor": 80,
-   "alasan": "9 media membahas dalam 14 hari, terbaru 1 hari lalu",
-   "umurHari": 1.1,
-   "jumlahMedia": 9,
+   "topik": "Auto2000 Sediakan 31 SPKLU, Mobil Listrik Merek Lain Boleh Ngecas? Halaman 1",
+   "skor": 73,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 3 hari lalu",
+   "umurHari": 3,
+   "jumlahMedia": 6,
+   "sumber": [
+    {
+     "judul": "Auto2000 Sediakan 31 SPKLU, Mobil Listrik Merek Lain Boleh Ngecas?",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPbk1uaFZNb0gzbVlmUEVaeFRvZDBPTVV6OU5OXzA1SXZ6Vno2Vl8tdk9NUHBpdHRrMG5OVlh1NFpBX0s5WXlHZmpERDV5S0lEMDlJSHBMcTVTX0M2bGJqeXhESUlNWUx5UjlheDd3aTk4aTZoQkpscGtVN1NWYWxEYmlBU1B0ZENXeENZYjUyT0VtV2NSYXZqS3BUMGFhV1JCN041QzBVVTZfeDhHMmhQRVlvVmR2dXM2di1hYzdSbk9LS3d3TGUtZFdPd0tncy1pRVhwQXBhXy0?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "Auto2000 Tambah SPKLU Jadi 31 Titik di Indonesia",
+     "media": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9CQXE1UjJSSG1tQm1qNzNaR2pfV3NfSEZEZm9Yc3BnNXNNajZFN09qbGJWZlV3MERoOXRxMW03MkxDVldYQi1hQ0Z5ZUF6TVo5S182bWx1MXozOG5SS0FjcVBaMUR1UQ?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "Auto2000 Sediakan 31 SPKLU, Mobil Listrik Merek Lain Boleh Ngecas? Halaman 1",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxPUTdnOE9zSy1jTTRqeUNlanRpdG9IcUNHZ3hHRklZRlhJTGo4Nngtb2xCUnZBdjB4ZklGYjlJM3NJN2xhV1ZsbHJwVWMyYlZUc1o4Rzd4S2V5bDZmeE4ycktnbTZfUHlqM0ZrZWFUamtiaXpOQW1MZ3E0M0RwazhITms3V2lCSGhoWHNrWXQ1S3dkQ056UG12MWhHUVZ0TU01Sk1LLVpnSm9QVENHVnFRSWZXTVpCRlE1MHc3ak1qdjVnRElT?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "Auto2000 Perluas SPKLU hingga 31 Titik di Indonesia",
+     "media": "Demokratis.co.id",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE1ndE1SUHJkNEFod19sTndCZ2FPbGJXLUUzR1kyXzNmMFlva1dDNTZXWXpCVDQyN1Znbjd5MXkyT01aV2xDS3h2R1VwZmhLemhlQThLQ29RaWo2Mm9ncWstcXFfTXkwZ0U2?oc=5",
+     "tanggal": "2026-11-13"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Industri Otomotif Terus Kembangkan Teknologi Baterai Mobil Listrik",
+   "skor": 73,
+   "alasan": "7 media membahas dalam 14 hari, terbaru 2 hari lalu",
+   "umurHari": 2.1,
+   "jumlahMedia": 7,
    "sumber": [
     {
      "judul": "TRON Kembangkan Teknologi Tukar Baterai untuk Armada Mobil Listrik",
      "media": "Kompas.com",
      "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPdWF6bmxUWkJ2TzNSeWVVRnlrVmxGeEdNUk45R2w3YVFRRVZOa3FodTVqYVI5UjlKNVBRX25waE14NEZiYWVyWlhmcXUwMl9oM0hEUjZlbjlicjFfVG1SUjBOYXNvVHB5aVl5a0N6a1ZwY05KRDk1VS1MQWx2UUxHNm1oZkhVbk5Gc3JHSjZ6UnFhWWU3eEt1c3NLX1BRbXJ5SnVObGthRVFPWWJhcFE3bFhWZFF2enZO?oc=5",
-     "tanggal": "2026-11-06"
-    },
-    {
-     "judul": "TRON Gandeng Aulton Kembangkan Teknologi Tukar Baterai Mobil Listrik Komersial",
-     "media": "investor.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNNW9oZkNEbVhjbnEwQjlSWFBvT0htcTg4Ykwtd04wYUhKQ1ZUY3JlZ3VoMGhoWjhYcTVaLTRhX2ZrUUxXd3c3SzY2eDUybG5IWV9aeUIzZVIxOXRIVzUyVmJlUVM2YWRFaFhjRDdZdk8xN1pOWTRVQ3FJUE05QkNWSXg0VXJ2ekhHRU53aTVWQzBmQ19DdERZdTliVzh5em5RWUxWZHRGUVRJWGZQUktZSUFB?oc=5",
      "tanggal": "2026-11-06"
     },
     {
@@ -166,91 +509,15 @@
      "tanggal": "2026-11-07"
     },
     {
-     "judul": "TRON Gandeng Aulton Kembangkan Tukar Baterai Mobil Listrik",
-     "media": "cwibc.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiY0FVX3lxTFBib1hOOFZTTTcxQ3psLVdBdVZ0WEc1WlpTbUs1bTZ1Qzl5S3N6d2tXbWpEUVNRVU8zNjdydnZYLXNwZDhydlJsR1IyemQxd0p6bnMyQkJVN0pNM2dqWUZNRDdMSQ?oc=5",
-     "tanggal": "2026-11-08"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "Thailand Naikkan Pajak Impor Mobil Listrik Jadi 35 Persen",
-   "skor": 80,
-   "alasan": "7 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.1,
-   "jumlahMedia": 7,
-   "sumber": [
-    {
-     "judul": "Thailand Naikkan Pajak Mobil Listrik Impor Menjadi 35 Persen",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE1ya3JuNXRDNXB3QS13MDVZUGc5RFdlTnoxOXRTenBXSGZmd3BGX2hGM2s2eDhGRlVSR2UxSVprQ0VfQjJSR3p0M2hwVFVyaEVJeXFVTlNWdDBIM0ZqbFppZk5rY0VvdlUxWEFF?oc=5",
-     "tanggal": "2026-11-04"
+     "judul": "Industri Otomotif Terus Kembangkan Teknologi Baterai Mobil Listrik",
+     "media": "Peradaban.id",
+     "link": "https://news.google.com/rss/articles/CBMidEFVX3lxTE5NbTNHeW5GLWIxMV9qa3pqOFlOcTJVWFhaSXAzajBoRDlDbXRBU1dZUElvZmVKQjdGMzlud250eDdOMjRJTi1XUjd5bHBUaVJaR011WVRuX3R2TzZ4TWNwM04yYVBaU2pmVEkwVWNqWDNqSUpn?oc=5",
+     "tanggal": "2026-11-14"
     },
     {
-     "judul": "Penjualan Meningkat, Thailand Kerek Pajak Mobil Listrik Impor",
-     "media": "detikOto",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZGptTEhZZUhlZ2FXMFR2Y3RTalpwdl96dkZTbU1NMkwxOG5DSkxaN25FV1NRM1RQdmJPbzBDVkpZNWhNQ1E0S21yZVVqLVJBdU9sUmZKVjJWWTJwX0NuQmJCdk9QSEhvSkZ2aDh1Q2ZwXzgxbTZoWngwU09NMW9tbWhLR3doZWh5Z2Vpb01MNE5vVVh0SFdpRFVrMEUxOUNaZFhYRVN3TXZDd9IBrwFBVV95cUxOLUlTU2lyOWFacHcySFFpSGZYWndEU3BSN1lWUHJZRVBCamh6RFkzVHpvcmNQUHRpeWZmeEZCUGxTMjROVjVyRS1sZkZUemJoejFBMExWU0h4dnRoX0JvRUs4Y3hYVW5MclR5TDl0SFBrOHBITXU2ZHJYM3BfUkJzcmNfb2pKN2xVMGtreml2SC01eld5RWwtNmhXZWV3a2R5dGY4X2hidXVmQmlYMTZZ?oc=5",
-     "tanggal": "2026-11-04"
-    },
-    {
-     "judul": "Thailand Naikkan Pajak Impor Mobil Listrik Jadi 35 Persen",
-     "media": "Koridor.co.id",
-     "link": "https://news.google.com/rss/articles/CBMickFVX3lxTE1tSTJwVGtOMlNUeHFjcUtEVHBTVkg1SHcwdXpaY0VnVG8tZUEwU2V0MlFnRHlyUzNkejFXazJwOTBNWmREbHJOcWZOVEpnbHd3UnFRM3BWRVVfNWJiQXZ6SUlEYWM0eHJRLVRYTW9WaEtpZw?oc=5",
-     "tanggal": "2026-11-09"
-    },
-    {
-     "judul": "Mobil Listrik Impor ke Thailand Kena Pajak 35 Persen, Ini Aturan Barunya",
-     "media": "Harianjogja.com",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxOeWRkb0VKUklaMmpVWkNJVFJ0Qjl0N0VCaHhGYk00NnVUbkJxRHRMNGVlYWpleW1QX2dLOUE5MVV6NFgzang4LWlMU3ZhVmpKTmtiTUpoZ3B1Sm5lZnkzdUM4VEE2S1Y0N1c1YU1JcXJrbjRSUTVTZGU0dGtRYksyTzhGVHUxV2gydHoxcW9xeWwzS0NCZjFSVjZlaS13VlpFV1RHcW5ZSjBnU0pLNGg1MmYzWmU?oc=5",
-     "tanggal": "2026-11-05"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "As Roda BYD Atto 1 Copot Usai Tabrak Pembatas Jalan",
-   "skor": 80,
-   "alasan": "10 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.1,
-   "jumlahMedia": 10,
-   "sumber": [
-    {
-     "judul": "Kendaraan listrik BYD Atto 1 di Indonesia mengalami lepasnya roda belakang.",
-     "media": "Vietnam.vn",
-     "link": "https://news.google.com/rss/articles/CBMigAFBVV95cUxNdnlHM2ljNDA1dTRBN2daS2t4ZTlUMFlZbFFJVjN6SF9XNjFDREwxbWNNakJHWFRXVmlsel85NEVJeDNrSVZZcjdDRF9IRlVPY1A4NVBhRGpLcFlEWXkyUndnSGxxV1EtZGpFcGRWWlh2RzF6SFUzRGJTSWJCeXI3Vg?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "Roda BYD Atto 1 Lepas Saat Melaju, Ini Penjelasan BYD Indonesia",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOMHdlWC0wYVl2eVpzWDhHZXp1OXFGY29scng2MTR5VjRCTzRUNEJnT24xVWlmMnp1TmpzamxoWXBCS2xjQ2s1MU9oV0N6YnZIRDhrZDJCT3pBc2NLdm9lNGNLUVpvTEFXazVjUFpOYjFZMzdGZU53QVduVVhDTlZ1aDJ1eTRySGJqVS1uVnVGc1VrREs2aVEzckhRLUZZZ2hWRXdoRHl3YnZBLUZUeWJWeWFuMVJiaUk?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Roda BYD Atto 1 Lepas Saat Melaju, Ini Penjelasan BYD Indonesia Halaman 1",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxNeEJmZktsRnpUcFhmbFM2X0FzTktvR1lXX1JGam16VUc1SnJlQWZwNVhLd1BHY1hoSmUzenR3aHhFY0FFVXU1Y1VnVGVieDItTkRucHV1YU00WEx0LXRNS05SSzZ1eG9tem9KenRLeXRZZ2F5dHhvMDR6R25nMkdMZy1ELV93YTRpVXRpZ3hZUEtEd29yVWNfUlRfU0F6aWVZa0tqWU53ZFN1TUJqWnZTbjFVMTNnOXJrZWFTelY1QmVhdw?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "​As Roda Atto 1 Lepas, BYD: Akibat Benturan Trotoar",
-     "media": "Medcom.id",
-     "link": "https://news.google.com/rss/articles/CBMimgFBVV95cUxOUnZVYXY2eThidU1ObGlQYzZHZXNWakMyN0xKdkF1WVBTM29pbDY0RlhQY2cyakRzUUVJa0dEbWJmd2hsYkZxNnFCRmJwWEw1dUwwaHdhNEUtWjBQOHBDOVJyb1BJd1lmTXBldXlzYk1hSC1zdjk0eFRrYjV0M2VuLW0tRmNJR1R1dUFZcDRUVmkyZUV3dUNYVUJB?oc=5",
+     "judul": "TRON Gandeng Aulton Hadirkan Teknologi Tukar Baterai Mobil Listrik",
+     "media": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE10bzRxN2hvUy10THZ1WHE4TklRM1hhSkRjdm9NWFJ3U2dtNWxQRXFhamQ0VTlBS0hyNjNZbHlXRDcxaGkxeEI3TE5mVUJ2TWE0UndJUjI1M3pQOWZWenJLSWNrZm83a2ZK?oc=5",
      "tanggal": "2026-11-06"
     }
    ],
@@ -259,142 +526,31 @@
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
   },
   {
    "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "Saat Penjualan Mobil Naik 20,1%, Premi Asuransi Kendaraan Malah Menyusut",
+   "kelompok": "luas",
+   "topik": "Astra Auto Fest 2026 Resmi Dibuka di BSD, Tawarkan Bunga Kredit Mulai 1,99% hingga Cashback Rp19 Juta - Suara Merdeka Jakarta",
    "skor": 73,
-   "alasan": "6 media membahas dalam 14 hari, terbaru 6 hari lalu",
-   "umurHari": 5.6,
-   "jumlahMedia": 6,
+   "alasan": "12 media membahas dalam 14 hari, terbaru 2 hari lalu",
+   "umurHari": 2.4,
+   "jumlahMedia": 12,
    "sumber": [
     {
-     "judul": "Saat Penjualan Mobil Naik 20,1%, Premi Asuransi Kendaraan Malah Menyusut",
-     "media": "Warta Ekonomi",
-     "link": "https://news.google.com/rss/articles/CBMiqwFBVV95cUxOT1BkakY4UGVxVWlYU2tiRmZFaUxrcm53aXFIRmZqVzM2aXJJbzFSakNGVS1TbmJwNkZxU2xZdzlxcWdMMDNtQ0l6aVNEOUdpZzBqRHRreUdHUF85N3hoeW5pSUlwbEo3V2dDb3o2b1RxQ1N5bVdNelVja3M0Ny1wSXp0RnAwYTk2Q2xWUUVqYUNGSDN5bnl4cGpZZ1hOdUpZWTVncG1kX0k2UVnSAbABQVVfeXFMTlVHQWZ2NmlsSkk0ZkV2dEpPVzd1YURNWEVzeG5Nb3Z5dVp2WmZaX0s1ZDc3OXF0X3U1VjRidm5CQ1E3aEgzX3I1dW5FaWVObW01MEhrakNPLVVORHA1V1U0WF9IWFFwbE9qeWk4Uk9RQmp4U2ZBRjZwTHBTa3lpY0ZsV1VJWGpiejZkYTFDZjRURjdxcVZOZW5RVmM0TGFZSFpHYXRJR2FQWnlFcGUwTTI?oc=5",
-     "tanggal": "2026-11-03"
+     "judul": "Astra Auto Fest BSD City 2026: Promo Toyota 13–15 November | Auto 2000",
+     "media": "Auto2000",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxPUmxCWnFiT0phazFsSi1reklVWEdWWFY1WWxrb0lzUjJ4b1dWWHc5djFzUnFUU0xRNHlCWVhRUFpWNHpmZHJPdFhueEd4a3VoQTJOYVAxTzIyTkZMZGxCdjVwMjg4NXppaFJpYmdPU0xseXVYTDRDZnpFRDNSc0JIcHJRejd3LUpISG91Z0xpUE1VQlZDcllQcXFwVzV0ZlgyeFJ5VW51cVBmd3VJaU1PU3VOMGNaM2c?oc=5",
+     "tanggal": "2026-11-11"
     },
     {
-     "judul": "Penjualan Kendaraan Meningkat, Premi Asuransi Kendaraan Malah Susut Rp210 Miliar",
-     "media": "Bisnis.com",
-     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxNb2k3aDFpTlF0Q2hKd3J4WXVNVlBKRmt3bDFSMFNHTm9MWXJ5WUQtSC13c2pGVDkwakpiY1dvR1FzaWJpWXE2OWZicUJ0OVhQcldFODRmdmJRVWxCNmlsRzR1czhNM3doVnhzVXhfYVFfdEFpd3BRRW1Rb29BbUZ3cFhwdk5Bb0RYVnJ0dl9xbDdsb0dhLUN6dW03amg5b1VvS1M0U21mcXJtcUZ6NU43T0JNX0lhcXF2c1l3OE90VUhzb1lPUDM2c2c4T3JKZjg?oc=5",
-     "tanggal": "2026-11-02"
+     "judul": "Astra Auto Fest 2026 Digelar, Simak Promo Mobil dan Motor yang Ditawarkan",
+     "media": "kontan.co.id",
+     "link": "https://news.google.com/rss/articles/CBMirAFBVV95cUxPWEdRSHg4RUtXU3dtUDkyTkZ4REZEN1R1Vmc3NTdYYUJXZzNOVjR3ZHNydDlfYkdXUGdXaURIanZBZU9WaVlSN21iQ2hmcmdwZzZzUFFsZURZYmNFbngzVUlSUWdvNGQ2LWJjVS1uT3NROXNqTDN4Ul9YYjdFbngxWEUwbVBQUnY4c1lQMElmMDJqbWxMOGdQVndxZzlZZnVtN3V4TExZUEZSS3pV?oc=5",
+     "tanggal": "2026-11-13"
     },
-    {
-     "judul": "ACA Catat Premi Asuransi Mobil Listrik Rp95,4 Miliar",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiaEFVX3lxTE5qbjVVa1M5QlNXV0wwQUNWc3N3NGhFUVZtYnRLa2M2WUhheTFncXcwQnl2M0g0YWZmZHVScGVQckV2UWN3ZzhyWndoMUUtLXlYU0JWTWE0dDBWM205cXRNVUVNSHZuVVBO?oc=5",
-     "tanggal": "2026-11-03"
-    },
-    {
-     "judul": "Premi Asuransi Kendaraan Turun Rp210 Miliar, Ini Respons OJK",
-     "media": "economy.okezone.com",
-     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxPZVVZZmgxSF9HSGhtbERGODhTM0lVYkhrZ1VrdGFlMjV3RHhmSjh5SEtGbnZ4eGU0ZTdwdFh4aFREMUlSTlJpOVlSZExWWWlmVS1uUGdxWWRUa05pazcwdUtpLWc5aXhjcVQwM2ZEbWtwTTBRNWtxRTdMNGJ4bEdVWkstRjVCZXByUDl5NVRENHk3OHZTY3RCaFVzR2lwV29CcGVEMlFJSzViekpCQzNzSXdGRTV5QdIBtAFBVV95cUxQOXBOQ1RjU3dJT3JjeDJLZm5iblRJOFpDUTNtNEJJVDdGa09tVGlwOWpQc1FVb3FNVWMtdHBfcnN1MDFfZzgtSHZrbHhkYWpJVkU1ZS15a2h2Tm9xT05SNWdvRzRhbHNqRkZCVmFzeVlrVXNyMnB1aHJaNmdUdnhLT280MlVXQlBZSDNaaktwSGE1R2lPQjhDQzhpOWpOMjNzOEZ5Tmp6ejUxSGwtdUc2RnA2T0w?oc=5",
-     "tanggal": "2026-10-26"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "CATL Kembangkan Baterai Udara, Mobil Listrik Bisa Tempuh 2.000 Km",
-   "skor": 70,
-   "alasan": "5 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.2,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "CATL Bikin Baterai Lithium-Air, Mobil Listrik Bisa Tempuh 2.000 Km",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQdUNLLXZLUmRhLVFJazR1UjFmU20zODNYcUFQcVJzeWxHTDl1cTR6U0pPd1M4RXlxUUZ3aE05RzZHdFZMenBKV0JHYTNMd2pSQVF4Vnd3NEwtdDZnT21hQjZDUEJ3M05zOFRTRnN2SUpBamV2c05qRWRmZ3plT1dVV1dqS2pvSGJrNVplaTJYMzlfbERXeWgzVEYta28yVm5ua2dOS0pSVnp2czJPR2E3cW9jTXJDQXJaYVNR?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "CATL Kembangkan Baterai Lithium-Air, Mobil Listrik Berpotensi Tempuh 2.000 Km Sekali Cas! ",
-     "media": "Disway",
-     "link": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxNQlBEWWV1NmFyVUtOOEJBN3RpSUdpU3RYaEljSHlwMjhoUzJONjFqVWFOWEdocWVYSWc4VWo3LVhOei1uYmF2SGlxNVhVQVRRel81N2thN2l0NC1BM1EzNVlZVkZDVzF4dk9hVzFiS1ZCQUs2d2ROSzdEQ1VPcmFveUtDOElNc212NW40N3dObnhoVjB5bGFXbXJ6OTBoOXZybEFPM1ZRWmNMeElDc0dyellsZjR1OG1PeUpVRjFKNFdldDBwQ3lGUjRnY0M3VEVEWFdkRVRYX0VMSDdw0gHOAUFVX3lxTE5Zc2M5cklPMUdEUFhrRHBBLU51b1l0YUItMXFiT0FqdVJlMUo0aVVaODZuY1VtSUVvRGRERTNFYU1yUmx2dmZfWmh3RmtwdjRmSnZHblZPZFA0Sy1PYTdFcnN4aVJiYVNXNS1wd24zTFdRVHNfcmZYc0gxcDF6c092RUd3c0F3WkV0eVliY1JHNG9tLXQxWDFUdGpBbGxxZ09yNzBzR0MySHdXYmZlVDMtYUF2WWd1d25MelJEVUpoOEVmazVlU1ByODdhbW9B?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "CATL Kembangkan Baterai Lithium Air untuk Mobil Listrik",
-     "media": "Limapagi",
-     "link": "https://news.google.com/rss/articles/CBMia0FVX3lxTE11bTJSUVpXeEFKb0x0WlYwajFSb29QVU9PVVFmZHlSOHNHZHJhX3EyN1V6a1c3Q1lIeVBWM2FyeGFBdmZyX3c1andDTktTXzRzMzZrRDJxWXhVVHlZSld4TkJ2MjFac3I0dnFB?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "CATL Kembangkan Baterai Lithium Air untuk Jarak Tempuh 2.000 Km",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTFBCSlQ0YUVPMXZsZkx5MHB4clkzaHRXLVVjVmZYNHhzdFRUcGVuWFNPLVBOTUZIdE9nMVlVa1ZOTExEVDJ1WVpyZGpxYzlNVjVUNGpSTkdVNlR1VEJyakUteVpoUEVNd0hudzRtNG1udUk?oc=5",
-     "tanggal": "2026-11-08"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "ACC Tetap Buka Kredit Mobil Pertama Saat Daya Beli Melemah dengan Bunga Mulai 1,99 Persen",
-   "skor": 70,
-   "alasan": "5 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 1,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "ACC Tetap Buka Kredit Mobil Pertama dengan Bunga Mulai 1,99 Persen",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9sWkhybkR3ZmtrUGM0cURSc3hBRnFkR09oRGtyd3pvaUYwaEVBX3N5VGZmYTdzRXZ5cVY5QzNvNUpfeDhYLU8tRGxQM082ejg2dmRQSVh6cjQ2Q2FTN3c?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "ACC Tetap Buka Kredit Mobil Pertama Saat Daya Beli Melemah dengan Bunga Mulai 1,99 Persen",
-     "media": "gadget.qoo10.co.id",
-     "link": "https://news.google.com/rss/articles/CBMieEFVX3lxTFBjbHVmd21xRTNpQk9UVVNXTU9BVzNrbDg2eFRSWkZpRG1QSkloZWdnTTEweDBxN203c0w5RHhiOWtsSmR5aDRtRHd6dkszQTQ1S2Q0NHdKU1pWeU1zMW42aFNlT1NGUmctdFM5d1REMUhDbHd5dUZHaA?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "ACC Tetap Buka Kredit Mobil Pertama Saat Daya Beli Melemah, Bunga Mulai 1,99 Persen",
-     "media": "gadget.qoo10.co.id",
-     "link": "https://news.google.com/rss/articles/CBMihgFBVV95cUxObW1aUUY4Wmk3ZXU2R19USWp1V2xzOEEyaDJrQmp2Z2xzNldubF9FOU5nVmRuZE9jOVFBZy1NTEstTzk2YVFiN1RCOEZZVmw1T2xhVWxINEM3bVNLVlgtajFHM1FaWXh6MEFhaEd2cU5DejhEWFEySnA0MnhoZWdBQUI5aG9Ydw?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "ACC Buka Pembiayaan Mobil Pertama dengan Syarat Kredit",
-     "media": "SuaraGarut.ID",
-     "link": "https://news.google.com/rss/articles/CBMiX0FVX3lxTE9DNjNTZDJkdDlGdzFTX2xhNzZhT1h6NDhBU2lNaEdFS1pYTE81X01YR0xDdF9COGR4Sm9EUkYyczJ4bkRNOVlfNkkxY0M5LWd4b2o2a0V0dUI1WXF6ZDFn?oc=5",
-     "tanggal": "2026-11-08"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "Harga Bekas Mobil Hybrid Ini Turun hingga 45,8 Persen",
-   "skor": 70,
-   "alasan": "5 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0,
-   "jumlahMedia": 5,
-   "sumber": [
     {
      "judul": "Astra Auto Fest 2026 Siap Digelar di BSD, Banjir Promo Mobil dan Motor, Bunga Kredit Mulai",
      "media": "AFTERMARKETPLUS.id",
@@ -402,22 +558,10 @@
      "tanggal": "2026-11-05"
     },
     {
-     "judul": "Astra Auto Fest 2026 Tawarkan Bunga Kredit Mobil Hybrid 1,99 Persen",
-     "media": "BeritaSatu.com",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPQ2dLY3pIWThrY01VWXhYNW9VU01Gc2RVQVZUcWhZMVJ1WGM0bmcwazdmRXR2ZUQwNmJxekFQQ0RHT1VyMllRWEJwMWhJeHI2Vm10alNmbG9rOWdGeS1MUHNlMTJCN1piWEFlMi1wS21rQUN3V0N6aFRzSllOSDUtcVl6ZUdaVXBOejhUMUZncV9tQ3VlRjRKbEdERkhYd2xoY2Z4WWVxWkJtMjFGWjIw?oc=5",
-     "tanggal": "2026-11-04"
-    },
-    {
-     "judul": "Kredit Mobil Bekas Tanpa DP 2026, Jangan Tertukar dengan Promo Bunga 0 Persen!",
-     "media": "Trenggalek Njenggelek",
-     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxQbGhTd0x0Y2t0eTF2WGs3NDlxekx5VGpsTHNITzNIdldRMnFqS3dLZDVXclNscEZXcFhDQ3I1QVgzWWJBYUJraEwybWlnM3ZmY3lrbHNtQkVCX2drekl6aW1uNTlxSUVSTjYyanZtMFRqc1I1NUhCc05wTl96ZE01VFVqMzZHRXZyQnJudEx4OVZ6cFBJUGFvZjk2aGxtOEFEZGtneUJqS2JxOHhESFl2MmVPXzV4TzZjTnEwemdKUFhkRVNGMWl0cmlzSGJqMG5YOUHSAdcBQVVfeXFMUHFyZkhjaktqSUNieDRSRThocE1rWXRhR3BwdmNleHRGY1gzTXJsYjVzR3BjNnFNbHFPZlQ4TzhIcU5nWm5iU3V4UVdkLWRVNDFQekx3M1dPWE1nSTh6T0k4VlN4aUxrUmRmZDZUSlpseTFsUFVsdFU0c0ZuV3ZJbEhqSWd4bmhOMWJqZW95QnlIZW5pVFFZTmk2QmpEc3VMSTRVTVNodTE2MW9qMF9Ca3U5aTl1NzVCMjVDWHNFSmR2LXZtSFlLZm1TT2JuQkFrYjl2SmVNbGs?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "BCA Expo 2026 Tawarkan Bunga KPR 1,23 Persen dan Kredit Mobil 1,8 Persen",
-     "media": "Radar Tulungagung",
-     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxORW5GMGphbENobjFCdm1LQzQxYzlKckNvTVgzd0lLTm84OG5jUXQ3UDB2LW9Ob2pOdTM0ZWQ0djBHSk45MTZsMXBHa3ZFQncxRzF4dUVoNGRjSEZCQl9xVEFiY2JhcVp5dUswODU4aXZuSy1Gbl92bFlWa1podUJjYzc2aFRBdE85NF9QNE9HRkpVQzNiMGhiVloyM3I3b2dKNXBVdTVOY3B4Y21MMnVldWRZQWF0S2NFU251OUh1R3F4Ynkw0gHKAUFVX3lxTFBsdlZOdXBXZGZzdENjMF9WMlR1cElVTUwyZVg3VWlEd1NucGdNQk1hbXlzMkhuNzdGOVFQN1NNUkNjZ0dDbnhOaHQwNUlnc29WYVIyTC03eUxLWlJqcTZPclFCYmt4WlBuRmlfZ1dTSmZBVzdVOGRrRXoteURJQ0R2aTlaclNQRV9CbDhhRERYOTZRb3dscVZ1bExka2Z5N1ZJSmVVMmh4WGFkZmljWjJMUWQ3NUYydHk3a2V2UklPakRmN0o5SUVuZEE?oc=5",
-     "tanggal": "2026-11-05"
+     "judul": "Astra Auto Fest 2026 Resmi Dibuka, Banjir Promo Hingga Kredit Mobil Hybrid Bunga Cuma 1,99",
+     "media": "Gridoto",
+     "link": "https://news.google.com/rss/articles/CBMizwFBVV95cUxQbU9rc1ZRZmhVY1RYTTRVYlJyQ19icWNqYzF6dWpyNEJJLXlvZE8xMjJULWVHcEI3dEE4aEg2TWZIUE1MSXVXX0FOeDZyLUZtR25qQ2VCSzJGVHZnODU5X25hMjdEZXhQeXNMaWVWZFRpWGxGeU5neHFsOU1TOWFHWkVHbmpXdW9TTzJ2ZEZ6ZTlHWElWS0lvdXZqTkZKU1ZvNEk2S3ctU0VnekNOaDJjZ0VSVHMxM1RFWEJPcjhrSG5hRlVYX3dhcHYtRUVGLVnSAc4BQVVfeXFMTndGMTBYbHdENkpjd25obVN2WWcweEw0N3hxWHZMdE55elFrQUctbmJqUEc2X0dqTVFlZkRZQlRhWGpaSlc0bllreHUwUVVtMTk1RlRaLVFybFA3V3ZvNW01UzNSa0hBX0VLZkVMZldaUmVTcVRTekZEeEJ4ZkVkcUp4dm1nMHQ3ZUlWU0VCV1pHZ2g3ZVktNTE1enBtd1pYVDIzbHpCRU9mTTM0d2ZkNzhpX3ZWUXZzbEVWYVZvUXI1X29ydzA4T09JMFdhX1E?oc=5",
+     "tanggal": "2026-11-13"
     }
    ],
    "sudahAdaDiSearchConsole": false,
@@ -426,304 +570,42 @@
     "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "Apa Kabar Wacana Insentif Mobil Hybrid?",
-   "skor": 70,
-   "alasan": "5 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.9,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "Ada Kabar Terbaru Soal Insentif Mobil Hybrid dari Menperin, Simak!",
-     "media": "CNBC Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOUHNKVnFVM2g4YTdpTkppa245RkFaR1pLcUNqa09KVWdjSFFENFZnTG5RYjFKUVFnVmNCMnFpeU1RNDNJVlZDU1U5X2NxNTFYV2tNMWlRaGQ5bGpBb185LWxXVWlSX2daT2dXRklTOF9zNE0zT3ZnZjdDYmVzZ01XR2lJbG93eEJIY0UyRW9YcVlNbDBqNFlIZHdwVlNBNXc5SjNzdU5MOHY3bjM2Rm1rd2pDX1JmSTZCUXhKMENjNkrSAcYBQVVfeXFMTWpjOUloNlF4cWtxUGhDNkJrV2FqYkFnVjJTcm1WUnA1QlR4aWQ3ZzBLUVVRbHVlQnhSdTV5cTNON1VIUFQ0TXh5RW9Sb1dMUm5Fa1JYTUtUYUpJWlFLUjVxRjNraFBsa2pNcmFNd1phR0FscDBsandtNm8tQjMtYXBELVFqR0Q3UGVHUlZUdEJXZXp1X3RkMlRiOHBqYUk3YVNzXzJIcTJPSzZ2V1NnNWFvNGdlY3E2YlBCZ2NGWUwzVmRqd2RR?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Apa Kabar Wacana Insentif Mobil Hybrid?",
-     "media": "CNN Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxNTlgwV2JZbl9SV0NLdWV1bEtaNjRSUkNhY2VGVjNTNktsZFBMMkt4bVBLYTNneGUzMTRQdmJuSGg1UHRBUElrM0Ntd3hMRDNTRmxjd1lJbFFhU0hSVFRpanAyX2xoeUlCRllrc3FsYmsyazctR2VmQjRmalVMSS1kbFFYM0l2UjdSLXZNZlMtZDhjOW1fek1YdS01VkNvS2tWTThIREV3?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "Kapan Insentif Mobil Hybrid Berlaku? Ini Penjelasan Menperin",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxQbmZsN0pxOVZSWWtzYmh0SjYxQTlWNnoxR0xxMW01VnoyQjFRalBubzROcWd0bmhjbU9ZQVhyWTBySi1aZVlOLVFwQXV5dTFYM1I0U1VWVW80MlVnRjdRamh6UmozQ05LamJyNGxDQTd2WElCNGR2Qjh4a3ZIU2lmTFZLMlVFeUJmVTZmbkNNMGNmblozSFlEaEpxNzQyNl93RmpTTzgzWGlnVlA5eTBOSmtlZw?oc=5",
-     "tanggal": "2026-10-28"
-    },
-    {
-     "judul": "Menperin Masih Negosiasi dengan Kemenkeu soal Insentif Mobil Hybrid",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiugFBVV95cUxNNy10bGUzYXhYNnFxVHY1VnlaQkdtSGFzaXFkLUloV2RVSXBxWVAyWTFLS0tpaFlZTXFsVm5nYi16ekRfQU5pdUhGWnAtanFnUnRPLXBmazVLbXNzQ0tuSUhlU3B4VmFtOWc1N1NqZDhyQ1pBOWg4MU1uakhuMjUxN1FRUWZRYkZQbVRVUm1GV0FodzlSUFJVQkZzS1FjOHZXSmdtRlZJMm5TbWV5ZFFCTk9tdWJkeHZ2bGc?oc=5",
-     "tanggal": "2026-11-05"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "bofu",
+   "strategiFunnel": "BOFU (Siap beli (decision)). Pembaca yang hampir memutuskan. Jawab harga, promo, cicilan, dan langkah berikutnya dengan jelas. Arahkan ke WhatsApp, test drive, atau prebook. Tulis tanggal data dan syarat promo."
   },
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "Atto 1 Jadi Andalan, Penjualan BYD di Indonesia Capai 46.700 Unit",
+   "topik": "Thailand Naikkan Pajak Mobil Listrik Impor Menjadi 35 Persen",
    "skor": 65,
-   "alasan": "8 media membahas dalam 14 hari, terbaru 8 hari lalu",
-   "umurHari": 7.6,
-   "jumlahMedia": 8,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 7 hari lalu",
+   "umurHari": 7.2,
+   "jumlahMedia": 6,
    "sumber": [
     {
-     "judul": "Penjualan BYD di Indonesia capai 46.700 unit",
-     "media": "ANTARA News Kepri",
-     "link": "https://news.google.com/rss/articles/CBMijwFBVV95cUxNT014SURJV0xwSjhwUGdHeFRZczY2cy1NRGMxOWFvdEM4NVpHOEFWYXlIdGlGN2ZJY3pXUk5GRXdZbVNxZUwwZ0JJM3BjbUc0U0FJeXYwUFBkZVRmVDVBeGN3a3pLN0V6bmtreXhMZEJxVGN2YlV0UGRWSEZxbk44dDNxSmlXZHNSckFfZ01tVQ?oc=5",
-     "tanggal": "2026-10-29"
-    },
-    {
-     "judul": "Atto 1 Jadi Andalan, Penjualan BYD di Indonesia Capai 46.700 Unit",
-     "media": "HALLORIAU.COM",
-     "link": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxPN0dHY0ppVDlOYVlIWU1URUdZaWV2ZDFpT0QzY3ZGQ3BQUGpZczA1aHhQZHUyaWdxdGs5QzY2cG50NU82U1hCb195T3BvM3BoM04tVWNDV1EyRTBVNkdJZUMxSU1nbW4wYXBzcEtuODRQUnNRSXloMWlsaVljVjJqWUlUajQxUlpqeUs0U3FoS0ZuYjc1OE5yYjZhM0pWSVNRZ3oyZEZtcXhMLTRMZWRJRGh0cDVxZ04y?oc=5",
-     "tanggal": "2026-11-01"
-    },
-    {
-     "judul": "Penjualan BYD Group di Indonesia sampai September capai 46.700 unit",
-     "media": "ANTARA News Gorontalo",
-     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPbGExSk5PX0owMzlSeV9hLWZCZHpUZERnSDNnbW1vRzZMMmZSRkhCNnNSOTllTGxmWG1vQ0I3QUNJRmNlYmtHMGljQ0xGZlFXTDhWd3gxVGw1YzBZQUpCQ2JuTGF1MVBUVmh6ZUFhN3BTZWNCbnRZTTZIbnZNQjg3S2g5cXJCNkw5blp3QUx1VndRZ2lRZkxORVlQRlZ5UnZ4Ul9XTGJYb2hGcjBYdm1QRnB0Y9IBuAFBVV95cUxPVjVrUmlNOFI0S2ZYWXN5bURYVTVZWmw3T1VqWVFEdTh1cXhnel9TNXBzX1hid2l6YjdWY3BzUGZJWXlrYWtLZVhvMVBZZ2J4RlBpajk3SzBLRmJOeXUyeldJdk9wVXpxTlp2cTc0YzMycmk0eXpLVFRSNHZDbmpReFdwMkNvTnRScUd2Ymcyc1Z3XzB6U2VxbUt5bkpsVGx1RWxUVmNjbDc0bnBUdm5QLXNkWFJFYnN0?oc=5",
-     "tanggal": "2026-10-29"
-    },
-    {
-     "judul": "BYD Sukses Jual 46.700 Unit Hingga September 2026",
-     "media": "jurnas.com",
-     "link": "https://news.google.com/rss/articles/CBMilAFBVV95cUxPVXk0TzBibGhabUs3clFYNm5MLXdCYUJjMDA2V001eW1icEplRDBoR21wU1hCZXNHUVlmYXdhX1E5SEQ4ODFrdFNTVFpxd1luVU54SWNnWDg0a1lnS0ZyRmhoajR0NC1TRnZtWnRYc3RvNlcwMGk3SkJiQnpZQXlfSGRPS3gxZjlXeGE0TTZRaXpPOUh4?oc=5",
-     "tanggal": "2026-10-29"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": false,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "Penambahan SPKLU Kendaraan Listrik di Sumut",
-   "skor": 63,
-   "alasan": "5 media membahas dalam 14 hari, terbaru 3 hari lalu",
-   "umurHari": 2.7,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "PLN: 145 unit SPKLU di Sumut dukung kebutuhan kendaraan listrik",
-     "media": "ANTARA News Sumatera Utara",
-     "link": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNdzRZQmNORm1NVk8zanlHNTFFQVdFY3BDbWNOd3Q1MDZDbGNYZTZjOUU1cGVMZVcyczJfSk5mUnlXUEdKc0J6OFlkSUdIcTg4NEttdUhtQ1VvNjJwdGxyOTlOemNIOXg2VlJiQnI0NUthSUhfNVQwUEJWMExPWnVaN3Y2LUpfMDMtNGRUUjlBNVhyMmQ4cXNrTl9jXzd3c0ROajZTcllPaFLSAa4BQVVfeXFMUDhWaEZEak94RmdHUVoteWlmM0lGVFNKMTZfUjZ4VTRNMURnMVN4dXJpLWVGaDg1SmQ3SDFlSEowZ19kRWM1SnBqTTlVbXlsWnozdjQ3VTg1QXc4UUxBTzJYTEVKVmRJdWhfdHJzbUJVRExLcVNjRHhYVHR1elNlay11RjJ4LV9hbTR2TDJmVDhUcEdOcVNBMUphLUhuUWZ6N3lueDg1ejJ5Umh3SDB3?oc=5",
-     "tanggal": "2026-11-01"
-    },
-    {
-     "judul": "Kendaraan Listrik di Sumut Capai 9.800 Unit, Komisaris PLN Ingatkan Kesiapan SPKLU",
-     "media": "republika.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxPYktWSTZCcXBzYjE0MkdkTklBaXNuRlVlWmZ0bWtsQ2dMSUhOY3EwdDZpb3BDSjhhTUFRT2cta2NnNTlnSnlENFBoU2lsOC00aG5sdV9GRS1wUFk2ai1reng3MkVSeTIwTVBONWtfMlV2bWN3UEJwZklTRkV4U0FXZUhsdkZEd1gtZ2FqNzRuMnYzbUZzY2hMb1cxblVsYmpxak1lZy0zSm5ZTFlCVmJkRFNqVlh5aUQ4YVhWa0JlVUZaZHJpSms4LQ?oc=5",
-     "tanggal": "2026-11-01"
-    },
-    {
-     "judul": "Dukung 9.800 Kendaraan Listrik, PLN Sumut Sebar 145 SPKLU",
-     "media": "Start News",
-     "link": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxOd1FhZHpjR3RKM2FqaEJpQnctTFdLeV9uaWdGZTJXQkxEQmJmTEp0cGFJWTVrdENUVmFQRXFFVjF0NjNyVHpONXg1ek1CNnZUU0Itc0NVOTB1bTZKY1BsTk5IY1pNcXY5RnY4VzJfTkRwd0pyZFRfTmFnVVZVU3dXVzVWNGhJSDAw?oc=5",
-     "tanggal": "2026-11-02"
-    },
-    {
-     "judul": "Penambahan SPKLU Kendaraan Listrik di Sumut",
-     "media": "Media Indonesia",
-     "link": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPSUhoTXVYeHRkVHE2c1BldmZVcGZJSWRtQ1pNSFZLNmlHdUZoRGNxZWUxLWxTWkdsM2xRRDJUY0g3RDNBUW96cDl2WDVLZm9scE1qeVNubU1sdFk1QlliOUpCUTVmUmk4dlVIaVNnbkdhazFCWDg0cmhiRDRMblliVXEtQTIxejVEcTVPRkdrWk9waDhwX1FZX0ZRQkdqNnpkQTJIOG1B?oc=5",
-     "tanggal": "2026-11-06"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "Menperin Ungkap Update Rencana Insentif Mobil Hybrid",
-   "skor": 63,
-   "alasan": "5 media membahas dalam 14 hari, terbaru 4 hari lalu",
-   "umurHari": 3.9,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "Update Rencana Insentif Mobil Hybrid, Besarannya Tak Setara BEV",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQWkF4WGh0R2ltc2NSZ1B2eWU3MjVaVnljekZudVp2TVFmUTZXU1dlVXRlTnlOcUJGWlhVcFJ1aEU5V3l6UmVQZ2ZRaUJPX0Q5dkdaUll4STl0UzA3SkRJV3NKNkIxcl9tNHpESGZiamZFXzJwMzlMTlFFSnFEeWpDcUE1Z0RTLUxSYVZNX3laMFBDNHQ0bF93d1RBZnJmd1hBVzRjc08zN1NPeGsxTi1Pal9wYkRaS2c?oc=5",
-     "tanggal": "2026-10-27"
-    },
-    {
-     "judul": "Mitsubishi Sambut Rencana Insentif Mobil Hybrid",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxOUXFRZlBxRnFkSlZDX3dMb2U1clpweGFOMndKa3A4Z3k1RC1kUGdRWWNUYTNLblh3ejdKbEFZcDBKeXhTamRMb09QcFNaX2J0VWozX3BVb09PWnc4aWEwM3RDT1Etd0JwVTV5SFp1eGw4RlAwTWdla1BxaFZHaW9sODE0Uzk2cFVKOEE3VjlReTYyZUVaWjlCanZ6aWlHdGljNXMw?oc=5",
-     "tanggal": "2026-10-27"
-    },
-    {
-     "judul": "Menperin Ungkap Update Rencana Insentif Mobil Hybrid",
-     "media": "Bloomberg Technoz",
-     "link": "https://news.google.com/rss/articles/CBMipwFBVV95cUxOaEJNSzRDeUZfWExqNzdCcTNWa1p4NHpOZGlUc1owZS1pZlhzeHhzUlZmclg0bzh1UlowLWZCWFFVanRfdmFpRWx3N3ZLWnpYdTN5VE41aklZV1hXSE1JdGc0VjNUVE02emhYdjNOZnpYWHhVdEJBckViT2Y0S1Etc2ZDcjFMMlBmT1R0ck5XeDQzaWFqNnFEa0Q5R2ZJLU1MUVJVclAzbw?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Pengamat Ungkap Syarat Insentif Mobil Hybrid Bisa Efektif",
-     "media": "KatadataOTO",
-     "link": "https://news.google.com/rss/articles/CBMiowFBVV95cUxPcmRDOEFMVHA3UjFpQjdVQVFrQ1p2LTd1Ri03X3ZiUzM0dmNrcGtzRU1fY0pOX1VLUWRlRUdRNm1NQzZPZ3JwR0lmZlhwRjdWdzcxSFdDeHduejhhcmR3WjBXN2pKT3hsUGZyQzJzYjQ4ZUk2ZU5NcTN5bUl2bmdGMDRBbVl4eXpmY3BxZ0Vya1dLTkx1ZWRfcjlzOTJ5dTlCQ3JV?oc=5",
-     "tanggal": "2026-10-28"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "Denza D9 Bekas Turun Ke Rp 760 Juta Saat Versi Baru Dijual Rp 1,08 Miliar",
-   "skor": 60,
-   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.2,
-   "jumlahMedia": 4,
-   "sumber": [
-    {
-     "judul": "Denza D9 Bekas Mulai Dijual Rp 760 Juta",
+     "judul": "Thailand Naikkan Pajak Mobil Listrik Impor Menjadi 35 Persen",
      "media": "Peradaban.id",
-     "link": "https://news.google.com/rss/articles/CBMiU0FVX3lxTFBxLWtzUV9PdHhsYXpjZXVfY2E3bjd0d1BCVGJjcWZKeDNDUTJjdHEzbDY4cV9COC1Zcks2X25KZG16WDlVTDhpeUVpeURaVFlpSGFF?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "Pasar Bekas Tawarkan Denza D9 Mulai Rp 760 Juta",
-     "media": "Lensa Hukum",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE1tRmxHUUlKTHJGWllRSi1NeGxiOFlLMkcyNUtyRkN6Tzk2Qlhod2wySDExMTByRjB1ckR2MEdTNVpUSzBCRFAzbTctTk9zYVNvMEs1Rjg0VjNfam5hZldjSw?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "Pasar Mobil Bekas Tawarkan Denza D9 Mulai Rp 760 Juta",
-     "media": "Cirebon Times",
-     "link": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE9Ic2h1YUxkSEpRXzUzaXFJM0JmNkZzbG5PalBwb0xyYXlsekR3LV9JRUtpcjl0bWJSNHNQMFlFcXNDTFctNXh5NFRfMEltSnZUY1o2VFFyclJxakk3OHc?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "Denza D9 Bekas Turun Ke Rp 760 Juta Saat Versi Baru Dijual Rp 1,08 Miliar",
-     "media": "gadget.qoo10.co.id",
-     "link": "https://news.google.com/rss/articles/CBMid0FVX3lxTE1oYmZGR1VWdkx3ZFJ3V09NRXo3VVhjQ0I4T0lIX2JGM1J2Q1ZFeXd0N2FYZFNtNkEycjZORzhES1RIU0RfSl9wVEgyV2ctOVIwSVlFZWhrdG1rWEZLSzBpV1U3QTRVX2k2a3ZpZF9YWDNVczA4YnZz?oc=5",
-     "tanggal": "2026-11-08"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "Honda Dukung Usulan Bebas Ganjil Genap untuk Mobil Hybrid",
-   "skor": 60,
-   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0.9,
-   "jumlahMedia": 4,
-   "sumber": [
-    {
-     "judul": "MG Sambut Positif Wacana Mobil Hybrid Bebas Ganjil Genap",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOU2pTN3gwdkRfaEh3QWxqbHVvNGE3d0xSQThCZTgyaW04Z2pGWWlEODZ6T3l6SEkxdi1ER0FocU9CcWFRQTR1UnM2Y3FpTmR1MHVHRDVwTVhPSTQ5Q21sOXJRVGlZM1pWd2M4R2RtdTFUR1RVbE5sRjIycTVyY0lmc19Ob2k4ajJrZTIxdkx1eDJsOWJqOVFlZFZEWFBVbGs5MXRFakZaSGxXNjZLSWdZ?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Honda Sambut Positif Wacana Mobil Hybrid Bebas Ganjil Genap",
-     "media": "Kompas.com",
-     "link": "https://news.google.com/rss/articles/CBMiswFBVV95cUxPcS1TRF9HSUpVdHRab2FrUGs4Q1dxUnVmZHczVlNPZHlrN0JvbWlSR2NVOHd5NWlIQ0ZDYUpoSG1MVktxNzJWUU50dFhjcXlVcTZad2h5cDV0TnNwc2NTai1DVFRHcGlESEhvcXZjNEI3Y3hTQmNEcUlBam1BWTBmOElfM21wMV9hdDRwMEpUczUxRndhV19BeDZ1cVd3VzNuTlJmU3VtbnhkY0pBSHdiWlV6aw?oc=5",
-     "tanggal": "2026-11-08"
-    },
-    {
-     "judul": "MG Sambut Wacana Bebas Ganjil Genap untuk Mobil Hybrid",
-     "media": "Demokratis.co.id",
-     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTFB1ZHBvcy1rM0hseDRhcEI4UXZsY25qYzJHeG1jb001TDVTc0wwZXN1MnRpSW04bkZCandSY0cyN1BoTVlENVZLSnlEZU4zNFRvaFFyZzF1eW5ycGpLV2V5QWJ5b1JXRVpDeWxfQQ?oc=5",
-     "tanggal": "2026-11-05"
-    },
-    {
-     "judul": "Honda Dukung Pembebasan Ganjil Genap untuk Mobil Hybrid",
-     "media": "cwibc.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiZEFVX3lxTE5LNnI1ajBMRUZacWdyREFwQXZCaTJPOXNPd29OeGxiUS16RGZlY1IzRjhnMllHdUpESzVIWjRvb0UxRTJYVXhNR1BiUWdEMXJ5bVFONVU1M1BJY19aUjY1UkpaZlI?oc=5",
-     "tanggal": "2026-11-08"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "XPENG Siapkan Peluncuran G9L sebagai SUV Listrik Mewah",
-   "skor": 55,
-   "alasan": "2 media membahas dalam 14 hari, terbaru hari ini",
-   "umurHari": 0,
-   "jumlahMedia": 2,
-   "sumber": [
-    {
-     "judul": "XPENG Siapkan Peluncuran G9L sebagai SUV Listrik Mewah",
-     "media": "cwibc.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiW0FVX3lxTE1FaTJaeldpYnhzaldIcGhpdllDa1FqeGN2dDkzVXJ6ZmpBbVVnbGVrMElZTC16UnZ5c0FURnJoR05DTVlUTWdrSnNGb0RROUtQTmhzbjNHRU5MNGc?oc=5",
+     "link": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQSzEzS0V5dU45d01TUkF5czVhaFo0M1FNUWpEdUd4ZnZJQUlhSWxXdzk3YlpWdDhIak9FRGw4VEE2TWVVYzBTb25MUE5qbVYtZ2lWZDkyTl9oVUNkajdYU3Zsc0lSY0JZM09LV3hlSmYyMUREbEJVT0xsdjVMLXg1aWJENUpGMl9GTjBfWFF3TS1NcjZqUjlz?oc=5",
      "tanggal": "2026-11-09"
     },
     {
-     "judul": "XPeng Jadwalkan Peluncuran SUV Listrik G9L di Jakarta",
-     "media": "SuaraGarut.ID",
-     "link": "https://news.google.com/rss/articles/CBMiYEFVX3lxTE54Yk1rWjc0UTVlblN5VC1aTmQ2TmFzczRqNTdvRUhHYy1SOE1nNmwwQmZhekxWWWNIU08tay1Jei02WEZ1YTBZN1BZLXo1cGh4M1ZWMDZOSGhhVDNNbDZNYg?oc=5",
-     "tanggal": "2026-11-06"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "inti",
-   "topik": "Lima Berita Otomotif Populer, MotoGP Qatar hingga XPeng G9L",
-   "skor": 55,
-   "alasan": "2 media membahas dalam 14 hari, terbaru 1 hari lalu",
-   "umurHari": 1,
-   "jumlahMedia": 2,
-   "sumber": [
-    {
-     "judul": "Lima Berita Otomotif Populer, MotoGP Qatar hingga XPeng G9L",
+     "judul": "Thailand Naikkan Pajak Mobil Listrik Impor Jadi 35 Persen",
      "media": "cwibc.co.id",
-     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE5ialExT29ZdTRNYmpqSkpXWmtGek9XLWtKSGN3MlppX3phM1kxOTgxd3FZaDd4QVdvLVNuQm9BaHQ4dTlMdGJyX2lKOEJHek5SM0dURWxLdU5CNzB3WGFXemFDcXdfbjg?oc=5",
-     "tanggal": "2026-11-08"
+     "link": "https://news.google.com/rss/articles/CBMiZ0FVX3lxTE54VGVrQks4Y0FWN0dlVkppV1hUUkJFSW9sNGR2VHplWDNsX2VGei1qYV9zbUNBWFlvNW1vWnRFWVVsNXNmaXNqT2VJY2hqVnh3MFhxU19YZUJHS2RSLWtCeDNJcnZGQzQ?oc=5",
+     "tanggal": "2026-11-09"
     },
     {
-     "judul": "5 Berita Otomotif Populer: MotoGP Qatar hingga XPeng G9L",
-     "media": "bsinews.id",
-     "link": "https://news.google.com/rss/articles/CBMiZkFVX3lxTE9RTmdReEpoT0V5Yzh1dnQ1TlNxdUdXaHZjdEE1WFRmUi1aVjBhenhNVW9tNkphdnpuN2w1bklwdkdOUkpYNGhxVGphd2JwbF8zcGR4VlBJc3NEeDV5LTVLZXVBaGhIQQ?oc=5",
-     "tanggal": "2026-11-06"
+     "judul": "Thailand Naikkan Pajak Impor Mobil Listrik CBU Jadi 35 Persen",
+     "media": "Kompas.com",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNczBaT0N2Wms4aW5rVFN4Um92WnV2dUlvRWlHR0d5TXUyYlpWdjNwSlJQMGVReFhPZUFyZ2U1WXpDaFdLZEVGVFhmaXJxTHQ2dG5iQWFFVmNpS1JLbUh0b09ZcmJKZDJVdzFicDdKOUx6dklOSWdBRU9MVnFxS29JUC1KdS1oQU5hdmRzTGdKSFJfTjFIQzhiVUVMUUUzTUFvaVJFb1dKcmJsbFFOT0g4b3RNckFiZw?oc=5",
+     "tanggal": "2026-11-09"
+    },
+    {
+     "judul": "Thailand Naikkan Pajak Cukai Mobil Listrik Impor Jadi 35 Persen",
+     "media": "Limapagi",
+     "link": "https://news.google.com/rss/articles/CBMibEFVX3lxTE1MRU9vSjV6a1U3OUZ2NWNnUGtSbk1pS0RIOFlvV3ktQW9jU0hLZHNMUFRuN0ZIS2RqR29UclhtRWktRzB2VmFMN1pMYTNDWHVrUlhRYjZyVmJTNEw0b0dPZHBvNHREYk02MmhtMg?oc=5",
+     "tanggal": "2026-11-09"
     }
    ],
    "sudahAdaDiSearchConsole": false,
@@ -731,80 +613,84 @@
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
-  },
-  {
-   "jenis": "berita",
-   "kelompok": "luas",
-   "topik": "Polisi Sita 923 Liter Solar Subsidi dari 5 Mobil Modifikasi di Sragen",
-   "skor": 55,
-   "alasan": "5 media membahas dalam 14 hari, terbaru 8 hari lalu",
-   "umurHari": 8.1,
-   "jumlahMedia": 5,
-   "sumber": [
-    {
-     "judul": "Polisi Sita 923 Liter Solar Subsidi dari 5 Mobil Modifikasi di Sragen",
-     "media": "Indragirione.com",
-     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOXzU2SXp3Zk9VNFZybUotMnEzZVZqZkhGX21OZXhkV3dtSDNTdFZlVzBGaVU3Um9rcTBFbFlXSHRCUHhZekpYT0VVOXZKcUFWR1ZOVU5ibUNZLWg4WHZoclJwcFM1U2kwZVY5dXdEakZoN3hIbGNIV3JpdUNQejdDQmt5bWhkX29yck1kbUg1a2ViZDI1azRzTEZPWVhGS0FaNlBJVUE2SlZYUdIBrwFBVV95cUxNdXdMQ2syVTlIelgySnFaaWhuZEtfSTF6ZUtfWUJ4SlVWX0Itd2VXaUVpSnY2cFIyZF9XTUVYUDhwOFZmZk1OUmFiWFFGYXVsTzRzS1VqNHVlbGVWRWdKVG1qZUhYNjNBbmZKSVNlYTB0dHhPSHI2cEsxclI4VHpEZklxdjRLXzl0clRFSTdPUE40ZjlBTlhhQmVlR1NnamswLVBBVTNTNGl1WldiT3ZB?oc=5",
-     "tanggal": "2026-11-01"
-    },
-    {
-     "judul": "Modifikasi Tangki Mobil, Polisi Sita 1.040 Liter BBM Subsidi di Boyolali",
-     "media": "Fokus Jateng",
-     "link": "https://news.google.com/rss/articles/CBMisAFBVV95cUxOOWV2NFFyamx0anpzZm53NVZPSktPOFJsT1IyVzhzSGthQlA0WjR4a3BoemVHSmZqNHZFUnd0dklvbHFBUlRmUmhaZXp6RXpET2NKM0gwSEtVenFlQ1NRem1CWWpWQWpwb1BaTW10OE1NVDdaRzRkNmlHZ3NoenZUSHIza3R0bzNTR045RXFBaXJzTGdJZVNCUEQ5dG9zS2RwbWpDMzN6UHhYMDcxSmQtSA?oc=5",
-     "tanggal": "2026-10-29"
-    },
-    {
-     "judul": "Modifikasi Tangki Mobil demi BBM Subsidi, Polisi Sita 1.040 Liter Pertalite di Boyolali",
-     "media": "Seru.co.id",
-     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxNck1iU0tzc2IxTkx2T2NlZHpWejZGMGVxNDB0MWxuZTdhN1ZzZVVBblROV2dVVm5BUmxuMHo4TkwwRWM5MGdnQ1VvcXhEcjEySGxDM0xXZWo4Q2pUZm5PdzZzbzNEUHFZR2hlTFpFdjcyVmg2SHlTNDRKNjlzNUlCNmF6YU43YUc4aHlFQmVCdFpfSGx3dVdjLVQ2NGRrY0NnZ3FuN3AwaW5JRHU2UDJESm1n?oc=5",
-     "tanggal": "2026-10-30"
-    },
-    {
-     "judul": "Solar Subsidi Ditampung dalam 5 Mobil Modifikasi, Polisi Sita 923 Liter BBM di Sragen",
-     "media": "rmol jateng",
-     "link": "https://news.google.com/rss/articles/CBMitAFBVV95cUxNZ2dFemliaEg2WE1VVUtPaEpVY0NuNGtuUnBsc3Z2VWJfcmkxSXVMZDlVb1VnUTRtWHlVR2E1XzVCWFhLRGlKcnh0M2UzNmc3OTBKclp2a0RYWmZ4c2t5c0JmMjRUbVNxbGNCQWVLTlJiU2J0MEtWMEt0SDg4VndWUkJMcGg2ek1rQkpFRHI0ZGxjM1FPUzdIakVFbFlyQWlDYlBiOWhhMk9YMUVzMW5CUWs5OUI?oc=5",
-     "tanggal": "2026-11-01"
-    }
-   ],
-   "sudahAdaDiSearchConsole": false,
-   "baru": true,
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
   },
   {
    "jenis": "berita",
    "kelompok": "inti",
-   "topik": "Dukung Ekosistem Kendaraan Listrik, PLN Hadirkan SPKLU Fast Charging di Hotel Amaris Kota Bogor",
-   "skor": 53,
-   "alasan": "4 media membahas dalam 14 hari, terbaru 5 hari lalu",
-   "umurHari": 4.7,
+   "topik": "Flash Charging BYD Bakal Hadir di SPBU Pertamina, Isi Baterai Mobil Listrik Cuma 5-9 Menit",
+   "skor": 60,
+   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.1,
    "jumlahMedia": 4,
    "sumber": [
     {
-     "judul": "PLN Resmikan SPKLU Ultra Fast Charging di Jajar Solo, Layani Enam Mobil Bersamaan",
-     "media": "jatengpos.co.id",
-     "link": "https://news.google.com/rss/articles/CBMixAFBVV95cUxOb0poVVY1NWp2cmZCRUwzZlpJeTFaUnF2VE5BVjZJczJhVDNPRWMtY01TZjlfOU43UnZ3NVlQWjYwQjBaWDlCT3BZLUpVdTA4dko0TlFZR0xYX2VWczJSdHRQcGsyckNycjJnaWpvMnJEQnJJMFFRRFI4MHR0YngzNVJIc2dIanZXcmhIM21RSnhaS2ZrMHhvejRFLS1ENDhMRmNEZjhOdWhJR0M3VkRHT3VVYmtqZHZtNHI2Snh5U3k1YmJM?oc=5",
-     "tanggal": "2026-11-03"
+     "judul": "BYD Gaspol Bangun 100 Stasiun Flash Charging di Indonesia, Isi Baterai Mobil Diklaim Cuma ",
+     "media": "Bukamatanews.id",
+     "link": "https://news.google.com/rss/articles/CBMi0gFBVV95cUxOZVczSlNsdmZMOG5SbEE3VU9LRWt0Y01wSllEQ1NWUmtiR3Y0NXNDWDJOSzN5R1l1aFdZcE5LVTNBU3lvV0VTN2I4MW9tTzFyTHdlQ3VNeGJKeUlDSV9PajVZSUtMTEc0NG16QWh6MnVSbEtCb1lfTkZXa3hlMU11ZjRjYWMza3pJcjJiTE9rUjFNekplRnNKM0EzaHlfU2czWXlRUVVvTzEtWW9OLUw0VW5fdnBkQzMzNUI4cGd3U0VrZTFUVGF2cGZqb2F5RjhsZkHSAdcBQVVfeXFMUHZmb2JWT3lDSlB5bGZ6VHJ3dnBLS3oxWEdNWENaOTNCSmZWdFdaTzIwcThKN21idGwtQXBpLVA3dnhhTUdhbTVWRHpsSUhMd0RMcy1SMzZuVEplRGhSRE5vdHZ5Ql9zdUFVcHVHVEQxNXNFTUZ4M1Z3d3lrS1ZCbHlndEpmV1kwXzB6U3JRX19Hd25XYTZCUnQ2aGxUaVBzR1E0WkFVRkYwV253Z0lTMHNnTjVTYWdaR3JqVjE0b29ncEVxX2NGOGMteEZJVkZHUmpPTnY4Z0E?oc=5",
+     "tanggal": "2026-11-13"
     },
     {
-     "judul": "PLN Resmikan SPKLU Ultra Fast Charging Pertama di NTT",
-     "media": "NTT Pembaruan",
-     "link": "https://news.google.com/rss/articles/CBMihAFBVV95cUxPclYzZVJxYUNqcnZvQmF4QkhEMHNhT282cE16TlJNeHFLUS1yVk9tMHplNjQ1VGhROV96Q0Z3eWxZNTRDTllISXU0dS02UUlsOGMxWWN4bzZUYThhVEJkNS1Cemt6VGh4MVdSYmRzUjJBNnN0VGVGX0xUemdXRkJuZVdpY1M?oc=5",
-     "tanggal": "2026-10-28"
+     "judul": "Flash Charging BYD Bakal Hadir di SPBU Pertamina, Isi Baterai Mobil Listrik Cuma 5-9 Menit",
+     "media": "OtoDream",
+     "link": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQWUJkcEw0M3JSYnFZVUlrcjJIVnpiTUxHSHlQa2dUdldXYWc1dkJWN0NfRDlZQ2VhaEQyeXJ2eXdPMU9IZHowNW5CdFVEMG5reXBoeEdROGI2Z1pVV1pHMldWcHRsTWpaS0F0TkU4YVU2b3pDaGdvQTE0VmVUemZxWE52UzB4UjQyOUhwV1JhOUxIamJOV1pjUHc0S0hFeS0ydG5Cd0EyQVJUbkpTV0lxREpSNFFKR2lCMlFMeUF2RGg?oc=5",
+     "tanggal": "2026-11-16"
     },
     {
-     "judul": "PLN Resmikan SPKLU Jajar Solo, Perkuat Ekosistem Kendaraan Listrik dan Optimalisasi Aset",
-     "media": "Tribunsolo.com",
-     "link": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxOZU1nQzAxZGtreU5ua1NfZGhGbFNTa1dVMVZKZm1SZ05najdTNFFsanVldEl0MElNRm5QelRIUm0xdHZxSEhIOV9yZHRQbU13dzVHQ2hieTNxZ3dMTE1VQ2lwXzh2QWtHZUIxZ3FTZ3ZQel9QamstWVhQVlFoR0dvVGQzVHlXLVVGU05rd0NWdXlsQmE2N2M3VDV4Zy1NcXpBcldBMHVTVTNVSWk3eC04Qlg4WGdKbFpoemxYQ0JKSE1xM1I3VVNYaA?oc=5",
-     "tanggal": "2026-11-03"
+     "judul": "Isi Baterai Mobil Listrik Lebih Cepat, Pertamina dan BYD Siapkan Flash Charging di SPBU",
+     "media": "Kabar Cirebon",
+     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQSjctY1Mxb1dlS1NZSUhmdGhBVmsyMVotSGtZMXJ3YlBSUlZZb1BZam9DNDFuT0ZzVjI1dTlLZDFPX09SdFFlazBWZTRZcU13elF0cmxzcW9oZTFUc2xsMkFQajIzT1cyTndIaE8tb1E5YTNJaWxIUmFteGtLNjhfb3Y3Q3FIVmozeHAzLW5xazYtRURtcGJwd3U1NTdTbS0yUVJiV0RESjFnb3hWbkZIaTd5TmhUYkJmZlRoVE9WYWhud1lTTHQ4X0p4MVpmdkpqVjJ5OFllQnhqNHBDWTZHaE5mZTI?oc=5",
+     "tanggal": "2026-11-15"
     },
     {
-     "judul": "Dukung Ekosistem Kendaraan Listrik, PLN Hadirkan SPKLU Fast Charging di Hotel Amaris Kota ",
-     "media": "Tribunjabar.id",
-     "link": "https://news.google.com/rss/articles/CBMi5AFBVV95cUxQdDVkSkt0Q3RxUEJxTmR5OFlMWWg4UnpzZFo2RGhvQkE3R1ZVb25jLVhKNWswSDZGNzdnUk5XcEJXN3BCYXh5X3dISkN3WEZBSE9fTkViWHdkTVhiWG1rRkdXaU5sSDBlcUhVUjIyaFNSRVR3bVFPVnVuS0xoZTNKOGZLZWM2Z3I4NjJBS01oblF0QzJjeHlKZ2h4ME5CT1hIZ0x2QWw0bDRBdFNueVlUWFZxQzktSjJiOUJMdFQ3UEotcFp6TTZfRHFjM3BSTDVFc29GLXgtaXBXRWxCRG9oZlNHMnE?oc=5",
+     "judul": "BYD Siapkan 100 Stasiun Flash Charging, 5 Menit Isi Langsung Penuh",
+     "media": "CNBC Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMiwgFBVV95cUxQbjhWT21haTEyd2djaGc3LWFxd2x6Tm1kYUgzTURsX1FLbWdzQ2VFVDJQQ0UwVW9NamdEcldXOWpCY01UcktWWGtpYnFfa19qcUc0Sl9RNmdqMFhvTjdVcTB4UVFZY2ZPTEVrbmVFQlh6YkFQN2RMaUxBWEt0S2RxUjh0bWtLb0xCS3RjeWFDbTBGdzdNNGtxNmJiWUQzeGxvUlZXSE81bDdnZFYtM2pkY1djNi0zWEJMV0FjNU1IWEJoQdIBxwFBVV95cUxPbFBTXzlwX2J0QzdiblFNeXNJRHhiZWlORWpzOU1WMF9RcUxDeU9hbzJXSG1qaUNjbVRBTlptNlp5VnhqQmNVbHJOVTVpcWVoRXIwSlgxclBuT05MQTJEOTlHMUZub0dCQXpTX1FSMUptRWlKQ1RncGEzdkZvSTJhdFVEekNPRWF0T2xVRm1UV1hicTR2Sk5Dc19jeW1XT3FGWEtieU5pUTBrQWh1UDRDMHptOU5ZTnMtRlVsRnlReWZBak5MUE93?oc=5",
+     "tanggal": "2026-11-13"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "inti",
+   "topik": "Hadapi Musim Hujan, Ini 3 Tips Merawat dan Memilih Ban Motor agar Tetap Aman - Panduan Pembeli | Mobil123",
+   "skor": 60,
+   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
+   "umurHari": 0.4,
+   "jumlahMedia": 4,
+   "sumber": [
+    {
+     "judul": "Hadapi Musim Hujan, Ini 3 Tips Merawat dan Memilih Ban Motor agar Tetap Aman - Panduan Pem",
+     "media": "Mobil123.com",
+     "link": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPQ1NnTmFsU0liUnRXRVhVcXZWWGx4TS11aGR5aDVqQk5lZHJFNkJHWXZaZ3JFUkNtdGRpWGZpTmFEM19HVFUzVmlndkZkRzVrQTFMWXEwTGs2YlZoeUFhRVBJR015UDR4RkJXUEhobkpRcGJKRDhZWWpOM1ZLcThnYkJQQ1p3R0VuV01UVzFtYU9HSjNfVmdYZ0xNWncwcnlVZi1EdWtqQmpEUVV2YjRmRmNMRGg2NHd2a2hrYXZn0gHEAUFVX3lxTFA4dkFfaHFVNXhXRk1rYTB2Z2xWZFZ3REJLRC1SMUVheDhPVWl0ZWFlRXVRWXhsWkZDekp1U3RoamNsYl9tVm1IeTl5X0tnSUFMX2E0ZE5MQm1XcFZIeXlKT0R4WmRMSzVkTUJwSmE5Q29IeHM3TGpSUERXaFBseVFITHp6SWVVVmtJRzM2aXdqSE9ZMC1haEliZ0pld19ydGR0YXNKR1lCblZ2aGo4YVZDUkVoVlQyaGEtZTc1eFF3T1pWNkE?oc=5",
+     "tanggal": "2026-11-16"
+    },
+    {
+     "judul": "Hujan Tiba, Simak Panduan Cerdas Merawat Mobil Listrik Agar Tetap Aman dan Bebas Cemas",
+     "media": "beritajatim.id",
+     "link": "https://news.google.com/rss/articles/CBMiggFBVV95cUxOTS1uZk5CTGg4aWxGbXlqaG9NRzIwRVNfQXFabVBoQUc0OFliUjRxUTBTZ0tNbFFJeENqd1JadVFWdVF6bkQ2NlJ6WmcyZjJSQTAwaEwzNEg4Y0doZjAxS3hobzNqQjNvQVhRbG9USnBWTG10S2VjQk1RaDBsMk9ZRDFn?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Tips Simpel Merawat Ban Motor Biar Nggak Licin Saat Musim Hujan",
+     "media": "Genz.id",
+     "link": "https://news.google.com/rss/articles/CBMicEFVX3lxTE10NUhVQ2VtU1VGTkE4WlFCZlZjUEJGWmdoZEJ4TlNPTGV5ZTNOYkExb19Ba3NmV3NOQVVVb1ZuWHp2WFFzdVVUOWRzaUMxalBaNk51NkhsM0RHOTJIZlRRZnNwdFhIOWRSdTZCVkNweFg?oc=5",
+     "tanggal": "2026-11-14"
+    },
+    {
+     "judul": "Tips Memilih dan Merawat Ban Motor untuk Musim Hujan",
+     "media": "Media Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMimwFBVV95cUxPdy1vclZ6Smo4SDJhNW13aElMSlpEbEs1aG8zSDlfbHhhV1BFSkw0dW16ZDlwMFVzakk0R0g0TDVuSnpRZmFWaEFXZWdMc2RGVTF3N0dVRDhrYVkwQl9kUHBCaDlhTmVtYXVVSmJqYVBPWEh3elpDMHp1LXdoSmNSRUpnRE10RzdlY09NNDg2eVNhQktpQ3MzdEo5UQ?oc=5",
      "tanggal": "2026-11-04"
     }
    ],
@@ -813,7 +699,137 @@
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ],
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan."
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "funnel": "bofu",
+   "strategiFunnel": "BOFU (Siap beli (decision)). Pembaca yang hampir memutuskan. Jawab harga, promo, cicilan, dan langkah berikutnya dengan jelas. Arahkan ke WhatsApp, test drive, atau prebook. Tulis tanggal data dan syarat promo."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "luas",
+   "topik": "Cara Mitsubishi Destinator Menjawab Kebutuhan Keluarga Modern",
+   "skor": 53,
+   "alasan": "4 media membahas dalam 14 hari, terbaru 3 hari lalu",
+   "umurHari": 3.5,
+   "jumlahMedia": 4,
+   "sumber": [
+    {
+     "judul": "Cara Mitsubishi Destinator Menjawab Kebutuhan Keluarga Modern",
+     "media": "JPNN.com",
+     "link": "https://news.google.com/rss/articles/CBMikAFBVV95cUxPT1NTbFE1dVBoT19hdlNrUV9KUXMzVmFsWFNyMDVCcFNqMmtXc3VBcXFMVjkwTXBKakE1S1Q5SmI2LTNDN29hUFd6dnEzS19kU3pFWTBoOEtxcWxuMkdQWXZxOGhOYkh3eDlXOTEzaXF4NXVheVg4UmVRX2NXV3JSb0laaGJDb3BtTVZYcUpZSnnSAZMBQVVfeXFMTTVGTkxNR2s1ZnE0VjZOT1JlSGtzNDlXcDVlcDlYSElJOV9Dc0Z0UHdWY0JIQU5TUVpQOEZ5Z0pZdk5wOE5ad0xPZ1Y0cm4zSkliUVNQZWd2b3BiMTctSkZqcDFDb0Iyc3FIWkljX1pHTFRjMWExVFc2N0cwMThvZTcxdXVFVkdqcHRuUW16UVk5OG9v?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "3 Keunggulan Mitsubishi Destinator Sebagai SUV Keluarga",
+     "media": "KatadataOTO",
+     "link": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQYzBRUW56clJ1LU52eUVOa05ZVm9kajQxTF9uenRiRzl1bXNYZEtxUmxLZmZRVXlhTy1DTS1mSmRjWmN3U3NieWY0LUU5Q00tUTFFRW5wTk1FZ1g4Y0dLcEttSGZLUnZaajc5ZWJERHJVSVpGRjJ2b3pGdl91WktDTHNFdmM1RVNpVDRaaHZvVVJOS045TWgwdEtuRXRLSXla?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Mitsubishi Destinator, SUV 7 Seater Untuk Keluarga Modern",
+     "media": "OtoDriver",
+     "link": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxQVzlzMGxJektLX2FGeUNJYTdfV2RBdE9PdDNVRmxsUXRyZTRZSG82Znp5VG1zMmx1ZURfYUxzNlBNWmQtdXJxV3AwNjFNSmcyeldvZGZqUm9BaG53X2tqSlNaTjJ1Tk5YbHFnNFlHTUc4UFRpeHhpdF9WZ1lDVlN1T3dFanBJazIzd1JtLWpQWVZWLTJsY2QwdWFtU0JIZlFWVFNLNkVFVW43d9IBqgFBVV95cUxQVzlzMGxJektLX2FGeUNJYTdfV2RBdE9PdDNVRmxsUXRyZTRZSG82Znp5VG1zMmx1ZURfYUxzNlBNWmQtdXJxV3AwNjFNSmcyeldvZGZqUm9BaG53X2tqSlNaTjJ1Tk5YbHFnNFlHTUc4UFRpeHhpdF9WZ1lDVlN1T3dFanBJazIzd1JtLWpQWVZWLTJsY2QwdWFtU0JIZlFWVFNLNkVFVW43dw?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Intip 4 Keunggulan Mitsubishi Destinator, SUV Keluarga yang Nyaman dan Tangguh",
+     "media": "Carmudi Indonesia",
+     "link": "https://news.google.com/rss/articles/CBMisgFBVV95cUxORVE2LVN4Q0lTMDVMNkRPMi1nR3d5Y2lOaEFKR2M1UTh5T0ZQTjVUN0xQSm9lbmt4ZExUaTNVUGZQdE12RER3NmVOMk9ZbldZYWdVWU84RVZMck83ZElGRXViaVhWd1lGODMyOExQMm5kRmtBb2tkYnFTTDM1Y2VQdFdiSE9fS3g2WFllTEVOc25GZmdfdkJUZ0dhS2xkNGIyenlRSzktRFlYVlNDd24yanBB?oc=5",
+     "tanggal": "2026-11-12"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "mofu",
+   "strategiFunnel": "MOFU (Menimbang (consideration)). Pembaca yang sudah tahu dan sedang membandingkan pilihan. Beri data, tabel, dan alasan jujur. Arahkan ke halaman model dan 1 artikel BOFU (harga, promo, cicilan). CTA: tanya konsultan."
+  },
+  {
+   "jenis": "berita",
+   "kelompok": "luas",
+   "topik": "Polres Rembang Amankan Tiga Pelaku Dugaan Penyalahgunaan BBM Subsidi",
+   "skor": 53,
+   "alasan": "4 media membahas dalam 14 hari, terbaru 3 hari lalu",
+   "umurHari": 2.9,
+   "jumlahMedia": 4,
+   "sumber": [
+    {
+     "judul": "Polres Situbondo tetapkan tiga tersangka penyalahgunaan BBM subsidi",
+     "media": "Antara News jatim",
+     "link": "https://news.google.com/rss/articles/CBMitgFBVV95cUxNYnc3YWNqOUlONGZITHdMNzdvOG56QVRvdWlpWXRzeTcxbXZlY0t0OFFNNGsxUDhkZGxkaUY3ZEMxZ1ZIcHc1czFpLTlHUlBhbEROaGhrNUhicEJHWDM4cWQ1THdYeTg3TUEyNXYwT1hDREpobHFhMTNsRWxxeG5IYXktVTB6dlBUQklkck1wSl9ZWkwySHZyakMzTW5QZHdocklWblNVSFdWb0Z1TDFWNVV6U1FpZ9IBtgFBVV95cUxNYnc3YWNqOUlONGZITHdMNzdvOG56QVRvdWlpWXRzeTcxbXZlY0t0OFFNNGsxUDhkZGxkaUY3ZEMxZ1ZIcHc1czFpLTlHUlBhbEROaGhrNUhicEJHWDM4cWQ1THdYeTg3TUEyNXYwT1hDREpobHFhMTNsRWxxeG5IYXktVTB6dlBUQklkck1wSl9ZWkwySHZyakMzTW5QZHdocklWblNVSFdWb0Z1TDFWNVV6U1FpZw?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Polres Situbondo Tetapkan Tiga Tersangka Modifikasi Tangki Mobil untuk Penyalahgunaan BBM ",
+     "media": "republika.co.id",
+     "link": "https://news.google.com/rss/articles/CBMi4AFBVV95cUxOQXBTOGRCdWdSZUs3YVR3VVRITEFfcDlOWGtTeDR6aG1aWDQ4VWxpYko3VWhwWVVIaFI5S0ktQjlpalRQVmdpWFQ2dFJDYTFJWUt0YV9Xc2FBQkpFbnFBeG9BYnVwX1FuUmNLUUwyYVZ2cU12M3pLQ2lVamRFN3NXekw0NzhMQzlfZndCOW1JVDQ4SF9kVmdVRG1laGhOS29sQVpJZHBsdG0yOWNfSGFuelVQYmtQZmJlTDVLWGJSM0hrTGRtbmZDSHB1SFZjUDhicjc0c3NCUlBKSFVFc3k3Vw?oc=5",
+     "tanggal": "2026-11-12"
+    },
+    {
+     "judul": "Polres Situbondo Tetapkan Tiga Tersangka Kasus Penyalahgunaan BBM Subsidi Pertalite",
+     "media": "JPNN.com Jatim",
+     "link": "https://news.google.com/rss/articles/CBMipgJBVV95cUxOUU5TSEhNcm9DczFIZ0J5RjB6NnRqRkNtSWZQbjk1VWlUeEpmbkxCaXI3QTdmZWx6aFI5ZlZDUWN3Z3ppZXZpWVhqMlVoR2RzbjRWbXBIdE5PeUJxOUpIN0tmdmtsa1d4dWp3UWxodkxYVFUycTBWcnFxWmlmZGlOeDIyTjZHSWd5Z2tMYzNTVHoydkpMUU8xaUEzcWY4OVhtcmw3aGI5Z2F3SVpKSHpqbzFmcXg3cmc4ZGJoUTc1TUowVlRmMUstMUg0RGtldVdoRTFGUzdoZ01FeDcwU2NTaDBUZVFPU1c1c3FyOHllTDA1TzE3YlpWdGVLR2RMTGtVS2lOSTd2T3F2a1pjYTBrcmp6MnpwU0EteFFyZll2LUNfVTNWY3c?oc=5",
+     "tanggal": "2026-11-13"
+    },
+    {
+     "judul": "Polres Rembang Amankan Tiga Pelaku Dugaan Penyalahgunaan BBM Subsidi",
+     "media": "murianews.com",
+     "link": "https://news.google.com/rss/articles/CBMitwFBVV95cUxOWTVJQkVvckR6NHp2dGhScmdzT3lGXzk3M3NCRnFMT2dNa1ZPM0FQQ1J4b3NtVVFVWU1IZnNMS18xZEF5d3hZdklMUVg4dVY5M2hkY2hLSXF1bTRFOVJJbjhNVG5jY1BZVzBMSDBHSHhDZW9iZVNyNDZocmlXcDZjd1Z6RlowV2FUZmxFRW02dnNjbV8zWkRyd2xmakF2eG1SRWhYMEZsMk5kTVU4eVJ1QktYNzYxVE0?oc=5",
+     "tanggal": "2026-11-13"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ],
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "asuransi mobil apakah bisa dicairkan",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"asuransi mobil apakah\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-11-16"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
+  },
+  {
+   "jenis": "pencarian",
+   "kelompok": "luas",
+   "topik": "cara asuransi mobil",
+   "skor": 46,
+   "alasan": "diketik orang di kolom pencarian Google (berpotensi jadi FAQ/jawaban singkat)",
+   "sumber": [
+    {
+     "judul": "saran pencarian Google untuk \"asuransi mobil cara\"",
+     "media": "Google Autocomplete",
+     "link": "",
+     "tanggal": "2026-11-16"
+    }
+   ],
+   "sudahAdaDiSearchConsole": false,
+   "baru": true,
+   "risiko": [],
+   "saranSudut": "Jawab langsung di Jawaban singkat, perluas jadi FAQ dan artikel panduan. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "funnel": "tofu",
+   "strategiFunnel": "TOFU (Kenalan (awareness)). Pembaca baru yang baru cari tahu soal mobil listrik. Edukasi dulu, jangan menjual keras. Arahkan ke 1-2 artikel MOFU yang relevan (perbandingan atau spesifikasi). CTA lembut: baca lanjut."
   }
  ],
  "alertTopik": []
