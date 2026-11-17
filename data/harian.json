@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-16T23:45:59.737Z",
+ "generated": "2026-11-17T22:58:53.453Z",
  "iklan": {
-  "kemarin": "2026-11-16",
+  "kemarin": "2026-11-17",
   "biaya": 0,
   "klik": 0,
   "tayang": 0,
@@ -9,8 +9,8 @@
   "terpakai": 103231,
   "sisa": 1396769,
   "persen": 7,
-  "hariSisa": 14,
-  "amanPerHari": 99769,
+  "hariSisa": 13,
+  "amanPerHari": 107444,
   "rata7": 0
  },
  "kualitas": {
@@ -22,7 +22,7 @@
   "aksi3": 0
  },
  "peringatan": [
-  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-16). Cek jadwal skrip di Google Ads",
+  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-17). Cek jadwal skrip di Google Ads",
   "Situs SEDANG DOWN sejak 11 Nov, 21.44 WIB"
  ],
  "aset": {
@@ -121,6 +121,13 @@
   },
   {
    "d": "2026-11-16",
+   "biaya": 0,
+   "klik": 0,
+   "aksi": 0,
+   "lead": 0
+  },
+  {
+   "d": "2026-11-17",
    "biaya": 0,
    "klik": 0,
    "aksi": 0,
