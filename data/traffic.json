@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-18T10:38:24.435Z",
+ "generated": "2026-11-18T22:19:37.638Z",
  "property": "560653996",
  "today": {
   "users": 0,
@@ -14,10 +14,10 @@
   "newUsers": 0
  },
  "last7": {
-  "users": 5,
-  "sessions": 18,
-  "views": 31,
-  "newUsers": 3
+  "users": 1,
+  "sessions": 11,
+  "views": 13,
+  "newUsers": 1
  },
  "last30": {
   "users": 1195,
