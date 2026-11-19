@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T10:44:46.864Z",
+ "generated": "2026-11-19T22:28:12.317Z",
  "platforms": {
   "facebook": {
    "posted48h": 0,
@@ -14,7 +14,7 @@
    "account": {
     "name": "@xpengwins",
     "followers": 6,
-    "media": 72
+    "media": 73
    },
    "posts": 15,
    "avgEngRecent": 0,
@@ -72,14 +72,6 @@
    "extra": {}
   }
  },
- "issues": [
-  "❗ Threads (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
-  "❗ Instagram (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
-  "❗ Facebook (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
- ],
- "alertKeys": [
-  "gagal:threads:halaman artikel belum tayang setelah 6 m",
-  "gagal:instagram:halaman artikel belum tayang setelah 6 m",
-  "gagal:facebook:halaman artikel belum tayang setelah 6 m"
- ]
+ "issues": [],
+ "alertKeys": []
 }

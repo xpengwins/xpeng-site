@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-19T10:44:53.290Z",
+ "generated": "2026-11-19T22:28:20.721Z",
  "traffic": {
   "periode": [
    "2026-10-18",
@@ -288,11 +288,7 @@
     "❌ /sitemap.xml → tidak bisa dibuka (fetch failed)"
    ]
   },
-  "sosmed": [
-   "❗ Threads (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
-   "❗ Instagram (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya",
-   "❗ Facebook (gagal): halaman artikel belum tayang setelah 6 menit; dicoba lagi otomatis jam berikutnya"
-  ],
+  "sosmed": [],
   "halaman": {
    "berat": 0,
    "ringan": 63,
