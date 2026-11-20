@@ -1,22 +1,22 @@
 {
- "generated": "2026-11-20T10:24:53.966Z",
+ "generated": "2026-11-20T22:03:28.229Z",
  "property": "560653996",
  "today": {
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
+ },
+ "yesterday": {
   "users": 1,
   "sessions": 2,
   "views": 3,
   "newUsers": 0
  },
- "yesterday": {
-  "users": 2,
-  "sessions": 2,
-  "views": 4,
-  "newUsers": 0
- },
  "last7": {
   "users": 3,
-  "sessions": 12,
-  "views": 13,
+  "sessions": 10,
+  "views": 11,
   "newUsers": 0
  },
  "last30": {
