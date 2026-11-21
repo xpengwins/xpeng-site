@@ -1,10 +1,10 @@
 {
- "generated": "2026-11-20T22:03:28.229Z",
+ "generated": "2026-11-21T10:09:38.488Z",
  "property": "560653996",
  "today": {
   "users": 0,
-  "sessions": 0,
-  "views": 0,
+  "sessions": 1,
+  "views": 1,
   "newUsers": 0
  },
  "yesterday": {
@@ -15,14 +15,14 @@
  },
  "last7": {
   "users": 3,
-  "sessions": 10,
-  "views": 11,
+  "sessions": 11,
+  "views": 12,
   "newUsers": 0
  },
  "last30": {
   "users": 1195,
-  "sessions": 1420,
-  "views": 2374,
+  "sessions": 1421,
+  "views": 2375,
   "newUsers": 1217
  },
  "prev30": {
@@ -181,6 +181,12 @@
    "users": 1,
    "sessions": 2,
    "views": 3
+  },
+  {
+   "date": "2026-11-21",
+   "users": 0,
+   "sessions": 1,
+   "views": 1
   }
  ],
  "pages": [
@@ -191,7 +197,7 @@
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 277,
+   "views": 278,
    "users": 168
   },
   {
@@ -254,7 +260,7 @@
   },
   {
    "k": "Referral",
-   "v": 109
+   "v": 110
   },
   {
    "k": "Organic Search",
@@ -272,7 +278,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1111
+   "v": 1112
   },
   {
    "k": "desktop",
