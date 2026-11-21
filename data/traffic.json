@@ -1,28 +1,28 @@
 {
- "generated": "2026-11-21T10:09:38.488Z",
+ "generated": "2026-11-21T20:45:24.983Z",
  "property": "560653996",
  "today": {
   "users": 0,
-  "sessions": 1,
-  "views": 1,
+  "sessions": 0,
+  "views": 0,
   "newUsers": 0
  },
  "yesterday": {
-  "users": 1,
-  "sessions": 2,
-  "views": 3,
+  "users": 2,
+  "sessions": 4,
+  "views": 5,
   "newUsers": 0
  },
  "last7": {
   "users": 3,
-  "sessions": 11,
-  "views": 12,
+  "sessions": 13,
+  "views": 15,
   "newUsers": 0
  },
  "last30": {
   "users": 1195,
-  "sessions": 1421,
-  "views": 2375,
+  "sessions": 1424,
+  "views": 2379,
   "newUsers": 1217
  },
  "prev30": {
@@ -184,20 +184,20 @@
   },
   {
    "date": "2026-11-21",
-   "users": 0,
-   "sessions": 1,
-   "views": 1
+   "users": 2,
+   "sessions": 4,
+   "views": 5
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 999,
+   "views": 1000,
    "users": 606
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 278,
+   "views": 280,
    "users": 168
   },
   {
@@ -217,7 +217,7 @@
   },
   {
    "path": "/kontak/",
-   "views": 41,
+   "views": 42,
    "users": 9
   },
   {
@@ -260,11 +260,11 @@
   },
   {
    "k": "Referral",
-   "v": 110
+   "v": 112
   },
   {
    "k": "Organic Search",
-   "v": 71
+   "v": 72
   },
   {
    "k": "Cross-network",
@@ -278,7 +278,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 1112
+   "v": 1115
   },
   {
    "k": "desktop",
@@ -286,13 +286,13 @@
   },
   {
    "k": "tablet",
-   "v": 18
+   "v": 19
   }
  ],
  "cities": [
   {
    "k": "Jakarta",
-   "v": 557
+   "v": 558
   },
   {
    "k": "Tangerang",
