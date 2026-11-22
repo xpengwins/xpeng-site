@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-22T10:13:24.185Z",
+ "generated": "2026-11-22T20:54:57.006Z",
  "traffic": {
   "periode": [
    "2026-10-18",
@@ -308,80 +308,82 @@
  },
  "E_riset_tren": [
   {
-   "topik": "BYD Luncurkan Denza N8 EV dengan Jarak Tempuh 1.003 Km",
+   "topik": "Xpeng Luncurkan G9L dan X9 AWD, Bawa Fitur AI dan Jarak Tempuh 670 Km",
    "jenis": "berita",
-   "skor": 80,
-   "alasan": "96 media membahas dalam 14 hari, terbaru hari ini",
+   "skor": 88,
+   "alasan": "6 media membahas dalam 14 hari, terbaru 5 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Mobil Listrik Terlaris Oktober 2026: Top 10",
+   "topik": "Banjir Promo Toyota di GAW 2026, Trade-In via OLXmobbi Bisa Dapat Cashback Rp15 Juta",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "9 media membahas dalam 14 hari, terbaru hari ini",
+   "alasan": "102 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Topik sensitif: tulis netral, jangan menyudutkan merek, rujuk sumber resmi.",
+    "Ada unsur harga/angka: pakai pricelist atau sumber resmi, jangan angka dari berita.",
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Wuling Capai TKDN 60 Persen pada Lima Model Mobil Listrik",
+   "jenis": "berita",
+   "skor": 80,
+   "alasan": "9 media membahas dalam 14 hari, terbaru 2 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "BYD dan Pertamina Jajaki Pengembangan Flash Charging di Jaringan GES",
+   "topik": "Polres Tabalong Amankan 7 Mobil Diduga untuk Pelangsiran BBM Subsidi",
    "jenis": "berita",
    "skor": 80,
-   "alasan": "17 media membahas dalam 14 hari, terbaru hari ini",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Toyota Siap Penuhi TKDN Mobil Listrik 60 Persen pada 2027",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "6 media membahas dalam 14 hari, terbaru 1 hari lalu",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Hadirkan SPKLU Center Taman Sriwedari, PLN Perkuat Ekosistem Kendaraan Listrik di Cibubur",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "6 media membahas dalam 14 hari, terbaru hari ini",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Pabrik BYD Subang Serap Hampir 6.000 Pekerja Lokal",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "7 media membahas dalam 14 hari, terbaru hari ini",
-   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
-   "risiko": [
-    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
-   ]
-  },
-  {
-   "topik": "Menperin Sarmuji Usul Mobil Hybrid dan Emisi Rendah Bebas Aturan Ganjil-Genap",
-   "jenis": "berita",
-   "skor": 80,
-   "alasan": "10 media membahas dalam 14 hari, terbaru 1 hari lalu",
+   "alasan": "7 media membahas dalam 14 hari, terbaru 2 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
    ]
   },
   {
-   "topik": "Tak Hanya Rakitan Lokal, Xpeng Siapkan Teknologi Mobil untuk Pasar Indonesia",
+   "topik": "Polres Inhu Amankan 5 Orang dalam Kasus Dugaan Penyelewengan BBM Subsidi di Riau",
    "jenis": "berita",
-   "skor": 75,
-   "alasan": "4 media membahas dalam 14 hari, terbaru hari ini",
+   "skor": 80,
+   "alasan": "8 media membahas dalam 14 hari, terbaru hari ini",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Topik luas: tautkan ke halaman model XPeng yang relevan lewat link internal agar pembaca mengalir ke pricelist dan test drive.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Penjualan Mobil Naik 20%, Ekspor Motor Indonesia Melonjak 21%",
+   "jenis": "berita",
+   "skor": 73,
+   "alasan": "11 media membahas dalam 14 hari, terbaru 2 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "PLN alokasi 5.231 unit SPKLU untuk Nataru",
+   "jenis": "berita",
+   "skor": 73,
+   "alasan": "7 media membahas dalam 14 hari, terbaru 4 hari lalu",
+   "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
+   "risiko": [
+    "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
+   ]
+  },
+  {
+   "topik": "Thailand Naikkan Pajak Mobil Listrik Impor Jadi 35 Persen, Indonesia Perlu Ikut?",
+   "jenis": "berita",
+   "skor": 73,
+   "alasan": "7 media membahas dalam 14 hari, terbaru 5 hari lalu",
    "saranSudut": "Jelaskan dampaknya bagi calon pembeli, tambah tabel atau perbandingan, sebut tanggal data. Hubungkan ke model XPeng yang relevan.",
    "risiko": [
     "Berita hanya pemicu ide. Tulis ulang orisinal dari data resmi, jangan salin judul atau isi."
