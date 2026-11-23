@@ -1,21 +1,21 @@
 {
- "minggu": 45,
- "video": "assets/video/xpeng-x9-intelligence-0617-v2.mp4",
+ "minggu": 46,
+ "video": "assets/video/227779.mp4",
  "galeri": {
   "xpeng-x9": [
-   "x9-white-depan.webp",
-   "x9-white-belakang.webp",
-   "x9-white-dashboard.webp",
    "x9-white-kursi-2.webp",
-   "x9-white-kursi-3.webp"
+   "x9-white-kursi-3.webp",
+   "x9-white-kursi-belakang.webp",
+   "x9-black-depan.webp",
+   "x9-grey-depan.webp"
   ],
   "xpeng-g6": [
-   "g6-black-depan.webp",
-   "g6-black-belakang.webp",
-   "g6-black-samping.webp",
    "g6-black-front.webp",
-   "g6-silver-jalan.webp"
+   "g6-silver-jalan.webp",
+   "g6-white-detail.webp",
+   "g6-grey-showroom.webp",
+   "g6-grey-front.webp"
   ]
  },
- "at": "2026-11-15T22:55:59.277Z"
+ "at": "2026-11-23T02:54:13.491Z"
 }

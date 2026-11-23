@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-15T22:56:00.555Z",
+ "generated": "2026-11-23T02:54:14.870Z",
  "periode": [
-  "2026-10-16",
-  "2026-11-12"
+  "2026-10-18",
+  "2026-11-14"
  ],
  "rentang": "8-20",
- "total": 18,
+ "total": 17,
  "halaman": [
   {
    "page": "/artikel/xpeng-g9l-vs-xpeng-g6/",
@@ -48,25 +48,37 @@
   {
    "page": "/artikel/xpeng-g6-vs-byd-sealion-7/",
    "tipe": "artikel",
-   "impr": 16,
+   "impr": 26,
    "terbaik": 9,
    "kata": [
     {
      "q": "xpeng g6 vs byd sealion 7",
-     "pos": 9.2,
-     "impr": 5,
+     "pos": 9.3,
+     "impr": 7,
      "clicks": 0
     },
     {
      "q": "xpeng g6 pro vs byd sealion 7",
-     "pos": 11,
-     "impr": 5,
+     "pos": 9.3,
+     "impr": 6,
+     "clicks": 0
+    },
+    {
+     "q": "byd sealion 7 vs xpeng g6",
+     "pos": 9.5,
+     "impr": 4,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng g6 vs sealion 7",
+     "pos": 10.7,
+     "impr": 3,
      "clicks": 0
     },
     {
      "q": "xpeng vs byd",
-     "pos": 9,
-     "impr": 1,
+     "pos": 10,
+     "impr": 2,
      "clicks": 0
     },
     {
@@ -74,16 +86,48 @@
      "pos": 9,
      "impr": 1,
      "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-indonesia-profil-dan-model/",
+   "tipe": "artikel",
+   "impr": 9,
+   "terbaik": 9.5,
+   "kata": [
+    {
+     "q": "arti xpeng",
+     "pos": 9.5,
+     "impr": 2,
+     "clicks": 0
     },
     {
-     "q": "byd sealion 7 xpeng g6",
-     "pos": 11,
+     "q": "xpeng dari negara mana",
+     "pos": 9.5,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng artinya",
+     "pos": 10.5,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "pemilik xpeng",
+     "pos": 10,
      "impr": 1,
      "clicks": 0
     },
     {
-     "q": "sealion 7 vs xpeng g6",
-     "pos": 11,
+     "q": "xpeng perusahaan apa",
+     "pos": 10,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "pabrik xpeng di indonesia",
+     "pos": 12,
      "impr": 1,
      "clicks": 0
     }
@@ -92,9 +136,15 @@
   {
    "page": "/artikel/interior-xpeng-x9/",
    "tipe": "artikel",
-   "impr": 6,
+   "impr": 8,
    "terbaik": 8,
    "kata": [
+    {
+     "q": "interior xpeng x9",
+     "pos": 10.8,
+     "impr": 4,
+     "clicks": 0
+    },
     {
      "q": "x9 interior",
      "pos": 8.5,
@@ -102,19 +152,7 @@
      "clicks": 0
     },
     {
-     "q": "interior xpeng x9",
-     "pos": 8,
-     "impr": 1,
-     "clicks": 0
-    },
-    {
      "q": "xpeng x9 indonesia interior",
-     "pos": 8,
-     "impr": 1,
-     "clicks": 0
-    },
-    {
-     "q": "xpeng x9 interior",
      "pos": 8,
      "impr": 1,
      "clicks": 0
@@ -128,15 +166,41 @@
    ]
   },
   {
+   "page": "/model/xpeng-x9/",
+   "tipe": "model",
+   "impr": 7,
+   "terbaik": 8.5,
+   "kata": [
+    {
+     "q": "xpeng captain seat",
+     "pos": 8.5,
+     "impr": 4,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng x9 berapa seater",
+     "pos": 11,
+     "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng 9 harga",
+     "pos": 10,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
    "page": "/artikel/baterai-lfp-vs-ncm/",
    "tipe": "artikel",
-   "impr": 6,
-   "terbaik": 9.6,
+   "impr": 7,
+   "terbaik": 9.2,
    "kata": [
     {
      "q": "baterai ncm adalah",
-     "pos": 9.6,
-     "impr": 5,
+     "pos": 9.2,
+     "impr": 6,
      "clicks": 0
     },
     {
@@ -182,24 +246,10 @@
    ]
   },
   {
-   "page": "/model/xpeng-x9/",
-   "tipe": "model",
-   "impr": 4,
-   "terbaik": 8.5,
-   "kata": [
-    {
-     "q": "xpeng captain seat",
-     "pos": 8.5,
-     "impr": 4,
-     "clicks": 0
-    }
-   ]
-  },
-  {
    "page": "/pricelist/",
    "tipe": "halaman",
-   "impr": 4,
-   "terbaik": 12.5,
+   "impr": 5,
+   "terbaik": 10,
    "kata": [
     {
      "q": "pricelist xpeng",
@@ -211,6 +261,12 @@
      "q": "price list xpeng",
      "pos": 13,
      "impr": 2,
+     "clicks": 0
+    },
+    {
+     "q": "xpeng",
+     "pos": 10,
+     "impr": 1,
      "clicks": 0
     }
    ]
@@ -230,6 +286,40 @@
     {
      "q": "berapa harga xpeng g9l",
      "pos": 11,
+     "impr": 1,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/cara-menghitung-biaya-charging-mobil-listrik-di-rumah/",
+   "tipe": "artikel",
+   "impr": 2,
+   "terbaik": 10,
+   "kata": [
+    {
+     "q": "cara hitung kwh charge mobil listrik",
+     "pos": 10,
+     "impr": 2,
+     "clicks": 0
+    }
+   ]
+  },
+  {
+   "page": "/artikel/xpeng-x9-vs-toyota-alphard/",
+   "tipe": "artikel",
+   "impr": 2,
+   "terbaik": 11,
+   "kata": [
+    {
+     "q": "xpeng vs alphard",
+     "pos": 11,
+     "impr": 1,
+     "clicks": 0
+    },
+    {
+     "q": "perbandingan biaya operasional",
+     "pos": 14,
      "impr": 1,
      "clicks": 0
     }
@@ -257,34 +347,6 @@
    "kata": [
     {
      "q": "simulasi cicilan",
-     "pos": 8,
-     "impr": 1,
-     "clicks": 0
-    }
-   ]
-  },
-  {
-   "page": "/",
-   "tipe": "halaman",
-   "impr": 1,
-   "terbaik": 8,
-   "kata": [
-    {
-     "q": "x9 xpeng leasing",
-     "pos": 8,
-     "impr": 1,
-     "clicks": 0
-    }
-   ]
-  },
-  {
-   "page": "/model/xpeng-g6/",
-   "tipe": "model",
-   "impr": 1,
-   "terbaik": 8,
-   "kata": [
-    {
-     "q": "xpeng g6 2026",
      "pos": 8,
      "impr": 1,
      "clicks": 0
@@ -320,20 +382,6 @@
    ]
   },
   {
-   "page": "/artikel/xpeng-indonesia-profil-dan-model/",
-   "tipe": "artikel",
-   "impr": 1,
-   "terbaik": 10,
-   "kata": [
-    {
-     "q": "xpeng dari negara mana",
-     "pos": 10,
-     "impr": 1,
-     "clicks": 0
-    }
-   ]
-  },
-  {
    "page": "/artikel/xpeng-g6-pro-vs-awd/",
    "tipe": "artikel",
    "impr": 1,
@@ -341,20 +389,6 @@
    "kata": [
     {
      "q": "xpeng g6 awd performance pro",
-     "pos": 11,
-     "impr": 1,
-     "clicks": 0
-    }
-   ]
-  },
-  {
-   "page": "/artikel/xpeng-x9-vs-toyota-alphard/",
-   "tipe": "artikel",
-   "impr": 1,
-   "terbaik": 11,
-   "kata": [
-    {
-     "q": "xpeng vs alphard",
      "pos": 11,
      "impr": 1,
      "clicks": 0
