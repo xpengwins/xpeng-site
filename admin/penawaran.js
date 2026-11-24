@@ -34,7 +34,7 @@
       ],
       closing: 'Apabila terdapat pertanyaan atau kebutuhan simulasi lebih lanjut, silakan menghubungi **{kontak}** selaku {jabatan} XPENG Alam Sutera Tangerang.',
       closing2: 'Demikian surat penawaran ini kami sampaikan. Atas perhatian dan kerja sama Bapak/Ibu, kami ucapkan terima kasih.',
-      sign: { company: 'PT Era Dealer Otomotif – XPENG Alam Sutera', name: 'Edwin Sowita S', role: 'Sales Consultant', hp: '087810208822', email: 'sales@xpengwins.com' }
+      sign: { company: 'PT Era Dealer Otomotif – XPENG Alam Sutera', name: 'Edwin Sowita S', role: 'Sales Consultant', hp: '087810208822', email: 'xpengwins@gmail.com' }
     };
   }
   function mergeTpl(saved) {
