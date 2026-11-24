@@ -2357,7 +2357,7 @@
   },
   {
    "date": "2026-11-24",
-   "at": "2026-11-24T12:50:48.696Z",
+   "at": "2026-11-24T23:37:02.702Z",
    "urls": 84,
    "errors": 0,
    "slow": 0,
@@ -2365,57 +2365,56 @@
    "pages": {
     "/": {
      "score": 76,
-     "lcp": 7020,
+     "lcp": 6995,
      "cls": 0,
-     "tbt": 92,
+     "tbt": 66,
      "field": null
     },
     "/model/xpeng-x9/": {
-     "score": 76,
-     "lcp": 5202,
+     "score": 99,
+     "lcp": 1978,
      "cls": 0,
-     "tbt": 193,
+     "tbt": 31,
      "field": null
     },
     "/model/xpeng-g6/": {
      "score": 99,
-     "lcp": 1987,
+     "lcp": 1974,
      "cls": 0,
-     "tbt": 28,
+     "tbt": 36,
      "field": null
     },
     "/pricelist/": {
-     "score": 100,
-     "lcp": 905,
+     "score": 99,
+     "lcp": 908,
      "cls": 0,
-     "tbt": 24,
+     "tbt": 64,
      "field": null
     },
     "/kontak/": {
      "score": 100,
-     "lcp": 909,
+     "lcp": 905,
      "cls": 0,
-     "tbt": 76,
+     "tbt": 19,
      "field": null
     },
     "/artikel/apa-itu-xpeng-g9l/": {
      "score": 100,
-     "lcp": 1525,
+     "lcp": 1508,
      "cls": 0.035,
-     "tbt": 85,
+     "tbt": 13,
      "field": null
     }
    },
    "issues": [
-    "perf:/",
-    "perf:/model/xpeng-x9/"
+    "perf:/"
    ]
   }
  ],
- "generated": "2026-11-24T12:50:48.696Z",
+ "generated": "2026-11-24T23:37:02.702Z",
  "latest": {
   "date": "2026-11-24",
-  "at": "2026-11-24T12:50:48.696Z",
+  "at": "2026-11-24T23:37:02.702Z",
   "urls": 84,
   "errors": 0,
   "slow": 0,
@@ -2423,54 +2422,52 @@
   "pages": {
    "/": {
     "score": 76,
-    "lcp": 7020,
+    "lcp": 6995,
     "cls": 0,
-    "tbt": 92,
+    "tbt": 66,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 76,
-    "lcp": 5202,
+    "score": 99,
+    "lcp": 1978,
     "cls": 0,
-    "tbt": 193,
+    "tbt": 31,
     "field": null
    },
    "/model/xpeng-g6/": {
     "score": 99,
-    "lcp": 1987,
+    "lcp": 1974,
     "cls": 0,
-    "tbt": 28,
+    "tbt": 36,
     "field": null
    },
    "/pricelist/": {
-    "score": 100,
-    "lcp": 905,
+    "score": 99,
+    "lcp": 908,
     "cls": 0,
-    "tbt": 24,
+    "tbt": 64,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 909,
+    "lcp": 905,
     "cls": 0,
-    "tbt": 76,
+    "tbt": 19,
     "field": null
    },
    "/artikel/apa-itu-xpeng-g9l/": {
     "score": 100,
-    "lcp": 1525,
+    "lcp": 1508,
     "cls": 0.035,
-    "tbt": 85,
+    "tbt": 13,
     "field": null
    }
   },
   "issues": [
-   "perf:/",
-   "perf:/model/xpeng-x9/"
+   "perf:/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 7.0 dtk",
-   "🔴 /model/xpeng-x9/: skor 76, LCP 5.2 dtk"
+   "🔴 /: skor 76, LCP 7.0 dtk"
   ]
  },
  "alertKeys": [
