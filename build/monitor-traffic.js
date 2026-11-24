@@ -68,7 +68,7 @@ const num = x => Number(x) || 0;
     const L = [];
     if (CFG.daily && (force || (wib.getUTCHours() >= CFG.dailyHourWIB && st.daily !== day))) {
       const wow = P[3].users && P[4].users ? Math.round((P[3].users - P[4].users) / P[4].users * 100) : null;
-      L.push('👥 <b>Pengunjung xpengwins.com</b>\n\nHari ini: <b>' + P[0].users + '</b> pengunjung (' + P[0].views + ' halaman dilihat)\nKemarin: ' + P[1].users + '\n7 hari terakhir: ' + P[2].users + '\n30 hari terakhir: ' + P[3].users + (wow != null ? ' (' + (wow >= 0 ? '+' : '') + wow + '% vs 30 hari sebelumnya)' : ''));
+      L.push('👥 <b>Pengunjung dealer.xpengerajaya.id</b>\n\nHari ini: <b>' + P[0].users + '</b> pengunjung (' + P[0].views + ' halaman dilihat)\nKemarin: ' + P[1].users + '\n7 hari terakhir: ' + P[2].users + '\n30 hari terakhir: ' + P[3].users + (wow != null ? ' (' + (wow >= 0 ? '+' : '') + wow + '% vs 30 hari sebelumnya)' : ''));
       const lead = LEADS.filter(l => leads[l]).map(l => LEAD_NAME[l] + ' ' + leads[l]).join(', '); if (lead) L.push('\nKlik penting (30 hari): ' + lead);
       if (pages[0]) L.push('Halaman terpopuler: ' + esc(pages.slice(0, 3).map(p => p.path + ' (' + p.views + ')').join(', ')));
       st.daily = day;

@@ -140,8 +140,8 @@ function analyse(url, pg, origin) {
     let sent = false;
     if (TG.tok && TG.chat && (fresh2.length || (healed.length && !issues.length))) {
       const L = [];
-      if (fresh2.length) { L.push('🩺 <b>Cek kesehatan halaman xpengwins.com</b>\n\n' + issues.length + ' masalah (' + fresh2.length + ' baru, ❌ ' + bad + ' berat, 🟠 ' + warn + ' ringan):'); fresh2.sort((a, b) => (a.sev === 'bad' ? 0 : 1) - (b.sev === 'bad' ? 0 : 1)).slice(0, 14).forEach(i => L.push(esc(i.t))); if (fresh2.length > 14) L.push('…dan ' + (fresh2.length - 14) + ' lainnya (lihat data/health-log.json)'); L.push('\n❌ = berpengaruh langsung ke SEO, perbaiki dulu. 🟠 = perlu dirapikan.'); }
-      else L.push('✅ <b>Cek kesehatan halaman xpengwins.com</b>\n\nSemua masalah sebelumnya sudah pulih. ' + urls.length + ' halaman sehat.');
+      if (fresh2.length) { L.push('🩺 <b>Cek kesehatan halaman dealer.xpengerajaya.id</b>\n\n' + issues.length + ' masalah (' + fresh2.length + ' baru, ❌ ' + bad + ' berat, 🟠 ' + warn + ' ringan):'); fresh2.sort((a, b) => (a.sev === 'bad' ? 0 : 1) - (b.sev === 'bad' ? 0 : 1)).slice(0, 14).forEach(i => L.push(esc(i.t))); if (fresh2.length > 14) L.push('…dan ' + (fresh2.length - 14) + ' lainnya (lihat data/health-log.json)'); L.push('\n❌ = berpengaruh langsung ke SEO, perbaiki dulu. 🟠 = perlu dirapikan.'); }
+      else L.push('✅ <b>Cek kesehatan halaman dealer.xpengerajaya.id</b>\n\nSemua masalah sebelumnya sudah pulih. ' + urls.length + ' halaman sehat.');
       try { const r = await fetch((E.TG_BASE || 'https://api.telegram.org') + '/bot' + TG.tok + '/sendMessage', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ chat_id: TG.chat, text: L.join('\n').slice(0, 4000), parse_mode: 'HTML', disable_web_page_preview: true }) }); if (r.ok) { log.alertKeys = keys; sent = true; } else console.log('Halaman: Telegram ' + r.status); } catch (e) { console.log('Halaman: Telegram gagal: ' + scrub(e.message)); }
     }
     if (!sent) log.alertKeys = prevKeys.filter(k => keys.includes(k));

@@ -154,7 +154,7 @@ function bagianSitus() {
     const [ik, as] = await Promise.all([bagianIklan(hari, kemarin), bagianAset()]), st = bagianSitus();
     const flags = [...ik.flags, ...as.flags, ...st.flags], L = [];
     const hariNama = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'][now.getUTCDay()];
-    const msg = require('./laporan-format.js').susun({ situsNama: 'xpengwins.com', hariNama, tanggal: tgl(hari + 'T12:00:00Z'), cfg, flags, belum: ik.belum, ik, aset: as.baris, situs: st.baris });
+    const msg = require('./laporan-format.js').susun({ situsNama: 'dealer.xpengerajaya.id', hariNama, tanggal: tgl(hari + 'T12:00:00Z'), cfg, flags, belum: ik.belum, ik, aset: as.baris, situs: st.baris });
 
     /* simpan ringkasan (riwayat 60 hari) */
     const old = rd('harian.json', { riwayat: [] }), rw = (old.riwayat || []).filter(x => x.d !== kemarin);

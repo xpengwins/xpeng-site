@@ -55,7 +55,7 @@ const pct = (a, b) => b ? Math.round((a - b) / b * 100) : null;
     const state = rd('agent-brief-sent.json', {});
     if (!DRY && TG.tok && TG.chat && (FORCE || (isMon && state.week !== wk))) {
       const tr = brief.traffic || {}, L = [];
-      L.push('📊 <b>Ringkasan mingguan xpengwins.com</b>');
+      L.push('📊 <b>Ringkasan mingguan dealer.xpengerajaya.id</b>');
       if (tr.klik != null) L.push('\nSearch Console (' + (tr.periode || []).join(' s/d ') + '): ' + tr.klik + ' klik, ' + tr.tayang + ' tayang, posisi rata-rata ' + tr.posisi + (tr.catatan ? '\n<i>' + esc(tr.catatan) + '</i>' : ''));
       else L.push('\n' + esc(tr.catatan || ''));
       if (brief.A_perbaiki_judul.length) L.push('\n✏️ <b>Perbaiki judul/deskripsi</b> (tayang ada, klik nol):\n' + brief.A_perbaiki_judul.slice(0, 4).map(x => '• ' + esc(x.halaman) + ' (' + x.tayang + ' tayang, posisi ' + x.posisi + ')').join('\n'));

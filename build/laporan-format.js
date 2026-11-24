@@ -43,11 +43,11 @@ module.exports = { susun };
 
 if (require.main === module) {
   const cfg = { danaTotal: 1500000, akhir: '2026-11-30', ambangInvalidPersen: 10 };
-  console.log(susun({ situsNama: 'xpengwins.com', hariNama: 'Kamis', tanggal: '5 Nov 2026', cfg,
+  console.log(susun({ situsNama: 'dealer.xpengerajaya.id', hariNama: 'Kamis', tanggal: '5 Nov 2026', cfg,
     flags: ['Klik tidak valid versi Google 10.5% kemarin. Cek laporan "Klik tidak valid" dan ajukan pengembalian biaya bila perlu'], belum: [],
     ik: { flags: ['x'], iklan: { kemarin: '2026-11-04', biaya: 52723, klik: 19, tayang: 221, invalid: 2, terpakai: 103231, sisa: 1396769, persen: 7, hariSisa: 26, amanPerHari: 53722, rata7: 51616 },
       kualitas: { klikKemarin: 19, sesiChatKemarin: 2, aksiKemarin: 0, leadKemarin: 0, klik3: 37, aksi3: 0 }, ga4: { sesi3: 67, terlibatPersen: 51, durasiDetik: 231 },
       catatan: ['Data iklan baru 2 hari: penilaian klik mencurigakan dimulai setelah 3 hari data.'] },
-    aset: ['Domain xpengwins.com berakhir 16 Okt 2027 (345 hari lagi)', 'Sertifikat HTTPS berlaku sampai 14 Jan 2027 (70 hari)', 'Token Facebook/Instagram: valid, tanpa tanggal habis', 'Token Threads: valid'],
+    aset: ['Domain dealer.xpengerajaya.id berakhir 16 Okt 2027 (345 hari lagi)', 'Sertifikat HTTPS berlaku sampai 14 Jan 2027 (70 hari)', 'Token Facebook/Instagram: valid, tanpa tanggal habis', 'Token Threads: valid'],
     situs: ['Status sekarang: normal. 24 jam terakhir: tidak ada gangguan'] }));
 }

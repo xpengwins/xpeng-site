@@ -105,7 +105,7 @@ async function pool(items, n, fn) { const out = []; let i = 0; await Promise.all
     const sig = issues.map(i => i.k).sort().join('|'), fresh = issues.filter(i => !(log.alertKeys || []).includes(i.k));
     if (issues.length && fresh.length && TG.tok && TG.chat) {
       try {
-        await tgSend('⚡ <b>Pantau kecepatan xpengwins.com</b>\n\nDitemukan ' + issues.length + ' masalah (' + fresh.length + ' baru):\n' + issues.slice(0, 15).map(i => esc(i.t)).join('\n') + '\n\nRata-rata respon server: ' + avgMs + ' ms. Data lengkap: data/speed-log.json');
+        await tgSend('⚡ <b>Pantau kecepatan dealer.xpengerajaya.id</b>\n\nDitemukan ' + issues.length + ' masalah (' + fresh.length + ' baru):\n' + issues.slice(0, 15).map(i => esc(i.t)).join('\n') + '\n\nRata-rata respon server: ' + avgMs + ' ms. Data lengkap: data/speed-log.json');
         log.alertKeys = issues.map(i => i.k); log.alertSig = sig;
       } catch (e) { console.log('Kecepatan: Telegram gagal: ' + scrub(e.message)); }
     } else if (!issues.length) { log.alertKeys = []; log.alertSig = ''; }
