@@ -1,6 +1,6 @@
 User-agent: *
 Allow: /
-Disallow: /admin/
+Disallow: /xpeng-site/admin/
 
 User-agent: GPTBot
 Allow: /
@@ -11,4 +11,4 @@ Allow: /
 User-agent: Google-Extended
 Allow: /
 
-Sitemap: https://xpengwins.com/sitemap.xml
+Sitemap: https://xpengwins.github.io/xpeng-site/sitemap.xml
