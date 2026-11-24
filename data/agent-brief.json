@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T01:48:16.697Z",
+ "generated": "2026-11-24T12:51:02.425Z",
  "traffic": {
   "periode": [
    "2026-10-18",
@@ -197,22 +197,24 @@
  },
  "kesehatan": {
   "kecepatan": {
-   "error": 2,
+   "error": 0,
    "lambat": 0,
    "masalah": [
-    "❌ /robots.txt → 404",
-    "❌ /sitemap.xml → 404"
+    "🔴 /: skor 76, LCP 7.0 dtk",
+    "🔴 /model/xpeng-x9/: skor 76, LCP 5.2 dtk"
    ]
   },
-  "sosmed": [],
+  "sosmed": [
+   "📉 Threads: jangkauan 3 post terbaru turun tajam (47 → 10). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  ],
   "halaman": {
    "berat": 0,
    "ringan": 4,
    "masalah": [
-    "🟠 /xpeng-site/pricelist/ judulnya sama dengan /xpeng-site/en/pricelist/",
-    "🟠 /xpeng-site/en/pricelist/ judulnya sama dengan /xpeng-site/pricelist/",
-    "🟠 /xpeng-site/model/xpeng-g9l/ judulnya sama dengan /xpeng-site/en/model/xpeng-g9l/",
-    "🟠 /xpeng-site/en/model/xpeng-g9l/ judulnya sama dengan /xpeng-site/model/xpeng-g9l/"
+    "🟠 /pricelist/ judulnya sama dengan /en/pricelist/",
+    "🟠 /en/pricelist/ judulnya sama dengan /pricelist/",
+    "🟠 /model/xpeng-g9l/ judulnya sama dengan /en/model/xpeng-g9l/",
+    "🟠 /en/model/xpeng-g9l/ judulnya sama dengan /model/xpeng-g9l/"
    ]
   }
  },

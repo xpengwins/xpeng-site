@@ -1261,7 +1261,7 @@
   },
   {
    "date": "2026-11-24",
-   "at": "2026-11-24T01:48:03.747Z",
+   "at": "2026-11-24T12:50:51.098Z",
    "pages": 84,
    "ok": 84,
    "statusBad": [],
@@ -1501,10 +1501,10 @@
    "at": 1795484856629
   }
  },
- "generated": "2026-11-24T01:48:03.747Z",
+ "generated": "2026-11-24T12:50:51.098Z",
  "latest": {
   "date": "2026-11-24",
-  "at": "2026-11-24T01:48:03.747Z",
+  "at": "2026-11-24T12:50:51.098Z",
   "pages": 84,
   "ok": 84,
   "statusBad": [],
@@ -1655,35 +1655,35 @@
   "orphanTotal": 35,
   "issues": [
    {
-    "k": "dupTitle:/xpeng-site/pricelist/",
+    "k": "dupTitle:/pricelist/",
     "sev": "warn",
-    "page": "/xpeng-site/pricelist/",
-    "t": "🟠 /xpeng-site/pricelist/ judulnya sama dengan /xpeng-site/en/pricelist/"
+    "page": "/pricelist/",
+    "t": "🟠 /pricelist/ judulnya sama dengan /en/pricelist/"
    },
    {
-    "k": "dupTitle:/xpeng-site/en/pricelist/",
+    "k": "dupTitle:/en/pricelist/",
     "sev": "warn",
-    "page": "/xpeng-site/en/pricelist/",
-    "t": "🟠 /xpeng-site/en/pricelist/ judulnya sama dengan /xpeng-site/pricelist/"
+    "page": "/en/pricelist/",
+    "t": "🟠 /en/pricelist/ judulnya sama dengan /pricelist/"
    },
    {
-    "k": "dupTitle:/xpeng-site/model/xpeng-g9l/",
+    "k": "dupTitle:/model/xpeng-g9l/",
     "sev": "warn",
-    "page": "/xpeng-site/model/xpeng-g9l/",
-    "t": "🟠 /xpeng-site/model/xpeng-g9l/ judulnya sama dengan /xpeng-site/en/model/xpeng-g9l/"
+    "page": "/model/xpeng-g9l/",
+    "t": "🟠 /model/xpeng-g9l/ judulnya sama dengan /en/model/xpeng-g9l/"
    },
    {
-    "k": "dupTitle:/xpeng-site/en/model/xpeng-g9l/",
+    "k": "dupTitle:/en/model/xpeng-g9l/",
     "sev": "warn",
-    "page": "/xpeng-site/en/model/xpeng-g9l/",
-    "t": "🟠 /xpeng-site/en/model/xpeng-g9l/ judulnya sama dengan /xpeng-site/model/xpeng-g9l/"
+    "page": "/en/model/xpeng-g9l/",
+    "t": "🟠 /en/model/xpeng-g9l/ judulnya sama dengan /model/xpeng-g9l/"
    }
   ]
  },
  "alertKeys": [
-  "dupTitle:/xpeng-site/pricelist/",
-  "dupTitle:/xpeng-site/en/pricelist/",
-  "dupTitle:/xpeng-site/model/xpeng-g9l/",
-  "dupTitle:/xpeng-site/en/model/xpeng-g9l/"
+  "dupTitle:/pricelist/",
+  "dupTitle:/en/pricelist/",
+  "dupTitle:/model/xpeng-g9l/",
+  "dupTitle:/en/model/xpeng-g9l/"
  ]
 }

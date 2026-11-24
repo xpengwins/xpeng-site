@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-24T01:48:04.400Z",
+ "generated": "2026-11-24T12:50:51.607Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
-  "newUsers": 0
+  "users": 9,
+  "sessions": 11,
+  "views": 12,
+  "newUsers": 8
  },
  "yesterday": {
   "users": 2,
@@ -14,16 +14,16 @@
   "newUsers": 1
  },
  "last7": {
-  "users": 4,
-  "sessions": 14,
-  "views": 29,
-  "newUsers": 1
+  "users": 12,
+  "sessions": 25,
+  "views": 41,
+  "newUsers": 9
  },
  "last30": {
-  "users": 794,
-  "sessions": 1020,
-  "views": 1920,
-  "newUsers": 796
+  "users": 802,
+  "sessions": 1031,
+  "views": 1932,
+  "newUsers": 804
  },
  "prev30": {
   "users": 405,
@@ -187,13 +187,19 @@
    "users": 2,
    "sessions": 6,
    "views": 17
+  },
+  {
+   "date": "2026-11-24",
+   "users": 9,
+   "sessions": 11,
+   "views": 12
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 579,
-   "users": 230
+   "views": 589,
+   "users": 238
   },
   {
    "path": "/model/xpeng-g6/",
@@ -252,11 +258,11 @@
   },
   {
    "k": "Direct",
-   "v": 114
+   "v": 123
   },
   {
    "k": "Referral",
-   "v": 114
+   "v": 116
   },
   {
    "k": "Organic Search",
@@ -278,15 +284,15 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 735
+   "v": 741
   },
   {
    "k": "desktop",
-   "v": 269
+   "v": 273
   },
   {
    "k": "tablet",
-   "v": 19
+   "v": 20
   }
  ],
  "cities": [
@@ -296,14 +302,14 @@
   },
   {
    "k": "Boardman",
-   "v": 51
-  },
-  {
-   "k": "Prineville",
-   "v": 35
+   "v": 53
   },
   {
    "k": "Tangerang",
+   "v": 36
+  },
+  {
+   "k": "Prineville",
    "v": 35
   },
   {
