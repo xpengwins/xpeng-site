@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T04:11:04.477Z",
+ "generated": "2026-11-24T04:14:14.767Z",
  "iklan": {
   "kemarin": "2026-11-23",
   "biaya": 0,
@@ -23,8 +23,7 @@
  },
  "peringatan": [
   "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-23). Cek jadwal skrip di Google Ads",
-  "Data Search Console tidak diperbarui 7 hari. Cek GSC_KEY dan izin akun layanan",
-  "Situs SEDANG DOWN sejak 11 Nov, 21.44 WIB"
+  "Data Search Console tidak diperbarui 7 hari. Cek GSC_KEY dan izin akun layanan"
  ],
  "aset": {
   "domain": "xpengerajaya.id",
