@@ -1,43 +1,37 @@
 {
- "generated": "2026-11-25T11:37:04.295Z",
+ "generated": "2026-11-25T23:15:11.454Z",
  "property": "560653996",
  "today": {
-  "users": 3,
-  "sessions": 4,
-  "views": 5,
-  "newUsers": 3
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
  },
  "yesterday": {
-  "users": 9,
-  "sessions": 12,
-  "views": 14,
-  "newUsers": 8
+  "users": 3,
+  "sessions": 7,
+  "views": 8,
+  "newUsers": 3
  },
  "last7": {
-  "users": 15,
-  "sessions": 30,
-  "views": 48,
+  "users": 14,
+  "sessions": 31,
+  "views": 47,
   "newUsers": 12
  },
  "last30": {
-  "users": 734,
-  "sessions": 954,
-  "views": 1844,
-  "newUsers": 733
+  "users": 708,
+  "sessions": 919,
+  "views": 1749,
+  "newUsers": 707
  },
  "prev30": {
-  "users": 476,
-  "sessions": 487,
-  "views": 571,
-  "newUsers": 496
+  "users": 502,
+  "sessions": 526,
+  "views": 669,
+  "newUsers": 522
  },
  "daily": [
-  {
-   "date": "2026-10-27",
-   "users": 28,
-   "sessions": 39,
-   "views": 98
-  },
   {
    "date": "2026-10-28",
    "users": 76,
@@ -191,82 +185,82 @@
   {
    "date": "2026-11-25",
    "users": 3,
-   "sessions": 4,
-   "views": 5
+   "sessions": 7,
+   "views": 8
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 518,
-   "users": 185
+   "views": 479,
+   "users": 171
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 276,
+   "views": 274,
    "users": 167
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 220,
-   "users": 106
+   "views": 217,
+   "users": 104
   },
   {
    "path": "/pricelist/",
-   "views": 215,
+   "views": 214,
    "users": 169
   },
   {
    "path": "/model/",
-   "views": 173,
+   "views": 169,
    "users": 44
   },
   {
-   "path": "/kontak/",
-   "views": 40,
-   "users": 8
-  },
-  {
    "path": "/promo/",
-   "views": 35,
+   "views": 34,
    "users": 12
   },
   {
    "path": "/artikel/",
-   "views": 30,
+   "views": 28,
    "users": 20
   },
   {
-   "path": "/tentang/",
-   "views": 23,
-   "users": 3
+   "path": "/kontak/",
+   "views": 20,
+   "users": 8
   },
   {
    "path": "/artikel/xpeng-g6-pro-vs-awd/",
    "views": 16,
    "users": 12
+  },
+  {
+   "path": "/artikel/bengkel-rekanan-xpeng-luar-kota/",
+   "views": 15,
+   "users": 6
   }
  ],
  "channels": [
   {
    "k": "Paid Search",
-   "v": 473
+   "v": 466
   },
   {
    "k": "Organic Social",
-   "v": 169
-  },
-  {
-   "k": "Direct",
-   "v": 116
+   "v": 157
   },
   {
    "k": "Referral",
-   "v": 116
+   "v": 113
+  },
+  {
+   "k": "Direct",
+   "v": 108
   },
   {
    "k": "Organic Search",
-   "v": 68
+   "v": 64
   },
   {
    "k": "Cross-network",
@@ -274,7 +268,7 @@
   },
   {
    "k": "Unassigned",
-   "v": 6
+   "v": 5
   },
   {
    "k": "AI Assistant",
@@ -284,11 +278,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 672
+   "v": 656
   },
   {
    "k": "desktop",
-   "v": 268
+   "v": 248
   },
   {
    "k": "tablet",
@@ -298,15 +292,15 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 338
+   "v": 337
   },
   {
    "k": "Boardman",
-   "v": 49
+   "v": 46
   },
   {
    "k": "Prineville",
-   "v": 32
+   "v": 30
   },
   {
    "k": "Tangerang",
@@ -314,23 +308,23 @@
   },
   {
    "k": "South Tangerang",
-   "v": 27
+   "v": 26
   },
   {
    "k": "Lulea",
-   "v": 24
+   "v": 23
   },
   {
-   "k": "(not set)",
-   "v": 22
+   "k": "Dublin",
+   "v": 17
   },
   {
    "k": "Forest City",
-   "v": 19
+   "v": 17
   }
  ],
  "leads": {
-  "klik_whatsapp": 97,
+  "klik_whatsapp": 91,
   "kirim_form_test_drive": 2,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,
