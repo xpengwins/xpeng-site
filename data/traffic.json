@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-24T23:37:04.201Z",
+ "generated": "2026-11-25T11:37:04.295Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
-  "newUsers": 0
+  "users": 3,
+  "sessions": 4,
+  "views": 5,
+  "newUsers": 3
  },
  "yesterday": {
   "users": 9,
@@ -14,16 +14,16 @@
   "newUsers": 8
  },
  "last7": {
-  "users": 12,
-  "sessions": 26,
-  "views": 43,
-  "newUsers": 9
+  "users": 15,
+  "sessions": 30,
+  "views": 48,
+  "newUsers": 12
  },
  "last30": {
-  "users": 731,
-  "sessions": 952,
-  "views": 1839,
-  "newUsers": 730
+  "users": 734,
+  "sessions": 954,
+  "views": 1844,
+  "newUsers": 733
  },
  "prev30": {
   "users": 476,
@@ -187,13 +187,19 @@
    "users": 9,
    "sessions": 12,
    "views": 14
+  },
+  {
+   "date": "2026-11-25",
+   "users": 3,
+   "sessions": 4,
+   "views": 5
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 516,
-   "users": 184
+   "views": 518,
+   "users": 185
   },
   {
    "path": "/model/xpeng-g6/",
@@ -207,8 +213,8 @@
   },
   {
    "path": "/pricelist/",
-   "views": 214,
-   "users": 168
+   "views": 215,
+   "users": 169
   },
   {
    "path": "/model/",
@@ -236,9 +242,9 @@
    "users": 3
   },
   {
-   "path": "/artikel/bengkel-rekanan-xpeng-luar-kota/",
-   "views": 15,
-   "users": 6
+   "path": "/artikel/xpeng-g6-pro-vs-awd/",
+   "views": 16,
+   "users": 12
   }
  ],
  "channels": [
@@ -251,16 +257,16 @@
    "v": 169
   },
   {
+   "k": "Direct",
+   "v": 116
+  },
+  {
    "k": "Referral",
    "v": 116
   },
   {
-   "k": "Direct",
-   "v": 115
-  },
-  {
    "k": "Organic Search",
-   "v": 65
+   "v": 68
   },
   {
    "k": "Cross-network",
@@ -278,11 +284,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 671
+   "v": 672
   },
   {
    "k": "desktop",
-   "v": 266
+   "v": 268
   },
   {
    "k": "tablet",
@@ -292,7 +298,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 335
+   "v": 338
   },
   {
    "k": "Boardman",

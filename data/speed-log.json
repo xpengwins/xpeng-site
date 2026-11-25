@@ -1,67 +1,6 @@
 {
  "history": [
   {
-   "date": "2026-10-26",
-   "at": "2026-10-26T15:51:29.463Z",
-   "urls": 27,
-   "errors": 0,
-   "slow": 0,
-   "avgMs": 171,
-   "pages": {
-    "/": {
-     "score": 58,
-     "lcp": 9131,
-     "cls": 0,
-     "tbt": 170,
-     "field": null
-    },
-    "/model/xpeng-x9/": {
-     "score": 94,
-     "lcp": 2912,
-     "cls": 0,
-     "tbt": 107,
-     "field": null
-    },
-    "/model/xpeng-g6/": {
-     "score": 95,
-     "lcp": 3007,
-     "cls": 0,
-     "tbt": 20,
-     "field": null
-    },
-    "/pricelist/": {
-     "score": 88,
-     "lcp": 3778,
-     "cls": 0,
-     "tbt": 99,
-     "field": null
-    },
-    "/kontak/": {
-     "score": 69,
-     "lcp": 6192,
-     "cls": 0,
-     "tbt": 32,
-     "field": null
-    },
-    "/artikel/garansi-baterai-xpeng/": {
-     "score": 92,
-     "lcp": 3041,
-     "cls": 0.016,
-     "tbt": 158,
-     "field": null
-    }
-   },
-   "issues": [
-    "perf:/",
-    "drop:/",
-    "perf:/model/xpeng-x9/",
-    "perf:/model/xpeng-g6/",
-    "perf:/pricelist/",
-    "perf:/kontak/",
-    "perf:/artikel/garansi-baterai-xpeng/"
-   ]
-  },
-  {
    "date": "2026-10-27",
    "at": "2026-10-27T19:25:47.184Z",
    "urls": 30,
@@ -2409,70 +2348,132 @@
    "issues": [
     "perf:/"
    ]
+  },
+  {
+   "date": "2026-11-25",
+   "at": "2026-11-25T11:37:00.150Z",
+   "urls": 84,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 80,
+   "pages": {
+    "/": {
+     "score": 76,
+     "lcp": 5964,
+     "cls": 0,
+     "tbt": 100,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 100,
+     "lcp": 1540,
+     "cls": 0,
+     "tbt": 38,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 80,
+     "lcp": 5260,
+     "cls": 0,
+     "tbt": 91,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 907,
+     "cls": 0,
+     "tbt": 21,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 906,
+     "cls": 0,
+     "tbt": 14,
+     "field": null
+    },
+    "/artikel/apa-itu-xpeng-g9l/": {
+     "score": 100,
+     "lcp": 1516,
+     "cls": 0.035,
+     "tbt": 92,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-g6/",
+    "drop:/model/xpeng-g6/"
+   ]
   }
  ],
- "generated": "2026-11-24T23:37:02.702Z",
+ "generated": "2026-11-25T11:37:00.150Z",
  "latest": {
-  "date": "2026-11-24",
-  "at": "2026-11-24T23:37:02.702Z",
+  "date": "2026-11-25",
+  "at": "2026-11-25T11:37:00.150Z",
   "urls": 84,
   "errors": 0,
   "slow": 0,
-  "avgMs": 39,
+  "avgMs": 80,
   "pages": {
    "/": {
     "score": 76,
-    "lcp": 6995,
+    "lcp": 5964,
     "cls": 0,
-    "tbt": 66,
+    "tbt": 100,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 1978,
+    "score": 100,
+    "lcp": 1540,
     "cls": 0,
-    "tbt": 31,
+    "tbt": 38,
     "field": null
    },
    "/model/xpeng-g6/": {
-    "score": 99,
-    "lcp": 1974,
+    "score": 80,
+    "lcp": 5260,
     "cls": 0,
-    "tbt": 36,
+    "tbt": 91,
     "field": null
    },
    "/pricelist/": {
-    "score": 99,
-    "lcp": 908,
+    "score": 100,
+    "lcp": 907,
     "cls": 0,
-    "tbt": 64,
+    "tbt": 21,
     "field": null
    },
    "/kontak/": {
     "score": 100,
-    "lcp": 905,
+    "lcp": 906,
     "cls": 0,
-    "tbt": 19,
+    "tbt": 14,
     "field": null
    },
    "/artikel/apa-itu-xpeng-g9l/": {
     "score": 100,
-    "lcp": 1508,
+    "lcp": 1516,
     "cls": 0.035,
-    "tbt": 13,
+    "tbt": 92,
     "field": null
    }
   },
   "issues": [
-   "perf:/"
+   "perf:/",
+   "perf:/model/xpeng-g6/",
+   "drop:/model/xpeng-g6/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 7.0 dtk"
+   "🔴 /: skor 76, LCP 6.0 dtk",
+   "🔴 /model/xpeng-g6/: LCP 5.3 dtk",
+   "📉 /model/xpeng-g6/ turun 99 → 80 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/model/xpeng-x9/"
+  "perf:/model/xpeng-g6/",
+  "drop:/model/xpeng-g6/"
  ],
- "alertSig": "perf:/|perf:/model/xpeng-x9/"
+ "alertSig": "drop:/model/xpeng-g6/|perf:/|perf:/model/xpeng-g6/"
 }

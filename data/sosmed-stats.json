@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-24T23:37:07.387Z",
+ "generated": "2026-11-25T11:37:08.430Z",
  "platforms": {
   "facebook": {
    "posted48h": 0,
@@ -14,24 +14,24 @@
    "account": {
     "name": "@xpengwins",
     "followers": 6,
-    "media": 75
+    "media": 76
    },
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
    "avgReachRecent": null,
-   "last": "2026-11-24T05:18:36+0000",
+   "last": "2026-11-25T02:06:51+0000",
    "top": [
+    {
+     "url": "https://www.instagram.com/p/DgJa0TryCek/",
+     "eng": 0
+    },
     {
      "url": "https://www.instagram.com/p/DgHL96sSL8z/",
      "eng": 0
     },
     {
      "url": "https://www.instagram.com/p/DgE1Irpynq7/",
-     "eng": 0
-    },
-    {
-     "url": "https://www.instagram.com/p/Dfmj5UaF211/",
      "eng": 0
     }
    ],
@@ -53,7 +53,7 @@
    "posts": 15,
    "avgEngRecent": 0,
    "avgEngBefore": 0,
-   "avgReachRecent": 32,
+   "avgReachRecent": 31,
    "last": "2026-11-24T02:14:17+0000",
    "top": [
     {
@@ -73,7 +73,7 @@
   }
  },
  "issues": [
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (47 → 10). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (50 → 6). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
  ],
  "alertKeys": [
   "reach:threads"
