@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-25T23:15:11.454Z",
+ "generated": "2026-11-26T11:21:36.402Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
-  "newUsers": 0
+  "users": 2,
+  "sessions": 2,
+  "views": 7,
+  "newUsers": 1
  },
  "yesterday": {
   "users": 3,
@@ -14,16 +14,16 @@
   "newUsers": 3
  },
  "last7": {
-  "users": 14,
-  "sessions": 31,
-  "views": 47,
-  "newUsers": 12
+  "users": 15,
+  "sessions": 33,
+  "views": 54,
+  "newUsers": 13
  },
  "last30": {
-  "users": 708,
-  "sessions": 919,
-  "views": 1749,
-  "newUsers": 707
+  "users": 709,
+  "sessions": 922,
+  "views": 1756,
+  "newUsers": 708
  },
  "prev30": {
   "users": 502,
@@ -187,18 +187,24 @@
    "users": 3,
    "sessions": 7,
    "views": 8
+  },
+  {
+   "date": "2026-11-26",
+   "users": 2,
+   "sessions": 2,
+   "views": 7
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 479,
+   "views": 480,
    "users": 171
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 274,
-   "users": 167
+   "views": 277,
+   "users": 168
   },
   {
    "path": "/model/xpeng-x9/",
@@ -212,8 +218,8 @@
   },
   {
    "path": "/model/",
-   "views": 169,
-   "users": 44
+   "views": 171,
+   "users": 45
   },
   {
    "path": "/promo/",
@@ -256,11 +262,11 @@
   },
   {
    "k": "Direct",
-   "v": 108
+   "v": 109
   },
   {
    "k": "Organic Search",
-   "v": 64
+   "v": 65
   },
   {
    "k": "Cross-network",
@@ -268,7 +274,7 @@
   },
   {
    "k": "Unassigned",
-   "v": 5
+   "v": 4
   },
   {
    "k": "AI Assistant",
@@ -278,7 +284,7 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 656
+   "v": 659
   },
   {
    "k": "desktop",
@@ -292,7 +298,7 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 337
+   "v": 338
   },
   {
    "k": "Boardman",
