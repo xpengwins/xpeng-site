@@ -1,7 +1,7 @@
 {
- "generated": "2026-11-25T23:41:23.440Z",
+ "generated": "2026-11-26T23:54:32.375Z",
  "iklan": {
-  "kemarin": "2026-11-25",
+  "kemarin": "2026-11-26",
   "biaya": 0,
   "klik": 0,
   "tayang": 0,
@@ -9,8 +9,8 @@
   "terpakai": 103231,
   "sisa": 1396769,
   "persen": 7,
-  "hariSisa": 5,
-  "amanPerHari": 279354,
+  "hariSisa": 4,
+  "amanPerHari": 349192,
   "rata7": 0
  },
  "kualitas": {
@@ -22,8 +22,8 @@
   "aksi3": 0
  },
  "peringatan": [
-  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-25). Cek jadwal skrip di Google Ads",
-  "Data Search Console tidak diperbarui 8 hari. Cek GSC_KEY dan izin akun layanan"
+  "Data iklan terakhir tanggal 2026-11-04, belum sampai kemarin (2026-11-26). Cek jadwal skrip di Google Ads",
+  "Data Search Console tidak diperbarui 9 hari. Cek GSC_KEY dan izin akun layanan"
  ],
  "aset": {
   "domain": "xpengerajaya.id",
@@ -184,6 +184,13 @@
   },
   {
    "d": "2026-11-25",
+   "biaya": 0,
+   "klik": 0,
+   "aksi": 0,
+   "lead": 0
+  },
+  {
+   "d": "2026-11-26",
    "biaya": 0,
    "klik": 0,
    "aksi": 0,
