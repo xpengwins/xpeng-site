@@ -1,43 +1,37 @@
 {
- "generated": "2026-11-27T11:16:11.141Z",
+ "generated": "2026-11-27T22:53:02.800Z",
  "property": "560653996",
  "today": {
-  "users": 2,
-  "sessions": 3,
-  "views": 4,
-  "newUsers": 1
+  "users": 0,
+  "sessions": 0,
+  "views": 0,
+  "newUsers": 0
  },
  "yesterday": {
   "users": 2,
-  "sessions": 3,
-  "views": 8,
+  "sessions": 4,
+  "views": 7,
   "newUsers": 1
  },
  "last7": {
-  "users": 16,
-  "sessions": 35,
-  "views": 56,
+  "users": 15,
+  "sessions": 32,
+  "views": 54,
   "newUsers": 14
  },
  "last30": {
-  "users": 636,
-  "sessions": 835,
-  "views": 1575,
-  "newUsers": 636
+  "users": 570,
+  "sessions": 759,
+  "views": 1462,
+  "newUsers": 570
  },
  "prev30": {
-  "users": 575,
-  "sessions": 616,
-  "views": 855,
-  "newUsers": 595
+  "users": 641,
+  "sessions": 695,
+  "views": 971,
+  "newUsers": 661
  },
  "daily": [
-  {
-   "date": "2026-10-29",
-   "users": 67,
-   "sessions": 78,
-   "views": 116
-  },
   {
    "date": "2026-10-30",
    "users": 62,
@@ -191,40 +185,40 @@
   {
    "date": "2026-11-27",
    "users": 2,
-   "sessions": 3,
-   "views": 4
+   "sessions": 4,
+   "views": 7
   }
  ],
  "pages": [
   {
    "path": "/",
-   "views": 419,
-   "users": 152
+   "views": 393,
+   "users": 135
   },
   {
    "path": "/model/xpeng-g6/",
-   "views": 246,
-   "users": 143
+   "views": 202,
+   "users": 110
   },
   {
    "path": "/model/xpeng-x9/",
-   "views": 203,
-   "users": 97
+   "views": 195,
+   "users": 92
   },
   {
    "path": "/pricelist/",
-   "views": 193,
-   "users": 153
+   "views": 170,
+   "users": 134
   },
   {
    "path": "/model/",
-   "views": 150,
-   "users": 36
+   "views": 148,
+   "users": 34
   },
   {
    "path": "/promo/",
-   "views": 31,
-   "users": 11
+   "views": 30,
+   "users": 10
   },
   {
    "path": "/artikel/",
@@ -237,40 +231,40 @@
    "users": 6
   },
   {
-   "path": "/kontak/",
-   "views": 15,
-   "users": 7
-  },
-  {
    "path": "/artikel/perawatan-mobil-listrik/",
    "views": 14,
    "users": 11
+  },
+  {
+   "path": "/kontak/",
+   "views": 14,
+   "users": 6
   }
  ],
  "channels": [
   {
    "k": "Paid Search",
-   "v": 417
+   "v": 358
   },
   {
    "k": "Organic Social",
-   "v": 146
+   "v": 139
   },
   {
    "k": "Referral",
-   "v": 105
+   "v": 101
   },
   {
    "k": "Direct",
-   "v": 91
+   "v": 86
   },
   {
    "k": "Organic Search",
-   "v": 66
+   "v": 65
   },
   {
    "k": "Cross-network",
-   "v": 5
+   "v": 4
   },
   {
    "k": "AI Assistant",
@@ -284,11 +278,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 599
+   "v": 541
   },
   {
    "k": "desktop",
-   "v": 220
+   "v": 203
   },
   {
    "k": "tablet",
@@ -298,11 +292,11 @@
  "cities": [
   {
    "k": "Jakarta",
-   "v": 297
+   "v": 258
   },
   {
    "k": "Boardman",
-   "v": 43
+   "v": 42
   },
   {
    "k": "Prineville",
@@ -310,27 +304,27 @@
   },
   {
    "k": "Tangerang",
-   "v": 27
-  },
-  {
-   "k": "South Tangerang",
-   "v": 24
+   "v": 26
   },
   {
    "k": "Lulea",
    "v": 23
   },
   {
-   "k": "Depok",
-   "v": 16
+   "k": "South Tangerang",
+   "v": 19
   },
   {
-   "k": "Dublin",
-   "v": 16
+   "k": "Forest City",
+   "v": 15
+  },
+  {
+   "k": "Semarang",
+   "v": 15
   }
  ],
  "leads": {
-  "klik_whatsapp": 82,
+  "klik_whatsapp": 76,
   "kirim_form_test_drive": 2,
   "klik_booking_test_drive": 1,
   "klik_telepon": 0,

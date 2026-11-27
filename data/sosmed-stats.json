@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T11:16:19.293Z",
+ "generated": "2026-11-27T22:53:05.954Z",
  "platforms": {
   "facebook": {
    "posted48h": 0,
@@ -73,7 +73,7 @@
   }
  },
  "issues": [
-  "📉 Threads: jangkauan 3 post terbaru turun tajam (50 → 6). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
+  "📉 Threads: jangkauan 3 post terbaru turun tajam (51 → 6). Salah satu tanda pembatasan distribusi, cek Kualitas Akun di Meta."
  ],
  "alertKeys": [
   "reach:threads"
