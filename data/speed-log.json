@@ -1,63 +1,6 @@
 {
  "history": [
   {
-   "date": "2026-10-28",
-   "at": "2026-10-28T15:21:41.399Z",
-   "urls": 32,
-   "errors": 0,
-   "slow": 0,
-   "avgMs": 101,
-   "pages": {
-    "/": {
-     "score": 80,
-     "lcp": 4804,
-     "cls": 0,
-     "tbt": 129,
-     "field": null
-    },
-    "/model/xpeng-x9/": {
-     "score": 100,
-     "lcp": 1206,
-     "cls": 0,
-     "tbt": 21,
-     "field": null
-    },
-    "/model/xpeng-g6/": {
-     "score": 81,
-     "lcp": 4155,
-     "cls": 0,
-     "tbt": 215,
-     "field": null
-    },
-    "/pricelist/": {
-     "score": 99,
-     "lcp": 1440,
-     "cls": 0,
-     "tbt": 35,
-     "field": null
-    },
-    "/kontak/": {
-     "score": 100,
-     "lcp": 914,
-     "cls": 0,
-     "tbt": 62,
-     "field": null
-    },
-    "/artikel/xpeng-dirakit-di-indonesia/": {
-     "score": 100,
-     "lcp": 1056,
-     "cls": 0,
-     "tbt": 33,
-     "field": null
-    }
-   },
-   "issues": [
-    "perf:/",
-    "perf:/model/xpeng-g6/",
-    "drop:/model/xpeng-g6/"
-   ]
-  },
-  {
    "date": "2026-10-29",
    "at": "2026-10-29T15:22:29.536Z",
    "urls": 34,
@@ -2406,75 +2349,132 @@
     "perf:/kontak/",
     "drop:/kontak/"
    ]
+  },
+  {
+   "date": "2026-11-27",
+   "at": "2026-11-27T11:15:40.718Z",
+   "urls": 84,
+   "errors": 0,
+   "slow": 0,
+   "avgMs": 78,
+   "pages": {
+    "/": {
+     "score": 69,
+     "lcp": 6228,
+     "cls": 0,
+     "tbt": 312,
+     "field": null
+    },
+    "/model/xpeng-x9/": {
+     "score": 79,
+     "lcp": 5164,
+     "cls": 0,
+     "tbt": 99,
+     "field": null
+    },
+    "/model/xpeng-g6/": {
+     "score": 100,
+     "lcp": 1376,
+     "cls": 0,
+     "tbt": 16,
+     "field": null
+    },
+    "/pricelist/": {
+     "score": 100,
+     "lcp": 905,
+     "cls": 0,
+     "tbt": 66,
+     "field": null
+    },
+    "/kontak/": {
+     "score": 100,
+     "lcp": 905,
+     "cls": 0,
+     "tbt": 15,
+     "field": null
+    },
+    "/artikel/apa-itu-xpeng-g9l/": {
+     "score": 100,
+     "lcp": 1508,
+     "cls": 0.035,
+     "tbt": 48,
+     "field": null
+    }
+   },
+   "issues": [
+    "perf:/",
+    "perf:/model/xpeng-x9/",
+    "drop:/model/xpeng-x9/"
+   ]
   }
  ],
- "generated": "2026-11-26T23:12:51.005Z",
+ "generated": "2026-11-27T11:15:40.718Z",
  "latest": {
-  "date": "2026-11-26",
-  "at": "2026-11-26T23:12:51.005Z",
+  "date": "2026-11-27",
+  "at": "2026-11-27T11:15:40.718Z",
   "urls": 84,
   "errors": 0,
   "slow": 0,
-  "avgMs": 42,
+  "avgMs": 78,
   "pages": {
    "/": {
-    "score": 76,
-    "lcp": 5961,
+    "score": 69,
+    "lcp": 6228,
     "cls": 0,
-    "tbt": 56,
+    "tbt": 312,
     "field": null
    },
    "/model/xpeng-x9/": {
-    "score": 99,
-    "lcp": 1972,
+    "score": 79,
+    "lcp": 5164,
+    "cls": 0,
+    "tbt": 99,
+    "field": null
+   },
+   "/model/xpeng-g6/": {
+    "score": 100,
+    "lcp": 1376,
     "cls": 0,
     "tbt": 16,
     "field": null
    },
-   "/model/xpeng-g6/": {
-    "score": 99,
-    "lcp": 2004,
-    "cls": 0,
-    "tbt": 32,
-    "field": null
-   },
    "/pricelist/": {
     "score": 100,
-    "lcp": 904,
+    "lcp": 905,
     "cls": 0,
-    "tbt": 24,
+    "tbt": 66,
     "field": null
    },
    "/kontak/": {
-    "score": 85,
-    "lcp": 4058,
+    "score": 100,
+    "lcp": 905,
     "cls": 0,
-    "tbt": 141,
+    "tbt": 15,
     "field": null
    },
    "/artikel/apa-itu-xpeng-g9l/": {
     "score": 100,
-    "lcp": 1520,
+    "lcp": 1508,
     "cls": 0.035,
-    "tbt": 78,
+    "tbt": 48,
     "field": null
    }
   },
   "issues": [
    "perf:/",
-   "perf:/kontak/",
-   "drop:/kontak/"
+   "perf:/model/xpeng-x9/",
+   "drop:/model/xpeng-x9/"
   ],
   "issueText": [
-   "🔴 /: skor 76, LCP 6.0 dtk",
-   "🔴 /kontak/: LCP 4.1 dtk",
-   "📉 /kontak/ turun 100 → 85 sejak pengecekan sebelumnya (melambat)"
+   "🔴 /: skor 69, LCP 6.2 dtk, TBT 312 ms",
+   "🔴 /model/xpeng-x9/: skor 79, LCP 5.2 dtk",
+   "📉 /model/xpeng-x9/ turun 99 → 79 sejak pengecekan sebelumnya (melambat)"
   ]
  },
  "alertKeys": [
   "perf:/",
-  "perf:/kontak/",
-  "drop:/kontak/"
+  "perf:/model/xpeng-x9/",
+  "drop:/model/xpeng-x9/"
  ],
- "alertSig": "drop:/kontak/|perf:/|perf:/kontak/"
+ "alertSig": "drop:/model/xpeng-x9/|perf:/|perf:/model/xpeng-x9/"
 }

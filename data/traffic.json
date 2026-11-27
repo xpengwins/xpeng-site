@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-26T23:12:53.509Z",
+ "generated": "2026-11-27T11:16:11.141Z",
  "property": "560653996",
  "today": {
-  "users": 0,
-  "sessions": 0,
-  "views": 0,
-  "newUsers": 0
+  "users": 2,
+  "sessions": 3,
+  "views": 4,
+  "newUsers": 1
  },
  "yesterday": {
   "users": 2,
@@ -14,16 +14,16 @@
   "newUsers": 1
  },
  "last7": {
-  "users": 15,
-  "sessions": 32,
-  "views": 52,
-  "newUsers": 13
+  "users": 16,
+  "sessions": 35,
+  "views": 56,
+  "newUsers": 14
  },
  "last30": {
-  "users": 635,
-  "sessions": 832,
-  "views": 1571,
-  "newUsers": 635
+  "users": 636,
+  "sessions": 835,
+  "views": 1575,
+  "newUsers": 636
  },
  "prev30": {
   "users": 575,
@@ -187,6 +187,12 @@
    "users": 2,
    "sessions": 3,
    "views": 8
+  },
+  {
+   "date": "2026-11-27",
+   "users": 2,
+   "sessions": 3,
+   "views": 4
   }
  ],
  "pages": [
@@ -212,7 +218,7 @@
   },
   {
    "path": "/model/",
-   "views": 148,
+   "views": 150,
    "users": 36
   },
   {
@@ -256,11 +262,11 @@
   },
   {
    "k": "Direct",
-   "v": 90
+   "v": 91
   },
   {
    "k": "Organic Search",
-   "v": 64
+   "v": 66
   },
   {
    "k": "Cross-network",
@@ -278,11 +284,11 @@
  "devices": [
   {
    "k": "mobile",
-   "v": 597
+   "v": 599
   },
   {
    "k": "desktop",
-   "v": 219
+   "v": 220
   },
   {
    "k": "tablet",
