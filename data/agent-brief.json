@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-27T22:53:18.616Z",
+ "generated": "2026-11-28T10:47:00.789Z",
  "traffic": {
   "periode": [
    "2026-10-18",
@@ -200,9 +200,9 @@
    "error": 0,
    "lambat": 0,
    "masalah": [
-    "🔴 /: skor 76, LCP 6.9 dtk",
-    "🔴 /model/xpeng-x9/: LCP 4.8 dtk",
-    "📉 /model/xpeng-x9/ turun 99 → 82 sejak pengecekan sebelumnya (melambat)"
+    "🟠 /: LCP 2.7 dtk",
+    "🔴 /artikel/apa-itu-xpeng-g9l/: LCP 4.3 dtk",
+    "📉 /artikel/apa-itu-xpeng-g9l/ turun 100 → 86 sejak pengecekan sebelumnya (melambat)"
    ]
   },
   "sosmed": [
